@@ -1,0 +1,5 @@
+master/
+__pycache__/
+.idea/  # For PyCharm users
+.vscode/  # For VS Code users
+*.pyc
