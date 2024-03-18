@@ -1,5 +1,6 @@
 master/
 __pycache__/
+notebooks/
 .idea/  # For PyCharm users
 .vscode/  # For VS Code users
 *.pyc
