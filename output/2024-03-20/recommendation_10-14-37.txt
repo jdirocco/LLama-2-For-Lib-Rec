@@ -1,0 +1,110 @@
+<s>[INST] <<SYS>>
+As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+# Example 1
+Project: 'Project A'
+Description: 'A web application for managing tasks.'
+Existing Dependencies: 
+- org.springframework.boot:spring-boot-starter-web:2.5.4
+Recommended Libraries:
+- org.springframework.boot:spring-boot-starter-data-jpa:2.5.4
+- org.springframework.boot:spring-boot-starter-security:2.5.4
+
+# Example 2
+Project: 'Project B'
+Description: 'A command-line tool for processing text files.'
+Existing Dependencies: 
+- commons-cli:commons-cli:1.4
+Recommended Libraries:
+- org.apache.commons:commons-io:2.8.0
+- org.apache.commons:commons-lang3:3.12.0
+
+Your tasks are to:
+- Provide recommendations exclusively in the Maven format as shown in the example.
+- Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+- Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+- Ignore any code dont write any code.
+<</SYS>>
+
+# Project Description
+The project, 'schildbach/public-transport-enabler', is described as follows:
+Public Transport Enabler
+========================
+
+This is a Java library allowing you to get data from public transport providers.
+Look into [NetworkProvider.java]( for an overview of the API.
+
+Using providers that require secrets
+
+For some providers a secret like an API key is required to use their API.
+Copy the  file to  like so:
+
+You need to request the secrets directly from the provider. For Navitia based providers, you can [request a secret here](
+
+How to run live tests?
+
+Make sure the test you want to run does not require a secret and if it does, see above for how to get one.
+Once you have the secret or if your provider does not need one, you can run the tests in your IDE.
+Both IntelliJ and Eclipse have excellent support for JUnit tests.
+
+If you prefer to run tests from the command line, you can comment out the test exclude at the end of
+[build.gradle](
+and use this command to only execute a test for a single provider:
+
+This uses the  as an example.
+Just replace it with the provider you want to test.
+
+# Existing Dependencies
+The project's Maven dependencies include:
+- com.squareup.okhttp3:okhttp
+- com.squareup.okhttp3:logging-interceptor
+- org.springframework:spring-webmvc
+- com.google.guava:guava
+- org.slf4j:slf4j-api
+- com.google.code.findbugs:jsr305
+- org.json:json
+- net.sf.kxml:kxml2
+- org.codehaus.jackson:jackson-mapper-asl
+- junit:junit
+- org.slf4j:slf4j-jdk14
+
+# Library Recommendation Request 
+.
+Based on the context of the 'schildbach/public-transport-enabler' project, identify libraries to aid in the development of Java applications that are compatible with the existing dependencies.Please provide a brief explanation for each recommended library, specifying how it could benefit the project in addressing the mentioned needs or enhancing specific functionalities. Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Exmaple: com.fasterxml.jackson.core:jackson-databind:2.9.8
+[/INST]</s>
+# Library Recommendation Request
+
+Based on the context of the'schildbach/public-transport-enabler' project, the following libraries are recommended to aid in the development of Java applications that are compatible with the existing dependencies:
+
+1. com.fasterxml.jackson.core:jackson-databind:2.9.8
+
+Explanation: Jackson is a popular JSON processing library that can help in deserializing and serializing JSON data. With the existing dependency on org.codehaus.jackson:jackson-mapper-asl, upgrading to the latest version of Jackson (2.9.8) can help improve the project's performance and compatibility.
+
+2. org.springframework.boot:spring-boot-starter-data-jpa:2.5.4
+
+Explanation: Spring Boot Data JPA provides a simple and efficient way to perform JPA operations. By including this dependency, the project can benefit from Spring Boot's ease of use and simplify JPA-related configuration and implementation.
+
+3. org.springframework.boot:spring-boot-starter-security:2.5.4
+
+Explanation: Spring Boot Security provides a comprehensive security solution for Spring Boot applications. Including this dependency can help enhance the project's security features and protect sensitive data.
+
+4. io.github.classgraph:classgraph:4.8.2
+
+Explanation: ClassGraph is a library that can help with dependency analysis and visualization. By using ClassGraph, developers can gain insights into the project's class structure and identify potential issues or areas for improvement.
+
+5. org.slf4j:slf4j-simple:1.7.32
+
+Explanation: SLF4J is a popular logging library that can help in logging and debugging. Upgrading to the latest version of SLF4J (1.7.32) can help improve the project's logging capabilities and provide better diagnostic information.
+
+6. net.sourceforge.jwebmp:jwebmp:1.7.1
+
+Explanation: JWebMP is a library that provides an API for creating web-based applications. By including this dependency, the project can benefit from JWebMP's ease of use and simplify web-related development.
+
+7. com.google.code.gson:gson:2.8.6
+
+Explanation: GSON is a popular JSON processing library that can help in deserializing and serializing JSON data. With the existing dependency on com.squareup.okhttp3:okhttp, upgrading to the latest version of GSON (2.8.6) can help improve the project's performance and compatibility.
+
+8. com.google.guava:guava:30.1.1-jre
+
+Explanation: Guava is a library that provides a collection of utility classes for Java development. By including this dependency, the project can benefit from Guava's ease of use and simplify development-related tasks.
+
+These recommendations are based on the project's context and existing dependencies, and are intended to enhance the project's capabilities or address identified needs.

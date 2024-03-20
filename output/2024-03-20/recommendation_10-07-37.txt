@@ -1,0 +1,145 @@
+<s>[INST] <<SYS>>
+As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+# Example 1
+Project: 'Project A'
+Description: 'A web application for managing tasks.'
+Existing Dependencies: 
+- org.springframework.boot:spring-boot-starter-web:2.5.4
+Recommended Libraries:
+- org.springframework.boot:spring-boot-starter-data-jpa:2.5.4
+- org.springframework.boot:spring-boot-starter-security:2.5.4
+
+# Example 2
+Project: 'Project B'
+Description: 'A command-line tool for processing text files.'
+Existing Dependencies: 
+- commons-cli:commons-cli:1.4
+Recommended Libraries:
+- org.apache.commons:commons-io:2.8.0
+- org.apache.commons:commons-lang3:3.12.0
+
+Your tasks are to:
+- Provide recommendations exclusively in the Maven format as shown in the example.
+- Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+- Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+- Ignore any code dont write any code.
+<</SYS>>
+
+# Project Description
+The project, 'tomahawk-player/tomahawk-android', is described as follows:
+tomahawk-android
+
+Music is everywhere, now you dont have to be!
+
+Tomahawk, the critically acclaimed multi-source music player, is now available on Android. Given the name of an artist, album or song Tomahawk will find the best available source and play it - whether that be from Spotify, Deezer, GMusic, Soundcloud, Tidal, Official.fm, Jamendo, Beets, Ampache, Subsonic or your phones local storage.
+Tomahawk for Android also syncs your history, your loved tracks, artists, albums and your playlists to/from the desktop version of Tomahawk via our new music community, Hatchet. On Hatchet you can hear your friends' favorite tracks and see what they're currently listening to.
+
+! | ! | !
+ | -----  | -----
+
+ Beta and Nightly
+
+Get the Beta version on Google Play:
+
+Nightly builds are available here:
+
+ Development Setup
+
+First of all you have to properly setup your Android SDK/NDK:
+
+ Download and install the Android SDK 
+    - Make sure you have updated and installed the following in your Android SDK Manager:
+        - "/Tools"
+        - the latest Android SDK Platform folder (e.g. "/Android 6.0 (API 23)")
+        - "/Extras/Android Support Repository" and "/Extras/Android Support Library"    
+        - "/Extras/Google Play Services" and "/Extras/Google Repository"
+
+Build it on the commandline with gradle:
+
+ Simply run "./gradlew assembleDebug" for the debug build or "./gradlew assembleRelease" for
+  the release build in your tomahawk-android checkout directory. The built apk will be put into
+  "tomahawk-android/build/outputs/apk"
+
+Setup using Android Studio and gradle (highly recommended):
+
+ Open Android Studio and go to "File"->"Import Project"
+ Browse to your tomahawk-android checkout and click "OK".
+ Make sure that the radio-button "Use default gradle wrapper (recommended)" is selected.
+ Click "next" and that's it :) tomahawk-android should compile right away
+
+Setup using other IDEs without gradle:
+
+ Import tomahawk-android into the IDE of your choice
+ tomahawk-android depends on several 3rd party libraries. You can look up a list of all dependencies in ./app/build.gradle under dependencies{...}
+ Make sure you setup the support libraries correctly (
+ Add all dependencies to your tomahawk-android project
+ tomahawk-android should now compile successfully.
+
+If you have any further problems, feel free to join the #tomahawk.mobile irc channel on irc.freenode.org
+
+ Ready to contribute?
+
+Drop us an e-mail at welisten@tomahawk-player.org or join our IRC Channel #tomahawk.mobile on irc.freenode.org
+
+ Code Style Guidelines for Contributors
+
+In order to keep everything clean and cozy, please use the official Android code style format preset:
+
+  (use the IntelliJ preset, if you're using Android Studio)
+
+For a larger overview you should read the official Android "Code Style Guidelines for Contributors":
+
+ Plugin Apps Source Code
+
+[Spotify Plugin App](     
+[Deezer Plugin App](
+
+# Existing Dependencies
+The project's Maven dependencies include:
+- org.apache.lucene:lucene-analyzers-common
+- com.github.castorflex.smoothprogressbar:library
+- org.apache.lucene:lucene-core
+- commons-io:commons-io
+- org.apache.lucene:lucene-queryparser
+- com.sothree.slidinguppanel:library
+- com.squareup.okhttp:okhttp
+- de.mrmaffen:vlc-android-sdk
+- com.daimajia.swipelayout:library
+- com.android.support:appcompat-v7
+- com.google.code.gson:gson
+- de.greenrobot:eventbus
+- org.jdeferred:jdeferred-android-aar
+- com.squareup.okhttp:logging-interceptor
+- com.squareup.picasso:picasso
+- org.slf4j:slf4j-android
+- com.squareup.retrofit:retrofit
+- com.uservoice:uservoice-android-sdk
+- com.android.support:support-v4
+- net.sourceforge.findbugs:jsr305
+- se.emilsjolander:stickylistheaders
+- com.google.android.gms:play-services-base
+- com.squareup.okhttp:okhttp-urlconnection
+
+# Library Recommendation Request 
+.
+Based on the context of the 'tomahawk-player/tomahawk-android' project, identify libraries to aid in the development of Java applications that are compatible with the existing dependencies.Please provide a brief explanation for each recommended library, specifying how it could benefit the project in addressing the mentioned needs or enhancing specific functionalities. Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Exmaple: com.fasterxml.jackson.core:jackson-databind:2.9.8
+[/INST]</s>
+Based on the context of the 'tomahawk-player/tomahawk-android' project, the following are some recommended libraries that could aid in the development of Java applications that are compatible with the existing dependencies:
+
+1. com.google.guava:guava:28.1-android: This library provides a set of utility classes for working with collections, strings, and common programming tasks. It could be useful in simplifying code and improving performance.
+
+2. com.android.volley:volley:1.1.1: This library provides an easy-to-use networking stack for Android applications. It could be useful in simplifying network communication and handling errors.
+
+3. de.greenrobot:eventbus:3.1.1: This library provides a simple event bus system for Android applications. It could be useful in decoupling components and improving the overall architecture of the application.
+
+4. com.squareup.retrofit:retrofit:2.6.1: This library provides a simple and intuitive API for making HTTP requests in Android applications. It could be useful in simplifying network communication and handling errors.
+
+5. com.squareup.okhttp:okhttp:4.9.0: This library provides a high-performance HTTP client for Android applications. It could be useful in improving the performance of network communication.
+
+6. com.android.support:support-v4:28.0.0: This library provides additional UI components and functionality for Android applications. It could be useful in improving the overall user experience and adding new features.
+
+7. com.android.support:appcompat-v7:28.0.0: This library provides a compatibility layer for using modern Android APIs on older devices. It could be useful in ensuring that the application runs smoothly on a wide range of devices.
+
+8. org.jetbrains.annotations:annotations-java5:15.0.2: This library provides a set of annotations for Java that can be used to document code and improve code quality. It could be useful in improving the maintainability and readability of the codebase.
+
+All of these libraries are compatible with the existing dependencies listed in the project's build.gradle file, and they could be useful in addressing specific needs or improving the overall functionality of the application.

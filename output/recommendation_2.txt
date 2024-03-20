@@ -1,0 +1,71 @@
+<s>[INST] <<SYS>>
+As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+- Example: com.fasterxml.jackson.core:jackson-databind:2.9.8
+
+Your tasks are to:
+- Provide recommendations exclusively in the Maven format as shown in the example.
+- Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+<</SYS>>
+
+# Project Description
+The project, 'seam/solder', is described as follows:
+Seam Solder
+
+A portable CDI extension library for applications, frameworks and other
+extensions based on CDI.
+
+Seam Solder is independent of CDI implementation and fully portable between
+Java EE 6 and Servlet environments enhanced with CDI.
+
+For more information, see the [Seam Solder project page](
+
+ Building
+
+   mvn clean install -Pjboss-public-repository
+
+or
+
+  mvn clean install -s settings.xml
+
+The profile is not required if the JBoss Nexus repository is setup in your settings.xml
+
+See the testsuite/readme.md file for information about running the testsuite in various containers.
+
+# Existing Dependencies
+The project's Maven dependencies include:
+- org.jboss.weld:weld-core`
+- org.slf4j:slf4j-api
+- org.mockito:mockito-all
+- org.jboss.solder:solder-tooling
+- org.jboss.solder:solder-impl
+- org.hamcrest:hamcrest-core
+- org.jboss.logging:jboss-logging-generator
+- org.jboss.solder:solder-api
+- org.jboss.logging:jboss-logging
+- org.jboss.solder:solder-logging
+- org.javassist:javassist
+- org.jboss.spec.javax.el:jboss-el-api_2.2_spec
+- org.jboss.seam:seam-bom
+- org.jboss.arquillian.junit:arquillian-junit-container
+- org.jboss.solder:solder-reference-guide
+- javax.enterprise:cdi-api
+- org.mockito:mockito-core
+- log4j:log4j
+- org.jboss.seam.test:weld-ee-embedded-1.1
+- org.jboss.spec.javax.servlet:jboss-servlet-api_3.0_spec
+- org.glassfish.web:el-impl
+- junit:junit
+
+# Library Recommendation Request 
+Based on the context of the project, identify libraries to aid in the development of Java applications that are compatible with the existing dependencies. Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Exmaple: com.fasterxml.jackson.core:jackson-databind:2.9.8
+[/INST]</s>
+
+Here are some library recommendations for the Seam Solder project based on the provided context:
+
+1. com.fasterxml.jackson.core:jackson-databind - This library provides a Java module for working with JSON data in Java applications. It can help simplify data binding and reduce the amount of boilerplate code required for working with JSON.
+2. org.springframework:spring-webflux - This library provides a set of components for building reactive web applications in Java using the WebFlux framework. It can help improve the performance and responsiveness of the application by leveraging the non-blocking nature of reactive programming.
+3. org.springframework:spring-boot-starter-webflux - This library is a subset of the Spring Boot starter webflux library and provides a set of configuration and starter beans for building web applications using the WebFlux framework. It can help simplify the configuration and deployment of web applications.
+4. com.h2database:h2 - This library provides a lightweight, in-memory database that can be used for testing and development purposes. It can help simplify the database configuration and reduce the overhead of setting up a full-fledged database for development and testing.
+5. org.mockito:mockito-all - This library provides a set of annotations and utilities for mocking objects in Java. It can help simplify the testing process by allowing developers to easily create mock objects that can be used to test the behavior of other objects.
+6. org.powermock:powermock-module-junit4 - This library provides a set of utilities for mocking classes and methods in Java. It can help simplify the testing process by allowing developers to easily create mock objects that can be used to test the behavior of other objects.
+7. com.github.java-json:json-java - This library

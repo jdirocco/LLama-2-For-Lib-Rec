@@ -1,6 +1,8 @@
 master/
 __pycache__/
+processed/
 notebooks/
+.env
 .idea/  # For PyCharm users
 .vscode/  # For VS Code users
 *.pyc

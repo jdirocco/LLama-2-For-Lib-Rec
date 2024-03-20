@@ -1,0 +1,139 @@
+<s>[INST] <<SYS>>
+As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+- Example: com.fasterxml.jackson.core:jackson-databind:2.9.8
+
+Your tasks are to:
+- Provide recommendations exclusively in the Maven format as shown in the example.
+- Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+- Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+<</SYS>>
+
+# Project Description
+The project, 'lycying/c2d-engine', is described as follows:
+c2d-engine
+==========
+
+the new demo apk can be downloaded [here]( 
+
+c2d is a game engine, base on  .  Aim to easy use of the the libgdx api .I design c2d at my free time so if you have any ideas please give me feedback . 
+
+Maven:
+
+ Some of the characteristics
+C2d built a readable and expandable API . 
+
+ Resources and loading
+ - Alias Resource Manager any resources my be had one or more alias so you can easy change the resource but not the codes.
+ - Custom resources load , you can change the subfix and protected your resources easily.
+ - Custom game loadding screen
+ Event and Screen Switch
+ - EventManager ,fire the regiestered event anytime.
+ - TransitionScreen the animations of screen switch
+ Graphics
+ - Animation Sprite support loop and LoopWithTime? mode.
+ - Parallax Layer the Parallax Layer ,you can custom the layer's content via ParallaxLayerDrawable?
+ - Surfaces support opengles1.x and 2.x .
+ Pixmap HelperModifying textures using libGDX Pixmap in runtime
+ Box2d
+ - Load the world from json the json file is designed with c2d-tools
+
+ Demo
+Some games use c2d-engine.
+
+[Fool Dig]( 
+
+![screenshort](
+
+[My Dragon](
+
+![screenshort](
+
+ Box2d editor
+
+![screenshort](
+
+Be sure save it to disk first when u make a new scene. 
+
+Normal:
+ Mouse wheel zooming scene
+ Drag using Right mouse to move the scene.
+ Click the examples under the test scenario for testing.
+ Click the run test
+ Right-click on the list on the left to add the Fixture, Body etc.
+ Any change of the spinner or checkbox will be applied to the model.
+
+Some Edit mode:
+ Circle editing mode:
+ - Click on the screen, move the mouse to resize the circle, tap the screen again to end
+ Box Edit mode:
+ - Click on the screen, and move the mouse to resize the box, tap the screen again to end
+ Polygon mode(This May Has Error If too many confusion Clicks ):
+ - The left mouse button click on the screen to add point.
+ - Right Click actor point to delete point.
+ - Click the ritht-bottom-vertices editor to  insert points  or delete point between specific points.
+ - Dragging the actor points to adjust the position of the vertex
+ Body edit mode:
+ - Right-click in the Right bottom Fixture list to add firmware
+ - Drag the body to move
+ - Drag the black area to rotate body
+ - Press "space" to enter joint mode
+ Joint edit Mode:
+ -  draw a straight line from object A to object B ,  select the joint mode at the pop-up menu
+ -  Press Space to enter the body  mode
+
+# Existing Dependencies
+The project's Maven dependencies include:
+- com.badlogicgames.gdx:gdx-platform
+- com.badlogicgames.gdx:gdx-box2d-platform
+- ${project.groupId}:c2d
+- com.badlogicgames.gdx:gdx-backend-lwjgl
+- com.badlogicgames.gdx:gdx-tools
+- com.badlogicgames.gdx:gdx-box2d
+- ${project.groupId}:c2d-tests
+- com.badlogicgames.gdx:gdx-backend-gwt
+- com.badlogicgames.gdx:gdx-backend-android
+- com.badlogicgames.gdx:gdx
+
+# Library Recommendation Request 
+.
+Based on the context of the 'lycying/c2d-engine' project, identify libraries to aid in the development of Java applications that are compatible with the existing dependencies.Please provide a brief explanation for each recommended library, specifying how it could benefit the project in addressing the mentioned needs or enhancing specific functionalities. Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Exmaple: com.fasterxml.jackson.core:jackson-databind:2.9.8
+[/INST]</s>
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { environment } from '../environments/environment';
+import { User } from './user';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UserService {
+
+  private apiUrl = environment.apiUrl;
+
+  constructor(private http: HttpClient) { }
+
+  getUsers(): Observable<User[]> {
+    return this.http.get(`${this.apiUrl}/users`);
+  }
+
+  getUser(id: number): Observable<User> {
+    return this.http.get(`${this.apiUrl}/users/${id}`);
+  }
+
+  createUser(user: User): Observable<User> {
+    return this.http.post(`${this.apiUrl}/users`, user);
+  }
+
+  updateUser(user: User): Observable<User> {
+    return this.http.put(`${this.apiUrl}/users/${user.id}`, user);
+  }
+
+  deleteUser(id: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/users/${id}`);
+  }
+
+}
+
+

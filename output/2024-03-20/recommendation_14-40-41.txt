@@ -1,0 +1,133 @@
+<s>[INST] <<SYS>>
+As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+# Example 1
+Project: 'Project A'
+Description: 'A web application for managing tasks.'
+Existing Dependencies: 
+- org.springframework.boot:spring-boot-starter-web:2.5.4
+Recommended Libraries:
+- org.springframework.boot:spring-boot-starter-data-jpa:2.5.4
+- org.springframework.boot:spring-boot-starter-security:2.5.4
+
+# Example 2
+Project: 'Project B'
+Description: 'A command-line tool for processing text files.'
+Existing Dependencies: 
+- commons-cli:commons-cli:1.4
+Recommended Libraries:
+- org.apache.commons:commons-io:2.8.0
+- org.apache.commons:commons-lang3:3.12.0
+
+Your tasks are to:
+- Provide recommendations exclusively in the Maven format as shown in the example.
+- Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+- Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+- Ignore any code dont write any code.
+<</SYS>>
+
+# Project Description
+The project, 'dschanoeh/Kayak', is described as follows:
+Kayak
+=====
+
+[Kayak]( is an application for CAN bus diagnosis and monitoring. Its main goals are a simple interface and platform independence.
+Kayak is implemented in pure Java and has no platform specific dependencies. It includes a complete CAN bus abstraction model that can be included in other applications that need do handle CAN frames.
+This is possible because [Socket CAN]( and TCP/IP are used as an abstraction layer above the CAN controller hardware.
+The [socketcand]( provides the bridge between the Socket CAN device on a linux machine and the TCP/IP socket of Kayak.
+Existing .dbc files with CAN message specifications can be converted into the Kayak .kcd format using [CANBabel]( Afterwards Kayak is able to decode CAN frames and to display and interpret the messages and signals.
+To build Kayak follow the instructions in BUILD.md
+
+ Documentation
+You can find some basic documentation [here](
+
+ What is implemented yet:
+ abstract bus, receiver, sender - model
+ .kcd bus description format, see [CANBabel](
+ project and log file management
+ simple raw view of CAN frames
+ sending of single and repetitive CAN frames
+ creation and replay of log files
+
+ Why the name Kayak?
+Because a kayak is a small, lightweight and versatile boat compared to a canoe.
+
+# Existing Dependencies
+The project's Maven dependencies include:
+- org.netbeans.api:org-openide-nodes
+- org.netbeans.api:org-openide-windows
+- ${project.groupId}:Kayak-logging
+- ${project.groupId}:Kayak-core
+- org.netbeans.api:org-netbeans-api-progress
+- org.tango-project:tango-icon-theme
+- javax.xml.bind:jaxb-api
+- ${project.groupId}:Kayak-mapview
+- org.netbeans.api:org-openide-awt
+- org.netbeans.api:org-openide-text
+- ${project.groupId}:Kayak-kcd
+- org.netbeans.api:org-openide-loaders
+- org.netbeans.cluster:platform
+- org.netbeans.api:org-netbeans-api-annotations-common
+- com.github.kayak:branding
+- junit:junit
+- org.netbeans.api:org-openide-explorer
+- org.swinglabs:swingx-core
+- com.github.kayak:Kayak-core
+- org.netbeans.api:org-netbeans-modules-options-api
+- com.github.kayak:Kayak-ui
+- org.netbeans.api:org-openide-modules
+- org.netbeans.api:org-openide-io
+- org.netbeans.api:org-openide-filesystems
+- ${project.groupId}:Kayak-ui
+- eu.hansolo:SteelSeries
+- org.netbeans.api:org-openide-util-lookup
+- org.netbeans.api:org-openide-util
+- org.netbeans.api:org-netbeans-modules-settings
+- org.swinglabs:swingx-ws
+
+# Library Recommendation Request 
+.
+Based on the context of the 'dschanoeh/Kayak' project, identify libraries to aid in the development of Java applications that are compatible with the existing dependencies.Please provide a brief explanation for each recommended library, specifying how it could benefit the project in addressing the mentioned needs or enhancing specific functionalities. Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Exmaple: com.fasterxml.jackson.core:jackson-databind:2.9.8
+[/INST]</s>
+# Library Recommendation Request
+
+Based on the context of the 'dschanoeh/Kayak' project, the following libraries are recommended to aid in the development of Java applications that are compatible with the existing dependencies:
+
+1. com.google.guava:guava:28.1-jre
+
+Explanation: Guava provides a wealth of utility classes and functions that can help with common programming tasks, such as handling collections, caching, and concurrency. Guava's classes and functions are designed to be highly functional, making it a great fit for the Kayak project's needs.
+
+2. org.apache.commons:commons-lang3:3.12.0
+
+Explanation: Commons Lang provides a set of reusable utilities for Java programming, including string manipulation, file handling, and concurrency. The Kayak project could benefit from Commons Lang's functionality, particularly in the areas of string manipulation and file handling.
+
+3. org.apache.commons:commons-io:2.8.0
+
+Explanation: Commons IO provides a set of utilities for working with files and directories in Java. The Kayak project could benefit from Commons IO's functionality, particularly in the areas of file reading and writing.
+
+4. org.springframework.boot:spring-boot-starter-web:2.5.4
+
+Explanation: Spring Boot provides a comprehensive set of tools for building web applications, including support for RESTful APIs, web sockets, and more. By integrating Spring Boot into the Kayak project, the development team can leverage these tools to build a more robust and feature-rich web interface.
+
+5. org.springframework.boot:spring-boot-starter-data-jpa:2.5.4
+
+Explanation: Spring Boot's data JPA starter provides a simple and consistent API for working with databases in Java. By integrating this library into the Kayak project, the development team can leverage JPA to simplify database interactions and improve data management.
+
+6. org.springframework.boot:spring-boot-starter-security:2.5.4
+
+Explanation: Spring Boot's security starter provides a comprehensive set of tools for securing web applications, including support for authentication and authorization. By integrating this library into the Kayak project, the development team can improve the security of the web interface and protect sensitive data.
+
+7. eu.hansolo:SteelSeries:1.11.0
+
+Explanation: SteelSeries provides a set of utilities for working with Swing and JavaFX user interfaces. The Kayak project could benefit from SteelSeries' functionality, particularly in the areas of layout management and styling.
+
+8. org.netbeans.api:org-openide-util-lookup:7.3
+
+Explanation: OpenIDE provides a set of utilities for working with the NetBeans platform, including support for lookup and introspection. The Kayak project could benefit from OpenIDE's functionality, particularly in the areas of module management and plugin development.
+
+9. org.netbeans.api:org-openide-modules-options-api:7.3
+
+Explanation: OpenIDE's options API provides a set of utilities for working with module options in the NetBeans platform. The Kayak project could benefit from OpenIDE's options API, particularly in the areas of module configuration and customization.
+
+10. org.netbeans.api:org-openide-explorer:7.3
+
+Explanation: OpenIDE's explorer API provides a set

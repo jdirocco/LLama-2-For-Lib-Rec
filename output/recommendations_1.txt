@@ -1,0 +1,40 @@
+<s>[INST] <<SYS>>
+As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+- Example: com.fasterxml.jackson.core:jackson-databind:2.9.8
+
+Your tasks are to:
+- Provide recommendations exclusively in the Maven format as shown in the example.
+- Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+<</SYS>>
+# Existing Dependencies
+The project's Maven dependencies include:
+- org.javassist:javassist
+- org.assertj:assertj-core
+- org.apache.httpcomponents:httpclient
+- javax.xml.bind:jaxb-api
+- org.slf4j:slf4j-simple
+- commons-logging:commons-logging
+- org.slf4j:slf4j-api
+- com.fasterxml.jackson.core:jackson-databind
+- javax:javaee-api
+- com.fasterxml.jackson.core:jackson-annotations
+- org.springframework:spring-web
+- org.springframework.data:spring-data-jpa
+- org.reflections:reflections
+- io.github.livingdocumentation:dot-diagram
+- org.apache.httpcomponents:httpcore
+- junit:junit
+
+# Library Recommendation Request 
+Based on the context of the project, identify libraries to aid in the development of Java applications that are compatible with the existing dependencies. Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Exmaple: com.fasterxml.jackson.core:jackson-databind:2.9.8
+[/INST]</s>
+Here are some library recommendations that could enhance the capabilities of the project, based on the existing dependencies:
+
+1. com.google.code.gson:gson:2.8.1 - Gson is a popular JSON serialization and deserialization library that can help simplify data exchange between Java objects and JSON.
+2. org.apache.commons:commons-lang3:3.9 - This library provides a set of utility classes that can help with common programming tasks, such as string manipulation and collection handling.
+3. org.springframework:spring-webflux:5.3.18 - Spring WebFlux is a reactive web framework that can help improve the performance of web applications by leveraging non-blocking I/O operations.
+4. org.projectlombok:lombok:1.18.10 - Lombok is a tool that can automatically generate getters, setters, and other boilerplate code for Java classes, reducing the amount of boilerplate code that needs to be written.
+5. com.h2database:h2:1.4.200 - H2 is a lightweight, in-memory database that can be used for development, testing, and production. It supports SQL and JDBC, and can be easily integrated into Java applications.
+6. com.typesafe:config:1.4.2 - Config is a simple configuration system for Java that can help manage and retrieve configuration data from various sources, such as environment variables, properties files, and external systems.
+7. org.springframework:spring-boot-starter-data-jpa:2.5.3 - Spring Boot Starter Data JPA is a module that provides data access capabilities for Java applications using JPA. It can help simplify the process of integrating JPA with Spring Boot.
+8. org.springframework

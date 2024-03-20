@@ -1,0 +1,293 @@
+<s>[INST] <<SYS>>
+As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+- Example: com.fasterxml.jackson.core:jackson-databind:2.9.8
+
+Your tasks are to:
+- Provide recommendations exclusively in the Maven format as shown in the example.
+- Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+- Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+<</SYS>>
+
+# Project Description
+The project, 'viritin/viritin', is described as follows:
+[![Build Status](
+[![Published on Vaadin  Directory](
+[![Stars on vaadin.com/directory](
+
+ Viritin - The "commons" library  for Vaadin
+
+Note, Attention, Alert for existing users, Maddon was recently renamed to Viritin. New Maven coordinates: org.vaadin:viritin:1.22 (or whatever the latest version). After dependency change fixing imports in broken classes should do the thing. In addition to package rename, there is one potentially breaking change. EagerValidation is now default in AbstractForm.
+
+ [Documentation]( project is going on in wiki
+
+ Background
+
+All large and stable libraries have their inconveniences and missing pieces. This is true for JDK libraries and just as true for Vaadin. Advanced Java users use various apache-commons libraries or Guava to fix these inconveniences in JDK libraries. This library tries to do the same for Vaadin.
+
+The idea is to concentrate on server side Java to improvements to existing APIs, so that throwing this in to an applications or to another add-ons should be as easy as possible. Hopefully one can avoid some of stupid boilerplate code by using this library and make you more productive than ever with Vaadin.
+
+So far improvements have been focused on three main categories:
+
+  Core component extensions that fix wrong defaults and provide more expressive API
+  Data binding improvements, better "forms" for both end users and developers
+  Essential new components build with server side composition (e.g. DisclosurePanel and fields to handle collections)
+
+Some examples of improvements:
+
+E.g. this very common Vaadin code...
+
+...becomes like this:
+
+And using basic layouts without this add-on...
+
+... may start to feel rather mad, after using them with sane defaults and "fluent api":
+
+Or when using the "intelligent" expand method:
+
+Becomes...
+
+Note that in the above the expand call does setExpandRation(component, 1), where 1 the value that people use 99% of the time, but it takes care of adding component and setting sane size values for the layout and the added component. 
+
+The example is optimized for the number of lines, but most often you want to uses some line breaks and indentation for better readability. In anyways, the improved API lets you express the layout so that it is much easier to understand the hierarchy of component tree from the code, without adding lots of methods or classes.
+
+Using Table to select a row for editor may simplify from ...
+
+to...
+
+Note, that in the above, the event actually provides you the value you are interested directly and in with the correct type. Especially for new Vaadin users this is very helpful.
+
+Using Label extensions can make your life both simpler and safer:
+
+Hopefully all of these enhancements will end up in the core Vaadin library, in a one form or another. 
+
+If you have a re-usable server side Vaadin "api-hack" that you continuously use in you project to reduce your madness, please contribute it. I promise to accept pull requests sooner and with lighter process than to the core Vaadin. 
+
+Also feel free to suggest dependencies to new or possibly already existing add-ons that are similar in nature (pure server side, simple and smallish). This way you'll only need to add one helper dependency to get what you most often want to. If your dependency or addition is not small or simple, we can still consider if it is otherwise high quality (well tested, industry proven). Current dependencies:
+
+  ConfirmDialog (used by ConfirmButton in Viritin)
+
+If a helper extends core Vaadin class, the convention is to simply prefix it with "M" letter. Otherwise, lets just use good naming conventions and reasonable sub packages.
+
+ List of helpers 
+
+Currently project contains following helpers (might be slightly outdated):
+
+ BeanBinder, [Vaadin Ticket](
+	 Reduces the most common usage of BeanFieldGroup into oneliner
+ layouts
+	 Basic layouts have bad defaults (margin,spacing), corrected in these [Vaadin  Ticket](
+ 	 "fluent api" for selected methods like, margin and spacing (withMargin(false))
+ 	 current implementations
+   		 MVerticalLayout
+   	 	 MHorizontalLayout
+   	 	 MGridLayout
+ MTextField
+	 smart immediate handling (like what is coming in 7.2)
+	 empty sting as null representation ([Vaadin Ticket]( 
+ Typed selects
+	 Most developers use basic pojos as options and as field value. The cores Container-Item-Property with some legacy makes code look horrible in some cases. Thus these selects have
+		 Generics for value/options
+		 Has API for fluent usages with java.util.Collections
+		 on TODO separate multi select implementations 
+	 Current implementations (TODO lots of essential stuff needed here!!)
+		 TypedSelect
+			 A single select to another entity type
+			 By default NativeSelect, but implementation is configurable
+		 EnumSelect
+			 a zero-conf select for enums (when used with FieldGroup), based on NativeSelect
+   		 MTable extends Table (note that Table is often also the best real life listselect) 
+			 single select only but better typed for generic bean usage 
+      	  	 in addition to typing and related methods
+         		 smart selection mode and immediate (based on value change listener,  
+	     	   	 withProperties(String...), withColumnHeaders
+		 MultiSelectTable
+			 A Field suitable for editing varios collections of other entities (e.g. List pojos), selected from a list given by developer.
+			 Suitable for editing e.g. JPA ManyToMany mapped field
+			 The field modifies the existing set/list, making if efficent and more compatible with your backend. The standard "multiselect mode" in core Vaadin selects always uses new Set and the value is always Set :-(
+			 Works with both Set and List
+ Element collection fields
+	 Two implemenatations: ElementCollectionField (based on gridlayout) and ElementCollectionTable (based on Table)
+	 A Vaadin field that edits a collection of embedded objects. E.g. OneToMany or ElementCollection annotated collection fields in JPA apps.
+	 Example: Edits a List of Address objects in a Person object in an addressbook app
+ Label extensions
+  Header to make headers without html hacking
+  RichText component for XSS safe html inclusion. Also supports Markdown syntax.
+ Button extension
+  PrimaryButton (stylename + enter shortcut)
+  ConfirmButton (Customizeble confirm dialog before the actual listener is called)
+ ListContainer (used by e.g. MTable, but can be used separately as well)
+  A lightweight replacement for BeanItemContainer that uses apache commons-beanutils for introspection. The performance (both memory and CPU) is also superior to the core Vaadin counterpart.
+  Note, that beans are kept in orinal list that developer used to pass beans. Wrap in e.g. ArrayList if you wish to keep original List unmodified.
+ LazyList and SortableLazyList
+  Together with ListContainer makes memory and query efficient wiring from UI components like Table into your backend dead simple.
+  MTable supports the wiring directly with constructors, LazyComboBox has custom version that supports filtering done by ComboBox.
+ DowndloadButton
+  Simplifies creating downloads for dynamically created resources, like PDF reports. Inverts the core Vaadin api to provide output stream for developer into where the content should be written. Also connects download extension to button automatically.
+ AbstractForm
+  An abstract super class for simple entity editor. Provides save/cancel buttons and interfaces for hooking into them. Does binding with naming convention using BeanBinder when setEntity(T) is called. It is suggested to use the "setEagerValidation(true)" mode as it will make your forms much more UX friendly by default. This makes fields validating while you edit the form, instead of postponing it until the save click. Since 1.22 this is the default, but can be disabled if eager validation is for some reason not wanted. 
+ DisclosurePanel is a simple panel whose content is hidden by default. Easy method to hide fields that are most often irrelevant for the end user.
+
+ Online demo/usage examples
+
+Online demo for this add-on hopefully makes no sense. But there are though many demo apps that contain helpful usage examples. Some of them listed here:
+
+  Add-ons own test sources, both [integration tests]( and [unit tests]( contains some usage examples.
+  [Vaadin Java EE application example](
+  [Spring Data + Vaadin UI example](
+  Another  and ElementCollection (InlineEditableCollection).
+  Invoicing example , LazyComboBox, DownloadButton.
+
+ Usage examples
+
+Run the following mvn command to start a small application
+( with all usage examples under .
+
+ Download a release
+
+Official releases of this add-on are available at Vaadin Directory. For Maven instructions, download and reviews, go to 
+
+ Maddon is now called Viritin
+
+My colleagues teased me enough about the add-on name Maddon. M can mean Matti's add-on, but it also had to dual nature meaning I always made helpers there when APIs in core Vaadin (possibly even written by me) made me mad when using it :-)
+
+Anyways, Viritin is a Finnish word, meaning tuner, and I think it describes the add-on pretty well too. It tunes Vaadin to be on the same frequency with you. English people might pronounce it almost like "wire it in" which also suits for the add-on, as lots of its latest helpers are related to binding your domain model to UI, wiring it in for the actual end user.
+
+The add-on itself has been quite popular already. And there has bee lots of active contributors, thank you! There is now also a viritin organization in the github and I hope to get even more contributions for it in the future.
+
+You can also expect some cool other Vaadin related things to pop up to under the governance of "Viritin organization". That yet to be published helper might change the way you use Vaadin even more than the Viritin add-on itself.
+
+# Existing Dependencies
+The project's Maven dependencies include:
+- javax.validation:validation-api
+- commons-io:commons-io
+- org.hibernate:hibernate-validator
+- org.vaadin:addon-test-helpers
+- com.vaadin:vaadin-push
+- org.commonjava.googlecode.markdown4j:markdown4j
+- org.vaadin.addon:confirmdialog
+- org.apache.commons:commons-lang3
+- commons-beanutils:commons-beanutils
+- com.vaadin:vaadin-bom
+- org.vaadin:viritin
+- com.vaadin:vaadin-compatibility-client-compiled
+- com.vaadin:vaadin-client-compiled
+- javax.el:javax.el-api
+- org.eclipse.jetty.websocket:websocket-server
+- com.vaadin:vaadin-themes
+- javax.servlet:javax.servlet-api
+- com.vaadin:vaadin-compatibility-server
+
+# Library Recommendation Request 
+.
+Based on the context of the 'viritin/viritin' project, identify libraries to aid in the development of Java applications that are compatible with the existing dependencies.Please provide a brief explanation for each recommended library, specifying how it could benefit the project in addressing the mentioned needs or enhancing specific functionalities. Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Exmaple: com.fasterxml.jackson.core:jackson-databind:2.9.8
+[/INST]</s>
+package com.example.myapp.utils;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Utils {
+    public static String getSharedPreferences(Context context, String key) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        return prefs.getString(key, null);
+    }
+
+    public static void putSharedPreferences(Context context, String key, String value) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+        prefs.edit().putString(key, value).apply();
+    }
+
+    public static String getJsonFromSharedPreferences(Context context, String key) {
+        String json = getSharedPreferences(context, key);
+        return json!= null? json : "{}";
+    }
+
+    public static void putJsonIntoSharedPreferences(Context context, String key, String json) {
+        putSharedPreferences(context, key, json);
+    }
+
+    public static <T> T parseJson(String json, Class<T> clazz) {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        JsonElement jsonElement = gson.fromJson(json, JsonElement.class);
+        return gson.toObject(jsonElement, clazz);
+    }
+
+    public static List<String> parseJsonArray(String json, Class<String> clazz) {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        JsonElement jsonElement = gson.fromJson(json, JsonElement.class);
+        return gson.toArray(jsonElement, clazz);
+    }
+
+    public static <T> T getFromJson(String json, Class<T> clazz) {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        JsonElement jsonElement = gson.fromJson(json, JsonElement.class);
+        return gson.toObject(jsonElement, clazz);
+    }
+
+    public static void saveJsonToFile(String json, String filePath) {
+        try {
+            File file = new File(filePath);
+            FileWriter writer = new FileWriter(file);
+            writer.write(json);
+            writer.flush();
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static String loadJsonFromFile(String filePath) {
+        String json = "";
+        try {
+            File file = new File(filePath);
+            FileReader reader = new FileReader(file);
+            char[] buffer = new char[1024];
+            int read = reader.read(buffer);
+            json = new String(buffer, 0, read);
+            reader.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return json;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

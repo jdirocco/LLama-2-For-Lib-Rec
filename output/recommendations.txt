@@ -1,0 +1,45 @@
+<s>[INST] <<SYS>>
+As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+- Example: com.fasterxml.jackson.core:jackson-databind:2.9.8
+
+Your tasks are to:
+- Provide recommendations exclusively in the Maven format as shown in the example.
+- Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+<</SYS>>
+# Existing Dependencies
+The project's Maven dependencies include:
+- org.javassist:javassist
+- org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.apache.ant:ant
+- org.lwjgl.lwjgl:lwjgl
+- as3isolib:as3isolib-fp10
+- com.threerings:narya
+- com.samskivert:samskivert
+- javazoom:jlayer
+- com.megginson.sax:xml-writer
+- com.googlecode.playn:playn-core
+- com.google.code.flexlib:flexlib
+- com.threerings:nenya-tools
+- org.lwjgl.lwjgl:lwjgl_util
+- com.threerings:nenya
+- org.apache.maven:maven-plugin-api
+- com.adobe.flex.framework:flex-framework
+- org.apache.maven:maven-core
+- com.threerings:naryalib
+- com.google.guava:guava
+- commons-digester:commons-digester
+- junit:junit
+- org.jcraft:jorbis
+
+# Library Recommendation Request 
+Based on the context of the project, identify libraries to aid in the development of Java applications that are compatible with the existing dependencies. Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Exmaple: com.fasterxml.jackson.core:jackson-databind:2.9.8
+[/INST]</s>
+Here are some library recommendations that could enhance the capabilities of the project, based on the existing dependencies:
+
+1. Spring Framework: The Spring Framework is a comprehensive Java framework that provides a wide range of features and tools for building enterprise-level applications. It could help with dependency injection, AOP, web services, and more. (groupId: org.springframework, artifact: spring-framework)
+2. Hibernate: Hibernate is a popular ORM (Object-Relational Mapping) tool that simplifies the interaction between Java applications and relational databases. It could help with persistence, querying, and more. (groupId: org.hibernate, artifact: hibernate-core)
+3. Apache Spark: Apache Spark is a fast and flexible open-source data processing engine that can handle large-scale data processing tasks. It could help with data analysis, machine learning, and more. (groupId: org.apache.spark, artifact: spark-core)
+4. Guava: Guava is a Java library that provides a wide range of utility classes and functions, including collections, I/O, and more. It could help with common tasks and simplify code reuse. (groupId: com.google.guava, artifact: guava)
+5. Log4j: Log4j is a Java logging library that provides a flexible and customizable way to log messages in a Java application. It could help with logging configuration and error handling. (groupId: org.apache.logging.log4j, artifact: log4j)
+6. Apache Commons: Apache Commons is a set of Java libraries that provide a wide range of functionality, including file I/O, string manipulation, and more. It could help with common tasks and simplify code reuse. (groupId: org.apache.commons, artifact: commons-* various)
+7. JUnit: JUnit is a popular unit testing framework for Java that provides
