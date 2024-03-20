@@ -1,6 +1,7 @@
 master/
 __pycache__/
 processed/
+data/
 notebooks/
 .env
 .idea/  # For PyCharm users
