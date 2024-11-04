@@ -1,0 +1,144 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: srecon/elasticsearch-cassandra-river
+    Project Description: elasticsearchcassandrariver\n=============================\nElasticsearch river for Cassandra 2. version with CQL support, based on data pull method from Cassandra cluster. Project Cloned and modified from the origin Based on Datastax Java driver\n2. CQL support\n3. Support Cron Scheduling\n\nSetup\nbuild : mvn clean install\n\ninstall:\n\n copy target/releases/cassandrariver1.0.6SNAPSHOT.zip into $ELASTICSEARCHHOME/plugin/cassandrariver\n or\n ./plugin url file:/river/cassandrariver1.0.6SNAPSHOT.zip install cassandrariver\n\nremove:\n ./plugin remove cassandrariver\n\nInit:\n curl XPUT \' d \'{\n "type" : "cassandra",\n "cassandra" : {\n "connection" :\n {\n "hosts" : "hostname",\n "datacentre" : "dc",\n "username" : "optionalusername",\n "password" : "optionalpassword"\n },\n "sync" :\n {\n "batchsize" : 20000,\n "schedule" : "0 0/15 ?"\n },\n "keyspaces" :\n \n {\n "name" : "keyspacename",\n "columnfamilies" :\n \n {\n "name" : "columnfamilyname",\n "primarykey" : "columnfamilyprimarykey",\n "index" :\n {\n "name" : "keyspacenamecolumnfamilynameindex",\n "type" : "keyspacenamecolumnfamilyname"\n },\n "columns" :\n \n {\n "name" : "userid",\n "type" : "string"\n "raw": "true"\n }\n \n }\n \n }\n \n }\n }\'\n\nNotes on the above:\n\n can be a single ip address or dns name or comma separated list with no spaces.\n is a list of dictionaries describing the keyspaces and their column familes.\n is a list of dictionaries describing the column family.\n optional attribute to set the index name and type values to be used to create the index.\n optional attribute to describe column mapping characteristics.\n name of the column\n one of the core types: string, integer/long, float/double, boolean and null.\n optional flag that indecates that a raw field should be created as well, useful for sorting a column/attribute that is searchable as well.\n\nSearch\nInstall plugin head\n$ESHOME\\bin\\plugin install mobz/elasticsearchhead\n\nUse Head plugin to search, you can download it from here\n Add unit Tests\n2. Add newly added rows in ES by date\n'
+    Existing Dependencies:
+    org.xerial.snappy:snappy-java
+- com.codahale.metrics:metrics-core
+- com.datastax.cassandra:cassandra-driver-core
+- org.quartz-scheduler:quartz
+- net.jpountz.lz4:lz4
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="container">
+
+
+         
+
+        <div class="row">
+
+            
+       
+            <div id="sidebar" class="col-xs-2">
+                 <a href="{{ url('/logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                     <i class="fa fa-btn fa-sign-out"></i>Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                <div class="sidebar-box">
+                    <div class="sidebar-title">
+                        <h3>Categories</h3>
+                    </div>
+                    <div class="sidebar-title">
+                        
+                    @foreach($category as $key => $value)
+                        <input  value="{{ $value->category_name }}" name="{{ $value->category_name }}" type="checkbox" data-size="normal" class="switch" data-on-color="default" data-off-color="info" data-on-text="ON" data-off-text="OFF"> 
+                    @endforeach 
+                    </div>
+                </div>
+
+                <div class="sidebar-box">
+                    <div class="sidebar-title">
+                        <h3>Tags</h3>
+                    </div>
+                    <div class="sidebar-title">
+                        <p>
+                        @foreach($tag as $key => $value)
+                            <button  class="btn btn-default">{{ $value['tag_name'] }}</button>
+                        @endforeach 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sidebar-box">
+                    <div class="sidebar-title">
+                        <h3>Recent Comments</h3>
+                    </div>
+                    <div class="sidebar-title">
+                        <ul class="list-unstyled list-info">
+                            <li><a href="#" class="list-info-name" title="Lorem ipsum">John Doe on <span class="red">Lorem ipsum dolor</a></span></li>
+                            <li><a href="#" class="list-info-name" title="dolor sit amet">John Doe on <span class="red">dolor sit amet</a></span></li>
+                            <li><a href="#" class="list-info-name" title="consectetuer adipiscing">John Doe on <span class="red">consectetuer adipiscing</a></span></li>
+                            <li><a href="#" class="list-info-name" title="elit aenean auctor">John Doe on <span class="red">elit aenean auctor</a></span></li>
+                            <li><a href="#" class="list-info-name" title="dolor sit amet">John Doe on <span class="red">dolor sit amet</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="{{ url('/home') }
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+			
+		</div>
+	</div>
+	
+    <?php include('footer.php')?>
+</div>
+
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<script>
+    tippy('.btn-info', {
+      content: 'Hello world!',
+      animation:'scale',
+      arrow: true,
+      duration: [325, 275],
+      delay: 100,
+    });
+    
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html> <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse "id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class
+
+Precision: 0
+Recall: 0
+F1 Score: 0

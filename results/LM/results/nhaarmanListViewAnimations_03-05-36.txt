@@ -1,0 +1,87 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: nhaarman/ListViewAnimations
+    Project Description: DEPRECATED\n==========\nListViewAnimations is deprecated in favor of new RecyclerView solutions.\nNo new development will be taking place, but the existing versions will still function normally.\n\nThanks for your support!\n\nListViewAnimations\n===========\n\nListViewAnimations is an Open Source Android library that allows developers to easily create ListViews with animations.\nFeel free to use it all you want in your Android apps provided that you cite this project and include the license in your app.\n\nFeatures\n\nListViewAnimations provides the following features:\n Appearance animations for items in , , other ;\n Built in animations include , , , , and .\n\t Other animations can easily be added\n StickyListHeaders is supported, other implementations can easily be added.\n SwipetoDismiss, SwipeToDismiss with contextual undo;\n DragandDrop reordering;\n Animate addition of items;\n Smoothly expand your items to reveal more content;\n\n\n\nSetup\n\n\nThe library consists of separate modules:\n\n : The core of the library, and contains appearance animations.\n : Contains the item manipulation options, such as SwipetoDismiss, and DragandDrop.\n : An extension of to support .\n\nWhen using or , is included as well.\n\nAdd the following to your :\n\n\trepositories {\n\t\tmavenCentral\n\t}\n\t\n\tdependencies {\n\t\tcompile \'com.nhaarman.listviewanimations3.1.0@aar\'\n\t\tcompile \'com.nhaarman.listviewanimations3.1.0@aar\'\n\t\tcompile \'com.nhaarman.listviewanimations3.1.0@aar\'\n\t}\n\nOr:\n\n Download the jar files you need:\n before you do.\n\nDeveloped By\n\n Niek Haarman\n\n\n\nSpecial Thanks\n\n DevBytes DragandDrop reordering is done by a rewritten version of their DynamicListView5.\n Jake Warthon To support devices preHC <3.0, a copy of NineOldAndroids2 is included.\n Contributors7\n\nLicense\n\n\n\tCopyright 2014 Niek Haarman\n\n\tLicensed under the Apache License, Version 2.0 the "License";\n\tyou may not use this file except in compliance with the License.\n\tYou may obtain a copy of the License at\n\n\t required by applicable law or agreed to in writing, software\n\tdistributed under the License is distributed on an "AS IS" BASIS,\n\tWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n\tSee the License for the specific language governing permissions and\n\tlimitations under the License.\n\n 1: 2: 3: 5: 6: 7: 8: 9: 10: 11: 12: 13: 14:
+    Existing Dependencies:
+    com.android.support:support-annotations
+- com.google.android:android
+- com.nineoldandroids:library
+- com.nhaarman.listviewanimations:lib-core-slh
+- com.google.android:support-v4
+- org.mockito:mockito-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- BEGIN: MAIN -->
+    <div id="error_box">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>{PHP.L.404}</h1>
+                    <p>{PHP.L.PageNotFound}</p>
+                </div>
+            </div>
+        </div>
+    </div><!-- #error_box -->
+    <!-- END: MAIN -->
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>sion,
+      'name'     => 'Ruby',
+     'versions' => @versions
+    }
+    render'version', layout: false
+  end
+end
+ class HomeController < ApplicationController
+  def index
+    @versions = [
+      {
+        'name'        => 'Ruby',
+       'version'     => RUBY_VERSION,
+        'description' => "The Ruby #{RUBY_PLATFORM} Platform",
+        'url'         => 'https://www.ruby-lang.org/'
+      },
+      {
+        'name'        => 'Rails',
+       'version'     => Rails.version,
+        'description' => Rails.application.class.parent.to_s,
+        'url'         => 'https://rubyonrails.org/'
+      },
+      {
+        'name'        => 'Redis',
+       'version'     => `redis-cli --version`.strip,
+        'description' => "Redis Database #{`redis-cli --version`.lines[2]}",
+        'url'         => 'https://redis.io/'
+      }
+    ]
+
+    # This is a bit messy, but will do for now
+    @ruby = {
+     'version'  => RUBY_VER
+
+Precision: 0
+Recall: 0
+F1 Score: 0

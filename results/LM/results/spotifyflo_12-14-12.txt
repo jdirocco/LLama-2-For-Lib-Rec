@@ -1,0 +1,140 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: spotify/flo
+    Project Description: &nbsp;&nbsp; \n\nPlease note that we, at Spotify, have ceased further development of flo, so no new features will come;\non the other hand, we will fix critical issues.\n\n is a lightweight workflow definition library\n\n It\'s not a workflow management system\n It\'s not a workflow scheduler\n\nSome key features\n\n Programmatic Java and Scala API for expressing workflow construction task \n \n \n \n \n \n \n\n Quick Example: Fibonacci\n\nFibonacci serves as a good example even though it\'s not at all the kind of thing that is\nmeant to be used for. Nevertheless, it demonstrates how a task DAG can be recursively defined with\narbitrary logic governing which inputs are chosen.\n\n\n\nScala equivalent\n\n\n\nFor more details on a highlevel runner implementation, see florunner.\n\n Task\n\nTask is one of the more central types in . It represents some task which will\nevaluate a value of type . It has a parameterized name, zero or more input tasks and a\nprocessing function which will be executed when inputs are evaluated. Tasks come with a few key\nproperties governing how they are defined, behave and are interacted with. We\'ll cover these in the\nfollowing sections.\n\n Tasks are defined by regular methods\n\nYour workflow tasks are not defined as classes that extend Task, rather they are\ndefined by using the API as we\'ve already seen in the fibonacci example. This is in\nmany ways very similar to a very clean class with no mutable state, only final members and two\noverridden methods for inputs and evaluation function. But with a very important difference, we\'re\nhandling the input tasks in a typesafe manner. Each input task you add will further construct the\ntype for your evaluation function. This is how we can get a clean lambda such as \nas the evaluation function for our fibonacci example.\n\nHere\'s a simple example of a task depending on two other tasks:\n\n\n\nThis is how the same thing would typically look like in other libraries:\n\n\n\n Task embedding\n\nThere\'s of course nothing stopping you from having the task defined in a regular class. It might\neven be useful if your evaluation function is part of an existing class. does not force\nanything on to your types, it just needs to know what to run.\n\n\n\n Tasks are lazy\n\nCreating instances of is cheap. No matter how complex and deep the task DAG might be,\ncreating the top level will not cause the whole DAG to be created. This is because all\ninputs are declared using a , utilizing their properties for deferred evaluation:\n\n\n\nThis pattern is on its way to become an idiom for achieving laziness in Java 8. A good example is\nthe additions to the Java 8 Logger class which lets the logger decide if the log line for a\ncertain log level should be computed or not.\n\nSo we can easily create an endlessly recursive task useless, but illustrative and still be able\nto construct instances of it without having to worry about how complex or resource consuming the\nconstruction might be.\n\n\n\nThis means that we can always refer to tasks directly by using their definition:\n\n\n\n Task DAGs as data structures\n\nA can be transformed into a data structure where a materialized view of the task DAG is\nneeded. In this example we have two simple tasks where one is used as the input to the other.\n\n\n\n in this example will be:\n\n\n\nThe and fields should be pretty self explanatory. is a boolean which\nsignals if some task has already been materialized earlier in the tree, given a depth first,\npostorder traversal.\n\nRecall that the DAG expansion can choose inputs arbitrarily based on the arguments. In workflow\nlibraries where expansion is coupled with evaluation, it\'s hard to know what will be evaluated\nbeforehand. Evaluation planning and result caching/memoizing becomes integral parts of such\nlibraries. aims to expose useful information together with flexible evaluation apis to make\nit a library for easily building workflow management systems, rather than trying to be the\ncandoitall workflow management system itself. More about how this is achieved in the\nEvalContext sections.\n\n EvalContext\n\nEvalContext defines an interface to a context in which instances are\nevaluated. The context is responsible for expanding the task DAG and invoking the task\nprocessfunctions. It gives library authors a powerful abstraction to use when implementing\nthe specific details of evaluating a task DAG. All details around setting up wiring of dependencies\nbetween tasks, interaction with user code for DAG expansion, invoking task functions with upstream\narguments, and other mundane plumbing is dealt with by flo.\n\nThese are just a few aspects of evaluation that can be implemented in a :\n\n Evaluation concurrency and thread pool management\n Persisted memoization of previous task evaluations\n Distributed coordination of evaluating shared DAGs\n Shortcircuiting DAG expansion of previously evaluated tasks\n\nSince multi worker, asynchronous evaluation is a very common prerequisite for many evaluation\nimplementations, flo comes with a base implementation of an AsyncContext that\ncan be extended with further behaviour.\n\nSee also SyncContext, InstrumentedContext and\nMemoizingContext.\n\nTask: 8 Logger:
+    Existing Dependencies:
+    com.spotify:foss-root
+- com.spotify:apollo-bom
+- com.google.auto.value:auto-value
+- com.google.cloud:google-cloud-storage
+- org.slf4j:slf4j-api
+- org.mockito:mockito-all
+- com.spotify:flo-freezer
+- commons-lang:commons-lang
+- com.google.http-client:google-http-client-jackson2
+- com.spotify:flo-runner
+- org.trimou:trimou-core
+- com.google.cloud:google-cloud
+- com.google.guava:guava
+- com.esotericsoftware:kryo-shaded
+- com.google.auth:google-auth-library-oauth2-http
+- com.google.auto.service:auto-service
+- com.spotify:apollo-core
+- org.scalatest:scalatest_${scala.baseVersion}
+- com.squareup.okio:okio
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <a class="navbar-brand" href="{{url('/')}}"><img src="{{asset('images/logo1.jpg')}}" class="img-fluid rounded-circle" width="30" height="30"  alt="{{ config('app.name', 'Laravel') }}"> {{ config('app.name', 'Laravel') }}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                </li>
+                <li>
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">Inicio</a>
+                                
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </li>
+               
+                <li class="nav-item active">
+                </li>
+                <li  class="nav-item active">
+                </li>
+                <li class="nav-item active">
+                </li>
+            </ul>
+        </div>
+    </nav>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> /*
+    File: fn_onPlayerRespawn.sqf
+    Author: Julian Bauer (julian.bauer@cationstudio.com)
+    
+    Description:
+    Resets player's stats
+*/
+params [
+	["_unit", objNull, [objNull]]
+];
+_unit = _this selt call cat_player_fnc_update;ect 0;
+
+private _loadout = _unit getVariable ["loadout",[]];
+if (typeName _loadout isEqualTo "ARRAY") then {
+	_unit setVariable ["loadout", _loadout, true];
+};
+
+if (count _unit getVariable ["restrained", []] == 0) then {
+	_unit setVariable ["restrained", [], true];
+};
+
+if (count _unit getVariable ["fatigue", []] == 0) then {
+	_unit setVariable ["fatigue", [], true];
+};
+
+private _bankBalance = _unit getVariable ["cti_bankBalance", 500];
+private _crypto = _unit getVariable ["cryptoBalance", 0];
+private _bank = _unit getVariable ["cti_bankAccount", []];
+_unit setVariable ["cti_bankBalance", _bankBalance, true];
+_unit setVariable ["cryptoBalance", _crypto, true];
+_unit setVariable ["cti_bankAccount", _bank, true];
+
+_uni
+
+Precision: 0
+Recall: 0
+F1 Score: 0

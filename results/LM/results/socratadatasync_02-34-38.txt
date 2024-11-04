@@ -1,0 +1,114 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: socrata/datasync
+    Project Description: Socrata Datasync\n================\n\nLast updated: June 2, 2017\n\nLooking for the latest release? Get it here: General Information\nDataSync is an executable Java application which serves as a general solution to automate publishing data on the\nSocrata platform. It can be used through a easytouse graphical interface or as a commandline tool \'headless mode\'.\nWhether you are a nontechnical user, developer, or ETL specialist DataSync makes data publishing simple and reliable.\nDataSync takes a CSV or TSV file on a local machine or networked hard drive and publishes it to a Socrata dataset so\nthat the Socrata dataset stays uptodate. DataSync can also publish geospatial files such as zipped shapefiles,\ngeoJSON, KML, and KMZ files. DataSync jobs can be integrated into an ETL process, scheduled using a tool\nsuch as the Windows Task Scheduler or Cron, or used to perform updates or create new datasets in batches. DataSync\nworks on any platform that runs Java version 1.8 or higher i.e. Windows, Mac, and Linux. This simple, yet powerful\npublishing tool lets you easily update Socrata datasets programmatically and automatically scheduled, without\nwriting a single line of code.\n\n\n\nThe Socrata University Class: \n\n Standard Jobs\nStandard jobs can be set up to take a CSV data file from a local machine or networked folder and publish it to a specific dataset. A job can be automated easily using the Windows Task Scheduler or similar tool to run the job at specified intervals i.e. once per day.\n\n\n GIS Jobs\nGIS jobs can be set up to handle geospatial datasets, such as zipped shapefiles, geoJSON, KML, or KMZ files and replace specific datasets on Socrata. The job can then be automated in a similar fashion to standard jobs.\n\n Port Jobs\nPort jobs are used for moving data around that is already on the Socrata platform. Users that have publisher rights can make copies of datasets through this tool. Port jobs allow the copying of both dataset schemas metadata and columns and data rows.\n\n\n\n Developers\nThis repository is our development basecamp. If you find a bug or have questions, comments, or suggestions, you can contribute to our .\n\n Apache Maven\nDataSync uses Maven for building and package management. For more information: \n\nTo build the project, first you\'ll need to create an application token on your profile page. Put the random string it produces in a file called "apikey.txt" in the root directory of this project, then run\n\n\nTo compile the project into an executable JAR file including all dependencies run:\n\n\nThis puts the JAR file into the "target" directory inside the repo. So to open DataSync, simply:\n\n\n Java SDK\n\nDataSync can be used as a Java SDK, for detailed documentation refer\nto:\n\n'
+    Existing Dependencies:
+    org.tukaani:xz
+- net.sf.opencsv:opencsv
+- commons-cli:commons-cli
+- org.apache.commons:commons-io
+- com.googlecode.json-simple:json-simple
+- org.apache.httpcomponents:httpclient
+- net.java.balloontip:balloontip
+- org.codehaus.jackson:jackson-core-asl
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- Main content --> 
+    <section class="content">
+      <!-- Small boxes (Stat box) -- -- -- ------------->
+      <!-- /.row (main row) -->
+      <div class="row">
+        <!-- Left col (contains the chart)
+        ------------->
+        <section class="col-lg-8">
+          <!-- FORMULARIO --------->
+          <!-- /.box
+          <!-- /.box
+         ---------->
+                  <div class="panel-body">
+                      <div class="col-lg-12">
+                        <div class="formulario panel panel-default">  
+                          <?php echo $this->session->flashdata('message');?><div class="row">
+                          <?php echo form_open('administrador/usuarios/nuevo');?>  
+                              <form role="form" id="guardar" name="guardar"  action="" method="post" class="form">
+                                  <input type="hidden" name="action" value="insertar">
+                                  <ul class="nav nav-tabs nav-justified">
+                                      <li class="active"><a href="#datospessoales" data-toggle="tab">Datos Personales</a></li>
+                                  </ul>
+                                  <div class="tab-content">
+                                      <div class="tab-pane fade in active form-horizontal" id="datospessoales">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                              <div class="col-sm-4">
+                                                <label>Usuario</label>
+                                                <div class="form-group">
+                                                  <div class="input-group">
+                                                      <span class="input-group-addon"><i class="fa fa-user-plus fa-2x"></i></span>
+                                                      <input type="text" id="usuario" name="usuario" class="form-control input-md" placeholder="Usuario" required>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-sm-4">
+                                                <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+                                                <div class="form-group">
+                                                  <div class="input-group">
+                                                      <span class="input-group-addon"><i class="fa fa-envelope fa-2x"></i></span>
+                                                      <input type="email" name="correo" id="correo" class="form-control input-md" placeholder="Correo" required>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-sm-4">
+                                                <label for="inputEmail3" class="col-sm-3 control-label">Password</label>
+                                                <div class="form-group">
+                                                  <div class="input-group">
+                                                      <span class="input-group-addon"><i class="fa fa-key fa-2x"></i></span>
+                                                      <input type="password" name="clave" id="clave" class="form-control input-md" placeholder="Password">
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    public function getType(): int;
+
+    public function jsonSerialize() : array;
+} <?php
+
+namespace OguzhanUmutlu\TNTRun\utils\arena\teams;
+
+use JsonSerializable;
+use pocketmine\item\Item;
+
+interface Team extends JsonSerializable {
+    public function getColor(): string;
+    public function getPrefix(): string;
+    public function getName(): string;
+
+    /*** @return Item[][] */
+    public function getArmorContents(): array;
+    public function getMaxPlayers(): int;
+    public function getBalance(): float;
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

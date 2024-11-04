@@ -1,0 +1,196 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: jcabi/jcabi-jdbc
+    Project Description: \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMore details are here: .\n\nAlso, read this blog post:\n.\n\n is a convenient fluent wrapper around JDBC:\n\n\n How to contribute?\n\nFork the repository, make changes, submit a pull request.\nWe promise to review your changes same day and apply to\nthe branch, if they look correct.\n\nPlease run Maven build before submitting a pull request:\n\n\n\nPlease make sure that you\'re doing so under user account without administrative rights, otherwise the build will fail postgresql instance needed for tests can\'t be launched under admin/root account.\n'
+    Existing Dependencies:
+    com.jcabi:com.jcabi
+- commons-io:commons-io
+- org.projectlombok:org.projectlombok
+- org.mockito:org.mockito
+- org.glassfish:org.glassfish
+- org.hamcrest:org.hamcrest
+- javax.ws.rs:javax.ws.rs
+- org.codehaus.groovy:org.codehaus.groovy
+- commons-codec:commons-codec
+- javax.validation:javax.validation
+- javax.servlet:javax.servlet
+- com.jolbox:bonecp
+- org.projectlombok:lombok
+- org.clojure:org.clojure
+- xml-apis:xml-apis
+- javax.el:javax.el
+- javax.validation:validation-api
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+      box-sizing: border-box;
+    }
+
+.row {
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap; /* IE10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+
+    /* Create two equal columns that sits next to each other */
+.column {
+      -ms-flex: 50%; /* IE10 */
+      flex: 50%;
+      padding: 0 4px;
+   }
+
+   .column1 {
+      -ms-flex: 33.33%;
+      flex: 33.33%;
+      padding: 0 4px;
+    }
+   .column10 {
+      -ms-flex: 10%;
+      flex: 10%;
+      padding: 0 4px;
+    }
+
+   .column2 {
+      -ms-flex: 16.66%;
+      flex: 16.66%;
+      padding: 0 4px;
+    }
+
+   .column3 {
+      -ms-flex: 25%;
+      flex: 25%;
+      padding: 0 4px;
+    }
+
+   .column4 {
+      -ms-flex: 33.33%;
+      flex: 33.33%;
+      padding: 0 4px;
+    }
+   .column8 {
+      -ms-flex: 12.5%;
+      flex: 12.5%;
+      padding: 0 4px;
+    }
+   .column5 {
+      -ms-flex: 41.66%;
+      flex: 41.66%;
+      padding: 0 4px;
+      display: flex;
+    }
+   .column6 {
+      -ms-flex: 66.66%;
+      flex: 66.66%;
+      padding: 0 4px;
+    }
+   .column7 {
+      -ms-flex: 75%;
+      flex: 75%;
+      padding: 0 4px;
+    }
+
+    /* Set height of "fill" containers. Just to demo the equal height property */
+.fill {
+      background-color: orange;
+      color: white;
+      height: 100px;
+    }
+
+.vertical-center {
+      margin: 0;
+      padding: 0;
+      height: 100px;
+      width: 100%;
+      background-color: orange;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+  } 
+ .vertical-center2 {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background-color: #fff;
+      display: -ms-flexbox;
+      display: -webkit-flex
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    }
+    }
+}
+ ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Dashboard.Support.DashboardParsing;
+using Dlbr.CommonLogin.IdentityModel.WebApi;
+using Dlbr.CommonLogin.IdentityModel.WebApi.Client;
+using log4net.Repository.Hierarchy;
+using log4net.Targets;
+using NUnit.Framework;
+
+namespace Dashboard.NunitTest
+{
+    public class WebApiTest
+    {
+        protected void SetupLogger()
+        {
+            LogManager.Initialize("log4net.config"); //Initialize the log4net
+            var hierarchy = (Hierarchy)LogManager.GetRepository();
+            var target = new DebugAppender();
+            hierarchy.Root.AddAppender(target);
+            hierarchy.Root.Level = Level.Debug;
+        }
+
+        protected string GetWebApiUrl()
+        {
+            return "http://{0}.com/".With(new Random().Next());
+        }
+        protected DashboardWebApi GetWebApiClient()
+        {
+            return new DashboardWebApi(null, GetWebApiUrl(), new WebApiAuthentication(new TokenProvider()));
+        }
+        protected void ValidateResponse<T>(ApiResponse<T> result)
+        {
+            Assert.IsTrue(result.Success);
+            Assert.IsNotNull(result.Data);
+    
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,172 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: confluentinc/kafka-connect-hdfs
+    Project Description: Kafka Connect HDFS Connector\n\nkafkaconnecthdfs is a \nfor copying data between Kafka and Hadoop HDFS.\n\nDocumentation for this connector can be found .\n\n Development\n\nTo build a development version you'll need a recent version of Kafka as well as a set of upstream Confluent projects, which you'll have to build from their appropriate snapshot branch. See the for guidance on this process.\n\nYou can build kafkaconnecthdfs with Maven using the standard lifecycle phases.\n\n FAQ\n\nRefer frequently asked questions on Kafka Connect HDFS here \n Contribute\n\n Source Code: Issue Tracker: Learn how to work with the connector's source code by reading our .\n\n License\n\nThis project is licensed under the .\n"
+    Existing Dependencies:
+    io.confluent:kafka-connect-storage-partitioner
+- org.apache.kafka:connect-json
+- io.confluent:kafka-connect-storage-wal
+- io.confluent:kafka-connect-storage-common
+- org.apache.hadoop:hadoop-minikdc
+- joda-time:joda-time
+- io.confluent:kafka-connect-storage-format
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+    <section id="about-us">
+        <div class="container">
+            <div class="row justify-content-between">
+    
+                <div class="col-lg-5 col-md-6">
+                    <div class="about-content">
+                        <h2>About <em>Us</em></h2>
+                        <p>Lor ipsum dolor sit amet, consectetur adipiscing elit. Etiam neque massa, placerat vel tortor vel, maximus consequat augue. Nullam scelerisque neque et efficitur sollicitudin. Mauris lacinia leo eu luctus venenatis. Ut nec erat tincidunt, egestas urna eget, volutpat mi. Integer neque nulla, malesuada ut tincidunt eget, volutpat id leo. </p>
+                        <img src="img/about/about-img.jpg" alt="">
+                    </div>
+                </div>
+    
+                <div class="col-lg-5 col-md-6">
+                    <div class="about-content">
+                        <h2>About <em>Us</em></h2>
+                        <p>Lor ipsum dolor sit amet, consectetur adipiscing elit. Etiam neque massa, placerat vel tortor vel, maximus consequat augue. Nullam scelerisque neque et efficitur sollicitudin. Mauris lacinia leo eu luctus venenatis. Ut nec erat tincidunt, egestas urna eget, volutpat mi. Integer neque nulla, malesuada ut tincidunt eget, volutpat id leo. </p>
+                        <img src="img/about/about-img.jpg" alt="">
+                    </div>
+                </div>
+    
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12">        
+                    <div class="about-btn">
+                        <a href="#">Read Our Blog</a>            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- End About Us Section -->
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <template>
+  <v-app id="inspire">
+    <v-content>
+      <v-container
+        class="fill-height"
+        fluid
+      >
+        <v-row
+          align="center"
+          justify="center"
+        >
+          <v-col
+            cols="12"
+            sm="8"
+            md="4"
+          >
+            <v-card class="elevation-12">
+              <v-toolbar
+                color="primary"
+                dark
+                flat
+              >
+                <v-toolbar-title>Login form</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on }">
+                    <v-btn
+                      :href="source"
+                      icon
+                      large
+                      target="_blank"
+                      v-on="on"
+                    >
+                      <v-icon>mdi-code-tags</v-icon>
+                    </v-btn>
+                  </template>
+                  <span>Source</span>
+                </v-tooltip>
+              </v-toolbar>
+              <v-card-text>
+                <v-form>
+                  <v-text-field
+                    label="Login"
+                    name="login"
+                    v-model="login"
+                    prepend-icon="mdi-account"
+                    type="text"
+                  ></v-text-field>
+          
+                  <v-text-field
+                    id="password"
+                    label="Password"
+                    name="password"
+                    v-model="password"
+                    prepend-icon="mdi-lock"
+                    type="password"
+                  ></v-text-field>
+                </v-form>
+              </v-card-text>
+              <v-card-actions>      </v-content>
+      </v-app>
+    </div> 
+</template>
+
+<script>
+  
+  export default {
+    props: {
+        source: String,
+    },
+    data: () => ({
+      show1: false,
+      login:'a',
+      password:'a',
+    }),
+
+    methods: {
+      submit () {
+        
+        if ('a' == this.login && 'a' == this.password){
+            window.location.href = '/admin/dashboard';
+        }
+        else  {
+          alert('wrong email/password');
+        }
+        
+      },
+    },
+  }
+</script>
+
+                <v-spacer></v-spacer>
+                <v-btn color="primary" @click="submit" >Login</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+        </v-row>
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

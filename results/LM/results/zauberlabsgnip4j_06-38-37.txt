@@ -1,0 +1,145 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: zauberlabs/gnip4j
+    Project Description: What is gnip4j?\n\nGnip4j is an Open Source ASFL 2.0 library to access and process Activities tweets\nfrom the \nfrom the data from the Java language.\n\n\n Features\n 100% Pure Java works on any Java Platform version 1.8 or later \n Minimal dependencies: \n The is the only requiered dependecy\n Optionally if is present in the classpath, logging is supported.\n Outofthebox gzip support\n Push model via Streaming asynchronous processing\n Error handling support and exponentialbackoff reconnections\n Monitoring Support JMX\n Enterprise Data Collector Support\n Powertrack V1 and V2 support\n\n How To use gnip4j\n\nFor more information refer to the Gnip4j Reference Guide. Available formats:\n \n using GitHub.\n\nHad an Issue? Fill it in .\n\n Get in Contact\n\nIf you want to get in contact with us, or people interested in the project, please visit our group at\n License\n\nCopyright c 20112016 Zauber S.A. \n\nLicensed under the Apache License, Version 2.0 the "License";\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\ngnip4j includes portions of software from licenced by the Apache Fundation package\n.\n\n Code Conventions and Housekeeping\n\nNone of these is essential for a pull request, but they will all help. They\ncan also be added after the original pull\nrequest but before a merge.\n\n Use the project code format conventions. Import from the root of\n the project if you are using Eclipse. Checkstyle configuration is available \n at \n Make sure all new .java files to have a simple Javadoc class comment with at\n least an @author tag identifying you, and preferably at least a paragraph on \n what the class is for.\n Add the ASF license header comment to all new .java files copy from existing \n files in the project\n Add yourself as an @author to the .java files that you modify substantially\n more than cosmetic changes.\n A few unit tests would help a lot as well someone has to do it.\n If noone else is using your branch, please rebase it against the current\n master or other target branch in the main project.\n'
+    Existing Dependencies:
+    org.codehaus.jackson:jackson-xc
+- commons-io:commons-io
+- io.netty:netty
+- org.codehaus.jackson:jackson-core-asl
+- org.slf4j:slf4j-api
+- org.codehaus.jackson:jackson-mapper-asl
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <h2 align="center"><br>
+        <b>DAFTAR HADIR KELAS PEMROGRAMAN KLINIK</b><br>
+        <b>TAHUN AJARAN <?php echo $this->session->userdata('tahunajaran_nama')?></b><br>
+    </h2>
+	<br><br>
+<table id="datatable-buttons29" class="table table-striped table-bordered table-hover">
+	<thead>
+		<tr>
+				<th align="center">No. <i class="fa fa-sort-numeric-asc"></i></th>
+				<th align="center">Nama <i class="fa fa-sort-alpha-asc"></i></th>
+                <th align="center">Hari</th>
+                <th align="center">Tanggal <i class="fa fa-sort-numeric-asc"></i></th>
+                <th align="center">Masuk</th>
+                <th align="center">Tidak Masuk</th>
+                <th align="center">Masuk</th>
+                <th align="center">Alpa</th>
+            </tr>
+        </thead>
+		
+		<tbody>
+			<?php
+				$no = 1;
+				
+				if ($list_absensi) {
+					
+					foreach ($list_absensi as $row) {
+						
+					
+						echo "<tr>";
+						echo "<td align='center'>".$no."</td>";
+						echo "<td align='left'>".strtoupper($row['anggota'])."</td>";
+						echo "<td align='center'>".$row['hari']."</td>";
+						echo "<td align='center'>".date("d M Y",strtotime($row['tgl_absen']))."</td>";
+						if($row['status_kehadiran']=='1'){
+							if($row['masuk_jammasuk']){
+								echo "<td align='center'>".date("H:i:s",strtotime($row['masuk_jammasuk']))."</td>";
+							}else{
+								echo "<td align='center'> - </td>";
+							}
+						}else{
+							if($row['tidakmasuk_jammasuk']){
+								echo "<td align='center'>".$row['tidakmasuk_jammasuk']."</td>";
+							}else{
+								echo "<td align='center'> - </td>";
+							}
+						}
+						
+						if($row['tidakmasuk_ket']){
+							echo "<td align='center'>".$row['tidakmasuk_ket']."</td
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+      this.props.onSubmit && this.props.onSubmit();
+    });
+  };
+
+  handleClickCancel = () => {
+    this.props.onCancel && this.props.onCancel();
+  };
+
+  render() {
+    const { visible, title, children, width } = this.props;
+    return (
+      <Dialog
+        className="dialog-wrapper"
+        visible={visible}
+        title={title || '提示'}
+        onCancel={this.handleClickCancel}
+        onConfirm={this.handleClickConfirm}
+        confirmText="保存"
+        cancelText="取消"
+        style={{
+          width: isNaN(Number(width))? width : pxToRem(width),
+        }}
+      >
+        <div className="content">{children}</div>
+      </Dialog>
+    );
+  }
+}
+
+DialogContainer.defaultProps = {
+  visible: false,
+};
+
+DialogContainer.propTypes = {
+  visible: PropTypes.bool,
+  title: PropTypes.string,
+  children: PropTypes.any,
+  width: PropTypes.string,
+};
+ import React, { PureComponent } from'react';
+import PropTypes from 'prop-types';
+import Dialog from'ming-ui/components/Dialog';
+import cx from 'classnames';
+import './style.less';
+import { pxToRem } from 'utils/functions';
+
+export default class DialogContainer extends PureComponent {
+  constructor(props) {
+    super(props);
+  }
+
+  handleClickConfirm = () => {
+    this.props.getFormData((res) => {
+      this.props.onConfirm && this.props.onConfirm(res);
+
+Precision: 0
+Recall: 0
+F1 Score: 0

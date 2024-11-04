@@ -1,0 +1,101 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: mwolfson/android-historian
+    Project Description: Android Historian Material Design Demo\n========================================\n\nThis app is designed to demonstrate the various components of the Material Design Components, in particular, showing how to implement Material design into your app, using these controls.\n\nThe UI is has specific considerations to demonstrate certain interactions of the components, so may have certain unusual interactions and patterns.\n\nThe has great information specific to Android Development.\n\nCurrent Build Status Is:\n\n\nModifiy gradle.properties to build locally\n\nIn order to use some the API functionality in code, you will need add your own API key to \n\n\nNow you can download this app from the Play Store You must \n\n\n\nNov 4, 2019\n Dark Mode Implementation\n Implement Style\\Theming to support Dark Mode\n Required UI to support user setting for Dark Mode\n GIF showing Dark Mode coming soon\n\nApr 6, 2019\n Adaptive Icon, w/ Custom Vector Logo\n WorkManager Example sending periodic notifications\n\nFeb 2, 2019\n"Modern Android" Update\n 100% Kotlin \n Converted to MVVM\n LiveData\n Room Database\n Coroutines\n Jetpack Dependencies\n\nOct 16, 2018\n Added API for getting Phone information\n\nJuly 18, 2018\n Bottom App Bar with inset FAB\n Chip\n Text Scale Attributes\n Bottom Sheet\n Coordinated Motion\n MDC style TextInputView with Outline\n\nMay 24, 2018\n Update packages and build\n Jetpack conversion androidx\n Using new Material Component Packages\n AutoResizing TextViews\n\nApr 10, 2016\n Bottom Sheets\n Vector Drawables\n SharedElementTransition\n\nOct 22, 2015\n PercentageLayout\n\nSept 15, 2015\n AppCompatActivity\n CoordinatorLayout\n AppBarLayout & Toolbar\n RecyclerView with ItemDecorators\n LinearLayoutManager\n GridLayoutManager\n StaggeredGridLayoutManager \n Snackbar\n TabLayout\n AppCompat Tinting\n NavigationView\n Snackbar\n SwitchCompat\n AlertDialog\n CardView\n FloatingActionButton\n TextInputLayout\n TextAppearance.AppCompat\n\nSpecial Thanks\n\n\nItem Decorator from \n\nPrerequisites\n\n\n Android SDK, Build Tools and Support Repository\n\nPresentation Slides and Video\n\n\nThis project was originally created to support my presentation titled "Material Design Everywhere using the Android Support Libs".\n\n My most current slides from this presentation are posted here: The video from Droidcon NYC:
+    Existing Dependencies:
+    com.android.support:percent
+- com.android.support:palette-v7
+- com.android.support.test.espresso:espresso-contrib
+- com.android.support:recyclerview-v7
+- com.squareup.okhttp:okhttp
+- com.android.support:appcompat-v7
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <style>
+    body{
+        background-color: #000;
+        color: #fff;
+        line-height: 0;
+        margin: 0;
+    }
+   .container{
+        padding:0 10%;
+        text-align: center;
+        line-height: 2.3;
+    }
+   .container p{
+        font-size: 7rem;
+        margin: 0;
+    }
+   .container span{
+        font-size: 5.6rem;
+    }
+    @media (max-width: 768px) {
+     .container span{
+        font-size: 3rem;
+      }
+     .container p{
+        font-size: 4rem;
+      }
+    }
+</style>
+
+<div class="container">
+    <p>40<span>4</span></p>
+    <p><?=lang('app.PageNotFoundText')?>...</p>
+</div>
+  
+  
+
+   
+  
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>  <div className="col-xs-8 col-md-8">{props.children}</div>
+            <div className={`col-xs-3 col-md-3 ${styles.rightPanel}`}>
+
+                <Editor />
+            </div>
+        </div>
+    )
+};
+
+export default MainContainer;
+ import React from'react';
+import styles from './styles.module.scss';
+import Editor from '../editor/editor.container';
+
+interface MainContainerProps {
+    children?: React.ReactNode,
+}
+
+const MainContainer: React.SFC<MainContainerProps> = (props: MainContainerProps) => {
+    return (
+        <div className={styles.container}>
+          
+
+Precision: 0
+Recall: 0
+F1 Score: 0

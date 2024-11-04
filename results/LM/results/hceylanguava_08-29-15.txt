@@ -1,0 +1,111 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: hceylan/guava
+    Project Description: Guava: Google Core Libraries for Java\n=====================================\n\nRequires JDK 1.6 or higher as of 12.0.\n\nProject page:\n a defect or feature request here:\n "howto" and "whydidn\'titwork" questions at:\n use the "guava" tag\n\nFor openended questions and discussion:\n to project updates in your feed reader:\n WARNINGS\n\n\n1. APIs marked with the @Beta annotation at the class or method level\nare subject to change. They can be modified in any way, or even\nremoved, at any time. If your code is a library itself i.e. it is\nused on the CLASSPATH of users outside your own control, you should\nnot use beta APIs, unless you repackage them e.g. using ProGuard.\n\n2. Deprecated nonbeta APIs will be removed eighteen months after the\nrelease in which they are first deprecated. You must fix your\nreferences before this time. If you don\'t, any manner of breakage\ncould result you are not guaranteed a compilation error.\n\n3. Serialized forms of ALL objects are subject to change. Do not\npersist these and assume they can be read by a future version of the\nlibrary.\n\n4. Our classes are not designed to protect against a malicious caller.\nYou should not use them for communication between trusted and\nuntrusted code.\n\n5. We unittest and benchmark the libraries using only OpenJDK 1.6 on\nLinux. Some features, especially in com.google.common.io, may not work\ncorrectly in other environments.\n\n'
+    Existing Dependencies:
+    org.sonatype.oss:oss-parent
+- org.junit.contrib:truth
+- com.google.gwt:gwt-user
+- org.easymock:easymock
+- com.google.code.findbugs:jsr305
+- ${project.groupId}:guava-testlib
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+<div class="row">
+    
+    <div class="col-sm-4" style="padding:0px 0px 0px 0px;">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Selamat Datang</div>
+             </div>
+             </div>
+            </div>
+
+
+           
+    </div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>  return (int) (Math.min(20, Math.min(30, distanceToTarget * 10)));
+    }
+
+
+    public static double distance(final Entity firstEntity, final Entity secondEntity) {
+        return firstEntity.getLocation().distance(secondEntity.getLocation());
+    }
+
+}
+ package net.hcriots.hcfactions.util;
+
+import org.bukkit.entity.Entity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by InspectMC
+ * Date: 7/7/2020
+ * Time: 2:32 AM
+ */
+public class EntityUtils {
+
+    public static List<Entity> getEntitiesWithinRange(Entity entity, double distance) {
+        List<Entity> entities = new ArrayList<>();
+        entities.addAll(entity.getNearbyEntities(distance, distance, distance));
+        if (entities.size() > 0) {
+            return entities;
+        } else {
+            return null;
+        }
+    }
+
+    public static List<Entity> getLivingEntitiesWithinRange(Entity entity, double distance) {
+        List<Entity> entities = new ArrayList<>();
+        entities.addAll(entity.getNearbyEntities(distance, distance, distance));
+        if (entities.size() > 0) {
+            return entities;
+        } else {
+            return null;
+        }
+    }
+
+    public static int calculateDamage(final Entity attacker, final Entity victim) {
+        double damage = 4.0D;
+        double distanceToTarget = EntityUtils.distance(victim, attacker);
+
+        if (damage > 20.0D) {
+            damage = 20.0D;
+        }
+
+        if (distanceToTarget < 4.0D) {
+            damage += 10.0D;
+        }
+
+      
+
+Precision: 0.0
+Recall: 0.0
+F1 Score: 0

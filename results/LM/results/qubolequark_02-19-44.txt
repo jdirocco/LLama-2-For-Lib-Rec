@@ -1,0 +1,135 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: qubole/quark
+    Project Description: \n\n\n\n\nIntroduction\n============\n\nQuark /\xcb\x88kw\xc9\x94rk/ or /\xcb\x88kw\xc9\x91rk/ simplifies and optimizes access to data for data analysts by \nmanaging relationships between tables across all databases in an organization. Quark defines \nmaterialized views and olap cubes, using them to route queries between tables stored in different \ndatabases. Materialized views simplify the management of cold and hot data between a data lake \nand a data warehouse. OLAP cubes optimize reports by rerouting queries to cubes stored in a fast \ndatabase. Quark is distributed as a JDBC jar and will work with most tools that integrate through\n JDBC. \n\nMailing List: quarkdev@googlegroups.com \nSubscribe: quarkdevsubscribe@googlegroups.com \nUnsubscribe: quarkdevunsubscribe@googlegroups.com \nGitter: \n\nDocumentation\n=============\nFor a quick start guide and detailed documentation refer to \n\nDeveloper Setup\n===============\nQuark now uses Qubole\'s fork of . \nCheckout calcite and install jars. The following code will install \n\n git clone git@github.com:qubole/incubatorcalcite.git\n cd incubatorcalcite\n git checkout qds1.5\n mvn install DskipTests\n \nCheckout and compile Quark\n\nMake changes in incubatorcalcite\n\n\nYou have to create a dev branch, change versions, develop and merge the changes once you are done.\n \n git checkout b devbranch qds1.5\n change version to 1.5.0qdsdevbranch in all pom.xml files. We need to improve this\n change version in quarkcalcite/pom.xml\n \nOnce you merge your changes back to , bump up the versions in all pom.xml files.\n\nRelease a new version of Quark\n==============================\n\nReleases are always created from . During development, \nhas a version like . \n \nTo create a release, the version has to be changed, compile, deploy and \nbump the development version.\n \n Change version as per mvn versions:set DnewVersion=X.Y.Z DgenerateBackupPoms=false\n git commit m "Prepare release X.Y.Z" a\n git tag a X.Y.Z a "A useful comment here"\n git push\n git push tags\n SSH to build machine if required\n Deploy to Maven Central\n mvn deploy P release\n Set new development version.\n mvn versions:set DnewVersion=X.Y.Z1SNAPSHOT DgenerateBackupPoms=false\n git commit m "Set Development Version to X.Y.Z1" a\n \n'
+    Existing Dependencies:
+    org.assertj:assertj-core
+- org.antlr:stringtemplate
+- org.flywaydb:flyway-core
+- org.apache.calcite.avatica:avatica
+- com.qubole:quark-jdbc
+- org.slf4j:slf4j-api
+- org.mockito:mockito-all
+- org.hamcrest:hamcrest-core
+- org.jdbi:jdbi
+- commons-codec:commons-codec
+- com.qubole:quark-optimizer
+- com.qubole:quark-fat-jdbc
+- com.google.guava:guava
+- com.qubole:quark-ee
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<div class="container-fluid">
+  <div class="row" style="height: 100%;background-color: #054874;padding: 0;">
+    <div class="col-md-2" style="height: 100%;background-color: #054874;padding: 0;overflow-x: hidden;padding-top: 2%;">
+      <center><a href="{{url('admin/')}}" style="text-decoration: none;">
+          <h5 style="color: #e7dbdb;margin: 0;">
+            <i class="fas fa-tachometer-alt" style="color: #e7dbdb;"></i>
+            Dashboard
+          </h5>
+        </a></center>
+      <center><a href="{{url('admin/profile')}}" style="text-decoration: none;">
+          <h5 style="color: #e7dbdb;margin: 0;">
+            <i class="fas fa-user-alt" style="color: #e7dbdb;"></i>
+            Profile
+          </h5>
+        </a></center>
+      <center><a class="active" href="#" style="text-decoration: none;">
+          <h5 style="color: #e7dbdb;margin: 0;">
+            <i class="fas fa-tachometer-alt" style="color: #e7dbdb;"></i>
+            Data Karyawan
+          </h5>
+        </a></center>
+      <center><a href="#" style="text-decoration: none;">
+          <h5 style="color: #e7dbdb;margin: 0;">
+            <i class="fas fa-sign-out-alt" style="color: #e7dbdb;"></i>
+            Logout
+          </h5>
+        </a></center>
+    </div>
+    
+    <div class="col-md-10" style="height: 100%;background-color: #f2f2f2;padding: 2%; overflow-x: scroll;" id="table_karyawan">
+      <center>
+        <table class="table table-bordered" id="tablekaryawan">
+          <thead>
+            <tr>
+              <th><center>No</center></th>
+              <th><center>Nama</center></th>
+              <th><center>TTL</center></th>
+              <th><center>Email</center></th>
+              <th><center>Jabatan</center></th>
+              <th><center>Status</center></th>
+              <th><center>Aksi</center></th>
+            </tr>
+          </thead>
+          <tbody>
+            @php
+            $a=1;
+            @endphp
+            @foreach($data_user as $d)
+              @if($d->roles()->first()['nama'] == 'admin' || $d->roles()->first()['nama'] == 'HRD' || $d->roles()->first()['nama'] =='super admin')
+              @else
+              <tr>
+                <td><center>{{$a++}}</center></td>
+                <td>{{$d->nama}}</td>
+                <td><center>{{$d->tempat_lahir}}, {{date
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Post::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'id'=>10000+ rand(1,400),
+            'name'=> $this->faker->sentence(3),
+            'description'=>$this->faker->text,
+            'img' =>'/img/posts/1.jpg'
+
+        ];
+    }
+}
+ <?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Post;
+class PostFactory extends Factory
+{
+    /**
+ 
+
+Precision: 0
+Recall: 0
+F1 Score: 0

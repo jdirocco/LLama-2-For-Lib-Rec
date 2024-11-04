@@ -1,0 +1,131 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: liquibase/liquibase
+    Project Description: Liquibase \n\n\nLiquibase helps millions of developers track, version, and deploy database schema changes. It will help you to:\n Control database schema changes for specific versions\n Eliminate errors and delays when releasing databases\n Automatically order scripts for deployment\n Easily rollback changes\n Collaborate with tools you already use\n\nThis repository contains the main source code for Liquibase Open Source. For more information about the product, see the .\n\n Liquibase Automation and Integrations\n\nLiquibase Open Source has builtin support for a variety of databases. Databases that are not part of Liquibase Open Source require extensions that you can download for free. Here is the full list of .\n\nLiquibase can be integrated with Maven, Ant, Gradle, Spring Boot, and other CI/CD tools. For a full list, see . You can use Liquibase with , , and many different .\n\n\n Install and Run Liquibase\n\n System Requirements\nLiquibase system requirements can be found on the page.\n\n An H2 inmemory database example for CLI\n1. . \n2. Make sure to add Liquibase to your PATH.\n3. Copy the included directory to the needed location.\n4. Open your CLI and navigate to your or directory.\n5. Start the included H2 database with the command.\n6. Run the command.\n7. Run the command to see what has executed!\n\nSee also how to or refer to our documentation page for more details.\n\n Documentation\n\nVisit the website to find the information on how Liquibase works.\n\n Courses\n\nLearn all about Liquibase by taking our free online courses at .\n\n Want to help?\n\nWant to file a bug or improve documentation? Excellent! Read up on our guidelines for !\n\n Contribute code \n\nUse our for contributing code to the Liquibase open source project. \n\n Join the Liquibase Community\n\nEarn points for your achievements and contributions, collect and show off your badges, add accreditations to your LinkedIn. . Enjoy being part of the community!\n\n Liquibase Extensions\n\n.\n\n License\n\nLiquibase Open Source is .\n\n and , with additional features and support, are commercially licensed.\n\nLIQUIBASE is a registered trademark of \n\n \n\n \n\n\n\n\n\n Publish Release Manual Trigger to Sonatype \n\n1. When a PO Product Owner or a Team Leader navigates to Publish a release from here the workflow from /workflow/releasepublished.yml job is triggered. \n2. When a release is triggered, the workflow file will stop after step and an email will be sent out to the list of mentioned in job . You can click on the link and perform anyone of the options mentioned in description. \n3. A minimum of 2 approvers are needed in order for the other jobs such as , , , etc to be executed.\n4. When you view the GitHub PR, make sure to verify the version which is being published. It should say something like \n'
+    Existing Dependencies:
+    org.assertj:assertj-core
+- org.mariadb.jdbc:mariadb-java-client
+- org.xerial:sqlite-jdbc
+- org.hamcrest:hamcrest-core
+- org.powermock:powermock-api-mockito
+- org.osgi:org.osgi.core
+- commons-cli:commons-cli
+- org.hamcrest:hamcrest-library
+- org.spockframework:spock-core
+- org.springframework:spring-core
+- junit:junit
+- org.postgresql:postgresql
+- org.yaml:snakeyaml
+- org.codehaus.groovy:groovy-all
+- org.springframework:spring-context
+- org.apache.ant:ant-antunit
+- org.springframework:spring-beans
+- org.firebirdsql.jdbc:jaybird-jdk17
+- javax.enterprise:cdi-api
+- ch.qos.logback:logback-classic
+- org.hsqldb:hsqldb
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 21 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <style>
+       .table-title.btn {
+    font-size: 13px;
+    font-weight: 200;
+}
+        </style>
+      <link href="{{asset('assets/css/table-responsive.css')}}" rel="stylesheet">
+    
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+       <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header border-transparent">
+               <h3 class="card-title"> <i class="fas fa-th mr-1"></i>  <b>{{__('lang.products')}}</b> {{__('lang.list')}}  </h3>
+           <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-tool" data-card-widget="remove">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body p-0">
+              <div class="table-responsive">
+                <table class="table m-0">
+                  <thead>
+                  <tr>
+                    <th>{{__('lang.id')}} </th>
+                    <th>{{__('lang.product_image')}} </th>
+                    <th>{{__('lang.product_name')}}</th>
+                    <th>{{__('lang.category')}}</th>
+                    <th>{{__('lang.unit_price')}}</th>
+                    <th>{{__('lang.unit_in_stock')}}</th>
+                    <th>{{__('lang.control')}}</th>
+                      
+                   
+                  </tr>
+                  </thead>
+                  <tbody id="category-list">
+                      <?php foreach ($products as $product) :?>
+                        <tr id="categoryid{{$product->id}}">
+                          <td>{{$product -> id}}</td>
+                          <td><img src="{{asset('upload/'.$product->img)}}" width="150px" height="150px" alt=""></td>
+                          <td><a href="{{route('products.show',$product->id)}}">{{$product -> name}}</a></td>
+                          <td>{{$product -> catName}}</td> 
+                           <td>{{$product -> price}} EGP</td>
+                          <td>{{$product -> unitInStock}}</td>
+                         
+                        
+                         <?php
+
+$token=Session::token();
+?> 
+                          <td>
+                            <a href="{{route('products.edit',$product->id)}}" >  
+                               <button type="button" class="btn btn-info"><i class="fa fa-edit" title="{{__('lang.Edit')}}"></i></button>
+                            </a>
+                            <a>    {!! Form::open(['route' => ['products.delete',$product->id],
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 21 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> #ifndef _SRC_ODBC_UTILS_STRING_H
+#define _SRC_ODBC_UTILS_STRING_H
+
+#include <v8.h>
+#include <nan.h>
+#inc
+lude <node_version.h>
+#include <odbc.h>
+
+namespace StringUtils {
+	v8::Local<v8::String> ToV8String(SQLTCHAR *str);
+}
+
+#endif
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,235 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: sriksun/Ivory
+    Project Description: Ivory Overview\n\nIvory is a feed processing and feed management system aimed at making it\neasier for end consumers to onboard their feed processing and feed\nmanagement on hadoop clusters.\n\nWhy?\n\n Dependencies across various data processing pipelines are not easy to\n establish. Gaps here typically leads to either incorrect/partial\n processing or expensive reprocessing. Repeated duplicate definition of\n a single feed multiple times can lead to inconsistencies / issues.\n\n Input data may not arrive always on time and it is required to kick off\n the processing without waiting for all data to arrive and accommodate\n late data separately\n\n Feed management services such as feed retention, replications across\n clusters, archival etc are tasks that are burdensome on individual\n pipeline owners and better offered as a service for all customers.\n\n It should be easy to onboard new workflows/pipelines\n\n Smoother integration with metastore/catalog\n\n Provide notification to end customer based on availability of feed\n groups logical group of related feeds, which are likely to be used\n together\n\nUsage\n\na. Setup cluster definition\n $IVORYHOME/bin/ivory entity submit type cluster file /cluster/definition.xml url Setup feed definition\n $IVORYHOME/bin/ivory entity submit type feed file /feed1/definition.xml url $IVORYHOME/bin/ivory entity submit type feed file /feed2/definition.xml url Setup process definition\n $IVORYHOME/bin/ivory entity submit type process file /process/definition.xml url Once submitted, entity definition, status and dependency can be queried.\n $IVORYHOME/bin/ivory entity type cluster|feed|process name definition|status|dependency url or entities for a particular type can be listed through\n $IVORYHOME/bin/ivory entity type cluster|feed|process list\n\ne. Schedule process\n $IVORYHOME/bin/ivory entity type process name process schedule url Once scheduled entities can be suspended, resumed or deleted post submit\n $IVORYHOME/bin/ivory entity type cluster|feed|process name suspend|delete|resume url Once scheduled process instances can be managed through irovy CLI\n $IVORYHOME/bin/ivory instance processName kill|suspend|resume|rerun start "yyyyMMdd\'T\'HH:mm\'Z\'" url configurations\n\nCluster:\n\n\n\n\n\n\n \n \n\n \n\n \n\n \n\n \n \n\n \n \n \n \n \n\n \n\n\n\nFeed:\n\n\n\n\n\n \n\n rmchourly\n\n hours\n 1\n\n \n\n \n \n \n \n \n \n\n \n \n \n \n \n\n \n\n \n\n \n\n\n\n\nProcess:\n\n\n\n\n\t\n\n\tdays1\n\n\t\n\n\t\n\t\t\n\t\n\n\t\n\t \n\t\n\n\t\n\t\t\n\t\n\n\t\n\n\t\n\n'
+    Existing Dependencies:
+    org.apache.ivory:ivory-common
+- com.thoughtworks.xstream:xstream
+- org.slf4j:slf4j-api
+- org.apache.ivory:ivory-metrics
+- org.mockito:mockito-all
+- org.apache.ivory:ivory-messaging
+- commons-codec:commons-codec
+- com.sun.jersey:jersey-json
+- org.apache.ivory:ivory-client
+- org.mortbay.jetty:jetty
+- commons-cli:commons-cli
+- org.perf4j:perf4j
+- org.apache.ivory:ivory-process
+- com.googlecode.json-simple:json-simple
+- javax.xml.bind:jaxb-api
+- org.apache.hadoop:hadoop-core
+- org.apache.oozie:oozie-client
+- commons-logging:commons-logging
+- commons-beanutils:commons-beanutils
+- com.jcraft:jsch
+- org.codehaus.jettison:jettison
+- org.codehaus.jackson:jackson-mapper-asl
+- org.mortbay.jetty:jetty-plus
+- org.springframework:spring-jms
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 24 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="page-content">
+        <nav class="page-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Form Layouts</li>
+            </ol>
+        </nav>
+
+       <!-- <div class="row">
+            <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Default form</h4>
+                        <p class="card-description">
+                            Basic form layout
+                        </p>
+                        <form class="forms-sample">
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">Username</label>
+                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <div class="form-check form-check-flat form-check-primary">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input">
+                                    Remember me
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                            <button class="btn btn-light">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Horizontal Form</h4>
+                        <p class="card-description">
+                            Horizontal form layout
+                        </p>
+                        <form class="forms-sample">
+                            <div class="form-group row">
+                                <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Email</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="exampleInputUsername2" placeholder="Username">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Email</label>
+                                <div class="col-sm-9">
+                                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="exampleInputMobile" class
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 24 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import {
+  createElement as h,
+  useEffect,
+  useCallback,
+  useState,
+  useMemo,
+  useRef,
+} from "react"
+import {
+  useOvermind,
+  getDefaultPlugins,
+} from "../../../overmind"
+import * as styles from "./styles"
+
+import CodeMirror from "codemirror"
+import "codemirror/mode/javascript/javascript"
+
+const Editor = ({
+  value,
+  onChange,
+  onFocus,
+  onBlur,
+  onEditorWillMount,
+  readOnly,
+  editorDidMount,
+  mode,
+  onEditorChange,
+  onCursorActivity,
+}) => {
+  const codeMirrorRef = useRef(null)
+  const overmind = useOvermind()
+  const plugins = useMemo(() => getDefaultPlugins(), [])
+
+  useEffect(() => {
+    onEditorWillMount(codeMirrorRef.current)
+
+    return () => {
+      const codeMirror = codeMirrorRef.current
+      codeMirror.clearHistory()
+    }
+
+    // This should be called everytime the editor is mounted
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  useEffect(() => {
+    codeMirrorRef.current.setValue(value)
+  }, [value])
+
+  const options = useMemo(() => ({ plugins, mode }), [])
+
+  if (typeof onChange === "function") {
+    options.onChange = onEditorChange
+  }
+
+  if (typeof onBlur === "function") {
+    options.onBlur = onBlur
+  }
+
+  if (typeof onCursorActivity === "function") {
+    options.onCursorActivity = onCursorActivity
+  }
+
+  useEffect(() => {
+    const codeMirror = codeMirrorRef.current
+    if (editorDidMount) {
+      editorDidMount(codeMirror)
+    }
+    codeMirror._updateCodeMirrorSize()
+  }, [])
+
+  return h(
+    "div",
+    {
+      className: styles.CodeMirror,
+    },
+    h(CodeMirror, {
+      options,
+      value,
+      onFocus,
+      onBlur,
+      editorDidMount: (editor) => {
+        // eslint-disable-next-line   },
+        }),
+      ]),
+    ]),
+  ])
+}
+no-param-reassign
+        editor.state.completionActive = null
+        codeMirrorRef.current = editor
+      },
+      onBeforeChange: (_editor, _data, value) => {
+        onChange(value)
+      },
+      readOnly,
+    })
+  )
+}
+
+const CodeMirrorContainer = ({ editor, onChange }) => {
+  const { value, readOnly = true, mode } = editor
+
+  return h(StyleSheetManager, {
+    styles: {
+      "./node_modules/codemirror": {
+        "&.CodeMirror": {
+          height: "auto",
+        },
+        "&": {
+          fontSize: "10pt",
+          padding: "2px 0",
+          "&.CodeMirror": {
+            fontFamily:
+
+Precision: 0
+Recall: 0
+F1 Score: 0

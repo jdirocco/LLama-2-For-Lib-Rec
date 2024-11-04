@@ -1,0 +1,100 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: Medisana/vitadock-api
+    Project Description: VitaDock Online API\n============\n\nProjects\n\n javaclientstandalone\n\nAvailable soon:\n\n javalibrary\n Android sample code\n ObjectiveC sample code\n PHP sample code\n Python sample code\n\nAlso check out the projects of our community:\n\n C \n generate sample data\n for testing\n generate sample data for test server\n\nPlease see the for a full documentation of the API.\n\n\n\nFor current status and API updates, please subscribe to our google groups:\n\n we will announce current open issues, planned down times and planned API changes. Feel free to use these new groups to post your general or API questions.\n\n\n\nIn case you have any questions, feel free to contact us at !\n\nPlease note that we only provide support for access via the API. Currently, we cannot provide support for direct access of individual devices via USB / Bluetooth.\n\n\nBest regards,\n\nJan Krause,\n\nSenior Software Developer VitaDock\xc2\xae Online\n'
+    Existing Dependencies:
+    mysql:mysql-connector-java
+- org.apache.commons:commons-io
+- org.springframework:spring-aop
+- commons-io:commons-io
+- org.primefaces:primefaces
+- javax.el:el-api
+- org.slf4j:slf4j-api
+- commons-dbcp:commons-dbcp
+- com.sun.faces:jsf-impl
+- org.springframework:spring-jdbc
+- org.aspectj:aspectjweaver
+- org.springframework:spring-aspects
+- com.sun.faces:jsf-api
+- javax.mail:mail
+- net.sf.flexjson:flexjson
+- org.springframework:spring-test
+- org.springframework:spring-webmvc
+- org.apache.httpcomponents:httpcore
+- org.springframework.roo:org.springframework.roo.annotations
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+@php 
+    $title = (isset($title)? $title : "");
+    $description = (isset($description)? $description : "");
+@endphp
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="{{ $description }}">
+<meta name="author" content="Ahmad">
+
+<title>{{ $title }}</title>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('assets/css/bootstrap-icons.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendor/iconly/bold.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendor/perfect-scrollbar/perfect-scrollbar.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+<link rel="stylesheet" href="{{ asset('assets/vendor/toastify/toastify.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+<link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon">
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ---
+name: "Bug report"
+labels: "bug"
+about: Something's not working as expected.
+---
+
+### Steps to reproduce the issue n?
+
+### Any other comments?
+###
+1....
+2....
+3....
+
+### What is the expected behavior?
+
+### What is the actual behavior?
+
+### Are you willing to provide a PR implementing the solutio
+
+Precision: 0
+Recall: 0
+F1 Score: 0

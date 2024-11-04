@@ -1,0 +1,132 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: willowtreeapps/OAK
+    Project Description: DEPRECATED.\n\nThis library has been deprecated. We may move individual aspects of this library into small targetted libraries. This page will be updated when that occurs.\n\nFull site and documentation:\n checking out to your local machine\nrun "mvn site:run" to view the docs on
+    Existing Dependencies:
+    com.willowtreeapps:oak-viewmodel
+- com.actionbarsherlock:actionbarsherlock
+- com.willowtreeapps:oak-parentswipingviews
+- com.willowtreeapps:oak-demos
+- com.squareup.dagger:dagger
+- org.robolectric:robolectric
+- com.squareup.okhttp:okhttp
+- com.willowtreeapps:oak-utils
+- com.nineoldandroids:library
+- com.github.rtyley:roboguice-sherlock
+- com.willowtreeapps.saguaro:saguaro-android
+- com.squareup.retrofit:retrofit
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 13 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- BEGIN SIDEBAR -->
+    <nav class="page-sidebar" data-pages="sidebar">
+        <!-- BEGIN SIDEBAR MENU TOP TRAY CONTENT-->
+        <div class="sidebar-overlay-slide from-top" id="appMenu">
+            <div class="row">
+                <div class="col-xs-6 no-padding">
+                    <a href="#" class="p-l-40"><img src="<?=base_url('assets');?>/assets/img/demo/social_app.svg" alt="socail">
+                    </a>
+                </div>
+                <div class="col-xs-6 no-padding">
+                    <a href="#" class="p-l-10"><img src="<?=base_url('assets');?>/assets/img/demo/email_app.svg" alt="socail">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 m-t-20 no-padding">
+                    <a href="#" class="p-l-40"><img src="<?=base_url('assets');?>/assets/img/demo/calendar_app.svg" alt="socail">
+                    </a>
+                </div>
+                <div class="col-xs-6 m-t-20 no-padding">
+                    <a href="#" class="p-l-10"><img src="<?=base_url('assets');?>/assets/img/demo/add_more.svg" alt="socail">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- END SIDEBAR MENU TOP TRAY CONTENT-->
+        <!-- BEGIN SIDEBAR MENU HEADER-->
+        <div class="menu-toggler sidebar">
+            <div class="sidebar-toggler">
+            </div>
+        </div>
+        <div class="sidebar-header">
+        <img src="<?php echo base_url();?>assets/assets/img/<?php echo logo();?>" style="width:40%" alt="logo">
+            
+            <div class="sidebar-header-controls">
+                <button type="button" class="btn btn-xs sidebar-slide-toggle btn-link m-l-20" data-pages-toggle="#appMenu"><i class="fa fa-angle-down fs-16"></i>
+                </button>
+                <button type="button" class="btn btn-link visible-lg-inline" data-toggle-pin="sidebar"><i class="fa fs-12"></i>
+                </button>
+            </div>
+        </div>
+        <!-- END SIDEBAR MENU HEADER-->
+        <!-- START SIDEBAR MENU -->
+        <div class="sidebar-menu">
+            <!-- BEGIN SIDEBAR MENU ITEMS-->
+            <ul class="menu-items">
+                <li class="m-t-30 ">
+                    <a href="<?php echo base_url("backend/dashboard")?>">
+                        <span class="title"> Dashboard </span>
+                    </a>
+                    <span class=" icon-thumbnail bg-success disable-bg-img">
+                        <i class="
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 13 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+
+    @Override
+    public void addListener(Listener listener) {
+        if (listeners.contains(listener)) {
+            return;
+        }
+        listeners.add(listener);
+    }
+
+    @Override
+    public void removeListener(Listener listener) {
+        listeners.remove(listener);
+    }
+
+    protected void fireOnChange() {
+        for (Listener listener : listeners) {
+            listener.onChange(this);
+        }
+    }
+} package com.jn.langx.configuration.source;
+
+
+
+import com.jn.langx.util.collection.Collects;
+
+import java.util.List;
+
+public abstract class AbstractConfigurationSource implements ConfigurationSource {
+    /**
+     * configuration source's listeners
+     */
+    private List<Listener> listeners = Collects.emptyArrayList();
+
+Precision: 0
+Recall: 0
+F1 Score: 0

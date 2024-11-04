@@ -1,0 +1,121 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: pranab/chombo
+    Project Description: Introduction\nHadoop based ETL and various utility classes for Hadoop and Storm\n\n Philosophy\n Simple to use\n Input output in CSV format\n Metadata defined in simple JSON file\n Extremely configurable with many configuration knobs\n\n Solution\n Various relational algebra operation, including Projection, Join etc\n Data extraction ETL to extract structured record from unstructured data\n Data extraction ETL to extract structured record from JSON data\n Data validation ETL with configurable rules and statistical parameters \n Data profiling ETL with various techniques\n Data transformation ETL with configurable transformation rules\n Various statistical data exploration solutions\n Data normalization\n Seasonal data analysis\n Various statistical parameter calculation \n Various long term statistical parameter calculation with incremental data \n Bulk inset, update and delete of Hadoop data\n Bases classes for Storm Spout and Bolt\n Utility classes for string, configuration\n Utility classes for Storm and Redis\n\n Blogs\nThe following blogs of mine are good source of details. These are the only source\nof detail documentation. Map reduce jobs in this projec are used in other projects\nincluding sifarish, avenir etc. Blogs related to thos projects are also relevant.\n\n Build\nFor Hadoop 1\n mvn clean install\n\nFor Hadoop 2 non yarn\n git checkout nuovo\n mvn clean install\n\nFor Hadoop 2 yarn\n git checkout nuovo\n mvn clean install P yarn\n\nFor spark\n Build chombo first in master branch with \n\t mvn clean install \n\t sbt publishLocal\n Build chombospark in chombo/spark directory\n\t sbt clean package\n\n Need help?\nPlease feel free to email me at pkghosh99@gmail.com\n\n Contribution\nContributors are welcome. Please email me at pkghosh99@gmail.com\n\n'
+    Existing Dependencies:
+    org.apache.lucene:lucene-analyzers-common
+- org.apache.lucene:lucene-core
+- com.typesafe:config
+- org.apache.hadoop:hadoop-core
+- org.codehaus.jackson:jackson-core-asl
+- org.testng:testng
+- redis.clients:jedis
+- org.apache.commons:commons-lang3
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    		<section class="section section-lg text-center pt-lg-0 top-0">
+			<!-- Features -->
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+					<h2 class="display-3 font-weight-semi-bold">Layanan Kami</h2>
+					<p class="lead">Kami memiliki berbagai layanan, diantaranya: </p>
+					</div>
+					<div class="col-6 col-lg-4">
+					<a class="box box-border h-100 text-left" href="#popularContent" data-toggle="collapse" aria-expanded="false" aria-controls="popularContent">
+						<span class="box-icon bg-light-alt"><i class="icon-gift"></i></span>
+						<h5 class="box-title">Kontruksi Bangunan</h5>
+						<p class="text-muted"><small>Kontruksi Bangunan adalah layanan pembangunan bangunan yang dapat dipesan oleh anda</small></p>
+					</a>
+					</div>
+					<div class="col-6 col-lg-4">
+					<a class="box box-border h-100 text-left" href="#popularContent" data-toggle="collapse" aria-expanded="false" aria-controls="popularContent">
+						<span class="box-icon bg-light-alt"><i class="icon-rocket"></i></span>
+						<h5 class="box-title">Kontruksi Bangunan</h5>
+						<p class="text-muted"><small>Kontruksi Bangunan adalah layanan pembangunan bangunan yang dapat dipesan oleh anda</small></p>
+					</a>
+					</div>
+					<div class="col-6 col-lg-4">
+					<a class="box box-border h-100 text-left" href="#popularContent" data-toggle="collapse" aria-expanded="false" aria-controls="popularContent">
+						<span class="box-icon bg-light-alt"><i class="icon-gift"></i></span>
+						<h5 class="box-title">Kontruksi Bangunan</h5>
+						<p class="text-muted"><small>Kontruksi Bangunan adalah layanan pembangunan bangunan yang dapat dipesan oleh anda</small></p>
+					</a>
+					</div>
+					<div class="col-6 col-lg-4">
+					<a class="box box-border h-100
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.example.helloworld.controller;
+
+import com.example.helloworld.core.Greeting;
+import com.example.helloworld.service.HelloWorldService;
+import ratpack  .get(ctx -> {
+            ctx.render(helloWorldService.sayHello("World"));
+        });
+    }
+
+}
+.handling.ChainAction;
+import ratpack.handling.Context;
+import ratpack.handling.Handler;
+
+import javax.inject.Inject;
+
+public class GreetingController implements ChainAction {
+
+    private final HelloWorldService helloWorldService;
+
+    @Inject
+    public GreetingController(final HelloWorldService helloWorldService) {
+        this.helloWorldService = helloWorldService;
+    }
+
+    @Override
+    public void execute(final Context ctx, final Handler insert) throws Exception {
+        ctx.byMethod(methodSpec -> {
+            methodSpec.get(() -> greeting(ctx));
+            methodSpec.post(() -> greeting(ctx));
+        });
+    }
+
+    private void greeting(Context ctx) {
+        ctx.byContent(c -> {
+            c.html(() -> getGreeting(ctx));
+            c.json(() -> getGreeting(ctx));
+            c.text(() -> getGreeting(ctx));
+        });
+    }
+
+    private void getGreeting(Context ctx) {
+        ctx.getAll(ctx.getAll()).then(greeting -> {
+            ctx.render(new Greeting(greeting.get(Greeting.NAME), greeting.get(Greeting.GREETING)));
+        });
+//      ctx
+//         .get(ctx.get(Greeting.NAME))
+//       
+
+Precision: 0
+Recall: 0
+F1 Score: 0

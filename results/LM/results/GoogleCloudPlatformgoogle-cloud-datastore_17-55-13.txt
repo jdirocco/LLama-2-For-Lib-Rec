@@ -1,0 +1,218 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: GoogleCloudPlatform/google-cloud-datastore
+    Project Description: Google Cloud Datastore\n\n Note: This repository contains lowlevel Java and Python client libraries for Google Cloud Datastore.\n For more idiomatic and usable client libraries in these languages, please visit the \n \n The datastorev1protoclient client code has been moved to \n \n\n Python18:\n\n\n\n Documentation\n\nFor more information, see the Cloud Datastore documentation4.\n\n Filing Issues\n\n1. For production issues and support options, see Cloud Datastore support25.\n2. For bugs or feature requests, please first look at existing issues14.\n3. When applicable, create a new report15. Note that this repo exclusively covers the lowlevel, Protobufbased clients. If you're using Java or Python, please file your issue in the appropriate repo, googlecloudjava26 or googlecloudpython27. If you file an issue with either of those client libraries here, we will gently redirect you to the right repo and close the issue in this one.\n4. For bugs, detail the steps to reproduce the problem and the affected version number.\n5. For feature requests, articulate the use case you are trying solve and describe any current workarounds.\n\n Contributing changes\n\n See CONTRIB.md7\n\n Licensing\n\n See LICENSE8\n\n1: python/demos/trivial/adams.py\n2: java/demos/src/main/java/com/google/datastore/v1/demos/trivial/Adams.java\n4: CONTRIB.md\n8: LICENSE\n9: python\n14: "
+    Existing Dependencies:
+    com.google.http-client:com.google.http-client
+- com.google.truth:com.google.truth
+- com.google.cloud.datastore:datastore-v1-proto-client
+- com.google.guava:com.google.guava
+- com.google.api-client:com.google.api-client
+- com.google.oauth-client:google-oauth-client
+- com.google.truth:truth
+- com.google.oauth-client:com.google.oauth-client
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     @include('header')
+     @include('nav')
+  
+     <script type="text/javascript">
+       $(document).ready(function() {
+
+         $('#myform').submit(function(){
+           $('.error').remove();
+           $.ajax({
+               type: 'get',
+               url: "{{URL::to('add-post')}}",
+               data: $('#myform').serialize(),
+               dataType: "json",
+               success: function( response ) {
+              
+                   if(response.status == 400) {
+
+                      
+                     //alert('error');
+                     $('.error').html('');
+                      $.each(response.error,function(key,item) {
+                        $('#'+key).after('<label class="error " for="'+key+'">'+item+'</label>')
+                      })
+                    //alert('success');
+                  } 
+                    else {
+
+                      if(response.status == 200) {
+                        $('.error').remove();
+                      //  alert(response.status);
+                       var html = '<div class="alert alert-success" role="alert">Post Submitted Sucessfully</div>'
+
+                       //alert(response.success);
+                       $('#myform')[0].reset();
+                        $('#form').html(html);
+
+                      }
+
+                       }
+        
+               }
+           });
+
+           return false;
+         });
+       });
+        
+
+        
+     </script>
+     <style type="text/css">
+      .error {
+           color: #F00;
+           font-weight: 400;
+           margin: 1px 0 0 1px;
+       }
+     </style>
+     <div class="container" >
+    <div id="form" class="form-group col-md-5">
+    <label>Add Post</label>
+    </div>
+     </div>
+     <div class="container" >
+        <form id="myform" class="myform col-md-10" method="get" action="add-post">
+      <div class="form-group col-md-5">
+        <label for="title"class="form-label" >Title</label>
+        <input type="text" class="form-control" id="title" name="title" />
+        </div>
+        <div class="form-group col-md-5">
+        <label for="body" class="form-label">Description</label>
+        <textarea  name="body" placeholder="body" rows="8" cols="80" class="form-control"></textarea>
+        </div> 
+     <div class="form-group col-md-5">
+        <input type="submit" name="submit" value="Submit">
+        </div>
+        <div class="clearfix">
+      
+        </div>
+
+        </form>
+
+     </div>
+     @include('footer')
+
+    <script type="text/javascript">
+    
+
+   function deleteItem(id) {
+     
+     $.ajax({
+            headers: {
+              'X-CSRF-TOKEN': $('meta[name="token"]').attr('content')
+            },
+            url: "{{URL('postdelete')}}/"+id, 
+            type: 'delete',
+            error: function(e) {
+            // alert(e.message
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s, "Saved!", ToastLength.Short).Show();
+                }
+                else
+                {
+                    Toast.MakeText(this, "Please write the password again", ToastLength.Short).Show();
+                }
+            };
+
+
+            var builder = new AlertDialog.Builder(this);
+            builder.SetTitle("Enter password");
+            builder.SetNeutralButton("Change", delegate
+            {
+                builder.SetMessage("");
+                builder.SetView(pv);
+                builder.SetNeutralButton("Save", saveAction);
+                builder.SetPositiveButton("Cancel", (senderDialog, id) => { });
+
+                var dialog = builder.Create();
+                builder.Show();
+            });
+
+            builder.SetMessage("Please set password to unlock app");
+            builder.SetTitle("Password");
+            builder.SetPositiveButton("Ok", delegate
+            {
+                pv = new EditText(this) { InputType = (InputTypes.ClassText | InputTypes.TextVariablePassword) };
+                pv.Hint = "Password";
+
+                builder.SetMessage("");
+                builder.SetView(pv);
+                builder.SetNeutralButton("Save", saveAction);
+                builder.SetPositiveButton("Cancel", (senderDialog, id) => { });
+
+                var dialog = builder.Create();
+                builder.Show();
+            });
+            var dialog = builder.Create();
+            builder.Show();
+        }
+    }
+}
+
+ ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+using Android.Text;
+using System.Threading.Tasks;
+using Android.Views.InputMethods;
+
+
+namespace PasswordKeyboard
+{
+
+	[Activity (Label = "PasswordKeyboard", MainLauncher = true, Icon = "@drawable/icon")]
+	public class MainActivity : Activity
+    {
+		protected override void OnCreate (Bundle bundle)
+		{
+			base.OnCreate (bundle);
+
+            var pv = new EditText(this) { InputType = (InputTypes.ClassText | InputTypes.TextVariablePassword) };
+            pv.Hint = "Password";
+            var saveAction = (IOnClickListener)delegate
+            {
+                var pass = pv.Text;
+                EditText.Text = pass;
+
+                if (password!= null && password.Equals(pass))
+                {
+                    Toast.MakeText(thi
+
+Precision: 0
+Recall: 0
+F1 Score: 0

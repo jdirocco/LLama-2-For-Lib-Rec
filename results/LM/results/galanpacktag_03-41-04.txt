@@ -1,0 +1,126 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: galan/packtag
+    Project Description: \r\n\r\n\r\n\r\n pack:tag\r\n\r\nA JSP Taglib for delivering minified, combined and gzipcompressed resources JavaScript and CSS.\r\n\r\n Usage\r\n\r\nTo use the taglib in a JSP, you have to declare it first:\r\n\r\n \r\n\r\nYou can still use the old uri \' for backward compatibility\r\n\r\nNow you can easily pack JavaScript by using the following tag:\r\n\r\n \r\n\r\nAccordingly for Cascading Style Sheets:\r\n\r\n \r\n\r\nYou can enable and disable each tag individually by setting the attribute enabled to false, e.g.:\r\n\r\n \r\n\r\nYou can combine resources simply by listing them up:\r\n\r\n \r\n /js/myJavaScriptFile.js\r\n /js/mySecondJavaScriptFile.js\r\n \r\n\r\nThat\'s it.\r\n\r\nIf you want to deepen your knowledge and learn about advanced techniques, I suggest reading "".\r\n\r\n\r\n Integration\r\n\r\n1. Add the maven dependency to your project:\r\n\r\n \r\n de.galan.packtag\r\n packtagcore\r\n 3.13.2\r\n \r\n\r\n2. Copy the and from the into your\r\n/WEBINF/web.xml\r\n\r\n\r\n Note\r\npack:tag is still supported, and still encouraged to be used if it makes sense for your project. But, no further development beyond bug fixes is expected. pack:tag is over 8 years old, and has been stable since then. Thank you to the community for your support of this project over the last years.\r\n\r\n'
+    Existing Dependencies:
+    javax.servlet:jsp-api
+- de.galan.packtag:packtag-core
+- com.yahoo.platform.yui:yuicompressor
+- net.jawr:jawr
+- de.galan.packtag:packtag-optional
+- taglibs:standard
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="col-3">
+        <div id="sidebar" class="sidebar">
+            <aside class="widget widget-search">
+                <form role="search" action="/search" method="get">
+                    <label>
+                        <input type="text" id="keyword" name="keyword" placeholder="Searching for" value="{{ request()->get('keyword') }}">
+                    </label>
+                    <button type="submit" class="submit_search"></button>
+                </form>
+            </aside>
+            <aside class="widget widget-category">
+                <h2 class="widget-title">Danh mục</h2>
+                <ul>
+                    @foreach($categories as $cat)
+                        <li>
+                            <a href="{{ route('get.category.product', [$cat->c_slug, $cat->id]) }}"><i class="fas fa-arrow-right"></i>{{ $cat->c_name }}</a>
+                            <span class="post-count">({{ $cat->products_count }})</span>
+                        </li>
+                    @endforeach
+                </ul>
+            </aside>
+            <aside class="widget widget-popular-posts">
+                <h2 class="widget-title">Danh mục nổi bật</h2>
+                <ul>
+                    @foreach($categoriesLimit as $cateLimit)
+                        <li>
+                            <a href="{{ route('get.category.product', [$cateLimit->c_slug, $cateLimit->id]) }}">{{ $cateLimit->c_name }} <span class="post-count">({{ $cateLimit->products_count }})</span></a>
+                        </li>
+                    @endforeach
+                </ul>
+            </aside>
+            <aside class="widget widget-tags">
+                <h2 class="widget-title">Tags</h2>
+                <ul>
+                    @foreach($tags as $tag)
+                        <li><a href="">{{ $tag->t_name }}</a></li>
+                    @endforeach
+                </ul>
+            </aside>
+        </div>
+    </div>
+</div>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    return 0;
+}
+
+ #include<iostream>
+#include<vector>
+#include<algorithm>
+ 
+using namespace std;
+ 
+#define MAX(x,y) ((x)>(y)?(x):(y))
+#define MIN(x,y) ((x)<(y)?(x):(y))
+#define pb push_back
+#define mp make_pair
+#define rep(i,n) for(i=0;i<n;i++)
+#define repr(i,j,n) for(i=j;i<=n;i++)
+#define endl '\n'
+#define foreach(c,itr) for(__typeof((c).begin()) itr=(c).begin();itr!=(c).end();itr++)
+#define present(c,x) ((c).find(x)!= (c).end())
+#define cpresent(c,x) (find(all(c),x)!= (c).end())
+ 
+typedef vector<int> VI;
+typedef pair<int,int> PII;
+typedef long long LL;
+typedef vector<vector<int> > VVI;
+typedef vector<long long > VLL;
+typedef vector<vector<long long> > VVLL;
+typedef pair<int, pair<int, int> > TRI;
+ 
+const int oo = 0x3f3f3f3f;
+ 
+#define ln "\n"
+#define endl_ln "\n\n"
+#define FOR(i,c) for (int (i)=0;(i)<(c);(i)++)
+#define FORC(i,c) for (char (i)=(c);(i)<=128;(i)++)
+#define EACH(i,c) for (auto (i)=(c).begin();(i)!=(c).end();(i)++)
+ 
+ 
+ 
+int main()
+{
+    ios::sync_with_stdio(false);
+    
+
+Precision: 0
+Recall: 0
+F1 Score: 0

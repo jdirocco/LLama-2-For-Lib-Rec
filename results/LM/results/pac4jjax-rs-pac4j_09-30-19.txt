@@ -1,0 +1,104 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: pac4j/jax-rs-pac4j
+    Project Description: \n \n\n\n\nThe project is an easy and powerful security library for JAXRS web applications and web services which supports authentication and authorization, but also logout and advanced features like session fixation and CSRF protection.\nIt\'s based on the . It\'s available under the Apache 2 license.\n\n| jaxrspac4j | JDK | pac4j | JAXRS | Servlet |\n||||||\n| version = 6 | 11 | v5 | v3 | v5 |\n| version = 5 | 11 | v5 | v2 | v4 |\n| version = 4 | 8 | v4 | v2 | v4 |\n\n\n\n1 A represents an authentication mechanism. It performs the login process and returns a user profile. An indirect client is for UI authentication while a direct client is for web services authentication:\n\n&9656; OAuth SAML CAS OpenID Connect HTTP Google App Engine LDAP SQL JWT MongoDB CouchDB Kerberos IP address Kerberos SPNEGO REST API\n\n2 An is meant to check authorizations on the authenticated user profiles or on the current web context:\n\n&9656; Roles Anonymous / rememberme / fully authenticated Profile type, attribute CORS CSRF Security headers IP address, HTTP method\n\n3 A defines whether the must be applied and can be used for additional web processing\n\n4 Filters protect resources and map some of them to login processes.\n\n The protects a resource by checking that the user is authenticated and that the authorizations are valid, according to the clients and authorizers configuration. If the user is not authenticated, it performs authentication for direct clients or starts the login process for indirect clients\n The finishes the login process for an indirect client\n The logs out the user from the application.\n\nThese filters can be directly registered by hand, or instead, the following features can be used.\n\n5 Generic JAXRS Providers and Features activate the use of some of the filters on the JAXRS implementation based on various conditions\n\n The enables generic JAXRS based pac4j functionality. The default configuration does not provide session handling i.e., it will only work with direct clients. The feature registers the following default providers:\n to create the generic pac4j context for JAXRS\n to provide the pac4j configuration\n to provide the configured pac4j \n\n\n The enables annotationbased activation of the filters at the resource method level\n The activates a global filter that will be applied to every resources.\n\n6 Container/Implementationspecific Providers and Features extend the basic functionality provided by the generic ones\n\n The enables injection of the security profile in resource method\n\n The provides session handling and thus indirect clients support by replacing the generic with for Servletbased JAXRS implementations, e.g., Jersey on Netty or Grizzly Servlet, Resteasy on Undertow and with .\n\n The provides session handling and thus indirect clients support by replacing the generic with for Grizzly2 without Servlet support and with .\n\n\n Usage\n\n 1 \n\n 2 Define:\n\n the \n the , only for web applications\n the \n\n 3 \n\n 4 \n\n\n Versions\n\nThe latest released version is the , available in the .\nThe is under development.\n\nSee the . Learn more by browsing the and the .\n\nSee the as well.\n\n\n Need help?\n\nIf you need commercial support premium support or new/specific features, contact us at .\n\nIf you have any questions, want to contribute or be notified about the new releases and security fixes, please subscribe to the following :\n\n \n \n \n \n'
+    Existing Dependencies:
+    org.glassfish.jersey:jersey-bom
+- org.glassfish.grizzly:grizzly-http-server
+- org.assertj:assertj-core
+- org.slf4j:jul-to-slf4j
+- org.pac4j:pac4j-http
+- org.sonatype.oss:oss-parent
+- javax.ws.rs:javax.ws.rs-api
+- javax.annotation:javax.annotation-api
+- org.pac4j:pac4j-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<div id="header-container">
+    <div class="container">
+        <h1><?= $site->title()->html()?></h1>
+        <? if ($site->description()->isNotEmpty()):?>
+            <p><?= $site->description()->kt()?></p>
+        <? endif;?>
+    </div>
+    <div class="social-bar">
+        <? foreach($site->social()->split(',') as $s):?>
+            <a href="<?= $s->html()?>">
+                <? if ($s->lower()->startsWith('instagram')):?>
+                    <i class="fab fa-instagram"></i>
+                <? elseif ($s->lower()->startsWith('facebook')):?>
+                    <i class="fab fa-facebook-f"></i>
+                <? elseif ($s->lower()->startsWith('youtube')):?>
+                    <i class="fab fa-youtube"></i>
+                <? endif;?>
+            </a>
+        <? endforeach;?>
+    </div>
+</div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t(
+        @Json(name = "data")
+        val data: String
+)
+ package me.tylerbwong.stack.data.model
+
+import com.squareup.moshi.Json
+import com.squareup.moshi.JsonClass
+
+@JsonClass(generateAdapter = true)
+data class Error(
+        @Json(name = "error_id")
+        val errorId: Int,
+        @Json(name = "error_message")
+        val errorMessage: String
+)
+
+@JsonClass(generateAdapter = true)
+data class RequestData(
+        @Json(name = "key")
+        val key: String
+)
+
+@JsonClass(generateAdapter = true)
+data class AuthRequestData(
+        @Json(name = "access_token")
+        val accessToken: String
+)
+
+@JsonClass(generateAdapter = true)
+data class AuthRequestErrorData(
+        @Json(name = "error")
+        val error: String,
+        @Json(name = "error_message")
+        val errorMessage: String
+)
+
+@JsonClass(generateAdapter = true)
+data class AuthRequestResul
+
+Precision: 0
+Recall: 0
+F1 Score: 0

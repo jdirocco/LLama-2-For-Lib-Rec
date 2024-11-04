@@ -1,0 +1,136 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: Arello-Mobile/Moxy
+    Project Description: Moxy\n\n\nThis Moxy repository is deprecated and no longer supported. \n\n\nPlease migrate to the actual version of the Moxy framework at repo.\n\n Description\n\n\n \n\nMoxy is a library that helps to use MVP pattern when you do the Android Application. Without problems of lifecycle and boilerplate code!\n\nThe main idea of using Moxy:\n\nSee what\'s happening here in the .\n\n Capabilities\n\nMoxy has a few killer features in other ways:\n Presenter stay alive when Activity recreatedit simplify work with multithreading\n Automatically restore all that user see when Activity recreatedincluding dynamic content is added\n Capability to changes of many Views from one Presenter\n\n Sample\n\nView interface\n\nPresenter\n\nView implementation\n\n\n you can see "Github" sample application.\n\n Wiki\nFor all information check \n\n Android studio templates\nIn order to avoid boilerplate code creating for binding activity, fragments and its presentation part, we propose to use Android Studio templates for Moxy. \n\nTemplates located in \n\n Links\n\n\n\n\n\n Integration\nBase modules integration:\n\nFor additional base view classes and add this:\n\nIf you are planning to use AppCompat, then you can use and . Then add this:\n\n AndroidX module integration\nIf you use AndroidX, use and add this thanks to :\n\n AndroidXGoogle material module integration\nIf you use google material, use add this thanks to :\n\n\nNote: creates of Moxy \xe2\x80\x94 feel free to use it fully instead of use only this module dependency on your opinion.\n\n Kotlin\nIf you are using kotlin, use instead of / dependency type:\n\n\n ProGuard\nMoxy is completely without reflection! No special ProGuard rules required.\n\n License\n\n'
+    Existing Dependencies:
+    org.glassfish:javax.annotation
+- org.robolectric:robolectric
+- com.j256.ormlite:ormlite-android
+- org.mockito:mockito-all
+- com.android.support:appcompat-v7
+- com.google.code.gson:gson
+- com.arello-mobile:moxy-app-compat
+- com.android.support:design
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div class="modal fade" id="modal-default">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Input Barang Keluar</h4>
+              </div>
+              <div class="modal-body">
+        <form action ="<?php echo base_url();?>pengeluaran/simpan_pengeluaran" method="post" id="form" enctype ="multipart/form-data">
+                <div class="box-body">
+                  <div class="form-group">
+                  <input type="hidden" class="form-control" id="id" name="id" placeholder="ID">
+                  </div>
+
+                  <div class="form-group">
+                  <label for="id_kartu_stok">Kode Barang</label>
+                    <select id="kode" name="kode" class="form-control select2" style="width: 100%;">
+                       <?php 
+                          $no=0;
+                          foreach ($dataBarang as $dataBarang):
+                            $no++;    
+                     ?>
+                          <option value="<?php echo $dataBarang->id;?>"> <?php echo $dataBarang->kode.'--'.$dataBarang->nama;?> </option>
+                      </select>
+                  </div>
+
+                  <div class="form-group">
+                  <label for="tanggal">Tanggal</label>
+                    <input type="text" class="form-control" id="tanggal" name="tanggal" placeholder="Masukkan Nama ">
+                  </div>
+                  
+               
+                  <div class="form-group">
+                  <label for="jumlah_keluar">Jumlah Keluar</label>
+                    <input type="number" class="form-control" id="jumlah_keluar" name="jumlah_keluar" placeholder="0">
+                    <span>
+                    <!-- <p>
+                      Stok Tersedia 
+                      <strong>
+                        <label id="jumlah"></label> 
+                      </strong>
+                    </p> -->
+                    <span>
+                  </div>
+                  <?php $this->load->view('include/form_kas/input_pengeluaran');?> 
+                <!-- /.box-body -->
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+
+namespace App\Http\Requests\Api\V1\User;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class LoginRequest extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize(   */
+    public function rules()
+    {
+        return [
+            'name' =>'required|string',
+            'password' =>'required|string',
+        ];
+    }
+}
+)
+    {
+        return true;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+  
+
+Precision: 0
+Recall: 0
+F1 Score: 0

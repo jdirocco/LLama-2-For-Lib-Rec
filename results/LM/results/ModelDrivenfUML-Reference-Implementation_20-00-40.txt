@@ -1,0 +1,86 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: ModelDriven/fUML-Reference-Implementation
+    Project Description: Foundational UML Reference Implementation\n\n\nThis open source software is a reference implementation, consisting of software\nand related files, for the OMG specification called the Semantics of a\nFoundational Subset for Executable UML Models fUML. The reference\nimplementation is intended to implement the execution semantics of UML activity\nmodels, accepting an XMI file from a conformant UML model as its input and\nproviding an execution trace of the selected activity models as its output.\n\nThe reference implementation was developed as part of a Lockheed Martin\nCorporation funded project with Model Driven Solutions at that time a division of Data\nAccess Technologies in 2008. The objectives for making this reference\nimplementation open source are to:\n\n1. encourage tool vendors to implement this standard in their tools\n\n2. provide a reference that can assist in evaluating vendor implementations\nconformance with the specification\n\n3. encourage evolution of the reference implementation to support further\nenhancements to its functionality such as a model debugger, or animation of the\nexecution trace\n\n4. support evaluation and evolution of the the specification to support UML\nexecution semantics and the execution semantics of its profiles suchas SysML.\n\n Licensing\n\nFor licensing information, please see the file and the\nassociated files and .\n\n Building\n\nThe implementation build requires the following to be installed:\n\n Oracle Java Version 8 see currently cannot use JDK 9 or higher\n Apache Maven Version 2.2 or above see build from the command line:\n\n1. In a Windows/DOS command window, navigate to the \'root\' reference\nimplementation directory.\nThis directory is where the Apache Maven \'pom.xml\' file can be found.\n\n2. Use the following command:\n \n mvn DskipTests install\n\nSeveral targets will be executed, and the message \'BUILD SUCCESSFUL\' should\nbe displayed. Generated and compiled code can be found under the \'target\'\ndirectory.\n\nTo build using Eclipse:\n The implementation build requires Eclipse Neon or above with the M2E plugin and dependencies:\n\n1. Start Eclipse\n\n2. Import the Maven project into Eclipse\n FileImportExisting Maven Projects\n Select Next and for the "root directory" select the parent directory for the pom.xml file.\n The project should be imported successfully.\n\n3. Run the tests\n Right click the project root fuml\n Run AsMaven test\n\n4. Install\n Right click the project root fuml\n Run AsMaven install\n\n Testing\n\n1. In a Windows/DOS command window, navigate to the \'root\' reference\nimplementation directory. This directory is where the Apache Maven \'pom.xml\'\nfile can be found.\n\n2. Use the following command:\n\n mvn test\n\nThe test output can be found in the \'target/surefirereports\'\ndirectory. \n\n\nTesting individual JUnit tests in Eclipse: \n\n1. Rightclick on any file under the \'src/test/java\' folder with a filename ending in\n\'TestCase\' or \'Test\'\n2. Run AsJUnit Test.\n3. The test should execute and display output.\n\n Deploying\n\n1. In a Windows/DOS command window, navigate to the \'root\' reference\nimplementation directory. This directory is where the Apache Maven \'pom.xml\' \nfile can be found.\n\n2. Use the following command:\n\n mvn install\n\nA binary deployment \'zip\' file will be created and expanded onto the current\ndrive\'s root directory. The deployment directory will be called: \n\'fumlversion stringdistribution\' \n\n Running\n\n1. In a Windows/DOS command window, navigate to the \'bin\' directory for the\nDEPLOYED implementation. The implementation can only be run from a DEPLOYED\nbinary or source distribution see above.\n\n2. To load a UML model file XMI 2.1 or 2.4.1/2.5 format and execute one or more behaviors\nactivities, use the following command:\n\n fuml \n\n Where:\n\n is UML model file XMI 2.1 or 2.4.1/2.5 format\n \n is a named behavior within the modelfile\n\n If no behavior name is given, then there should be only a single behavior in the\ntoplevel namespace of the model, and this is what is executed.\n\n3. The execution trace will print to the console. This may be redirected to a\nfile if desired e.g., by appending \' trace.txt\' to the command above.\n\n'
+    Existing Dependencies:
+    stax-utils:stax-utils
+- xalan:xalan
+- com.sun.xml.stream:sjsxp
+- log4j:log4j
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+    <div class="main" >
+        <div class="card card-primary card-outline" style="width:100%;">
+          <div class="">
+            <div class="card-body box-profile" ><br>
+            	<center>
+            		<h2 style="font-size: 60px;"><b><?= $this->session->userdata('ses_nama');?></b></h2>
+            		<h5 style="text-transform: uppercase; font-size:30px;">Kode : <?= $this->session->userdata('ses_id');?></h5>
+            	</center>
+              <br><br><br>
+
+          			<center>
+          				<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modalUbahProfil">
+          					<i class="fa fa-user-edit"></i> 
+          					<strong> UBAH PROFILE</strong>
+          				</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          				<a href="#" class="btn btn-danger" data-toggle="modal" data-target="#modalUbahPassword">
+          					<i class="fa fa-key"></i> 
+          					<strong> UBAH PASSWORD</strong>
+          				</a>
+          			</center>
+              <br>
+            </div>
+            <!-- /.card-body -->
+          </div>
+        </div>
+    </div>
+
+    <!--  Modal Ubah Password -->
+    <?php $this->load->view('admin/master/ubahpassword');?>
+
+    <!--  Modal Ubah Profile -->
+    <?php $this->load->view('admin/master/ubahprofile');?>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+  }
+  public get(key: string): any {
+    return this._state[key] === undefined? null : this._state[key];
+  }
+  public set(key: string, value: any): void {
+    this._state[key] = value;
+    console.log(this._state);
+  },
+};
+ export class Storage {
+  private _state = {};
+  public clear() {
+    this._state = {};
+
+Precision: 0
+Recall: 0
+F1 Score: 0

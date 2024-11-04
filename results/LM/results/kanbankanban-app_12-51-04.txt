@@ -1,0 +1,129 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: kanban/kanban-app
+    Project Description: See /src/main/webapp/METAINF/LICENSE for copyright and licensing information.\r\n'
+    Existing Dependencies:
+    net.sf.opencsv:opencsv
+- jfree:jcommon
+- commons-io:commons-io
+- commons-lang:commons-lang
+- org.springframework:spring-mock
+- junit:junit-dep
+- org.springframework:spring-webmvc
+- org.eclipse.jetty:jetty-jsp-2.1
+- jfree:jfreechart
+- org.eclipse.jetty:jetty-server
+- com.google.guava:guava
+- org.hamcrest:hamcrest-library
+- org.mortbay.jetty:jsp-2.1-glassfish
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+@extends('layouts.app')
+@section('content')
+    <form method="POST" action="{{ url('post')}}">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <input type="text"  placeholder="Name" name="name" required>
+        <input type="text"  placeholder="Email" name="email" required>
+        <input type="tel"  placeholder="Téléphone" name="telephone" required >
+        <input type="text"  placeholder="Adresse" name="adress" required >
+        <input type="text"  placeholder="Objet" name="objet" required >
+        <textarea  name="description" placeholder="Description" id="description" rows="8"></textarea>
+        <button type="submit" class="btn btn-default btn-sm pull-right">
+            <i class="fa fa-share"></i> Submit
+        </button>
+    </form>
+@endsection        
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> 1)
+    return np.array([np.sin(np.pi * x) + np.sin(np.pi * y) + np.sin(np.pi * z)])
+
+# Define initial conditions
+
+def I_0_func():
+    return np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+
+def I_0_deriv_func():
+    return np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+
+# Define initial conditions
+
+def V_0_func():
+    return np.array([0.0, 0.0, 0.0])
+
+def V_0_deriv_func():
+    return np.array([0.0, 0.0, 0.0])
+
+def main():
+    # Get the time-domain data
+    (x, y) = np.genfromtxt('../test_data/test_data_ode_02.tsvd', delimiter=None, skip_header=1, unpack=True)
+
+#     print(x)
+#     print(y.shape)
+#     print(y.T)
+    
+    # Get the time-frequency representation of the data
+    (tft_data, n_f, dt) = tf.tft_from_data(x, y, 10000.0)
+
+#     print(tft_data)
+#     print(n_f)
+#     print(dt)
+    
+    (x_tft_data_reordered, y_tft_data_reordered, x_f_ordered, n_f_ordered, dt_ordered) = tf.tfreordered_from_tft(tft_data, n_f, dt)
+    
+    # Get the time domain data from the tft
+    x_tdomain_from_tft, y_tdomain_from_tft = tf.tft_to_data(tft_data, n_f, dt)
+
+#     # Plot the time-domain data
+#     plt.figure()
+#     plt.subplot(3,1,1)
+#     plt.xlabel(r"$X$")
+#     plt.grid()
+#     plt.plot(x)
+#     plt.subplot(3,1,2)
+#     plt.xlabel(r"$Y$")
+#     plt.grid()
+#     plt.plot(y)
+#     plt.subplot(3,1,3)
+#     plt.xlabel(r"$Y'$")
+#     plt.grid()
+#     plt.plot(y.T)
+#     plt.show()
+
+    # Get the time domain data from the tft
+    x_tdomain, y_tdomain = tf.tft_to_data(tft_data, n_f, dt)
+
+    # Plot the time data
+    t_domain = np.linspace(0, x.shape[0] * dt, x.shape[0])
+    plt.figure()
+    plt.subplot(3,1,1)
+    plt.xlabel(r"$X$")
+    plt.grid()
+    plt.plot(t_domain, x, label='Original')
+    plt
+
+Precision: 0
+Recall: 0
+F1 Score: 0

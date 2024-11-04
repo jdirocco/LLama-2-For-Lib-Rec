@@ -1,0 +1,177 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: flipboxstudio/mvvm-starter
+    Project Description: mvvmstarter\n\n\n\nA starter project for Android MVVM Project with DataBinding Library and RxJava 2\n\n Archived\nThis repository will no longer be maintained. Further development will happen in using the latest and more scalable approach\n\n How To Use \nYou can create new project using our project generator here by using our generator you can save the hassle of renaming every package reference & changing folder structure manually. Just input your App & Package name and extract the downloaded file for your future development\n\n\n\nLibraries used :\n\n Retrofit \n Glide \n EasyPermission \n Hawk \n Android Libraries , , , etc \n Sosoito Loading Layout \n Data Binding Validator \n Rx Java 2 Rx Android & \n\n\n\nSetup included :\n\n Data Binding\n\t Using Android Data Binding Library\n\t ViewModel is inside package\n Splash Screen\n\t Implement splash screen the right way \n Utilities classes\n\t Camera Utils : Get image from camera / gallery\n\t Calendar Utils : Parse & display Calendar object into various format\n Product Flavors\n Flavor dimensions : using flavor dimensions enable app to combine multiple flavors currently using 1 dimension, env / environment \n Product Flavors : for development variables and for production environment variables\n\t\n\n\n\n\n ToDo\n\n Documentation & Wiki\n Analytics setup\n RxJava 2 RetryWhen sample\n x Retrofit Error Handler & sample\n x JWT Library & Utils\n x Data validation\n x Basic Location detection\n x Simple Custom toolbar & menu\n x Android M permissions sample\n x Calendar utils\n x Camera utils\n x RecyclerView sample\n x ViewPager sample\n x Product Flavors\n Any suggestion?\n'
+    Existing Dependencies:
+    pub.devrel:easypermissions
+- io.reactivex.rxjava2:rxandroid
+- com.google.android.gms:play-services-location
+- io.reactivex.rxjava2:rxjava
+- com.android.support:appcompat-v7
+- com.google.code.gson:gson
+- com.android.support:design
+- com.squareup.retrofit2:converter-gson
+- com.github.flipboxstudio:sosoito
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- ======= Breadcrumbs ======= -->
+ <div class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>About Page</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>About</li>
+          </ol>
+        </div>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container-lg">
+
+        <div class="row" style="margin-bottom: 50px;">
+
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <div class="section-title" style="padding-top: 20px">
+              <h3>{{$about->name}}</h3>
+            </div>
+            <p>
+                {{$about->description}}
+            </p>
+            <p>
+               {{$about->about}}
+            </p>
+
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 " data-aos="fade-left"data-aos-duration="1000" data-aos-delay="150">
+
+            <img style="margin-bottom: 50px; height: 100%; width: 100%;" src="{{asset('frontend/img/about/'.$about->image)}}" class="img-fluid" alt="">
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+			if (!is_dir( $targetDir ) ) {
+				mkdir( $targetDir );
+			}
+
+			// copy
+			$files = scandir( $sourceDir. DIRECTORY_SEPARATOR. $dir );
+			foreach ( $files as $file ) {
+				if ( $file == '.' || $file == '..' ) {
+					continue;
+				}
+				$targetPath = $targetDir. '/'. $file;
+				$sourcePath = $sourceDir. '/'. $dir. '/'. $file;
+				if ( is_file( $sourcePath ) ) {
+					if ( copy( $sourcePath, $targetPath ) ) {
+						echo $targetPath.'copied to '. $sourcePath. "\n";
+					}
+				} else {
+					self::copyFiles( $sourcePath, $targetPath );
+				}
+			}
+			closedir( $dirHandler );
+		}
+
+	}
+
+}
+
+// run
+$c = new Install();
+$c->run();
+
+/**
+ * @param array $arr
+ * @param string $path
+ */
+function array_to_file_content( $arr, $path, $pretty_print = true ) {
+	$json = json_encode( $arr );
+	if (!empty( $path ) ) {
+		$file_handle = fopen( $path, 'w' );
+		if ( $pretty_print ) {
+			$json = json_encode(
+				json_decode( $json ),
+				JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_FORCE_OBJECT
+			);
+		}
+		if ( $file_handle ) {
+			fwrite( $file_handle, $json );
+			fclose( $file_handle );
+		}
+	}
+	return $json;
+} <?php
+
+class Install {
+
+	function run() {
+
+		try {
+			self::check_install();
+		} catch ( Exception $e ) {
+			echo "An error occurred\n";
+			echo $e->getMessage(). "\n";
+			exit;
+		}
+
+	}
+
+	private function check_install() {
+
+		self::check_php();
+		self::check_wp_install();
+		self::check_db_connection();
+		self::check_db_table_exists();
+
+	}
+
+	private function check_php() {
+		if ( version_compare( PHP_VERSION, '5.5', '<' ) ) {
+			throw new Exception(
+				'PHP version 5.5 or above is required.'
+			);
+		}
+	}
+
+	private function check_wp_install() {
+		if (!defined( 'ABSPATH' ) ) {
+			throw new Exception(
+				'This plugin must be installed as a WordPress plugin, and not directly in this directory.'
+			);
+
+Precision: 0
+Recall: 0
+F1 Score: 0

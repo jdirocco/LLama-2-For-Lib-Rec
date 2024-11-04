@@ -1,0 +1,194 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: ltearno/hexa.tools
+    Project Description: Hexa Tools\n\n\n\n\n\nThis is a Java library which helps the developper's productivity. It is mainly related to GWT.\n\n Parts\n\nAt the moment, although HexaTools is used in several production applications, yet it does not have a good documentation. Parts that are documented are here :\n\n \n \n\nAnd those which are not yet :\n\n Reflection engine,\n JPA for GWT,\n ...\n\n Release notes\n\nRelease notes are available here : \n\n Contributions\n\nHexa Tools is developped with love by . If you want to contribute, have suggestions or ideas, please feel free to submit pull requests or to contact me.\n\nc LTE Consulting 2015\n"
+    Existing Dependencies:
+    org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.apache.maven:org.apache.maven
+- com.google.gwt:gwt-codeserver
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.apache.maven:maven-project
+- fr.lteconsulting:hexa.binding
+- com.google.gwt:com.google.gwt
+- org.codehaus.plexus:plexus-utils
+- com.google.gwt:gwt-dev
+- com.helger:ph-css
+- fr.lteconsulting:hexa.css
+- org.antlr:antlr
+- org.codehaus.plexus:org.codehaus.plexus
+- com.helger:com.helger
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+    <!-- =======================
+       page title 
+      =========================== -->
+      <section id="page-title" class="page-title bg-overlay bg-overlay-dark bg-parallax">
+        <div class="bg-img"><img src="assets/images/backgrounds/page-title.jpg" alt="background"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <h1 class="pagetitle__heading">Our Projects</h1>
+            </div><!-- /.col-lg-12 -->
+          </div><!-- /.row -->
+
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Our Projects</li>
+            </ol>
+          </nav><!--.breadcrumb -->  
+
+        </div><!-- /.row -->
+      </section><!-- /.page-title -->
+  
+
+    <!-- =======================
+       project 
+      =========================== -->
+      <section class="project bg-gray">
+        <div class="container">
+
+           <div class="row">  
+
+            <div class="col-sm-12 col-md-12 col-lg-12">
+
+              <div class="portfolio-filter">
+                <ul class="filter">
+                  <li class="active" data-filter="all">All Projects</li>
+                  <li data-filter=".branding" >Branding</li>
+                  <li data-filter=".web" >Web Design</li>
+                  <li data-filter=".graphic">Graphic Design</li>
+                </ul>
+              </div><!-- /.portfolio-filter -->
+
+            </div>
+
+
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <div class="project-gallery project-gallery-active">
+                
+                  <div class="project__single project__branding">
+                    <div class="project__img">
+                      <img src="assets/images/projects/project-1.jpg" class="img-fluid" alt="">
+                      <div class="project__hover">
+                        <div class="project__details">
+                          <a class="zoa-open-popup" href="javascript:void(0)" data-popup="popup-1">
+                            <i class="fa fa-search"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div><!-- /.project-gallery__single -->
+
+
+                  <div class="project__single project__branding">
+                    <div class="project__img">
+                      <img src="assets/images/projects/project-2.jpg" class="img-fluid" alt="">
+                      <div class="project__hover">
+                        <div class="project__details">
+                          <a class="zoa-open-popup" href="javascript:void(0)" data-popup="pop
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.google.devtools.build.lib.rules.android;
+
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.google.devtools.build.lib.actions.Artifact;
+
+/**
+ * Contains the result of {@link ApkInfo} merging. The result of the merge is a single
+ * {@link ResourceApk} and a list of {@link JavaResourceInfo} that should be put into the
+ * primary artifacts of the merged target.
+ *
+ * <p>Note that {@link #primaryApk} may be null in some cases, for example, when a merge was
+ * performed with an empty {@link ApkInfo} collection.
+ */
+public class MergedApk {
+
+  /**
+   * The result of merging the resource of the given {@code apks}. The result artifact is a single
+   * resource APK that is guaranteed to be non-null as long as {@code apks} is not empty.
+   */
+  public final ResourceApk primaryApk;
+
+  /**
+   * List of {@link JavaResourceInfo}s for the given {@code apks}. The list of {@link
+   * JavaResourceInfo}s represents the list of resource files that are not going to be merged in
+   * the primary artifact {@link #primaryApk} (the merged resource APK). This list of Java
+   * resource files is guaranteed to be non-empty when {@code apks} has more than one entry. If
+   * {@code apks} has only one entry, the list of resource files is empty, and {@code primaryApk}
+   * is null.
+   */
+  public final ImmutableList<JavaResourceInfo> nonPrimaryResources;
+
+  /**
+   * Creates a new object.
+   *
+   * <p>This function guarantees that at least one of {@link #primaryApk} or {@code
+   * #nonPrimaryResources} is non empty. If both of them are empty, {@link IllegalArgumentException}
+   * is thrown.
+   */
+  public MergedApk(ResourceApk primaryApk, ImmutableList<JavaResourceInfo> javaResources) {
+    this.primaryApk = primaryApk;
+    this.nonPrimaryResources =
+        javaResources.isEmpty() && primaryApk == null? ImmutableList.<JavaResourceInfo>of()
+            : javaResources;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (!(o instanceof MergedApk)) {
+      return false;
+    }
+    MergedApk other = (MergedApk) o;
+    return primaryApk.equals(other.primaryApk)
+        && nonPrimaryResources.equals(other.nonPrimaryResources);
+  }
+
+  @Override
+  public int hashCode() {
+    return primaryApk.hashCode();
+  }
+}
+
+
+public class AndroidBinaryData {
+  /**
+   * An artifact for the {@code.apk} of the {@code android_binary} rule, or {@code null} if it is
+   * not requested.
+   */
+  public final Artifact apk;
+
+  /**
+   * The {@link AndroidManifestInfo} of the {@code android_binary} rule, or {@code null} if it is
+   * {@link AndroidBinary.AndroidBinaryRule.Apk#isLegacyDesugared()}
+   */
+  public final AndroidManifestInfo manifestInfo;
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

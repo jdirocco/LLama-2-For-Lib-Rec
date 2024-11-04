@@ -1,0 +1,251 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications. provide recommendations exclusively in the Maven format: groupId:artifactId:version.
+    Given the project details below:
+    Project Name: patloew/RxLocation
+Project Description: The Reactive Location API Library for Android is now deprecated and not maintained anymore. Please switch to the CoLocation library by Micha\xc5\x82 Charmas. This library wraps the Location APIs in RxJava 2.x.
+Existing Dependencies Include: org.powermock:powermock-module-junit4
+- io.reactivex.rxjava2:rxandroid
+- com.squareup.leakcanary:leakcanary-android
+- io.reactivex.rxjava2:rxjava
+- com.google.android.gms:play-services-location
+- com.squareup.leakcanary:leakcanary-android-no-op
+
+Project Name: frankred/jSona
+Project Description: JSona is a configuration file(JSON), vcj and JavaFx based music and media player. The aim is to always keep your playlists in synch with your music folders. For fast fulltext search jSona uses Apache Lucene (http://lucene.apache.org/core/).
+Existing Dependencies Include: uk.co.caprica:vlcj
+- org.apache.lucene:lucene-analyzers-common
+- org.apache.lucene:lucene-core
+- commons-io:commons-io
+- com.mpatric:mp3agic
+- org.apache.lucene:lucene-queryparser
+- com.github.tulskiy:jkeymaster
+- org.apache.commons:commons-lang3
+
+Project Name: querydsl/querydsl
+Project Description: Querydsl is a framework which enables the construction of type-safe SQL-like queries for multiple backends including JPA, MongoDB and SQL in Java. Querying JPA and MongoDB using a fluent API.
+Existing Dependencies Include: org.springframework:spring-aop
+- com.mysema.codegen:codegen
+- org.xerial:sqlite-jdbc
+- org.springframework:spring-test
+- com.google.guava:guava
+- com.jolbox:bonecp
+- org.hamcrest:hamcrest-library
+- com.oracle:ojdbc6
+- com.querydsl:querydsl-sql-spatial
+- com.google.inject.extensions:guice-persist
+- com.querydsl:querydsl-apt
+- org.postgresql:postgresql
+- org.easymock:easymock
+- com.querydsl:querydsl-spatial
+- org.hibernate:hibernate-ehcache
+- javax.inject:javax.inject
+- org.springframework:spring-context
+- org.eclipse.persistence:eclipselink
+- org.firebirdsql.jdbc:jaybird-jdk16
+- log4j:log4j
+- org.mongodb.morphia:morphia
+- org.hsqldb:hsqldb
+- cglib:cglib
+- org.apache.lucene:lucene-queryparser
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.apache.maven:maven-project
+- org.hibernate:hibernate-envers
+- com.querydsl:querydsl-codegen
+- net.sourceforge.jtds:jtds
+- org.springframework.roo:org.springframework.roo.annotations
+- org.apache.ant:ant
+- com.querydsl:querydsl-lucene3
+- com.thoughtworks.proxytoys:proxytoys
+- org.scala-lang:scala-library
+- org.geolatte:geolatte-geom
+- com.h2database:h2
+- com.querydsl:querydsl-sql-codegen
+- org.hibernate:hibernate-annotations
+- org.scala-lang:scala-compiler
+- org.reflections:reflections
+- org.datanucleus:datanucleus-api-jdo
+- org.mongodb:mongo-java-driver
+- org.hibernate:hibernate-validator
+- com.infradna.tool:bridge-method-annotation
+- com.querydsl:querydsl-sql-spring
+- javax.transaction:jta
+- org.slf4j:slf4j-log4j12
+
+Project Name: GoogleCloudPlatform/google-cloud-datastore
+Project Description: This repository contains low-level Java and Python client libraries for Google Cloud Datastore. For more idiomatic and usable client libraries in these languages, please visit the [Google Cloud Dataastore Client for Java][java-datastore] and Google Cloud Database Client for Python
+Existing Dependencies Include: com.google.http-client:com.google.http-client
+- com.google.truth:com.google.truth
+- com.google.cloud.datastore:datastore-v1-proto-client
+- com.google.guava:com.google.guava
+- com.google.api-client:com.google.api-client
+- com.google.oauth-client:google-oauth-client
+- com.google.truth:truth
+- com.google.oauth-client:com.google.oauth-client
+
+Project Name: eclipse/tycho
+Project Description: Eclipse Tycho is a manifest-first way to build and build Eclipse plug-ins/OSGi bundles/RCP applications\n，nwith Maven. This repository contains all the features and documentation that will help you migrate to the official Eclipse site.
+Existing Dependencies Include: org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.codehaus.plexus:plexus-component-annotations
+- org.codehaus.plexus:plexus-container-default
+- org.eclipse.tycho:tycho-testing-harness
+- org.apache.maven:maven-core
+- org.eclipse.tycho:org.eclipse.jdt.compiler.apt
+- org.codehaus.plexus:plexus-utils
+- org.eclipse.tycho:org.eclipse.osgi
+- org.eclipse.tycho:tycho-core
+- org.apache.commons:commons-exec
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Reccomend me some of these libraries that can be added to the project to enhance its capabilities.
+    Project Name: Arello-Mobile/Moxy
+    Project Description: Moxy is a library that helps to use MVP pattern when you do the Android Application. Without problems of lifecycle and boilerplate code!Moxy has a few killer features in other ways.
+    Existing Dependencies:
+    org.glassfish:javax.annotation
+- org.robolectric:robolectric
+- com.j256.ormlite:ormlite-android
+- org.mockito:mockito-all
+- com.android.support:appcompat-v7
+- com.google.code.gson:gson
+- com.arello-mobile:moxy-app-compat
+- com.android.support:design
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     As an AI specializing in software library recommendations for Java applications, I will provide recommendations exclusively in the Maven format based on the project context and existing dependencies. I will suggest five libraries that can enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs.
+
+1. GroupId: com.querydsl:artifactId:version: querydsl-sql-spring:3.4.0
+Project Description: Querydsl is a framework that enables the construction of type-safe SQL-like queries for multiple backends, including JPA, MongoDB, and SQL in Java. Querydsl-sql-spring is a Spring-based Querydsl module that integrates Querydsl with Spring.
+
+Explanation: Querydsl can enhance the project's capabilities by providing a powerful and flexible querying mechanism for various data sources. It simplifies the process of creating SQL queries and enables more efficient and type-safe querying.
+
+2. GroupId: com.google.guava:artifactId:version: guava:28.0-jre
+Project Description: Guava is a set of Java libraries for common data structures and algorithms.
+
+Explanation: Guava can improve the project's performance by providing efficient and lightweight implementations of common data structures and algorithms. It can also simplify the development process by providing a set of useful utilities and tools.
+
+3. GroupId: com.google.code.gson:artifactId:version: gson:2.8.5
+Project Description: Gson is a Java library that converts Java objects to and from JSON.
+
+Explanation: Gson can enhance the project's capabilities by providing a simple and efficient way to convert Java objects to and from JSON. It can simplify the process of serializing and deserializing Java objects, and it can also improve the project's performance by providing a fast and lightweight JSON parsing mechanism.
+
+4. GroupId: org.springframework.data:artifactId:version: spring-data-jpa:2.2.1.RELEASE
+Project Description: Spring Data JPA is a Spring module that simplifies the process of working with Java Persistence API (JPA) databases.
+
+Explanation: Spring Data JPA can enhance the project's capabilities by providing a simple and consistent interface for working with JPA databases. It can simplify the process of performing CRUD operations, and it can also improve the project's performance by providing a more efficient and optimized JPA implementation.
+
+5. GroupId: org.hibernate:artifactId:version: hibernate-envers:5.0.12.Final
+Project Description: Hibernate Envers is a Hibernate module that provides a simple and efficient way to audit and track changes to domain objects.
+
+Explanation: Hibernate Envers can enhance the project's capabilities by providing a simple and efficient way to audit and track changes to domain objects. It can simplify the process of implementing auditing and tracking features, and it can also improve the project's performance by providing a more efficient and optimized auditing mechanism.
+
+In conclusion, these five libraries can enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. They provide a powerful and flexible querying mechanism, efficient data structures and algorithms, simple and efficient JSON parsing, simplified JPA database interactions, and a more efficient auditing mechanism.
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> # Maven Dependencies
+
+Here are the Maven dependencies required for the project:
+
+1. Apache Commons Lang:
+```xml
+<dependency>
+  <groupId>org.apache.commons.lang</groupId>
+  <artifactId>commons-lang</artifactId>
+  <version>2.6</version>
+</dependency>
+```
+2. Apache Commons Logging:
+```xml
+<dependency>
+  <groupId>org.apache.commons.logging</groupId>
+  <artifactId>commons-logging</artifactId>
+  <version>1.2</version>
+</dependency>
+```
+3. Apache Commons Digester:
+```xml
+<dependency>
+  <groupId>org.apache.commons.digester</groupId>
+  <artifactId>digester</artifactId>
+  <version>2.1</version>
+</dependency>
+```
+4. Javax Persistence API:
+```xml
+<dependency>
+  <groupId>javax.persistence</groupId>
+  <artifactId>persistence-api</artifactId>
+  <version>2.2</version>
+</dependency>
+```
+5. Hibernate:
+```xml
+<dependency>
+  <groupId>org.hibernate</groupId>
+  <artifactId>hibernate-core</artifactId>
+  <version>5.4.28.Final</version>
+</dependency>
+```
+6. Spring Framework:
+```xml
+<dependency>
+  <groupId>org.springframework</groupId>
+  <artifactId>spring-core</artifactId>
+  <version>5.3.9</version>
+</dependency>
+```
+7. Spring Data JPA:
+```xml
+<dependency>
+  <groupId>org.springframework.data</groupId>
+  <artifactId>spring-data-jpa</artifactId>
+  <version>2.4.9</version>
+</dependency>
+```
+8. Spring Web:
+```xml
+<dependency>
+  <groupId>org.springframework.web</groupId>
+  <artifactId>spring-web</artifactId>
+  <version>5.3.9</version>
+</dependency>
+```
+9. Spring Web MVC:
+```xml
+<dependency>
+  <groupId>org.springframework.web.mvc</groupId>
+  <artifactId>spring-webmvc</artifactId>
+  <version>5.3.9</version>
+</dependency>
+```
+10. Testing Dependencies:
+```xml
+<dependency>
+  <groupId>junit</groupId>
+  <artifactId>junit</artifactId>
+  <version>4.13</version>
+</dependency>
+```
+
+Note: These dependencies are just a starting point, and you may need to add or remove dependencies based on your specific project requirements.
+
+Precision: 0.2
+Recall: 0.1111111111111111
+F1 Score: 0.14285714285714285
+
+Formatted Dependencies:
+org.glassfish:javax.annotation
+- org.robolectric:robolectric
+- com.j256.ormlite:ormlite-android
+- org.mockito:mockito-all
+- com.android.support:appcompat-v7
+- com.google.code.gson:gson
+- com.arello-mobile:moxy-app-compat
+- com.android.support:design
+ Test Dependencies:
+['com.arello-mobile:moxy', 'com.squareup.picasso:picasso', 'com.arello-mobile:moxy-compiler', 'com.squareup:otto', 'org.hamcrest:hamcrest-all', 'junit:junit', 'com.j256.ormlite:ormlite-core', 'io.reactivex:rxjava', 'io.reactivex:rxandroid']

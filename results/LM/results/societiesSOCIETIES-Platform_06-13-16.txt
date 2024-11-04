@@ -1,0 +1,226 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: societies/SOCIETIES-Platform
+    Project Description: The vision of the SOCIETIES project is to research and develop a concept of Ambient Intelligent AmI Communities that extend ambient intelligent or pervasive systems beyond the individual to dynamic communities of users. Driven by context awareness, preference learning and privacy protection, AmI Communities will intelligently connect people & things to communicate, share, consume and organise communities. SOCIETIES will embrace online community services, such as Social Networking, thus offering new and powerful ways of working, communicating and socialising. The project intends developing and trialling use cases for disaster management, university living and conference support.\n\nSOCIETIES platform software includes the SOCIETIES core modules and the modules related to individual and community experience. These modules provide a prototype implementation that will realise the concept of an AmI Community and therefore supporting the third party services and end user scenarios that will be available in the SOCIETIESSCEServices repository.\n\nThis software is licensed under a BSD 2Clause "Simplified" or "FreeBSD" License.'
+    Existing Dependencies:
+    org.societies.cis:CisDirectoryClient
+- org.societies.utilities:DBC
+- org.societies:AndroidAgentApi
+- org.societies.comm.android:AndroidPubsubApi
+- org.slf4j:slf4j-api
+- org.mockito:mockito-all
+- org.societies.personalisation:CAUIPrediction
+- org.jdom:jdom
+- org.osgi:org.osgi.compendium
+- org.societies.orchestration.api:intelligent-community-orchestration-api
+- org.societies.context-management:context-mgmt-api
+- org.apache.shindig:shindig-social-api
+- org.societies.android.api.external:societies-android-api
+- org.osgi:org.osgi.core
+- com.google.android:android
+- org.societies.android.api.internal:societies-android-api-internal
+- org.societies.comm.android:AndroidIPC
+- org.societies:activityfeedservice
+- org.springframework:org.springframework.beans
+- org.simpleframework:simple-xml
+- org.slf4j:slf4j-android
+- org.societies.personalisation:CAUITaskManager
+- org.societies.api.internal:societies-api-internal
+- org.apache.commons:com.springsource.org.apache.commons.pool
+- org.societies.android.platform.androidutils:SocietiesAndroidUtilities
+- net.sf.jung:jung-graph-impl
+- org.json:json
+- junit:junit
+- org.dom4j:com.springsource.org.dom4j
+- org.societies.personalisation:personalisation_api
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 31 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+        
+    
+
+    
+                
+    
+
+
+    
+    
+    
+    
+    
+
+
+    
+                
+                
+                
+
+
+    
+        
+            
+            
+            
+
+
+    
+    
+                
+
+    <div class="container " >
+      <div id="content">
+        <div class="row">
+          <div class="col-sm-3">
+            @include('partials.productos.menu_izq.menus', ['category_code'=>'008'])
+
+          </div>
+
+          <div class="col-sm-9">
+            <div class="row">
+              <div class="col-md-4">
+                <div id="" >
+                  @foreach($imagesLeft->chunk(1) as $image)
+                    <img src="{{ $image[0]['url_img'] }}" alt=""  id="imagen_principal">
+                  @endforeach
+                </div>
+              </div>
+              <div class="col-sm-6">
+                
+                @foreach($data['producto']->descripcions as $description)
+                  <div class="" >
+                    {!! $description->content_html!!}
+                  </div>
+                @endforeach
+              </div>
+
+              <div class="col-md-4">
+                <div class="text"> 
+                  <h3>Producto relacionado</h3>
+                  @foreach($related->chunk(1) as $product)
+
+                    <div id="" >
+                      <div id="">
+                        <img src="{{ $product[0]['image'] }}" alt="" class="img-responsive" id="imagen_principal">
+                      </div>
+                      <a href="{{url('/'.$product[0]['url_slug'])}}"><h3>{{ $product[0]['title'] }}</h3></a>
+                      <h3><span class="precio">{{ number_format($product[0]['price'], 0, ',', '.') }}€</span></h3>
+                    </div>
+                    
+                  @endforeach
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 31 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <input id="password" type="password" class="form-control border-primary @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
+
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-md-left">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember_me" id="remember_me" {{ old('remember')? 'checked' : '' }}>
+
+                                    <label class="form-check-label" for="remember_me">
+                                        {{ Lang::get('lang.remember') }}
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-md-right">
+                                <div class="form-check">
+                                    <button type="submit" class="btn btn-primary">
+                                        {{ Lang::get('lang.login') }}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
+
+ <!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>{{ config('app.name', 'Laravel') }} - @yield('title')</title>
+    
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center" style="margin-top: 8%">
+            <div class="col-md-6">
+                <div class="card border-warning">
+                    <div class="card-body pb-0">
+                        <div class="form-group">
+                            <h4 class="text-md-left">
+                                <b>{{ Lang::get('lang.login') }} |
+                                    <a class="btn btn-link" href="{{ route('register') }}">
+                                        {{ Lang::get('lang.register') }}
+                                    </a>
+                                </b>
+                            </h4>
+                        </div>
+                        @if(session()->has('
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,147 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: wildfly/jboss-ejb-client
+    Project Description: JBoss EJB client for WildFly\n\nJBoss EJB client is a library that enables invocation of Jakarta Enterprise Beans located in remote WildFly server.\n\n\n\n Build with Maven\n\nThe command below builds the project and runs the embedded suite.\n\n\n\n Issue Tracking\n\nBugs and features are tracked within the JBoss EJB client Jira project at Contributions\n\nAll new features and enhancements should be submitted to main branch.\nOur will guide you through the steps for getting started on the JBoss EJB client project and will go through how to format and submit your first PR.\n\n\n Get Help\n\nIf you would like to ask us some question or you need some help, feel free to ask on the WildFly user .'
+    Existing Dependencies:
+    org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec
+- org.jboss.invocation:jboss-invocation
+- org.wildfly.client:wildfly-client-config
+- org.jboss:jboss-transaction-spi
+- org.wildfly.transaction:wildfly-transaction-client
+- org.jboss.modules:jboss-modules
+- org.jboss.xnio:xnio-nio
+- org.jboss.xnio:xnio-api
+- org.wildfly.discovery:wildfly-discovery-client
+- org.wildfly:wildfly-naming-client
+- org.jboss.spec.javax.ejb:jboss-ejb-api_3.2_spec
+- org.jboss.logging:jboss-logging-processor
+- org.jboss.marshalling:jboss-marshalling-river
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 13 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+ 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <link rel="stylesheet" id="main-stylesheet" data-version="1.1.0" href="{{asset('backed/css/shards-dashboards.1.1.0.min.css')}}">
+    <link rel="stylesheet" href="{{asset('backed/css/extras.1.1.0.min.css')}}"> {{--<script async defer src="https://buttons.github.io/buttons.js"></script> --}}
+
+
+    <script async="" defer="" src="{{asset('backed/css/buttons.js')}}"></script>
+     <link rel="stylesheet" href="{{asset('backed/css/buttons.css')}}">
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 13 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:get/get.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
+import 'package:google_api_headers/google_api_headers.dart';
+import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
+
+var url = 'http://127.0.0.1:1171/api.php';
+
+class User {
+  String id;
+  String name;
+  String email;
+  String phone;
+  String password;
+
+  User({
+    this.id,
+    this.name,
+    this.email,
+    this.phone,
+    this.password,
+  });
+}
+
+class AuthController extends GetxController {
+
+  var isLoading  = false.obs;
+
+  void login(
+    context,
+  ) async {
+    var userid = (Get.arguments as Map).elementAt("useremail");
+    var password = (Get.arguments as Map)      },
+            )),
+        body: SafeArea(
+            child: Obx(() => isLoading.value == true
+               ? Center(
+              child: CircularProgressIndicator(),
+            )
+                : SingleChildScrollView(
+              child: Column(children: [
+                SizedBox(height: 20),
+                Card(
+                  elevation: 20,
+                  child: Container(
+                    decoration: BoxDecoration(color: Color(0xff696969)),
+                    width: Get.width,
+                    padding: EdgeInsets.all(20),
+                    child: Column(children: [
+                      SizedBox(height: 10,),
+                      Text(
+                        'Welcome ${user.name.value.capitalize}',
+                        style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400, color: Colors.white),
+                      ),
+                      SizedBox(height: 40,),
+                      Text('You can add new items by clicking the floating action button on the right', style: Get.theme.textTheme.bodyText2.copyWith(color: Colors.white)),
+                      SizedBox(height: 5,),
+                      Text(
+                        'We are using shared preferences to save the data, so that you dont have to keep entering the email and password every time',
+                        style: Get.theme.textTheme.bodyText2.copyWith(fontSize: 12, color: Colors.white),
+                      ),
+                      SizedBox(height: 20,),
+                    ],),
+                  ),
+                ),
+                ListView.builder(
+                  itemCount: 3,
+                  itemBuilder: (context, index) {
+                    return SizedBox(
+                      height: 60,
+                      child: Card(
+                        elevation: 20,
+                        child: Container(
+                          decoration: BoxDecoration(color: Color(0xff696969)),
+                          padding: EdgeInsets.all(20),
+                          child: Column(
+                            crossAxisAlignment: CrossAxis
+
+Precision: 0
+Recall: 0
+F1 Score: 0

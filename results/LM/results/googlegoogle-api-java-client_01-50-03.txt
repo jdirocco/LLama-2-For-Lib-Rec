@@ -1,0 +1,146 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: google/google-api-java-client
+    Project Description: Google APIs Client Library for Java\n\n Description\n\nThe Google APIs Client Library for Java is a flexible, efficient, and powerful Java client library\nfor accessing any HTTPbased API on the web, not just Google APIs.\n\nThe library has the following features:\n A powerful library with a consistent interface.\n Lightweight, efficient XML and JSON data models that support any data schema.\n Support for .\n A set of .\n\n Supported Java environments\n\n Java 7 or higher\n Android 1.6 or higher\n \n\n Usage\n\nFor detailed instructions on usage, please visit the .\n\n Installation\n\nThe Google APIs Client Library for Java is easy to install.\n\nTo use Maven, add the following lines to your pom.xml file:\n\n\nJava 8 | \nJava 11 | \n\n Dependencies\nThis library is built on top of two common libraries, also built by Google, and also designed to\nwork with any HTTP service on the web:\n\n \n \n\n Important Warnings\n\n @Beta\n\nFeatures marked with the @Beta annotation at the class or method level are subject to change. They\nmight be modified in any way, or even removed, in any major release. You should not use beta features\nif your code is a library itself that is, if your code is used on the CLASSPATH of users outside\nyour own control.\n\n Deprecations\n\nDeprecated nonbeta features will be removed eighteen months after the release in which they are\nfirst deprecated. You must fix your usages before this time. If you don't, any type of breakage\nmight result, and you are not guaranteed a compilation error.\n\n Documentation\n\n \n \n\n Contributing\n\nContributions to this library are always welcome and highly encouraged.\n\nSee documentation for more information on how to get started.\n\nPlease note that this project is released with a Contributor Code of Conduct. By participating in\nthis project you agree to abide by its terms. See for more\ninformation.\n\nFor questions or concerns, please file an issue in the GitHub repository.\n"
+    Existing Dependencies:
+    com.google.http-client:google-http-client-assembly
+- com.google.http-client:google-http-client-xml
+- com.google.http-client:google-http-client-android
+- com.google.oauth-client:google-oauth-client-java6
+- com.google.http-client:google-http-client-gson
+- com.google.code.findbugs:jsr305
+- com.google.api-client:google-api-client-java6
+- com.google.http-client:google-http-client-appengine
+- com.google.appengine:appengine-tools-sdk
+- com.google.oauth-client:google-oauth-client-java7
+- commons-codec:commons-codec
+- com.google.appengine:appengine-api-1.0-sdk
+- com.google.http-client:google-http-client-jackson2
+- com.google.api-client:google-api-client-servlet
+- com.google.api-client:google-api-client-gson
+- xpp3:xpp3
+- com.google.http-client:google-http-client-jackson
+- com.google.oauth-client:google-oauth-client-assembly
+- com.google.guava:guava
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+     <div class="row clearfix">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                              EDITAR USUARIO
+                              
+                            </h2>
+                           
+                        </div>
+                        <div class="body">
+                             <?php echo form_open(null, array("class" => "form-horizontal", "id" => "formUsuario"));?>
+                            <!--
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                   <label >Nombres:</label>
+                                    
+                                 </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" id="nombres" autocomplete="off" class="form-control" placeholder="Escriba su nombre" >
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                             <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                        <label >Apellidos:</label>
+                                    
+                                 </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" id="apellidos" autocomplete="off" class="form-control" placeholder="Escriba su Apellidos" >
+                                            <input type="hidden" id="idUsuarios" value="<?=$idUsuarios;?>">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label >Correo Electrónico:</label>
+                                   
+                                 </div>
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
+                                     <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="email" id="correo" autocomplete="off" class="form-control" placeholder="Escriba su correo electrónico" >
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
+                                    <label >Dirección:</label>
+                                  <br>                                    
+                                 </
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+  }
+
+  const getSuggestions = getSuggestionList();
+
+  return (
+    <div className={css.suggestionInput} onClick={onClick}>
+      <input
+        ref={suggestionRef}
+        onKeyUp={(event: KeyboardEvent) => onKeyUp(suggestionRef, event)}
+        className={css.inputField}
+      />
+      {getSuggestions(query)}
+    </div>
+  );
+}
+
+export const SuggestionComponent = Suggestion;
+ import React from "react";
+import "./Suggestion.scss";
+import { getSuggestionList, SuggestionList } from "../../../../../api/APISuggestionList";
+
+function Suggestion(props: { onClick: () => void; query: string }) {
+  const { onClick, query } = props;
+  const css = "suggestion";
+  const suggestionRef = React.createRef<HTMLInputElement>();
+
+  const onKeyUp = (
+    suggestionRef: React.MutableRefObject<HTMLInputElement>,
+    event: KeyboardEvent
+  ): void => {
+    if (event.key === "Escape") {
+      suggestionRef.current.value = "";
+    }
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,173 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: neel4software/SpringSecurityOAuth2
+    Project Description: Updated Version avilable here: Securing Restful Web Services with Spring Security and OAuth2 \n\nThe flow of application will go something like this:\n\n 1 User sends a GET request to server with five parameters: granttype, username, password, clientid, clientsecret; something like this\n\n 2 Server validates the user with help of spring security, and if the user is authenticated, OAuth generates a access token and send sends back to user in following format.\n\nHere we got accesstoken for further communication with server or to get some protected resoursesAPI\xe2\x80\x99s, it mentioned a expiresin time that indicates the validation time of the token and a refreshtoken that is being used to get a new token when token is expired.\n\n 3 We access protected resources by passing this access token as a parameter, the request goes something like this:\n\n is the server path, and /api/users/ Is an API URL that returns a list of users and is being protected to be accessed.\n\n 4 If the token is not expired and is a valid token, the requested resources will be returned.\n\n 5 In case the token is expired, user needs to get a new token using its refreshing token that was accepted in step2. A new access token request after expiration looks something like this:\n\n you will get a new access token along with a new refresh token.\n'
+    Existing Dependencies:
+    org.apache.commons:commons-io
+- org.springframework.security:spring-security-web
+- org.springframework.security.oauth:spring-security-oauth2
+- com.google.code.gson:gson
+- org.codehaus.jackson:jackson-mapper-asl
+- org.springframework:spring-web
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div class="page-wrapper">
+            
+            <!-- ===== Page-Container ===== -->
+            <div class="container-fluid">
+                
+                <div class="white-box">
+                    
+                    <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg">
+                    <form action="<?php echo site_url();?>/home/insert_user" method="post"  enctype="multipart/form-data" >
+                    <input type="hidden" name="id" value="<?php echo $id;?>">
+                    <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="Add"><i class="ti-plus"></i></button>
+                    </form>   
+                    </a>
+                                        
+                    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                   
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="<?php echo site_url();?>/home/insert_user" method="post"  enctype="multipart/form-data" >
+                                    <div class="form-group row">
+                                    <label for="fname" class="col-lg-2 control-label">First Name</label>
+                                        <div class="col-lg-10">
+                                            <input type="text" class="form-control" id="fname" name="first_name" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                    <label for="lname" class="col-lg-2 control-label">Surname</label>
+                                        <div class="col-lg-10">
+                                            <input type="text" class="form-control" id="lname" name="last_name" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                    <label for="dob" class="col-lg-2 control-label">Date of Birth</label>
+                                        <div class="col-lg-10">
+                                            <input type="date" class="form-control" id="dob" name="dob" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                    <label for="email" class="col-lg-2 control-label">Email Address</label>
+                                        <div class="col-lg-10">
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                    <label for="username" class="col-lg-2 control-label">
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+/**
+ * Created by PhpStorm.
+ * User: Administrator
+ * Date: 2017-05-12
+ * Time: 16:23
+ */
+
+namespace console\models;
+use common\ActiveRecord\CustomUserShareAR;
+use common\ActiveRecord\CustomUserShareAwardAR;
+use common\ActiveRecord\CustomUserShareBonusAR;
+use common\ActiveRecord\FinanceBalanceAR;
+use common\ActiveRecord\FinanceRecordAR;
+use common\ActiveRecord\LeCustomersAR;
+use common\models\parts\trade\recharge\nanjing\Nanjing;
+use common\models\parts\trade\Waybill;
+use common\models\parts\trade\recharge\nanjing\data\Refund;
+use Yii;
+use yii\db\Exception;
+use yii\db\Query;
+
+class BonusModel extends \common\models\Model
+{   public static function tableName(){
+       return '{{%custom_user_share_bonus}}';
+   }
+   public static function getBonusId($id){
+       return  (new Query())->select('id')->from(self::tableName())->where(['share' => $id])->column();
+   }
+    /**
+     * @return array
+     */
+
+   public static function  getBonus($id){
+       $query = new Query();
+       $data = $query->from(self::tableName())->where(['share'=>$id])->all();
+       return $data;
+   }
+
+
+    public function getData(){
+        if(is_null($this->user)) return [];
+        $data = $this->getDataByWhere(['share'=>$this->user->id]);
+        return $data;
+    }
+
+    public function getDataByWhere($where = null){
+        if($where) {
+            $query = new Query();
+            $data = $query->select('id,share,bonus,award')->from(self::tableName())->where($where)->andWhere(['is_pay'=>1, 'is_use'=>0])->all();
+            return $data;
+        }else{
+            return false;
+        }
+    }
+
+    public function getDataById($id){
+        if($id) {
+            $query = new Query();
+            $data = $query->select('id,share,bonus,award')->from(self::tableName())->where(['id'=>$id])->andWhere(['is_pay'=>1, 'is_use'=>0])->one();
+            return $data;
+        }else{
+            return false;
+        }
+    }
+
+    public function getDataByBonus($bonus){
+        if($bonus) {
+            $query = new Query();
+            $data = $query->select('id,share,bonus,award')->from(self::tableName())->where(['bonus'=>$bonus])->andWhere(['is_pay'=>1, 'is_use'=>0])->one();
+            return $data;
+        }else{
+            return false;
+        }
+    }
+
+   /**
+    * 生成红包
+    */
+   public function createBonus($user){
+       $this->user = $user;
+       $user_id = $user->id;
+       $
+
+Precision: 0.0
+Recall: 0.0
+F1 Score: 0

@@ -1,0 +1,95 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: tinkerpop/blueprints
+    Project Description: ! TinkerPop is now a part of the Apache Software Foundation and "TinkerPop 3.x": is the latest incarnation of The TinkerPop. This project is TinkerPop 2.x and is no longer active. \n\nBlueprints is a "property graph model interface": It provides implementations, test suites, and supporting extensions. Graph databases and frameworks that implement the Blueprints interfaces automatically support Blueprintsenabled applications. Likewise, Blueprintsenabled applications can plugandplay different Blueprintsenabled graph backends.\n\n Implementations:\n "TinkerGraph": inmemory graph\n "Neo4j": graph database\n "OrientDB": graph database\n "Sparksee": graph database\n "Titan": available "here": "InfiniteGraph": available "here": "Rexster": graph server\n "Sesame 2.x": compliant RDF stores\n Many "thirdparty": Blueprints implementations\n Ouplementations:\n "Java Universal/Graph": interface\n "Sesame 2.x": Sail interface\n Supporting utilities:\n "GML": Reader/Writer utility\n "GraphML": Reader/Writer utility\n "GraphSON": Reader/Writer utility\n @BatchGraph@ wrapper\n @ReadOnlyGraph@ wrapper\n @EventGraph@ wrapper\n @PartitionGraph@ wrapper\n @IdGraph@ wrapper\n Various helper utilities\n\nThe documentation for Blueprints can be found at this "location": Finally, please visit "TinkerPop": for other software products.\n'
+    Existing Dependencies:
+    net.fortytwo.sesametools:repository-sail
+- org.openrdf.sesame:sesame-model
+- org.neo4j:neo4j-io
+- org.openrdf.sesame:sesame-sail-nativerdf
+- commons-codec:commons-codec
+- commons-configuration:commons-configuration
+- org.openrdf.sesame:sesame-sail-inferencer
+- org.openrdf.sesame:sesame-queryalgebra-evaluation
+- com.sparsity:sparkseejava
+- org.openrdf.sesame:sesame-rio-trig
+- net.fortytwo.sesametools:common
+- org.neo4j:neo4j
+- commons-logging:commons-logging
+- org.codehaus.jettison:jettison
+- org.neo4j:neo4j-kernel
+- net.fortytwo:linked-data-sail
+- org.openrdf.sesame:sesame-util
+- org.neo4j:neo4j-ha
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 18 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+
+
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 18 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> 
+#pragma once
+
+
+namespace cppfs
+{
+
+
+/**
+*  @brief
+*    Encoding
+*/
+class CPPFS_LINKAGE Encoding
+{
+public:
+    enum EncodingType
+    {
+        ASCII,   ///< ASCII, 7 bits
+        Latin1,  ///< Latin-1, 8 bits
+        UCS2tatic EncodingType FromName(const std::string & name);
+    static std::string  ToName(EncodingType type);
+};
+
+
+} // namespace cppfs
+,    ///< Unicode UCS2/UTF16, 16 bit
+        UCS4,    ///< Unicode UCS4/UTF32, 32 bit
+        UTF8     ///< Unicode UTF8, 8 bit
+    };
+
+    // Conversions
+    s
+
+Precision: 0
+Recall: 0
+F1 Score: 0

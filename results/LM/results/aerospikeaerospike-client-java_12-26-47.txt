@@ -1,0 +1,113 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: aerospike/aerospike-client-java
+    Project Description: Aerospike Java Client Package\n=============================\n\nAerospike Java client. This package contains full source code for these projects.\n\n client: Java native client library.\n proxy: Java proxy client library for dbaas database as a service.\n examples: Java client examples.\n benchmarks: Java client benchmarks.\n test: Java client unit tests.\n\nPrerequisites:\n\n Java 21\n Maven 3.9.5\n\nThe source code can be imported into any Java IDE. \nMaven build scripts are also provided.\n\nBuild instructions:\n\n ./buildall\n'
+    Existing Dependencies:
+    io.netty:netty-transport
+- io.netty:netty-handler
+- commons-cli:commons-cli
+- com.aerospike:aerospike-client
+- org.gnu:gnu-crypto
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <nav class="navbar navbar-expand-lg navbar-light " style ="background-color:  #e3f2fd;">
+       <!-- <p> <a class="navbar-brand" href="#">Trip</a>-->
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span></button>
+     <div class="container">
+       <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class=" navbar-nav mx-auto">
+          <li class="nav-item active">
+           <a class="nav-link" href="<?php echo base_url();?>" >Home <span class="sr-only">(current)</span></a>
+         </li>
+          </li>
+         <li class="nav-item ">
+          <a class="nav-link " href="<?php echo site_url('about');?>" >about</a>
+         </li>
+          </li>
+         <li class="nav-item ">
+          <a class="nav-link " href="<?php echo site_url("trip/trips");?>" >TRIPS</a>
+         </li>
+          </li>
+         <li class="nav-item ">
+          <a class="nav-link " href="<?php echo site_url('contact');?>"  >contact</a>
+         </li>
+          <li class="nav-item ">
+          <a class="nav-link " href="<?php echo site_url("login");?>" >Login</a>
+         </li>
+        </ul>
+         </div>
+       </div>
+     </nav>
+
+
+
+
+
+
+     <br><br><br><br><br>
+
+    <!--  <div id="mycarousel" class="carousel slide" data-ride="carousel" align="center">
+      <ol class="carousel-indicators">
+        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#mycarousel" data-slide-to="1"></li>
+        <li data-target="#mycarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item">
+         <img src="<?php echo base_url();?>assets/image/banner1.png" style="width:1300px; height: 470px; margin-left: -240px;">
+      </div>
+      <div class="carousel-item active">
+         <img src="<?php echo base_url();?>assets/image/banner1.png" style="width:1300px; height: 470px; margin-left: -240px;">
+      </div>
+      <div class="carousel-item">
+        <img src="<?php echo base_url();?>assets/image/banner1.png" style="width:1300px; height: 470px; margin-left: -240px;">
+      </div>
+      </div>
+      <a class="carousel-control-prev" href
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e(String.format("Hello %s!", name));
+    }
+}
+ package com.github.sparsick.infra.testing.infratestingdemoapp;
+
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.core.Response;
+
+@Path("/greeting")
+public class GreetingResource {
+
+    @GET
+    @Path("/{name}")
+    public Response greet(@PathParam("name") String name) {
+        return Response.ok().entity(String.format("Hello %s!", name)).build();
+        //return new Respons
+
+Precision: 0
+Recall: 0
+F1 Score: 0

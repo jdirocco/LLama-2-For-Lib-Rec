@@ -1,0 +1,162 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: bowyer-app/ParseSendClient
+    Project Description: ParseSendClient\xef\xbc\x88 Depricated \n==============================\n\n\nParse push send client.\n\nUse Parse REST API Push Notifications\n\n\n\n\n\n\nUsage\n====\nCreate notification Object\n\n\n\nCreate channel\n\n\n\nSend push now.\n\n\n\nSend scheduling push.\n\n\n\nHere\'s Custom push Object\n\n\n\nDownload\n====\nDownload via Gradle:\n\n\n\n parsepush.properties\n\nadd parsepush.properties into resources dir\n\n| property | description |\n| | |\n| PARSEAPPLICATIONID | your Application ID |\n| PARSERESTAPIKEY | your Client Key |\n| PARSERESTAPIKEY | your REST API Key |\n\n\nLicense\n\n\n'
+    Existing Dependencies:
+    com.github.dmytrodanylyk.android-process-button:library
+- com.github.rey5137:material
+- com.github.citux:datetimepicker
+- com.squareup.retrofit:retrofit
+- com.squareup.okhttp:okhttp
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+#include "pqCMBPointsBaseWidget.h"
+#include "ui_pqCMBPointsBaseWidget.h"
+
+class QStringListWidgetItem;
+
+class pqCMBPointsBaseWidget::pqInternal
+{
+public:
+  pqInternal()
+  {
+    this->UseDataTime = false;
+    this->UseFileName = false;
+    this->UseCellData = false;
+  }
+
+  Ui::pqCMBPointsBaseWidget Panel;
+
+  bool UseDataTime;
+  bool UseFileName;
+  bool UseCellData;
+  QStringListWidgetItem* Item;
+};
+
+pqCMBPointsBaseWidget::pqCMBPointsBaseWidget(QWidget* p)
+  : QWidget(p)
+{
+  this->Internal = new pqInternal();
+  this->Internal->Panel.setupUi(this);
+
+  QObject::connect(this->Internal->Panel.timeDataCheck, SIGNAL(stateChanged(int)), this,
+    SLOT(timeDataCheck_clicked(int)));
+  QObject::connect(this->Internal->Panel.fileNameCheck, SIGNAL(stateChanged(int)), this,
+    SLOT(fileNameCheck_clicked(int)));
+  QObject::connect(this->Internal->Panel.CellDataCheck, SIGNAL(stateChanged(int)), this,
+    SLOT(cellDataCheck_clicked(int)));
+  QObject::connect(this->Internal->Panel.AddString, SIGNAL(clicked()), this, SLOT(AddButton_clicked()));
+  this->Internal->UseDataTime = false;
+  this->Internal->UseFileName = false;
+  this->Internal->UseCellData = false;
+  this->Internal->Item = NULL;
+}
+
+pqCMBPointsBaseWidget::~pqCMBPointsBaseWidget()
+{
+  if (this->Internal->Item)
+  {
+    delete this->Internal->Item;
+  }
+  delete this->Internal;
+}
+
+void pqCMBPointsBaseWidget::timeDataCheck_clicked(int)
+{
+  this->Internal->UseDataTime = this->Internal->Panel.timeDataCheck->isChecked();
+  this->Internal->Panel.dataTimeFrame->setEnabled(this->Internal->UseDataTime);
+  this->Internal->Panel.TimeValue->setEnabled(this->Internal->UseDataTime);
+}
+
+void pqCMBPointsBaseWidget::fileNameCheck_clicked(int)
+{
+  this->Internal->UseFileName = this->Internal->Panel.fileNameCheck->isChecked();
+  this->Internal->Panel.fileNameText->setEnabled(this->Internal->UseFileName);
+}
+void pqCMBPointsBaseWidget::cellDataCheck_clicked(int)
+{
+  this->Internal->UseCellData = this->Internal->Panel.CellDataCheck->isChecked();
+}
+
+int pqCMBPointsBaseWidget::getTimeValue()
+{
+  if (!this->Internal->UseDataTime)
+  {
+    return -1;
+  }
+  int timeStep = 0;
+  QString tString = this->Internal->Panel.TimeValue->text();
+  bool valid;
+  timeStep = tString.toInt(&valid);
+  return timeStep;
+}
+
+double pqCMBPointsBaseWidget::getX()
+{
+  double x = 0;
+  QString xString = this->Internal->
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t: 1
+  },
+  title: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent:'space-between'
+  },
+  text: {
+    color: '#000000',
+    fontWeight: '700',
+    fontSize: 13,
+    marginTop: 36
+  }
+});
+
+export default Styles; import { StyleSheet } from'react-native';
+import { theme } from "../../index"
+const { padding, windowWidth, normalize, color } = theme;
+
+const Styles = StyleSheet.create({
+
+  container: {
+    padding: 15,
+    backgroundColor: '#fff',
+    width: windowWidth - 30,
+    marginHorizontal: 15,
+    shadowOffset: { width: 0, height: 0 },
+    shadowColor: 'black',
+    shadowOpacity: 0.2,
+  },
+  cardContainer: {
+    paddingVertical: 15,
+    marginVertical: 5,
+    borderWidth: 1,
+    borderRadius: 6,
+    justifyConten
+
+Precision: 0
+Recall: 0
+F1 Score: 0

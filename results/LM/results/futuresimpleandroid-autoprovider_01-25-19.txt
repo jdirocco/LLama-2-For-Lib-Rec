@@ -1,0 +1,191 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: futuresimple/android-autoprovider
+    Project Description: AutoProvider\n============\nUtility for creating ContentProviders without boilerplate and with heavy customization options.\n\nFeatures\n========\n\nUsage\n=====\nJust add repository and the dependency to your :\n\n\n\n Publishing new version\n\n1. Update in file\n2. Merge PR to master\n3. Create new GitHub release with tag name followed by version e.g. \n4. GitHub Actions will automatically build and publish new package in Maven repository\n\n Copyright and license\n\nCopyright 2014 Zendesk\n\nLicensed under the \n"
+    Existing Dependencies:
+    com.android.support:support-annotations
+- org.robolectric:robolectric
+- com.google.android:android
+- com.getbase.forger:forger
+- com.sun:tools
+- org.mockito:mockito-all
+- com.google.truth:truth
+- com.getbase.android.schema:library
+- org.chalup.thneed:thneed
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <?php include('header.php');
+     include('sidebar.php');
+   ?>
+    <div class="container page-header text-center mt-5">
+        <h1 style="font-size: 38px;">
+            <b>Placement</b>
+        </h1>
+    </div>
+  <div class="card col-md-8 m-auto ">
+    <div class="card-body">
+<div class="row mt-4">
+
+    <h2 style="padding:30px;">Recent Jobs</h2>
+</div>
+<br>
+  <table id="example" class="display nowrap mb-5" style="width:100%">
+      <thead>
+          <tr>
+            <th scope="col" class="text-center" >#</th>
+              <th scope="col" class="text-center" >Job Title</th>
+              <th scope="col" class="text-center" >Company Name</th>
+              <th scope="col" class="text-center" >Location</th>
+              <th scope="col" class="text-center" >Eligibility</th>
+              <th scope="col" class="text-center" >Stream</th>
+              <th scope="col" class="text-center" >Skill Set</th>
+              <th scope="col" class="text-center" >Action</th>
+          </tr>
+      </thead>
+      <tbody>
+         
+          <?php 
+          if($fetch_record_job->num_rows()>0)
+          {
+          $i=1;
+          foreach($fetch_record_job->result() as $row)
+          {
+         ?>
+          <tr>
+              <td><b> <?php echo $i?></b></td>
+              <td><?php echo $row->job_title; ?></td>
+              <td><?php echo $row->company_name;?></td>
+              <td><?php echo $row->location; ?></td>
+              <td><?php echo $row->eligible; ?></td>
+              <td><?php echo $row->stream; ?></td>
+              <td><?php echo $row->skill_set; ?></td>
+              <td><a href="<?php echo base_url("index.php/Placement/edit/").$row->id_job;?>" type="button" class="btn btn-info">Edit</a>
+              &emsp;<a href="<?php echo base_url("index.php/Placement/delete/").$row->id_job;?>" type="button" class="btn btn-danger">Delete</a></td>
+              
+          </tr> 
+
+          <?php 
+              $i++;
+          }
+
+          }
+        
+        
+         ?>
+      </tbody>
+      <tfoot>
+          <tr>
+            <th scope="col" class="text-center" >#</th>
+              <th scope="col" class="text-center" >Job Title</th>
+              <th scope="col" class="text-center" >Company Name</th>
+              <th scope="col" class="text-center" >Location</th>
+              <th scope="col" class="text-center" >Eligibility</th>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.hazelcast.map.impl.tx;
+
+import com.hazelcast.core.HazelcastInstance;
+import com.hazelcast.core.HazelcastInstance;
+import com.hazelcast.core.IMap;
+import com.hazelcast.core.TransactionalMap;
+import com.hazelcast.test.AssertTask;
+import com.hazelcast.test.HazelcastParallelClassRunner;
+import com.hazelcast.test.annotation.ParallelTest;
+import com.hazelcast.test.annotation.QuickTest;
+import org.junit.Test;
+import org.junit.experimental.categories.Category;
+import org.junit.runner.RunWith;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+@RunWith(HazelcastParallelClassRunner.class)
+@Category({QuickTest.class, ParallelTest.class})
+public class TxnMapProxyImpl_Clear_Test extends AbstractTxnMapProxyTest {
+
+    /*
+    * ========================= clear ==============================
+    */
+
+    @Test
+    public void testClearWhenEmpty() throws Exception {
+        HazelcastInstance[] instances = createInstances();
+        HazelcastInstance node = instances[0];
+        final TransactionalMap<Object, Object> map = createTransactionalMap(node);
+
+        map.clear();
+    }
+
+    @Test
+    public void testClear_WhenContainsOneEntry_ThenSizeZeroAfterCommit() throws Exception {
+        HazelcastInstance[] instances = createInstances();
+        HazelcastInstance node = instances[0];
+        final TransactionalMap<String, String> map = createTransactionalMap(node);
+
+        map.put("key1", "value1");
+        map.getMap().put("key2", "value2");
+
+        map.beginTransaction();
+        map.clear();
+        map.commitTransaction();
+
+        assertEquals(0, map.getMap().size());
+        assertEquals(0, map.size());
+    }
+
+    @Test
+    public void testClear_WhenContainsOneEntry_ThenSizeZeroAfterRollback() throws Exception {
+        HazelcastInstance[] instances = createInstances();
+        HazelcastInstance node = instances[0];
+        final TransactionalMap<String, String> map = createTransactionalMap(node);
+
+        map.put("key1", "value1");
+        map.getMap().put("key2", "value2");
+
+        map.beginTransaction();
+        map.clear();
+        map.rollbackTransaction();
+
+        assertEquals(2, map.getMap().size());
+        assertEquals(2, map.size());
+    }
+
+    @Test
+    public void testClear_WhenContainsManyEntries_ThenSizeZeroAfterCommit() throws Exception {
+        final String baseMapName = "baseMapName";
+        IMap baseMap = instance1.getMap(baseMapName);
+        for (int i = 0; i < 1000; i++) {
+            baseMap.put(i, "somevalue");
+        }
+        final String transactionalMapName = "t       map.beginTransaction();
+        map.clear();
+        map.commitTransaction();
+
+        for (int i = 0; i < 
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,101 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: octo-technology/sonar-objective-c
+    Project Description: SonarQube Plugin for Objective C\n================================\n\nThis repository hosts the ObjectiveC plugin for . This plugin enables to analyze and track the quality of iOS iPhone, iPad and MacOS developments.\n\nThis plugin is not supported by SonarSource. SonarSource offers a as well. Both plugins do not offer the same functionalities/support.\n\nThe development of this plugin has always been done thanks to the community. If you wish to contribute, check the wiki page.\n\nFind below an example of an iOS SonarQube dashboard:\n\n \n\n\nFeatures\n\n implemented or pending.\n\nCompatibility\n\n Use 0.3.x releases for SonarQube = 4.3 4.x and 5.x\n\nDownload\n\nThe latest version is the 0.4.0 and it\'s available .\nThe latest SonarQube 3.x release is the 0.3.1, and it\'s available .\n \nYou can also download the latest build of the plugin from .\n \nIn the worst case, the Maven repository with all snapshots and releases is available here: a Mac with Xcode...\n and installed installed and \n installed and . If you are using Xcode 6, make sure to update xctool to a version 0.2.2.\n installed. Version 0.8.1 recommended installed and . \n installed\n\nInstallation once for all your ObjectiveC projects\n Install through the Update Center of SonarQube or download it into the $SONARQUBEHOME/extensions/plugins directory\n Copy somewhere in your PATH\n Restart the SonarQube server.\n\nConfiguration once per project\n Copy in your Xcode project root folder along your .xcodeproj file\n Edit the sonarproject.properties file to match your Xcode iOS/MacOS project\n\nThe good news is that you don\'t have to modify your Xcode project to enable SonarQube!. Ok, there might be one needed modification if you don\'t have a specific scheme for your test target, but that\'s all.\n\nAnalysis\n Run the script in your Xcode project root folder\n Enjoy or file an issue!\n\nUpdate once per plugin update\n Install the version\n Copy somewhere in your PATH\n\nIf you still have runsonar.sh file in each of your project not recommended, you will need to update all those files.\n\nCredits\n Cyril Picat\n Gilles Grousset\n Denis Bregeon\n Fran\xc3\xa7ois Helg\n Romain Felden\n Mete Balci\n\nHistory\n v0.4.0 2015/01: support for SonarQube = 4.3 4.x & 5.x\n v0.3.1 2013/10: fix release\n v0.3 2013/10: added support for OCUnit tests and test coverage\n v0.2 2013/10: added OCLint checks as SonarQube violations\n v0.0.1 2012/09: v0 with basic metrics such as nb lines of code, nb lines of comment, nb of files, duplications\n\nLicense\n\nSonarQube Plugin for Objective C is released under the GNU LGPL 3 license: \n
+    Existing Dependencies:
+    ant:ant
+- org.codehaus.sonar:sonar-deprecated
+- org.codehaus.sonar.sslr:sslr-core
+- org.codehaus.sonar.sslr:sslr-xpath
+- org.codehaus.sonar.sslr-squid-bridge:sslr-squid-bridge
+- org.mockito:mockito-all
+- org.codehaus.sonar:sonar-testing-harness
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <h1>Welcome to the Blog page!</h1>
+    <div class="container">
+    <h3>Create Blog Post</h3>
+    <form id="myForm" action="/action_page.php" method="post">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br>
+
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    </div>
+    <hr>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> //  10
+
+var b = a
+var a = 4
+print(a) // 4
+print(b) // 10
+
+a = "Hello"
+print(type(a)) // String
+
+func add(a: Int, b: Int) -> Int
+{
+	return a + b
+}
+
+add(a: 5, b: 10)
+
+var c = 20
+var d = 22
+c = add(a:c, b:d)
+print(c)
+
+class Person
+{
+	var name: String
+	var age: Int
+
+	init(name: String, age: Int)
+	{
+		self.name = name
+		self.age = age
+	}
+}
+
+var xiaoming = Person(name: "xiao",
+					  age: 10)
+print(xiaoming.name) // xiaoming
+
+var xiaoming1 = Person1(name: "xiao",
+						age: 10)
+print(xiaoming1.name) // xiaoming
+Hello World!
+print("hello, world!")
+
+var a = 10
+print(a) //
+
+Precision: 0
+Recall: 0
+F1 Score: 0

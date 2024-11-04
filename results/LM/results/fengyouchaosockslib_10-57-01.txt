@@ -1,0 +1,164 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: fengyouchao/sockslib
+    Project Description: SocksLib \n\nSocksLib is a Java library for SOCKS5 protocol.\n\nSee \n\nSee Chinese\n\nIf you are looking for a SOCKS5 server instead of a SOKCS5 library, I hope can help you.\n\n\n\n\n References\n \n \n \n\n Features\n\n Client\n\n TCP proxy\n UDP proxy\n Bind\n Anonymous authentication\n USERNAME/PASSWORD authentication\n Proxy chain\n\n Server\n\n TCP proxy\n UDP proxy\n Bind\n Anonymous authentication\n USERNAME/PASSWORD authentication\n Proxy chain\n Black or white IP lists for clients\n\n Quick start\n\n Environment\n\n JDK 8\n\n Dependencies\n\nYou should put following libraries in your project\'s CLASSPATH:\n\n \n \n \n \n \n\n SOCKS5 Client\n\n CONNECT\n\n\n\nConnect SOCKS5 server using SSL connection\n\n\n\n BIND\n\n\n\n UDP ASSOCIATE\n\n\n\n SOCKS5 Server\n\n\n\nSSL socks server\n\n\n'
+    Existing Dependencies:
+    org.mongodb:mongo-java-driver
+- org.apache.logging.log4j:log4j-core
+- org.slf4j:slf4j-api
+- com.google.guava:guava
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <script type="text/javascript">
+     $(function () {
+         $('.js-sweetalert button').on('click', function () {
+             var type = $(this).data('type');
+             if (type === 'basic') {
+                 showBasicMessage();
+             }else if (type === 'with-title') {
+                showWithTitleMessage();
+             }else if (type ==='success') {
+                showSuccessMessage();
+             }else if (type === 'confirm') {
+               showConfirmMessage();
+             }else if (type === 'cancel') {
+               showCancelMessage();
+             }else if (type === 'with-custom-icon') {
+                showWithCustomIconMessage();
+             }else if (type === 'html-message') {
+               showHtmlMessage();
+             }else if (type === 'autoclose-timer') {
+                showAutoCloseTimerMessage();
+             }else if (type === 'prompt') {
+                showPromptMessage();
+             }else if (type === 'ajax-loader') {
+                showAjaxLoaderMessage();
+             }
+         });
+     });
+
+    //These codes takes from http://t4t5.github.io/sweetalert/
+     function showBasicMessage() {
+         swal("Here's a message!");
+     }
+
+     function showWithTitleMessage() {
+         swal("Here's a message!", "It's pretty, isn't it?");
+     }
+
+    function showSuccessMessage() {
+        swal("Good job!", "You clicked the button!", "success");
+    }
+
+    function showConfirmMessage() {
+       swal({
+         title: "Are you sure?",
+         text: "You will not be able to recover this imaginary file!",
+         type: "warning",
+         showCancelButton: true,
+         confirmButtonClass: 'btn-danger',
+         confirmButtonText: 'Yes, delete it!',
+         closeOnConfirm: false,
+         //closeOnCancel: false
+       },
+       function(){
+         swal("Deleted!", "Your imaginary file has been deleted!", "success");
+       });
+      }
+
+    function showCancelMessage() {
+       swal({
+         title: "Are you sure?",
+         text: "You will not be able to recover this imaginary file!",
+         type: "warning",
+         showCancelButton: true,
+         confirmButtonClass: 'btn-danger',
+         confirmButtonText: "Yes, delete it!",
+         cancelButtonText: "No, cancel plx!",
+         closeOnConfirm: false,
+         closeOnCancel: false
+       },
+       function(isConfirm){
+         if (isConfirm) {
+           swal("Deleted!", "Your imaginary file has been deleted!", "success");
+         } else {
+           swal("Cancelled", "Your imaginary file is safe :)", "error");
+         }
+       });
+    }
+
+    function showWithCustomIconMessage() {
+       swal({
+         title: "Sweet!",
+         text: "Here's a custom image.",
+         imageUrl: 'assets/img/avatar/avatar-5.png'
+       });
+    }
+
+    function showHtmlMessage() {
+       swal({
+         title: "HTML <small>Title</small>!",
+         text: "A custom <span style=\"color: #CC00
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import * as path from 'path'
+import { createHash } from 'crypto'
+impo
+    return false
+  }
+  const fileHash = createHash('sha1')
+   .update(data)
+   .digest('hex')
+  return fileHash === expectedHash
+}
+rt { readFile } from 'pifs'
+import { getLogger } from './utils'
+
+const logger = getLogger()
+
+export function isValid(file: string, expectedHash: string): Promise<boolean>
+export function isValid(
+  file: string,
+  expectedHash: string,
+  encoding?: string
+): Promise<boolean>
+export async function isValid(
+  file: string,
+  expectedHash: string,
+  encoding?: string
+): Promise<boolean> {
+  const data = await readFile(file, { encoding })
+  if (!data) {
+    logger.warn(`No data found in ${file}!`)
+    return false
+  }
+  const extHash = path.extname(file)
+  if (extHash!== '.sha1') {
+    logger.warn(
+      `Expected the hash file extension to be '.sha1' but got '${extHash}'`
+    )
+
+Precision: 0
+Recall: 0
+F1 Score: 0

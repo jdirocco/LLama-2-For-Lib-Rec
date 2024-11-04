@@ -1,0 +1,143 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: house13/CardBox
+    Project Description: Game Gardens\n\nGame Gardens is a platform for hosting simple multiplayer games written in\nJava. It is built atop the ,\n, and\n multiplayer game libraries.\n\nThis project contains the underthehood moving parts that make up the Game\nGardens hosting platform. If you are looking to develop a game that runs on\nGame Gardens, you need only use the , and you need not build the SDK\nfrom this code.\n\nThis project contains two major components:\n\n ToyBox\n\nThe ToyBox library coordinates things like pregame configuration and\naggregates various services useful for making games. See the docs for\n\nfor a summary of the services.\n\n Gardens Webapp\n\nThis web application handles the uploading and management of games, as well as\nbrowsing and launching said games via Java Web Start.\n'
+    Existing Dependencies:
+    mysql:mysql-connector-java
+- org.apache.ant:ant
+- com.threerings:narya
+- org.apache.httpcomponents:httpasyncclient
+- com.samskivert:samskivert
+- com.threerings:nenya
+- com.google.inject:guice
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <header>
+        <nav class="top-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="span7">
+                        <a class="brand" href="#"><img src="{{ asset('images/logo.png') }}" alt="Logo"></a>
+                        <div class="pull-right">
+                            <form>
+                                <input type="text" class="input-block-level" Placeholder="Search here">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="span5">
+                        <div class="top-bar-right">
+                            <div class="social-icons pull-right">
+                                <a href="#"><i class="icon-facebook"></i></a>
+                                <a href="#"><i class="icon-twitter"></i></a>
+                                <a href="#"><i class="icon-dribbble"></i></a>
+                                <a href="#"><i class="icon-linkedin"></i></a>
+                                <a href="#"><i class="icon-rss"></i></a>
+                            </div>
+                            <div class="user-area pull-right">
+                                <ul class="nav pull-right">
+                                    <li><a href="#"><i class="icon-user"></i>Login</a></li>
+                                    <li><a href="#"><i class="icon-pencil"></i>Register</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav><!-- End. top-menu  -->
+
+        <div class="sub-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <div class="pull-left">
+                            <ul class="nav">
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                            </ul>
+                        </div>
+                        <div class="pull-right">
+                            <ul class="nav">
+                                <li>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-flag"></i> EN </a>
+                                    <ul class="lang-sub-menu dropdown-menu">
+                                        <li><a href="#">French <i class="icon-check"></i></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="currency">
+                                $ <span class="rate">1</span>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End. sub-menu  -->
+
+        <nav class="main-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="span9">
+                        <div class="navbar">
+                            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                                Menu <span class="icon-bar"></span
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.microej.example.mock.widget;
+
+import ej.microui.display.GraphicsContext;
+import ej.widget.basic.Button;
+
+/**
+ * A button with a custom shape
+ */
+public class RectangularButton extends Button{
+
+	public RectangularButton(String string) {
+		super(string);
+	}
+
+	@Override
+	protected int getWidth() {
+		return 5 * getFont().getFontMetrics().getAverageWidth();
+	}
+	
+	@Override
+	protected void drawContent(GraphicsContext g) {
+		int w = getWidth();
+		int h = getHeight();
+
+		getSkin().drawButton(this, 0, 0, w, h, isDown(), isEnabled(), );
+	}
+
+	@Override
+	protected int getHeight() {
+		return 3*getFont().getFontMetrics().getHeight();
+	}
+}isSelected(), g
+
+Precision: 0
+Recall: 0
+F1 Score: 0

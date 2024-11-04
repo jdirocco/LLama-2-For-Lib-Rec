@@ -1,0 +1,159 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: jenkinsci/deploy-plugin
+    Project Description: \n\n\n\n\n\n\nJenkins Deploy Plugin\n=========================\n\nThis plugin permits Jenkins to Deploy into containers and application servers. It takes a war/ear file and deploys that to a running remote application server at the end of a build. The implementation is based on . The list of currently supported containers include:\n\n Tomcat 4.x/5.x/6.x/7.x/8.x/9.x\n JBoss 3.x/4.x/5.x/6.x/7.x\n Glassfish 2.x/3.x/4.x\n\nRefer to the \nto deploy to a running remote WebSphere Application Server. \nRefer to the \nto deploy to a running remote WebLogic Application Server.\n\n How to rollback or redeploy a previous build\n\nThere may be several ways to accomplish this, but here is one suggested\nmethod:\n\n1. Install the \n2. Create a new job that you will trigger manually only when needed\n3. Configure this job with a build parameter of type "Build selector\n for Copy Artifact", and a copy artifact build step using "Specified\n by build parameter" to select the build.\n4. Add a postbuild action to deploy the artifact that was copied from\n the other job\n\nNow when you trigger this job you can enter the build number or use any\nother available selector to select which build to redeploy. Thanks to\nHelge Taubert for this idea.\n\n Change Log\n\n Version 1.16 Nov 3, 2020\n\n Call XStream.processAnnotations \n Updated parent to latest version \n Changed to azure container instances \n\n Version 1.15 Aug 1, 2019\n\n Configure alternative context for each Tomcat container\n \n\n Version 1.14 Jul 24, 2019\n\n deployment plugin does not show any error message when the war file\n does not exist\n \n\n Nothing happens after build\n \n\n Add Deployment feature for Tomcat 9\n \n\n Tomcat deploy transfer speed\n \n\n Add support for Jenkins Pipeline\n \n\n Allow expansion of environment variables in the configuration\n \n\n Version 1.13 August 7, 2017\n\n \n\n Version 1.10 Jul 2, 2014\n\n Support deployment to multiple targets\n \n Expand variable references in the context path\n \n Added JBoss 6 and 7\n \n\n Version 1.9 Jun 11, 2012\n\n Password in config.xml is now scrambled \n This change is backwardcompatible but is not forwardcompatible\n The context path can now also be spericied\n \n\n Version 1.8 Jun 28, 2011\n\n GlassFish v3 remote deployment \n\n Version 1.7 Mar 11, 2011\n\n Fix Tomcat 7 deployement url\n\n Version 1.6 Dec 10, 2010\n\n Added Tomcat 7 and GlassFish 3 support\n Fixed bug in GlassFishAdapter, need to explicitly set the home on\n the container\n Updated library to Cargo 1.0.4\n\n Version 1.5 Jan 16, 2010\n\n Support Ant style GLOBs for specifying war/ear files\n \n\n Version 1.4 Dec 30, 2009\n\n Update library to Cargo 1.0\n Only deploy if the build was successful, unless "even when failed"\n option is checked\n Check URL format when saving config\n Update code for more recent Hudson\n Add initial glassfish support\n\n Version 1.3 Aug 5, 2008\n\n This plugin didn\'t work on slaves\n ,\n\n Version 1.2 Jul 11, 2008\n\n Fixed the problem in submitting the configuration. Make sure to run\n this with 1.234 or later.\n \n\nSee for more information.\n\n\nLicense\n\n\n\tThe MIT License MIT\n\n Copyright c 20142019 \n\n Permission is hereby granted, free of charge, to any person obtaining a copy\n of this software and associated documentation files the "Software", to deal\n in the Software without restriction, including without limitation the rights\n to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n copies of the Software, and to permit persons to whom the Software is\n furnished to do so, subject to the following conditions:\n\n The above copyright notice and this permission notice shall be included in\n all copies or substantial portions of the Software.\n\n THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\n THE SOFTWARE.\n'
+    Existing Dependencies:
+    org.codehaus.cargo:cargo-core-container-glassfish
+- xml-apis:xml-apis
+- org.jenkins-ci.plugins.workflow:workflow-durable-task-step
+- org.jenkins-ci.plugins:structs
+- org.jenkins-ci.plugins.workflow:workflow-cps
+- org.glassfish.main.deployment:deployment-client
+- org.jenkins-ci.plugins.workflow:workflow-api
+- org.codehaus.cargo:cargo-core-container-tomcat
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <style>
+   .nav-pills.nav-link {
+        color: #212529;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+    }
+
+   .nav-pills.nav-link.active {
+        color: #fff;
+        background-color: #005cbf;
+    }
+
+   .card {
+        border-radius: 0px;
+    }
+
+   .input-group-text span {
+        font-weight: bold;
+    }
+
+    #btn-save-user {
+        margin-left: 5px!important;
+    }
+    
+    #btn-edit-user {
+        margin-left: 5px!important;
+    }
+
+    /* Style tab */
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+    
+    </style>
+
+    <div class="main-content">
+        <?php
+            if (isset($this->blocks['content-header'])) {
+                echo $this->blocks['content-header'];
+            } else {
+                echo '';
+            }
+       ?>
+        <?php
+            if (isset($this->blocks['content'])) {
+                echo $this->blocks['content'];
+            } else {
+                echo '';
+            }
+       ?>
+    </div>
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s = "1.8"
+} plugins {
+    kotlin("jvm")
+}
+
+dependencies {
+    compileOnly(Dependencies.kotlinStdlib)
+    compileOnly(Dependencies.kotlinReflection)
+    compileOnly(Dependencies.kotlinxCoroutines)
+    compileOnly(Dependencies.kotlinxSerialization)
+    compileOnly(Dependencies.ktorClientCio)
+    compileOnly(Dependencies.ktorClientApache)
+    compileOnly(Dependencies.ktorClientCioJs)
+    compileOnly(Dependencies.ktorLogging)
+    compileOnly(Dependencies.ktorMetrics)
+    compileOnly(Dependencies.ktorWebsockets)
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+tasks.named("compileKotlin") {
+    configure<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
+tasks.compileKotlin {
+    kotlinOption
+
+Precision: 0
+Recall: 0
+F1 Score: 0

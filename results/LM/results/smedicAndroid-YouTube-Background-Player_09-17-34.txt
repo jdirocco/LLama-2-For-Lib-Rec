@@ -1,0 +1,152 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: smedic/Android-YouTube-Background-Player
+    Project Description: AndroidYouTubeBackgroundPlayer\n\nYouTube client for playing music in background. It is also capable of playing music while screen is off.\n\nApplication reproduces only audio stream without video, which significantly reduces network load. Stream is chosen adaptively based on network quality.\n\nPlayer provides mechanisms for searching content, saving it in favorites list, accessing recently played music and loading user playlists by using OAuth2.0. Also, skin can be chosen by using color picker.\n\nThese features violate Google YouTube\'s terms of service and cannot be uploaded to Google Play Store; therefore, I have developed it just for personal purposes as sample project. \n\n\n \n\n\nReleases can be found here version is 2.2 and APK can be downloaded from here \n
+    Existing Dependencies:
+    pub.devrel:easypermissions
+- com.android.support:cardview-v7
+- com.android.support:recyclerview-v7
+- com.google.android.gms:play-services-auth
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="page-wrapper-row full-height">
+        <div class="page-wrapper-middle">
+            <!-- BEGIN CONTAINER -->
+            <div class="page-container">
+                <!-- BEGIN CONTENT -->
+                <div class="page-content-wrapper">
+                    <!-- BEGIN CONTENT BODY -->
+                    <!-- BEGIN PAGE HEAD-->
+                    <div class="page-head">
+                        <div class="container">
+                            <!-- BEGIN PAGE TITLE -->
+                            <div class="page-title">
+                                <h1><a href="#" onclick="javascript:goBack()"><i class="icon-arrow-left52"></i></a> Add <?php echo $title;?> 
+                                </h1>
+                            </div>
+                            <!-- END PAGE TITLE -->
+                        <!-- BEGIN PAGE TOOLBAR -->
+                        <!-- END PAGE TOOLBAR -->
+                        </div>
+                    </div>
+                    <!-- END PAGE HEAD-->
+                    <!-- BEGIN PAGE CONTENT BODY -->
+                    <div class="page-content">
+                        <div class="container">
+                            <!-- BEGIN PAGE CONTENT INNER -->
+                            <div class="page-content-inner">
+                             
+                                 <div class="portlet-body">
+                                 
+                                <div class="portlet light">
+                                       
+                                    <div class="portlet-title">
+                                        <div class="caption f-left">
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <div class="row">
+                                            <?php echo $this->session->flashdata('message');?>
+                                            <div class="col-md-3"></div>
+                                            <div class="col-md-6">
+                                            <div class="form-action">
+                                                           
+                                               <div class="row">
+                                               <!--    <h2 class="text-center"> Add <?php echo $title;?> </h2 >
+                                                        <br> -->
+                                                 <form id="myform"  action="<?php echo base_url('dashboard/add_district');?>"  method="post" enctype="multipart/form-data">
+                                                        <!-- <div class="row">
+                                                            <div class="col-md-2"></div>
+                                                            <div class="col-md-3">City Name:</div>
+                                                            <div class="col-md-5">
+                                                                <select name="district_city" id="district_city"  class="form-control" required>
+                                                                    <option value="">Select City</option>
+                                                                    <?php //foreach ($cities as $res) {?>
+                                                                        <option value="<?php //echo $res->city_id;?>" ><?php //echo $res->city_name; ?></option>
+                                                                    <?php //}?>
+                                                                </select>
+                                                            </div> 
+                                                        </div>  
+                                                       <br>
+                                                       <div class="row">
+                                                            <div class="col-md-2"></div>
+                                                            <div class
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e
+
+    def test1_create_user(self):
+        """
+        Test the user is created properly
+        """
+
+        self.assertTrue(
+            isinstance(self.new_user, User),
+            msg=f'Expected {type(self.new_user)} '
+            'to be <class \'user_app.models.User\'>.',
+        )
+
+    def test2_create_profile(self):
+        """
+        Test the the profile is created properly
+        """
+
+        self.assertEqual(
+            self.new_user.profile.bio,
+            'I am a developer',
+            msg='Incorrect data in new profile',
+        )
+ from django.contrib.auth.models import User
+from user_app.models import Profile
+from django.test import TestCase
+
+
+class TestModels(TestCase):
+    """
+    Class to test the creation of new users
+    and profiles
+    """
+
+    def setUp(self):
+        """
+        Method to create the user and the profile
+        for testing
+        """
+
+        self.new_user = User.objects.create_user(
+            username='test_user',
+            email='test_user@yahoo.com',
+            password='test_user',
+            first_name='test_first_name',
+            last_name='test_last_name',
+        )
+
+        self.new_user.profile.bio = 'I am a developer'
+        self.new_user.save()
+
+        self.new_profile = self.new_user.profil
+
+Precision: 0
+Recall: 0
+F1 Score: 0

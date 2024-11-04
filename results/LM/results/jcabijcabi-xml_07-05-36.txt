@@ -1,0 +1,106 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: jcabi/jcabi-xml
+    Project Description: \n\n\n\n\n\n\n\n\n\n\n\n\nMore details are here: .\nAlso, read this blog post: .\n\nIt\'s a simple wrapper around DOM that makes XML parsing and printing\neasy and simple, for example:\n\n\n\n How to contribute?\n\nFork the repository, make changes, submit a pull request.\nWe promise to review your changes same day and apply to\nthe branch, if they look correct.\n\nPlease run Maven build before submitting a pull request:\n\n\n'
+    Existing Dependencies:
+    com.jcabi:com.jcabi
+- commons-io:commons-io
+- org.projectlombok:org.projectlombok
+- org.mockito:org.mockito
+- org.hamcrest:org.hamcrest
+- org.glassfish:org.glassfish
+- javax.ws.rs:javax.ws.rs
+- org.codehaus.groovy:org.codehaus.groovy
+- com.jcabi:jcabi-log
+- commons-codec:commons-codec
+- javax.validation:javax.validation
+- com.jcabi:jcabi-immutable
+- javax.servlet:javax.servlet
+- com.google.guava:guava
+- org.projectlombok:lombok
+- net.sourceforge.saxon:saxon
+- org.clojure:org.clojure
+- xml-apis:xml-apis
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 19 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+        <div class="col-xs-12">
+            <div class="box">
+                <form action="<?= base_url()?>satuan/simpan" method="post">
+                <input type="hidden" name="id_satuan" value="<?= $id_satuan?>">
+                <div class="box-header">
+                    <h3 class="box-title"><?= $title?></h3>
+                    <div class="float-lg-right">       
+                        <a href="<?= base_url()?>satuan" class="btn btn-warning btn-flat"><i class="fa fa-table"></i> Tabel Satuan</a>
+                        <button class="btn btn-primary btn-flat"><i class="fa fa-plus"></i> Simpan</button>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="form-group row">
+                        <label class="col-xs-12 col-md-3 col-form-label" for="satuan">Nama Satuan</label>
+                        <div class="col-xs-12 col-md-9">
+                            <input type="text" class="form-control" id="satuan" placeholder="Nama Satuan" name="satuan" value="<?= $satuan?>" required>
+                        </div>
+                    </div>                                    
+                </div>
+                </form>                
+            </div>
+        </div>
+
+
+<!-- DataTables -->
+<script src="<?=base_url()?>assets/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="<?=base_url()?>assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.sidebar-menu').tree()
+        $('#example1').DataTable()
+    })
+</script>
+    
+
+   
+ 
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 19 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> #pragma once
+
+#include<string>
+
+#define BIN_DIR "bin"
+#define LIBS_DIR "libs"
+namespace FileSystemUtils
+{
+	std::string GetFile(std::string filename,std::string directory,std::string subDirectory = "");
+	std::string GetBinaryFile(std::string filename,std::string subDirectory = "");
+	std::string GetLibFile(std::string filename,std::string directory = "",std::string subDirectory = "");
+	std::stringtd::string directory = "",std::string subDirectory = "");
+} GetFile(std::string filename,s
+
+Precision: 0
+Recall: 0
+F1 Score: 0

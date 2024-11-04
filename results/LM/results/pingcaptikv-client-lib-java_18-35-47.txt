@@ -1,0 +1,161 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: pingcap/tikv-client-lib-java
+    Project Description: TiClient in Java /.\nIt is supposed to:\n Communicate via \n Talk to Placement Driver searching for a region\n Talk to TiKV for reading/writing data and the resulted data is encoded/decoded just like what we do in TiDB.\n Talk to Coprocessor for calculation pushdown\n\n How to build\n\nThe following command can install dependencies for you.\n\n\nAlternatively, you can use for much faster build. When you try this approach, you should run before you build project.\n\nMaking a uber jar:\n\nrun Main class:\n\n\nrun test cases:\n\n\nthis project is designed to hook with and which you can find in github page.\n\nWhen you work with this project, you have to communicate with and . There is a script taking care of this. By executing the following commands, and can be executed on background.\n\n\n How to use for now\nSince it\'s not quite complete, a usage sample for now can be given is:\n\nResult:\n\n\n TODO\nContributions are welcomed. Here is a and you might contact maxiaoyu@pingcap.com if needed.\n\n License\nApache 2.0 license. See the file for details.\n'
+    Existing Dependencies:
+    org.slf4j:jul-to-slf4j
+- org.powermock:powermock-module-junit4
+- io.grpc:grpc-protobuf
+- io.grpc:grpc-netty
+- org.slf4j:slf4j-api
+- io.grpc:grpc-stub
+- com.fasterxml.jackson.core:jackson-databind
+- joda-time:joda-time
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create New Role</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-5">
+                <form action="{{ route( 'add-role.store' ) }}" method="POST">
+                    {{ csrf_field() }}
+                    <div class="col-12">
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="input-group-append"><span class="input-group-text"><i class="fa fa-fw fa-user-shield"></i></span></div>
+                                <input class="form-control" type="text" name="name" placeholder="Nama Role.." required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-append"><span class="input-group-text"><i class="fa fa-fw fa-envelope"></i></span></div>
+                                <textarea class="form-control" name="description" cols="30" rows="5" placeholder="Deskripsi Role.."></textarea>
+                            </div>
+    
+                           
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <input class="form-control" type="checkbox" name="is_active" checked>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="text" value="Aktif" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    
+                 
+                    <button type="submit" class="btn btn-outline-success btn-md col-12 btn-block mt-3">
+                        <i class="fa fa-fw fa-plus"></i> Add
+                    </button>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>n.md)|[SalesInvoice](SalesInvoice.md)||
+|[Shipment](Shipment.md)|[SalesDocument](SalesDocument.md)|[SalesQuotation](SalesQuotation.md)||
+|[SalesOrder](SalesOrder.md)|[VendInvoice](VendInvoice.md)||
+
+## Attributes
+
+| Name | Description | First Included |
+|---|---|---|
+|[RecId](#RecId)||
+|[DocumentType](#DocumentType)||
+|[FromParty](#FromParty)||
+
+### <a href=#RecId name="RecId">RecId</a>
+
+First included in: Transaction/PmfDocumentType (this entity)  
+
+#### Properties
+
+<table><tr><th>Name</th><th>Value</th></tr><tr><td>isPrimaryKey</td><td>true</td></tr><tr><td>dataFormat</td><td>int64</td></tr><tr><td>isReadOnly</td><td>true</td></tr></table>
+
+#### Traits
+
+<details>
+<summary>List of traits for the RecId attribute are listed below.</summary>
+
+**is.dataFormat.integer**  
+**is.dataFormat.big**  
+**is.identifiedBy**  
+names a specifc identity attribute to use with an entity  <table><tr><th>Parameter</th><th>Value</th><th>Data type</th><th>Explanation</th></tr><tr><td>attribute</td><td>[PmfDocumentType/(resolvedAttributes)/RecId](#RecId)</td><td>attribute</td><td></td></tr></table>
+
+**is.readOnly**  
+**is.dataFormat.integer**  
+**is.dataFormat.big**  
+</details>
+
+### <a href=#DocumentType name="DocumentType">DocumentType</a>
+
+First included in: Transaction/PmfDocumentType (this entity)  
+
+#### Properties
+
+<table><tr><th>Name</th><th>Value</th></tr><tr><td>dataFormat</td><td>int32</td></tr><tr><td>isNullable</td><td>true</td></tr></table>
+
+#### Traits
+
+<details>
+<summary>List of traits for the DocumentType attribute are listed below.</summary>
+
+**is.dataFormat.integer**  
+**is.nullable**  
+The attribute value may be set to NULL.  
+
+**is.dataFormat.integer**  
+</details>
+
+### <a href=#FromParty name="FromParty">FromParty</a>
+
+First included in: Transaction/PmfDocumentType (this entity)  
+
+#### Properties
+
+<table><tr><th>Name</th><th>Value</th></tr><tr><td>dataFormat</td><td>int64</td></tr><tr><td>isNullable</td><td>true</td></tr></table>
+
+#### Traits
+
+<details>
+<summary>List of traits for the FromParty attribute are listed below.</summary>
+
+**is.dataFormat.integer**  
+**is.dataFormat.big**  
+**is.nullable**  
+The attribute value may be set
+
+Precision: 0
+Recall: 0
+F1 Score: 0

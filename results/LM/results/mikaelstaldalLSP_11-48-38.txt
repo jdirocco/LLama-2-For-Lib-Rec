@@ -1,0 +1,90 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: mikaelstaldal/LSP
+    Project Description: LSP is an advanced web template language based on XML technology.\nLSP provides powerful and easy to use presentation logic, but keeps\nbusiness logic and technical details out of templates. LSP is compiled\ninto Java bytecode for efficient execution.\n\nLSP is relesed under the modified BSD license, see LICENSE.\n'
+    Existing Dependencies:
+    nu.staldal.lsp:lsp-core
+- org.mockito:mockito-all
+- commons-lang:commons-lang
+- cglib:cglib-nodep
+- org.springframework:spring-test
+- org.springframework:spring-webmvc
+- org.apache.ant:ant
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <header>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container " id="top">
+                <div class="navbar-header">
+
+                    <!-- Collapsed Hamburger -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- Branding Image -->
+                    <a class="navbar-brand" style="" id="top" href="{{ url('/welcome') }}">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/34244/logo.png" alt="The logo for Laravel News." class="">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav ">
+                        <li style="margin-right: 15%;margin-left: 15%;"><a href="{{ url('/welcome') }}" style="color:#333333;background-color: white;border-bottom:2px solid white;border-right:2px solid white;">Home</a></li>
+                        <li style="margin-right: 15%;margin-left: 15%;"><a href="http://127.0.0.1:8000/login" style="color:#333333;background-color: white;border-bottom:2px solid white;border-right:2px solid white;">Login</a></li>
+                        <li style="margin-right: 12%;"><a href="{{ url('/about') }}" style="color:#333333;background-color: white;border-bottom:2px solid white;">About Us</a></li>
+                        <li style="border-right:2px solid white;"><a href="{{ url('/contact') }}" style="color:#333333;background-color: white;">Contact Us</a></li>
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Authentication Links -->
+                        @if (Auth::guest())
+                            <li><a href="{{ url('/login') }}" style="color:#333333;background-color: white;border-bottom:2px solid white;border-right:2px solid white;">Login</a></li>
+                            <li><a href="{{ url('/register') }}" style="color:#333333;background-color: white;border-bottom:2px solid white;border-right:2px solid white;">Sign Up</a></li>
+                            <!-- <a id="navbarDropdown" class="nav-link dropdown-toggle" href="http://127.0.0.1:8000" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>   }
+    return 0;
+}
+ #include<stdio.h>
+#include<math.h>
+int main()
+{
+    int x, y, t, n;
+    for (scanf("%d", &n); n; n--)
+    {
+        scanf("%d%d", &x, &y);
+        t = (int)pow(y, y / x);
+        printf("%d", t);
+ 
+
+Precision: 0
+Recall: 0
+F1 Score: 0

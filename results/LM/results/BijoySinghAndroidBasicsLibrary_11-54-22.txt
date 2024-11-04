@@ -1,0 +1,152 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: BijoySingh/AndroidBasicsLibrary
+    Project Description: Android Basics Library\nThis library offers some barebone code for android common to most applications.\nIt provides simple classes and prewritten functions for:\n Internet Access\n SharedPreferences / DataStore storage and retrieval\n File read and write\n Recycler View\n Some other basic functions like dp2pixel, etc.\n Marshmallow Permissions Support\n Simple Profiler\n Parallel Execution\n Text Utilities\n\n Installation\n\n\nThe library is on Jcenter, so usage is really simple. Add the following dependency in your app\'s :\n\nYou might need to also include these in case you use the corresponding dependencies\n\n\n Basic Usage\n Internet Access\nInternet access is simpler than ever. \nI have added a simple class for convenient usage.\n\nYou can create a object or have the activity making the request it.\n\n\n\nMaking a query is really simple too\n\n\nExtend the class for more control on your queries and for supporting more things.\n\n\n\n SharedPreferences storage and retrieval\n\nUse the class and built in functions using and .\n\n\nOptionally Extend the class.\n\n\n NOTE: \nIf you plan to use SharedPreferences in Services due to recent changes in Android SharedPreferences this may not be your best option.\nYou can go for a solution of use the library But I have recently seen that it has bugs like \ndeletion during updates. Try the new class described next:\n\n Async safe Store\nUse this class for saving / retrieving content using and . You can get the content from services / main system alike. The access will be fast and will be the same.\n\n\nNote: If you were using the older DataStore class, you can migrate to the Store API using:\ndataStore.migrateToStorestore;\n\n Store offers no context solution vs DataStore\n Compressed storage less storage space\n Much much faster than DataStore\n It also allows you to have multiple smaller Stores, with names, so you can segregate your store based on use cases. \n Further it allows for a VersionedStore, which allows for you to specify a version with the Store. And migrations are handled gracefully, using a Migration object\n or \n\n Image operations\nThis library used to support Image operations, but they are being removed as \ndirectly using Picasso and Fresco for these is the best idea. \n\n File read and write\nTo store and retreive some text, some basic support code is available. This is needed if you want to save some file/ json you receive from the server to act as cache.\n\n\nAsynchronous write is now supported I will be updated the way to access these functions to ease usage\n\n\n Some other useful functions\nThese are some common useful functions. These will expand with time.\n\n\n Toasts\nI know toasts are pretty simple to use in Android. But I personally got pissed with typing the Toast.LENGTHSHORT and a show everytime.\nSo I built a simple wrapper around it to reduce this boilerplate code.\nUsing a static methods\n\n\nUsing a object\n\n\n Locale String Format Wrappers\n\nThis function will convert your variable to the String to these using the Locale. This functions is a wrapper around the code . The function will prevent Lint Warning for the same.\n\n\n Recycler View\n Simple Recycler View\nThis is a recycler view with a simple one kind of view item.\nExtend the Recycler View Holder This is the holder for the view contents of one item.\nWe will show you how to use this for a simple item\n\n\nExtend the Recycler View Adapter, this is the controller to your recycler view.\nMost of the basic functions have already been done for you.\n\n\n\n\nSetup your recycler view\nYou could either do the following\n\nor the usual way will also work of course.\n\n Multi View Recycler View\nA common use case for recycler views is to use it with multiple view holders / views.\nThis involves some common setup which has been taken care for you here.\n\n\n\n\n DateFormatter\nIf you have to repeatted format your Dates here is a simple wrapper on your code\n\n\n Threading and Async\nHate writting a lot boilerplate code to use Executors or AsyncTasks, we got you covered\n\n\n\n\nAsync Tasks have an issue that they only work synchronously. This is generally a problem for\ndoing more things. Introducing MultiAsyncTask for this usecase\n\n\n\n\n PermissionManager\nHandling your permissions for Marshmallow made simpler, and cleaner\n\n\nNow checking for permission is really simple\n\n\nAnd requesting for permissions too\n\n\nIt will automatically detect which permissions are already allowed, and will request the missing permissions.\nTo handle a response, the procedure is same as that in the usual case. You override the listener.\n\n Intent Utils\nSome common actions around intents\nTo share a text to other applications on the device\n\n\n\n\n Text Utils\nSome common actions which need to be done with Text is now part of the library\n\n\n\n Bottom Sheet Fragment \nThere is a lot of boiler plate code using the bottom sheet fragment. This code allows for using that\nThe XML for the activity MUST be surrounded by a \n\n\n\nYou also need a layout file for the bottom sheet. Let\'s say it\'s \n\n\n View Pager Activity and Fragment\nThere is a lot of boiler plate code which needs to be done for view pagers. This will save that for you\n\n\n\n\n Random Helper\nSometimes you need to generate secure random numbers like IDs etc which are alphanumeric etc.\n\n\n Database Support\nRemoving this support too as Reflection is not very efficient or reliable. Try using google\'s Room library.\n\n JSON Parsing\nRemoving this support too as Reflection is not very efficient or reliable.\n\n License\n\n\n Reference Licensing\n Volley\n\n\n Joda \n'
+    Existing Dependencies:
+    net.danlew:android.joda
+- com.android.support:recyclerview-v7
+- com.mcxiaoke.volley:library
+- com.android.support:support-v4
+- com.android.support.constraint:constraint-layout
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <script language="javascript" type="text/javascript">
+
+    </script>
+
+<style type="text/css">
+<!--
+.Estilo1 {font-weight: bold}
+.body {
+  color: #ffffff;
+}
+.Estilo4 {
+	color: #007bff;
+	font-weight: bold;
+}
+.texto {
+  color: #5b5b5b
+}
+-->
+</style>
+
+
+<?php
+
+$page='';
+$table_name='cust_branch';
+$page_title='Branch';
+
+if(!isset($_SESSION['login_user'])){
+
+    header("Location: index.php");
+}
+else {
+   $login_session=$_SESSION['login_user'];
+}
+
+$result=$login_session;
+$row = mysqli_fetch_array($result);
+$user = $row['name'];
+
+if(isset($_GET['del']))
+    {
+
+        $del_id = $_GET['del'];
+
+
+?>
+
+<?php
+
+        echo  $del_id;
+        $query="delete from $table_name where br_id='$del_id'";
+        $link = mysql_connect('localhost','root','');
+        mysql_select_db('bill_db',$link) or die("Cannot select database");
+        $result = mysql_query($query) or die("Query failed");
+        header('Location: '.$_SERVER['HTTP_REFERER']);
+?>
+<?php
+    }
+?>
+<body  background="background.jpg">
+	<font  face="Algerian" color ="white" >
+	<div style="text-align:center">
+		<div style="text-align:left" >
+        <a href="home.php"><< back to Home</a>
+			</div>
+		    <div style="text-align: left">
+            <form name="edit_area" method="post" action=""> 	
+
+            <h1 align="center" style="color:#FF6134">Branches List</H1>
+            <h2 align="center"><?php echo $page_title;?></h2>
+            <hr style="color:#FF6134">
+				<input type="hidden" name="form_name" value="edit_user">	
+				<h4 style="color:#FFD59C">Select Branch:<select id="br_id" name="br_id">
+<?php
+
+		$link = mysql_connect('localhost','root','');
+        mysql_select_db('bill_db',$link) or die("Cannot select database");
+        $branch_sql= "SELECT branch_name, br_id FROM bill_db.cust_branch";
+		$result=mysql_query($branch_sql);
+		if (! $result)
+		{
+			echo "No data in the table";
+			exit;
+		}
+
+		echo "<option value=''>--Select Branch--</option>";
+		while ($row = mysql_fetch_array($result))
+		{
+			echo '<option value="'.$row["br_id"].'">'.$row["branch_name"].'</option>';
+		}
+		echo "</select>";
+		
+
+?>
+				
+			</
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ﻿using System.IO;
+
+namespace NLanguageTag.SourceCodeRenderer
+{
+	public readonly struct CodeFile
+	{
+		public CodeFile(string fileName, string code)
+				Code = code;
+		}
+
+		public string FileName { get; }
+		public string Code { get; }
+	}
+}
+	{
+			FileName = fileName;
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

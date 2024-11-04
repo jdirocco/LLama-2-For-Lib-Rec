@@ -1,0 +1,177 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: nabedge/mixer2
+    Project Description: Mixer2\n======================\n\n\nXHTML template engine for java.\nsee sample projects.\n Spring Boot 1.4.x Mixer2\n\n\n\n Maven version\n\nUse Maven3.2.x or higher.\n\n Memory size for Maven\n\nIf you got OutOfMemoryError in "mvn compile", increase it.\n\n\n'
+    Existing Dependencies:
+    org.jvnet.jaxb2_commons:jaxb2-basics-runtime
+- commons-io:commons-io
+- commons-logging:commons-logging
+- commons-beanutils:commons-beanutils
+- commons-lang:commons-lang
+- org.jsoup:jsoup
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    var app =  new Vue({
+      el: '#app',
+    
+    data: {
+      items: [
+            {
+            
+                name:"Batata",
+                quantidade:'400g',
+                preco: 10,
+                quant_total_v:1
+            }
+        ]
+    }
+  });
+
+
+/*var app =  new Vue({
+      el: '#app',
+    
+    data: {
+      itens: [
+            {
+                
+                name:"Batata",
+                quantidade:'400g',
+                preco: 10,
+                quant_total_v:1,
+               
+            }
+        ]
+    },
+    methods:{
+        adc_item(index){
+            //alert(this.itens)
+            this.itens[index].quant_total_v++
+        },
+        sub_item(index){
+            //alert(this.itens)
+            if(this.itens[index].quant_total_v>0)this.itens[index].quant_total_v-=1
+        }
+    
+    }
+
+  });*/
+
+
+//var app2 =  new Vue({
+//  el: '#app2',
+//
+//data: {
+//  items: [
+//      {
+//      quantidade:'400g',
+//      preco: 10
+//
+//  }
+//]
+//}
+//});
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import { useEffect, useState } from "react";
+import Head from "next/head";
+import Router, { useRouter } from "next/router";
+
+import { useQuery, gql } from "@apollo/client";
+
+import "../components/index.css";
+import Header from "../components/Header";
+
+import { useDispatch } from "react-redux";
+import { getPosts } from "../redux/api-slice";
+
+const GET_ALL_POSTS_QUERY = gql`
+  query GetAllPostsQuery {
+    allPosts {
+      posts {
+        postId
+        title
+        content
+        createdAt
+      }
+    }
+  }
+`;
+
+export default function Home() {
+  const { data, loading, error } = useQuery(GET_ALL_POSTS_QUERY);
+  const dispatch = useDispatch();
+
+  if (typeof window!== "undefined" && window.location)
+    window.location.replace("/");
+
+  return (
+    <div>
+      <Head>
+        <title>Create Next App</title>
+        <meta name="description" content="Generated by create next app" />
+        <link rel="icon"
+      }
+     .content-box-container {
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+     .content-box-container > div {
+        background: #4834d4;
+        border-radius: 5px;
+        margin-top: 1rem;
+        width: 80%;
+
+        display: grid;
+        gap: 0.7rem;
+      }
+     .post-item {
+        color: white;
+      }
+    `}</style>
+    </div>
+  );
+}
+ href="/favicon.ico" />
+      </Head>
+
+      {/* <Header /> */}
+
+      <div>
+        <button onClick={() => router.push("/")}>Go to Home</button>
+      </div>
+      <h1>This is the Home Page</h1>
+
+      <style jsx>{`
+      h2 {
+        text-align: center;
+
+Precision: 0
+Recall: 0
+F1 Score: 0

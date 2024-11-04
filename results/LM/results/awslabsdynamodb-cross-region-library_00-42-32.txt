@@ -1,0 +1,141 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: awslabs/dynamodb-cross-region-library
+    Project Description: \n2. Check the read provisioned throughput RCU on your source table, and the write provisioned throughput WCU on your destination table. Ensure they are set high enough to allow table copy to complete well within 24 hours.\n Rough calculation: table copy completion time = of items in source table ceilingaverage item size / 1KB / WCU of destination table.\n3. Start the table copy process, there are a few options:\n Use the Import/Export option available via the official AWS DynamoDB Console, which exports data to S3 then imports it back to a different DynamoDB table. For more information, please refer to our \n Use a custom Java tool on awslabs that performs a parallel table scan then writes scanned items to the destination table, also \n Write your own tool to perform the table copy, essentially scanning items in the source table and using parallel PutItem calls to write items into the destination table.\n\n WARNING: If your source table has live writes, make sure the table copy process completes well within 24 hours, because DynamoDB Streams records are only available for 24 hours. If your table copy process takes more than 24 hours, you can potentially end up with inconsistent data across your tables!\n\n Step 2: Realtime updates applying live stream records\n\nThis step sets up a replication process that continuously consumes DynamoDB stream records from the source table and applies them to the destination table in realtime.\n\n0. Enable DynamoDB Streams on your source table with StreamViewType set to "New and old images". For more information on how to do this, please refer to our \n\n1. Build the library:\n\n\n\n2. This produces the target jar in the target/ directory, to start the replication process:\n\n\n\nUse the option to view all available arguments to the connector executable jar. The connector process accomplishes a few things:\n Sets up a worker to consume the DynamoDB Stream of the source table\n Uses a custom implementation of the to apply incoming stream records to the destination table in realtime\n Creates a DynamoDB checkpoint table using the given or default , used when restoring from crashes.\n WARNING: Each replication process requires a different . Overlapping names will result in strange, unpredictable behavior. Please also delete this DynamoDB checkpoint table if you wish to completely restart replication. See how a default is calculated below in section "Advanced: running replication process across multiple machines".\n Publishes default KCL CloudWatch metrics to report number of records and bytes processed. For more information please refer to the . CloudWatch metric publishing can be disabled with the flag.\n Produces logs locally according to the default log4j configuration file, which produces 2 separate log files: one for the KCL process and one for the rest of the connector application. You may use your own log4j.properties file to override these defaults. In addition, AWS CloudWatch offers a to automatically push local logs to your AWS CloudWatch account, if needed.\n You can override the source, KCL and destination DynamoDB endpoints with , and command line arguments. You can override the DynamoDB Streams source endpoint with the command line argument. The main use case for overriding any endpoint is to use DynamoDB Local on one end or both ends of the replication pipeline, or for KCL leases and checkpoints.\n\n NOTE: More information on the design and internal structure of the connector library can be found in the Please note it is your responsibility to ensure the connector process is up and running at all times replication stops as soon as the process is killed, though upon resuming the process automatically uses the checkpoint table in DynamoDB to restore progress.\n\n Advanced: running replication process across multiple machines\n\nWith extremely large tables or tables with high throughput, it might be necessary to split the replication process across multiple machines. In this case, simply kick off the target executable jar with the same command on each machine i.e. one KCL worker per machine. The processes use the DynamoDB checkpoint table to coordinate and distribute work among them, as a result, it is essential that you use the same for each process, or if you did not specify a , a default one is computed.\n Default = MD5 hash of sourceTableRegion sourceTableName destinationTableRegion destinationTableName \n\n Advanced: replicating multiple tables\n\nEach instantiation of the jar executable is for a single replication path only i.e. one source DynamoDB table to one destination DynamoDB table. To enable replication for multiple tables or create multiple replicas of the same table, a separate instantiation of the crossregion replication library is required. Some examples of replication setup:\n\nReplication Scenario 1: One source table in useast1, one replica in each of uswest2, uswest1, and euwest1 \n Number of Processes Required: 3 crossregion replication processes required: one from useast1 to uswest2, one from useast1 to uswest1, and one from useast1 to euwest1\n\nReplication Scenario 2: Two source tables table1 & table2 in useast1, both replicated separately to uswest2 \n Number of Processes Required: 2 crossregion replication processes required: one for table1 from useast1 to uswest2, and one for table2 from useast1 to uswest2 \n\nCan multiple crossregion replication processes run on the same machine?\n Yes, feel free to launch multiple processes on the same machine to optimize resource usage. However, it is highly recommended that you monitor one process first to understand its CPU, memory, network and other resource footprint. In general, bigger tables require more resources and highthroughput tables require more resources.\n\nHow can I ensure the process is always up and running?\n Use your own software tools to keep the process longrunning. For instance, many people use . Others make use of other AWS services such as and to achieve the same purpose.\n\nHow can I build the library and run tests?\nExecute on the command line. This will download DynamoDB Local and run an integration test against the local instance with CloudWatch metrics disabled.\n'
+    Existing Dependencies:
+    org.powermock:powermock-module-junit4
+- com.amazonaws:aws-java-sdk-dynamodb
+- com.amazonaws:aws-java-sdk-logs
+- org.easymock:easymock
+- org.apache.commons:commons-lang3
+- com.amazonaws:aws-java-sdk-bom
+- com.amazonaws:amazon-kinesis-client
+- com.amazonaws:amazon-kinesis-connectors
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- Main Section-->
+    <div id="main" class="clearfix main-section page-section">
+        <!-- Content Section-->
+        <div id="content" class="clearfix content-section">
+            <div class="clearfix section" data-scrollview="true">
+                <div class="page-header">
+                    <h1 class="title">Categories Management</h1>
+                    <p class="col-xs-4">
+                        <a href="#modal-create" class="btn btn-primary btn-sm" data-toggle="modal" style="float:right;">
+                            <span class="glyph-icon flaticon-user-add"></span>
+                            New Category
+                        </a>
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                            <?php if(!$this->ion_auth->in_group(3)):?>
+                                <button type="button" data-toggle="modal" data-target="#modal-export" class="btn btn-sm btn-default" style="float:right; color:green; margin-right:5px;">Export</button>
+                            <?php endif;?>
+                                <table id="category_list" class="table table-striped display" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th width="100px">#</th>
+                                            <th>Name</th>
+                                            <th width="50px">Parent</th>
+                                            <th width="70px"></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <?php foreach ($categories as $key => $cat) {?>
+                                            <tr>
+                                                <td>
+                                                    <?php echo $key+1;?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $cat->category_name;?>
+                                                </td>
+                                                <td>
+                                                    <?php if($cat->category_parent!= 0):?>
+                                                        <?php $cat_parent = $this->ion_auth->where('id', $cat->category_parent)->users()->row();?>
+                                                        <?php echo $cat_parent->first_name;?>
+                                                    <?php endif;?>
+                                                </td>
+                                                <td class="text-right">
+                                                    <a href="#modal-edit-<?php echo $cat->category_id;?>" data-toggle="modal" title="Edit"><span class="gly-icon simple-icon-pencil" style="font-size:16px; color: green;"></span></a>
+                                                    
+                                                    <!-- Modal Edit Category-->
+                                                    <div id="modal-edit-<?php echo $cat->category_id;?>" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                                                        <div class="modal-dialog" role="document">
+                                                            <div class="modal-content form-horizontal">
+                                                                <div class="modal
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>r(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCallback.delete(getAdapterPosition());
+            }
+        });
+    }
+
+    public void bindTo(String item) {
+        nameTextView.setText(item);
+    }
+}
+ package com.example.myapplication.ui.main;
+
+import android.content.Context;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.myapplication.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+public class MyViewHolder extends RecyclerView.ViewHolder {
+    private TextView nameTextView;
+
+    private MainContract.Callback mCallback;
+
+    public MyViewHolder(@NonNull View itemView, MainContract.Callback callback) {
+        super(itemView);
+        nameTextView = itemView.findViewById(R.id.myText);
+
+        mCallback = callback;
+
+        itemView.findViewById(R.id.myImage).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCallback.open(getAdapterPosition());
+            }
+        });
+
+        itemView.findViewById(R.id.myButton).setOnClickListene
+
+Precision: 0
+Recall: 0
+F1 Score: 0

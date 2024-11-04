@@ -1,0 +1,242 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: jboss-developer/jboss-eap-quickstarts
+    Project Description: The quickstarts demonstrate Jakarta EE 10 and a few additional technologies from the Red Hat JBoss Enterprise Application Platform stack. They provide small, specific, working examples that can be used as a reference for your own project.\n\nThis branch contains the latest 8.0 release of the Red Hat JBoss EAP quickstarts.\n\nPlease checkout or with this branch sources and unzip it, and refer to the root README.html for additional information.'
+    Existing Dependencies:
+    org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec
+- ${project.groupId}:ejb-multi-server-app-one-ejb
+- ${project.groupId}:ejb-multi-server-app-main-ejb
+- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-api-maven
+- ${project.groupId}:ejb-multi-server-app-main-web
+- org.jboss.eap.quickstarts:ejb-asynchronous-ejb
+- org.json:json
+- junit:junit
+- org.jboss.spec.javax.faces:jboss-jsf-api_2.2_spec
+- org.jboss.spec.javax.servlet:jboss-servlet-api_3.1_spec
+- org.hibernate:hibernate-jpamodelgen
+- org.jboss.eap:wildfly-ejb-client-bom
+- ${project.groupId}:app-client-ejb
+- javax.inject:javax.inject
+- javax.validation:validation-api
+- org.apache.httpcomponents:httpclient
+- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.0_spec
+- org.jboss.eap.quickstarts:app-client-ejb
+- org.apache.commons:commons-lang3
+- org.jboss.arquillian.junit:arquillian-junit-container
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+    <form id="form-create">
+	<input type="hidden" name="id" value="<?=$id?>">
+
+
+    <?=$form?>
+
+
+    <div class="form-group">
+       
+
+        <button type="button" onclick="btn_submit(this)" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Loading..." class="btn btn-primary"><i class="fa fa-save"></i> Simpan</button>
+
+
+    </div>
+</form>
+
+
+<!-- form submit -->
+<script>
+
+    var table_list;
+
+    function btn_submit(t,e)
+    {
+
+        e.preventDefault();
+ 
+
+        var form_data = $('#form-create').serialize();
+
+        // $.validator.setDefaults({
+        //     submitHandler: function () 
+        //     {
+                
+                
+
+        //         var l = Ladda.create(t);
+        //         l.start();
+
+        //         (ajax_send_form(form_data, '<?=site_url('master/create-update')?>', 
+               
+        //             // function (res)
+        //             // {
+        //             //     console.log(res.success);
+        //             //     // $('#btn-submit').attr('disabled', false);
+        //             // }
+
+        //         ).always(function () {
+
+        //             l.stop();
+        //             // $('#btn-submit').attr('disabled', false).html('Simpan');
+
+        //             // setTimeout(function () { table_list.ajax.reload(); }, 1000);
+        //         })); 
+
+        var l = Ladda.create(t);
+        l.start();
+        console.log(form_data);
+
+
+        $.ajax({
+
+            url: '<?=site_url("master/create-update")?>',
+            data: form_data,  
+            type: 'POST',
+
+        }).done(function(res) 
+        {
+           
+            res = JSON.parse(res);
+            // console.log(res.success);
+            // console.log();
+
+            if(res.success){
+
+                Swal.fire(
+                    'Success!',
+                    res.success,
+                   'success'
+                );
+
+                setTimeout(function () 
+                {
+                    window.location.href='<?=site_url('master')?>';
+                }, 1000);
+
+            }else{
+                Swal.fire(
+                    'Gagal!',
+                    res.failed,
+                    'warning'
+                );
+
+            }
+
+
+        }).fail(function() {
+
+            Swal.fire(
+                'Gagal!',
+                'Terjadi Kesalahan',
+                'warning'
+            );
+
+        }).always(function() {
+
+            l.stop();
+
+            // setTimeout(function(){
+
+            //     table_list.ajax.reload();
+
+            // },200)
+
+        });
+
+    }
+
+</script>
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> #include "stdafx.h"
+#include "TestUtil.h"
+#include "TestFM.h"
+#include "TestAssertUtil.h"
+#include "PlacementAndLoadBalancing.h"
+#include "FailoverUnitMovement.h"
+#include "PLBEventSource.h"
+#include "IFailoverManager.h"
+#include "Service.h"
+#include "Node.h"
+#include "FabricTestNode.h"
+#include "FabricTestFm.h"
+#include "FabricTestDispatcher.h"
+#include "FabricTestSession.h"
+#include "FabricTestFederation.h"
+#include "FabricTestDispatcherPerf.h"
+
+using namespace std;
+using namespace Common;
+using namespace Reliability;
+using namespace Reliability::FailoverManagerComponent;
+using namespace Federation;
+using namespace Federation::TestCommon;
+using namespace Reliability::LoadBalancingComponent;
+
+bool TestDispatcherPerf::TestDispatcher::IsBlockListUpdateNeeded(vector<NodeId> const& nodeIdList, NodeInfo const& nodeInfo)
+{
+    return (nodeInfo.NodeProperties.NodeStatus == NodeStatus::Up &&
+        nodeInfo.NodeProperties.NodeDeactivationIntent == NodeDeactivationIntent::None);
+}
+
+bool TestDispatcherPerf::TestDispatchertDispatcher::AddFUToPLBAsync(wstring const& fmName)
+{
+    return PLBAsyncHelper<void>::Run([this](vector<NodeId> const& nodes)
+    {
+        auto fm = PLBNode::GetPLBNode(fmName);
+        fm->AddFUToPLBAsync();
+    });
+}
+
+Common::AsyncOperationSPtr TestDispatcherPerf::TestDispatcher::RemoveFUFromPLBAsync(wstring const& fmName)
+{
+    return PLBAsyncHelper<void>::Run([fm = PLBNode::GetPLBNode(fmName)]()
+    {
+        fm->RemoveFUFromPLBAsync();
+    });
+}
+
+Common::AsyncOperationSPtr TestDispatcherPerf::TestDispatcher::MovePrimaryAsync(wstring const& fmName, wstring const& serviceName, wstring const& sourceNode, wstring const& targetNode, bool useSeedNodes)
+{
+    return PLBAsyncHelper<FailoverUnitMovementType>::Run([fm = PLBNode::GetPLBNode(fmName), service = fm->ServiceMapObj.GetService(serviceName), source = PLBNode::GetPLBNode(sourceNode), target = PLBNode::GetPLBNode(targetNode)](vector<NodeId> const& nodes) -> FailoverUnitMovementType
+    {
+        auto& serviceInfo = service->ServiceDesc;
+        auto servicePartition = fm->FM.FuMapObj.GetPartition(serviceInfo.Name);
+        fm->FM.PLB.UpdateService(serviceInfo);
+
+        PLBConfigScopeChange(UseSeedNodesForAllPlacementAndNonAffinity, useSeedNodes);
+
+        fm->FM.PLB.UpdateFailoverUnit(servicePartition->FailoverUnit);
+
+        return fm->FM.PLB.SelectRandomMoveActionWithConstraint(
+            servicePartition->FailoverUnit.FUId,
+            service->ServiceDesc,
+            source->NodeIndex,
+            target->Node
+
+Precision: 0
+Recall: 0
+F1 Score: 0

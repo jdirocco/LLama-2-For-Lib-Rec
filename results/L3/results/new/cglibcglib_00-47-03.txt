@@ -1,0 +1,155 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications. provide recommendations exclusively in the Maven format: groupId:artifactId:version.
+    Given the project details below:
+    Project Name: patloew/RxLocation
+Project Description: The Reactive Location API Library for Android is now deprecated and not maintained anymore. Please switch to the CoLocation library by Micha\xc5\x82 Charmas. This library wraps the Location APIs in RxJava 2.x.
+Existing Dependencies Include: org.powermock:powermock-module-junit4
+- io.reactivex.rxjava2:rxandroid
+- com.squareup.leakcanary:leakcanary-android
+- io.reactivex.rxjava2:rxjava
+- com.google.android.gms:play-services-location
+- com.squareup.leakcanary:leakcanary-android-no-op
+
+Project Name: frankred/jSona
+Project Description: JSona is a configuration file(JSON), vcj and JavaFx based music and media player. The aim is to always keep your playlists in synch with your music folders. For fast fulltext search jSona uses Apache Lucene (http://lucene.apache.org/core/).
+Existing Dependencies Include: uk.co.caprica:vlcj
+- org.apache.lucene:lucene-analyzers-common
+- org.apache.lucene:lucene-core
+- commons-io:commons-io
+- com.mpatric:mp3agic
+- org.apache.lucene:lucene-queryparser
+- com.github.tulskiy:jkeymaster
+- org.apache.commons:commons-lang3
+
+Project Name: querydsl/querydsl
+Project Description: Querydsl is a framework which enables the construction of type-safe SQL-like queries for multiple backends including JPA, MongoDB and SQL in Java. Querying JPA and MongoDB using a fluent API.
+Existing Dependencies Include: org.springframework:spring-aop
+- com.mysema.codegen:codegen
+- org.xerial:sqlite-jdbc
+- org.springframework:spring-test
+- com.google.guava:guava
+- com.jolbox:bonecp
+- org.hamcrest:hamcrest-library
+- com.oracle:ojdbc6
+- com.querydsl:querydsl-sql-spatial
+- com.google.inject.extensions:guice-persist
+- com.querydsl:querydsl-apt
+- org.postgresql:postgresql
+- org.easymock:easymock
+- com.querydsl:querydsl-spatial
+- org.hibernate:hibernate-ehcache
+- javax.inject:javax.inject
+- org.springframework:spring-context
+- org.eclipse.persistence:eclipselink
+- org.firebirdsql.jdbc:jaybird-jdk16
+- log4j:log4j
+- org.mongodb.morphia:morphia
+- org.hsqldb:hsqldb
+- cglib:cglib
+- org.apache.lucene:lucene-queryparser
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.apache.maven:maven-project
+- org.hibernate:hibernate-envers
+- com.querydsl:querydsl-codegen
+- net.sourceforge.jtds:jtds
+- org.springframework.roo:org.springframework.roo.annotations
+- org.apache.ant:ant
+- com.querydsl:querydsl-lucene3
+- com.thoughtworks.proxytoys:proxytoys
+- org.scala-lang:scala-library
+- org.geolatte:geolatte-geom
+- com.h2database:h2
+- com.querydsl:querydsl-sql-codegen
+- org.hibernate:hibernate-annotations
+- org.scala-lang:scala-compiler
+- org.reflections:reflections
+- org.datanucleus:datanucleus-api-jdo
+- org.mongodb:mongo-java-driver
+- org.hibernate:hibernate-validator
+- com.infradna.tool:bridge-method-annotation
+- com.querydsl:querydsl-sql-spring
+- javax.transaction:jta
+- org.slf4j:slf4j-log4j12
+
+Project Name: GoogleCloudPlatform/google-cloud-datastore
+Project Description: This repository contains low-level Java and Python client libraries for Google Cloud Datastore. For more idiomatic and usable client libraries in these languages, please visit the [Google Cloud Dataastore Client for Java][java-datastore] and Google Cloud Database Client for Python
+Existing Dependencies Include: com.google.http-client:com.google.http-client
+- com.google.truth:com.google.truth
+- com.google.cloud.datastore:datastore-v1-proto-client
+- com.google.guava:com.google.guava
+- com.google.api-client:com.google.api-client
+- com.google.oauth-client:google-oauth-client
+- com.google.truth:truth
+- com.google.oauth-client:com.google.oauth-client
+
+Project Name: eclipse/tycho
+Project Description: Eclipse Tycho is a manifest-first way to build and build Eclipse plug-ins/OSGi bundles/RCP applications\n，nwith Maven. This repository contains all the features and documentation that will help you migrate to the official Eclipse site.
+Existing Dependencies Include: org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.codehaus.plexus:plexus-component-annotations
+- org.codehaus.plexus:plexus-container-default
+- org.eclipse.tycho:tycho-testing-harness
+- org.apache.maven:maven-core
+- org.eclipse.tycho:org.eclipse.jdt.compiler.apt
+- org.codehaus.plexus:plexus-utils
+- org.eclipse.tycho:org.eclipse.osgi
+- org.eclipse.tycho:tycho-core
+- org.apache.commons:commons-exec
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Reccomend me some of these libraries that can be added to the project to enhance its capabilities.
+    Project Name: cglib/cglib
+    Project Description: Byte Code Generation Library is high level API to generate and transform JAVA byte code. It is used by AOP, testing, data access frameworks to generate dynamic proxy objects and intercept field access.
+    Existing Dependencies:
+    org.openjdk.jmh:jmh-generator-annprocess
+- org.apache.ant:ant
+- ${project.groupId}:cglib-sample
+- cglib:cglib-parent
+- org.sonatype.oss:oss-parent
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     As an AI specializing in software library recommendations for Java applications, I would suggest the following five libraries to enhance the capabilities of the cglib/cglib project:
+
+1. com.google.code.findbugs:findbugs - This library provides a comprehensive set of tools for detecting and diagnosing bugs in Java code. By integrating this library, the project can benefit from improved code quality and stability.
+2. org.ow2.asm:asm - This library provides an API for manipulating Java bytecode. By leveraging this library, the project can gain more control over the generated proxy objects and improve the performance of the dynamic proxies.
+3. net.sourceforge.jtidy:jtidy - This library provides a powerful HTML and XML tidy tool for Java. By incorporating this library, the project can ensure that the generated code adheres to the highest standards of code formatting and readability.
+4. org.slf4j:slf4j-log4j12 - This library provides a flexible and lightweight API for logging in Java applications. By integrating this library, the project can improve the logging mechanism and provide more detailed and informative logs.
+5. com.github.rholder:spoon - This library provides a simple and intuitive API for creating and manipulating Java objects. By leveraging this library, the project can simplify the process of generating and transforming Java bytecode.
+
+In summary, these libraries can enhance the capabilities of the cglib/cglib project by improving code quality, performance, and readability. By integrating these libraries, the project can benefit from more comprehensive and effective tools for generating and transforming Java bytecode.
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> # Maven Dependencies
+
+Here are the Maven dependencies required for the project:
+
+1. org.ow2.asm:asm:5.0.4 - This dependency is required for the ASM library, which is used for manipulating Java bytecode.
+2. org.slf4j:slf4j-log4j12:1.7.25 - This dependency is required for the SLF4J logging library, which is used for logging in the project.
+3. com.github.rholder:spoon:2.0.0 - This dependency is required for the Spoon library, which is used for creating and manipulating Java objects.
+4. net.sourceforge.jtidy:jtidy:1.3.1 - This dependency is required for the JTidy library, which is used for formatting HTML and XML documents.
+5. org.apache.maven:maven-compiler-plugin:3.8.1 - This dependency is required for the Maven compiler plugin, which is used for compiling the Java source code.
+6. org.apache.maven:maven-source-plugin:3.8.1 - This dependency is required for the Maven source plugin, which is used for generating the source code for the project.
+7. org.apache.maven:maven-javadoc-plugin:3.8.1 - This dependency is required for the Maven javadoc plugin, which is used for generating the Java documentation for the project.
+8. com.google.guava:guava:28.1-jre - This dependency is required for the Guava library, which is used for providing utilities and data structures in the project.
+9. org.codehaus.mojo:mojo-java-it:1.10 - This dependency is required for the Mojo library, which is used for running Java tests in the project.
+
+Please note that the versions of the dependencies may vary based on the project requirements and the version of Maven you are using.
+
+Precision: 0.2
+Recall: 0.2
+F1 Score: 0.20000000000000004
+
+Formatted Dependencies:
+org.openjdk.jmh:jmh-generator-annprocess
+- org.apache.ant:ant
+- ${project.groupId}:cglib-sample
+- cglib:cglib-parent
+- org.sonatype.oss:oss-parent
+ Test Dependencies:
+['cglib:cglib-sample', '${project.groupId}:cglib', 'junit:junit', 'org.openjdk.jmh:jmh-core', 'org.ow2.asm:asm']

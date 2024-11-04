@@ -1,0 +1,123 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: cdelmas/microservices-comparison
+    Project Description: = Microservices libraries comparison\n\n== Purpose\n\nThis project is the companion of this Blog article: Setup\n\nYou will need a keystore. You can follow a tutorial to set up a keystore with a selfsigned certificate.\n\nOne of the client libraries requires you to import the Facebook's certificate into the truststore. To do that, you can follow these Build\n\nTo build the servers, just run in the command line. By the way, you need a JDK 8, but I guess you're uptodate :\n\n== Run\n\nThen you can run each server using . Don't forget to replace with the correct jar name. \n\nThe Dropwizard server needs a special command line: .\n\n== Notes\n\nThere are no unit tests, and it is fully assumed.\n\n== The missing guys\n\nIn a future version, I will add Restx, Payara and Swarm to the comparison. It is a long exercise though, but stay in touch ;\n\n"
+    Existing Dependencies:
+    io.dropwizard:dropwizard-auth
+- com.fasterxml.jackson.datatype:jackson-datatype-jdk8
+- io.vertx:vertx-web
+- io.dropwizard.modules:dropwizard-java8
+- org.springframework.boot:spring-boot-starter-jetty
+- org.springframework.security.oauth:spring-security-oauth2
+- com.javaslang:javaslang
+- org.mockito:mockito-all
+- org.hamcrest:hamcrest-core
+- io.dropwizard:dropwizard-client
+- org.restlet.jse:org.restlet.ext.guice
+- io.vertx:vertx-core
+- com.hubspot.dropwizard:dropwizard-guice
+- org.restlet.jse:org.restlet
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<div class="col-6">
+    <div class="card">
+        <div class="row mb-3 mt-3">
+            <div class="col-md-12">
+                <div class="card-body mb-0">
+                    <form class="needs-validation" novalidate="" method="POST" action="{{ route('admin.store') }}">
+                        @csrf
+
+                        <div class="form-row">
+                            <div class="col-md-12 mb-3">
+                                <label for="validationCustom03">Name</label>
+                                <input class="form-control" name="name" type="text" placeholder="Enter a name" required="">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12 mb-3">
+                                <label for="validationCustom03">Email</label>
+                                <input class="form-control" name="email" type="email" placeholder=" Enter a email address" required="">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12 mb-3">
+                                <label for="validationCustom03">Phone Number</label>
+                                <input class="form-control" name="mobile_no" type="text" placeholder="Enter a mobile number" required="">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-12 mb-3">
+                                <label for="validationCustom03">Password</label>
+                                <input class="form-control" name="password" type="text" placeholder="Enter a password" required="">
+                            </div>
+                        </div>
+                        <select name="role_id[]" class="select2" id="" multiple="multiple" required>
+                          @foreach($role as $role)
+                             <option value="{{$role->id}}">{{ $role->role_name }}</option>
+                          @endforeach
+                       </select>
+                        <button class="btn btn-primary mt-4 float-right" type="submit">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <template lang="pug">
+    v-card.elevation-2.pa-3(hover)
+        v-card-title(primary-title class="justify-center") {{name}}
+       .pa-3
+            v-row
+                v-col(cols="9")
+                   .text-truncate.text--primary {{text}}
+                v-col.text-center(cols="3")
+                    v-icon.red--text {{isActiveIcon}}
+</template>
+
+<script>
+    export default {
+        name: 'Card',
+        props: {
+            name: { type: String, required: true },
+            text: { type: String, required: true },
+            isActive: { type: Boolean, required: true }
+        },
+        computed: {
+            isActiveIcon() { return this.isActive?'mdi-check' :'mdi-close' }
+        }
+    }
+</script>
+
+<style scoped>
+   .v-card__text {
+        min-height: 60px;
+    }
+</style>
+
+Precision: 0
+Recall: 0
+F1 Score: 0

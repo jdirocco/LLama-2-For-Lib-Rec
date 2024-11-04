@@ -1,0 +1,192 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: aliumujib/Orin
+    Project Description: Orin\nOrin is a music player based on Karim Abou Zeid\\\'s open source Phonograph music player,\nI always wanted to implement Aleksandar Te\xc5\xa1i\xc4\x87\\\'s designs of a music player that can be found here!\n but haven\\\'t had the time to start one from scratch,\nso well I used Phonograph as a base , I dont have permissions to use these designs yet so I can\\\'t release the app on the Playstore\n\n\n\n\n\n\n Demo\n\nSee demo by downloading \n\n How to run\n\n\n License\nGNU General Public License v3.0\n\nPermissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.\n'
+    Existing Dependencies:
+    com.github.bumptech.glide:okhttp3-integration
+- com.crashlytics.sdk.android:crashlytics
+- com.github.kabouzeid:SeekArc
+- com.github.captain-miao:optroundcardview
+- de.hdodenhof:circleimageview
+- org.eclipse.mylyn.github:org.eclipse.egit.github.core
+- com.squareup.retrofit2:converter-gson
+- com.squareup.retrofit2:retrofit
+- com.afollestad.material-dialogs:core
+- com.h6ah4i.android.widget.advrecyclerview:advrecyclerview
+- com.android.support:recyclerview-v7
+- com.anjlab.android.iab.v3:library
+- com.jakewharton:butterknife-compiler
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="<?=base_url()?>assets/js/bootstrap.min.js"></script>
+    <script src="<?=base_url()?>assets/admin/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="<?=base_url()?>assets/admin/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="<?=base_url()?>assets/admin/plugins/fastclick/fastclick.min.js"></script>
+    <script src="<?=base_url()?>assets/admin/dist/js/app.min.js"></script>
+
+    </body>
+
+    </html>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package org.apache.tapestry5.internal.services;
+
+import org.apache.tapestry5.MarkupWriter;
+import org.apache.tapestry5.annotations.BeginRender;
+import org.apache.tapestry5.annotations.CommitAfter;
+import org.apache.tapestry5.annotations.EndRender;
+import org.apache.tapestry5.annotations.SetupRender;
+import org.apache.tapestry5.corelib.base.AbstractComponent;
+import org.apache.tapestry5.ioc.annotations.PostInjection;
+
+public class AnnotatedRenderListenerTest extends AbstractAnnotatedMethodTest
+{
+    public interface InterfaceListener
+    {
+
+        public static final String NAME = "interface-listener";
+
+        @SetupRender
+        public void listen1();
+
+    }
+
+    public interface InterfaceListener2
+    {
+
+        public static final String NAME = "interface-listener-2";
+
+        @SetupRender
+        void listen1();
+
+    }
+
+    public static abstract class AbstractListener
+    {
+
+        public static final String NAME = "abstract-listener";
+        
+        public void methodNotAnnotatedWithSetupRender()
+        {
+        }
+
+        @SuppressWarnings("unchecked")
+        @SetupRender
+        public AbstractListener listen1()
+        {
+            return null;
+        }
+
+        @SuppressWarnings("unchecked")
+        @SetupRender
+        public void listen2(Class clazz, MarkupWriter writer)
+        {
+        }
+
+        @SetupRender
+        public void listen3() throws Exception
+        {
+        }
+    }
+
+    @SuppressWarnings("all")
+    public static abstract clasdClass();
+    }
+
+    public static abstract class AbstractListenerSubclassWithPrivateMethods extends
+            AbstractListenerSubclass
+    {
+
+        private void methodNotAnnotatedWithSetupRender()
+        {
+        }
+
+        @SuppressWarnings("unchecked")
+        @SetupRender
+        private void listen1()
+        {
+        }
+
+        @SuppressWarnings("unchecked")
+        private void listen2(Class clazz, MarkupWriter writer)
+        {
+        }
+
+        @SuppressWarnings("unchecked")
+        private void listen3() throws Exception
+        {
+        }
+    }
+
+    public abstract static class AbstractListenerSubclass
+    {
+
+        public static final String NAME = "abstract-listener-subclass";
+    
+        public void methodNotAnnotatedWithSetupRender()
+        {
+        }
+
+        @SuppressWarnings("unchecked")
+        @SetupRender
+        public AbstractListenerSubclass listen1()
+        {
+            return null;
+        }
+
+        @SuppressWarnings("unchecked")
+        @SetupRender
+        public void listen2(Class clazz, MarkupWriter writer)
+        {
+        }
+
+        @SetupRender
+        public void listen3() throws Exception
+        {
+        }
+        
+    }
+
+    public static class ConcreteListener
+    {
+
+        public static final String NAME = "concrete-listener";
+
+        @SetupRender
+        public void listen1()
+        {
+        }
+
+        @SuppressWarnings("unchecked")
+        @SetupRender
+        public void listen2(Class clazz, MarkupWriter writer)
+        {
+       
+
+Precision: 0
+Recall: 0
+F1 Score: 0

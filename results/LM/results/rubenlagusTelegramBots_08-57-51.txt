@@ -1,0 +1,198 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: rubenlagus/TelegramBots
+    Project Description: Telegram Bot Java Library\n\n\n\n\n\n\n\n\nA simple to use library to create Telegram Bots in Java\n\n Contributions\nFeel free to fork this project, work on it and then make a pull request against DEV branch. Most of the times I will accept them if they add something valuable to the code.\n\nPlease, DO NOT PUSH ANY TOKEN OR API KEY, I will never accept a pull request with that content.\n\n Webhooks vs GetUpdates\nBoth ways are supported, but I recommend long polling method.\n\n Usage\n\nJust import add the library to your project with one of these options:\n\n 1. Using Maven Central Repository:\n\n\n\n 2. Using Gradle: \n\n\n\n 3. Using Jitpack from \n 4. Download the jarincluding all dependencies from \n\nIn order to use Long Polling mode, just create your own bot extending .\n\nIf you like to use Webhook, extend \n\n\nOnce done, you just need to create a and register your bots:\n\n\n\nFor detailed explanation, visite our thanks Clevero\n\n\n Example bots\nOpen them and send them /help command to get some information about their capabilities:\n\n Use custom keyboards\n\n Basic messages\n\n Send files by fileid\n\n Send files uploding them\n\n Inline support\n\n Webhook support\n\nYou can see code for those bots at project.\n\n Telegram Bot API\nThis library use , you can find more information following the link.\n\n Questions or Suggestions\nFeel free to create issues as you need or join the \n\n Powered by Intellij\n\n \n\n\n\n License \nMIT License\n\nCopyright c 2016 Ruben Bermudez\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files the "Software", to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n'
+    Existing Dependencies:
+    org.glassfish.jersey:jersey-bom
+- commons-io:commons-io
+- org.apache.httpcomponents:httpclient
+- org.telegram:telegrambots-meta
+- org.apache.commons:commons-lang3
+- org.mockito:mockito-all
+- com.fasterxml.jackson.core:jackson-databind
+- com.fasterxml.jackson.core:jackson-annotations
+- org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2
+- org.telegram:telegrambots
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<script src="<?=base_url().'application/views/assets/js/vendor.min.js'?>"></script>
+<script>
+    window.paceOptions = {
+        document: true,
+        eventLag: false,
+        restartOnPushState: false,
+        restartOnRequestAfter: false,
+        ajax: {
+            trackMethods: [ 'POST','GET']
+        }
+    };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+<script>
+    var baseURL = "<?=base_url() ;?>";
+    
+    function setFormValidation(id) {
+        $(id).validate({
+            errorPlacement: function(error, element) {
+                $(element).parent('div').addClass('has-error');
+            }
+        });
+    }
+    
+    function removeValidation(id) {
+        $(id).validate().cancelSubmit = true;
+    }
+
+    function showNotification(from, align,icon,type, animIn, animOut,msg,place) {
+
+        if(place==null || place==''){
+            place='tl';
+        }
+
+        var allowDismiss = true;
+
+        $.notify({
+            icon: icon,
+            title: '<strong>Hei there!</strong>',
+            message: msg,
+            url: ''
+        }, {
+            type: type,
+            allow_dismiss: allowDismiss,
+            newest_on_top: true,
+            timer: 500,
+            placement: {
+                from: from,
+                align: align
+            },
+            offset: {
+                x: 20,
+                y: 20
+            },
+            spacing: 100,
+            z_index:1031,
+            animate: {
+                enter: animIn,
+                exit: animOut
+            }
+        });
+    }
+
+    function validateForm(id){
+        return $(id).valid();
+    }
+
+    function loadModal(id,url,title) {
+        $('#modal_title').text(title);
+        $('#'+id+'.modal-content').html('');
+        $('#'+id).modal('show');
+        $('#'+id+'.modal-content').load(url,function(){
+            // alert('loaded successfully');
+            if(id.search('_form')!= -1){
+                var modalid = "#"+id;
+                setFormValidation(modalid);
+            }
+        });
+    }
+
+
+    function setButtonLoading(selector, isLoading){
+        if(isLoading){
+            $(selector).attr('disabled', 'disabled');
+            $(selector).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span><span class="sr-only">Loading...</span>');
+        }else{
+            $(selector).removeAttr('disabled')
+            $(selector).html('Save');
+        }
+    }
+
+
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    // $(window).ready(function(){
+    //     $('[data-toggle="tooltip"]').tooltip();
+    // });
+</script>
+<!--<script src="<?=base_url().'application/views/assets/js/app.min.js'?>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e_url = 'https://github.com/' + user + '/' + repo
+
+    print('Downloading data...')
+    if os.path.exists(repo_path):
+        shutil.rmtree(repo_path, ignore_errors=True)
+    git.Repo.clone_from(clone_url, repo_path)
+    print('Finished downloading data.')
+
+    if not os.path.exists(repo_path) or not os.listdir(repo_path):
+        return None
+
+    # Get the latest commit
+    print('Getting latest commit...')
+    repo = git.Repo(repo_path)
+    latest_commit = repo.commit()
+    print('Finished getting latest commit.')
+    latest_commit_hash = latest_commit.hexsha[:6]
+
+    if latest_commit.committed_datetime < datetime.datetime.utcnow() - datetime.timedelta(days=7):
+        print('Repository too stale.')
+        shutil.rmtree(repo_path, ignore_errors=True)
+        return None
+
+    return {'url': clone_url, 'name': user + '/' + repo, 'hash': latest_commit_hash, 'description': latest_commit.message}
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-f', '--file', required=True, help='path to the file containing the github user/repo pairs (one pair per line, e.g. <user>/<repo>)')
+    args = parser.parse_args()
+
+    with open(args.file) as f:
+        repos = f.read().splitlines()
+
+    results = {repo: get_repo_info(repo) for repo in repos}
+
+    with open('repos.json', 'w') as f:
+        json.dump(results, f, indent=4)
+
+
+main()
+ import git
+import os
+import shutil
+import datetime
+import argparse
+import json
+
+
+def get_repo_info(full_repo: str):
+    user, repo = full_repo.split('/')
+    repo_path='repos/' + user + '/' + repo
+    clon
+
+Precision: 0
+Recall: 0
+F1 Score: 0

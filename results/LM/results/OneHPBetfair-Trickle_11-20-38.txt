@@ -1,0 +1,213 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: OneHP/Betfair-Trickle
+    Project Description: Betfair Trickle is a web application for automatically placing bets on the Betfair exchange.'
+    Existing Dependencies:
+    mysql:mysql-connector-java
+- org.springframework:spring-aop
+- org.apache.camel:camel-core
+- org.hibernate:hibernate-annotations
+- commons-dbcp:commons-dbcp
+- org.slf4j:slf4j-api
+- com.google.collections:google-collections
+- org.springframework:spring-jdbc
+- commons-lang:commons-lang
+- org.springframework:spring-aspects
+- org.quartz-scheduler:quartz
+- net.sf.ehcache:ehcache
+- org.springframework:spring-context
+- org.springframework:spring-beans
+- org.jmock:jmock-junit4
+- hsqldb:hsqldb
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+
+
+
+
+
+
+
+
+#include <Arduino.h>
+#include <ESP8266WiFi.h>
+#include <ESP8266WebServer.h>
+#include <ESP8266WiFi.h>
+#include <SPI.h>
+#include <Wire.h>
+//#include "Adafruit_Sensor.h"
+#include "Adafruit_BMP280.h"
+//#include <EEPROM.h>
+
+#include <MFRC522.h>
+#include <SoftwareSerial.h>
+//#include <OneWire.h>
+//#include <DallasTemperature.h>
+#define SS_PIN  8
+#define RST_PIN 9
+#define Buzzer 5 //buzzer to arduino pin D2
+//#define DHT11_PIN 2 							//connect DHT11 sensor to GPIO pin2
+//#define DHTTYPE DHT11    					// DHT 11
+
+#define DHTPIN 2
+#define DHTTYPE DHT22
+
+
+Adafruit_BMP280 bme; // I2C
+
+
+#define RX 10 // connect to TX of other device
+#define TX 11 // connect to RX of other device
+
+//SoftwareSerial soft(RX, TX); // RX, TX
+
+SoftwareSerial soft(4, 5);
+
+MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance.
+
+
+
+void setup()
+{
+    Serial.begin(115200); 
+    while (!Serial) {     // needed to keep leonardo/micro happy
+        delay(10);
+    }
+    soft.begin(115200);
+    Wire.begin();
+    Serial.println("Start");
+    //Serial.println(F("Hello, RFID Reader!"));
+    SPI.begin();      // Init SPI bus
+    mfrc522.PCD_Init();  // Init MFRC522
+    mfrc522.PCD_DumpVersionToSerial();  // Show details of PCD - MFRC522 Card Reader details
+    Serial.println(F("Scan PICC to see UID, SAK, type, and data blocks..."));    
+    Wire.begin();
+    Serial.println();
+    Serial.println(F("Adafruit BME280 Test"));
+    Serial.println(F("Initializing..."));
+    if (!bme.begin()) {  
+        Serial.println("Could not find a valid BMP280 sensor, check wiring!");
+        while (1);
+    }
+ 
+    Serial.println(F("Initialized."));
+    delay(3000);
+    Serial.println("Start");
+    soft.println("Start");
+    if(soft.available()>0){
+      int val =  soft.read();
+      Serial.print("val");
+      Serial.println((char)val);
+      }
+    soft.println("Start");
+    soft.begin(115200);
+    Serial.println("Start");
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+}
+ // @author Dmitry Patsura <talk@dmtry.me> https://github.com/ovr
+// @flow
+
+import React, { PureComponent } from'react';
+import { View, Text, StyleSheet } from'react-native';
+import {
+    type Event as EventType
+} from 'github-flow-js';
+// import {
+//     Avatar
+// } from 'components';
+// import {
+// } from 'utils';
+import { connect } from'react-redux';
+import IssueItem from 'components/IssueItem';
+import {
+    createStyleSheet
+} from 'utils';
+
+import type {
+    Issue as IssueEntity
+} from 'github-flow-js';
+
+type Props = {
+    issues: Array<IssueEntity>,
+    isLoading: boolean,
+    error:?string,
+    onLoadIssues: typeof ActionCreators.loadIssues
+}
+
+const styles = createStyleSheet({
+    title: {
+        paddingTop: 10,
+        paddingBottom: 10
+    }
+});
+
+class IssuesScreen extends PureComponent<Props> {
+    componentDidMount() {
+        this.props.onLoadIssues();
+    }
+
+    render() {
+        const { issues } = this.props;
+
+        if (issues.length === 0) {
+            return (
+                <View style={styles.title}>
+                    <Text>There are no Issues</Text>
+                </View>
+            );
+        }
+
+        return (
+            <View>
+                {issues.map((issue: IssueEntity) => (
+                    <IssueItem
+                        key={issue.number}
+                        issue={issue}
+                    />
+                ))}
+            </View>
+        );
+    }
+}
+
+export default connect(
+    (state: State) => ({
+        issues: state.issue.issues,
+        isLoading: state.issue.isLoading,
+        error: state.issue.error
+    }),
+    (dispatch: any) => ({
+        onLoadIssues: () => {
+            dispatch(ActionCreators.loadIssues());
+        }
+    })
+)(IssuesScreen);
+
+Precision: 0
+Recall: 0
+F1 Score: 0

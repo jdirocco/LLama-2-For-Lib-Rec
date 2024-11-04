@@ -1,0 +1,190 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: jloisel/elastic-crud
+    Project Description: \n\n\n\n\n\n Elasticsearch Simple CRUD Repository\n\nEasily perform Create / Read / Update / Delete operations on beans stored in Elasticsearch. lacks maintenance and is already a few Elasticsearch versions behind the latest version.\n\nThis project powers our .\n\n Versions\n\nThe following table shows the correspondance between our versions and Elasticsearch versions:\n\n| Version | ElasticSearch Version |\n| |::|\n| 1.1.x | 2.1.x |\n| 2.2.x | 2.2.x |\n| 2.3.x | 2.3.x |\n| 5.1.x | 5.1.x |\n| 5.6.x | 5.6.x |\n\nAs of 2.2.x, the project is going to strictly follow the same versioning as .\n\n Spring\n\nAdd the following Maven dependency to get started quickly with Spring:\n\n\n Vanilla Java\n\nTo get started with Vanilla Java application, you need to add two dependencies:\n\n\nThis dependency provides the Jackson Json serialization mechanism.\n\n\n\nThis dependency provides the ElasticSearchRepositoryFactory to create ElasticRepository.\n\n Java Example\n\nSuppose we would like to persist the following Bean in Elasticsearch:\n\n\n\nThe following code shows how to use the CRUD repository:\n\n\n\nAlso, scrolling through massive amount of results is made dead easy with the scrolling API:\n\nYou simply have to implement the interface:\n\n\n\n Type mapping\n\nBeans stored in Elasticsearch must have source field enabled: see The following example Json shows how to enable source field:\n\n\n\n Index refresh\n\nEvery mutating query insert, delete performed on the index automatically refreshes it. I would recommend to disable index refresh as shows in the Json above.\n\n Json Serialization\n\nThe Json serialization is configured to use by default. To use Jackson Json serialization, simply add Jackson as dependency:\n\n\n\nReplace ${jackson.version} with the version you are using.\n\nIf you intend to use your own Json serialization mechanism like Gson, please provide an implementation for the JsonSerializationFactory interface.\n\n Elasticsearch Client\n\nAn instance of the must be provided.\n'
+    Existing Dependencies:
+    org.projectlombok:org.projectlombok
+- org.mockito:org.mockito
+- org.glassfish:org.glassfish
+- com.jeromeloisel:db-integration-test
+- javax.ws.rs:javax.ws.rs
+- org.mockito:mockito-all
+- commons-codec:commons-codec
+- org.springframework:spring-test
+- javax.servlet:javax.servlet
+- org.elasticsearch.test:framework
+- com.google.guava:guava
+- org.projectlombok:lombok
+- org.clojure:org.clojure
+- javax.el:javax.el
+- com.jeromeloisel:db-conversion-jackson
+- com.jeromeloisel:db-repository-api
+- javax.json:javax.json
+- com.google.guava:com.google.guava
+- commons-net:commons-net
+- com.fasterxml.jackson.core:jackson-annotations
+- com.google.guava:guava-testlib
+- org.antlr:org.antlr
+- org.hibernate:org.hibernate
+- commons-collections:commons-collections
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 25 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+           <h1>
+             Dashboard
+             <small>Control panel</small>
+          </h1>
+          <ol class="breadcrumb">
+             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+             <li class="active">Dashboard</li>
+          </ol>
+        </section>
+        <!-- Main content -->
+        <section class="content">
+           <!-- Small boxes (Stat box) -->
+           <div class="row">
+             <div class="col-lg-3 col-xs-6">
+                 <div class="small-box bg-aqua">
+                     <div class="inner">
+                         <h3><?php echo $count_user;?></h3>
+                         <p>Users</p>
+                     </div>
+                     <div class="icon">
+                         <i class="ion ion-person"></i>
+                     </div>
+                     <a href="<?php echo $url;?>user" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                 </div>
+             </div>
+
+             <div class="col-lg-3 col-xs-6">
+                 <div class="small-box bg-green">
+                     <div class="inner">
+                         <h3><?php echo $count_post;?></h3>
+                         <p>Blog</p>
+                     </div>
+                     <div class="icon">
+                         <i class="ion ion-document-text"></i>
+                     </div>
+                     <a href="<?php echo $url.'article';?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                 </div>
+             </div>
+
+             <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-yellow">
+                    <div class="inner">
+                        <h3><?php echo $count_comment;?></h3>
+                        <p>Comments</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-stats-bars"></i>
+                    </div>
+                    <a href="<?php echo $url;?>comment" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+             </div>
+
+             <div class="col-lg-3 col-xs-6">
+                <div class="small-box bg-red">
+                    <div class="inner">
+                        <h3><?php echo $count_subscriber;?></h3>
+                        <p>Subscriber</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-mail-open"></i>
+                    </div>
+                    <a href="<?php echo $url.'subscriber';?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 25 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package org.apache.shardingsphere.scaling.mysql;
+
+import lombok.extern.slf4j.Slf4j;
+import org.apache.shardingsphere.scaling.core.common.channel.Channel;
+import org.apache.shardingsphere.scaling.core.common.datasource.DataSourceManager;
+import org.apache.shardingsphere.scaling.core.common.record.DataRecord;
+import org.apache.shardingsphere.scaling.core.common.record.Record;
+import org.apache.shardingsphere.scaling.core.common.thread.AbstractRdbmsSyncTask;
+import org.apache.shardingsphere.scaling.core.config.DumperConfiguration;
+import org.apache.onfig.getConnectionURI(), dumperConfig.getPosition(), dumperConfig.getUsername(), dumperConfig.getPassword());
+        binlogPositionInitialized = false;
+        try (MySQLPositionInitializedInputSplit positionInitializedInputSplit = new MySQLPositionInitializedInputSplit(new BinlogPosition(dumperConfig.getInitialTimestamp()), dumperConfig.getUsername(), dumperConfig.getPassword())) {
+            for (Map<String, Object> each : positionInitializedInputSplit.dumpRecords()) {
+                record = RecordUtil.getDataRecord(each, dumperConfig.getTableName(), dumperConfig.getColumnName());
+                record.setType(SyncAction.UPDATE.name());
+                binlogPosition = new BinlogPosition(positionInitializedInputSplit.getCurrentBinlogPosition().getServerId(), positionInitializedInputSplit.getCurrentBinlogPosition().getServerUuid(), record.getPosition());
+                binlogPositionInitialized = true;
+                channel.pushRecord(record);
+            }
+        }
+    }
+    
+    @Override
+    public void post() throws InterruptedException {
+        // TODO do something after sync completed or canceled
+    }
+    
+    @Override
+    protected void doStart() {
+        super.doStart();
+    }
+    
+    @Override
+    public void close() throws InterruptedException {
+        super.close();
+        if (null!= mysqlTaskThread) {
+            mysqlTaskThread.close();
+        }
+    }
+    
+    /**
+     * Run task thread.
+     */
+    public void run() {
+        try {
+            // TODO use while true or use ThreadLocal
+            binlogPosition = new BinlogPosition(new BinlogPosition().getServerId(), new BinlogPosition().getServerUuid(), new BinlogPosition().getSequence());
+            while (isRunning()) {
+                try {
+                    if (null == inputSplit) {
+                        inputSplit = inputSplitter.getNextInputSplit();
+                        if (null == inputSplit) {
+                            throw new SyncTaskExecuteException("input split cannot be null.");
+                        } else {
+                            inputSplit.setConnection(dataSourceManager.getDataSource(inputSplit.getDataSourceConfig()));
+                            inputSplit.setBinlogPosition(binlogPosition, binlogPositionInitialized);
+                            log.info("dump from {}", inputSplit.getCurrentBinlogPosition());
+                            if (null!= mysqlTaskThread) {
+                                mysqlTaskThread.run();
+                            }
+                        }
+                    } else {
+                        Record record = null;
+                        try (InputSplit inputSplit =
+
+Precision: 0
+Recall: 0
+F1 Score: 0

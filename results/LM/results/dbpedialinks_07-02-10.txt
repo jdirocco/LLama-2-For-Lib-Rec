@@ -1,0 +1,100 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: dbpedia/links
+    Project Description: DBpediaLinks\n=============\nA repo that contains links and alternative classifications for DBpedia. Other database owners can contribute links into the links folder. The link framework is run each day and validates all link contributions. An overiew and current errors can be seen at the . \n\n About\n\nLinks are the key enabler for retrieval of related information on the Web of Data and DBpedia is one of the central interlinking hubs in the Linked Open Data LOD cloud. The DBpediaLinks repository maintains linksets between DBpedia and other LOD datasets. System for maintenance, update and quality assurance of the linksets are in place and can be explored further.\n\nIn this README, we will include descriptions on how to download and use the links, run all available tools as well as pointers to the most important documentation. if questions remain please use the . If you want to give us more feedback, feel free to use the .\n\n Why upload your links?\nAll links you are contributing will be loaded after a quality check into the main DBpedia datasets and therefore will link to your data. Users of DBpedia can then better find your data. Also, we will be able to tell you which other external databases link to your data. \n\n Repository license\nAll data in the repository links folder is provided as CC0. All software is provided under Apache 2.0 License.\n\nPlease cite our :\n\n\n How to contribute links to DBpedia\nIf you\'re interested in contributing links and to learn more about the project, please visit the for more detailed informations. \n\n How to create/update links for one dataset\nIf you want to update links for one dataset, either create a new folder or update/patch an existing linkset and send a new pull request. Please follow the to learn more about how to create a patch for the dataset which will be applied automatically on the next release.\n\nTo make sure that your dataset is following proper conventions as mentioned in the . Below are instructions to run the framework and validation for your contributed folder before sending the pull request. \n\n How to download the monthly link release\nIf you want to download the current, or older, releases of the given links, please go and click at the corresponding month.\n\n How to download the daily link snapshot\n\nThe publishing process is automated via a cronjob which will run all given downloads, scripts, LIMES/SILK configurations, patches, etc., to generate the linksets. It is executed daily on our own server and published check out the for more informations regarding the automated process, how to set it up, run it and customize it.\n\n Overview of current linksets\nAn overiew and current errors can be seen at the . \n\n How to run the link extraction framework\n\n Install\n\nTests are deactivated by default. Tests will test the links, so activating tests will make a full run of the software.\n\n\n Running\n\n Create a Snapshot\n\n Create a Snapshot and Run Scripts increases runtime immensely\n\n Run Everything for One Folder e.g., your contributed link folder\n\n\n description of further tools in the repo and how to access/execute them\n\n \xe2\x80\x94 This script can be executed via python 3 please note that must be installed. On start, it will prompt for a full folder path; please insert the full path to the linkset destinated main folder. All ntriple files found there will be read and compared to every other linkset within the folder, to check if subjects within the given linkset are contained in other linksets. All triples will be stored within a file.\n\n Contributors alphabetically\n\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n'
+    Existing Dependencies:
+    org.aksw.jena-sparql-api:jena-sparql-api-resources
+- org.aksw.rdfunit:rdfunit-core
+- org.aksw.jena-sparql-api:jena-sparql-api-core
+- org.apache.jena:jena-arq
+- net.sf.jopt-simple:jopt-simple
+- com.google.code.gson:gson
+- org.apache.jena:jena-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; 2018</p>
+        </div>
+    <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="<?php echo base_url();?>asset/jquery/jquery.min.js"></script>
+    <script src="<?php echo base_url();?>asset/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>asset/tinymce/tinymce.min.js"></script>
+
+    <script src="<?php echo base_url();?>asset/jquery/jquery.validate.min.js"></script>
+
+    <script>
+      tinymce.init({
+        selector: '#textarea',
+        plugins: 'link code',
+        menubar: false,
+        statusbar: false
+      });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $("#form").validate({
+                rules:{
+                    username: "required",
+                    password: "required"
+                }
+            });
+        });
+    </script>
+    
+
+</body>
+
+</html>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> // Package config provides the /config APIs
+package config
+
+import (
+	"net/http"
+
+	"github.com/julienschmidt/sse"
+)
+
+func (h *Handler) sseHandler(w ht.NewServerStream(w)
+	h.broadcaster.Subscribe(stream, func(event interface{}) bool {
+		stream.Outgoing <- sse.Event{
+			Data: []byte(event.(string)),
+		}
+		return true
+	})
+}
+tp.ResponseWriter, r *http.Request) {
+	stream := sse
+
+Precision: 0
+Recall: 0
+F1 Score: 0

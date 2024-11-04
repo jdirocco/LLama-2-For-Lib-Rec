@@ -1,0 +1,178 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: cpesch/RouteConverter
+    Project Description: \n\n\n\n\nWhat is RouteConverter?\n=======================\n\nRouteConverter is a popular open source tool to display, edit, enrich and convert\nroutes, tracks and waypoints licensed under the GNU Public License.\nSee for details about features, supported formats\nand languages, screenshots, frequently asked questions and how you can help.\n\nDownloads\n=========\n\nStable releases are available at are frequently offered at you want to contribute\n=========================\n\nPatches and pull requests are always welcome. If you minimize your diff, it\'s more\nlikely that your contribution will be applied to the code base. Please stick to the\ncode standards and formatting that you run across. And don\'t forget to add tests for\nyour changes ;\n\nCONTRIBUTORS.txt provides a list of the people who helped developing RouteConverter.\n\nHow to develop for RouteConverter\n=================================\n\n1. Install a recent Java SDK, version 8 or later, from Clone RouteConverter from github:\n \n git clone git@github.com:cpesch/RouteConverter.git\n\n3. Open RouteConverter sources in an Integrated Development Environment IDE\n\n IntelliJ\n Install IntelliJ IDEA Community Edition from Choose "File/Open Project..." and the root pom.xml.\n\n Eclipse\n Install Eclipse IDE for Java Developers from Install m2eclipse from Choose "File/Import..." and "General/Maven Projects" and the root directory.\n\n NetBeans\n Install NetBeans IDE Java SE from Install Git via "My NetBeans Install Plugins"\n Choose "Open Project..." and the root directory.\n\n4. Let JAVAHOME refer to the Java SDK\n \n set JAVAHOME=c:\\Programm Files\\Java\\jdk1.8.0271\n\n Put JAVAHOME into your PATH\n\n set %PATH%=%JAVAHOME%:%PATH%\n\n5. Build RouteConverter with the Maven wrapper\n \n mvnw clean package\n\n6. Run RouteConverter\n \n java jar RouteConverterCmdLine/target/RouteConverterCmdLine.jar\n java jar RouteConverterLinuxOpenSource/target/RouteConverterLinuxOpenSource.jar\n java jar RouteConverterMacOpenSource/target/RouteConverterMacOpenSource.jar\n java jar RouteConverterWindowsOpenSource/target/RouteConverterWindowsOpenSource.jar\n\nHave fun!\n\nChristian\n'
+    Existing Dependencies:
+    com.sun:javafx
+- com.intellij:forms-rt
+- org.mapsforge:mapsforge-map-reader
+- ${project.groupId}:browser-mapview
+- ${project.groupId}:route-converter-offline
+- ${project.groupId}:rest
+- com.sun:javaws
+- org.slf4j:slf4j-jdk14
+- commons-cli:commons-cli
+- ${project.groupId}:route-converter
+- ${project.groupId}:navigation-formats
+- gpsbabel.gpsbabel:mac.os_x.x86
+- org.mapsforge:mapsforge-map-awt
+- net.sf.trove4j:trove4j
+- ${project.groupId}:route-converter-license
+- ${project.groupId}:brouter
+- com.graphhopper:graphhopper-core
+- org.mapsforge:mapsforge-map
+- ${project.groupId}:graphhopper
+- commons-lang:commons-lang
+- ${project.groupId}:mapsforge-maps
+- ${project.groupId}:googlemaps
+- org.apache.httpcomponents:httpclient
+- ${project.groupId}:common-gui
+- com.fasterxml.jackson.core:jackson-core
+- commons-codec:commons-codec
+- slash.navigation:navigation-formats
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 27 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Administrator </div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/dashboard" >
+
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <!-- <div class="sidebar-heading">
+                Interface
+            </div>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/administrator/pemasukan">
+                    <i class="fas fa-file-upload"></i>
+                    <span>Upload Laporan </span></a>
+            </li> -->
+
+            <li class="nav-item active">
+                <a class="nav-link" href="/administrator/laporan">
+                    <i class="fas fa-file-upload"></i>
+                    <span>Laporan Pembayaran </span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="/administrator/pembayaran">
+                    <i class="fas fa-file-upload"></i>
+                    <span>Pembayaran SPP </span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/administrator/peminjaman">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>Peminjaman Buku </span></a>
+            </li>
+
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pages</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Login Screens:</h6>
+                        <a class="collapse-item" href="login.html">Login</a>
+                        <a class="collapse-item" href="register.html">Register</a>
+                        <a class="collapse-item" href="forgot-password.html">F
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 27 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ﻿using System;
+using System.Diagnostics;
+using System.Text;
+using System.Xml;
+
+class ParseAndPrintXML
+{
+    static void Main()
+    {        
+        string xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n" +
+        "<!--This is a sample XML file for testing purposes-->\r\n" +
+        "<catalog>\r\n" +
+        "  <book id=\"bk101\">\r\n" +
+        "    <author>Gambardella, Matthew</author>\r\n" +
+        "    <title>XML Developer's Guide</title>\r\n" +
+        "    <genre>Computer</genre>\r\n" +
+        "    <price>44.95</price>\r\n" +
+        "    <publish_date>2000-10-01</publish_date>\r\n" +
+        "    <description>An in-depth look at creating applications\r\n" +
+        "      with XML.</description>\r\n" +
+        "  </book>\r\n" +
+        "</catalog>\r\n";
+        ParseXML(xml);
+    }
+
+    static void ParseXML(string xml)
+    {
+        XmlDocument XMLDocument = new XmlDocument();
+        XMLDocument.LoadXml(xml);        
+
+        ////Write all text nodes from all levels of the xml document
+        //XmlNodeList XMLNodeList = XMLDocument.SelectNodes("//text()");
+        //foreach (XmlNode node in XMLNodeList)
+        //{
+        //    Console.WriteLine(node.Value);
+        //}
+
+        //Write all text nodes that are descendants of the node catalog
+        XmlNodeList XMLNodeList = XMLDocument.SelectNodes("/catalog/text()");
+        foreach (XmlNode node in XMLNodeList)
+        {
+            Console.WriteLine(node.Value);
+        }
+    }
+}
+
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

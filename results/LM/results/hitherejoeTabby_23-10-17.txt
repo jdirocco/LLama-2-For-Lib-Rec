@@ -1,0 +1,139 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: hitherejoe/Tabby
+    Project Description: Tabby\n \n=====\n\n\n \n\nTabby Cat, is a simple sample application demoing the features of the new Chrome Custom Tabs support library for Android. Using this application you can demo:\n\n Coloring the toolbar\n Displaying the title\n Customising the close icon\n Adding an action bar icon\n Adding menu items\n Using custom animations\n\nThe application uses Helper Classes from the .\n\n\n\n\n \n\n\n\nRequirements\n\n\n .\n Android .\n Android SDK Tools\n Android SDK Build tools 23.0.0.0\n Android Support Repository\n Android Support library\n\nBuilding\n\n\nTo build and install a debug version, run this from the root of the project:\n\n ./gradlew installDebug\n\nAttributions\n\n\nThanks to the following for use of images off of Noun Project:\n\n Cat Icon\n'
+    Existing Dependencies:
+    com.squareup.sqlbrite:sqlbrite
+- com.jakewharton.timber:timber
+- org.glassfish:javax.annotation
+- de.hdodenhof:circleimageview
+- com.squareup.okhttp:okhttp
+- com.jakewharton:butterknife
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<section class="content-header" id="contentheader">
+  <h1>
+    Penerimaan
+    <small></small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Penerimaan</a></li>
+    <li class="active">Data Pengembalian</li>
+  </ol>
+</section>
+<section class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <?php echo $this->session->flashdata('message');?> 
+      <div class="nav-tabs-custom">
+        <ul class="nav nav-tabs">
+          <li class=""><a href="#tab_1" data-toggle="tab"  id="a_tab1">Pesan Baru</a></li>
+          <li ><a href="#tab_2" data-toggle="tab" id="a_tab2">Daftar Pesanan Selesai</a></li>
+          <li><a href="#tab_3" data-toggle="tab" id="a_tab3">Riwaysat Pesanan</a></li>
+          <li><a href="#tab_4" data-toggle="tab" id="a_tab4">Riwaysat Pengembalian</a></li>
+        </ul>
+        <div class="tab-content"  id="tab">
+          <div class="tab-pane active" id="tab_1">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-default">+ Tambah</button>
+            
+            <div class="box">
+              <div class="box-body">
+                <div class="row" id="pesan">
+                <?php foreach ($pesan as $key):?>
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                      <span class="info-box-icon bg-purple"><i class="fa fa-fw fa-cab"></i></span>
+                      <div class="info-box-content">
+                  <!--         <span class="info-box-text">Nama Driver</span>
+                          <strong id="nama_driver">nama</strong>  -->
+                          <span class="info-box-text"><?php echo $key->id_pemesanan;?></span>
+                              <button type="button" class="btn btn-default" onclick="selesai(<?php echo $key->id_pemesanan;?>)">Detail</button>
+                      </div>
+                    </div>
+                  </div>
+                <?php endforeach;?>
+              </div>
+             </div>
+            </div>
+        
+          <!-- </div> -->
+          <!-- /.tab-pane -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="modal fade" id="modal-default">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>nstant
+								ifNil: [nil] ] ]
+		ifNone: [ 
+			(self isPrimitive and: [self hasFFIType])
+				ifTrue: [ 
+					self isPointers
+						ifTrue: [ 
+							self classLayout instSize + 1. ]
+ 						ifFalse: [ 
+							self isFloat
+								ifTrue: [ 4 ]
+								ifFalse: [ self byteSize ] ]]].
+	^bytes ifNil: [self basicSize] *OpalCompiler-Core
+byteSize
+	"Answer the number of bytes of my instances. 
+	 This value is computed lazily. It will be wrong 
+	 unless the class is finalized."
+	
+	|  bytes|
+	bytes := self instVarNamed: #'bytes'.
+	(bytes notNil and: [bytes isInteger]) ifTrue: [^bytes ].
+	
+	bytes := self classLayout
+		allFields do: [ :field | 
+			field type == #weak	ifTrue: [^nil].
+			field type == #ephemeron	ifTrue: [^nil].
+			bytes := field index > 1000	 
+				ifTrue: [ nil ]
+				ifFalse: [ 
+					(field instVarIndexForClass: self classBinding value)
+						ifNotNil: [ :index | 
+							self classLayout fieldOffset: index.
+							self classLayout
+								instVarIsBytes: index;
+								instanceVariableSizeAt: index.
+							self classLayout
+								isVariableAt: index;
+								isIndexableAt: index.
+							(self classLayout slotScope fieldTypeAt: index) isCo
+
+Precision: 0
+Recall: 0
+F1 Score: 0

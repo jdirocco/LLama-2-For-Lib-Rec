@@ -1,0 +1,149 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: richfaces/richfaces-cdk
+    Project Description: '
+    Existing Dependencies:
+    org.apache.maven.plugin-tools:maven-plugin-annotations
+- xmlunit:xmlunit
+- org.glassfish:javax.faces
+- org.jboss.test-jsf:jsf-mock
+- org.freemarker:freemarker
+- org.jboss.spec:jboss-javaee-web-6.0
+- org.codehaus.plexus:plexus-utils
+- com.google.guava:guava
+- org.richfaces.cdk:annotated-component-common
+- org.codehaus.plexus:plexus-velocity
+- javax.xml.bind:jaxb-api
+- org.richfaces.framework:richfaces-commons
+- com.google.inject:guice
+- com.google.inject.extensions:guice-assistedinject
+- com.sun:com.sun
+- com.sun.xsom:xsom
+- org.richfaces.cdk:commons
+- junit:junit
+- org.richfaces.cdk:annotations
+- org.jboss.el:jboss-el
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+        <table >
+            <tr>
+                <td>
+                    <div id="container">
+                        <canvas id="canvas" width="<?php echo $width?>" height="<?php echo $height;?>" style="border:1px dotted blue!important"></canvas>
+                    </div>
+                </td>
+                <td> 
+                     <button onclick="download_data()">Download Data</button> 
+                     <div id = 'export'></div>
+                </td>
+            </tr>
+        </table>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>rvice;
+
+  let mockHttpClient: HttpClient;
+  let mockStore: Store<AppState>;
+  let mockLogger: Logger;
+  let mockActivatedRoute: ActivatedRoute;
+  const testData = require('./testdata/get-all-users.json');
+
+  const testUser: User = testData.users[4];
+  const testUserNoRoles: User = testData.users[7];
+  const testUserAdmin: User = testData.users[0];
+
+  beforeEach(async () => {
+    mockLogger = jasmine.createSpyObj<Logger>('Logger', ['error', 'debug', 'warn']);
+    mockHttpClient = jasmine.createSpyObj<HttpClient>('HttpClient', ['get']);
+    // tslint:disable-next-line:prefer-const
+    let testStore = {
+      users: [testUser.userName],
+      roles: [],
+      user: {
+        id: testUser.userName,
+      },
+    };
+    mockStore = jasmine.createSpyObj<Store<AppState>>('Store', ['pipe', 'dispatch','select']);
+    mockStore.select.and.returnValue(of({
+     ...testStore,
+    }));
+    mockStore.pipe.and.returnValue(of(testStore));
+    await TestBed.configureTestingModule({
+      providers: [
+        AuthService,
+        { provide: HttpClient, useValue: mockHttpClient },
+        { provide: Logger, useValue: mockLogger},
+        { provide: Store, useValue: mockStore},
+        { provide: ActivatedRoute, useValue: mockActivatedRoute},
+      ]
+    });
+    service = TestBed.inject(AuthService);
+  });
+
+  afterEach(() => {
+    TestBed.resetTestingModule();
+  });
+
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+
+   it('should have the correct user', () => {
+    const user = service.currentUser();
+    expect(user).toEqual(testUser);
+  });
+
+  it('should return false when user cannot be found', () => {
+    const user = null;
+    const res = service.findCurrentUser(user.userName);
+    expect(res).toEqual(false);
+   });
+
+
+  it('should return true when user can be found', () => {
+    const users = service.users;
+    const res = service.findCurrentUser(testUser.userName);
+   // console.log('res ='+ res);
+    expect(users.users[testUser.userName]).toEqual(testUser);
+    expect(res).toEqual(true);
+   });
+
+  it('should remove user from list when user is removed', () => {
+    const users = service.users;
+    service.removeUser(testUser);
+   // console.log('remain ='+ users);
+    expect(users.users[testUser.userName]).toEqual('');
+    expect(users.roles).toEqual([]);
+   });
+
+  it('should remove user from list when user is removed', () => {
+    const users = service.users;
+    service.removeUser(testUserNoRoles);
+    // console.log('remain no roles ='+ users);
+    expect(users.users[
+
+Precision: 0.0
+Recall: 0.0
+F1 Score: 0

@@ -1,0 +1,208 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: vert-x3/vertx-rx
+    Project Description: = Rx extension for Vert.x\n\nimage:"Build Status 5.x",link=""\nimage:"Build Status 4.x",link=""\n\nVert.x module adding support for Reactive Extensions Rx using the Rx libraries. This\nallows Vert.x developers to use the Rx typesafe composable API to build Vert.x verticles.\nThis module provides helpers for adapting Vert.x stream and future constructs to Rx observables.\n\n== Documentation\n\n Documentation\n 2 Documentation\n 3 Documentation\n\n== Stack integration\n\nRxJava, RxJava2 and RxJava3 are integrated with the Vert.x stack.\n\n=== Integration tests\n\nIntegration tests are placed here:\n\n 2\n 3\n\n=== Integration docs\n\nIntegration docs are placed here:\n\n 3\n\nThe corresponding component uses an asciidoctor directive\nto embed the doc snippet:\n\nsource,asciidoc\n\nifeval::"$lang" == "java"\ninclude::override/rxjava3.adoc\nendif::\n\n\nVert.x Web Client example:\n\n replaced by\n\n final aggregation happens in the generation module.\n'
+    Existing Dependencies:
+    io.vertx:vertx-rx-java
+- io.vertx:vertx-docgen
+- io.reactivex.rxjava2:rxjava
+- io.vertx:vertx-dependencies
+- io.reactivex:rxgroovy
+- io.vertx:vertx-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+<!-------------------------------------------------------------------------------------------------------->
+<!----------MENU ----------------------------->
+  
+
+<?php 
+
+    $this->load->view('layout/header');
+    
+?>
+<style>
+    /*.menu-item-has-children {
+    
+    position: relative;
+  }
+  ul li:hover > a {
+    color: #23527c;
+}
+  /*.menu-item-has-children:after {
+    content: "\f0da";
+    font-family: FontAwesome;
+  } */
+  /*.navbar-toggler {
+    display: none;
+} */
+  /*.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    padding: 0;
+}
+.dropdown-menu {
+    background-color: #e9ecef;
+    padding: 2px 0;
+    margin: 0 1px;
+} */
+  /*.dropdown-menu > li {
+    position: relative;
+    text-align: center;
+}
+ .dropdown-menu > li > a{
+    padding: 10px 20px;
+    color: #23527c;
+    margin: 1px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #e9ecef;
+    display: block;
+}
+ .dropdown-menu > li:hover > a{
+    background-color: #23527c;
+    color: #ffffff;
+    text-decoration: none;
+
+}
+@media (min-width:768px){
+ .dropdown-menu {
+      display: block;
+  }
+ .navbar-toggler {
+      display: block;
+  }
+    
+} */
+.dropdown-menu > a:hover {
+  background-color: #23527c;
+  color: #ffffff;
+  text-decoration: none;
+}
+</style>
+<div id="menu" class="container">
+    <a href="index.html" class="navbar-brand">
+        <h1 class="navbar-brand-wrapper">
+            <img class="brand-logo" src="http://placehold.it/120x40" alt="">
+        </h1>
+    </a>
+    
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default bootnavbar ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <!--<li class="
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package org.elassandra;
+
+import com.datastax.driver.core.ConsistencyLevel;
+import com.datastax.driver.core.DataType;
+import com.datastax.driver.core.ProtocolVersion;
+import com.datastax.driver.core.UDTValue;
+import com.datastax.driver.core.UserType;
+
+/**
+ * @author vroyer
+ * @author Florian Leibert
+ *
+ */
+public abstract class SchemaStatement {
+    
+    public static final String TABLES_TABLE = "tables";
+    public static final String COLUMNS_TABLE = "columns";
+    public static final String INDEXES_TABLE = "indexes";
+    public static final String TYPES_TABLE = "types";
+    public static final String TRIGGERS_TABLE = "triggers";
+    public static final String FUNCTIONS_TABLE = "functions";
+    public static final String VIEWS_TABLE = "views";
+    public static final String VIEW_COLUMN_MAPPING_TABLE = "view_column_mapping_table";
+    public static final String INTERNAL_KEYSPACE_NAME = "_schema";
+    
+    public static final String TABLE_NAME = "name";
+    public static final String TABLE_IDX1 = "idx1";
+    public static final String TABLE_IDX2 = "idx2";
+    public static final String TABLE_TYPE = "type";
+    public static final String COLUMN_NAME = "name";
+    public static final String COLUMN_IDX = "idx";
+    public static final String COLUMN_TYPE = "type";
+    public static final String COLUMN_TYPE_KEY = "key   
+    protected static String createSchema(String tableName, ConsistencyLevel consistencyLevel) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("CREATE TABLE IF NOT EXISTS ")
+           .append(INTERNAL_KEYSPACE_NAME)
+           .append(".")
+           .append(tableName)
+           .append("(")
+           .append(TABLE_NAME)
+           .append(" text, ")
+           .append(TABLE_IDX1)
+           .append(" text, ")
+           .append(TABLE_IDX2)
+           .append(" text, ")
+           .append(COLUMN_NAME)
+           .append(" text, ")
+           .append(COLUMN_IDX)
+           .append(" int, ")
+           .append(COLUMN_TYPE)
+           .append(" text, ")
+           .append(COLUMN_TYPE_KEY)
+           .append(" boolean, ")
+           .append(COLUMN_TYPE_CLUSTERING_ORDER)
+           .append(" text, ")
+           .append(COLUMN_TYPE_ORDER)
+           .append(" int, ")
+           .append(INDEX_NAME)
+           .append(" text, ")
+           .append(INDEX_IDX1)
+           .append(" text, ")
+           .append(INDEX_IDX2)
+           .append(" text, ")
+           .append(INDEX_IDX3)
+           .append(" text, ")
+           .append(INDEX_IDX4)
+           .append(" text, ")
+           .append(INDEX_IDX5)
+           .append(" text, ")
+           .append(INDEX_IDX6)
+           .append(" text, ")
+           .append(INDEX_IDX7)
+           .append(" text, ")
+
+Precision: 0
+Recall: 0
+F1 Score: 0

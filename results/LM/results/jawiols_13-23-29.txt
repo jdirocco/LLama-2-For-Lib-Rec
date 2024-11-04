@@ -1,0 +1,175 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: jawi/ols
+    Project Description: OpenBench LogicSniffer\n\n\n\nThis is the public called\nthe .\nRefer to this for more information about the\nproject.\n\n FEATURES\n\nThe alternative Java client provides the following features:\n\n Cross platform: The client runs on Mac OS X 32/64bit, Windows 32/64 bit,\n Linux 32/64 bit and Solaris 32 bit\n\n Simple installation: No longer fiddling with the serial libraries RXTX in\n order to get the client up and running. The client embeds the suitable serial\n libraries for several operating systems\n\n Pluggable: Adding new functionality on the fly is possible and as easy as\n copying files to a single directory\n\n Looks and feels good: The client has a good look and feel, aiming at being as\n usable as possible and adhering to the human interface guidelines of the\n platform it is running on.\n\n DOCUMENTATION\n\nAll documentation is maintained in the .\n\n COMPILING THE SOURCES\n\nIn case you are interested in cloning this repository and compile it for\nyourself, you should do the following:\n\n $ git clone compiling the sources, you need to have at least a valid JDK 1.6 and\n\n\n\n\n LICENSE\n\n\n\n This program is free software; you can redistribute it and/or\n modify it under the terms of the GNU General Public License\n as published by the Free Software Foundation; either version 2\n of the License, or at your option any later version.\n\n This program is distributed in the hope that it will be useful,\n but WITHOUT ANY WARRANTY; without even the implied warranty of\n MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\n GNU General Public License for more details.\n\n You should have received a copy of the GNU General Public License\n along with this program. If not, see .\n\neclipse:
+    Existing Dependencies:
+    nl.lxtreme.ols.tool:i2c
+- purejavacomm:purejavacomm
+- org.osgi:org.osgi.core
+- tablelayout:TableLayout
+- nl.lxtreme.ols:runner
+- nl.lxtreme.ols:api
+- nl.lxtreme.ols.export:csv
+- nl.lxtreme.ols.tool:serialconsole
+- org.slf4j:slf4j-simple
+- org.apache.xmlgraphics:batik-util
+- nl.lxtreme.ols:lib.mydoggy
+- nl.lxtreme.ols.tool:linedecoder
+- org.ops4j.pax.runner:pax-runner-no-jcl
+- com.jgoodies:looks
+- nl.lxtreme.ols:service.config
+- org.apache.xmlgraphics:batik-awt-util
+- org.ops4j.pax.exam:pax-exam-junit4
+- nl.lxtreme.ols.device:logicsniffer
+- org.ops4j.pax.exam:pax-exam-container-paxrunner
+- org.apache.felix:org.apache.felix.fileinstall
+- nl.lxtreme.ols:util
+- purejavacomm:jna
+- nl.lxtreme.ols.tool:base
+- nl.lxtreme.ols.tool:state
+- nl.lxtreme.ols.tool:1wire
+- org.apache.xmlgraphics:batik-dom
+- org.ops4j.pax.exam:pax-exam-link-assembly
+- nl.lxtreme.ols.export:image
+- nl.lxtreme.ols.tool:jtag
+- nl.lxtreme.ols:service.acquisition
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 30 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <footer class="site-footer">
+        <div class="contenedor clearfix">
+            <div class="footer-informacion">
+                <h3>Sobre <span>gdlwebCamp</span></h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quas, quos eos ipsam dolore. Voluptatem quod, voluptate quos ipsam natus voluptates repudiandae voluptatem eius?</p>
+            </div>
+            <div class="ultimos-tweets">
+                <h3>Ultimos <span>tweets</span></h3>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quas, quos eos ipsam dolore.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quas, quos eos ipsam dolore.</li>
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, quas, quos eos ipsam dolore.</li>
+                </ul>
+            </div>
+            <div class="menu">
+                <h3>Redes <span>Sociales</span></h3>
+                <nav class="redes-sociales">
+                    <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                </nav>
+            </div>
+        </div>
+
+        <p class="copyright">
+        Todos los derechos Reservados GDLwb 2020. 
+        </p>
+
+        
+        <!--Begin MailChimp Signup Form-->
+        <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+            /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+        </style>
+        <div style="display:none;">
+            <div id="mc_embed_signup">
+            <form action="https://twitter.us5.list-manage.com/subscribe/post?u=90765947886461074021977&amp;id=986762099" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 30 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import React, { useState } from'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { Grid, Paper } from '@material-ui/core';
+import Button fronChange={onChange} />
+            <Button type="submit" className={classes.button}
+              variant="outlined" color="primary" onClick={() => setShow(!show)} >{buttonText}</Button>
+          </form>
+        </Paper>
+      </Grid>
+    </>
+  )
+}
+export default Input;m "@material-ui/core/Button";
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    padding: theme.spacing(3, 2),
+  },
+  form: {
+    display: "flex",
+    flexDirection: "column"
+  },
+  button: {
+    margin: theme.spacing(2, 0, 0),
+  }
+}))
+const Input = () => {
+  const classes = useStyles();
+  const [userInput, setUserInput] = useState('');
+  const [show, setShow] = useState(true);
+  const [buttonText, setButtonText] = useState('Show Answer')
+
+  const [state, setState] = useState('');
+  const inputChange = (e) => {
+    setUserInput(e.target.value)
+  }
+  const onChange = e => {
+    setState(e.target.value)
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (show) {
+      setUserInput(Math.sqrt(userInput, 2));
+    }
+    else {
+      setUserInput('');
+    }
+    setButtonText(buttonText === 'Answer'? 'Show Question' : 'Show Answer')
+  }
+  return (
+    <>
+      <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        justify="center"
+        style={{ minHeight: '90vh' }}
+      >
+        <Paper className={classes.root}>
+          <form className={classes.form} onSubmit={handleSubmit}>
+            <Grid>
+              <h3>{state? `${state}` : 'What is the square root of '}</h3>
+            </Grid>
+            <input
+              value={userInput}
+              className={classes.input}
+              placeholder='Enter Number'
+              o
+
+Precision: 0
+Recall: 0
+F1 Score: 0

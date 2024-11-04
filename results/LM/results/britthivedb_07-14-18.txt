@@ -1,0 +1,160 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: britt/hivedb
+    Project Description: HiveDB is a Java based system for horizontally partitioning MySQL databases. The HiveDB architecture is optimized for\nOLTP Online transaction processing datasets. HiveDB provides JDBC access to the database as well as providing\nHibernate support via HibernateShards.\n\nHere is what you will need in order to use HiveDB.\n Java 1.5\n Maven\n MySQL 5.0\n\n Building HiveDB from source\n\ngit clone git://github.com/britt/hivedb.git\ncd hivedb\nmvn install\n To install project files for your IDE use 'mvn eclipse:eclipse' or 'mvn idea:idea'\n\n Using HiveDB with Maven\n\nAdd the HiveDB repository to your pom.xml.\n\n\tHiveDB\n\t HiveDB as a dependency.\n\n\torg.hivedb\n\thivedb\n\t0.9.6SNAPSHOT\n\n\n\n"
+    Existing Dependencies:
+    mysql:mysql-connector-java
+- org.apache.cxf:cxf-rt-frontend-simple
+- commons-io:commons-io
+- org.apache.cxf:cxf-common-utilities
+- org.apache.cxf:cxf-rt-frontend-jaxws
+- commons-dbcp:commons-dbcp
+- hibernate:shards
+- org.apache.cxf:cxf-rt-bindings-http
+- org.springframework:spring-jdbc
+- org.apache.cxf:cxf-rt-transports-http
+- commons-lang:commons-lang
+- cglib:cglib-nodep
+- org.apache.velocity:velocity
+- org.springframework:spring-test
+- org.objenesis:objenesis
+- org.jmock:jmock
+- org.springframework:spring-context
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 18 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add Product</h4>
+        </div>
+        <div class="modal-body">
+          <form id="addproduct" action="" method="post" >
+            <div class="row">
+              <label for="name">Name of Product:</label>
+              <input type="text" name="name" value="" id="name" class="validate[required]" >
+            </div>
+            <div class="row">
+              <label for="description">Product Description:</label>
+              <input type="text" name="description" value="" id="description" class="validate[required]" >
+            </div>
+            <div class="row">
+              <label for="price">Product Price:</label>
+              <input type="number" name="price" value="" id="price"> 
+            </div>
+            <div class="row">
+              <button class="btn btn-success" id="save">Save</button>
+            </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="myModal2" role="dialog2">
+    <div class="modal-dialog modal-sm ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add Customer</h4>
+        </div>
+        <div class="modal-body">
+          <form id="add_customer" action="" method="post" >
+            <div class="row">
+              <label for="name">Name of Customer:</label>
+              <input type="text" name="cname" value="" id="cname" class="validate[required]" >
+            </div>
+            <div class="row">
+              <label for="description">Customer Description:</label>
+              <input type="text" name="cdescription" value="" id="cdescription" class="validate[required]" >
+            </div>
+            <div class="row">
+              <label for="price">Customer Price:</label>
+              <input type="number" name="cprice" value="" id="cprice" class="validate[required]" > 
+            </div>
+            <div class="row">
+              <button class="btn btn-success" id="save1">Save</button>
+            </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="myModal3" role="dialog3">
+    <div class="modal-dialog modal-sm
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 18 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t,
+  ],
+})
+export class PagesModule {
+}
+ import { NgModule } from '@angular/core';
+
+import { PagesComponent } from './pages.component';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { PagesRoutingModule } from './pages-routing.module';
+import { ThemeModule } from '../@theme/theme.module';
+import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
+import { SharedModule } from '../shared/shared.module';
+import { NbMenuModule } from '@nebular/theme';
+import { ReportsComponent } from './reports/reports.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+const PAGES_COMPONENTS = [
+  PagesComponent,
+];
+
+@NgModule({
+  imports: [
+    PagesRoutingModule,
+    ThemeModule,
+    DashboardModule,
+    MiscellaneousModule,
+    NbMenuModule,
+    SharedModule,
+    NgbModule,
+  ],
+  declarations: [
+   ...PAGES_COMPONENTS,
+    ReportsComponent,
+  ],
+  entryComponents:[
+    ReportsComponen
+
+Precision: 0
+Recall: 0
+F1 Score: 0

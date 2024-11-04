@@ -1,0 +1,103 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: rwinch/spring-modern-templating
+    Project Description: About\n=================\n\nSource Code and materials for . To run the samples import the project into Spring Tool Suite using the Gradle Eclipse plugin.\n\n\nRunning the sample project\n==================\n\nThe following provides information on setting up a development environment that can run the sample in . Other IDE's should work using Gradle's IDE support, but have not been tested.\n\n IDE Setup\n Install Spring Tool Suite 3.0.0\n You will need the following plugins installed can be found on the Extensions Page\n\t Gradle Eclipse\n Importing the project into Spring Tool Suite\n FileImport...Gradle Project\n\n"
+    Existing Dependencies:
+    com.sun.jersey:com.sun.jersey
+- org.scalatest:org.scalatest
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.fusesource.scalate:scalate-spring-mvc
+- org.markdownj:org.markdownj
+- org.osgi:org.osgi
+- org.seleniumhq.selenium:org.seleniumhq.selenium
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <footer class="site_footer" id="site_footer">
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row d-flex align-items-center ">
+                    <p class="col-lg-12 col-md-12 text-center">
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="fa fa-map-marker"></i> Tanger, Morococo</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="{{asset('js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{asset('js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{asset('js/jquery.slicknav.min.js') }}"></script>
+    <script src="{{asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{asset('js/jquery.richtext.min.js') }}"></script>
+    <script src="{{asset('js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{asset('js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{asset('js/main.js') }}"></script>    
+    @yield('scripts')
+
+</body>
+</html>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+        if not isinstance(value, str):
+            return '{} is not a string'.format(value)
+
+        return None
+
+    def validate_value_type(self, name, value):
+        if not isinstance(value, list):
+            return '{} is not a list'.format(value)
+
+        return None
+ import os
+
+from.. import constants as K
+from. import base
+
+class List(base.BaseField):
+    """
+    The list field represents a list type in a configuration file
+
+    :param default_value: The default value for this parameter if it's not
+                          defined. It's used in the constructor.
+    :type default_value: list
+    """
+    def __init__(self, default_value = None, **kwargs):
+        super().__init__(default_value = default_value, **kwargs)
+        self.value_type = list
+
+    def to_yaml(self, value, **kwargs):
+        return value
+
+    def parse_yaml(self, node, **kwargs):
+        return node
+
+    def validate_default(self, name, value):
+
+Precision: 0
+Recall: 0
+F1 Score: 0

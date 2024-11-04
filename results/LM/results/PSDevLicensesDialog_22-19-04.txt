@@ -1,0 +1,151 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: PSDev/LicensesDialog
+    Project Description: LicensesDialog \n==============\n\nLicensesDialog is an open source library to display licenses of thirdparty libraries in an Android app.\n\n\nDownload\n\n\nDownload \nfrom the sample module for examples on how to create the dialogs. \n\nSample\n\n\nYou can get the latest sample from \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\nLicense\n\n\n Copyright 2013 Philip Schiffer\n\n Licensed under the Apache License, Version 2.0 the "License";\n you may not use this file except in compliance with the License.\n You may obtain a copy of the License at\n\n Unless required by applicable law or agreed to in writing, software\n distributed under the License is distributed on an "AS IS" BASIS,\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n See the License for the specific language governing permissions and\n limitations under the License.\n\n1:
+    Existing Dependencies:
+    de.psdev.licensesdialog:licensesdialog
+- org.sonatype.oss:oss-parent
+- org.robolectric:robolectric
+- com.google.android:android
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+@extends('backend.master')
+
+@section('content')
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>Edit Products</h2>
+        </div>
+        <div class="col-lg-6">
+            <div class="btn-group float-right mb-2">
+                <a href="{{route('admin.products')}}" class="btn btn-primary ml-2"><i class="fa fa-table"></i> Product Table</a>
+                <a href="{{route('admin.product.create')}}" class="btn btn-primary ml-2"><i class="fa fa-table"></i> Create Product</a>
+            </div>
+        </div>
+    </div>
+    {{-- <br> --}}
+    <div class="row">
+
+        <div class="col-lg-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <form action="{{route('admin.product.update.image')}}" method="POST" enctype="multipart/form-data">
+                            @csrf
+
+
+
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            @if ($product->thumb)
+                                                                                                        <img src="{{ asset('uploads/product-upload/thumbImg/'.$product->thumb) }}" alt="{{$product->name}}">
+                                            @else
+                                                                                                        <img src="{{ asset('uploads/product-upload/smallImg/'.$product->small_img) }}" alt="{{$product->name}}">
+                                            @endif
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="main_image[]" id="" class="select2 mb-2 form-control" multiple>
+                                               
+                                                
+                                                <option value="">Select Main Image</option>
+                                                <option value="1">Main Image</option>
+                                                
+                                               
+                                                
+                                                
+                                            </select>
+                                            <input type="hidden" name="pro_id" value="{{@old('pro_id')}}">
+                                        </div>
+                                        
+                                        <button type="submit" class="btn btn-success ml-2">Update</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <select name="sub_image[]" id="" class="select2 mb-2 form-control" multiple>
+                                               
+                                                <option value="">Select Sub Image</option>
+                                                <option value="1">Main Image</option>
+                                               
+                                            </select>
+                                            <input type="hidden" name="pro_id" value="{{@old('pro_
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>d) {
+    // TODO: handle exception
+}
+
+// Set the default response
+$response = $default_response;
+
+// Send response
+echo $response;
+ <?php
+require_once "../config.php";
+$default_response = '{"error":"Invalid API call"}';
+
+$action = $_GET["action"]?? false;
+$id = $_GET["id"]?? false;
+
+if ($action == "create") {
+    include "create.php";
+}
+
+// TODO: check if $action is a valid function
+elseif ($action == "get_all") {
+    include "get_all.php";
+}
+
+elseif ($action == "get") {
+    include "get.php";
+}
+
+elseif ($action == "delete") {
+    echo delete($id);
+}
+
+elseif ($action == "delete_all") {
+    delete_all();
+}
+
+// TODO: handle exceptions
+elseif (!$i
+
+Precision: 0
+Recall: 0
+F1 Score: 0

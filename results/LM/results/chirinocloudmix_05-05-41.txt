@@ -1,0 +1,162 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: chirino/cloudmix
+    Project Description: Welcome to the CloudMix project!\n\nFor more information see\n
+    Existing Dependencies:
+    org.springframework:spring-aop
+- org.apache.cxf:cxf-rt-frontend-jaxws
+- org.springframework.osgi:spring-osgi-core
+- org.springframework:spring-test
+- com.google.code.google-collections:google-collect
+- org.mortbay.jetty:jetty
+- javax.annotation:jsr250-api
+- javax.xml.bind:jaxb-api
+- org.markdownj:markdownj
+- org.easymock:easymock
+- org.slf4j:slf4j-jcl
+- com.sun.jersey:jersey-core
+- org.apache.xbean:xbean-spring
+- org.apache.geronimo.specs:geronimo-jms_1.1_spec
+- org.springframework:spring-context
+- org.springframework.osgi:spring-osgi-io
+- org.apache.activemq:kahadb
+- org.apache.activemq:activemq-camel
+- log4j:log4j
+- org.apache.camel:camel-jms
+- org.scalatest:scalatest
+- org.fusesource.cloudmix:org.fusesource.cloudmix.agent
+- commons-codec:commons-codec
+- org.fusesource.mop:mop-core
+- org.fusesource.cloudmix:org.fusesource.cloudmix.controller
+- commons-logging:commons-logging
+- org.eclipse.equinox.http:servlet
+- org.easymock:easymockclassextension
+- org.scala-lang:scala-library
+- org.apache.camel:camel-spring
+- org.apache.servicemix:servicemix-shared
+- com.sun.jna:jna
+- org.scala-lang:scala-compiler
+- javax.mail:mail
+- org.osgi:osgi_R4_core
+- org.scala-tools.testing:specs_2.8.0
+- org.springframework:spring
+- org.apache.servicemix.specs:org.apache.servicemix.specs.jaxws-api-2.1
+- org.fusesource.cloudmix:org.fusesource.cloudmix.common
+- org.fusesource.cloudmix:org.fusesource.cloudmix.agent.mop.web
+- commons-logging:commons-logging-api
+- org.fusesource.cloudmix:org.fusesource.cloudmix.testing
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 43 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     var map;
+
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 19.0755981, lng: 72.8776356},
+            zoom: 13
+          });
+           var marker = new google.maps.Marker({
+                position: {lat: 19.0755981, lng: 72.8776356},
+                map: map,
+                icon: 'img/map-marker-2_3.png'
+            }); 
+            var marker = new google.maps.Marker({
+                position: {lat: 19.0753843, lng: 72.8793338},
+                map: map,
+                icon: 'img/map-marker-2_3.png'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 19.0774523, lng: 72.8783066},
+                map: map,
+                icon: 'img/map-marker-2_3.png'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 19.0753685, lng: 72.8803518},
+                map: map,
+                icon: 'img/map-marker-2_3.png'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 19.074861, lng: 72.8737853},
+                map: map,
+                icon: 'img/map-marker-2_3.png'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 19.0759786, lng: 72.8779505},
+                map: map,
+                icon: 'img/map-marker-2_3.png'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 19.0764014, lng: 72.8778575},
+                map: map,
+                icon: 'img/map-marker-2_3.png'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 19.0770415, lng: 72.8792825},
+                map: map,
+                icon: 'img/map-marker-2_3.png'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 19.0770415, lng: 72.8792825},
+                map: map,
+                icon: 'img/map-marker-2_3.png'
+            });
+            var marker = new google.maps.Marker({
+                position: {lat: 19.0779613, lng: 72.878375},
+                map: map,
+                icon: 'img/map-marker-2_3.png'
+            });
+              var marker = new google.
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 43 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.github.yamamotoj.singlemoduleapp.package44
+
+class Foo04411 {
+    fun method0() {
+        Foo04410().method5()
+    }
+
+    fun method1() {
+        method0()
+    }
+
+    fun method2() {
+        method1()
+    }
+
+    fun method3() {
+        method2()
+    }
+
+    fun method4() {
+        method3()
+    }
+
+    fun method5() {
+        method4()
+    }
+}
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

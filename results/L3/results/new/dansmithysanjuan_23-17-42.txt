@@ -1,0 +1,224 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications. provide recommendations exclusively in the Maven format: groupId:artifactId:version.
+    Given the project details below:
+    Project Name: patloew/RxLocation
+Project Description: The Reactive Location API Library for Android is now deprecated and not maintained anymore. Please switch to the CoLocation library by Micha\xc5\x82 Charmas. This library wraps the Location APIs in RxJava 2.x.
+Existing Dependencies Include: org.powermock:powermock-module-junit4
+- io.reactivex.rxjava2:rxandroid
+- com.squareup.leakcanary:leakcanary-android
+- io.reactivex.rxjava2:rxjava
+- com.google.android.gms:play-services-location
+- com.squareup.leakcanary:leakcanary-android-no-op
+
+Project Name: frankred/jSona
+Project Description: JSona is a configuration file(JSON), vcj and JavaFx based music and media player. The aim is to always keep your playlists in synch with your music folders. For fast fulltext search jSona uses Apache Lucene (http://lucene.apache.org/core/).
+Existing Dependencies Include: uk.co.caprica:vlcj
+- org.apache.lucene:lucene-analyzers-common
+- org.apache.lucene:lucene-core
+- commons-io:commons-io
+- com.mpatric:mp3agic
+- org.apache.lucene:lucene-queryparser
+- com.github.tulskiy:jkeymaster
+- org.apache.commons:commons-lang3
+
+Project Name: querydsl/querydsl
+Project Description: Querydsl is a framework which enables the construction of type-safe SQL-like queries for multiple backends including JPA, MongoDB and SQL in Java. Querying JPA and MongoDB using a fluent API.
+Existing Dependencies Include: org.springframework:spring-aop
+- com.mysema.codegen:codegen
+- org.xerial:sqlite-jdbc
+- org.springframework:spring-test
+- com.google.guava:guava
+- com.jolbox:bonecp
+- org.hamcrest:hamcrest-library
+- com.oracle:ojdbc6
+- com.querydsl:querydsl-sql-spatial
+- com.google.inject.extensions:guice-persist
+- com.querydsl:querydsl-apt
+- org.postgresql:postgresql
+- org.easymock:easymock
+- com.querydsl:querydsl-spatial
+- org.hibernate:hibernate-ehcache
+- javax.inject:javax.inject
+- org.springframework:spring-context
+- org.eclipse.persistence:eclipselink
+- org.firebirdsql.jdbc:jaybird-jdk16
+- log4j:log4j
+- org.mongodb.morphia:morphia
+- org.hsqldb:hsqldb
+- cglib:cglib
+- org.apache.lucene:lucene-queryparser
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.apache.maven:maven-project
+- org.hibernate:hibernate-envers
+- com.querydsl:querydsl-codegen
+- net.sourceforge.jtds:jtds
+- org.springframework.roo:org.springframework.roo.annotations
+- org.apache.ant:ant
+- com.querydsl:querydsl-lucene3
+- com.thoughtworks.proxytoys:proxytoys
+- org.scala-lang:scala-library
+- org.geolatte:geolatte-geom
+- com.h2database:h2
+- com.querydsl:querydsl-sql-codegen
+- org.hibernate:hibernate-annotations
+- org.scala-lang:scala-compiler
+- org.reflections:reflections
+- org.datanucleus:datanucleus-api-jdo
+- org.mongodb:mongo-java-driver
+- org.hibernate:hibernate-validator
+- com.infradna.tool:bridge-method-annotation
+- com.querydsl:querydsl-sql-spring
+- javax.transaction:jta
+- org.slf4j:slf4j-log4j12
+
+Project Name: GoogleCloudPlatform/google-cloud-datastore
+Project Description: This repository contains low-level Java and Python client libraries for Google Cloud Datastore. For more idiomatic and usable client libraries in these languages, please visit the [Google Cloud Dataastore Client for Java][java-datastore] and Google Cloud Database Client for Python
+Existing Dependencies Include: com.google.http-client:com.google.http-client
+- com.google.truth:com.google.truth
+- com.google.cloud.datastore:datastore-v1-proto-client
+- com.google.guava:com.google.guava
+- com.google.api-client:com.google.api-client
+- com.google.oauth-client:google-oauth-client
+- com.google.truth:truth
+- com.google.oauth-client:com.google.oauth-client
+
+Project Name: eclipse/tycho
+Project Description: Eclipse Tycho is a manifest-first way to build and build Eclipse plug-ins/OSGi bundles/RCP applications\n，nwith Maven. This repository contains all the features and documentation that will help you migrate to the official Eclipse site.
+Existing Dependencies Include: org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.codehaus.plexus:plexus-component-annotations
+- org.codehaus.plexus:plexus-container-default
+- org.eclipse.tycho:tycho-testing-harness
+- org.apache.maven:maven-core
+- org.eclipse.tycho:org.eclipse.jdt.compiler.apt
+- org.codehaus.plexus:plexus-utils
+- org.eclipse.tycho:org.eclipse.osgi
+- org.eclipse.tycho:tycho-core
+- org.apache.commons:commons-exec
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Reccomend me some of these libraries that can be added to the project to enhance its capabilities.
+    Project Name: dansmithy/sanjuan
+    Project Description: a'Attempt at making an online version of the strategy card game, San Juan.b'An interactive version of San Juan, using the same strategy card system as in the game, but with different rules.
+    Existing Dependencies:
+    com.github.rest-driver:rest-client-driver
+- org.jboss.resteasy:resteasy-jaxb-provider
+- org.codehaus.jackson:jackson-xc
+- commons-io:commons-io
+- org.slf4j:slf4j-simple
+- org.codehaus.jackson:jackson-jaxrs
+- org.slf4j:slf4j-api
+- org.springframework.security:spring-security-core
+- org.mockito:mockito-all
+- org.hamcrest:hamcrest-core
+- com.github.rest-driver:rest-server-driver
+- org.aspectj:aspectjweaver
+- commons-lang:commons-lang
+- junit:junit-dep
+- org.jboss.resteasy:resteasy-jaxrs
+- org.jboss.resteasy:resteasy-spring
+- org.springframework:spring-webmvc
+- net.sf.json-lib:json-lib
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     Based on the provided project descriptions, here are five libraries that could enhance the capabilities of each project, along with a brief explanation of how they could benefit each project:
+
+    For the "patloew/RxLocation" project:
+
+   1. com.google.guava:guava - This library provides a set of utility classes for working with collections, iterables, and common data structures in Java. It could help improve the performance and readability of the project's code by providing more efficient and concise ways of handling collections.
+
+   2. com.nothem.stub:stub - This library provides a simple way to create stubs for JUnit tests, which could help improve the project's test coverage and speed up testing processes.
+
+   3. org.apache.commons.lang3:commons-lang3 - This library provides a set of utility classes for working with strings, arrays, and other common data types in Java. It could help simplify and improve the project's code by providing more concise and efficient ways of handling common data types.
+
+    For the "frankred/jSona" project:
+
+   1. com.fasterxml.jackson.dataformat:jackson-dataformat-csv - This library provides a simple and efficient way to parse and write CSV data in Java. It could help improve the project's data import and export functionality by providing a more straightforward and reliable way of handling CSV data.
+
+   2. org.apache.lucene:lucene-analysis-icu - This library provides a set of analysis modules for working with different languages and locales in Java. It could help improve the project's full-text search functionality by providing more accurate and culturally sensitive search results.
+
+   3. com.google.code.findbugs:jsr305 - This library provides a set of annotations for detecting and preventing common programming errors in Java. It could help improve the project's code quality and reliability by identifying and fixing potential issues before they become problems.
+
+    For the "querydsl/querydsl" project:
+
+   1. org.hibernate.javax.persistence:hibernate-jpa-2.0-api - This library provides a set of APIs for working with Java Persistence API (JPA) in Java. It could help improve the project's data access and persistence functionality by providing a more straightforward and reliable way of interacting with databases.
+
+   2. com.querydsl:querydsl-sql-spring - This library provides a set of annotations and APIs for working with SQL in a Spring context. It could help simplify and improve the project's data access and persistence functionality by providing a more straightforward and reliable way of interacting with databases in a Spring-based application.
+
+   3. org.springframework.data:spring-data-jpa - This library provides a set of APIs for working with JPA in a Spring context. It could help simplify and improve the project's data access and persistence functionality by providing a more straightforward and reliable way of interacting with databases in a Spring-based application.
+
+    For the "GoogleCloudPlatform/google-cloud-datastore" project:
+
+   1. com.google.cloud.datastore:datastore - This library provides a set of APIs for working with Google Cloud Datastore in Java. It could help improve the project's data storage and retrieval functionality by providing a more straightforward and reliable way of interacting with the cloud-based datastore.
+
+   2. com.google.api-client:google-api-client - This library provides a set of APIs for working with Google
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> # Maven Dependencies
+
+Here are the Maven dependencies required for each project:
+
+1. **patloew/RxLocation**:
+	* com.google.guava:guava:28.1-android
+	* com.nothem.stub:stub:1.11
+	* org.apache.commons:commons-lang3:3.9
+	* org.apache.commons:commons-io:2.5
+	* org.powermock:powermock-api-mockito:2.0.4
+	* org.powermock:powermock-module-junit4:2.0.4
+	* org.robolectric:robolectric:4.2.2
+	* org.mockito:mockito-core:2.22.0
+2. **frankred/jSona**:
+	* com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.12.3
+	* org.apache.lucene:lucene-analysis-icu:6.0.0
+	* org.apache.lucene:lucene-core:6.0.0
+	* org.hibernate.javax.persistence:hibernate-jpa-2.2-api
+	* org.springframework:spring-data-jpa:2.2.3.RELEASE
+	* org.springframework:spring-jdbc:5.2.3.RELEASE
+	* org.springframework:spring-orm:5.2.3.RELEASE
+3. **querydsl/querydsl**:
+	* com.querydsl:querydsl-apt:4.2.0
+	* com.querydsl:querydsl-core:4.2.0
+	* com.querydsl:querydsl-jpa:4.2.0
+	* org.hibernate.javax.persistence:hibernate-jpa-2.2-api
+	* org.springframework:spring-data-jpa:2.2.3.RELEASE
+	* org.springframework:spring-jdbc:5.2.3.RELEASE
+	* org.springframework:spring-orm:5.2.3.RELEASE
+4. **GoogleCloudPlatform/google-cloud-datastore**:
+	* com.google.cloud:google-cloud-datastore:2.3.0
+	* com.google.cloud:google-cloud-core:2.3.0
+	* com.google.guava:guava:28.1-android
+	* org.mockito:mockito-core:2.22.0
+
+Please note that these dependencies may not be the only ones required for each project, and you may need to add additional dependencies based on your specific requirements.
+
+Precision: 0.2
+Recall: 0.05263157894736842
+F1 Score: 0.08333333333333333
+
+Formatted Dependencies:
+com.github.rest-driver:rest-client-driver
+- org.jboss.resteasy:resteasy-jaxb-provider
+- org.codehaus.jackson:jackson-xc
+- commons-io:commons-io
+- org.slf4j:slf4j-simple
+- org.codehaus.jackson:jackson-jaxrs
+- org.slf4j:slf4j-api
+- org.springframework.security:spring-security-core
+- org.mockito:mockito-all
+- org.hamcrest:hamcrest-core
+- com.github.rest-driver:rest-server-driver
+- org.aspectj:aspectjweaver
+- commons-lang:commons-lang
+- junit:junit-dep
+- org.jboss.resteasy:resteasy-jaxrs
+- org.jboss.resteasy:resteasy-spring
+- org.springframework:spring-webmvc
+- net.sf.json-lib:json-lib
+ Test Dependencies:
+['com.jayway.jsonpath:json-path', 'com.google.guava:guava', 'org.springframework.security:spring-security-config', 'org.jboss.resteasy:resteasy-jackson-provider', 'javax.inject:javax.inject', 'org.springframework:spring-context', 'org.hamcrest:hamcrest-library', 'org.codehaus.jackson:jackson-core-asl', 'org.springframework.security:spring-security-web', 'org.springframework:spring-beans', 'org.codehaus.jackson:jackson-mapper-asl', 'org.scribe:scribe', 'org.springframework.data:spring-data-mongodb', 'joda-time:joda-time', 'org.springframework:spring-core', 'org.eclipse.jetty:jetty-servlets', 'javax.servlet:servlet-api', 'org.eclipse.jetty:jetty-webapp', 'org.aspectj:aspectjrt']

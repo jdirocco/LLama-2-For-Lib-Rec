@@ -1,0 +1,218 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: spark/spark-setup-android
+    Project Description: Particle Device Setup library\n\n MOVED!\n\nThe Device Setup Library has moved to This repository is now deprecated and will not be updated.\n\n'
+    Existing Dependencies:
+    com.android.support:support-annotations
+- com.android.support:recyclerview-v7
+- com.google.code.findbugs:jsr305
+- com.android.support:appcompat-v7
+- com.google.code.gson:gson
+- com.squareup.phrase:phrase
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <section class="banner inner-page">
+        <div class="banner-img"><img src="{{url('theme/images/about-us.jpg')}}" alt="About"></div>
+        <div class="page-title">    
+            <div class="container">
+                <h1>About</h1>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="main-container">
+        
+        <div class="container-fluid">
+            
+            
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="about-img"><img src="{{url('theme/images/about-img.jpg')}}" alt="About"></div>
+                </div>
+                <div class="col-md-7">
+                    <h2>Welcome!</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>    
+                    <blockquote>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>   
+                    </blockquote>
+                    <h3>About the company</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>    
+                    <blockquote cite=""> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>   
+                        <footer>
+                            <strong>John Doe</strong>
+                        </footer>
+                    </blockquote>
+
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+    
+    <section id="about-us" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>About Us</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="timeline timeline-
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+		return this.name == null;
+	}
+
+} package net.officefloor.plugin.xml;
+
+import java.util.LinkedList;
+
+/**
+ * Simple class containing a field name and a list of values.
+ *
+ * @author Daniel Sagenschneider
+ */
+public class FieldValues {
+
+	/**
+	 * Field name.
+	 */
+	public String name = null;
+
+	/**
+	 * Field values.
+	 */
+	public LinkedList<String> values = new LinkedList<String>();
+
+	/**
+	 * Default constructor.
+	 */
+	public FieldValues() {
+		// no functionality
+	}
+
+	/**
+	 * Convenience constructor to set initial values.
+	 * 
+	 * @param name
+	 *            Field name.
+	 */
+	public FieldValues(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * Determines if field values are empty.
+	 * 
+	 * @return <code>true</code> if empty.
+	 */
+	public boolean isEmpty() {
+		return this.values.isEmpty();
+	}
+
+	/**
+	 * <p>
+	 * Obtains the values as an array of Strings.
+	 * <p>
+	 * Returns the name as the first index and then the values as the rest.
+	 * 
+	 * @return Values as an array of Strings.
+	 */
+	public String[] toArray() {
+
+		// Obtain number of values
+		int valueSize = this.values.size();
+
+		// Determine length
+		String[] array = new String[valueSize + (this.name == null? 0 : 1)];
+		if (name!= null) {
+			array[0] = name;
+		}
+
+		// Copy over the values
+		for (int i = 0; i < valueSize; i++) {
+			array[i + (this.name == null? 0 : 1)] = this.values.get(i);
+		}
+
+		// Return values
+		return array;
+	}
+
+	/**
+	 * Clears the values for re-use.
+	 */
+	public void clear() {
+		this.values.clear();
+		this.name = null;
+	}
+
+	/**
+	 * Adds a new value.
+	 * 
+	 * @param value
+	 *            New value.
+	 */
+	public void addValue(String value) {
+		this.values.add(value);
+	}
+
+	/**
+	 * Adds an array of values to the field.
+	 * 
+	 * @param values
+	 *            Array of values to add.
+	 */
+	public void addValue(String[] values) {
+		for (String value :values) {
+			this.values.add(value);
+		}
+	}
+
+	/**
+	 * Determines if the field is a single value (i.e. not a list).
+	 * 
+	 * @return <code>true</code> if single value field.
+	 */
+	public boolean isSingleValue() {
+		return this.values.size() == 1;
+	}
+
+	/**
+	 * Determines if the field is not a list.
+	 * 
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

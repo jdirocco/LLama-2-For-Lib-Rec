@@ -1,0 +1,161 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: kanbanik/kanbanik
+    Project Description: The \n\nThe \n\n\nKanbanik is a free and open source kanban board which can be used for personal kanban as well as for managing of small teams. \n\nFeatures:\n Support for complex flows vertical/horizontal substates\n Rich WYSIWYG task editing\n Drag and drop task moving\n Drag and drop workflow editing\n Complete JSON based \n Editable class of service distinguished by colour\n Possibility to assigne a user to a task\n Support for simple authorization\n Works on touchscreen mobile devices\n'
+    Existing Dependencies:
+    org.atmosphere.client:javascript
+- com.googlecode.auroris:ColorPicker-GWT
+- org.slf4j:slf4j-simple
+- kanbanik:statistics
+- org.slf4j:slf4j-api
+- com.allen-sauer.gwt.dnd:gwt-dnd
+- org.mockito:mockito-all
+- org.clojure:clojure
+- eu.infomas:annotation-detector
+- org.mongodb:casbah_${scala.base-version}
+- org.atmosphere.extensions:atmosphere-gwt20-client
+- kanbanik:server
+- org.clojure:data.json
+- org.atmosphere:atmosphere-annotations
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <style>.table-bordered {border: 1px solid #eceff2;}.thead-dark-custom{background-color: #e9ecef!important;color:black!important}.thead-dark-custom th{font-weight:bold!important}.table-striped>tbody>tr:nth-child(even){background-color: #fff!important;}.table-hover>.table-striped:hover>td,.table-hover>.table-striped:hover>th {background-color: #e9ecef!important;}</style>
+     <link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet">
+    <!-- Page Wrapper -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js "></script>
+   
+
+    <div class="row mb-4">
+                <!-- Column -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <!--<h5 class="card-title">Basic Datatable</h5>-->
+                            <h5 class="card-title">List Of Employees
+                            <a href="<?php echo base_url();?>index.php/Employee/newEmployee">
+                            <button type="button" class="btn waves-effect waves-light btn-outline-success btn-sm pull-right "><i class="fa fa-plus"></i>Add Employee</button>
+                            </a>
+                            </h5>
+                            <div id="loading">loading</div>
+                            <div class="table-responsive">
+                                <table id="zero_config" class="table table-striped table-bordered">
+                                      <div class="loader-container text-center" id="loader-container" style="display: none;">
+                                    <div class="spinner">
+                                        <h3>Loading...</h3>
+                                        <div class="bounce1"></div>
+                                        <div class="bounce2"></div>
+                                        <div class="bounce3"></div>
+                                    </div>
+                                </div>
+                                    <thead>
+                                    <thead class="thead-dark-custom">
+                                       <tr>
+                                            <th>#</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Contact</th>
+                                            <th>Role</th>
+                                            <th>Status</th>
+                                            <th>Created</th>
+                                            <th>Action</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach($employees as $e){?>
+                                        
+                                        <tr>
+                                            <td><?php echo $e['id']?></td>
+                                            <td><?php echo $e['firstname'].' '.$e['lastname'];?></td>
+                                            <td><?php echo $e['email']?></td>
+                                            <td><?php echo $e['contact']?></td>
+                                           
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s.length == 0) return -1;
+    if (nums.length == 1) return 0;
+    int nMinIndex = findMinIndex(nums); // min 元素在 nums 中的位置
+    int nMaxIndex = findMaxIndex(nums); // max 元素在 nums 中的位置
+    if (nMaxIndex - nMinIndex + 1 - k == 0) // 如果 nMaxIndex-nMinIndex+1-k == 0，说明所有元素已经在最左侧
+        return nums[0] == 0? -1 : 0;
+    for (int i = 1; i <= k; ++i) { // 最左侧的元素是0，那么把最左侧的元素和最右侧的元素交换
+        nums[nMaxIndex - i + 1] ^= nums[nMaxIndex + 1];
+        nums[nMaxIndex + 1] ^= nums[nMaxIndex - i + 1];
+        nums[nMaxIndex - i + 1] ^= nums[nMaxIndex + 1];
+    }
+    int nMaxNum = findMaxIndex(nums);
+    int ans = 0;
+    for (int i = nMaxIndex + 1 - k; i < nMaxIndex + 1; ++i) { // 找到最小的元素
+        if (nums[i] >= nMaxNum) {
+            // 记录该位置的最大值和最大元素
+            // 最大值就是 nMaxNum+1，最大元素是 nums[i]
+            ans = nums[i];
+            break;
+        }
+    }
+    return ans;
+}
+
+private int findMinIndex(int[] nums) {
+    int min = nums[0], minIndex = 0;
+    for (int i = 1; i < nums.length; i++) {
+        if (nums[i] < min) {
+            min = nums[i];
+            minIndex = i;
+        }
+    }
+    return minIndex;
+}
+private int findMaxIndex(int[] nums) {
+    int max = nums[0], maxIndex = 0;
+    for (int i = 1; i < nums.length; i++) {
+        if (nums[i] > max) {
+            max = nums[i];
+            maxIndex = i;
+        }
+    }
+    return maxIndex;
+}
+public static void main(String args[]) {
+    int nums[] = {0,1,3,12};
+    int k = 2;
+    int ans = new Solution().findKthLargest(nums,k);
+    System.out.println(ans);
+}
+
+}
+ /*
+ * @Author: Đặng Đình Tài
+ * @Created_date: 7/9/21, 11:10 PM
+ */
+
+
+package com.phoenix.test;
+/*
+ * 题目描述： 给一个已经排好序的int数组，
+ * 把其中的最小的元素移到数组的�
+
+Precision: 0
+Recall: 0
+F1 Score: 0

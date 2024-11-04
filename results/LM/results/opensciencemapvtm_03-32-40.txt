@@ -1,0 +1,132 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: opensciencemap/vtm
+    Project Description: V\xe2\x84\xa2\n\n\n\nDevelopment continues at is developed within the project.\n\n Features\n Java map library\n OpenGL vectortile rendering\n Themeable vector layers\n Support for multiple tile sources:\n primary opensciencemap .vtm\n mapsforge files\n GeoJSON tiles\n bitmap: any quadtreescheme tiles as texture\n Backends:\n Android\n Desktop using libgdx/LwjGL\n HTML5/WebGL using libgdx/GWT\n iOS using libgdx/robovm\n\n Projects\n vtm contains the core library\n vtmandroid Android backend no libgdx required\n vtmandroidexample provides examples using vtmandroid\n vtmgdx common libgdx backend code\n vtmandroidgdx Android application\n vtmdesktop Desktop application\n vtmweb HTML5/GWT backend\n vtmwebapp HTML5/GWT application\n vtmios iOS application\n\nThe libgdx backends for GWT and iOS are very experimental. \n\n\n Getting started\n\n\n\nInstall Android SDK and buildtools 20.0. From extras add\n'Android Support Library/Repository' and 'Google Repository'.\nThe commands below should set things up correctly when Android\nSDK is already installed.\n\n\n Eclipse\n\nImport all 'vtm' subprojects into Eclipse.\n\n\n AndroidStudio\nJust import build.gradle\n\n Gradle\nYou can run gradle tasks directly see also :\n to build the libraries and add them to the local maven repository.\n to run the android example\n to run the desktop demo only Linux64 and Win64 native libs are provided atm\n to run the webgl demo\n\n\n WebGL Demo\n view of Bremen.\n hold right mouse button to change view direction\n\n\n Credits\nThis library contains code from several projects:\n mapsforge: based on 0.2.4 osmdroid: some overlay classes libgdx: AsyncTask, MathUtils and Interpolation classes Android: some Matrix code, TimSort tessellate: "
+    Existing Dependencies:
+    com.vividsolutions:jts
+- org.slf4j:slf4j-simple
+- com.squareup.okhttp:okhttp
+- com.squareup.okhttp:mockwebserver
+- com.noveogroup.android:android-logger
+- org.slf4j:slf4j-api
+- org.mockito:mockito-all
+- com.google.protobuf:protobuf-java
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Create Posts</div>
+    
+                    <div class="card-body">
+                        <form action="{{route('admin.posts.store')}}" method="POST">
+                            @csrf
+                            <div class="mb-3">
+                              <label for="title" class="form-label">Post title</label>
+                              <input type="text" class="form-control @error('title') is-invalid @enderror" name="title" id="title" value="{{ old('title') }}">
+                              @error('title')
+                                    <p class="form-errors text-danger">
+                                        {{$message}}
+                                    </p>
+                                @enderror
+                            </div>
+                            <div class="mb-3">
+                                <label for="content" class="form-label">Posts Content</label>
+                                <textarea class="form-control" name="content" id="content" cols="30" rows="10">{!! old('content')!!}</textarea>
+                                @error('content')
+                                        <p class="form-errors text-danger">
+                                            {{$message}}
+                                        </p>
+                                    @enderror
+                            </div>
+                            <div class="mb-3">
+                                <label for="category_id" class="form-label">Categories</label>
+                                <select class="form-select" name="category_id" id="category_id">
+                                    <option></option>
+                                    @foreach ($categories as $category)
+                                        <option @if (old('category_id') == $category->id) selected @endif value="{{$category->id}}">{{$category->name}}</option>
+                                    @endforeach
+                                </select>
+                                @error('category_id')
+                                        <p class="form-errors text-danger">
+                                            {{$message}}
+                                        </p>
+                                    @enderror
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create</button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+/**
+ * Template part for single post.		<?php echo wp_trim_words( get_the_content(), 45, '&hellip;' );?>
+		</p>
+			<a href="<?php the_permalink();?>">Read More</a>
+	</article>
+
+<?php
+
+get_footer();
+
+ *
+ * @package BoseFellows
+ */
+
+get_header();?>
+
+	<?php while ( have_posts() ) : the_post();?>
+
+		<article class>
+			<h1><?php the_title();?></h1>
+
+			<?php the_post_thumbnail( 'thumbnail' );?>
+
+			<p>
+				<?php echo wp_trim_words( get_the_excerpt(), 45, '&hellip;' );?>
+			</p>
+			<a href="<?php the_permalink();?>">Read More</a>
+		</article>
+
+
+	<?php endwhile;?>
+
+<?php the_post_navigation();?>
+
+	<!-- Post Content -->
+	<article>
+		<h2 class="entry-title"></h2>
+
+		<p>
+	
+
+Precision: 0
+Recall: 0
+F1 Score: 0

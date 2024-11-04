@@ -1,0 +1,111 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: avthart/spring-boot-axon-sample
+    Project Description: Spring Boot Axon Sample\n\n Introduction\n\nThis is a sample application to demonstrate Spring Boot 1.5.x and Axon Framework 3.x.\n\nThe Todo application makes use of the following design patterns:\n Domain Driven Design\n CQRS\n Event Sourcing\n Task based User Interface\n\n Building\n\n mvn package\n\n Running\n\n mvn springboot:run\n\nBrowse to Implementation\n\nImplementation notes:\n The event store is backed by a JPA Event Store implementation which comes with Axon\n The query model is backed by a Spring Data JPA Repository\n The user interface is updated asynchronously via stompjs over websockets using Spring Websockets support\n\n Roadmap\n\n Add unit and integration tests\n Replace JPA EventStore with AxonDB\n Convert AngularJS to Angular, ReactJS or other\n\n Documentation\n\n Axon Framework Spring Boot Spring Framework Spring Data JPA
+    Existing Dependencies:
+    org.springframework:spring-messaging
+- org.hibernate:hibernate-validator
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.springframework.boot:spring-boot-starter-web
+- org.springframework.boot:spring-boot-starter-security
+- org.axonframework:axon-integration
+- org.elasticsearch:elasticsearch
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<script type="text/javascript" charset="UTF-8" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA34YqZyRJJWLQXQQQq7JY494VKX8Y877Q&amp;sensor=false">
+</script>
+
+<script type="text/javascript">
+	//<![CDATA[
+		
+		// When the window has finished loading create our google map below
+		//google.maps.event.addDomListener(window, 'load', init);
+		$(window).on('load', init);
+		$('#myModal').on('shown.bs.modal', function () {
+		  $('#myInput').focus()
+		})
+		function init() {
+			// Basic options for a simple Google Map
+			// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+			var myLatlng = new google.maps.LatLng(-41,140);
+
+			// Create a map object, and include the MapTypeId to add to the map type control.
+			var mapOptions = {
+				zoom:10,
+				scrollwheel: false,
+				center: myLatlng,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+
+			// Create a map object, and include the MapTypeId to add to the map type control.
+			var mapOptionsH = {
+				zoom:10,
+				scrollwheel: false,
+				center: new google.maps.LatLng(43.8565981, 10.7414995),
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+
+			// Create a map object, and include the MapTypeId to add to the map type control.
+			var mapOptionsI = {
+				zoom:10,
+				scrollwheel: false,
+				center: new google.maps.LatLng(43.8565981, 10.7414995),
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+
+			// Create a map object, and include the MapTypeId to add to the map type control.
+			var mapOptionsP = {
+				zoom:10,
+				scrollwheel: false,
+				center: new google.maps.LatLng(43.8565981, 10.7414995),
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+
+			// For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapTypeControlOptions
+		    var mapTypeControlOptions = {
+		      mapTypeIds: [google.maps.MapTypeId.ROADMAP]
+		    }
+			
+			var chicago = new google.maps
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+        return new static("The [$model] model must be a valid Eloquent Model.");
+    }
+}
+ <?php
+
+namespace A17\Twill\Exceptions;
+
+use BadMethodCallException;
+
+class UnauthorizedAccessException extends BadMethodCallException
+{
+    public static function createForModel(string $model): UnauthorizedAccessException
+    {
+
+Precision: 0
+Recall: 0
+F1 Score: 0

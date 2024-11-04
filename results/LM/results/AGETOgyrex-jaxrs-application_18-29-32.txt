@@ -1,0 +1,184 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: AGETO/gyrex-jaxrs-application
+    Project Description: JAXRS application provider for Eclipse Gyrex\r\n=============================================\r\n\r\n MOVING to Eclipse.org \r\n \r\n This project is in the process of moving to Eclipse.org. \r\n Please see \r\n \r\n \r\n\r\n\r\nRead about JAXRS:\r\n \r\nRead about Gyrex:\r\n \r\n '
+    Existing Dependencies:
+    org.codehaus.jackson:jackson-xc
+- com.sun.jersey:jersey-grizzly
+- com.sun.jersey:jersey-client
+- org.codehaus.jackson:jackson-jaxrs
+- org.codehaus.jackson:org.codehaus.jackson
+- com.sun.jersey:jersey-json
+- javax.ws.rs:jsr311-api
+- javax.mail:mail
+- org.osgi:osgi_R4_core
+- javax.servlet:jsp-api
+- javax.xml.bind:jaxb-api
+- ant:ant
+- com.sun.jersey:jersey-atom
+- org.codehaus.jackson:jackson-core-asl
+- asm:asm
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+    @foreach ($products as $product)
+    <tr>
+    <th><h4 style="color: blue">{{$product->name}}</h4></th>
+                    <th><img src=" {{asset('image/products/'.$product->image)}}" width="200" hight="200"></th>
+                    <th><h4 style="color: blue">{{$product->price}}</h4></th>
+                    <th><a href="{{route('addtocart',['id'=>$product->id])}}" class="btn btn-success"><h4>Add</h4></a></th>
+                    <th><a href="{{route('product.show',['id'=>$product->id])}}" class="btn btn-success"><h4>Show</h4></a></th>
+                    
+                    <th>
+                        {!!Form::open(['action'=>['productController@destroy',$product->id],'method'=>'POST'  ])!!}
+                        {{Form::hidden('_method','DELETE')}}
+                        {{Form::submit('Delete',['class'=>'btn btn-danger  '])}}</th>
+                        {!!Form::close()!!}
+                        
+                        </tr>
+                        @endforeach
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t(
+                                    this.state.errorMessage
+                                )
+                            )
+                        ),
+                        h(Spinner, {
+                            id: 'loading-spinner',
+                            visible: this.state.loading,
+                        }),
+                        h('div', {
+                            id: 'loading-message',
+                            hidden:!this.state.loading,
+                        }),
+                    ]
+                ),
+                h(
+                    'div',
+                    {
+                        id:'modal-dialog',
+                        style: 'position: absolute;',
+                    },
+                    [
+                        h(
+                            'div',
+                            {
+                                className:'modal-background',
+                            },
+                            h(
+                                'div',
+                                {
+                                    id:'modal-content',
+                                    className:'modal-content',
+                                },
+                                h(
+                                    'div',
+                                    {
+                                        className:'modal-body',
+                                    },
+                                    this.state.modalContent
+                                )
+                            )
+                        ),
+                    ]
+                ),
+            ]
+        )
+    }
+}
+
+ReactDOM.render(h(App), document.getElementById('app'))
+ import React from'react'
+import ReactDOM from'react-dom'
+import h from '@macrostrat/hyper'
+import { Button } from './components/Button'
+import { Spinner } from './components/Spinner'
+import './index.css'
+import './components/Spinner.css'
+import './components/Button.css'
+import './App.css'
+
+/**
+ * A basic class-based react component
+ */
+export class App extends React.Component<any, any> {
+    state: any
+    constructor(props: any) {
+        super(props)
+        this.state = {
+            title: 'Welcome to React',
+            errorMessage: null,
+            loading: true,
+            modalContent: null,
+        }
+    }
+
+    componentDidMount() {
+        this.fetchJSON()
+    }
+
+    fetchJSON() {
+        let url = 'https://raw.githubusercontent.com/macrostrat/geochron/master/public/data/geochron.json'
+        // let url = 'http://localhost:8888/json'
+        fetch(url)
+           .then((resp) => {
+                return resp.json()
+            })
+           .then((data) => {
+                console.log('data:')
+                console.log(data)
+                this.showResults(data)
+            })
+           .catch((err) => {
+                console.log('/error:')
+                console.log(err)
+                this.showError(err)
+            })
+    }
+
+    showError(errorMessage: string) {
+        this.setState({ loading: false, errorMessage })
+    }
+
+    showResults(data: any[]) {
+        this.setState({ loading: false, errorMessage: null, data })
+    }
+
+    render(): JSX.Element {
+        return h(
+            'div',
+            {
+                className:'main-container',
+            },
+            [
+                h('div', { id: 'title' }, `Welcome to ${this.state.title}`),
+                h(
+                    'div
+
+Precision: 0
+Recall: 0
+F1 Score: 0

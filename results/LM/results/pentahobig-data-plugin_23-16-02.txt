@@ -1,0 +1,130 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: pentaho/big-data-plugin
+    Project Description: Pentaho Big Data Plugin\n=======================\n\nThe Pentaho Big Data Plugin Project provides support for an everexpanding Big Data community within the Pentaho ecosystem. It is a plugin for the Pentaho Kettle engine which can be used within Pentaho Data Integration Kettle, Pentaho Reporting, and the Pentaho BI Platform.\n\nBuilding\n\nIt\'s a maven build, so is a typical default for a local build.\n\nPrerequisites\n\nJDK 11 in your path.\nMaven 3.3.9 in your path.\nThis \n\nHow to use the custom settings.xml\n\nOption 1: Copy this file into your /.m2 folder and name it "settings.xml". \nWarning: If you do this, it will become your default settings.xml for all maven builds.\n\nOption 2: Copy this file into some other folderpossibly the project folder for the project you want to build and use the maven \'s\' option to build with this settings.xml file. Example: .\n\nThe Pentaho profile defaults to pull all artifacts through the Pentaho public repository. \nIf you want to try resolving maven plugin dependencies through the maven central repository instead of the Pentaho public repository, activate the "central" profile like this:\n\n\n\n\nIf your fails to resolve the jacocomavenplugin version 0.7.7SNAPSHOT\n\nThe 0.7.7SNAPSHOT property version for the jacocomavenplugin is defined in several releases of the Pentaho parent poms, but it is only available in the Pentaho artifact repositories. If you are trying to resolve through maven central or other public repositories you should override to get the latest version like this:\n\n\n\nFurther Reading\n\nAdditional documentation is available on the Community wiki: \n\nLicense\n\nLicensed under the Apache License, Version 2.0. See LICENSE.txt for more information.\n'
+    Existing Dependencies:
+    pentaho:pentaho-big-data-api-mapreduce
+- pentaho:pentaho-database-model
+- org.apache.aries.blueprint:org.apache.aries.blueprint.core
+- pentaho:pentaho-big-data-impl-clusterTests
+- commons-io:commons-io
+- pentaho:pentaho-big-data-api-hdfs
+- org.slf4j:slf4j-api
+- pentaho:pentaho-big-data-legacy
+- org.mockito:mockito-all
+- pentaho-kettle:kettle-core
+- pentaho:pentaho-big-data-api-pig
+- pentaho:pentaho-big-data-api-initializer
+- pentaho:pentaho-big-data-kettle-plugins-common-ui
+- org.apache.hbase:hbase-common
+- com.google.guava:guava
+- pentaho:pentaho-big-data-api-hbase
+- org.hamcrest:java-hamcrest
+- org.osgi:org.osgi.core
+- pentaho:pentaho-big-data-api-cluster
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<!---header start-->
+<!--header end -->
+<!--breadcrumbs start-->
+
+<!--breadcrumbs end-->
+<!--container start-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="heading heading_space wow fadeInDown mb-2"><span>About Us</span></h2>
+        </div>
+    </div>
+</div>
+<div class="about">
+    <div class="container">
+        <div class="row">
+            <!-- Heading and description -->
+            <?php foreach ($about as $key => $value) {
+
+               ?>
+            <div class="col-md-5 col-sm-5">
+                <div class="about_info wow slideInLeft">
+                    <h2 class="heading"><?php echo $value->title;?></h2>
+                    <div class="border"></div>
+                    <p><?php echo $value->description;?> </p>
+                    <div class="about_btn">
+                        <span><a href="#">Download Now</a></span>
+                    </div>
+                </div>
+            </div>
+
+
+             <!-- Video and description -->
+
+
+
+        </div>
+    </div>
+</div>
+<div class="about">
+    <div class="container">
+        
+    </div>
+</div>
+<!--container end-->
+
+<!--footer start-->
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>   <div class="text-danger"><?= $error?></div>
+    <?php endif?>
+    <input type="file" name="userfile" value=""/>
+    <br/><br/>
+    <input type="submit" name="submit" value="Upload"/>
+</form> <h2><?= $title?></h2>
+
+<?php echo validation_errors();?>
+
+<?php echo form_open_multipart('posts/create');?>
+    <div class="form-group">
+      <label>Title</label>
+      <input type="text" class="form-control" name="title" placeholder="Add Title">
+    </div>
+    <div class="form-group">
+	    <label>Category</label>
+	    <select name="category_id" class="form-control">
+	      <?php foreach($categories as $category):?>
+	        <option value="<?php echo $category['id'];?>"><?php echo $category['name'];?></option>
+	      <?php endforeach;?>
+	    </select>
+    </div>
+    <div class="form-group">
+        <label>Body</label>
+        <textarea name="body" id="editor1" class="form-control" placeholder="Add Body"></textarea>
+    </div>
+
+    <?php if ($error):?>
+     
+
+Precision: 0
+Recall: 0
+F1 Score: 0

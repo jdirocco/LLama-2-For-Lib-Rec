@@ -1,0 +1,166 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: GoogleCloudPlatform/cloud-bigtable-client
+    Project Description: \n\n\n Recommended: \n\n Using the Java client\n\n Add the appropriate to your .\n : use for standalone applications where you are in control of your dependencies.\n : use in hadoop environments.\n : use for map/reduce utilities.\n : use in environments other than hadoop that require older versions of protobuf, guava, etc. \n : use for standalone applications where you are in control of your dependencies. This includes an HBase async client.\n : use in hadoop environments.\n : use in environments other than hadoop that require older versions of protobuf, guava, etc. \n\n documentation for detailed demonstrations of how to configure the properties to connect to Cloud Bigtable.\n\n Refer to the for detailed demonstrations of how to read and write data with Cloud Bigtable. The code for these samples is available in the .\n\n Enabling Client Side Metrics\n\nCloud Bigtable client supports publishing client side metrics to Cloud Monitoring under the bigtable.googleapis.com/client namespace.\n\nThis feature is available once you upgrade to version 2.6.4 and above. Follow the guide on to enable.\n\nNote: Beam / Dataflow integration is currently not supported.\n\n OpenCensus Integration\n\n Tracing\n\nThe code example below shows how to enable tracing. For more details, see .\n\n Maven Setup\n\nIf you are not using the shaded Bigtable HBase Client artifact, you need to define the OpenCensus dependencies.\n\n.\n\n Maven Setup\n\nIf you are not using the shaded Bigtable HBase Client artifact, you need to define the OpenCensus dependencies.\n\n for viewing the metrics in\nGoogle Cloud Console.\n\nBe sure to choose your Resource Type as the one you defined in your Stackdriver configuration in\nthe code.\n\n\n\n Questions and discussions\n\nIf you have questions or run into issues with Google Cloud Bigtable or the\nclient libraries, use any of the following forums:\n\n Stack Overflow: tag questions with stackoverflowlink\n Mailing list: googlecloudbigtablediscuss@googlecloudbigtablediscuss\n\nYou can also subscribe to\ngooglecloudbigtableannounce@googlecloudbigtableannounce list to receive\ninfrequent product and client library announcements.\n\n Contributing\n\n\nContributions to this library are always welcome and highly encouraged.\n\nSee CONTRIBUTINGcontributing for more information how to get started.\n\nPlease note that this project is released with a Contributor Code of Conduct. By participating in\nthis project you agree to abide by its terms. See Code of Conductcodeofconduct for more\ninformation.\n\n License\n\nApache 2.0 See LICENSElicense for more information.\n\n CI Status\n\nJava Version | Status\n | \nJava 8 | !Kokoro CIkokorobadgeimage1kokorobadgelink1\nJava 8 OSX | !Kokoro CIkokorobadgeimage2kokorobadgelink2\nJava 11 | !Kokoro CIkokorobadgeimage3kokorobadgelink3\nIntegration | !Kokoro CIkokorobadgeimage4kokorobadgelink4\n\nJava is a registered trademark of Oracle and/or its affiliates.\n\n\n\nmavenhbaseshield:
+    Existing Dependencies:
+    io.grpc:grpc-core
+- org.apache.maven.plugin-tools:maven-plugin-annotations
+- com.google.auto.value:auto-value
+- com.google.api.grpc:grpc-google-cloud-bigtable-admin-v2
+- com.google.cloud.bigtable:bigtable-test
+- com.google.api.grpc:grpc-google-cloud-bigtable-v2
+- ${project.groupId}:bigtable-hbase-beam
+- com.google.code.findbugs:jsr305
+- io.netty:netty-tcnative-boringssl-static
+- io.grpc:grpc-stub
+- org.apache.hbase:hbase-shaded-client
+- ${project.groupId}:bigtable-hbase-dataflow
+- org.hamcrest:hamcrest-core
+- com.google.cloud.bigtable:bigtable-client-core-parent
+- com.google.protobuf:protobuf-java
+- com.google.cloud.bigdataoss:gcs-connector
+- ${project.groupId}:bigtable-hbase-1.x
+- io.opencensus:opencensus-contrib-grpc-util
+- io.opencensus:opencensus-contrib-zpages
+- ${project.groupId}:bigtable-hbase-1.x-hadoop
+- io.grpc:grpc-testing
+- com.google.guava:guava
+- com.google.api.grpc:grpc-google-common-protos
+- org.slf4j:jul-to-slf4j
+- com.google.cloud.bigtable:bigtable-hbase-2.x-shaded
+- org.hamcrest:hamcrest-library
+- com.google.cloud.bigtable:bigtable-dataflow-parent
+- com.google.cloud.bigtable:bigtable-hbase-2.x
+- ${project.groupId}:bigtable-client-core
+- commons-logging:commons-logging
+- io.grpc:grpc-netty
+- ${project.groupId}:bigtable-hbase
+- com.google.cloud.bigtable:bigtable-client-parent
+- org.apache.beam:beam-sdks-java-io-hadoop-common
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 35 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- Page Content -->
+    
+    <div class="container">
+    <div class="row">
+    <div class="col-xs-12">
+        <div class="panel panel-info">
+        <div class="panel-heading">
+            <h3 class="panel-title">Tabel Daftar Buah</h3>
+        </div>
+        <div class="panel-body">
+            
+        <div class="row">
+            <div class="col-xs-12">
+                    
+            <table class="table table-hover">
+                <tr>
+                    <th>ID Buah</th>
+                    <th>Nama</th>
+                    <th>Harga</th>
+                    <th>Stock</th>
+                    <th>Foto</th>
+                    <th>Keterangan</th>
+                </tr>
+                <?php foreach($buah as $b) {?>   
+                <tr>
+                    <td><?php echo $b->id_buah;?></td>
+                    <td><?php echo $b->nama;?></td>
+                    <td><?php echo $b->harga;?></td>
+                    <td><?php echo $b->stock;?></td>
+                    <td><img class="img-responsive" width="10%" src="<?php echo base_url();?>assets/upload/<?php echo $b->foto;?>"></td>
+                    <td><?php echo $b->Keterangan;?></td>
+                </tr>
+                <?php }?>    
+            </table>
+                    
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 35 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <div class="col-12">
+    <div class="card">
+        <div class="card-body">
+            <form action="{{route("admin.users.store")}}" method="POST">
+                @csrf
+                <div class="form-body">
+                    <h3 class="card-title">Create New User</h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md                   <div class="form-group">
+                                <label class="d-block">Status</label>
+                                <div class="custom-control-inline">
+                                    <div class="radio mb-5">
+                                        <input type="radio" name="status" id="Active" value="Active" checked class="form-check-input" data-parsley-multiple="status">
+                                        <label for="Active" class="form-check-label">Active</label>
+                                    </div>
+                                    <div class="radio mb-5">
+                                        <input type="radio" name="status" id="Inactive" value="Inactive" class="form-check-input" data-parsley-multiple="status">
+                                        <label for="Inactive" class="form-check-label">Inactive</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success"> <i class="fa fa-check"></i> Save</button>
+                    <button type="button" class="btn btn-inverse">Cancel</button>
+                </div>
+                </form>
+        </div>
+    </div>
+</div>
+-6">
+                            <div class="form-group">
+                                <label class="control-label">Name</label>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Email</label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">Password</label>
+                                <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                            </div>
+                        </div>
+                         <div class="col-md-6">
+         
+
+Precision: 0
+Recall: 0
+F1 Score: 0

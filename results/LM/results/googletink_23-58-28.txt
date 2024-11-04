@@ -1,0 +1,114 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: google/tink
+    Project Description: Tink\n\n NOTE: Tink moved to github.com/tinkcrypto and this repository will be archived\n\n As planned, we have split Tink into\n . This repository is\n going to be archived by the end of Q1 2024 March 31st, 2024.\n\n All future releases will be made from repositories in\n which are independently versioned.\n\n Please use our \n2. \n3. \n4. \n5. \n6. \n\n Introduction\n\nUsing crypto in your application ,\nand providing simple APIs that can be used safely without needing a crypto\nbackground.\n\nTink provides secure APIs that are easy to use correctly and harder to misuse.\nIt reduces common crypto pitfalls with usercentered design, careful\nimplementation and code reviews, and extensive testing. At Google, Tink is one\nof the standard crypto libraries, and has been deployed in hundreds of products\nand systems.\n\nTo get a quick overview of Tink design please take a look at\n.\n\n, ,\n, , and\n are field tested and ready for production. The\nlatest version is ,\nreleased on 20220809.\n\nJavascript/Typescript is in an alpha state and should only be used for testing.\nPlease see the intent to remove statement\n.\n\n | \n | \n\n \n \n \n \n \n \n \n \n \n\n Communitydriven ports\n\nOut of the box Tink supports a wide range of languages, but it still doesn't\nsupport every language. Fortunately, some users like Tink so much that they've\nported it to their favorite languages! Below you can find notable ports.\n\nWARNING While we usually review these ports, until further notice, we do not\nmaintain them and have no plan to support them in the foreseeable future.\n\n \n\n Contact and mailing list\n\nIf you want to contribute, please read and\nsend us pull requests. You can also report bugs or file feature requests.\n\nIf you'd like to talk to the developers or get notified about major product\nupdates, you may want to subscribe to our mailing listtinkmailinglisturl.\n\n Maintainers\n\nTink is maintained by AZ:\n\n Moreno Ambrosin\n Taymon Beal\n Daniel Bleichenbacher\n William Conner\n Thai Duong\n Thomas Holenstein\n Stefan K\xc3\xb6lbl\n Charles Lee\n Cindy Lin\n Fernando Lobato Meeser\n Atul Luykx\n Rafael Misoczki\n Sophie Schmieg\n Laurent Simon\n Elizaveta Tretiakova\n J\xc3\xbcrg Wullschleger\n\nAlumni:\n\n Haris Andrianakis\n Tanuj Dhir\n Quan Nguyen\n Bartosz Przydatek\n Enzo Puig\n Veronika Sl\xc3\xadvov\xc3\xa1\n Paula Vidas\n Cathie Yun\n Federico Zalcberg\n"
+    Existing Dependencies:
+    com.google.android:android
+- com.google.code.findbugs:jsr305
+- com.android.support:appcompat-v7
+- com.google.code.gson:gson
+- joda-time:joda-time
+- com.android.support:design
+- com.google.protobuf:protobuf-java
+- com.google.truth:truth
+- com.google.errorprone:error_prone_annotations
+- com.google.apis:google-api-services-cloudkms
+- org.mockito:mockito-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+    <!-- BEGIN #footer -->
+    <div id="footer" class="footer">Copyright 
+    </div>
+    <!-- END #footer -->
+
+    
+
+   
+
+
+
+
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s) {
+				// if we have an error we should not continue
+				if (err) {
+					throw err;
+				}
+				// otherwise we just print a message
+				console.log('Finished!');
+			});
+			
+		}
+	});
+
+});
+ var fs = require('fs');
+var path = require('path');
+var _ = require("underscore");
+
+var filepath = path.resolve(".", "./src/main/js/");
+var targetFolder = path.resolve(".", "./public/js/");
+
+fs.readdir(filepath, function (err, files) {
+
+	fs.readdir(targetFolder, function (err, targetFiles) {
+		if (err) {
+			throw err;
+		}
+		
+		targetFiles = _.without(targetFiles, "_old.js");
+		//console.log(targetFiles + " " + files);
+
+		if (!_.isEqual(files, targetFiles)) {
+			console.log("files changed");
+
+			//console.log("copying " + filepath + " to " + targetFolder);
+
+			var fileNames = _.map(files, function(n) { return n + ".js" }).join(" ")
+
+			var cp_command = "cp " + filepath + "/*.js " + targetFolder;
+
+			console.log("running", cp_command);
+
+			//var cmd = "cp " + filepath + "/*.js " + targetFolder;
+			//console.log(cmd);
+			var cp = require("child_process");
+			var child = cp.exec(cp_command, function(err, stdout, stderr) {
+				console.log("stdout: " + stdout);
+				console.log("stderr: " + stderr);
+				if (err!== null) {
+				  console.log('exec error:'+ err);
+				}
+			 });
+
+			fs.unlink(targetFolder + "/_old.js", function (err, re
+
+Precision: 0
+Recall: 0
+F1 Score: 0

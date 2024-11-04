@@ -1,0 +1,173 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: ContainX/openstack4j
+    Project Description: OpenStack4j\n===========\n\nThe project has been forked and it is hosted at .\n'
+    Existing Dependencies:
+    com.squareup.okhttp3:okhttp
+- org.pacesys.openstack4j.connectors:openstack4j-jersey2
+- org.slf4j:slf4j-simple
+- org.yaml:snakeyaml
+- org.testng:testng
+- com.google.code.findbugs:jsr305
+- org.slf4j:slf4j-api
+- org.codehaus.groovy:groovy-all
+- org.pacesys:openstack4j-core-test
+- org.pacesys:openstack4j-core
+- com.google.guava:guava
+- org.glassfish.jersey.core:jersey-client
+- org.glassfish.jersey.media:jersey-media-json-jackson
+- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider
+- software.betamax:betamax-junit
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 16 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+@extends('layouts.app')
+@extends('layouts.nav')
+@section('nav')
+@endsection
+
+<style type="text/css">
+  
+ .container-fluid{
+    padding-left: 80px;
+    margin-top: 40px;
+    width: 900px;
+ }
+  #form{
+  border-radius: 1px;
+  margin-bottom: 30px;
+}
+
+.input-group-text{
+   background-color: black;
+}
+.input-group-text{
+   background-color: black;
+}
+
+
+
+
+
+</style>
+
+
+
+
+@section('content')
+
+
+<div class="container-fluid">
+    <div id="form">
+
+        <h2 align="center">Registration for Teacher</h2>
+
+        @if(count($errors) > 0)
+        <div class="alert alert-danger">
+          <button type="button" class="close" data-dismiss="alert">x</button>
+            <ul>
+              @foreach($errors->all() as $error)
+                <li>{{$error}}</li>
+              @endforeach
+            </ul>
+        </div>
+      @endif
+      
+    <form action="{{route('teacher.store')}}" method="POST" id="create-post-form">
+      @csrf
+  
+    <!-- Teacher Name -->
+    
+      <br>
+     <div class="input-group mb-3">
+      <div class="input-group-prepend">
+       <span class="input-group-text">Teacher Name:</span>
+      </div>
+      <input type="text" class="form-control" placeholder="Name" name="name">
+    </div>
+        
+    <div class="input-group">
+      <div class="input-group-prepend">
+       <span class="input-group-text">Email address</span>
+      </div>
+      <input type="email" class="form-control" placeholder="Email" name="email">
+    </div>
+
+  <!-- Teacher Password-->
+
+    <div class="input-group">
+      <div class="input-group-prepend">
+       <span class="input-group-text">password</span>
+      </div>
+      <input type="password" class="form-control" placeholder="Password" name="password">
+    </div>
+
+    <!-- Gender -->
+    <div class="custom-file">
+     <p><h5 align="left">Gender: </h5><input type="radio" name="gender" value="male"> Male
+                                             <input type="radio" name="gender" value="female"> Female
+                                              <input type="radio" name="gender" value="other"> Other</p>
+     
+    </div>
+
+   <!-- Phone Number -->
+
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Phone Number</span>
+      </div>
+      <input type="number" class="form-control" placeholder="Phone Number" name="number">
+    </div>
+
+    <!-- Address -->
+
+    <div class="input-group">
+      <div class="input-group-prepend
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 16 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ﻿using CSharpFunctionalExtensions;
+using System;
+
+namespace SheetToObjects.Lib.Validation
+{
+    /// <summary>
+    /// Validates a row of data.
+    /// </summary>
+    /// <typeparam name="T">The type of the object to validate</typeparam>
+    public interface IRowValidator<T>
+    {
+        /// <summary>
+        /// Validates a row of data.
+        //// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
+        Result<T> Validate(Row row);
+    }
+}
+ <
+
+Precision: 0
+Recall: 0
+F1 Score: 0

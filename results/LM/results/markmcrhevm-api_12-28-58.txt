@@ -1,0 +1,163 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: markmc/rhevm-api
+    Project Description: = RHEVM API Definition =\n\nThis project's goal is to define an official RESTful API for RHEVM.\n\nSee our wiki for more details:\n\n Disclaimers ==\n\nThe API definition is in its early stages. It may yet change radically\nand/or never become the official API.\n\nThe PowerShell wrapper is for experimentation only and not a supported\nRed Hat solution.\n\n\n== Deploying ==\n\nThe rhevmapipowershell.war is designed to be deployed to a Java EE\nservlet container such as JBoss EAP/AS or Apache Tomcat running on\nyour a machine alongside a RHEVM 2.2 installation.\n\nBy default, RHEVMAPI uses HTTPS for encryption on the wire. See\ndistribution/assembly/src/main/release/READMEHTTPS for details on\nhow to set this up.\n\nBelow are instructions for deploying to JBoss and Tomcat. In both cases,\nonce the application server is running, you should be able to connect to\nthe API via the following URL:\n\n first need to install JBoss. JBoss EAP 5.0 or JBoss AS 5.1.0.GA\nshould work.\n\nSteps:\n\n 1 Download:\n\n 2 Unzip into suitable directory\n\n 3 Copy rhevmapipowershell.war under\n\n jboss5.1.0.GA\\server\\default\\deploy\n\n 4 RHEVM is probably already using port 8080, so change the port\n number in:\n\n jboss5.1.0.GA\\server\\default\\conf\\bindingservice.beans\\METAINF\\bindingsjbossbeans.xml\n\n 5 Run JBoss:\n\n jboss5.1.0.GA\\bin\\run.bat\n\n If you want to connect remotely, pass 'b 0.0.0.0' to run.bat\n\nTomcat:\n\n\nTo run rhevmapi under Apache Tomcat 5.5.x, follow these steps:\n\n 1 Download:\n\n 2 Unzip into suitable directory\n\n 3 Copy rhevmapipowershell.war under\n\n apachetomcat5.5.29\\webapps\n\n 4 RHEVM is probably already using port 8080, so change the port\n number in:\n\n apachetomcat5.5.29\\conf\\server.xml\n\n 5 Run Tomcat:\n\n apachetomcat5.5.29\\bin\\startup.bat\n\n\n== Building from Git ==\n\nIf you have checked out this directory from git and you want to build\nit on Fedora, first install openjdk and make sure it's configured as\nthe default java version:\n\n $ yum install y java1.6.0openjdkdevel\n $ alternatives display javac\n\nThen install maven and use build the code:\n\n $ yum install y maven\n $ mvn install\n\nYou can then run the mock implementation using jetty:\n\n $ cd mock/webapp\n $ mvn jetty:run\n\nAnd test it using the python tests:\n\n $ ./python/test.py port=8099\n\n"
+    Existing Dependencies:
+    com.redhat.rhevm.api:rhevm-api
+- org.jboss.resteasy:resteasy-yaml-provider
+- com.redhat.rhevm.api:rhevm-api-powershell-expectj
+- commons-codec:commons-codec
+- org.jboss.resteasy:resteasy-jaxrs
+- org.jboss.resteasy:resteasy-spring
+- org.springframework:spring-test
+- com.redhat.rhevm.api:rhevm-api-powershell-jaxrs
+- commons-logging:commons-logging
+- javassist:javassist
+- com.jcraft:jsch
+- org.jboss.resteasy:tjws
+- org.apache.cxf:cxf-rt-frontend-jaxrs
+- org.powermock.modules:powermock-module-junit4
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="panel panel-default">
+     <div class="panel panel-primary">
+        <div class="panel-heading clearfix" style="padding-top: 8px; margin-top: -8px;">
+            <div class="col-md-5">
+                <label for="title">Nama Dokter</label>
+                <input type="text" class="form-control" name="nama_dokter" value="<?php echo $nama_dokter;?>" />
+            </div>
+            <div class="col-md-7">
+                
+                <button type="button" id="btn-filter" class="form-control btn btn-primary"><i class="glyphicon glyphicon-search"></i> Filter</button>
+            
+            </div> 
+        </div> 
+        <br>
+         <div class="panel-body">  
+        <table id="table_data" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+            <thead>
+            <tr>
+                            <th width="5%">No</th>
+                            <th width="15%">Nama Pasien</th>
+                            <th width="15%">Alamat</th>
+                            <th width="10%">No. Hp</th>
+
+                             <th width="15%">Poli Tujuan </th>
+                            <th width="10%">Dokter </th>
+
+                            <th width="10%">Petugas Rekam Medis </th>
+                            <th width="15%">Tanggal Periksa</th>
+                            <th width="15%">Jam Periksa</th>
+                            <th width="15%">Keluhan </th>
+                           
+                           
+                            
+                                    
+                             </tr>
+            </thead>
+
+        </table>
+       
+    </div>
+     </div>     
+    </div>
+
+
+
+
+
+
+
+<script>
+ 
+var myTable;
+
+    $(document).ready(function() {
+      
+
+        //initialize selectbox
+      // $('select').selectpicker();
+
+      //Date range picker
+     $('.input-daterange').datepicker({
+       todayBtn: 'linked',
+       format: 'yyyy-mm-dd',
+      });
+
+        myTable = $('#table_data').DataTable({
+            processing: true,
+            serverSide: true,
+            searching: false,
+            destroy:true,
+            ajax:{
+                url : "<?php echo base_url();?>index.php/dokter/pasien/data/"
+            },
+            columns: [
+                {"mData": "no"},
+                {"mData": "nama_pasien"},
+                {"mData": "alamat_pasien"},
+                {"mData": "no_telp_pasien"},
+                {"mData": "nama_poli"},
+                {"mData": "nama_dokter"},
+                {"mData": "petugas"},
+                {"mData": "tanggal"},
+                {"mData": "jam_periksa"},
+                {"mData": "keluhan"},
+                
+               
+                ],
+            order: [[0, 'desc']],
+           
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class UserRole extends Model
+{
+    // protected $fillable=['id','user_id','role_id'];
+    protected $table="role";
+    p
+}
+ublic $timestamps=false;
+    protected $guarded = [];
+
+    // public function user()
+    // {
+    // 	return $this->belongsTo('App\User');
+        
+    // }
+    public function user(){
+    	return $this->hasOne('App\User');
+    }
+    public function post(){
+    	return $this->hasMany('App\Post');
+    }
+
+Precision: 0
+Recall: 0
+F1 Score: 0

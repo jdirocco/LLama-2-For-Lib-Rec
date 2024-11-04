@@ -1,0 +1,154 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: hibernate/hibernate-tools
+    Project Description: \n\n\n\n Hibernate Tools Tooling for your Hibernate Projects\n\nWorking with Hibernate is very easy and developers enjoy using the APIs and the query language. Even creating mapping metadata is not an overly complex task once you\'ve mastered the basics. Hibernate Tools makes working with Hibernate or JPA even more pleasant.\n\n Project Contents\n\nHibernate Tools is developed under the form of a hierarchical multi module Maven project. This parent module contains the following child modules:\n\n \nThis module contains among others the base tools to reverse engineer Hibernate artifacts from an existing database. There is a default implementation for the most current Hibernate and JPA artifacts but an API allows you to extend it to other artifacts and develop your own templates should this be needed. \n \nThe hibernatetoolsant module makes use of the API defined in the hibernatetoolsorm module to wrap these tools in a number of Ant tasks to be used in your Ant build scripts.\n \nJust like the hibernatetoolsant module this module uses the tools defined in hibernatetoolsorm to create some Maven mojos that bring the reverse engineering power to your Maven build.\n \nThis module contains a few general purpose utilities that are used in the other modules.\n \nThe test module is a multi module in itself that contains tests targeting different databases as well as no database tests.\n\n Contributing\n\nIf you run into errors, have ideas on how to improve the project or if you just want to collaborate, checkout the .'
+    Existing Dependencies:
+    com.oracle.jdbc:ojdbc8
+- org.eclipse.jdt:org.eclipse.jdt.core
+- org.slf4j:slf4j-api
+- org.freemarker:freemarker
+- org.apache.ant:ant
+- commons-logging:commons-logging
+- com.microsoft.sqlserver:mssql-jdbc
+- javax:javaee-api
+- commons-collections:commons-collections
+- junit:junit
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+        <div class="page-footer">
+       
+            <div class="footer-grid container">
+                
+                <div class="footer-l white">&nbsp;</div>
+                <div class="footer-grid-l white">
+
+                    <h3>About us</h3>
+                    <p>Aenean auctor wisi et urna. Aliquarat volutpat. Duis ac turpis. Integer rutrum ante eu lacusVestibulum libero nisl porta vel scelerisque eget malesuada at neque. Vivamus eget nibh. Etiamcursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>    
+                    
+                </div>
+                <div class="clear clr"></div>
+                
+                <div class="footer-grid-r white">
+
+                    <h3>Helpful Links</h3>
+                    <ul class="list-1">
+
+                        <li><a href="#" title="FAQs">FAQs</a></li>
+                        <li><a href="#" title="Shipping">Shipping</a></li>
+                        <li><a href="#" title="Where is my order?">Where is my order?</a></li>
+                        <li><a href="#" title="Return policy">Return policy</a></li>
+                        <li><a href="#" title="Bulk Orders">Bulk Orders</a></li>
+                        <li><a href="#" title="Contact us">Contact us</a></li>
+
+                    </ul>
+
+                </div>
+                
+                <div class="footer-grid-r white">
+
+                    <h3>Our Services</h3>
+                    <ul class="list-1">
+
+                        <li><a href="#" title="Support">Support</a></li>
+                        <li><a href="#" title="Terms of Use">Terms of Use</a></li>
+                        <li><a href="#" title="Privacy Policy">Privacy Policy</a></li>
+                        <li><a href="#" title="FAQs">FAQs</a></li>
+                        <li><a href="#" title="Sale only today">Sale only today</a></li>
+                        <li><a href="#" title="Buy one, save one">Buy one, save one</a></li>
+
+                    </ul>
+
+                </div>
+                
+                <div class="footer-grid-r white">
+
+                    <h3>My Account</h3>
+                    <ul class="list-1">
+
+                        <li><a href="#" title="My orders">My orders</a></li>
+                        <li><a href="#" title="My credit slips">My credit slips</a></li>
+                        <li><a href="#" title="My addresses">My addresses</a></li>
+                        <li><a href="#" title="My personal info">My personal info</a></li>
+                        <li><a href="#" title="My vouchers">My vouchers</a></li>
+                        <li><a href="#" title="My loyalty card">My loyalty card</a></li>
+
+                    </ul>
+
+                </div>
+                
+                <
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>rvice, $rootScope);
+        expect(controller.isAdmin()).toBeTruthy();
+    }));
+
+    it('should not be an admin', inject(function ($rootScope, UserService) {
+        spyOn(UserService, 'hasRole').and.returnValue(false);
+        controller = new Controller(UserService, $rootScope);
+        expect(controller.isAdmin()).toBeFalsy();
+    }));
+});
+ /**
+ * Unit-tests for admin-only functionality
+ *
+ * @author Jim Armstrong
+ *
+ * @version 1.0
+ */
+describe('IsAdmin', function () {
+
+    // test variables
+    let controller: any,
+        UserService: any;
+
+    // build the test controller
+    beforeEach(function () {
+        UserService     = {};
+        UserService.hasRole = function () {
+            // no-op
+        };
+    });
+
+    // create a dummy component controller
+    class Controller {
+
+        constructor(userService: any, $rootScope: any) {
+            this._userService = userService;
+            this.$rootScope   = $rootScope;
+        }
+
+        isAdmin(): boolean {
+          return this._userService.hasRole($localStorage.currentUser['role']);
+        }
+    }
+
+    it('should be an admin', inject(function ($rootScope, UserService) {
+        spyOn(UserService, 'hasRole').and.returnValue(true);
+        controller = new Controller(UserSe
+
+Precision: 0
+Recall: 0
+F1 Score: 0

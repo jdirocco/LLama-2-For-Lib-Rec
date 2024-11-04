@@ -1,0 +1,136 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: hannesstockner/kafka-connect-elasticsearch
+    Project Description: Kafka Connect Elasticsearch\n\nkafkaconnectelasticsearch is a Kafka Connector for loading data from Kafka into Elasticsearch. \nMore explanation can be found in the article .\n\n Prerequisites\n\n a Linux console or Apple OSX console not tested on windows, but adaptable with little effort\n a Git client to fetch the project\n Docker Compose\n Apache Maven installed.\n git clone kafkaconnectelasticsearch\n\n Quickstart\n\nBuild a package of the code:\n\nOpen a console and export env variable:\n\nStart docker containers:\n\nOpen another console window and export DOCKERIP env variable\n\nRun connector:\n\nGo to http://{YOURDOCKERIPADDRESS}:9200/kafkarecipes/search to check your imported recipes\n\n'
+    Existing Dependencies:
+    org.apache.kafka:connect-api
+- org.apache.kafka:connect-json
+- ch.qos.logback:logback-core
+- org.apache.kafka:connect-file
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="container-fluid">
+
+         <div class="d-sm-flex align-items-center justify-content-between mb-4">
+             <h1 class="h3 mb-0 text-gray-800"><?= $title;?>
+
+
+             </h1>
+
+
+         </div>
+
+         <!-- Page Heading -->
+         <div class="card shadow mb-4">
+             <div class="card-body">
+                 <div class="table-responsive">
+                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                         <thead>
+                             <tr>
+                                 <th>No</th>
+                                 <th>Nama</th>
+                                 <th>Email</th>
+                                 <th>Aksi</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             <?php $i = 1;?>
+                             <?php foreach ($kritik as $row) :?>
+                                 <tr>
+                                     <td width="20px"><?= $i++;?></td>
+                                     <td><?= $row->kritik_nama;?></td>
+                                     <td><?= $row->kritik_email;?></td>
+                                     <td class="text-center">
+                                         <a href="<?= "http://localhost/spp-app/admin/detail_kritik/". $row->kritik_id?>" class="btn btn-primary " data-toggle="tooltip" data-placement="top" title="Detail kritik">
+                                             Detail
+                                         </a>
+                                         <a href="<?= "http://localhost/spp-app/admin/hapus_kritik/". $row->kritik_id?>" id="btn-hapus" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Hapus kritik">
+                                             Hapus
+                                         </a>
+                                     </td>
+                                 </tr>
+                             <?php endforeach;?>
+                         </tbody>
+                     </table>
+                 </div>
+             </div>
+         </div>
+
+     </div>
+     <!-- /.container-fluid -->
+
+     </div>
+     <!-- End of Main Content -->
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ---
+title: "Towards Unsupervised Learning of Neural Architecture via Neumann's Architectural Prior"
+collection: talks
+type: "Paper Talk"
+permalink:
+venue: "2021 International Joint Conference on Neural Networks (IJCNN 2021)"
+date: 2021-04-25
+location: "Vancouver, Canada (Virtually)"
+---
+[[Slide]](http://huan-zhang.github.io/files/IJCNN21_Talk_Slide.pdf)
+
+[[Paper]](http://huan-zhang.github.io/files/IJCNN21.pdf)
+
+[[Code]](https://github.com/huan-zhang/ArchPrior)
+
+This talk is for the [Paper Talk](https://neurips.cc/virtual/2021/public/poster_17480.html) of our paper [Towards Unsupervised Learning of Neural Architecture via Neumann's Architectural Prior](https://arxiv.org/abs/2104.03627).
+
+## Abstract
+
+In the past decades, advancements in neural architecture search methods have led to many successes on a variety of tasks, yet the architecture discovery process still requires human designers to manually craft the models, which are time-consuming and infeasible for large-scale applications. We propose a method to automatically learn neural architectures from data using the Neumann Architectural Prior, which can be viewed as a generalization of the Bayesian posterior distribution to neural architectures. We formulate the problem as an optimization problem to learn the architecture parameters with an unsupervised learning approach. We show that our proposed approach can effectively learn the architecture parameters from data and obtain better results than previously reported methods. 
+
+The talk contains:
+
+<table cellpadding="10" cellspacing="5" width="100%">
+  <tr>
+    <td><a href="https://huan-zhang.github.io/files/IJCNN21_Talk_Slide.pdf"><img src="../../images/IJCNN21/slides.png" width="200"/></a></td>
+    <td><a href="http://huan-zhang.github.io/images/IJCNN21/slides.gif"><img src="../../images/IJCNN21/talk.gif" width="200"/></a></td>
+  </tr>
+  <tr>
+    <td width="50%">Slides</td>
+    <td width="50%">The Talk Demo</td>
+  </tr>
+</table>
+
+## Citation
+
+If you use ArchPrior in your research, please cite our paper using the following BibTeX:
+
+```
+@InProceedings{zhang2021towards,
+	author="Zhang, Huan and Li, Yi and Lu, Xuebo and Zhang, Teng and Wang, Xueyuan and Xie, Yuanfang",
+	titl020.13788},
+}
+```
+e="Towards Unsupervised Learning of Neural Architecture via Neumann's Architectural Prior",
+	booktitle="2021 International Joint Conference on Neural Networks (IJCNN 20
+
+Precision: 0
+Recall: 0
+F1 Score: 0

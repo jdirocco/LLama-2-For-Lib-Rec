@@ -1,0 +1,151 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: ameizi/elasticsearch-jest-example
+    Project Description: jest\n====\n\nElasticSearch Java Rest Client Examples\n\n \xe9\xab\x98\xe4\xba\xae\xe6\x9f\xa5\xe8\xaf\xa2highlight\n\n\n\n\n\n \xe5\x88\xa0\xe9\x99\xa4\xe7\xb4\xa2\xe5\xbc\x95\n\n \xe5\x88\x9b\xe5\xbb\xba\xe7\xb4\xa2\xe5\xbc\x95\n\n \xe5\x88\x9b\xe5\xbb\xba\xe6\x88\x96\xe4\xbf\xae\xe6\x94\xb9mapping\n\n \xe6\x9f\xa5\xe7\x9c\x8bmapping\n\n \xe5\x88\xa0\xe9\x99\xa4mapping\n\n ansj\xe5\x88\x86\xe8\xaf\x8d\xe5\x99\xa8\xe6\xb5\x8b\xe8\xaf\x95\n\n ansj\xe5\x88\x86\xe8\xaf\x8d\xe5\x99\xa8\xe6\x9f\xa5\xe8\xaf\xa2\n\n \xe6\x99\xae\xe9\x80\x9a\xe6\x9f\xa5\xe8\xaf\xa2\n\n \xe6\x8c\x87\xe5\xae\x9aterm\xe6\x9f\xa5\xe8\xaf\xa2\n\n \xe5\x85\xb6\xe4\xb8\xad\xe4\xb8\xba\xe5\x9c\xa8\xe6\x96\x87\xe4\xbb\xb6\xe4\xb8\xad\xe9\x85\x8d\xe7\xbd\xae\xe7\x9a\x84\xe5\x88\x86\xe8\xaf\x8d\xe5\x99\xa8\n\n\n\n elasticsearchjdbc\n\n\n\n\n'
+    Existing Dependencies:
+    mysql:mysql-connector-java
+- us.codecraft:webmagic-extension
+- org.elasticsearch:elasticsearch-shield
+- com.fasterxml.jackson.core:jackson-databind
+- us.codecraft:webmagic-core
+- io.searchbox:jest
+- org.springframework:spring-jdbc
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<style>
+.col-md-6{
+    float:left;
+}
+</style>
+<div class="container">
+    <div class="row">
+
+       
+        <div class="col-md-6">
+         <div id="map">Loading map...</div>
+        </div>
+        
+         <div class="col-md-6">
+         
+         <div style="height:500px;">
+            <img src="../upload/<?= $data[0]['img']?>" width="500"> 
+         </div>
+
+
+         </div>
+        
+
+    </div>
+</div>  
+    
+   
+    <script>
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+var map;
+
+function initialize() {
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+  var mapOptions = {
+    zoom:7,
+    center: chicago
+  }
+  map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  directionsDisplay.setMap(map);
+}
+
+function calcRoute() {
+  var start = "<?php echo $data[0]['address'];?>" ;
+  var end = "<?php echo $data[1]['address'];?>" ;
+  if (start == "" || end == "") {
+    alert("Please enter both start and end!");
+    return;
+  }
+  var request = {
+    origin: start,
+    destination: end,
+    travelMode: google.maps.TravelMode.DRIVING
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+    }
+  });
+}
+    </script>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s/2018-09-05.png "2018-09-05")<br /><br />
+ #### 1. [JDK 8 新时间日期API](https://tech.meituan.com/2018/09/05/java8-time.html)
+
+* 时间日期API，极大的增强了JDK对时间日期的支持。
+* `java.time`包下的类全面替代了`java.util`包下的日期和时间类型。
+* `java.util.Date`的缺点是在于其不支持不同的时区和不能处理夏令时。
+* 新的时间日期API几乎没有使用时区的概念，唯一的使用时区的类为`java.time.ZonedDateTime`。
+<br /><br />
+
+#### 2. [阿里巴巴的Java开发手册](https://github.com/alibaba/Alibaba-Java-Coding-Guidelines)
+
+* 几个重要的点：
+* 1）不要强制转换，除非不能忍受
+* 2）不要使用反射
+* 3）不要使用原生态态的态态
+* 4）不要重写final函数
+* 5）不要创建不必要的对象。
+* 6）不要使用`System.out.println()`, 使用`log`
+<br /><br />
+
+#### 3. [Java8的Streams API使用总结](https://www.cnblogs.com/z00377750/p/9735232.html)
+
+* 流的使用需要注意很多，比如说不能使用`null`，不能使用`parallelStream`和`forEach`，不能使用`collect`，不能使用`reduce`。
+* 如果需要进行聚合或是排序，则需要使用`collect`或`sort`。
+* 很多人对于`Streams API`并不了解，比如在`forEach`的时候，其并没有进行任何计算，那么它是如何进行的呢？
+```java
+List<Student> students = Arrays.asList(
+    new Student("张三", 23),
+    new Student("李四", 24),
+    new Student("王五", 23)
+    );
+
+students.stream().forEach(student -> {
+    System.out.println(student.getName());
+});
+```
+```java
+public void forEach(Consumer<? super T> action) {
+    Objects.requireNonNull(action);
+    forEachOrdered(action);
+}
+
+public void forEachOrdered(Consumer<? super T> action) {
+    if (action == null)
+        throw new NullPointerException();
+    if (size < MIN_SPLIT_FOR_PARALLEL_STEALS) {
+        forEach(0, size, action);
+
+Precision: 0
+Recall: 0
+F1 Score: 0

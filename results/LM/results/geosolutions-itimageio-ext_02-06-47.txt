@@ -1,0 +1,148 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: geosolutions-it/imageio-ext
+    Project Description: The ImageIOExt Project\n\n\nThe ImageIOExt is an Open Source project that provides extensions, fixes and improvements for the standard Oracle Java Image I/O project such as:\n\n1. Support for the I/O library\n2. Support for reading/writing JPEG2000 files with \n3. Improved support for reading/writing tiff files \n4. A Reader/Writer for JPEG images based on the open source high performance library. More info can be found \n5. A NITF plugin based on . More info can be found \n6. A new PNG Writer with improved performances. More informations can be found .\n\nThe ImageIO library provides support for encoding/decoding raster formats in Java. Some useful documentation on ImageIO can be found .\n\nSee the documentation below for more information on the ImageIOExt project.\n\n Releases and Downloads\nCurrent stable release is . Check for additional information on how to download artifacts and binaries.\n\n\n Getting Support\n Mailing List\nWe have created two public mailing lists for ImageIOExt one for Developers and one for Users, you can find their homepages here below:\n\n \n \n\n Contributing\nWe welcome contributions in any form:\n\n pull requests for new features\n pull requests for bug fixes\n pull requests for documentation\n funding for any combination of the above\n\n Working with ImageIOExt\nHere below you can find links with useful information for working with ImageIOExt.\n\n \n \n \n \n\n Important Notice\nIn case you want to enable ECW Decode support, it is mandatory you agree with the ECW Eula. Moreover if you want to support ECW Decode in a Server application you need to BUY a license from ERDAS.\n\n License\nImageIOExt is released partly under license partly under the license namely, derivative work from imageio source code. Refer to the code tree for more information.\n\n Professional Support\nImageIOEXT has been developed by as an internal effort to provide extensions, fixes and improvements for the standard Oracle Java Image I/O project \n'
+    Existing Dependencies:
+    it.geosolutions.imageio-ext:imageio-ext-gdal-bindings
+- it.geosolutions.imageio-ext:imageio-ext-gdalkakadujp2
+- it.geosolutions.imageio-ext:imageio-ext-kakadu
+- it.geosolutions.imageio-ext:imageio-ext-gdalframework
+- it.geosolutions.imageio-ext:imageio-ext-library
+- it.geosolutions.imageio-ext:imageio-ext-imagereadmt
+- it.geosolutions.imageio-ext:imageio-ext-gdalbsb
+- it.geosolutions.imageio-ext:imageio-ext-hdf4
+- it.geosolutions.imageio-ext:imageio-ext
+- it.geosolutions.imageio-ext:imageio-ext-gdalmrsid
+- it.geosolutions.imageio-ext:imageio-ext-gdalvrt
+- it.geosolutions.imageio-ext:imageio-ext-streams
+- it.geosolutions.imageio-ext:imageio-ext-gdalerdasimg
+- it.geosolutions.imageio-ext:imageio-ext-turbojpeg
+- it.geosolutions.imageio-ext:imageio-ext-utilities
+- it.geosolutions.imageio-ext:imageio-ext-plugin
+- it.geosolutions.imageio-ext:imageio-ext-gdalecwjp2
+- it.geosolutions.imageio-ext:imageio-ext-gdal-plugin
+- it.geosolutions.imageio-ext:imageio-ext-grib1
+- it.geosolutions.imageio-ext:imageio-ext-arcgrid
+- it.geosolutions.imageio-ext:imageio-ext-gdaldoq1
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 21 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+@extends('layouts.app')
+@section('content')
+<!-- Start content -->
+
+<div class="content">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="page-title-box">
+                    <h4 class="page-title">{{ __("Edit Page") }}</h4>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="card-box">
+                    <div class="form-wrap" data-model="Pages">
+                        {{ Form::open(array('route' => array('admin.pages.update', $id), 'id'=>'form_model_binding')) }}
+
+
+                            <div class="form-group {{ $errors->has('name')?'has-error' : '' }}">
+                                <label for="name">{{ __("Name") }}*</label>
+                                {{ Form::text('name', $name,array('class'=>'form-control')) }}
+                                @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+
+
+                            <div class="form-group {{ $errors->has('slug')?'has-error' : '' }}">
+                                <label for="slug">{{ __("Slug") }}*</label>
+                                {{ Form::text('slug', $slug,array('class'=>'form-control')) }}
+                                @if ($errors->has('slug'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('slug') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+
+
+                            <div class="form-group {{ $errors->has('title_ar')?'has-error' : '' }}">
+                                <label for="title_ar">{{ __("Page Title In Arabic") }}</label>
+                                {{ Form::text('title_ar', $title_ar,array('class'=>'form-control')) }}
+                                @if ($errors->has('title_ar'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('title_ar') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+
+                            <div class="form-group {{ $errors->has('title_en')?'has-error' : '' }}">
+                                <label for="title_ar">{{ __("Page Title In English") }}</label>
+                                {{ Form::text('title_en', $title_en,array('class'=>'form-control')) }}
+                                @if ($errors->has('title_en'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('title_en') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+
+                             <div class="form-group {{ $errors->has('desc_ar')? '
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 21 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>   }
+    }
+} using System;
+
+namespace NUnit.Framework.Constraints
+{
+    /// <summary>
+    /// ThrowsExceptionConstraint tests whether an exception is thrown, regardless
+    /// of the type, and regardless of whether it is thrown by the callee or a nested
+    /// call.
+    /// </summary>
+    [Obsolete("Please use ThrowsConstraint instead")]
+    public class ThrowsExceptionConstraint : ThrowsConstraint
+    {
+        /// <summary>
+        /// Constructs a ThrowsExceptionConstraint
+        /// </summary>
+        public ThrowsExceptionConstraint() : base(typeof(Exception))
+        {
+     
+
+Precision: 0
+Recall: 0
+F1 Score: 0

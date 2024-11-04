@@ -1,0 +1,131 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: cstamas/plexus-components
+    Project Description: Plexus Components\n=================\n\nHave fun \nt'
+    Existing Dependencies:
+    org.eclipse.jdt:core
+- org.apache.maven:maven-artifact-manager
+- xmlunit:xmlunit
+- org.codehaus.plexus:plexus-compiler-test
+- org.codehaus.plexus:plexus-container-default
+- org.apache.maven:maven-settings
+- org.codehaus.plexus:plexus-utils
+- jline:jline
+- org.codehaus.swizzle:swizzle-jirareport
+- org.apache.maven:maven-artifact-test
+- org.codehaus.plexus:org.codehaus.plexus
+- org.codehaus.plexus:plexus-velocity
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+     <h3 class="text-muted">
+        {{$user->name}} Profile
+    </h3>
+
+    <div class="row">
+        <div class="col-xs-12 col-lg-6 col-sm-6">
+           <p><strong>Name</strong></br>{{$user->name}}</p>
+           <p><strong>Email</strong></br>{{$user->email}}</p>
+           <p><strong>Date of Birth</strong></br>{{$user->date_of_birth}}</p>
+           <p><strong>Gender</strong></br>{{$user->gender}}</p>
+          {{--  <p><strong>Location</strong></br>{{$user->getLocation()}}</p> --}}
+          
+      
+           @if(Auth::User()->isFriendWith($user) ==0)   {{-- if you are not friends with the user --}}
+                  <p><a href="{{ route('user.addfriend', $user->id) }}" class="btn btn-info">Add To Friend</a></p>
+                   
+                     <form class="delete_post_{{$user->id}}" action="{{ route('user.unfriend', $user->id) }}"
+                         method="POST" id="delete_post_{{$user->id}}">
+                          {{ csrf_field() }}
+                          <input class="btn btn-danger" type="submit" value="Unfriend">
+                     </form>
+
+               @endif  {{-- end if you are not friends with the user --}}
+
+            @if(Auth::User()->isFriendWith($user) ==1)  
+                <p><a href="{{ route('user.acceptfriend', $user->id) }}" class="btn btn-info">accept friend</a></p>
+                
+                 {{--  <form class="delete_post_{{$user->id}}" action="{{ route('user.acceptfriend', $user->id) }}"
+                         method="POST" id="delete_post_{{$user->id}}">
+                          {{ csrf_field() }}
+                          <input class="btn btn-danger" type="submit" value="accept friend">
+                     </form> --}}
+
+               @endif  {{-- end if you are not friends with the user --}}
+
+
+        </div>
+        <div class="col-xs-12 col-lg-6 col-sm-6">
+           <p><strong>About Me</strong></br>{{$user->getInfo()}}</p>
+           <p>
+            <form action="#">
+               <textarea class="form-control" cols="5" rows="2"></textarea>
+               <button class="btn btn-info pull-right">Send Message</button><br />
+            </form>
+            </p>
+
+         <hr class="divider">
+         <p><strong><a href="{{route('user.profile')}}" style="color: #222">Edit Profile</a></strong></p>
+       </div>
+
+    </div>
+
+    <div class="row">
+        <div >
+            <h4 class="">{{$user->getFirstNameOrUsername()}}'s posts
+            @include($user->getFriendsOrPendingFriendship().'layouts.partials.friends')
+            </h4>
+            @if($posts->
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.jn.kiku.net.rxjava;
+
+/**
+ * Author：Stevie.Chen Time：2019/8/9
+ * Class Comment：RxJava管理类
+ */
+public class RxManage {
+
+    private static volatile RxManager mRxManager;
+
+    public static RxManager getRxManager() {
+        if (mRxManager == null) {
+            }
+
+    public static void clear() {
+        if (mRxManager!= null)
+            mRxManager.clear();
+    }
+}    synchronized (RxManage.class) {
+                if (mRxManager == null)
+                    mRxManager = new RxManager();
+            }
+        }
+        return mRxManager;
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

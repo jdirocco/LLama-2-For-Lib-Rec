@@ -1,0 +1,186 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: gruter/utogen
+    Project Description: www.gruter.com\n'
+    Existing Dependencies:
+    mysql:mysql-connector-java
+- org.springframework:spring-aop
+- commons-io:commons-io
+- org.slf4j:slf4j-api
+- org.springframework.security:spring-security-core
+- org.jgraph:jgraph
+- org.mockito:mockito-all
+- net.htmlparser.jericho:jericho-html
+- org.aspectj:aspectjweaver
+- org.springframework:spring-aspects
+- javax.servlet.jsp:jsp-api
+- org.swinglabs:swing-layout
+- javax.mail:mail
+- org.springframework:spring-test
+- org.springframework:spring-webmvc
+- org.eclipse.jetty:jetty-server
+- org.vedantatree.expressionoasis:Utilities
+- org.springframework.security:spring-security-config
+- commons-httpclient:commons-httpclient
+- org.eclipse.jetty:jetty-servlet
+- javax.validation:validation-api
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 21 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+@extends('master')
+<div class="col-sm-12">
+    @include('adminlte::layouts.partials.GestionBar')
+</div>
+
+@section('contenido3')
+
+<div class="table-responsive">
+<table class="table table-hover">
+    <tr>
+        <th>Fecha de Creacion</th>
+        <th>Nombre Cliente</th>
+        <th>Correo Electronico</th>
+        <th>Telefono</th>
+        <th>Ciudad</th>
+        <th>Acciones</th>
+    </tr>
+    @foreach ($clien as $cliente)
+        <tr>
+            <td>{{$cliente->created_at}}</td>
+            <td>{{$cliente->NombreCliente}}</td>
+            <td>{{$cliente->CorreoElectronico}}</td>
+            <td>{{$cliente->Telefono}}</td>
+            <td>{{$cliente->Ciudad}}</td>
+            <td><a href="/clientes/{{$cliente->id}}/delete">Eliminar</a></td>
+            <td><a href="/clientes/{{$cliente->id}}/edit">Editar</a></td>
+            <td><a href="/clientes/{{$cliente->id}}">Ver Mas</a></td>
+        </tr>
+    @endforeach
+
+
+</table>
+</div>
+
+{{$clien->links()}}
+@endsection
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 21 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t; } }
+        public override long Seek(long offset, SeekOrigin origin) { throw new NotSupportedException(); }
+        public override void SetLength(long value) { throw new NotSupportedException(); }
+        public override void Write(byte[] buffer, int offset, int count) { throw new NotSupportedException(); }
+    }
+} ﻿using System;
+using System.IO;
+using System.Linq;
+using System.Text;
+using SharpCompress.Compressors;
+using SharpCompress.Common;
+
+namespace SharpCompress.Compressors.Streams
+{
+    public class LzmaStream : Stream
+    {
+        private Stream _stream;
+        private readonly Stream _stream2 = new MemoryStream();
+        private readonly Lzma _lzma;
+
+        public LzmaStream(Stream stream)
+            : this(stream, false)
+        {
+        }
+
+        public LzmaStream(Stream stream, bool leaveOpen)
+        {
+            _stream = stream;
+            _lzma = new Lzma();
+        }
+
+        public override void Close()
+        {
+            if (!_stream.CanRead ||!(_stream.Length > 0)) return;
+
+            _lzma.ExtractFile(this, _stream2);
+        }
+
+        public override bool CanRead { get { return true; } }
+        public override bool CanSeek { get { return false; } }
+        public override bool CanWrite { get { return false; } }
+        public override void Flush() {}
+        public int LzmaProperties { get { return _lzma.properties; } }
+
+        public int DictionarySize
+        {
+            get
+            {
+                // 2^(properties >> 4)
+                return 1 << (_lzma.properties >> 4);
+            }
+        }
+
+        public override long Length { get { return _stream2.Length; } }
+
+        public override long Position
+        {
+            get
+            {
+                return _stream2.Position;
+            }
+            set
+            {
+                _stream2.Position = value;
+            }
+        }
+
+        public int PB { get { return _lzma.pb; } }
+
+        public override int Read(byte[] buffer, int offset, int count)
+        {
+            if (!_stream.CanRead ||!(_stream.Length > 0)) return 0;
+            return  _stream2.Read(buffer,offset,count);
+        }
+
+        public long? ReadLength
+        {
+            get
+            {
+                return _lzma.ReadLength;
+            }
+        }
+
+        public override long Seek(long offset, SeekOrigin origin) { throw new NotSupportedException(); }
+
+        public override void SetLength(long value) { throw new NotSupportedException(); }
+
+        public override void Write(byte[] buffer, int offset, int count) { throw new NotSupportedException(); }
+    }
+
+    internal class Lzma : IArchive
+    {
+        private readonly byte[] HEADER = { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07 };
+        private readonly int[] LZMA_HEADER = { 0x01, 0x02, 0x03,
+
+Precision: 0
+Recall: 0
+F1 Score: 0

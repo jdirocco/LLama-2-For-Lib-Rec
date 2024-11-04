@@ -1,0 +1,157 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: l0rdn1kk0n/wicket-bootstrap
+    Project Description: WICKET COMPONENTS FOR BOOTSTRAP\n=======================================\n\n\n\nWicketBootstrap is based on the Bootstrap toolkit and the .\n\n| Branch | Build |\n| | |\n| wicket10.xbootstrap5.x | |\n| wicket9.xbootstrap5.x | |\n| wicket9.xbootstrap4.x | |\n| wicket8.xbootstrap4.x | |\nCurrent release version:\n\n and : 7.x\n and : 6.x\n and : 5.x\n and : 4.x\n and : 3.x\n and : 2.x\n and : 0.10.x\n and : 0.9.x\n Wicket 6.x and Bootstrap 2.: 0.8.4\n\nDemo\n\n courtesy hosted by \n\n\nThemes\n\n\n Bootstrap 5.3.2: Bootswatch 5.3.2: Material Design by FezVrasta 0.3.0: todcbootstrap, google styled theme 3.3.7: metrobootstrap 3.3.7: Vegibit 3.1.1: DatePicker: Html5 Video Player: OpenOnHover for dropdown buttons: JQueryUI 1.11.4: Draggable: Resizable: jsass: 5.7.3 bootstraptour 0.10.3: OpenWebIcons 20140929: : : in version 6 default or 5\n\n\nFontAwesome\n\n\nYou can use FontAwesome 5 or 6 with version 6 as the default.\nTo override the default and use FontAwesome 5, override the version of the dependency in your pom.xml:\n\n\n\nFor components in that use FontAwesome icons to follow that choice,\nset the Bootstrap version as follows:\n\n\n\n Maven\nwicketbootstrap is in Maven central repository.\n\ncore maven dependency:\n\n\n\nfor all extensions:\n\n\n\nfor all themes:\n\n\n\nif you want to use a less compiler:\n\n\n\nall samples can be used with this dependency:\n\n\n\nInstallation\n\nInstall bootstrap settings class:\n\n\n\nthen you are able to use all wicketbootstrap components.\n\nAuthors\n\n\n\n\n\n\npowered by \n\nBug tracker\n\n\nHave a bug? Please create an issue here on GitHub!\n\n will be maintained under the Semantic Versioning guidelines as much as possible.\n\nReleases will be numbered with the follow format:\n\n\n\nAnd constructed with the following guidelines:\n\n Breaking backward compatibility bumps the major\n New additions without breaking backward compatibility bumps the minor\n Bug fixes and misc changes bump the patch\n\nFor more information on SemVer, please visit and license\n\n\nCopyright 2012 AgileCoders.\n\nLicensed under the Apache License, Version 2.0 the "License";\nyou may not use this work except in compliance with the License.\nYou may obtain a copy of the License in the LICENSE file, or at:\n\n required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n'
+    Existing Dependencies:
+    org.webjars:spin-js
+- org.apache.wicket:wicket-request
+- org.apache.maven.scm:org.apache.maven.scm
+- org.hamcrest:hamcrest-core
+- org.webjars:Eonasdan-bootstrap-datetimepicker
+- de.agilecoders.wicket:wicket-bootstrap-core
+- javax.servlet:javax.servlet
+- com.google.guava:guava
+- org.wicketstuff:wicketstuff-annotation
+- de.agilecoders.wicket:wicket-bootstrap-common-tests
+- com.yahoo.platform.yui:yuicompressor
+- org.hamcrest:hamcrest-library
+- org.webjars:animate.css
+- org.webjars:momentjs
+- de.agilecoders.wicket:wicket-bootstrap-themes
+- com.google.guava:com.google.guava
+- org.webjars:jquerypp
+- org.webjars:bootstrap
+- de.agilecoders.wicket:wicket-bootstrap-samples
+- org.slf4j:org.slf4j
+- junit:junit
+- org.apache.wicket:wicket-extensions
+- org.databene:contiperf
+- org.apache.maven:org.apache.maven
+- org.webjars:modernizr
+- org.hamcrest:org.hamcrest
+- javax:javaee-web-api
+- de.agilecoders.wicket:wicket-bootstrap-extensions
+- com.google.code.gson:com.google.code.gson
+- javax.inject:javax.inject
+- de.agilecoders.wicket:wicket-bootstrap-less
+- org.apache.commons:commons-lang3
+- org.kohsuke:doxia-module-markdown
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 34 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+#pragma once
+#include "../../../ChiliHead/ResourceManager/ResourceManager.h"
+
+namespace Butter
+{
+	class ResourceManager : public Chili::ResourceManager
+	{
+	private:
+	public:
+		ResourceManager();
+		virtual ~ResourceManager();
+
+	public:
+
+
+	};
+}
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 34 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <template>
+  <div class="home" style="display: flex;flex-direction: column;background-color: #f7f7fb;">
+    <!-- 头部 -->
+    <HeaderTop :tab="'home'" />
+    <!-- 内容 -->
+    <div style="margin-top: 44px;height: calc(100vh - 44px);overflow: scroll;"> 
+       <!-- 轮播图 -->
+         <div class="banner-wrap">
+         <div
+          v-swiper:swiperOption="true"
+          class="banner-item"
+          :style="{
+            backgroundImage:
+              `url(${item.img})`
+          }"
+          v-for="(item, index) in banners"
+          :key="index"
+        >
+          <div class="banner-wrap-item"  >
+             <div class="banner-wrap-item-title"  >{{item.title}}</div>  
+            <button class="banner-wrap-item-button" @click="handleDetail(item)">查看详情</button>
+          </div> 
+        </div>
+      </div>
+      <!-- 分类 -->
+      
+      <div class="cate-wrap">
+          <Cate />
+      </div>
+      <!-- 新闻 -->
+      <div class="news-wrap">
+        <div class="news-wrap-title">新闻资讯</div> 
+        <div
+          class="new-item-wrap"
+          v-for="(item, index) in news"
+          :key="index"
+        >
+          <div class="news-item">
+            <div class="news-item-img" >
+              <img :src="item.img" alt="" class="item-img"  />
+            </div> 
+            <div>
+              <div class="news-item-title">{{
+                item.title
+              }}</div>
+              <div class="news-item-content">{{
+                item.content
+              }}</div>
+            </div>
+          </div>
+        </div> 
+        <div style="height: 44px;"></div>  
+      </div> 
+      <div class="contact-wrap">
+         <div class="contact-wrap-title">联系我们</div> 
+          <div class="contact-item-wrap" >
+            <div class="contact-item"> 
+            <div class="contact-item-icon icon-iconfont icon-dianhua"></div>
+            <div class="contact-item-content">4001361268</div> 
+          </div> 
+          <div class="contact-item"
+             @click="goLink('/my/contact')"
+          > 
+            <div class="contact-item-icon icon-iconfont icon-lianxiwomen"></div>
+            <div class="contact-item-content">在线客服</div> 
+         </div>
+        </div>
+      </div>
+     <!-- 订单列表 -->
+     <div class="order-item-wrap" > 
+           <div class="order-item-title" >我的订单</div>
+           <div class="order-item" >
+
+Precision: 0
+Recall: 0
+F1 Score: 0

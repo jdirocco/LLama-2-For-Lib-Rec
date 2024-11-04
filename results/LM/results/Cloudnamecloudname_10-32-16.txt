@@ -1,0 +1,179 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: Cloudname/cloudname
+    Project Description: Brave new world: Cloudname 3.0\n\n cncore\nThe core Cloudname library for resource management\n\n cnservice\nService discovery built on top of the core library.\n\n\n The yettobeupdated section\n\n a3 Authentication, Authorization and Access library\nMostly the first, some of the second. Still unchanged from 2.x\n\n Idgen Generating IDs\nGenerate bucketloads of unique IDs spread across multiple hosts, services and\nregions.\n\n Flags Command line Flags\nSimple command line flag handling via annotations on properties and accessors.\n\n Log Core logging library\nCore entities for logging.\n\n Timber A log server and client\nA networked highperformance log server that uses protobuf entities. Server and\nclient code.\n\n Testtools Testing tools and utilities\n\nMostly for internal use by the various modules.\n'
+    Existing Dependencies:
+    org.cloudname:cn-core
+- org.slf4j:slf4j-nop
+- com.sun.jmx:jmxri
+- io.netty:netty
+- javax.ws.rs:javax.ws.rs-api
+- com.google.protobuf:protobuf-java
+- junit:junit-dep
+- org.cloudname:cn-memory
+- jline:jline
+- org.cloudname:idgen
+- org.cloudname:cn-zookeeper
+- org.glassfish.jersey.core:jersey-client
+- org.cloudname:cn-service
+- org.mindrot:jbcrypt
+- org.slf4j:slf4j-jdk14
+- org.cloudname:flags
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+    var $window = $(window),
+        $body = $('body'),
+        $header = $('#header'),
+        $banner = $('#banner'),
+        $all = $body.add($header).add($banner);
+
+    // Disable animations/transitions until the page has loaded.
+        window.onload = function() {
+            window.setTimeout(function() {
+                $body.removeClass('is-loading');
+            }, 0);
+        };
+
+    // Touch?
+        if (browser.mobile) {
+
+            // Turn on touch mode.
+                $body.addClass('is-touch');
+
+            // Height fix (mostly for iOS).
+                window.setTimeout(function() {
+                    $window.scrollTop($window.scrollTop() + 1);
+                }, 0);
+
+        }
+
+    // Scrolly.
+        $('.scrolly').scrolly({
+            speed: 1000,
+            offset: function() { return $header.height() + 10; }
+        });
+
+    // Prioritize "important" elements on medium.
+        skel.on('+medium -medium', function() {
+            $.prioritize(
+                '.important\\28 medium\\29',
+                skel.breakpoint('medium').active
+            );
+    });
+
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package net.jibini.chalkboard.document;
+
+import java.util.Collection;
+import java.util.List;
+import java.util.Set;
+import java.util.UUID;
+
+import net.jibini.chalkboard.Chalkboard;
+import net.jibini.chalkboard.ObjectScope;
+import net.jibini.chalkboard.document.path.DocumentPath;
+import net.jibini.chalkboard.document.path.impl.ChalkTalkDocumentPath;
+import net.jibini.chalkboard.text.Text;
+import net.jibini.chalkboard.text.impl.ChalkTalkText;
+
+/**
+ * Represents an individual document in a collection. Documents contain text
+ * and links to other documents, which are used in document navigation.
+ * 
+ * @author Zach Goethel
+ */
+public interface ChalkDocument
+{
+	/**
+	 * Retrieves the unique ID of the document.
+	 * ument to.
+	 * @return The text object at the given path.
+	 */
+	public ChalkTalkText getText(List<String> path);
+	public ChalkTalkText getText(Collection<DocumentPath> path);
+	public ChalkTalkText getText(DocumentPath... path);
+	public ChalkTalkText getText(DocumentPath path);
+	
+	/**
+	 * Retrieves a collection of text objects for the given path in the
+	 * document.
+	 * 
+	 * @param path Path to the text to set in the document.
+	 * @param recursive Whether to traverse to the deepest element in the path
+	 * (if a non-final element in the path references another document).
+	 * @return The text object at the given path.
+	 */
+	public Set<ChalkTalkText> getTextAll(List<String> path, boolean recursive);
+	public Set<ChalkTalkText> getTextAll(Collection<DocumentPath> path, boolean recursive);
+	public Set<ChalkTalkText> getTextAll(DocumentPath path, boolean recursive);
+	
+	/**
+	 * Retrieves the unique ID of the document.
+	 * 
+	 * @return Unique ID of the document.
+	 */
+	public UUID getId();
+	
+	/**
+	 * Retrieves the title of the document.
+	 * 
+	 * @return Title of the document.
+	 */
+	public String getTitle();
+	
+	/**
+	 * Retrieves the text object of this document.
+	 * 
+	 * @return The text object of this document.
+	 */
+	public ChalkTalkText getText();
+	
+	/**
+	 * Adds a link to a referenced document.
+	 * 
+	 * @param path Path to the referenced document.
+	 * @param recursive Whether to traverse to the deepest element in the path
+	 * (if a non-final element in the path references another document).
+	 */
+	public void link(List<String> path, boolean recursive);
+	public void link(Collection<DocumentPath> path, boolean recursive);
+	public void link(DocumentPath... path);
+	public void link(DocumentPath path);
+	
+	/**
+	 * Unlinks the given document or text object.
+	 * 
+	 * @param path Path to the document or text object to unlink.
+	 */
+	public void unlink(List<String> path);
+	public
+
+Precision: 0
+Recall: 0
+F1 Score: 0

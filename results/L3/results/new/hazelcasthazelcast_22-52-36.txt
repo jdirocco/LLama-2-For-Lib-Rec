@@ -1,0 +1,273 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications. provide recommendations exclusively in the Maven format: groupId:artifactId:version.
+    Given the project details below:
+    Project Name: patloew/RxLocation
+Project Description: The Reactive Location API Library for Android is now deprecated and not maintained anymore. Please switch to the CoLocation library by Micha\xc5\x82 Charmas. This library wraps the Location APIs in RxJava 2.x.
+Existing Dependencies Include: org.powermock:powermock-module-junit4
+- io.reactivex.rxjava2:rxandroid
+- com.squareup.leakcanary:leakcanary-android
+- io.reactivex.rxjava2:rxjava
+- com.google.android.gms:play-services-location
+- com.squareup.leakcanary:leakcanary-android-no-op
+
+Project Name: frankred/jSona
+Project Description: JSona is a configuration file(JSON), vcj and JavaFx based music and media player. The aim is to always keep your playlists in synch with your music folders. For fast fulltext search jSona uses Apache Lucene (http://lucene.apache.org/core/).
+Existing Dependencies Include: uk.co.caprica:vlcj
+- org.apache.lucene:lucene-analyzers-common
+- org.apache.lucene:lucene-core
+- commons-io:commons-io
+- com.mpatric:mp3agic
+- org.apache.lucene:lucene-queryparser
+- com.github.tulskiy:jkeymaster
+- org.apache.commons:commons-lang3
+
+Project Name: querydsl/querydsl
+Project Description: Querydsl is a framework which enables the construction of type-safe SQL-like queries for multiple backends including JPA, MongoDB and SQL in Java. Querying JPA and MongoDB using a fluent API.
+Existing Dependencies Include: org.springframework:spring-aop
+- com.mysema.codegen:codegen
+- org.xerial:sqlite-jdbc
+- org.springframework:spring-test
+- com.google.guava:guava
+- com.jolbox:bonecp
+- org.hamcrest:hamcrest-library
+- com.oracle:ojdbc6
+- com.querydsl:querydsl-sql-spatial
+- com.google.inject.extensions:guice-persist
+- com.querydsl:querydsl-apt
+- org.postgresql:postgresql
+- org.easymock:easymock
+- com.querydsl:querydsl-spatial
+- org.hibernate:hibernate-ehcache
+- javax.inject:javax.inject
+- org.springframework:spring-context
+- org.eclipse.persistence:eclipselink
+- org.firebirdsql.jdbc:jaybird-jdk16
+- log4j:log4j
+- org.mongodb.morphia:morphia
+- org.hsqldb:hsqldb
+- cglib:cglib
+- org.apache.lucene:lucene-queryparser
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.apache.maven:maven-project
+- org.hibernate:hibernate-envers
+- com.querydsl:querydsl-codegen
+- net.sourceforge.jtds:jtds
+- org.springframework.roo:org.springframework.roo.annotations
+- org.apache.ant:ant
+- com.querydsl:querydsl-lucene3
+- com.thoughtworks.proxytoys:proxytoys
+- org.scala-lang:scala-library
+- org.geolatte:geolatte-geom
+- com.h2database:h2
+- com.querydsl:querydsl-sql-codegen
+- org.hibernate:hibernate-annotations
+- org.scala-lang:scala-compiler
+- org.reflections:reflections
+- org.datanucleus:datanucleus-api-jdo
+- org.mongodb:mongo-java-driver
+- org.hibernate:hibernate-validator
+- com.infradna.tool:bridge-method-annotation
+- com.querydsl:querydsl-sql-spring
+- javax.transaction:jta
+- org.slf4j:slf4j-log4j12
+
+Project Name: GoogleCloudPlatform/google-cloud-datastore
+Project Description: This repository contains low-level Java and Python client libraries for Google Cloud Datastore. For more idiomatic and usable client libraries in these languages, please visit the [Google Cloud Dataastore Client for Java][java-datastore] and Google Cloud Database Client for Python
+Existing Dependencies Include: com.google.http-client:com.google.http-client
+- com.google.truth:com.google.truth
+- com.google.cloud.datastore:datastore-v1-proto-client
+- com.google.guava:com.google.guava
+- com.google.api-client:com.google.api-client
+- com.google.oauth-client:google-oauth-client
+- com.google.truth:truth
+- com.google.oauth-client:com.google.oauth-client
+
+Project Name: eclipse/tycho
+Project Description: Eclipse Tycho is a manifest-first way to build and build Eclipse plug-ins/OSGi bundles/RCP applications\n，nwith Maven. This repository contains all the features and documentation that will help you migrate to the official Eclipse site.
+Existing Dependencies Include: org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.codehaus.plexus:plexus-component-annotations
+- org.codehaus.plexus:plexus-container-default
+- org.eclipse.tycho:tycho-testing-harness
+- org.apache.maven:maven-core
+- org.eclipse.tycho:org.eclipse.jdt.compiler.apt
+- org.codehaus.plexus:plexus-utils
+- org.eclipse.tycho:org.eclipse.osgi
+- org.eclipse.tycho:tycho-core
+- org.apache.commons:commons-exec
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Reccomend me some of these libraries that can be added to the project to enhance its capabilities.
+    Project Name: hazelcast/hazelcast
+    Project Description: Hazelcast provides a real-time data platform to process streaming data, enrich it with historical context and take instant action with standard or ML/AI-driven automation - before it is stored in a database or data lake.
+    Existing Dependencies:
+    biz.aQute:bndlib
+- org.slf4j:slf4j-api
+- org.mockito:mockito-all
+- org.springframework:spring-test
+- org.apache.maven.plugins:maven-shade-plugin
+- org.powermock:powermock-api-mockito
+- org.ops4j.pax.exam:pax-exam-container-paxrunner
+- com.google.guava:guava
+- javax.cache:cache-tests
+- org.apache.logging.log4j:log4j-api
+- org.osgi:org.osgi.core
+- com.hazelcast:hazelcast-wm
+- javax.annotation:jsr250-api
+- org.hamcrest:hamcrest-library
+- net.bytebuddy:byte-buddy-agent
+- com.hazelcast:hazelcast-aws
+- com.hazelcast:hazelcast-client-protocol
+- javax.cache:cache-api
+- net.sourceforge.findbugs:annotations
+- org.hdrhistogram:HdrHistogram
+- nl.jqno.equalsverifier:equalsverifier
+- junit:junit
+- org.powermock:powermock-module-junit4
+- com.atomikos:transactions-jdbc
+- org.apache.logging.log4j:log4j-core
+- com.hazelcast:hazelcast-client
+- org.apache.geronimo.specs:geronimo-jta_1.1_spec
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     Based on the provided information, I recommend the following five libraries to enhance the capabilities of the Hazelcast project:
+
+1. com.hazelcast:hazelcast-aws - This library provides support for Amazon Web Services (AWS) cloud services, allowing the project to leverage cloud-based storage and computing resources. By using this library, the project can improve its scalability and availability, especially for applications with high traffic or large data sets.
+
+2. com.hazelcast:hazelcast-client-protocol - This library provides a client protocol for communicating with Hazelcast instances. By using this library, the project can improve its client-side functionality and enable better communication with Hazelcast instances, leading to improved performance and reliability.
+
+3. org.apache.logging.log4j:log4j-api - This library provides a logging API for Java applications. By using this library, the project can improve its logging functionality and provide better diagnostic tools for developers and users.
+
+4. nl.jqno.equalsverifier:equalsverifier - This library provides a tool for verifying the equality of objects in Java applications. By using this library, the project can improve its code quality and reduce the likelihood of bugs related to object equality.
+
+5. com.atomikos:transactions-jdbc - This library provides support for transactions in JDBC-compliant databases. By using this library, the project can improve its database functionality and enable better transaction management, leading to improved data consistency and reliability.
+
+Each of these libraries complements the existing dependencies and provides new functionalities that can enhance the capabilities of the Hazelcast project. For example, the Hazelcast-AWS library allows the project to leverage cloud-based resources, while the EqualsVerifier library helps improve code quality. By incorporating these libraries, the project can improve its overall performance, scalability, and reliability.
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> # Maven Dependencies
+
+Here are the Maven dependencies required for the project:
+
+1. Apache Commons Lang:
+```xml
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.9</version>
+</dependency>
+```
+2. Apache Commons Logging:
+```xml
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-logging</artifactId>
+    <version>1.2</version>
+</dependency>
+```
+3. Apache Commons Io:
+```xml
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-io</artifactId>
+    <version>2.5</version>
+</dependency>
+```
+4. Java JDBC Driver:
+```xml
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.13</version>
+</dependency>
+```
+5. Spring Framework:
+```xml
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>5.2.0.RELEASE</version>
+</dependency>
+```
+6. Spring Data JPA:
+```xml
+<dependency>
+    <groupId>org.springframework.data</groupId>
+    <artifactId>spring-data-jpa</artifactId>
+    <version>2.2.0.RELEASE</version>
+</dependency>
+```
+7. Hibernate:
+```xml
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.4.20.Final</version>
+</dependency>
+```
+8. MySQL Connector:
+```xml
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.13</version>
+</dependency>
+```
+9. Apache Commons CSV:
+```xml
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-csv</artifactId>
+    <version>1.1</version>
+</dependency>
+```
+10. Java 8:
+```xml
+<dependency>
+    <groupId>java</groupId>
+    <artifactId>java-se-8</artifactId>
+    <version>1.8.0_241</version>
+</dependency>
+```
+Please note that these dependencies may vary based on the specific requirements of your project.
+
+Precision: 0.4
+Recall: 0.07142857142857142
+F1 Score: 0.12121212121212122
+
+Formatted Dependencies:
+biz.aQute:bndlib
+- org.slf4j:slf4j-api
+- org.mockito:mockito-all
+- org.springframework:spring-test
+- org.apache.maven.plugins:maven-shade-plugin
+- org.powermock:powermock-api-mockito
+- org.ops4j.pax.exam:pax-exam-container-paxrunner
+- com.google.guava:guava
+- javax.cache:cache-tests
+- org.apache.logging.log4j:log4j-api
+- org.osgi:org.osgi.core
+- com.hazelcast:hazelcast-wm
+- javax.annotation:jsr250-api
+- org.hamcrest:hamcrest-library
+- net.bytebuddy:byte-buddy-agent
+- com.hazelcast:hazelcast-aws
+- com.hazelcast:hazelcast-client-protocol
+- javax.cache:cache-api
+- net.sourceforge.findbugs:annotations
+- org.hdrhistogram:HdrHistogram
+- nl.jqno.equalsverifier:equalsverifier
+- junit:junit
+- org.powermock:powermock-module-junit4
+- com.atomikos:transactions-jdbc
+- org.apache.logging.log4j:log4j-core
+- com.hazelcast:hazelcast-client
+- org.apache.geronimo.specs:geronimo-jta_1.1_spec
+ Test Dependencies:
+['org.codehaus.groovy:groovy-all', 'org.springframework:spring-tx', 'org.apache.felix:org.apache.felix.utils', 'org.reflections:reflections', 'com.google.code.findbugs:annotations', 'org.eclipse.jetty:jetty-server', 'javax.servlet.jsp:javax.servlet.jsp-api', 'com.hazelcast:hazelcast', 'org.jruby:jruby-complete', 'net.spy:spymemcached', 'javax.inject:javax.inject', 'org.springframework:spring-context', 'org.apache.httpcomponents:httpclient', 'org.apache.commons:commons-lang3', 'org.ops4j.pax.runner:pax-runner-no-jcl', 'com.fasterxml.jackson.core:jackson-databind', 'com.hazelcast:hazelcast-spring', 'org.openjdk.jmh:jmh-generator-annprocess', 'net.bytebuddy:byte-buddy', 'org.ops4j.pax.exam:pax-exam-link-mvn', 'org.springframework:spring-context-support', 'log4j:log4j', 'javax.servlet:javax.servlet-api', 'com.eclipsesource.minimal-json:minimal-json', 'org.ops4j.pax.exam:pax-exam-junit4', 'org.eclipse.jetty:jetty-webapp', 'com.hazelcast:hazelcast-hibernate3', 'org.openjdk.jmh:jmh-core']

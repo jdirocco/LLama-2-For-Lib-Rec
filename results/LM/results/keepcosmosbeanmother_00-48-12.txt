@@ -1,0 +1,87 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: keepcosmos/beanmother
+    Project Description: Beanmother \n\n\n\n\n\n \n\n\n \n\nBeanmother helps to create various objects, simple and complex, super easily with fixtures for testing. It encourages developers to write more tests.\n\nBeanmother is an implementation of pattern and also fixture replacement tool. You do not need to write extra codelike factories or builders for creating test objects. Beanmother helps to create fresh and randomized bean objects for every type of test. You can use a bean as is!.\n\nJava 7 and above are supported.\n\n Example\n\nCreate fixture file in as a convention.\n\n\n\n is very easy to read and write. It is expressive and extensible as well. You can use scripts provided by Beanmother to create multiple types of random data and global sequential numbers.\n\n\n\n\nAnd just create!\n\nBut if for some reason, you need load the fixtures from another directory inside the classpath\n\n\n\nAnd if the directory it\'s outside classpath\n\n\n\n Usage\n \n \n \n \n \n\n\n Installation\n\n Apache Maven\n\n\n\n Gradle\n\n\n\n Extensions\n\n For java8 time and optional data type\n\n For Jodatime data type\n\n For Google Guava optional data type\n\n For builder pattern initializer\n\n\n Fixture Script\n\nThe scripts provided by Beanmother are kind of fake property value generators.\n\n\n\nCurrently, and are registered as a default.\n\n works with namespace. The script runner is implemented by . You can find a usage of javafaker in . If a method has no arguments, parentheses can be ignored. For example,\n\n\n\n works with the namespace. The script generates sequential numbers globally. For example,\n\n\n\n\n\n Arguments constructor bean\n\nIf a bean does not have a noargument contructor, just add key. For example,\n\n\n\n\n PostProcessor\n\nIf you need a common configuration for specific beans, you can use .\n\n\n Customization\n\n class is a default implementation of class. For customization, simply extend . I highly recommend building it as a singleton instance.\n\n\n\n Register PostProcessors\n\nA PostProcessor can handle your bean after mapper.\n\n\n\nAnd, pass the instance as an argument when you create an instance.\n\n\n\nor, register the PostProcessor to your custom BeanMother for using it globally.\n\n\n\nEverytime you create an instance of Author, will run before returning an instance of Author.\n\n Customize default fixture path.\n\nJust register the path in ObjectMother. It will scan all files under the path.\n\n\n\nOr, override in your custom BeanMother.\n\n \n\n\n Customize converter\n\nYou can write your own converter if you want to.\n\n\n\nAnd, register the converter in your custom BeanMother.\n\n\n\n Customize ScriptRunner\n\nYou can write your own ScriptRunner.\n\n\n\nAnd, register the ScriptRunner in your custom BeanMother.\n\n\n\n Tests\n\n\n\n Contributions\n\nAny kind of contributions are very welcome! Coding style guideline is not prepared yet. Although I use Intellij IDE default style, follow common sense and please use fourspace indentation.\n'
+    Existing Dependencies:
+    com.github.javafaker:javafaker
+- com.joestelmach:natty
+- ${project.groupId}:beanmother-core
+- org.yaml:snakeyaml
+- org.slf4j:slf4j-simple
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style=" background-color: #e3f2fd;">
+        <div>
+            <a class="navbar-brand" href="#">Tienda Online de Zapatos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Inicio </a>
+                    <a class="nav-item nav-link" href="#">Carrito <span class="badge badge-pill badge-dark">{{ Cart::getContent()->count() }}</span></a>
+                    <!-- <a class="nav-item nav-link" href="#">Carrito <span class="badge badge-pill badge-dark"></span></a> -->
+                    <a class="nav-item nav-link" href="#">Contacto</a>
+                    <a class="nav-item nav-link" href="{{route('login')}}">Acceso al Panel de Control</a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br><br><br>
+
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>  public string Description { get; set; }
+    public List<string> Ingredients { get; set; }
+    public List<string> Steps { get; set; }
+    public List<string> Tags { get; set; }
+    public string UserID { get; set; }
+    
+    public string GetUserID()
+    {
+      return UserID;
+    }
+  }
+} using System;
+using System.Collections.Generic;
+ 
+namespace RecipeBox.Models
+{
+  public class Recipe
+  {
+    public int RecipeID { get; set; }
+    public string Name { get; set; }
+  
+
+Precision: 0
+Recall: 0
+F1 Score: 0

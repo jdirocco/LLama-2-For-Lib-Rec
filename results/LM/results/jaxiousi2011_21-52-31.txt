@@ -1,0 +1,153 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: jaxio/usi2011
+    Project Description: Challenge USI 2011 Equipe "Jaxio and friends"\n===============================================\nPr\xc3\xa9sentation\n\nLe est une comp\xc3\xa9tition\ndont le but est d\'avoir l\'application distribu\xc3\xa9e la plus performante et la plus robuste.\n\nVous trouverez plus d\'informations sur .\n\nCe d\xc3\xa9p\xc3\xb4t GitHub contient le code de l\'\xc3\xa9quipe n\xc2\xb010, dite "Jaxio and friends", compos\xc3\xa9e de:\n\n \n \n \n \n\nInstallation\n\n1. Clonez ce d\xc3\xa9p\xc3\xb4t GitHub:\n git clone Installez le num\xc3\xa9ro de version est important\n3. Configurez Cassandra: vous voulez probablement reconfigurer les r\xc3\xa9pertoires d\xc3\xa9finis par d\xc3\xa9faut dans $CASSANDRAHOME/conf/cassandra.yaml\net $CASSANDRAHOME/conf/log4jserver.properties. Nous en fournissons des exemples dans notre projet, voir: src/main/vfabric/config/cassandra\n4. Lancez Cassandra\n $CASSANDRAHOME/bin/./cassandra\n5. Dans le r\xc3\xa9pertoire d\'ex\xc3\xa9cution de Cassandra, lancez le client Cassandra:\n $CASSANDRAHOME/bin/./cassandracli host localhost port 9160\n6. Dans le client Cassandra, copiez/collez le script src/main/cassandra/init.script\n7. Maintenant Cassandra est configur\xc3\xa9 et lanc\xc3\xa9!\n8. L\'application se compile normalement avec Maven\n9. Pour lancer l\'application, ex\xc3\xa9cutez la classe usi2011.Main\n10. V\xc3\xa9rifiez que l\'application est bien lanc\xc3\xa9e: '
+    Existing Dependencies:
+    mx4j:mx4j-tools
+- commons-io:commons-io
+- xom:xom
+- me.prettyprint:hector-core
+- org.slf4j:slf4j-api
+- oro:oro
+- org.mockito:mockito-all
+- commons-codec:commons-codec
+- cglib:cglib-nodep
+- org.springframework:spring-test
+- org.twitter4j:twitter4j-core
+- org.jboss.netty:netty
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+    
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+
+    <!-- Main content -->
+    <section class="content">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-lg-4 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-aqua">
+                    <div class="inner">
+                        <h3>150</h3>
+
+                        <p>New Orders</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-bag"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!--./col -->
+            <div class="col-lg-4 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-green">
+                    <div class="inner">
+                        <h3>53<sup style="font-size: 20px">%</sup></h3>
+
+                        <p>Bounce Rate</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-stats-bars"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!--./col -->
+            <div class="col-lg-4 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-yellow">
+                    <div class="inner">
+                        <h3>44</h3>
+
+                        <p>User Registrations</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-person-add"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!--./col -->
+            <div class="col-lg-4 col-xs-6">
+                <!-- small box -->
+                <div class="small-box bg-red">
+                    <div class="inner">
+                        <h3>65</h3>
+
+                        <p>Unique Visitors</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-pie-graph"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+            <!--./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+            <!-- Left col -->
+            <section class="col-lg-7 connectedSortable">
+                <!-- Custom tabs (Charts with tabs)-->
+
+                <!-- /.nav-tabs-custom -->
+                <!-- Chat box -->
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>.log(error.stackTrace);
+                return false;
+            }
+
+            console.log('Saved to:', fileNamePath);
+            return fileNamePath;
+        }, false);
+}
+
+module.exports = {saveDataToFile}
+
+ const {saveFileAs} = require('./FileSystem')
+const {parseData} = require('./DataParsers/Parsers')
+const {getData} = require('./DataFetchers/Fetchers')
+
+const saveDataToFile = () => {
+        return Promise.all([getData(), parseData()]).then(([data, parse]) => {
+            // TODO: Make filename dynamic
+            const fileName = 'data.json';
+            const fileNamePath = `../../${fileName}`;
+
+            try {
+                saveFileAs(fileNamePath, JSON.stringify(data), parse);
+            } catch (error) {
+                console.log('Error saving to file'+ fileNamePath);
+                console
+
+Precision: 0
+Recall: 0
+F1 Score: 0

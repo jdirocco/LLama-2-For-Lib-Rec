@@ -1,0 +1,164 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: linkedin/sensei
+    Project Description: What is Sensei\n===============\n\n\nSensei is a distributed, elastic realtime searchable database.\n\n\n\n Wiki\n\nWiki is available at: \n\n\n\n Issues\n\nIssues are tracked at: \n\n\n\n Mailing List / Discussion Group\n\n\n\n Getting Started\n\n1. Build\n\n ./bin/build.sh\n\n2. Start ZooKeeper\n\n ./bin/zookeeperserverstart.sh resources/zookeeper.properties\n\n3. Run a search nodes\n\n bin/startsenseinode.sh example/cars/conf\n\n5. Starting commandline client app\n\n bin/senseiclient.sh host port default: localhost 8080\n\nAnd/Or:\n\nGo to web console: \n'
+    Existing Dependencies:
+    org.apache.lucene:lucene-core
+- com.google.protobuf:protobuf-java
+- commons-configuration:commons-configuration
+- org.jdom:jdom
+- com.google.guava:guava
+- org.mortbay.jetty:jetty
+- org.apache.hadoop:hadoop-core
+- org.apache.kafka:kafka
+- com.github.sgroschupf:zkclient
+- com.linkedin.zoie:zoie-jms
+- org.json:json
+- junit:junit
+- ${project.groupId}:sensei-java-client
+- org.easymock:easymock
+- com.linkedin.zoie:zoie-core
+- commons-lang:commons-lang
+- com.linkedin.bobo:bobo-browse
+- org.antlr:antlr
+- org.javassist:javassist
+- org.apache.httpcomponents:httpclient
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    var map;
+    function initMap() {
+      
+        var myOptions = {
+            zoom: 9,
+            center: new google.maps.LatLng (38.907192, -77.036871), // center point in lat long
+        };
+
+        // init 
+        map = new google.maps.Map(document.getElementById('map-canvas'), myOptions);
+        var marker;
+        var markers = [["14th Street NW and M Street NW, Washington, DC 20005, United States", "14th Street NW and M Street NW"]];
+        for (var i = 0; i < markers.length; i++) {
+
+            var data = markers[i];
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(data[0]), //lat and long
+                map: map,
+                title: data[1]
+            });
+        }
+
+        marker.setMap(map);
+    }
+    //initilize google maps 
+    google.maps.event.addDomListener(window, 'load', initMap);
+
+
+
+    var marker;
+    var markers = [["14th Street NW and M Street NW, Washington, DC 20005, United States", "14th Street NW and M Street NW"]];
+    for (var i = 0; i < markers.length; i++) {
+
+        var data = markers[i];
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(data[0]), //lat and long
+            map: map,
+            title: data[1]
+        });
+    }
+
+    marker.setMap(map);
+
+
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> 
+package com.joymain.jecs.fi.service;
+
+import java.math.BigDecimal;
+impFiProductPointJournalManager fiProductPointJournalManager) {
+        this.fiProductPointJournalManager = fiProductPointJournalManager;
+    }
+
+    /**
+     * @param productId
+     * @param userCode
+     * @return boolean
+     */
+    public BigDecimal getProductPointJournalAmountByDate(final String productId, final String userCode) {
+        return getProductPointJournalAmountByDate(productId, userCode, null, null);
+    }
+
+    /**
+     * 核对用户当前产品积分总额和账户积分总额，如果不一致，则重新插入至账户积分表
+     *
+     * @param productId
+     * @param userCode
+     * @return boolean
+     */
+    public boolean checkProductPoint(final String productId, final String userCode) {
+        return checkProductPoint(productId, userCode, null, null);
+    }
+
+    /**
+     * 核对用户当前产品积分总额和账户积分总额，如果不一致，则重新插入至账户积分表
+     *
+     * @param productId
+     * @param userCode
+     * @return boolean
+     */
+    public boolean checkProductPoint(final String productId, final String userCode, Date startDate, Date startDateEnd) {
+        if (StringUtils.isEmpty(productId) || StringUtils.isEmpty(userCode)) {
+            return false;
+        }
+        if (null == startDate) {
+            startDate = new Date();
+        }
+        FiProductPointJournal fiProductPointJournal = this.getProductPointJournalAmountByDate(productId, userCode, startDate, startDateEnd);
+
+        if (fiProductPointJournal == null) {
+            return false;
+        }
+
+        String hql = "from FiBillAccount f where f.userCode =? and f.productId =? and f.accountType = 2";
+        FiBillAccount fiBillAccount = this.fiBillAccountManager.getFiBillAccount(hql, new Object[]{userCode, productId});
+
+        if (fiBillAccount!= null) {
+            if (BigDecimal.ZERO.compareTo(fiProductPointJournal.getBalance()) == 0 && fiBillAccount.isActive() == false) {
+                return true;
+            }
+            if (fiProductPointJournal.getBalance().compareTo(fiBillAccount.getAmount()) == 0 && fiBillAccount.isActive() == true) {
+                return true;
+            }
+            if (fiProductPointJournal.getBalance().compareTo(fiBillAccount.getAmount())!= 0) {
+                fiBillAccount.setAmount(fiProductPointJournal.getBalance());
+                fiBillAccount.setActive(true);
+                fiBillAccount.setStatus(1);
+                this.fiBillAccountManager.saveFiBillAccount(fiBillAccount
+
+Precision: 0
+Recall: 0
+F1 Score: 0

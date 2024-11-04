@@ -1,0 +1,237 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: seam/security
+    Project Description: Building\n\n\n Run mvn clean install\n To create the zip distribution, run mvn clean install Pdistribution the resulting zip is located in dist/target/seamsecurity${version}.zip \n The readme.txt placed in the distribution is not this one, see dist/src/main/assembly/readme.txt \n'
+    Existing Dependencies:
+    org.jboss.seam.transaction:seam-transaction
+- org.apache.openjpa:org.apache.openjpa
+- org.seleniumhq.selenium:org.seleniumhq.selenium
+- org.apache:xmlsec
+- org.jboss.seam.social:seam-social
+- org.jboss.test-jsf:org.jboss.test-jsf
+- org.jboss.seam.faces:seam-faces
+- org.jboss.shrinkwrap.descriptors:org.jboss.shrinkwrap.descriptors
+- org.hamcrest:org.hamcrest
+- org.mortbay.jetty:org.mortbay.jetty
+- org.glassfish.extras:glassfish-embedded-all
+- org.jboss.seam.social:seam-social-linkedin
+- org.apache.geronimo.specs:org.apache.geronimo.specs
+- org.apache.xbean:org.apache.xbean
+- org.glassfish.extras:org.glassfish.extras
+- org.eclipse.jetty:org.eclipse.jetty
+- org.jboss.spec.javax.faces:jboss-jsf-api_2.0_spec
+- org.jboss.seam.social:seam-social-api
+- com.sun.faces:com.sun.faces
+- org.jboss.shrinkwrap.resolver:org.jboss.shrinkwrap.resolver
+- log4j:log4j
+- org.mockito:org.mockito
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.osgi:org.osgi
+- org.drools:drools-compiler
+- commons-httpclient:commons-httpclient
+- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-impl-maven
+- org.picketlink.idm:picketlink-idm-spi
+- org.picketlink.idm:picketlink-idm-core
+- org.jboss.test:org.jboss.test
+- org.jboss.spec:org.jboss.spec
+- org.hibernate:org.hibernate
+- org.jboss.arquillian.extension:org.jboss.arquillian.extension
+- org.jboss.seam.security:seam-security-external
+- org.glassfish.deployment:org.glassfish.deployment
+- org.jboss.arquillian.test:org.jboss.arquillian.test
+- org.jboss.arquillian.ajocado:org.jboss.arquillian.ajocado
+- org.jboss.weld.se:org.jboss.weld.se
+- org.seleniumhq.selenium.client-drivers:org.seleniumhq.selenium.client-drivers
+- org.jboss.arquillian.testenricher:org.jboss.arquillian.testenricher
+- org.jboss.seam.security:seam-security
+- org.jboss.seam.test:org.jboss.seam.test
+- dom4j:dom4j
+- org.jboss.seam.international:seam-international
+- org.jboss.spec.javax.servlet:jboss-servlet-api_3.0_spec
+- org.picketlink.idm:picketlink-idm-api
+- org.jboss.arquillian.ajocado:arquillian-ajocado-junit
+- org.hamcrest:hamcrest-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 49 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- Begin Page Content -->
+  <div class="container-fluid">
+  	 <?php error_reporting(0);?>
+
+  	 <div class="row justify-content-center mt-4">
+  	 	<div class="col-sm-9">
+
+  	 		<!-- Basic Card Example -->
+  	 		<div class="card shadow mb-4">
+  	 			<div class="card-header py-3">
+  	 				<h6 class="m-0 font-weight-bold text-info">Data Transaksi</h6>
+  	 			</div>
+  	 			<div class="card-body">
+  	 				<?= $this->session->flashdata('message');?>
+
+  	 				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+  	 					<thead>
+  	 						<tr>
+  	 							<th>No.</th>
+  	 							<th>Nama Pembeli</th>
+  	 							<th>Alamat</th>
+  	 							<th>Nomor Telepon</th>
+  	 							<th>Total Harga</th>
+  	 							<th>Status Pembayaran</th>
+  	 							<th>Aksi</th>
+  	 						</tr>
+  	 					</thead>
+  	 					<tbody>
+  	 						<?php
+						$no = 1;
+						foreach ($transaksi as $t) {
+							?>
+  	 						<tr>
+  	 							<th><?php echo $no++?></th>
+  	 							<td><?= $t->nama?></td>
+  	 							<td><?= $t->alamat?></td>
+  	 							<td><?= $t->notelp?></td>
+  	 							<td><?= "Rp. ". number_format($t->total, 0, ".", ",")?></td>
+  	 							<?php if ($t->status == 'Belum Dibayar') :?>
+  	 								<td><?= $t->status?><br>
+  	 									<a href="<?= base_url('admin/konfirm_pembayaran'). $t->id_transaksi?>" class="btn btn-primary btn-sm">Konfirmasi Pembayaran</a>
+  	 								</td>
+  	 							<?php else :?>
+  	 								
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 49 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s(self, name):
+        """
+        Get the properties for a given node.
+
+        Args:
+            name (str): Node's name.
+
+        Returns:
+            dict: Node's properties.
+        """
+        return self.nodes[name]
+
+    def add_node(self, node: Node):
+        """
+        Add an edge to the graph.
+
+        Args:
+            node (Node): The node to be added.
+        """
+
+        if node.name not in self.nodes:
+            raise ValueError(
+                f"Cannot add node. Node with name {node.name} does not exist in graph."
+            )
+
+        self.nodes[node.name]["properties"].update(node.properties)
+ from.constants import *
+import json
+
+
+class Node:
+    """
+    The Node class represents an entity that can send events to a GraphQL server.
+    """
+
+    def __init__(self, name, properties):
+        """
+        Construct a new node.
+
+        Args:
+            name (string): Name of the node.
+        """
+        self.name = name
+
+        if "id" in properties:
+            self.id = properties["id"]
+            del properties["id"]
+        else:
+            self.id = None
+
+        self.properties = properties
+        self.relationships = {}
+
+    def add_out_relationship(self, relationship):
+        """
+        Add an edge to the graph.
+
+        Args:
+            relationship (Relationship): The relationship to be added.
+        """
+        if relationship.name not in self.relationships:
+            self.relationships[relationship.name] = []
+
+        self.relationships[relationship.name].append(relationship)
+
+    def add_in_relationship(self, relationship):
+        """
+        Add an edge to the graph.
+
+        Args:
+            relationship (Relationship): The relationship to be added.
+        """
+        if relationship.name is None:
+            relationship.name = RELATIONSHIP_DEFAULT_NAME(self.name, relationship.end_name)
+        if relationship.name not in self.relationships:
+            self.relationships[relationship.name] = []
+
+        self.relationships[relationship.name].append(relationship)
+
+    def json_properties(self):
+        result = {
+            "id": self.id,
+            PROPERTIES_NODE: self.properties,
+            RELATIONSHIPS_NODE: dict(),
+        }
+
+        for relationship in self.relationships.values():
+            for rel in relationship:
+                if rel.name is not None:
+                    # TODO: Add support to add multiple relationships between 2 nodes
+                    result[RELATIONSHIPS_NODE][rel.name] = rel.json()
+
+        return json.dumps(result)[1:-1]
+
+    def __repr__(self):
+        return "Node({}, {})".format(self.name, self.properties)
+
+
+class Graph:
+    """
+    The Graph class represents an entity graph.
+    """
+
+    def __init__(self):
+        """
+        Construct a new graph.
+        """
+
+        self.nodes = dict()
+        self.name_map = dict()
+        self
+
+Precision: 0.0
+Recall: 0.0
+F1 Score: 0

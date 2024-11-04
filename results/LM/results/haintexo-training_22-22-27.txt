@@ -1,0 +1,170 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: haint/exo-training
+    Project Description: '
+    Existing Dependencies:
+    org.exoplatform.core:exo.core.component.security.core
+- org.apache.hadoop:hadoop-streaming
+- com.sencha.gxt:gxt-chart
+- org.apache.openjpa:openjpa-all
+- javax.portlet:portlet-api
+- com.google.gwt.inject:gin
+- swt:swt-linux-gtk
+- org.mortbay.jetty:jetty
+- org.exoplatform.kernel:exo.kernel.container
+- jstl:jstl
+- org.apache.hadoop:hadoop-core
+- com.google.gwt:gwt-user
+- org.codehaus.mojo:buildnumber-maven-plugin
+- org.exoplatform.jcr:exo.jcr.component.ext
+- taglibs:standard
+- com.google.inject:guice
+- org.json:json
+- org.apache.hadoop:hadoop-examples
+- junit:junit
+- com.smartgwt:smartgwt-skins
+- org.exoplatform.kernel:exo.kernel.commons
+- org.slf4j:slf4j-simple
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 22 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+
+<div class="modal fade" id="create-modal" role="dialog">
+   <div class="modal-dialog">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+           <!--  <div class="modal-body"> -->
+            <div class="modal-body">
+
+               <?php //echo validation_errors();?>
+               <form action="<?php echo base_url('index.php/admin/category/store');?>"  method="post" id="modalFormData" enctype="multipart/form-data">
+
+                  <div class="form-group">
+                     <label>Category Name</label>
+                     <input type="text" class="form-control" name="category_name" id="category_name">
+                  </div>
+                  <div class="form-group">
+                     <label>Category Image</label>
+                     <input type="file" class="form-control" name="category_image" id="category_image">
+                  </div>
+                  
+               <button class="btn btn-primary" type="submit">Save</button>
+               <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+               </form>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      
+  
+
+   <!--  <div class="container">
+       <form action="" method="">
+       
+         <table class="table table-hover" style="background-color:  #D8D4D0;">
+         
+         <table>
+         <tbody>
+         <tr>
+         <td>Name</td>
+         <td><input type="text" class="form-control" name="Name" id="Name" /></td>
+         </tr>
+         <tr>
+         <td>Category Image</td>
+         <td><input type="file" class="form-control" name="image" id="image" /></td>
+         </tr>
+         </tbody>
+         </table>
+         <button class="btn btn-primary">Create</button>
+         </form>
+   </div> -->
+
+<!-- Edit Modal form -->
+
+   <div class="modal fade" id="edit-modal" role="dialog">
+      <div class='modal-dialog'>
+         <div class='modal-content'>
+           <div class='modal-header'>
+            <span>Edit</span>
+               <button type="button" class="close" data-dismiss="modal"> &times; </button>
+            </div>
+            <div class='modal-body'>
+             <form role='form' id="editFormData" action='<?php echo base_url('index.php/admin/category/update');?>' method='post'>
+           
+           <div class="form-group">
+               <label>Name</label><input type="text" name='name' id='name' class="form-control" value='<?php echo $row->name;?>'/>
+           </div>
+             <div class="form-group">
+                <label>Image</label> <input class="form-control" type="file" name="image" id="image" value='<?php echo $row->image;
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 22 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+
+## <a name="next-steps"></a>Próximas etapas
+
+- [Introdução](sql-query-getting-started.md)
+- [Classe de consulta da Azure Cosmos DB](https://docs.microsoft.com/samples/dotnet/samples/cosmosdb-getting-started/
+ ---
+title: 'Azure Cosmos DB: SQL async Java API, SDK & ressourcen'
+description: Saiba tudo sobre o SQL API e o Async Java SDK, incluindo datas de lançamento, datas de desativação e alterações feitas entre cada versão do Azure Cosmos DB SQL Async Java SDK.
+author: moderakh
+ms.service: cosmos-db
+ms.subservice: cosmosdb-sql
+ms.devlang: java
+ms.topic: reference
+ms.date: 07/01/2019
+ms.author: moderakh
+ms.openlocfilehash: a464668113115073870818865641265084412760
+ms.sourcegitcommit: 2ec4b3d0bad7dc0071400c2a2264399e4fe34897
+ms.translationtype: MT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "78262848"
+---
+# <a name="azure-cosmos-db-async-java-sdk-for-sql-api-release-notes-and-resources"></a>Azure Cosmos DB Async Java SDK para SQL API: notas de lançamento e recursos
+> [!div class="op_single_selector"]
+> * [.NET](sql-api-sdk-dotnet.md)
+> * [.NET Change Feed](sql-api-sdk-dotnet-changefeed.md)
+> * [.NET Core](sql-api-sdk-dotnet-core.md)
+> * [.NET Core Change Feed](sql-api-sdk-dotnet-core-changefeed.md)
+> * [Node.js](sql-api-sdk-node.md)
+> * [Async Java](sql-api-sdk-async-java.md)
+> * [Java](sql-api-sdk-java.md)
+> * [Python](sql-api-sdk-python.md)
+> * [REST](https://docs.microsoft.com/rest/api/cosmos-db/)
+> * [Provedor de recurso REST](https://docs.microsoft.com/rest/api/cosmos-db-resource-provider/)
+> * [SQL](sql-api-query-reference.md)
+> * [Executor em massa -.NET](sql-api-sdk-bulk-executor-dot-net.md)
+> * [Executor em massa - Java](sql-api-sdk-bulk-executor-java.md)
+
+SQL API Async Java SDK difere do SQL API Java SDK fornecendo operações assíncronas de suporte usando a [biblioteca RxJava](https://github.com/ReactiveX/RxJava). Se você estiver familiarizado com a implementação síncrona, consulte o artigo [SQL API Java SDK,](sql-api-sdk-
+
+Precision: 0
+Recall: 0
+F1 Score: 0

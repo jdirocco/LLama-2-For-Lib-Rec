@@ -1,0 +1,91 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: androidannotations/androidannotations
+    Project Description: DEPRECATED\n\nAndroidAnnotations is deprecated. No more development will be taking place.\n\nThanks for all your support!\n\n Fast Android Development. Easy maintenance.\n\n \n\nAndroidAnnotations is an Open Source framework that speeds up Android development.\nIt takes care of the plumbing, and lets you concentrate on what's really important. By simplifying your code, it facilitates its maintenance.\n\n \n\n \n\n"
+    Existing Dependencies:
+    org.hamcrest:hamcrest-core
+- org.robolectric:shadows-httpclient
+- com.google.android:android
+- org.androidannotations:rest-spring
+- com.squareup:fest-android
+- org.simpleframework:simple-xml
+- com.google.android:support-v4
+- org.androidannotations:ormlite-api
+- org.androidannotations:otto
+- junit:junit
+- org.androidannotations:androidannotations
+- org.robolectric:robolectric
+- org.parceler:parceler
+- org.robolectric:android-all
+- org.springframework.android:spring-android-rest-template
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 16 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 16 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e_name,
+                                    const std::string_view message,
+                                    const std::string_view file);
+} // namespace mfve
+ #pragma once
+
+// stdlib
+#include <exception>
+#include <iostream>
+#include <stdexcept>
+#include <string>
+#include <string_view>
+
+/**
+ * @brief Namespace for all functions of the MFVE framework
+ */
+namespace mfve
+{
+  void error_print(const std::string_view message);
+  void error_print(const std::string_view fil
+
+Precision: 0
+Recall: 0
+F1 Score: 0

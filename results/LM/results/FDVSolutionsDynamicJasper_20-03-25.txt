@@ -1,0 +1,165 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: FDVSolutions/DynamicJasper
+    Project Description: DynamicJasper\n\nDynamicJasper DJ is an API that hides the complexity of JasperReports, it helps developers to save time when designing \nsimple/medium complexity reports generating the layout of the report elements automatically. It creates reports dynamically,\ndefining at runtime the columns, column width auto width, groups, variables, fonts, charts, crosstabs, sub reports \nthat can also be dynamic, page size and everything else that you can define at design time.\n\nDJ keeps full compatibility with Jasper Reports since it's a tool that helps create reports programmatically in\na easy way it only interferes with the creation of the report design doing the layout of the elements.\n\nYou can use the classic .jrxml files as templates while the content and layout of the report elements are handled by the DJ\nAPI.\n\n Maven dependency\n\n \n ar.com.fdvs\n DynamicJasper\n 5.0.11\n \n\n Documentation and Examples\n\nFind documentation and examples at Report Concept\n\nThis API is intended to solve the 99% of the classic reports that consist in a number of fields that are going to be columns in the report, then the report may have some \xe2\x80\x9crepeating groups\xe2\x80\x9d defined using a field as a criteria. Some columns may have variables with operations such as SUM or COUNT for some of the fields. All this tasks can be done automatically by the DJ through a very easytouse API.\n\nYou can redefine at runtime the column order, \xe2\x80\x9crepeating groups\xe2\x80\x9d, variables, styles, conditional styles, etc. Its completely dynamic!!!\n\n Features\n\nMost of the features are provided directly by Jasper Reports great tool guys!, nevertheless through the DJ API some of the results are achieved with really no effort.\n\n 100% pure Java\n No need to use other tool than you favorite IDE.\n Friendly and intuitive API.\n Mature, robust and stable.\n\nDynamic column report: Columns can be defined at runtime, which means you also control at runtime the column positioning, width, title, etc.\n\nRepeating groups / Breaking groups: Create repeating groups dynamically using simple expressions as criteria or complex custom expressions. Each repeating group may have a header and/or footer, which can have a variable showing the result of an operation SUM, COUNT or any other provided by Jasper Reports.\n\nAutomatic report layout: Just define a minimum set of options and DJ will take care of the layout. It\xe2\x80\x99s not an issue to generate the same report for different page sizes and orientation many more!\n\nDynamic Crosstabs: Jasper Report\xe2\x80\x99s popular crosstabs can now be created dynamically in an easy and convenient way.\n\n Sub reports\n\nSub reports are supported; they can also be dynamically created.\nConcatenating many reports in a single one e.g.: a single PDF can be a hard task. Using DynamicJasper it is really easy get reports of different nature in a single one.\nStyles: Each column can have its own style for its title and detail data defining border, border color, font size, type and color, background color, etc..\n\n Style library from jrxml files are supported.\n Calculation Variables: Repeating groups can have variables that hold the result of an operation on a given field column. With DJ adding variables is a 1 line of code task.\n JRXML template files support: You can use a base template jrxml file in which common styles, company logo, water mark, etc can be pre defined.\n Conditional Format: DJ provides a very simple way to define conditional formats. You can use simple conditions or custom conditions.\n Auto text: Add auto text in page header and footer such as ?Page 1 of 10?, ?Generated on Oct. 10th 2007? or a custom text.\n Charts: Easy to add simple charts.\n Barcode columns: As simple as adding a regular column.\n Export to most popular formats: As DJ stands over Jasper Reports, it can export to PDF, XML, HTML, CSV, XLS, RTF, TXT.\n Clean Excel export: One of the most valuable features that DJ provides is exporting plain reports to excel, with no data formatting, no page break, etc. This is very valuable for end users that use this report to create dynamic tables in Excel, creating these reports just with Jasper Reports can demand a lot of design time.\n\n"
+    Existing Dependencies:
+    mysql:mysql-connector-java
+- xalan:xalan
+- net.sourceforge.barbecue:barbecue
+- ar.com.fdvs:DynamicJasper-test-fonts
+- httpunit:httpunit
+- org.springframework:spring-beans
+- commons-beanutils:commons-beanutils
+- hsqldb:hsqldb
+- opensymphony:webwork
+- net.sf.jasperreports:jasperreports
+- ar.com.fdvs:DynamicJasper-core-fonts
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     $(document).ready(function () {
+
+    var url = window.location.href
+    var urlsplit=url.split("/")
+    var urlid = urlsplit[urlsplit.length-1]
+
+    var baseurl =window.location.protocol + "//" + window.location.host+"/";
+     $(".modal").modal();
+
+      var $table = $('#listing').DataTable({
+      	"processing": true,
+        "serverSide": true,
+        "ajax": "get-users",
+        "columns": [
+        	{data : 'name',className:'center'},
+            {data : 'role',className:'center'},
+            {data : 'email',className:'center'},
+            {data :'mobile',className:'center'},
+            {data : 'created_at',className:'center'},
+            {data : 'updated_at',className:'center'},
+            {
+            	"className": "center",
+            	mRender: function (data, type, row) {
+            		var id = row.id
+              		var status =row.status
+                html='<a href='+baseurl+'change-status/'+id+' class="waves-effect waves-light btn '
+                if(status == 1){
+                	html+='green accent-3'
+                }else{
+
+                  html+='red accent-3'
+                }
+                  
+                  html+=' ">'
+                  if(status == 1){
+                  	html +='Disable'
+                  }else{
+                  	html+='Enable'
+                  }
+                  html+='</a>'
+                     
+                  html+=' <a href= "'+ baseurl + 'edit/'+id+'"  class="waves-effect waves-light btn indigo darken-4" >Edit</a>'
+                  
+                  html+='<a class="waves-effect waves-light red accent-3 btn delete" onclick="delete_row('+ id +')" >Delete</a>'
+                  return html
+                }
+            },
+           
+        ],
+        responsive: true
+    });
+
+       
+
+      $(document).on("click", ".delete", function () {
+        var id = $(this).attr('onclick').split('(')[1].split(')')[0];
+        var token = $('#token').val()
+        swal({
+            title: "Are you sure you want to delete this record?",
+            text: "You will not be able to recover this record again!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: false
+        },
+        function () {
+            showloader();
+            $.ajax({
+                url: baseurl + "delete/"+id,
+                type: "post",
+                data: {
+                    _token:token
+                }
+            }).done(function () {
+                hideloader();
+                var table = $table.DataTable();
+                table
+                   .row($(this).parents("tr"))
+                   .remove()
+                   .draw();
+                swal("Deleted!", "Record was successfully deleted!", "success");
+            });
+        });
+    });
+});
+
+function delete_row(id){
+    var token = $('#token').val()
+    var url = baseurl +
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t_id: 1321321312,
+        //     name: 'John',
+        //     email: 'john@example.com',
+        //     age: 30,
+        //   },
+        // ];
+    }
+ 
+} import { Controller, Get } from '@nestjs/common';
+import { AppService } from './app.service';
+ 
+@Controller()
+export class AppController {
+    private title = 'Welcome to my first nestJS project';
+ 
+    constructor(private readonly appService: AppService) { }
+ 
+    @Get()
+    getHello(): string {
+        return this.title;
+        // return this.appService.getHello();
+       // return [
+        //   {
+        //     student_id: '132132131',
+        //     name: 'john',
+        //     email: 'john@example.com',
+        //     age: 33,
+        //   },
+        //   {
+        //     studen
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,150 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: seventhmoon/IpApi
+    Project Description: Welcome to IpApiretrofit\nThis is a wrapper of for Android platform using Retrofit.\nIn simple words, get your location information by IP address.\nfor volley version, please visit Sample Application\nSample Application is included in \n\n How to install\n\nTo get a Git project into your build:\n\nStep 1. Add the JitPack repository to your build file\n\nAdd it in your root build.gradle at the end of repositories:\n\n\tallprojects {\n\t\trepositories {\n\t\t\t...\n\t\t\tmaven { url "" }\n\t\t}\n\t}\n\nStep 2. Add the dependency\n\n\tdependencies {\n\t compile \'com.github.seventhmoon1.5.0\'\n\t}\n\t \n How to use\n\n GeoIpService ipApiService = ServicesManager.getGeoIpService;\n ipApiService.getGeoIp.enqueuenew Callback {\n @Override\n public void onResponseCall call, retrofit2.Response response {\n String countryName = response.body.getCountryName;\n String city = response.body.getCity;\n String country = resopnse.body.getCountry;\n double latitude = response.body.getLatitude;\n double longtidue = response.body.getLongitude;\n String region = response.body.getRegion;\n String timezone = response.body.getTimezone;\n String isp = response.body.getIsp;\n }\n\n @Override\n public void onFailureCall call, Throwable t {\n Toast.makeTextgetApplicationContext, t.toString, Toast.LENGTHSHORT.show;\n }\n };\n'
+    Existing Dependencies:
+    com.android.support:cardview-v7
+- com.android.support:support-annotations
+- com.squareup.okhttp3:okhttp
+- com.squareup.retrofit2:retrofit
+- com.android.support:appcompat-v7
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- Page Title/Header Start -->
+    <div class="page-title-section section gnrl_bg" style="background-image: url(<?= base_url('assets/Front/.')?>/images/header-bg.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <div class="page-title">
+                        <h1 class="title">About Us</h1>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">About Us</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Title/Header End -->
+
+    <!-- About Start -->
+    <div class="about">
+        
+        <div class="image-right"><img src="<?= base_url('assets/Front/.')?>/images/about/right.jpg" alt="about"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-6">
+                    <div class="image">
+                        <img src="<?= base_url('assets/Front/.')?>/images/about/left.jpg" alt="about">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6">
+                    <h2 class="title">Welcom to MyWebsite</h2>
+                    <p>This is the best website for your business. It's easy to use and easy to install. It helps your business to showcase your products with ease. The website has been optimized for SEO, so you don't need to work hard to rank your website</p><p>If you're looking for a way to showcase your products, MyWebsite can help you. </p><p>You can showcase your products in a beautiful responsive website with just few clicks. You can also add testimonial and portfolio in your website.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Counter Start -->
+    <div class="counter">
+        <div class="container">
+            <div class="section-header">
+                <p>MyWebsite Stats</p>
+                <h2>Some Fun Facts About MyWebsite</h2>
+            </div>
+            <div class="row counters">
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="counter-item">
+                        <i class="fa fa-users"></i>
+                        <h3 data-toggle="counter-up">10</h3>
+                        <p>Happy Users</p>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="counter-item">
+                        <i class="fa fa-list-alt"></i>
+                        <h3 data-toggle="counter-up">76</h3>
+                        <p>Projects</p>
+                    </div>
+                </div>
+
+                <div class="col-
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+
+namespace App;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
+
+class Purchase extends BaseModel
+{
+    //
+    protected $fillable = [
+        'user_id',
+        'product_id',
+        'quantity'
+    ];
+
+    public function user(){
+        return $this->belongsTo(User::class,'user_id','id');
+    }
+
+    public function product(){
+        return $this->belongsTo(Product::class,'product_id','id');
+    }
+
+    public static function getUserPurchase(){
+        $user=self::join('products','user_purchases.product_id','=','products.id')
+                ->select(
+tity','products.name'
+                );
+                return new Collection($user);
+
+    }
+
+}
+                    'products.id','user_purchases.quantity','products.name'
+                );
+                return new Collection($user);
+
+    }
+
+
+    public static function getAllPurchase(){
+        $user=self::join('products','user_purchases.product_id','=','products.id')
+                ->select(
+                    'products.id','user_purchases.quan
+
+Precision: 0
+Recall: 0
+F1 Score: 0

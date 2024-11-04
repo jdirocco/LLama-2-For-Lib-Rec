@@ -1,0 +1,176 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: nilsbraden/ttrss-reader-fork
+    Project Description: TTRSSReader\r\nTTRSSReader or ttrssreaderfork is a fork of the original Project from . I took the sourcecode and continued the development because the original owner didn\'t reply to any messages back then and has not done so as of today.\r\n\r\nIt is a client application for the RSSReader , a PHPbased online feedreader which runs on your own webspace. It is accessible with any browser and even supports keyboard shortcuts through javascript.\r\nDownload\r\n\r\nSince google announced that the downloads from googlecode will not be available after January 14th, 2014 I started to move all downloads to googledrive. The commentary with the current changelog will be removed in the process but the full changelog can be viewed in the Wiki.\r\n\r\n\r\n\r\n Features\r\n Use Swipe for Next/Previous Article\r\n SwipeArea in bottom area of the ArticleView to avoid swiping while scrolling\r\n Show or download images/videos/music attached to Articles\r\n Share URL via Twitter/SMS/Mail\r\n Mark everything whole category or all categories as read\r\n Navigate through articles with volumebuttons\r\n Read Labels\r\n Cache articles in localdatabase\r\n Cache images for offline browsing\r\n SSLSupoprt with selfsigned certificates\r\n Scheduled updates via Tasker/Locale\r\n Fast JSONParsing with streambased parser GSON \r\n\r\nSee for detailed information.\r\n\r\n Note regarding support and FDroid\r\nSince is often several months late with the build I have to make this clear: I won\'t provide support for versions which are not exactly or at least near to the version which is stated above on this site "Current Version". Please provide the full version information from the Aboutbox within the app when reporting an issue!\r\n\r\n Changelog\r\nPlease follow this \r\n\r\n Contact\r\nPlease feel free to contact me via EMail ttrss /at/ nilsbraden.de or via the Bugtracker Issues. If you have questions specifically about Tiny Tiny RSS you may ask me or visit the or ttrss at irc.ttrss.org. If I don\'t answer fast enough or am not willing to implement your suggestion please keep in mind that this is only a hobby for me and I\'m unwilling to implement every little feature just beacuse you suggested I do so. You may implement it and send me pullrequests so I can include the features but I can\'t guarantee I will do this for every thing you want to have.\r\n\r\n Donations\r\nIf you would like to support my work and the further developement of TTRSSreader you may submit a donation via Paypal here:\r\n Paypal: .\r\n\r\n Screenshots\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n1:
+    Existing Dependencies:
+    com.intellij:annotations
+- org.jsoup:jsoup
+- commons-io:commons-io
+- com.android.support:recyclerview-v7
+- com.google.guava:guava
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<div class="modal fade" id="create-item" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h5 class="modal-title">Add New User</h5>
+            </div>
+            <div class="modal-body">
+                <form data-toggle="validator" method="post" id="create-user">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Fullname" id="fullname" name="fullname"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Email" id="email" name="email"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Phone" id="phone" name="phone"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Address" id="address" name="address"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select name="gender" id="gender">
+                            <option value="0">Male</option>
+                            <option value="1">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control" placeholder="Dob"  id="dob" name="dob"
+                            value="{{ $user->dob }}" required>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="create-user-btn">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> /*
+ * Do not modify this file. This file is generated from the rds-data-2018-08-01.normal.json service model.
+ */
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Net;
+using System.Text;
+using System.Xml.Serialization;
+
+using Amazon.RDSDataService.Model;
+using Amazon.Runtime;
+using Amazon.Runtime.Internal;
+using Amazon.Runtime.Internal.Transform;
+using Amazon.Runtime.Internal.Util;
+using ThirdParty.Json.LitJson;
+
+namespace Amazon.RDSDataService.Model.Internal.MarshallTransformations
+{
+    /// <summary>
+    /// Response Unmarshaller for BatchExecuteStatement operation
+    /// </summary>  
+    public class BatchExecuteStatementResponseUnmarshaller : JsonResponseUnmarshaller
+    {
+        /// <summary>
+        /// Unmarshaller the response from the service to the response class.
+        /// </summary>  
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public override AmazonWebServiceResponse Unmarshall(JsonUnmarshallerContext context)
+        {
+            BatchExecuteStatementResponse response = new BatchExecuteStatementResponse();
+
+            context.Read();
+            int targetDepth = context.CurrentDepth;
+            while (context.ReadAtDepth(targetDepth))
+            {
+                if (context.TestExpression("updateResults", targetDepth))
+                {
+                    var unmarshaller = new ListUnmarshaller<UpdateResult, UpdateResultUnmarshaller>(UpdateResultUnmarshaller.Instance);
+                    response.UpdateResults = unmarshaller.Unmarshall(context);
+                    continue;
+                }
+            }
+
+            return response;
+        }
+
+        /// <summary>
+        /// Unmarshaller error response to exception.
+        /// </summary>  
+        /// <param name="context"></param>
+        /// <param name="innerException"></param>
+        /// <param name="statusCode"></param>
+        /// <returns></returns>
+        public override AmazonServiceExcepti   /// <param name="context"></param>
+        /// <returns></returns>
+        public void Marshall(Amazon.RDSDataService.Model.Field object, JsonMarshallerContext context)
+        {
+            if(object.IsSetArrayValue())
+            {
+                context.Writer.WritePropertyName("arrayValue");
+                context.Writer.WriteObjectStart();
+
+                var marshaller = ArrayValueUnmarshaller.Instance;
+                marshaller.Marshall(object.ArrayValue, context);
+
+                context.Writer.WriteObjectEnd();
+            }
+
+            if(object.IsSet blobValue())
+            {
+                context.Writer.WritePropertyName("blobValue");
+                context.Writer.Write(StringUtils.FromMemoryStream(object.blobValue()));
+            }
+
+            if(object.IsSetbooleanValue())
+            {
+                context.Writer.WritePropertyName("booleanValue");
+                context.Writer.Write(object.booleanValue);
+            }
+
+            if(object.IsSetdoubleValue())
+            {
+                context.Writer.WritePropertyName("doubleValue");
+                context.Writer.Write(object.doubleValue);
+            }
+
+            if(object.IsSetIsNull())
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,155 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: nmoskalenko/RxFirebase
+    Project Description: \n\n\n\n\n\n RxFirebase\n\nRxJava wrapper on Google\'s library.\n\n\n Usage\nLibrary provides set of static methods of classes:\n RxFirebaseAuth\n RxFirebaseUser\n RxFirebaseDatabase\n RxFirebaseStorage\n\n Authentication:\n\nSign in anonymously and get token:\n\n\n Database:\nMany thanks to @renanferrari for making it much more flexible.\n\nYou can simply observe values providing the Class of expected data like:\n\n\nor providing your own mapper between DataSnapshot and your data type:\n\n\n\nThere are some predefined mappers to make things easier:\n\n Observing list values\n \n\n Observing map values\n \n\n\n Storage\n\nDownload file from Firebase storage\n\n\n\nor download file as bytes array\n\n\n\n\n Download\n\n Gradle:\n\n\n Maven:\n\n\n\n License\n Copyright 2016 Nickolay Moskalenko\n\n Licensed under the Apache License, Version 2.0 the "License";\n you may not use this file except in compliance with the License.\n You may obtain a copy of the License at\n\n Unless required by applicable law or agreed to in writing, software\n distributed under the License is distributed on an "AS IS" BASIS,\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n See the License for the specific language governing permissions and\n limitations under the License.\n'
+    Existing Dependencies:
+    com.google.firebase:firebase-auth
+- org.assertj:assertj-core
+- com.android.support:support-annotations
+- org.mockito:mockito-core
+- com.google.firebase:firebase-config
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     @include('admin.layout.header')
+     @include('admin.layout.navbar')
+
+    <div class="content-wrapper">
+    <div class="container-fluid" style="margin-top: -50px">
+    <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"style="margin-top: -15px; margin-right: 5px; ">
+                <a style="color:#C0392B" href="{{ url('admin')}}" class="btn btn-default"> 
+                  <i class="fa fa-fw fa-arrow-right"></i> 
+                  <span>  Back to dashboard</span>
+                </a>
+            </li>
+            <li class="breadcrumb-item active"style="margin-top: 15px"> 
+                <a style="color:#6495ED" href="" class="btn btn-default"> <i class="fa fa-fw fa-users"></i> 
+                  <span>  Manage Teacher</span>
+                </a>
+            </li>
+        </ol>
+            <div class="row">
+                 <div class="col-12"style="margin-bottom: -35px; margin-top: -15px; margin-left: -25px;" >
+                  <div class="card">
+                      <div class="card-header">
+                        <i class="fa fa-fw fa-list"></i> 
+                          Teacher List</div>
+                            <button style="margin-top: 7px" id="add_user_btn" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#addTeachers" >
+                              <i class="fa fa-fw fa-plus"></i> 
+                              <span>Add Teacher</span>
+                            </button>
+                      <div class="table-responsive">
+                        <table class="table">
+                           <thead>
+                            <tr>
+                              <th scope="col">First name</th>
+                              <th scope="col">Last name</th>
+                              <th scope="col">Username</th>
+                              <th scope="col">Gender</th>
+                              <th scope="col">Date of birth</th>
+                              <th scope="col">Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            
+                            @foreach($teachers as $teacher)
+                              @if($teacher->type==2)
+                                <tr>
+                                  <td>{{$teacher->firstname}}</td>
+                                  <td>{{$teacher->lastname}}</td>
+                                  <td>{{$teacher->username}}</td>
+                                  <td>{{$teacher->gender}}</td>
+                                  <td>{{$teacher->date_of_birth}}</td>
+                                  <td>
+                                    <a class="btn btn-danger  btn-sm" href="{{ url('admin/remove-teacher',  ['teacher_id' => Crypt::encrypt($teacher->id)]) }}" id="delete_user_btn"  title="Delete Teachers">
+                                        <
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.dremio.exec.planner.fragment;
+
+/**
+ * Describes the type of the fragment
+ */
+public enum Wrapper {
+
+  /**
+   * A fragment that is a child of the root
+   */
+  MAIN {
+
+    @Override
+    public void acceptVisitor(FragmentVisitor visitor, FragmentWrapper wrapper) {
+      visitor.visitMain(wrapper);
+    }
+  },
+
+  /**
+   * A fragment that is a child of another operator
+   */
+  SINGLE {
+    @Override
+    public void acceptVisitor(FragmentVisitor visitor, FragmentWrapper wrapper) {
+      visitor.visitLeaf(wrarapper wrapper) {
+      visitor.visitIntermediate(wrapper);
+    }
+  };
+
+  /**
+   * @return type of a fragment
+   */
+  public static Wrapper from(final boolean isRoot, final boolean isLeaf, final boolean isIntermediate) {
+    final Wrapper type;
+    if (isRoot) {
+      type = MAIN;
+    } else if (isLeaf) {
+      type = SINGLE;
+    } else if (isIntermediate) {
+      type = EXCHANGE;
+    } else {
+      // should never happen
+      throw new IllegalStateException();
+    }
+
+    return type;
+  }
+
+  /**
+   * Visit fragment of this type
+   */
+  public abstract void acceptVisitor(final FragmentVisitor visitor, final FragmentWrapper wrapper);
+}pper);
+    }
+  },
+
+  /**
+   * A fragment that exchanges data with other fragments
+   */
+  EXCHANGE {
+    @Override
+    public void acceptVisitor(FragmentVisitor visitor, FragmentW
+
+Precision: 0
+Recall: 0
+F1 Score: 0

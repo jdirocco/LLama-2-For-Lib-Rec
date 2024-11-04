@@ -1,0 +1,176 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: msgpack/msgpack-hadoop
+    Project Description: MessagePackHadoop Integration\n========================================\n\nThis package contains the bridge layer between MessagePack Hadoop families.\n\nThis enables you to run MR jobs on the MessagePackformatted data, and also\nenables you to issue Hive query language over it.\n\nMessagePackHive adapter enables SQLbased adhocquery, which takes nested\nunstructured data as input like JSON, but binaryencoded. Of course, query\nis executed with MapReduce framework!\n\nHere is the sample MessagePackHive query, which counts unique user per URL.\n\n CREATE EXTERNAL TABLE IF NOT EXISTS mpbin v string \\\n ROW FORMAT DELIMITED FIELDS TERMINATED BY \'@\' LINES TERMINATED BY \'\\n\' \\\n LOCATION \'/path/to/hdfs/\';\n\n SELECT url, COUNT1 \\\n FROM mpbin LATERAL VIEW msgpackmapv, \'user\', \'url\' m AS user, url\n GROUP BY txt;\n\nRequired Setup\n========================================\n\nPlease setup Hadoop Hive system. Either Local, PseudoDistributed, or\nDistributed environment is OK.\n\nHive Getting Started\n========================================\n\n1. locate jars\n\nPut these jars to $HIVEHOME/lib/ directory.\n\n msgpackhadoop$version.jar\n msgpack$version.jar\n javassist$version.jar\n\n2. exec hive shell\n\nPlease execute the following command.\n\n$ hive auxpath $HIVEHOME/lib/msgpackhadoop$version.jar,$HIVEHOME/lib/msgpack$version.jar,$HIVEHOME/lib/javassist$version.jar\n\nYou can skip auxpath option once modify your hivesite.xml.\n\n\n hive.aux.jars.path\n $HIVEHOME/lib/msgpackhadoop$version.jar,$HIVEHOME/lib/msgpack$version.jar,$HIVEHOME/lib/javassist$version.jar\n\n\n3. add jar and load custom UDTF function\n\nThis step is required for every Hive query.\n\nhive add $HIVEHOME/lib/msgpackhadoop$version.jar\nhive add $HIVEHOME/lib/msgpack$version.jar\nhive add $HIVEHOME/lib/javassist$version.jar\nhive CREATE TEMPORARY FUNCTION msgpackmap AS \'org.msgpack.hadoop.hive.udf.GenericUDTFMessagePackMap\';\n\n4. create external table\n\nCreate external table, which points the data directory.\n\nhive CREATE EXTERNAL TABLE IF NOT EXISTS mptable v string \\\n ROW FORMAT DELIMITED FIELDS TERMINATED BY \'@\' LINES TERMINATED BY \'\\n\' \\\n LOCATION \'/path/to/hdfs/\';\n\n5. execute the query\n\nFinally, execute the SELECT query over input data.\n\nInput msgpack data is unstructured, nested data. Therefore, you need to "map"\nMessagePack structure to Hive field name. Actually, you can map the field by\nusing msgpackmap UDTF function, and name the fields by "AS" clause.\n\nhive SELECT url, COUNT1 \\\n FROM mptable LATERAL VIEW msgpackmapv, \'user\', \'url\' m AS user, url\n GROUP BY txt;\n\nCaveats\n========================================\n\nCurrently, MessagePackInputFormat is now unsplittable. Therefore, you need to\nmanually shred the data into small pieces.\n'
+    Existing Dependencies:
+    org.apache.hive:serde
+- org.apache.hive:exec
+- org.msgpack:msgpack
+- org.apache.hadoop:hadoop-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+        <div class="col-lg-7">
+
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Login Admin</h1>
+                                </div>
+
+                                <?= $this->session->flashdata('pesan');?>
+                                
+
+                               <form action="" method="post">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user"
+                                            placeholder="Masukkan Username Anda " name="username" value="<?= set_value('username');?>">
+                                            <?= form_error('username', '<small class="text-danger pl-3" >','</small>');?>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-user"
+                                            placeholder="Password" name="password">
+                                             <?= form_error('password', '<small class="text-danger pl-3" >','</small>');?>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                                        Login
+                                    </button>
+                                </form>
+                                
+                                
+                                <hr>
+                                
+                                <div class="text-center">
+                                    <a class="small" href="<?= base_url('auth_admin/forgotPassword');?>">Lupa Password?</a>
+                                </div>
+                                <div class="text-center">
+                                    <a class="small" href="<?= base_url('auth_admin/registration');?>">Buat Akun Baru!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>r ='red'
+        else:
+            self.text.config(background='white')
+            self.text.config(foreground='black')
+            self.text.config(insertbackground='black')
+            self.statusbar.color = 'black'
+        # print(self.statusbar.color)
+
+    def get_filepath(self):
+        '''
+        获取文件路径
+        '''
+        if not self.filename:
+            filename = filedialog.asksaveasfilename(initialdir=self.default_path,
+                                                    defaultextension='.txt',
+                                                    filetypes=[('Text', '*')])
+            # 如果文件名不为空，则执行下面的代码
+            if filename:
+                self.text.delete(0.0, END)    # 清空文本区域
+                self.filename = filename
+        else:
+            return self.filename
+
+    def save(self):
+        '''
+        保存文件
+        '''
+        # 判断是否有文件，如果没有则弹出对话框让用户输入文件名
+        if not self.filename:
+            self.get_filepath()
+        try:
+            if self.filename is not None:
+                with open(self.filename, 'w') as file:
+                    file.write(self.text.get(0.0, END))
+                    print('已保存到%s' % (self.filename))
+        except Exception as E:
+            print(str(E))
+
+
+if __name__ == '__main__':
+    root = Tk()
+
+    Notepad(root)
+
+    root.mainloop()
+ # coding=utf-8
+from tkinter import *
+from tkinter import filedialog  # 用于打开保存的对话框
+from tkinter import colorchooser  # 用于颜色选择器
+from tkinter.messagebox import *
+from tkinter import ttk
+
+
+class Notepad:
+    def __init__(self, master):
+
+        # 窗口初始化
+
+        master.title('记事本')  # 窗口的标题
+
+        master.minsize(640, 480)  # 窗口的最小尺寸
+
+        self.text = Text(master, font=('Microsoft Yahei', 16), undo=True, wrap=NONE)  # 文本区
+        self.text.pack(fill=BOTH, expand=1)
+
+        self.statusbar = ttk.Frame(master)
+        self.statusbar.pack(fill=X, side=BOTTOM, expand=0)
+
+        self.filename = ''
+        self.default_path = os.getcwd()
+
+        # 状态栏菜单
+        menu = Menu(self.statusbar)
+        self.statusbar.config(menu=menu)
+        self.menufile = Menu(menu)      # 文件菜单
+        self.menufile = Menu(menu)  # 文件菜单
+        self.menufilestyle = Menu(menu)        # 样式菜单
+
+        # 添加功能菜
+
+Precision: 0
+Recall: 0
+F1 Score: 0

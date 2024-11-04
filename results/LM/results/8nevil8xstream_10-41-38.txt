@@ -1,0 +1,133 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: 8nevil8/xstream
+    Project Description: \n \n XStream \n \n\n "Java to XML Serialization, and back again"\n\n\n Binaries \n\nAll binary artifacts are in the \'lib\' directory. These include the \nxstream jars and any other library used at build time,\nor optional runtime extras. kXML2 is recommend for use as it will\ngreatly improve the performance of XStream.\n\n Documentation \n\nDocumentation can be found in docs/index.html. This includes:\n Introduction and tutorial\n JavaDoc\n Change log\n Frequently asked questions\n\n Source \n\nThe complete source for XStream is bundled. This includes:\n Main API src/java\n Unit tests src/test\n Maven build files pom.xml \n Dependencies lib\n\n\n\nXStream Ccommitters\n\n
+    Existing Dependencies:
+    xmlpull:xmlpull
+- org.slf4j:slf4j-api
+- ${project.groupId}:xstream-benchmark
+- cglib:cglib-nodep
+- org.jdom:jdom
+- stax:stax
+- xpp3:xpp3_min
+- jmock:jmock
+- commons-cli:commons-cli
+- stax:stax-api
+- javassist:javassist
+- hsqldb:hsqldb
+- org.codehaus.jettison:jettison
+- joda-time:joda-time
+- net.sf.kxml:kxml2-min
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 16 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <h1 class="title"><?php echo get_the_title();?></h1>
+
+    <?php if( has_post_thumbnail() ):?>
+        <img class="featured-img" src="<?php the_post_thumbnail_url('full');?>">
+    <?php endif;?>
+
+    <?php if( have_posts() ):?>
+        <?php while( have_posts() ):?>
+            <?php the_post();?>
+
+            <div id="post-<?php the_ID();?>" >
+                <p class="blog-date"><?php the_time('F j, Y');?> <?php the_time('g:i a');?></p>
+                <?php the_content();?>
+                <div class="clear"></div>
+
+                <?php if ( comments_open() || get_comments_number() ) :?>
+                    <div class="comments">
+                        <?php comments_template();?>
+                    </div>
+                <?php endif;?>
+
+
+            </div>
+        <?php endwhile;?>
+    <?php endif;?>
+
+    <p class="back-link"><a href="<?php echo site_url( '/blog/' );?>">< Back to blog</a></p>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 16 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class BottomBarWidget extends StatefulWidget {
+  List<Widget> children;
+  int selectedIndex;
+  Function(int position) onTabChanged;
+  BottomBarWidget(
+      {Key key, @required this.children, this.selectedIndex, this.onTabChanged})
+      : super(key: key);
+
+  @override
+  _BottomBarWidgetState createState() => _BottomBarWidgetState();
+}
+
+class _BottomBarWidgetState extends State<BottomBarWidget> {
+  int currentIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    currentIndex = widget.selectedIndex;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Container(
+        height: 58,
+        child: Stack(
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border(
+                            top: BorderSide(
+                                width: 0.5,
+                                color: Color(0xffdcdcdc).withOpacity(0.2)))),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: widget.children,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

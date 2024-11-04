@@ -1,0 +1,153 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: universitatjaumei/cryptoapplet
+    Project Description: CryptoApplet \n\nCryptoApplet is a Java applet for advanced digital signature creation developed by the . The procedure is very simple: given a data input and a configuration determined by the server, the web client will create a digital signature of the data. The representation of the signature is obtained in the format specified in the configuration.\n\n\n\nThe signature representation formats supported by CryptoApplet are the following:\n\n Raw signature.\n CMS/PKCS7.\n XML: from XML Signature to XAdESXL.\n PDF: PAdES signature with timestamp.\n ODT: XML Signature.\n\nCertificate management is done transparently for the user through direct access to CryptoAPI, if we are using Microsoft Internet Explorer, or to PKCS11 if we are using Firefox either in Windows or GNU/Linux. Stored certificates can also be used if the client system has the Clauer software installed.\n\nThe applet can also be executed in Windows, GNU/Linux or MacOSX, the only requirement is to have a Sun's Java Virtual Machine version 1.6 o higher installed.\n\nYou can find more information in the or posting your questions in our \n"
+    Existing Dependencies:
+    plugin:plugin
+- net.java.xades:jxades
+- org.bouncycastle:bcmail-jdk15
+- es.uji.security:uji-crypto-openxades
+- es.uji.security:uji-keystore
+- org.bouncycastle:bcprov-jdk15
+- org.mockito:mockito-all
+- es.uji.security:uji-crypto-jxades
+- org.apache.santuario:xmlsec
+- com.sun.xml.security:jsr105-impl
+- com.lowagie:itext
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="container-fluid">
+      <!-- Breadcrumbs-->
+   
+
+      <!-- Area Chart Example-->
+
+      <?php if($this->session->flashdata('error_message')) {?>
+     <div class="alert alert-danger " id="msg"><?php echo $this->session->flashdata('error_message');?></div>
+    <?php } 
+      ?>
+
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+         Add User Detail</div>
+          
+        <div class="card-body">
+
+      <form role="form" method="post" action="<?php echo base_url()?>user/register"  enctype="multipart/form-data" autocomplete="off">
+
+          <div class="form-row">  
+              <div class="form-group  col-md-12"><label for="inputFirstName">First Name</label><input class="form-control" id="inputFirstName" type="text" aria-describedby="nameHelp" placeholder="Enter First Name" name="first_name" required></div>
+          </div>
+          <div class="form-row">
+              <div class="form-group col-md-6"><label for="inputLastName">Last Name</label><input class="form-control" id="inputLastName" type="text" aria-describedby="nameHelp" placeholder="Enter Last Name" name="last_name" required></div>
+
+          </div>
+           <div class="form-row">
+              <div class="form-group col-md-6"><label for="inputEmail">Email address<span style="color:red">*</span></label><input class="form-control" id="inputEmail" type="email" name="email_id" placeholder="Enter email" required></div>
+                <div class="form-group col-md-6"><label for="inputEmail">Mobile<span style="color:red">*</span></label><input class="form-control" id="inputEmail" type="text" name="mobile" minlength="6" maxlength="10" placeholder="Enter Mobile No" required ></div>
+                
+          </div>
+           <div class="form-row">
+                <div class="form-group col-md-6">
+                     <label for="inputEmail">Password<span style="color:red">*</span></label>
+                      <input class="form-control" id="inputEmail" type="password" aria-describedby="nameHelp" placeholder="Enter Password" name="password" required>
+                </div>
+                <div class="form-group col-md-6">
+                     <label for="inputEmail">Confirm Password<span style="color:red">*</span></label>
+                      <input class="form-control" id="inputEmail" type="password" aria-describedby="nameHelp" placeholder="Confirm Password" name="confirm_password" required>
+                </div>
+           </div>
+                    
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-4">
+                  <label for="exampleFormControlFile1">Upload Image</label>
+                  <input type="file" class="form-control-file" id="exampleFormControlFile1" name="image" required>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ---
+layout: post
+title: "Clean code"
+description: "The Clean code book"
+category: "clean-code"
+tags: [java, clean code]
+---
+{% include JB/setup %}
+
+# Table of Contents
+
+* 目录
+{:toc}
+
+# Clean code
+
+- [The Clean code Book](http://www.bookdepository.com/Clean-Code-Robert-Martin/9780132350884)
+
+Cover
+- 封面是讲故事
+- 故事讲了什么？
+  - 质量的重要性
+  - 编程的艺术
+  - 尘埃落定
+  - 代码的精髓
+  
+
+- 封面启发：
+  - 软件是人们一起协作创建的
+  - 质量是一个重要的因素
+  - 编程是一种艺术
+  - 代码需要保持尘埃落定
+
+## 前言
+- 软件工程师必须关心软件的质量
+- 软件的糟糕质量
+  - 错误
+    - 逻辑错误
+    - 设计错误
+  - 缺陷
+    - 用户不需要的东西
+    - 性能瓶颈
+    - 不符合设计的约定
+- 质量很严苛
+  - 软件质量要好到可以忍受
+  - 软件的质量可度量，但不可测试
+  - 逐步递增
+  - 评估软件质量的唯一途径是使用软件
+      - 使用它，观察它执行的任务
+      - 偶尔使用它，它执行任务时出问题了
+      - 观察它执行的任务时长
+      - 尝试使用它完成别人的工作
+      - 观照它与其他人一起工作
+  - 如果软件质量远远低于可接受的标准，就会伤及用户
+    - 用户很惊讶，愤愤地说：这个软件怎么能用？
+    
+## 编写可读代码的艺术
+- 软件工程是一种艺术
+  - 一种创造性的艺术
+  - 创造出的产
+
+Precision: 0
+Recall: 0
+F1 Score: 0

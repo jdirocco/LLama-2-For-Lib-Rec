@@ -1,0 +1,140 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: codelibs/elasticsearch-cluster-runner
+    Project Description: Elasticsearch Cluster Runner\n\n============================\n\nThis project runs Elasticsearch cluster on one JVM instance for your development/testing easily.\nYou can use Elasticsearch Cluster Runner as Embedded Elasticsearch in your application.\n\n Version\n\n \n \n\n Run on Your Application\n\nPut elasticsearchclusterrunner if using Maven:\n\n \n org.codelibs\n elasticsearchclusterrunner\n x.x.x.0\n \n\nand add Maven repository to pom.xml:\n\n\t\n\t\t\n\t\t\tcentral\n\t\t\t Repository\n\t\t\t Start Cluster Runner\n\n import static org.codelibs.elasticsearch.runner.ElasticsearchClusterRunner.newConfigs;\n ...\n // create runner instance\n ElasticsearchClusterRunner runner = new ElasticsearchClusterRunner;\n // create ES nodes\n runner.onBuildnew ElasticsearchClusterRunner.Builder {\n @Override\n public void buildfinal int number, final Builder settingsBuilder {\n // put elasticsearch settings\n // settingsBuilder.put"index.numberofreplicas", 0;\n }\n }.buildnewConfigs;\n\nbuildConfigs method configures/starts Clsuter Runner.\n\n Stop Cluster Runner\n\n // close runner\n runner.close;\n\n Clean up \n\n // delete all filesconfig and index\n runner.clean;\n\n Run on JUnit\n\nPut elasticsearchclusterrunner as test scope:\n\n \n org.codelibs\n elasticsearchclusterrunner\n x.x.x.0\n test\n \n\nand see .\n\n Run as Standalone\n\n Install Maven\n\nDownload and install Maven 3 from Clone This Project\n\n git clone Build This Project\n\n mvn compile\n\n Run/Stop Elasticsearch Cluster\n\n Run Cluster\n\nRun:\n\n mvn exec:java \n\nThe default cluster has 3 nodes and the root directory for Elasticsearch is es\\home.\nNodes use 92019203 port for HTTP and 93019303 port for Transport.\nIf you want to change the number of node, Run:\n\n mvn exec:java Dexec.args="basePath eshome numOfNode 4"\n\n Stop Cluster\n\nType Ctrlc or kill the process.\n'
+    Existing Dependencies:
+    org.codelibs.elasticsearch.module:aggs-matrix-stats
+- org.codelibs.elasticsearch.module:ingest-common
+- org.slf4j:slf4j-nop
+- org.apache.logging.log4j:log4j-core
+- org.codelibs.elasticsearch.module:transport-netty4
+- org.slf4j:slf4j-api
+- org.codelibs.elasticsearch.module:lang-painless
+- org.elasticsearch:elasticsearch
+- org.codelibs.elasticsearch.module:repository-url
+- org.elasticsearch:jna
+- org.codelibs.elasticsearch.module:tribe
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <form id="form_create_user">
+        			<div class="box-body">
+									 <div class="form-group">
+											 <label for="txt_name_modal">Name:</label>
+											 <input type="hidden" name="txtid" id="txtid">
+											 <input type="hidden" name="txt_rol" id="txt_rol">
+											 <input class="form-control" name="txt_name_modal" id="txt_name_modal" type="text" placeholder="Ej: Juan Pérez">
+									 </div>
+									 <div class="form-group">
+											 <label for="txt_lastname_modal">Lastname</label>
+											 <input class="form-control" name="txt_lastname_modal" id="txt_lastname_modal" type="text" placeholder="Ej: López López">
+									 </div>
+									 <div class="form-group">
+											 <label for="txt_email_modal">Email</label>
+											 <input class="form-control" name="txt_email_modal" id="txt_email_modal" type="email" placeholder="Ej: juanperez@email.com">
+									 </div>
+									 <div class="form-group">
+											 <label for="txt_user_modal">User</label>
+											 <input class="form-control" name="txt_user_modal" id="txt_user_modal" type="text" placeholder="Ej: juanperez">
+									 </div>
+									 <div class="form-group">
+											 <label for="txt_pass_modal">Password</label>
+											 <input class="form-control" name="txt_pass_modal" id="txt_pass_modal" type="password" placeholder="Ej: Ju4nP3r3z!">
+									 </div>
+						     </div>
+						     <!--
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import * as React from'react';
+import {
+    Text,
+    View,
+    TouchableHighlight
+} from'react-native';
+import { Actions } from "react-native-router-flux";
+import { Card, CardItem } from 'native-base';
+import {
+    Ionicon, FontAwesome, Feather,
+    MaterialIcon 
+} from '@expo/vector-icons';
+
+import theme from '../../../common/theme';
+import styles from './styles';
+
+export default class CardView extends React.Component {
+
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+            card: this.props.card
+        }
+    }
+
+
+    handlePress = () => {
+        Actions.cardDetail()
+    }
+
+    render() {
+        return (
+            
+            <Card style={styles.card}>
+                <CardItem style={styles.cardItem}>
+                    <View style={styles.cardHeader}>
+                        <View style={styles.iconWraper}>
+                            <Ionicon name={'ios-person'} size={26} color={theme.color2}/>
+                        </View>
+                        <View style={styles.headerText}>
+                            <Text style={styles.cardText}>
+                                {this.props.card.name}
+                            </Text>
+                        </View>
+                    </View>
+
+                    <TouchableHighlight onPress={this.handlePress}>
+                        <View style={styles.buttonWrapper}>
+                            <Ionicon name={'ios-arrow-forward'} color={theme.color4} size={24}/>
+                            <Text style={styles.buttonText}>Ver detalles</Text>
+                        </View>
+                    </TouchableHighlight>
+                </CardItem>
+            </Card>
+        )
+    }
+}
+
+Precision: 0
+Recall: 0
+F1 Score: 0

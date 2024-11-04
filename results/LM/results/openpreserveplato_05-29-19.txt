@@ -1,0 +1,146 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: openpreserve/plato
+    Project Description: Plato: The Preservation Planning Tool\n\nEfficient and trustworthy preservation planning.\n\n How to install and use\n\n Requirements\n\nTo install you need:\n\n Java 7\n MySQL 5 Server\n JBoss AS 7.1.0.Final\n\n Download\n\nAt the moment there are no precompiled versions available, please refer to the instructions for building Plato on the contribute page.\n\n Install instructions\n\nTo install follow these steps:\n\n1. Install and setup MySQL server \n\t1. Install MySQL 5 Server tested with version 5.1.54\n\t2. Set UTF8 as a default encoding/collation. \n\t Check appropriate MySQL 5.X reference manual for instruction on how to do this. There were some changes so it might not be the same for all versions. \n\t3. Configuration\n\t Make the following changes in your MySQL config file on Linux it is my.cnf and on Windows my.ini\n\t \n\t in the Server Section and \n\t\n\t3. Copy both Picketlink 2.1.4 jars into modules/org/picketlink/main directory\n\t4. In modules/org/picketlink/main do the following changes to the module.xml file :\n\t \n\t&lt;module xmlns="urnmodule:1.1" name="org.picketlink"&gt;\n\t &lt;resources&gt;\n\t &lt;resourceroot path="picketlinkcore2.1.4.Final.jar"/&gt;\n\t &lt;resourceroot path="picketlinkjbas72.1.4.Final.jar"/&gt;\n\t &lt;/resources&gt;\n\t &lt;dependencies&gt;\n\t &lt;module name="javax.api"/&gt;\n\t &lt;module name="javax.security.auth.message.api"/&gt;\n\t &lt;module name="javax.security.jacc.api"/&gt;\n\t &lt;module name="javax.transaction.api"/&gt;\n\t &lt;module name="javax.xml.bind.api"/&gt;\n\t &lt;module name="javax.xml.stream.api"/&gt;\n\t &lt;module name="javax.servlet.api"/&gt;\n\t &lt;module name="org.jboss.commoncore"/&gt;\n\t &lt;module name="org.jboss.logging"/&gt;\n\t &lt;module name="org.jboss.as.web"/&gt;\n\t &lt;module name="org.jboss.security.xacml"/&gt;\n\t &lt;module name="org.picketbox"/&gt;\n\t &lt;module name="javax.xml.ws.api"/&gt;\n\t &lt;module name="org.apache.log4j"/&gt;\n\t &lt;module name="org.apache.santuario.xmlsec"/&gt;\n\t &lt;/dependencies&gt;\n\t&lt;/module&gt;\n\t \n\n6. Install UTF8EncodingValve\n\n\tPlease refer to the for further information.\n\n9. Optional: FITS\n\t Install FITS Tool from .\n\t Set environment variable FITSHOME to install directory. \n\n Use\n\nTo use the tool, start up JBoss 7 and navigate with your browser to e.g. at Troubleshooting\n\nIf you encounter problems please use the built in feedback functionality in Plato on the right side of the page,\nor refer to \n\n\n Licence\n\nPlato is released under .\n\n Acknowledgements\n\nThis work was partially supported by the . The SCAPE project is cofunded by the European Union under FP7 ICT2009.4.1 Grant Agreement number 270137\n Support\n\nThis tool is supported by the . If you require support, feel free to contact plato at ifs.tuwien.ac.at.\n\n Features and roadmap\n\n Version 4.4\n\n Policy aware\n Reads content profiles\n Integration of myExperiment\n Connects to repositories via open APIs Data Connector API and Plan Management API\n Read only view for public plans\n Deploy of executable Preservation Action Plan\n\n Roadmap\n\n Improved template creation for Executable Plan based on used migration and quality assurance components\n Smarter triggers for monitoring\n Implementation of Notification API to recieve planning requests\n Policybased improvements to increase efficiency\n Implementation of Reassessment API\n'
+    Existing Dependencies:
+    javax.xml:jaxrpc-api
+- org.hibernate:hibernate-entitymanager
+- org.richfaces.core:richfaces-core-impl
+- org.hamcrest:hamcrest-core
+- commons-configuration:commons-configuration
+- org.jboss.spec:jboss-javaee-web-6.0
+- net.sf.supercsv:super-csv
+- net.sf.flexjson:flexjson
+- commons-cli:commons-cli
+- eu.scape-project.pw:kbrowser
+- commons-beanutils:commons-beanutils
+- com.github.spullara.mustache.java:compiler
+- net.sf.taverna.t2:baclava
+- org.apache.tomcat:catalina
+- junit:junit
+- eu.scape-project.pw:planning-core
+- org.picketlink:picketlink-core
+- net.tanesha.recaptcha4j:recaptcha4j
+- com.sun.jersey:jersey-core
+- org.hibernate:hibernate-jpamodelgen
+- eu.scape-project.pw:plato
+- xml-apis:xml-apis
+- org.jboss.arquillian.junit:arquillian-junit-container
+- eu.scape-project.pw:plato-model
+- org.richfaces.ui:richfaces-components-ui
+- log4j:log4j
+- org.bouncycastle:bcpkix-jdk15on
+- eu.scape-project.pw:minimee
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 28 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+    // 2D-Arrays - 
+    // [10, 20, 30, 40];
+    // [50, 60, 70, 80];
+    // [90, 100, 110, 120];
+    const numbers = [
+        [10, 20, 30],
+        [80, 90, 100],
+        [40, 50, 60],
+        [10, 20, 30],
+        [80, 90, 100],
+        [40, 50, 60],
+    ]
+    console.log(numbers);
+    
+    for (let i = 0; i < numbers.length; i++) {
+        let numbersInOneLine = '';
+        for (let j = 0; j < numbers[i].length; j++) {
+            numbersInOneLine += numbers[i][j] + ', '
+        } console.log(numbersInOneLine);
+        
+    } 
+
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 28 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+
+    return 0;
+} #include <iostream>
+
+#include "testlib.h"
+#include "params.h"
+
+int main() {
+    registerValidation();
+    
+    std::string s = inf.readString();
+    ensuref(s == "Hello world!", "Wrong output: %s (expected \"%s\")", s, "Hello world!");
+
+Precision: 0
+Recall: 0
+F1 Score: 0

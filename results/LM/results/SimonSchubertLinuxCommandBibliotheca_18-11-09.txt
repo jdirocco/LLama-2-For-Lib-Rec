@@ -1,0 +1,138 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: SimonSchubert/LinuxCommandBibliotheca
+    Project Description: Linux Command Library MobileCLIWeb\n\n\n\nThe app currently has 5547 manual pages, 22 basic categories and a bunch of general terminal tips. It works 100% offline, doesn\'t need an internet connection and has no tracking software.\n\n\n\n\n Mobile screenshots\n\n\n\n\n\n\n\n\n\n\n CLI screenshot\n\n\n\nExecute to create jar file for Linux, Windows and Mac.\n\n Content\n\n Categories\n\nOneliners, System information, System control, Users & Groups, Files & Folders, Input, Printing, JSON, Network, Search & Find, GIT, SSH, Video & Audio, Package manager, Hacking tools, Terminal games, Crypto currencies, VIM Texteditor, Emacs Texteditor, Nano Texteditor, Pico Texteditor, Micro Texteditor\n\n Tips\n\nClear and reset the terminal, List of recent commands, Close a frozen window/application, Tab Completion, Temporary aliases, Permanent aliases, Chain commands, Command syntax, Cursor navigation, Redirection, Special characters in commands, View file permissions, Modify file permissions, Set file permissions via binary references\n\n CI/CD\n\n to automatically create a new Github release with APK and JAR and upload an AAB to the Play Store.\n\n Tests\n\nAndroid Jetpack Compose screen tests: \n\nAndroid Jetpack Compose deeplinking tests: \n\nCommon code unit tests: \n\n Licensing\n\nThe source code is licensed under the Apache 2.0 license and the copyright of the man pages in the file are copyrighted by their respective authors.\n\n Thanks to\n\n App Icon\n\n Lots of oneliners\n\n Icons\n\n TLDR\n'
+    Existing Dependencies:
+    io.realm:android-adapters
+- com.android.support:support-annotations
+- com.jakewharton:butterknife-compiler
+- com.android.support:support-vector-drawable
+- com.google.firebase:firebase-crash
+- com.android.support:appcompat-v7
+- com.android.support:design
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    
+         <div class="col-md-12">
+            
+            <form method="POST" action="<?php echo base_url();?>index.php/reportes/generar" id="form1">   
+                   <?php echo $fecha1=$fecha_desde?>    
+                    <div class="input-group">
+                        <span class="input-group-addon">Desde 
+                            <input type="date" class="form-control" name="fecha1" id="fecha1"  value="<?php echo $fecha_desde?>"></span>
+                        <span class="input-group-addon">Hasta 
+                             <input type="date" class="form-control" name="fecha2" id="fecha2"  value="<?php echo $fecha_hasta?>"></span>
+                        <span class="input-group-addon">
+                            <input type="checkbox" name="todos" id="todos">Todos</span>
+                    </div>
+                <div class="col-lg-12"  style="padding-top: 15px">
+                     <div class="input-group">
+                       Clientes: 
+                    <select id="clientes" name="cliente"  class="form-control">
+                        <option value="0">Elije un cliente</option>
+                        <?php foreach ($clientes as $value) {
+                           ?>
+                             <option value="<?php echo $value->idcliente?>"><?php echo $value->nombre." - ".$value->num_documento;?></option>  
+                            <?php
+                          }
+                         ?>
+                    </select>
+                        <span class="btn btn-default" id="generar">Generar Reporte</span>
+                        
+                    </div>
+              <div class="col-lg-12"  style="padding-top: 15px">
+                     <div class="input-group">
+                       Cuentas: 
+                    <select id="cuentas" name="cuenta" class="form-control">
+                        <option value="0">Elija una cuenta</option>
+                        <?php foreach ($cuentas as $value) {
+                           ?>
+                             <option value="<?php echo $value->account_id;?>"><?php echo $value->account_name;?></option>  
+                            <?php
+                          }
+                         ?>
+                    </select>
+                        <span class="btn btn-default" >Generar Reporte</span>
+                        
+                    </div>
+               </form>
+            </div>
+                    
+        
+    </div>     
+</div>
+<?php if(isset($datos) and $datos) {?>
+
+    <div class="alert alert-info">
+        <p>
+            <?php echo $texto;?>
+        </p>
+    </div>
+<div id="cortina">
+    <div class="datagrid">
+    <table id="tReporte" >
+        
+    </table>
+           
+    </div>
+</div>
+
+<style>
+    #cortina {
+        position:absolute;
+        left:0%;
+        top:0%;
+        width:100%;
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e_t,
+    pub f_ffree: libc::c_ulong,
+    pub f_fsid: libc::c_long,
+    pub f_namelen: libc::c_ulong,
+    pub f_spare: [libc::c_long; 6],
+}
+
+pub unsafe fn fstatvfs64(fd: libc::c_int, buf: *mut statvfs64) -> libc::c_int {
+    libc::fstatvfs(fd, &mut *buf)
+}
+
+pub unsafe fn statvfs64(path: *const libc::c_char, buf: *mut statvfs64) -> libc::c_int {
+    libc::statvfs(path, &mut *buf)
+}
+ pub struct statvfs64 {
+    pub f_bsize: libc::c_ulong,
+    pub f_frsize: libc::c_ulong,
+    pub f_blocks: libc::c_ulong,
+    pub f_bfree: libc::c_ulong,
+    pub f_bavail: libc::c_ulong,
+    pub f_files: libc::c_ulong,
+    pub f_favail: libc::c_ulong,
+    pub f_f_namemax: libc::c_siz
+
+Precision: 0
+Recall: 0
+F1 Score: 0

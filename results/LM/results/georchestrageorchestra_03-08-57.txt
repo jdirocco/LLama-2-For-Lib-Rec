@@ -1,0 +1,136 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: georchestra/georchestra
+    Project Description: geOrchestra\n\n\n\ngeOrchestra is a complete Spatial Data Infrastructure solution.\n\nIt features a metadata catalog GeoNetwork, an OGC server GeoServer with finegrained access control based on GeoFence, an advanced viewer and editor and many more security and auth system based on proxy/CAS/LDAP, analytics, admin UIs, ...\n\nPlease refer to the for more information.\n'
+    Existing Dependencies:
+    org.geotools:gt-geotiff
+- org.apache.tiles:tiles-jsp
+- org.springframework:spring-aop
+- org.springframework.ldap:spring-ldap-core-tiger
+- org.apache.camel:camel-core
+- org.hibernate:hibernate-entitymanager
+- org.apache.camel:camel-context
+- org.geotools.ogc:net.opengis.wfs
+- net.sf.jasperreports:jasperreports
+- org.hamcrest:hamcrest-core
+- ${project.parent.groupId}:georchestra-commons
+- com.codahale.metrics:metrics-logback
+- org.springframework:spring-mock
+- org.apache.camel:camel-servlet
+- org.geotools:gt-wfs-ng
+- net.sf.flexjson:flexjson
+- org.jdom:jdom
+- org.springframework:spring-test
+- org.apache.camel:camel-exec
+- org.codehaus.jsr166-mirror:jsr166y
+- com.google.guava:guava
+- org.geotools.xsd:gt-xsd-gml3
+- org.springframework.data:spring-data-commons
+- com.yahoo.platform.yui:yuicompressor
+- org.geotools:gt-svg
+- org.hamcrest:hamcrest-library
+- org.springframework.security:spring-security-web
+- org.jasig.cas:cas-server-webapp-support
+- com.jcraft:jsch
+- org.geotools:gt-wms
+- taglibs:standard
+- org.geotools:gt-main
+- org.springframework:spring-core
+- com.codahale.metrics:metrics-httpclient
+- org.geotools:gt-epsg-hsql
+- org.jasig.cas:cas-server-integration-memcached
+- org.geotools:gt-geojson
+- org.hamcrest:hamcrest-all
+- org.apache-extras.camel-extra:camel-hibernate
+- org.json:json
+- junit:junit
+- org.aspectj:aspectjrt
+- org.geotools:gt-ogr-core
+- com.mchange:c3p0
+- org.postgresql:postgresql
+- ${project.groupId}:server-deploy-support
+- org.geotools:gt-referencing
+- org.slf4j:slf4j-simple
+- org.yaml:snakeyaml
+- org.springframework.ldap:spring-ldap-ldif-core
+- javax.el:el-api
+- org.codehaus.groovy:groovy-all
+- org.geowebcache:gwc-web
+- commons-lang:commons-lang
+- org.aspectj:aspectjweaver
+- net.tanesha.recaptcha4j:recaptcha4j
+- javax.servlet.jsp:jsp-api
+- org.springframework.ldap:spring-ldap-ldif-batch
+- com.googlecode.ez-vcard:ez-vcard
+- org.apache.velocity:velocity
+- org.springframework:spring-webmvc
+- org.springframework.ldap:spring-ldap-odm
+- org.springframework.ldap:spring-ldap-core
+- org.geotools:gt-mif
+- log4j:apache-log4j-extras
+- org.geotools.xsd:gt-xsd-kml
+- org.springframework:spring-context
+- javax.validation:validation-api
+- org.apache.httpcomponents:httpclient
+- org.apache.commons:commons-lang3
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 71 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div id="layoutSidenav_content">
+
+<nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+    <div class="container-fluid d-flex flex-column p-0">
+        <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+            <div class="sidebar-brand-icon rotate-n-15"></div>
+            <div class="sidebar-brand-text mx-3"><span>Koperasi</span></div>
+        </a>
+        <hr class="sidebar-divider my-0">
+        <ul class="nav navbar-nav text-light" id="accordionSidebar">
+            <li class="nav-item" role="presentation"><a class="nav-link active" href="indexadmin.php"><i class="fas fa-table"></i><span>Admin</span></a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="anggota.php"><i class="fas fa-table"></i><span>Anggota</span></a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="pinjam.php"><i class="fas fa-table"></i><span>Pinjaman</span></a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="simpanan.php"><i class="fas fa-table"></i><span>Simpanan</span></a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="laporan.php"><i class="fas fa-table"></i><span>Laporan</span></a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="login.php"><i class="fas fa-table"></i><span>Logout</span></a></li>
+        </ul>
+        <div class="text-center d-none d-md-inline"></div>
+    </div>
+</nav>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 71 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ﻿using Systemn(String[] args){
+			Console.WriteLine("Hello C#");
+		}
+	}
+};
+namespace HelloWorld
+{
+	public static class Program
+	{
+		public static void Mai
+
+Precision: 0
+Recall: 0
+F1 Score: 0

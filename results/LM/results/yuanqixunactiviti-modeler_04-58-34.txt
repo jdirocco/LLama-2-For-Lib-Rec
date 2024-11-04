@@ -1,0 +1,136 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: yuanqixun/activiti-modeler
+    Project Description: This project is base on signavioactivitimodeler.\r\nThe source project is so bad project structure:\r\n1.nonbased maven.\r\n2.compress the oryx's source plugin js into a oryxdebug.js file. This is too bad for our custom developer.\r\nSo, I modified it and it can run better in Tomcatjboss will have some problem for the jar's conflict problem.\r\nMaybe some dependce will not find from central repo. you should down manual yourself and upload to your local nexus repo.\r\nEnjoy it!\r\nChange the reopsitory to dropbox.\r\n"
+    Existing Dependencies:
+    xml-apis:xml-apis
+- mysql:mysql-connector-java
+- xalan:xalan
+- batik:batik-codec
+- com.yahoo.platform.yui:yuicompressor
+- com.eontime.bdp.bpm:bdp-bpm-engine
+- javax.xml.bind:jaxb-api
+- dom4j:dom4j
+- org.apache.xmlgraphics:batik-transcoder
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <header id="header" class="header">
+        <div class="top-left">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="<?= base_url('admin/beranda')?>"><i class="fa fa-university fa-lg text-primary"></i> <b>Aplikasi Penggajian</b></a>
+                <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
+            </div>
+        </div>
+        <div class="top-right">
+            <div class="header-menu">
+            <div class="dropdown">
+                <a href="<?= base_url('admin/log_out')?>" class="dropdown-toggle"><i class="fa fa-sign-out fa-fw fa-lg"></i></a>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> /*
+ * @Author: 姜彦汐
+ * @Date: 2020-12-31 09:31:06
+ * @LastEditors: 姜彦汐
+ * @LastEditTime: 2022-03-10 10:31:02
+ * @Description: 
+ * @Site: https://www.undsky.com
+ */
+const Koa = require('koa') // 导入koa依赖
+const Router = require('@koa/router') // 导入路由依赖
+//const app = new Koa() // 创建koa应用
+const { createApp } = require('@/lib/app')
+const db = require('@/db') // 创建数据库
+const redis = require('@/lib/redis') // 创建redis
+const { initConfig, initLogger } = require('@/lib/init  const router = new Router()
+    const app = new Koa()
+    const port = config.port || 3000
+
+    const middleware = {
+        koaBody: koaBody({
+            multipart: true,
+            formidable: {
+                keepExtensions: true,
+                maxFileSize: '100mb'
+            },
+            formLimit: '100mb',
+            jsonLimit: '100mb',
+            textLimit: '100mb'
+        }),
+        logger: new Logger(),
+        db: new db.Database(),
+        redis: new redis.Redis()
+    }
+
+    const initApp = async () => {
+        await initConfig()
+        await initLogger()
+        await initRoutes()
+        app.use(middleware.koaBody)
+        app.use(middleware.logger.koaMiddleware())
+        app.use(middleware.db.koaMiddleware())
+        app.use(middleware.redis.koaMiddleware())
+        app.use(routes.routes())
+        app.use(router.allowedMethods())
+    }
+
+    const initRoutes = async () => {
+        routes.routes()
+    }
+
+    const listen = async () => {
+        await initApp()
+        app.listen(port, () => {
+            console.log(`[${moment().format('YYYY-MM-DD hh:mm:ss')}][${app.name}] Listening on http://127.0.0.1:${port}`)
+        })
+    }
+
+    const close = () => {
+        app.close()
+    }
+
+    return { app, middleware, listen, close, port }
+}') // 加载配置、logger
+const koaBody = require('koa-body') // 加载解析请求体的中间件
+const Logger = require('@/lib/logger') // 日志中间件
+const moment = require('dayjs')
+
+// 创建koa应用
+// 初始化配置
+// 初始化日志
+// 初始化路由
+// 开启监听
+module.exports = app => {
+
+    const config = app.config
+    const routes = app.routes
+  
+
+Precision: 0.0
+Recall: 0.0
+F1 Score: 0

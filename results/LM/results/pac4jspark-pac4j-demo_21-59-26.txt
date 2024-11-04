@@ -1,0 +1,202 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: pac4j/spark-pac4j-demo
+    Project Description: \n \n\n\nThis project is a SparkJava application to test the security library with various authentication mechanisms: Facebook, Twitter, form, basic auth, CAS, SAML, OpenID Connect, JWT...\n\n Start & test\n\nBuild the project and launch the SparkJava app on :\n\n cd sparkpac4jdemo\n mvn clean compile exec:java\n\nTo test, you can call a protected url by clicking on the "Protected url by xxx" link, which will start the authentication process with the xxx provider.\n'
+    Existing Dependencies:
+    org.pac4j:pac4j-cas
+- org.pac4j:pac4j-http
+- org.pac4j:pac4j-ldap
+- org.pac4j:pac4j-oidc
+- org.pac4j:pac4j-couch
+- com.sparkjava:spark-template-mustache
+- org.pac4j:spark-pac4j
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+  
+     
+
+      
+    
+      
+        
+    
+      <section id="main-content">
+          <section class="wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3 class="page-header"><i class="fa fa-file-text-o"></i>Laporan Pengajuan</h3>
+          <ol class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+            <li><i class="fa fa-bars"></i>Laporan</li>
+            <li><i class="fa fa-list-ul"></i>List Pengajuan</li>
+          </ol>
+        </div>
+      </div>
+              <div class="row">
+                  <div class="col-lg-6 text-left">
+                    <h4>Pilih Jenis Laporan</h4>
+                  </div>
+                  <div class="col-lg-6 text-right">
+                    <button class="btn btn-primary" id="btn-add" onclick="javascript:window.print();">
+                      <i class="glyphicon glyphicon-print icon-white" ></i>
+                      Print
+                    </button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading no-radius" style="background:#2980b9;padding-bottom:25px;">
+                        <div class="huge">
+                              <?php
+                              $this->db->where('status_peminjaman', 'Selesai');
+                              $query = $this->db->get('peminjaman');
+                              print $query->num_rows();
+                             ?>
+                        </div>
+                      <h3>Data Selesai</h3>
+                    </div>
+                      <a href="#">
+                        <div class="panel-footer">
+                          <span class="pull-left">View Details</span>
+                          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                          <div class="clearfix"></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-yellow">
+                      <div class="panel-heading no-radius" style="background:#f39c12;padding-bottom:25px;">
+                        <div class="huge">
+                            <span class="glyphicon glyphicon-folder-open"></span> 
+                        </div>
+                        <h3>Data Peminjaman</h3>
+                      </div>
+                      <a href="#">
+                        <div class="panel-footer">
+                          <span class="pull-left">View Details</span>
+                          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                          <div class="clearfix"></div>
+                        </div
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e,
+      }),
+  }),
+  (dispatch) => ({
+    updateState: (state: any) => dispatch(updateState(state)),
+  }),
+)(Edit);
+ import { Form, Icon, Input, InputNumber } from 'antd';
+import FormItemDecorator from '@/components/Form/FormItemDecorator';
+import React from'react';
+import { WrappedFormUtils } from 'antd/es/form/Form';
+import { connect } from 'dva';
+
+import { StateType } from './model';
+
+import { updateState } from './effects';
+import { ConnectState } from '@/models/connect';
+
+// 定义edit页的props类型
+interface EditProps {
+  // form: WrappedFormUtils;
+  data: any;
+  updateState: (state: any) => void;
+  state: StateType;
+}
+// 定义edit页的state类型
+type EditState = {
+  value: string;
+};
+
+class Edit extends React.Component<EditProps, EditState> {
+  state: EditState = {
+    value: '',
+  };
+
+  componentDidMount(): void {
+    console.log(this);
+  }
+
+  componentDidUpdate(): void {}
+
+  handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const { data, form, updateState } = this.props;
+    e.preventDefault();
+    form.validateFields((err: object, values: object) => {
+      if (!err) {
+        const state = {...data,...values };
+        // 提交到后台的数据格式
+        updateState(state);
+        console.log('Received values of form: ', values);
+      }
+    });
+  };
+
+  render() {
+    const { form } = this.props;
+
+    return (
+      <Form onSubmit={this.handleSubmit}>
+        <FormItemDecorator
+          form={form}
+          field='name'
+          rules={[{ required: true, message: 'Please input the product name' }]}
+        >
+          <Input prefix={<Icon type='user' style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder='Product name' />
+        </FormItemDecorator>
+        <FormItemDecorator
+          form={form}
+          field='code'
+          rules={[{ required: true, message: 'Please input the product code' }]}
+        >
+          <Input
+            prefix={<Icon type='idcard' style={{ color: 'rgba(0,0,0,.25)' }} />}
+            placeholder='Product code'
+          />
+        </FormItemDecorator>
+        <FormItemDecorator
+          form={form}
+          field='price'
+          rules={[{ required: true, message: 'Please input the price' }]}
+        >
+          <InputNumber prefix={<Icon type='pay-circle-o' style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder='Product price' />
+        </FormItemDecorator>
+        <div className='actions-btn'>
+          <span className='cancel-btn' onClick={this.handleSubmit}>
+            Submit
+          </span>
+          <span className='cancel-btn'>Cancel</span>
+        </div>
+      </Form>
+    );
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

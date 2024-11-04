@@ -1,0 +1,70 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: OneBusAway/onebusaway-gtfs-modules
+    Project Description: onebusawaygtfsmodules \n\nA Java library for reading and writing feeds, including database support.\n\nSee more documentation .\n\n Maven usage\n\nIn your , include:\n\n\n\n\t\n\t\tpublic.onebusaway.org\n\t\t and inside :\n\n\n\n\torg.onebusaway\n\tonebusawaygtfs\n\t1.3.88\n\n\n\n...where contains the latest version number.\n'
+    Existing Dependencies:
+    mysql:mysql-connector-java
+- commons-cli:commons-cli
+- com.kurtraschke:wsf-api
+- org.onebusaway:onebusaway-gtfs-modules
+- org.onebusaway:onebusaway-gtfs-merge
+- org.onebusaway:onebusaway-csv-entities
+- org.slf4j:slf4j-api
+- org.onebusaway:onebusaway-collections
+- org.slf4j:slf4j-log4j12
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- CSS Files -->
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" />
+    <link href="{{asset('assets/css/paper-dashboard.css?v=2.0.1')}}" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="{{asset('assets/demo/demo.css')}}"rel="stylesheet" />
+    
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import { Module } from '@nestjs/common';
+import { MongooseModule } from "@nestjs/mongoose";
+import { AppController } from './app.controller';
+import { AppService } from '.  imports :[ProductModule,
+            MongooseModule.forRoot(process.env.DATABASE_CONNECTION, {
+                useNewUrlParser: true,
+                useUnifiedTopology: true,
+                useCreateIndex:true, useUnifiedTopology:true,
+                useFindAndModify:true
+            }
+            )],
+  controllers: [AppController],
+  providers: [AppService],
+})
+export class AppModule {}
+/app.service';
+import { ProductModule } from './product/product.module';
+@Module({
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,124 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: testcontainers/testcontainers-java
+    Project Description: Testcontainers\n\n\n\n\n\n\n\n Testcontainers is a Java library that supports JUnit tests, providing lightweight, throwaway instances of common databases, Selenium web browsers, or anything else that can run in a Docker container.\n\n\n\n \n\n License\n\nSee .\n\n Copyright\n\nCopyright c 2015 2021 Richard North and other authors.\n\nMS SQL Server module is c 2017 2021 G DATA Software AG and other authors.\n\nHashicorp Vault module is c 2017 2021 Capital One Services, LLC and other authors.\n\nSee for all contributors.\n'
+    Existing Dependencies:
+    ${project.groupId}:jdbc
+- mysql:mysql-connector-java
+- org.assertj:assertj-core
+- org.postgresql:postgresql
+- com.sun.jersey:jersey-client
+- javax.ws.rs:javax.ws.rs-api
+- org.rnorth.visible-assertions:visible-assertions
+- redis.clients:jedis
+- org.mariadb.jdbc:mariadb-java-client
+- org.slf4j:slf4j-api
+- ${project.groupId}:testcontainers
+- virtuoso:jdbc-driver
+- org.zeroturnaround:zt-exec
+- org.slf4j:slf4j-ext
+- org.rnorth:tcp-unix-socket-proxy
+- org.rnorth.duct-tape:duct-tape
+- com.google.guava:guava
+- org.projectlombok:lombok
+- org.mortbay.jetty:jetty
+- org.glassfish.jersey.core:jersey-common
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<!--==========================
+      Clients Section
+    ============================-->
+    <style type="text/css">
+     .btn-primary {
+    color: #1f2d3d;
+    background-color: #FFC107;
+    border-color: #dee2e6;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #FFC100;
+    border-color: #e0e0e0;
+}
+.banner-sec {
+  background: url(https://static.pexels.com/photos/33972/pexels-photo.jpg)  no-repeat left bottom;
+  background-size: cover;
+  background-position: center;
+  min-height: 50px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 11px 25px 37px 0px rgba(0,0,0,0.75);
+  
+}
+    </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <a href="#" style="padding: 20px;
+    font-size: 20px;
+    background: #57769e;
+    border-radius: 90px;
+    font-weight: bold;
+    color: #021059;
+    display: inline-block;
+    transition: 1s;
+    text-decoration: none;font-family: arial;
+
+    letter-spacing: 3px;
+    text-transform:uppercase;">Sell your old mobile and get cash in minutes</a>
+    <section id="clients" class="section-bg">
+      <div class="container wow fadeInUp">
+        <div class="section-header">
+          <h2 class="font-24 text-center font-bold text-color-666">
+            <br>
+        <a href="" class="btn btn-primary"  data-toggle="modal" data-target="#myModal">Click here to sell your old mobile</a>
+      </h2>
+          <!-- <p class="section-description"></p> -->
+        </div>
+        <!-- <div >
+          <div class="icon"><i class="fa fa-plug"></i></div>
+          <h4 class="title"><a href="">Electronic Product</a></h4>
+          <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.</p>
+        </div> -->
+        <!-- <div>
+          <div class="icon"><i class="fa fa-photo"></i></div>
+          <h4 class="title"><a href="">Electronic Product</a></h4>
+          <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata nodera claire</p>
+        </div> -->
+        <!-- <div>
+          <div class="icon"><i class="fa fa-magic"></i></div>
+         
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>   * 
+   */
+  public String getType();
+} public interface TypeProvider
+  extends java.awt.datatransfer.Transferable
+{
+  /**
+   * This method returns the type for this object.
+   * This method should always return a non-null and non-empty String.
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

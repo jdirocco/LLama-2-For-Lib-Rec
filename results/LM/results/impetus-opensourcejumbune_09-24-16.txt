@@ -1,0 +1,168 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: impetus-opensource/jumbune
+    Project Description: jumbune \n=======\n\n Synopsis\n\nJumbune is an opensource Big Data APM which helps to improve performance of Data operations on clouds: AWS, Azure, Google Cloud Platform and Inpremise data centers.\n\n Website\n Issue Tracker\n Building\n\nJumbune can be build with maven\n\n To build for a Yarn Hadoop cluster\n\n \n\n To build for a non Yarn Hadoop cluster\n\n \n\n Installation\n\nDetailed installation guide can be found at Planning guide at Deploying Jumbune\n\n\n\n Deploying Jumbune in verbose mode\n\n\n\n Running Jumbune Agent\n\n\n\n Running Jumbune\n\n\n\nor\n\n\n\n Docker Image Jumbune 1.6 Apache Hadoop on Ubuntu OS\n\n Building from root of the checked out repository\n\n\n Building from the github.com repository\n\n\n Getting the automated build from docker registry\n\n\n Running the built image\n\n\n Code Examples\n\nCode examples are packages inside the distribution,\n\n For Flow analyzer: BankDefaulters, ClickStreamAnalysis, USRegionPortouts\n For Profilng: MovieRating\n For Data Validation script\n\n Documentation\n Quick Start Guide: Installation Guide: Release Notes: Architecture Guide: Deployment Planning Guide: Administration Guide: Troubleshooting Guide: Getting Involved Guide: License\n\nJumbune is licensed under LGPLv3 license\n\n\n\n'
+    Existing Dependencies:
+    org.apache.commons:commons-math3
+- org.apache.commons:commons-io
+- org.mortbay.jetty:jetty-runner
+- org.apache.logging.log4j:log4j-core
+- org.easymock:easymock
+- org.mockito:mockito-all
+- org.jumbune:examples-clickstreamanalysis
+- org.jumbune:examples-movierating
+- org.ow2.asm:asm
+- org.jumbune:examples-bankdefaulters
+- org.jumbune:jumbune-profiling
+- org.jumbune:jumbune-common
+- commons-lang:commons-lang
+- commons-configuration:commons-configuration
+- io.netty:netty-transport
+- org.jumbune:jumbune-utils
+- org.jumbune:jumbune-remoting
+- io.netty:netty-common
+- org.jumbune:jumbune-web
+- org.apache.logging.log4j:log4j-api
+- com.googlecode.jmockit:jmockit
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 22 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div class="container">
+        
+        <?php if ($this->session->flashdata('flash')) :?>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    Data Mahasiswan <strong>berhasil</strong> <?= $this->session->flashdata('flash');?>.
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <?php endif;?>
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <h1>Data Mahasiswan</h1>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <a href="<?= base_url();?>mahasiswa/tambah" class="btn btn-primary">Tambah Data Mahasiswa</a>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <form action="" method="post">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Cari Data Mahasiswa..." name="keyword">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit">Cari</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <h3>Daftar Mahasiswa</h3>
+                <?php if (empty($mahasiswa)) :?>
+                <div class="alert alert-danger" role="alert">
+                    Data Mahasiswan tidak ditemukan.
+                </div>
+                <?php endif;?>
+
+                <ul class="list-group">
+                    <?php foreach ($mahasiswa as $mhs) :?>
+                    <li class="list-group-item">
+                        <?= $mhs['nama'];?>
+                        <a href="<?= base_url();?>mahasiswa/hapus/<?= $mhs['id'];?>"
+                            class="badge badge-danger float-right ml-2 mr-2 tombol-hapus">hapus</a>
+                        <a href="<?= base_url();?>mahasiswa/ubah/<?= $mhs['id'];?>" class="badge badge-success
+                        float-right mr-2">ubah</a>
+                        <a href="<?= base_url();?>mahasiswa/detail/<?= $mhs['id'];?>" class="badge badge-primary
+                         float-right mr-2"
+                            data-toggle="tooltip" data-placement="bottom" title="Detail Data
+                            Mahasiswa">detail</a>
+                    </li>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 22 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ---
+title: '[알고리즘 정리] 이진 검색(Binary Search)'
+date: 2020-04-08
+category: 'Algorithm'
+---
+
+# 이진 검색 (Binary Search)
+
+**이진 검색**은 이름처럼 두 개로 나눠서 탐색하는 검색 알고리즘 중 하나입니다.
+배열을 정렬한 상태에서만 동작하는데, 정렬되어 있다는 가정 하에, **배열의 중앙 요소**를 기준으로 해당 값을 찾아내려고 하는 것입니다.
+이진 검색은 반으로 쪼개서 찾기 때문에 O(log n)의 시간 복잡도를 갖습니다.
+
+<hr />
+
+### **✍ 정리**
+
+1. 정렬된 데이타만 작업 가능
+2. 배열 중앙 요소 선정하여 비교후 찾는 값이 작으면 왼쪽, 크면 오른쪽 탐색
+3. 값이 없으면 -1 반환
+
+<hr />
+
+```
+function binarySearch(arr, value) {
+  let start = 0,
+    end = arr.length - 1,
+    middle = Math.floor((start + end) / 2)
+
+  while (arr[mid
+dle]!== value && start <= end) {
+    if (value < arr[middle]) {
+      end = middle - 1
+    }
+    if (value > arr[middle]) {
+      start = middle + 1
+    }
+    middle = Math.floor((start + end) / 2)
+  }
+  return arr[middle] === value? middle : -1
+}
+```
+
+<hr />
+
+#### **💡 정리**
+
+1. 배열의 첫 번째 요소부터 비교를 시작
+2. start(검색 할 대상 배열의 index), end(검색 할 대상 배열의 index), middle (비교 할 대상 배열의 index) 를 지정
+3. 비교 값이 중앙의 값과 같으면 index를 �
+
+Precision: 0
+Recall: 0
+F1 Score: 0

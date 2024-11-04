@@ -1,0 +1,107 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: lets-blade/blade-jdbc
+    Project Description: \r\n \r\n \r\n \r\n\r\n\r\n\r\n \xe8\xb6\x85\xe7\xae\x80\xe5\x8d\x95\xe7\x9a\x84\xe6\x95\xb0\xe6\x8d\xae\xe5\xba\x93\xe6\x93\x8d\xe4\xbd\x9c\xe5\xba\x93\xe3\x80\x82\r\n\r\n\r\n\r\n \r\n \r\n \r\n\r\n\r\n\r\n\r\n \xe7\x89\xb9\xe6\x80\xa7\r\n\r\n \xe8\xaf\xad\xe6\xb3\x95\xe7\xae\x80\xe6\xb4\x81\xef\xbc\x8c\xe4\xbb\xa3\xe7\xa0\x81\xe9\x87\x8f\xe5\xb0\x91\r\n \xe4\xb8\x8d\xe4\xbe\x9d\xe8\xb5\x96\xe7\xac\xac\xe4\xb8\x89\xe6\x96\xb9\xe6\xa1\x86\xe6\x9e\xb6\xe9\x99\xa4\xe4\xba\x86\xe6\x97\xa5\xe5\xbf\x97\xe6\x8e\xa5\xe5\x8f\xa3\r\n DSL\xe9\xa3\x8e\xe6\xa0\xbc\xef\xbc\x8c\xe8\xae\xa9\xe7\xa8\x8b\xe5\xba\x8f\xe5\x86\x99\xe8\xb5\xb7\xe6\x9d\xa5\xe5\x83\x8f\xe4\xb8\x80\xe6\x9d\xa1\xe9\x93\xbe\r\n \xe5\x86\x85\xe7\xbd\xae\xe8\xbf\x9e\xe6\x8e\xa5\xe6\xb1\xa0\xef\xbc\x8c\xe6\x94\xaf\xe6\x8c\x81\xe5\x85\xb6\xe4\xbb\x96\xe8\xbf\x9e\xe6\x8e\xa5\xe6\xb1\xa0\r\n \xe5\x8f\xaf\xe5\x9c\xa8\xe4\xbb\xbb\xe6\x84\x8f Java \xe9\xa1\xb9\xe7\x9b\xae\xe4\xb8\xad\xe4\xbd\xbf\xe7\x94\xa8\r\n JDK8\r\n\r\n\xe5\xba\x9f\xe8\xaf\x9d\xe5\xb0\x91\xe8\xaf\xb4\xef\xbc\x8c\xe4\xb8\x8a\xe8\xbd\xa6\xe8\xaf\xb7\xe7\x9c\x8b test code.\r\n'
+    Existing Dependencies:
+    mysql:mysql-connector-java
+- com.impossibl.pgjdbc-ng:pgjdbc-ng
+- org.slf4j:slf4j-api
+- com.bladejava:blade-jdbc
+- com.google.code.gson:gson
+- postgresql:postgresql
+- org.slf4j:slf4j-log4j12
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- Modal -->
+     <div class="modal fade" id="modal_tambah" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop='false' data-backdrop-bg='false'>
+         <div class="modal-dialog  modal-lg" role="document">
+             <div class="modal-content">
+                 <div id=frm_modal_tambah>
+                     <form id="formall" class="form-horizontal" enctype="multipart/form-data" method="post">
+                        
+                         <div class="modal-header">
+                             
+                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                             <h4 class="modal-title" id="myModalLabel"></h4>
+                         </div>
+                          <div class="modal-body">
+                                  <input type="hidden" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
+                                  <input type="hidden" class="form-control" id="txt_csrfname" name="<?php echo $this->security->get_csrf_token_name();?>" value="<?php echo $this->security->get_csrf_hash();?>">
+                                  <input type="hidden" class="form-control" name="txt_id" id="txtID" value="0">
+                                  <input type="hidden" class="form-control" name="txt_index" id="txtINDEX" >
+
+                                  <div class="form-group"><label class="col-sm-2 control-label">Username</label>
+                                      <div class="col-sm-10">
+                                          <input type="text" class="form-control" name="txt_username" id="txtUSERNAME">
+                                      </div>
+                                  </div>   
+
+                                  <div class="hr-line-dashed"></div>
+                                  
+                                  <div class="form-group"><label class="col-sm-2 control-label">Password</label>
+                                      <div class="col-sm-10">
+                                          <input type="password" class="form-control" name="txt_password" id="txtPASSWORD">
+                                      </div>
+                                  </div>   
+
+                                  <div class="form-group"><label class="col-sm-2 control-label">Nama User</label>
+                                      <div class="col-sm-10">
+                                          <input type="text" class="form-control" name="txt_namauser" id="txtNAMAUSER">
+                                      </div>
+                                  </div>   
+
+                                  <div class="hr-line-dashed"></div>
+                                  
+                                  <div class="form-group"><label class="col-sm-2 control-label">No Telepon</label>
+                                      <div class="col-sm-10">
+                                          <input type="text" class="form-control" name="txt_notelepon" id="txtNOTELEPON">
+                                      </div>
+                                  </div>   
+
+                
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import { Injectable } from '@angular/core';
+import * as cf from 'crypto-js';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CryptoService {
+
+  constructor() { }
+
+  public encrypt(key: string, message: string): string {
+    return cf.AES.encrypt(message, key);
+  }
+
+  public decrypt(key: string, encryptedMess.AES.decrypt(encryptedMessage, key).toString(cf.enc.Utf8);
+  }
+}
+age: string): string {
+    return cf
+
+Precision: 0
+Recall: 0
+F1 Score: 0

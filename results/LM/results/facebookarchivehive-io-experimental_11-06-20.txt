@@ -1,0 +1,111 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: facebookarchive/hive-io-experimental
+    Project Description: \n\nThis project is not actively maintained. Proceed at your own risk!\n\n \n\n Overview \n\n\n\nA Hive Input/Output Library in Java.\n\nThe Hive project is built to be used through command line HQL.\nAs such it does not have a good interface to connect to it through code directly.\nThis project fixes that problem it adds support for input/output with Hive in code directly.\n\nCurrently we have:\n1. Simple APIs to read and write a table in a single process.\n2. Hadoop compatible Input/OutputFormat that can interact with Hive tables.\n3. hivetail executable for dumping data from a Hive table to stdout.\n4. Examples of HiveIO usage for building applications.\n\n Building \n\nThis project uses for its build.\nTo build the code yourself clone this repository and run \n\n Using \nTo use this library in your project with maven add this to you pom.xml:\n\n \n com.facebook.hiveio\n hiveioexpcore\n 0.10\n \n\nYou can also browse the\n\nand download the jars directly.\n\n Reference \n\nThe project's \nis generated with each release.\nAPI information is available here: \n.\n\n 1. Simple API \nIf you just want to quickly read or write a Hive table from a Java process, these are for you.\n\nThe input API is simply:\n\n public class HiveInput {\n public static Iterable readTableHiveInputDescription inputDesc;\n }\n\nAnd the output API is:\n\n public class HiveOutput {\n public static void writeTable\n HiveOutputDescription outputDesc,\n Iterable records\n }\n\nFor example usages of these take a look at the cmdline apps and the tests in the code.\n\n 2. Hadoop Compatible API \n\n Design \nThe input and output classes have a notion of profiles.\nA profile\xc2\xa0is tagged by a name and describes the input or output you wish to connect to.\nProfiles are serialized into the Hadoop Configuration so that they can be passed around easily.\nMapReduce takes classes you configure it with and instantiates them using reflection on many hosts.\n\nThis sort of model makes it hard to configure the classes beyond just setting which to use.\nThe approach we have chosen is to have the user create input / output descriptions, and set them with a profile.\nThis writes it to the configuration which gets shipped to every worker by MapReduce.\nSee example code mentioned below\xc2\xa0for more information.\n\n Input \nThe Hive IO library conforms to Hadoop's\n API.\nThe class that implements this API is\n.\nMapReduce creates the InputFormat using reflection.\nIt will call getSplits to generate splits on the hive tables to read.\nEach split is then sent to some worker, which then calls createRecordReadersplit.\nThis creates a\n\nwhich is used to read each record.\n\n Output \nThe Hive IO library conforms to Hadoop's\n API.\nThe class that implements this API is\n.\n\nMapReduce creates the OutputFormat using reflection.\nIt will call checkOutputSpecs to verify that the output can be written.\nThen it will call createRecordWriter on each map task host.\nThese record writers will get passed each record to write.\nFinally it will call getOutputCommitter and finalize the output.\nBecause of its use of reflection, to make use of this library you will need to extend HiveApiOutputFormat and potentially HiveApiRecordWriter.\n\nThe best way to get started with output\xc2\xa0is to have a look at the example mapreduce\n.\n\nThis is a simple example of using the library that should be used as a starting point for projects. \n\n Benchmarks \nUsing Hive IO we were able to read from Hive at 140 MB/s.\nFor comparison, using the hive command line on the same partition reads at around 35 MB/s.\nThis benchmark is an evolving\xc2\xa0piece of work and we still have performance tweaks to make.\nCode for the benchmark is located .\n\n 3. HiveTail \nThis library comes with a hive reader, called hivetail, that can be used to stream through Hive data.\nIt reads from a Hive table / partition and dumps rows to stdout.\nIt is also a good starting point for implementing input with this library.\nThe code is located\n.\nTo use it first build the code or download the jar from\n.\nThen on your machine run .\n\n 4. Examples \n\nThe \nmodule contains a suite of command line tools using HiveIO.\nThe jarwithdependencies that it builds is completely standalone.\nIt includes hive jars and everything else it needs so that it can be run directly on the command line.\nMoreover it does not use mapreduce, but rather executes completely in a single JVM.\n\nThis package contains:\n1. A tool that writes to a predefined Hive table with multiple threads.\n2. The tailer, see hivetail above.\n3. Input benchmark, see above.\n\nAdditionally there is a \nmodule that contains a suite of tools for MapReduce jobs with HiveIO.\nCurrently it contains an example MR job that writes to a Hive table.\n\n Real World Examples \n uses Hive IO to read and write graphs from Hive.\nIt is another good example that can be used\xc2\xa0for starter code.\nIt is a more complicated use case than the examples mentioned above as it converts records to graph vertex and edge objects.\nIt has scaled to terabytes of data and is running in production at large companies e.g. Facebook.\nThe code is\n.\nSpecifically you should look at\n,\n,\nand .\n\nNote especially how the vertex and edge inputs use different profiles to allow reading from multiple Hive tables.\n"
+    Existing Dependencies:
+    io.airlift:airline
+- commons-io:commons-io
+- org.sonatype.oss:oss-parent
+- org.testng:testng
+- org.slf4j:slf4j-api
+- com.facebook.hadoop:hadoop-core
+- it.unimi.dsi:fastutil
+- org.hyperic:sigar
+- com.google.code.findbugs:annotations
+- com.facebook.hiveio:hive-io-exp-parent
+- com.google.guava:guava
+- com.esotericsoftware.reflectasm:reflectasm
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div class='container-fluid'  onload="$('#myTable').DataTable();">
+    <h1><p class="display-4">List of all Users</p></h1>
+    <br>
+  
+
+<div class="container">
+        <table id="myTable" class="display nowrap table-hover" cellspacing="0" width="100%">
+            <thead>
+                <th>Name</th>
+                <th>Email</th>
+                <th>PhoneNumber</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Action</th>
+            </thead>
+          
+          
+            <tbody class='table-bordered'>
+               
+                @foreach($users as $user)
+                <tr>
+                    <td class="name">{{$user->name}}</td>
+                    <td class="email">{{$user->email}}</td>
+                    <td class="phoneNumber">{{$user->phoneNumber}}</td>
+                    <td class="gender">{{$user->gender}}</td>
+                    <td class="address">{{$user->address}}</td>
+                    <td><a href="" name="delete_user" id="{{$user->id}}" class='delete_user'>Delete</a></td>
+                </tr>
+                @endforeach
+                
+            </tbody>
+            
+        </table>
+        
+    </div>
+</div>
+  
+    
+@extends('admin.master')
+
+@section('body')
+
+    
+@endsection
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Product extends Model
+{
+    protected $table = 'product';
+
+    protected $fillable = ['product_title','product_category_id','product_price'];
+    protected $guarded=['id'];
+
+    public function product_category(){
+        return $this->belongsTo('App\ProductCategory','product_category_id','id');
+    }
+}
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

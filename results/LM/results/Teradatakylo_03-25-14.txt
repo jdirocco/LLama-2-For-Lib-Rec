@@ -1,0 +1,166 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: Teradata/kylo
+    Project Description: \n\nKylo is an enterpriseready modern data lake management software platform for big data engines such as Teradata, Apache Spark, or Hadoop. Kylo enforces best practices around metadata management, governance, and security gathered from experience in over 150 successful big data projects.\n\nVisit and unlock the power of Kylo today!\n\n Quick Start\n\nYou can download a preconfigured sandbox and get started with Kylo in no time.\nTo get started visit the page.\n\n Documentation\n\nPlease visit to learn more. \n\n Issues and Support\n\nTo raise issues with Kylo, please register and visit the .\n\nFor support, questions can be asked on the .\n\n Code Structure\n\nThe layout of code in the following subtrees follows particular reasoning described below: \n\n| Subfolder | Description |\n| ||\n| | Utility or common functionality\n| | API frameworks that can generally used by developers to extend the capabilities of Kylo\n| | Documentation that should be distributed as part of release\n| | Pure integration projects with 3rd party software such as NiFi and Spark. \n| | The metadata server is a toplevel project for providing a metadata repository\n| | Alternative and often optional implementations for operating with different distributions or technology branches\n| | Sample plugins, feeds, and templates,\n| | Support for application security for both authentication and authorization\n| | Provides REST endpoints and core serverside processing\n| | User Interface module for Kylo\n'
+    Existing Dependencies:
+    org.assertj:assertj-core
+- org.springframework.boot:spring-boot-starter-data-jpa
+- io.projectreactor:reactor-core
+- org.hibernate:hibernate-entitymanager
+- com.google.code.findbugs:jsr305
+- org.springframework.security:spring-security-core
+- org.mockito:mockito-all
+- org.hamcrest:hamcrest-core
+- org.springframework.security:spring-security-test
+- com.thinkbiganalytics.kylo:kylo-metadata-core
+- org.springframework:spring-test
+- org.quartz-scheduler:quartz
+- com.google.guava:guava
+- org.springframework.cloud:spring-cloud-starter-config
+- com.thinkbiganalytics.kylo:kylo-commons-spark-shell-api
+- org.glassfish.jersey.core:jersey-client
+- org.springframework.data:spring-data-commons
+- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider
+- org.apache.spark:spark-hive_${scala.binary.version}
+- org.apache.spark:spark-core_${scala.binary.version}
+- org.springframework.boot:spring-boot
+- com.fasterxml.jackson.datatype:jackson-datatype-joda
+- org.springframework:spring-core
+- org.jgroups:jgroups
+- com.fasterxml.jackson.core:jackson-annotations
+- com.thinkbiganalytics.kylo:kylo-commons-spark-api
+- junit:junit
+- com.querydsl:querydsl-core
+- com.h2database:h2
+- org.apache.spark:spark-repl_${scala.binary.version}
+- com.querydsl:querydsl-apt
+- commons-io:commons-io
+- org.apache.spark:spark-sql_${scala.binary.version}
+- com.thinkbiganalytics.kylo:kylo-commons-scala-api
+- com.thinkbiganalytics.kylo:kylo-spark-shell-rest-model
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 35 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<?php
+    $this->load->view('admin/header');
+    $this->load->view('admin/sidebar');
+?>
+   
+
+<!-- begin #content -->
+<div id="content" class="content" >
+  <!-- begin breadcrumb -->
+  <ol class="breadcrumb pull-right">
+			<li><a href="<?php echo base_url();?>admin">admin</a></li>
+			<li><a href="javascript:;"><?php echo $title?> </a></li>
+			<li class="active">List</li>
+  </ol>
+  <!-- end breadcrumb -->
+  <!-- begin page-header -->
+  <h1 class="page-header"><?php echo $title?> List <button type="button" class="btn btn-success" onclick="LoadAjaxScreen('edit',0)" style="margin-left: 10px;">Add New</button></h1>
+  <!-- end page-header -->
+  <!-- begin panel -->
+  <div class="panel panel-inverse" style="padding:10px;">
+      <!-- begin panel-body -->
+      <div class="panel-body">
+          <table id="datatable_default" class="table table-striped table-bordered" width="100%">
+              <thead>
+                  <tr>
+                      <th>#</th>
+                      <th>Name</th>
+                      <th>Image</th>
+                      <th>Status</th>
+                      <th>Actions</th>
+                  </tr>
+              </thead>
+              <tbody>
+				<?php
+                    if(!empty($result)){
+                    foreach($result as $result){
+               ?>
+                  <tr>
+                      <td><?php echo $result['id'];?></td>
+                      <td><?php echo $result['name'];?></td>
+                      <td><img src="<?php echo base_url()."assets/upload/images/".$result['image'];?>" style="height:50px;width:100px;"/></td>
+                      <td><?php if($result['status']==1){?>
+                        <a href="javascript:void(0)" class="btn btn-success btn-sm" onclick="change_status('<?php echo $result['id'];?>','0','<?php echo $result['status'];?>')">Active</a>
+                        <?php }else {?>
+                            <a href="javascript:void(0)" class="btn btn-warning btn-sm"  onclick="change_status('<?php echo $result['id'];?>','1','<?php echo $result['status'];?>')">Inactive</a>
+                        <?php }?>
+                     </td>
+                      <td style="text-align:center;">
+                        <a href="javascript:void(0)" class="btn btn-warning btn-xs"  onclick="LoadAjaxScreen('edit',<?php echo $result['id'];?>)"><i class="fa fa-pencil"></i></a>
+                        <a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="ConfirmDelete('<?php echo $result['id'];?>','<?php echo base_url('admin/delete/').$title.'/delete/'.$result['id']?>')"><i class="fa fa-trash"></i></
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 35 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> /*
+ * Copyright (c) 2017-2018, Chris Fraire <cfraire@me.com>.
+ */
+
+package org.opengrok.indexer.analysis;
+
+import java.io.IOException;
+import java.io.Reader;
+import org.apache.lucene.analysis.CharFilter;
+import org.opengrok.indexer.search.context.SearchContext;
+
+/**
+ * Represents a character filter which replaces the {@code \n} character with
+ * {@code \r\n} so that line numbers match the source view.
+ *
+ * @see "org.apache.lucene.analysis.core.NewlineFilter"
+ */
+public class NewlineFilter extends CharFilter {
+
+    /**
+     * The wrapped Reader, if any. Should be used for reading only.
+     */
+    private final Reader orig;
+
+    /**
+     * Construct an instance to replace {@code \n} with {@code \r\n}.
+     * @param in the original Reader to wrap (which is not closed)
+     */
+    public NewlineFilter   }
+
+    @Override
+    public int read(char[] cbuf, int off, int len) throws IOException {
+        int result = orig.read(cbuf, off, len);
+        if (result > -1) {
+            SearchContext.replace(cbuf, off, result, '\n', "\r\n");
+        }
+        return result;
+    }
+
+    @Override
+    public void close() throws IOException {
+        orig.close();
+    }
+}(Reader in) {
+        this.orig = in;
+ 
+
+Precision: 0
+Recall: 0
+F1 Score: 0

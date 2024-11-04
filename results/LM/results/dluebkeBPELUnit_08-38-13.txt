@@ -1,0 +1,149 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: dluebke/BPELUnit
+    Project Description: BPELUnit\n========\n\nBPELUnit is a unit testing framework for WSBPEL compositions. It provides facilities for deploying, invoking and undeploying a composition running in a WSBPEL engine. External services can be replaced with mockups and replies can be delayed at will. Additionally, BPELUnit can derive test cases by reading rows from an external data source and combining it with Apache Velocity templates.\n\nMore documentation is available in the directory net.bpelunit.dist/src/main/resources/doc. The rest of this document is dedicated to explaining the build infrastructure available.\n\nBasic structure of the code\n\n\nIn terms of functionality, BPELUnit is divided into:\n\n The core functionality of the framework:\n Most of the testing logic is in net.bpelunit.framework.\n Some utility classes are in net.bpelunit.util.\n An abstract model of a WSBPEL composition useful for extracting information is available in net.bpelunit.model.bpel.\n A set of interfaces to access the core logic:\n From the command line: net.bpelunit.framework.client.command.\n From Ant: net.bpelunit.framework.client.ant.\n From Maven: net.bpelunit.framework.client.maven.\n From Eclipse: the projects in tycho.\n A set of external data source types for various file formats the core library only has support for Apache Velocity .vm files:\n CSV: net.bpelunit.framework.control.datasource.csv.\n XLS and XLSX: net.bpelunit.framework.control.datasource.excel.\n HTML tables: net.bpelunit.framework.control.datasource.html.\n ooCalc: net.bpelunit.framework.control.datasource.ods.\n Several additional utilities:\n A deployer extension for ActiveVOS 9: net.bpelunit.framework.control.deploy.activevos9.\n The net.bpelunit.utils. projects have small commandline tools for:\n Obtaining stats from .bpel or .bpts files.\n Generating a basic .bpts file from a .bpel file.\n Inlining external data sources into .bpts files.\n Extracting test data from a .bpts.\n Splitting .bpts files.\n A project for generating the standalone CLI Ant distribution: net.bpelunit.dist.\n\nBPELUnit is built from the command line using Maven and is developed using Eclipse. There are roughly four kinds of projects within BPELUnit:\n\n The core functionality, the data source types and the ActiveVOS 9 deployer extension are usable as regular Java libraries and OSGi bundles. The OSGi metadata is generated with the Apache Felix mavenbundleplugin and is made available to Eclipse and Tycho.\n The rest of the projects in the main directory are only usable as plain Java commandline tools. They do not have OSGi metadata.\n The projects in tycho are Eclipse plugins, features and update sites based on the core OSGi bundles and the target platform definition in net.bpelunit.eclipse.target. They can be built from the command line with Tycho as well.\n The projects in eclipsedeps repackage several dependencies which are not available in wellknown public P2 repositories as OSGi bundles, for their use by the tycho projects. These dependencies are regularly uploaded to with Maven\n\n\nIn order to build the code with Maven 3.0 or higher needed for the Tychobased projects, you only need to run ./buildall.sh. It will build and install into your local Maven repository everything: core projects, Eclipse plugins, the Eclipse feature and update site, and the standalone distribution.\n\nPlease note that due to a limitation in Tycho, the core projects and the Eclipse plugins have been split into separate reactors. Also, you must install the core projects into your Maven repository before you can build the Tychobased projects or the net.bpelunit.dist project.\n\nNote for the maintainer: if you want to deploy a release to the Sonatype OSS server, please use the sonatypedeploy profile, and make sure you have a GPG keypair which has been published to pgp.mit.edu. You can run the profile like this:\n\n mvn P sonatypedeploy\n\nIf you experience a StackOverflowException most likely you will need to increase the per thread stack size. To do so use the following command\n\n\tset MAVENOPTS="Xss12m" Windows\n\texport MAVENOPTS="Xss12m" Linux\n\nBuilding with Eclipse PDE\n\n\nBPELUnit is developed using the Eclipse Plugin Development Environment. To do so, you will still need Maven to bootstrap the environment. Just run ./prepareeclipseprojects.shfrom this directory. It will ensure that the dependencies will be available in the target/dependency directory in each core project, and that the required code and MANIFEST.MF files are automatically generated.\n\nYou should now import the core and tycho projects into your Eclipse workspace: the eclipsedeps projects are not needed. Open the .target file in the net.bpelunit.eclipse.target and click on "Set as Target Platform". This will tell Eclipse that the plugins should be developed on top of the official BPELUnit target platform definition.\n\nTo test them out, rightclick on any of the projects and select "Run As Eclipse Application". This will open a nested Eclipse instance with the BPELUnit plugins running inside it.\n\nNote: please avoid using M2Eclipse, as it modifies the original pom.xml in unwanted ways.\n'
+    Existing Dependencies:
+    net.bpelunit:model-bpel
+- org.codehaus.plexus:plexus-utils
+- org.jdom:jdom
+- commons-cli:commons-cli
+- org.odftoolkit:odfdom-java
+- commons-collections:commons-collections
+- ${project.groupId}:datasource-ods
+- junit:junit
+- ${project.groupId}:util
+- net.bpelunit:framework
+- commons-lang:commons-lang
+- org.apache.velocity:velocity
+- net.bpelunit:util
+- ${project.groupId}:datasource-csv
+- org.apache.xmlbeans:xmlbeans
+- log4j:log4j
+- ${project.groupId}:datasource-excel
+- xmlunit:xmlunit
+- uk.com.robust-it:cloning
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <?php echo form_open_multipart('user/edit/'.$user['user_id']);?>
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <h5 class="card-header" >Add Products</h5>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-form-label">First name</label>
+                            <input type="text" name="fname" placeholder="Please enter your name" class="form-control" value="<?= $user['first_name'];?>">
+                            <span class="text-danger"><?php echo form_error('fname');?></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Last name</label>
+                            <input type="text" name="lname" placeholder="Please enter first name" class="form-control" value="<?= $user['last_name'];?>">
+                            <span class="text-danger"><?php echo form_error('lname');?></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="col-form-label">Password</label>
+                            <input type="text" name="password" placeholder="Please enter your password" class="form-control" value="<?= $user['password'];?>">
+                            <span class="text-danger"><?php echo form_error('password');?></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Email</label>
+                            <input type="email" name="email" placeholder="Please enter your email" class="form-control" value="<?= $user['email'];?>">
+                            <span class="text-danger"><?php echo form_error('email');?></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Contact</label>
+                            <input type="text" name="phone" placeholder="Please enter your phone" class="form-control" value="<?= $user['phone'];?>">
+                            <span class="text-danger"><?php echo form_error('phone');?></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Address</label>
+                            <input type="text" name="address" placeholder="Please enter your address" class="form-control" value="<?= $user['address'];?>">
+                            <span class="text-danger"><?php echo form_error('address');?></span>
+                        </div>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e(name);
+
+    }
+
+}
+ package com.jamesshore.finances.ui;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
+
+public abstract class ButtonAction implements ActionListener {
+
+    @Override
+	public void actionPerformed(ActionEvent e) {
+
+        if (e == null) return;
+
+        Object source = e.getSource();
+        if (source == null) return;
+
+        JButton button = (JButton)source;
+        String name = button.getName();
+
+        // if there's no name, just execute
+        if (Util.isBlank(name)) {
+            doButtonAction(e);
+            return;
+        }
+
+        if (name.equals("OK")) {
+        	doOKButtonPress(e);
+        } else if (name.equals("Cancel")) {
+            doCancelButtonPress(e);
+        } else if (name.equals("Apply")) {
+        	doApplyButtonPress(e);
+        } else if (name.equals("Help"))
+        {
+        	doHelpButtonPress(e);
+        } else
+            doButtonActionWithNam
+
+Precision: 0
+Recall: 0
+F1 Score: 0

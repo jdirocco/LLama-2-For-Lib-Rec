@@ -1,0 +1,181 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: karussell/ElasticSearchExample
+    Project Description: Example using ElasticSearch with a bit Wicket'
+    Existing Dependencies:
+    org.apache.wicket:wicket-guice
+- org.mockito:mockito-core
+- log4j:log4j
+- org.twitter4j:twitter4j-core
+- org.slf4j:slf4j-api
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<?php
+
+//print_r($post);
+$post = $post[0];
+$post_id = $post[0]["post_id"];
+
+if (isset($post[0]["image_path"])){
+    $image=$post[0]["image_path"];
+}else{
+    
+    if ($post[0]["type_of_post"]==1){
+    $image=base_url()."assets/img/videos.jpg";
+    }
+    
+    elseif ($post[0]["type_of_post"]==2){
+    $image=base_url()."assets/img/music.jpg";
+    }
+    
+    elseif ($post[0]["type_of_post"]==3){
+    $image=base_url()."assets/img/images.jpg";
+    }
+    
+    elseif ($post[0]["type_of_post"]==4){
+    $image=base_url()."assets/img/events.jpg";
+    }
+    
+    elseif ($post[0]["type_of_post"]==5){
+    $image=base_url()."assets/img/sports.jpg";
+    }
+    
+    elseif ($post[0]["type_of_post"]==6){
+    $image=base_url()."assets/img/news_post.jpg";
+    }
+    
+    elseif ($post[0]["type_of_post"]==7){
+    $image=base_url()."assets/img/news_post.jpg";
+    }
+    
+    elseif ($post[0]["type_of_post"]==8){
+    
+     $image=$post[0]["post_image"];
+    }
+    
+    else {
+    
+        $image=base_url()."assets/img/default_image.jpg";
+    }
+}
+if (isset($user[0]["profile_image"])) {
+    $profile_image = $user[0]["profile_image"];
+} else {   
+    $profile_image = base_url()."assets/img/default_profile.jpg";
+}
+$post_by= $user[0]["user_name"];
+$user_id= $user[0]["user_id"];
+$name = ucfirst($user[0]["name"]);
+
+//print_r($user);
+
+?>
+
+<style>
+    h5 {
+        color: red;
+    }
+   .comment-div{
+        margin-top: 10px;
+        margin-bottom:10px;
+        border-top: 1px solid gray;
+    }
+    a, a:hover{
+        color: #2196F3;
+    }
+    img{
+        max-width: 100%;
+    }
+    p{
+        text-align: justify;
+    }
+</style>
+    <script>
+    function get_comment(){
+        
+        $.ajax({
+            method:"POST",
+            url:"<?php echo base_url();?>home_controller/get_comments",
+            data:{comment_id:'<?php echo $post[0]["post_id"];?> '},
+            success:function(res){
+                //alert(res);
+                $(".comment-div").html(res);
+            }
+            
+        });
+        
+    }
+    function get_
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+$lang["common_address_1"] = "Adresse 1";
+$lang["common_address_2"] = "Adresse 2";
+$lang["common_city"] = "Stad";
+$lang["common_cln_state"] = "Provins";
+$lang["common_sub_total"] = "Sub Total";
+$lang["common_total"] = "Total";
+$lang["common_zip"] = "Postnummer";
+ose"] = "Luk";
+$lang["common_comments"] = "Kommentarer";
+$lang["common_common"] = "Almindelig";
+$lang["common_confirm_search"] = "Er du sikker du ønsker at gemme den valgte række? Du vil miste alle de valg du ikke har gemt, når du søger næste gang.";
+$lang["common_country"] = "Land";
+$lang["common_correct_errors"] = "Forkorrig venligst de følgende fejl før oprettelse.";
+$lang["common_date"] = "Dato";
+$lang["common_delete"] = "Slet";
+$lang["common_det"] = "Detaljer";
+$lang["common_download_import_template"] = "Download Import Template (CSV)";
+$lang["common_edit"] = "Ret";
+$lang["common_email"] = "E-mail";
+$lang["common_email_invalid_format"] = "E-mailadressen er ikke i det korrekte format.";
+$lang["common_export_csv"] = "CSV Eksport";
+$lang["common_export_csv_no"] = "Nej";
+$lang["common_export_csv_yes"] = "Ja";
+$lang["common_fields_required_message"] = "Alle røde felter er påkrævet.";
+$lang["common_fields_required_message_unique"] = "";
+$lang["common_first_name"] = "Fornavn";
+$lang["common_first_name_required"] = "Fornavn er påkrævet.";
+$lang["common_first_page"] = "Første";
+$lang["common_gender"] = "Køn";
+$lang["common_gender_female"] = "K";
+$lang["common_gender_male"] = "M";
+$lang["common_gender_undefined"] = "";
+$lang["common_inv"] = "inv.";
+$lang["common_last_name"] = "Efternavn";
+$lang["common_last_name_required"] = "Efternavn er påkrævet.";
+$lang["common_last_page"] = "Sidste";
+$lang["common_learn_about_project"] = " for at få oplyst om det nye projekt.";
+$lang["common_list_of"] = "Liste af";
+$lang["common_logout"] = "Log ud";
+$lang["common_new"] = "Ny";
+$lang["common_no"] = "";
+$lang["common_no_persons_to_display"] = "Der er ikke nogen personer at vise.";
+$lang["common_none_selected_text"] = "-- Ingen valgt -----";
+$lang["common_or"] = "ELLER
+
+Precision: 0
+Recall: 0
+F1 Score: 0

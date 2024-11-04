@@ -1,0 +1,149 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: OpenGamma/Strata
+    Project Description: Strata\n======\n\n \n\nThis repository contains the source code of ,\nthe open source analytics and market risk library from .\n\nStrata is released as Open Source Software under the\n. \n\n\n\n\nUsing Strata\n\n\nDocumentation for Strata can be found at the .\n\nTo use Strata Java SE 8u40 or later is required.\nThe JAR files are available in :\n\n\n\nThe JAR files, along with the command line tool and examples, can also be obtained from\nthe page on GitHub.\n\n\nBuilding Strata\n\n\nThe source code can be cloned using from GitHub:\n\n\n\nThe projects use as the build system.\nVersion 3.5.0 or later is required.\nSimply run this command to compile and install the source code locally:\n\n\n\nStrata is based on Java SE 8.\nOur continuous integration regularly builds on both Java 8 and Java 11.\nWhen using Java 8, version 8u40 or later is required due to bugs in earlier versions.\nWe do not recommend use of nonLTS releases, such as Java 9, 10 and 12 to 16.\n\nThe Strata examples project includes a GUI based on JavaFX.\nOn Java 8, this will be excluded from compilation if JavaFX is not available in the JDK.\nOn Java 11, OpenJFX is included as a jar file from Maven Central, so the GUI is always compiled.\n\nWe recommend builds of OpenJDK from providers other than Oracle, notably\n and .\n\nFor more information about developing code on Strata\nsee the .\n\n\nStatus\n\n\nStrata is wellmaintained, tested and functional.\nIt is used in production as the core of .\nThe API will be maintained with backwards compatibility in mind.\n\n\nStrata modules\n\n\nStrata is formed from a number of modules:\n\n \n \n \n \n \n \n \n \n \n \n \n'
+    Existing Dependencies:
+    org.apache.commons:commons-math3
+- org.assertj:assertj-core
+- javafx:javafx
+- org.slf4j:slf4j-nop
+- com.opengamma.strata:strata-collect
+- org.mockito:org.mockito
+- com.opengamma.strata:strata-pricer
+- org.slf4j:slf4j-simple
+- com.opengamma.strata:strata-basics
+- org.testng:testng
+- org.hamcrest:org.hamcrest
+- org.slf4j:slf4j-api
+- org.assertj:org.assertj
+- com.opengamma.strata:strata-product
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <?php
+    
+    $conectar=@mysqli_connect('localhost','root','','nature');
+    $msg="";
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+      $id=$_POST['id'];
+        $name=$_POST['name'];
+    
+        $phone=$_POST['phone'];
+        $email=$_POST['email'];
+        $password=sha1($_POST['password']);
+        //$password1=sha1($_POST['password1']);
+        if($name=='' || $phone=='' || $email=='' || $password=='' ){
+            $msg.="<p class='erro'>Campo vazio, preencha todos os campos.</p>";
+            return false;
+        }else{
+            $sql1=" SELECT * FROM users WHERE name = '$name' ";
+            $sql2=" SELECT * FROM users WHERE phone = '$phone' ";
+            $sql3=" SELECT * FROM users WHERE email = '$email' ";
+    
+            $res=mysqli_query($conectar,$sql1);
+            $rows=mysqli_num_rows($res);
+            $res3=mysqli_query($conectar,$sql2);
+            $rows2=mysqli_num_rows($res3);
+            $res4=mysqli_query($conectar,$sql3);
+            $rows3=mysqli_num_rows($res4);
+            //echo $rows2;die();
+    
+    
+            if($rows>0 || $rows2>0 || $rows3>0)
+            {
+    
+                $msg.="<p class='erro'>Esse usuário já está sendo utilizado, escolha um diferente.</p>";
+                return false;
+    
+                
+            }else{
+    
+                $sql="UPDATE users SET name = '$name',
+                phone ='$phone',
+                email ='$email',
+                password ='$password' WHERE id = '$id' ";
+    
+                $inserir=mysqli_query($conectar,$sql);
+                if(!$inserir){
+                    $msg.="<p class='erro'>Erro ao cadastrar, preencha todos campos.</p>";
+                }else{
+                    header("Location:index.php");
+                }
+                
+            }
+            
+    
+    
+    
+        }
+        
+    }
+    
+   ?>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package io.github.jixiaoyong.wanandroid.base
+
+import androidx.lifecycle.MutableLiveData
+import java.lang.Exception
+
+sealed interface StateData<out R> {
+
+    val data: R?
+
+    data class Success<out T>(override val data: T?) : StateData<T>
+
+    data class Error(
+        override val data: Any? = null,
+        val exception: Exception? = null,
+        val errorMessage: String? = null
+    ) : StateData<Nothing>
+
+    object Empty : StateData<Nothing> {
+        override val data: Nothing? = null
+    }
+
+}
+
+/**
+ * state data
+ */
+fun <T> MutableLiveData<StateData<T>>.setStateEvent(function: () -> StateData<T>) {
+    this.setValue(function())
+}
+
+/**
+ * 获取state data的data
+ */
+val <T> MutableLiveData<StateData<T>>.data get() = this.value!!.data
+
+suspend fun <T> MutableLiveData<StateData<T>>.loadData(
+    function: suspend () -> StateData<T>
+) {
+    this.setStateEvent { StateData.Success(function()) }
+}
+
+Precision: 0
+Recall: 0
+F1 Score: 0

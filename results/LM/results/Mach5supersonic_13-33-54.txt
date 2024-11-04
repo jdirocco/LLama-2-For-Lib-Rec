@@ -1,0 +1,161 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: Mach5/supersonic
+    Project Description: Supersonic \n\n Overview \nSupersonic instantly transports your media to any HTTP connected device regardless of bitrate. Forget about syncing and worrying about lack of storage space as you stream your personal music and videos on demand.\n\nThe primary application is Java based an runs on Windows, GNU/Linux/BSD and OS X. Clients can connect via the built in site or one many clients that support the .\n\n Credits \nThank you to all of our code contributors for making this project possible.\n\nThis project is an actively synced fork of the project , developed by .\n\n License information \nSupersonic is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License.'
+    Existing Dependencies:
+    org.apache.lucene:lucene-core
+- com.pivotallabs:robolectric
+- org.hamcrest:hamcrest-core
+- commons-codec:commons-codec
+- jfree:jfreechart
+- org.mortbay.jetty:jetty
+- com.yahoo.platform.yui:yuicompressor
+- com.google.android:android
+- commons-logging:commons-logging
+- org.acegisecurity:acegi-security
+- hsqldb:hsqldb
+- taglibs:standard
+- commons-jxpath:commons-jxpath
+- com.hoodcomputing:natpmp
+- taglibs:string
+- org.powermock:powermock-reflect
+- com.jgoodies:forms
+- org.mortbay.jetty:jetty-embedded
+- jdom:jdom
+- com.github.mach5.supersonic:supersonic-booter
+- junit:junit
+- org.mortbay.jetty:jsp-2.0
+- org.powermock:powermock-module-junit4
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 24 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     $( document ).ready( function () {
+          $(".date").datepicker({ dateFormat: 'yy-mm-dd' });
+     });
+
+     //$("#add-product").click(function() {
+     //   $("#id_producto").val('');
+     //   $("#descripcion").val('');
+     //   $("#marca").val('');
+     //   $("#codigo_barras").val('');
+     //   $("#precio_producto").val('');
+     //   $("#cantidad_productos_existentes").val('');
+     //   $("#categoria_id").val('');
+     //   $("#id_proveedor").val('');
+
+      
+     //});
+
+    $('.add-row-producto').click(function(){  
+        var html = '';
+        html += '<div id="inputTableproducto">';
+        html += '<div class="input-group mb-2">';
+        html += '<label for="descripcion" class="input-group-text col-form-label">Descripcion</label>';
+        html += '<input type="text" name="descripcion[]" id="descripcion" class="form-control">';
+        html += '<div class="input-group-btn"> 
+        <button class="btn btn-danger remove-row-producto" type="button"><i class="glyphicon glyphicon-remove"></i> </button>
+        </div>';
+        html += '</div>';
+        html +=  '</div>';
+    
+        $('.addTableProducto').append(html);   
+    });    
+
+    $('.remove-row-producto').click(function(){  
+        $(this).closest('#inputTableproducto').remove();
+    })
+
+    
+
+    // $('.add-row-proveedor').click(function(){  
+    //     var html = '';
+    //     html += '<div id="inputTableproveedor">';
+    //     html += '<div class="input-group mb-2">';
+    //     html += '<label for="nombre_proveedor" class="input-group-text col-form-label">NOMBRE PROVEEDOR</label>';            
+    //     html += '<input type="text" name="nombre_proveedor[]" id="nombre_proveedor" class="form-control">';
+    //     html +=' 
+    //     <div class="input-group-btn"> 
+    //     <button class="btn btn-danger remove-row-proveedor" type="button"><i class="glyphicon glyphicon-remove"></i> </button>
+    //     </div>';
+    //     html += '</div>';
+    //     html +=  '</div>';
+        
+    //     $('.addTableProveedor').append(html);   
+    // });    
+
+    // $('.remove-row-proveedor').click(function(){  
+    //     $(this).closest('#inputTableproveedor').remove();
+    // })
+
+
+
+    // $('.add-row-cliente').click(function(){  
+    //     var html = '';
+    //     html += '<div id="inputTablecliente">';
+    //     html += '<div class="input-group mb-2">';
+    //     html += '<label for="nombre_cliente" class="input-group-text col-form-
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 24 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>  return {
+       ...acc,
+        [field]: {
+          $sum: `$${field}`,
+        },
+      };
+    } if (field.includes('_min')) {
+      return {
+       ...acc,
+        [field]: {
+          $min: `$${field}`,
+        },
+      };
+    } if (field.includes('_max')) {
+      return {...acc, [field]: { $max: `$${field}` } };
+    } if (typeof field === 'object') {
+      return {
+       ...acc,
+        [Object.keys(field)[0]]: field[Object.keys(field)[0]],
+      };
+    }
+
+    return acc;
+  }, {});
+};
+
+module.exports = getMongoAggregationStage;
+ const getMongoAggregationStage = (aggregation, field) => {
+  if (!field.length) return {};
+  return aggregation.reduce((acc, field) => {
+    if (field.includes('_avg')) {
+      return {
+       ...acc,
+        [field]: {
+          $avg: `$${field}`,
+        },
+      };
+    } if (field.includes('_sum')) {
+    
+
+Precision: 0
+Recall: 0
+F1 Score: 0

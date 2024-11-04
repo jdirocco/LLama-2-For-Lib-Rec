@@ -1,0 +1,201 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: mguymon/red5-mavenized
+    Project Description: h2. Red5 Mavenized\n\nA "Mavenization": of the "Red5 Flash Server": from 0.8 RC2. Parts of Red5 have been separated into logical modules, which use Maven to manage dependencies:\n\n red5base: contains all the core classes and resources\n red5jmx: contains classes and resources for JMX support\n red5tomcat: contains classes and resources to run Red5 in a standalone Tomcat server\n red5webapparchetype: the Maven archetype that contains the defaults for making a Red5 enabled war\n\nh3. Deviations from Red5 trunk\n\n"": =\n'
+    Existing Dependencies:
+    org.springframework:spring-aop
+- org.slf4j:slf4j-api
+- org.apache.mina:mina-integration-jmx
+- org.jaudiotagger:jaudiotagger
+- commons-codec:commons-codec
+- cglib:cglib-nodep
+- org.springframework:spring-test
+- opensymphony:quartz-all
+- javax.activation:activation
+- commons-httpclient:commons-httpclient
+- xmlrpc:xmlrpc
+- javax.management:jmxremote
+- org.slf4j:jul-to-slf4j
+- commons-beanutils:commons-beanutils
+- org.springframework:spring-core
+- org.slf4j:jcl-over-slf4j
+- net.sourceforge.groboutils:groboutils-core
+- org.apache.mina:mina-core
+- commons-collections:commons-collections
+- org.apache.tomcat:catalina
+- org.apache.mina:mina-integration-spring
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 21 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    @extends('adminlte::page')
+    
+    @section('title', 'Dashboard')
+    
+    
+    @section('content_header')
+      
+    @stop
+    
+    
+    @section('content')
+     @include('messages.flash')
+  
+     <section class="content">
+  
+  
+   <div class="row col s11" style="background-color: #12211e "> 
+   <div class="col s2 m3" style="margin-left: 30px ">
+     <img class="responsive-img" src="{{asset('images/'.$post->image)}}" alt="" style="width:380px; height: 270px">
+   </div>
+   <div class="row col s15 ">
+     <div class="col s6" style="color:white">
+       
+       <span>
+         <h3 style="text-transform:uppercase ;color:white"><b>{{$post->name}}</b></h3>
+         <h7><strong>{{$post->description}}</h7></strong>
+       </span>
+     <h5>Category : {{$post->category->name}}</h5>
+     <h7 style="color:green">Price : {{$post->price}} F.CFA</h5>
+     <h5><span class="label label-info ">Stock : {{$post->stock}}</span> </strong></h5>
+       <h5>
+         <span class="pull left"> 
+          <a href="{{url('posts/'.$post->id.'/edit')}}"class="btn btn-warning">
+           <i class="fa fa-edit"></i></a>
+         </span> 
+         <span class="pull left"> 
+          <form action="{{route('posts.destroy',$post->id)}}" method="POST">
+            {{csrf_field()}}
+            {{method_field('DELETE')}}
+            <button type="submit"  class="btn btn-danger" onclick="return confirm('voulez-vous supprimer ce produit?')"><i class="fa fa-trash"></i></button>
+          </form>
+         </span>
+       </h5>
+    
+       </div>
+        
+   </div>
+    <br>
+    <div class="col s6">
+    
+    <div class="card card-widget widget-user">
+          <!-- Add the bg color to the header using any of the bg-* classes -->
+          <div class="widget-user-header bg-black">
+            <h4 class="widget-user-username" ></h4>
+          
+            <h6 class="widget-user-desc"> <i class="fa fa-envelope"></i> {{$post->email}} </h6>
+          </div>
+          <div class="widget-user-image">
+            <img class="img-circle elevation-2" src="{{asset('images/'.$post->image)}}" alt="User Avatar">
+          </div>
+          <div class="card-footer bg-black">
+           <h5><i class="fa fa-phone"></i> {{$post->phone}}</h5>
+          </div>
+          <div class="card-footer bg-warning">
+           <h5><strong><i class="fa fa-location-arrow"></i>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 21 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>n.
+
+### 1.2.0
+* Updated dependencies
+
+### 1.1.2
+* Updated dependencies
+
+### 1.1.1
+* Updated dependencies
+
+### 1.1.0
+* Updated dependencies
+
+### 1.0.0
+* Fixed bug that allowed multiple subscribers to the same event to receive all events indefinitely
+### 0.9.1
+* Updated dependencies
+
+### 0.9.0
+* Updated dependencies
+
+### 0.8.0
+* Updated dependencies
+
+### 0.7.0
+* Updated dependencies
+
+### 0.6.2
+* Updated dependencies
+
+### 0.6.1
+* Updated dependencies
+
+### 0.6.0
+* Updated dependencies
+
+### 0.5.0
+* Updated dependencies
+
+### 0.4.0
+* Updated dependencies
+
+### 0.3.2
+* Updated dependencies
+
+### 0.3.1
+* Updated dependencies
+
+### 0.3.0
+
+* Added `EventBroker` interface
+* Added `Subscription` interface
+
+### 0.2.0
+* Updated dependencies
+
+### 0.1.0
+* Updated dependencies
+
+### 0.0.1
+* Initial release
+ # Changelog
+
+## [Unreleased]
+
+### 1.3.3
+
+- Updated `rxjs` peer dependency to `^6.5.3`.
+- Updated documentation.
+
+### 1.3.2
+
+Updated `rxjs` peer dependency to `^6.5.3`.
+Fixed linting errors.
+
+### 1.3.0
+* Updated RxJS dependency to version `^6.5.2`. See
+[#1](https://github.com/nicholaswmin/event-broker.js/pull/1) for the full
+release notes of this versio
+
+Precision: 0
+Recall: 0
+F1 Score: 0

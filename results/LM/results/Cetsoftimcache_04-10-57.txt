@@ -1,0 +1,182 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: Cetsoft/imcache
+    Project Description: imcache\n=======\nImcache is a Java Caching Library.Imcache intends to speed up applications by providing a means to manage cached data. It offers solutions ranging from small applications to large scale applications. It supports nlevel caching hierarchy where it supports various kind of caching methods like heap, offheap, and more. Imcache also supports wellknown caching solution, redis. To extend, you can define a heapcache backed by offheap cache which is also backed by database. If a key is not found in heap, it will be asked to offheap and so on. \n\n\n\n\n \n\n Reference\nIn order to use imcache, you need to specify your dependency as follows:\n Maven\n\n Gradle\n\nFor full dependency reference: Simple Application\n\n The Cache Interface\nImcache supports simple operation defined by the cache interface. Cache interface provides general methods that is implemented by all imcache caches. See the methods below.\n\n The Cache Builder\nCache Builder is one of the core asset of the imcache. You can create simple heapCaches to complexOffHeapCaches via \nCache Builder. Let\'s see Cache Builder in action below.\n\n The Cache Loader\nThe CacheLoader interface for loading values with specified keys. The class that is interested in loading values \nfrom a resource implements this interface. When data is not found the cache, load method of CacheLoader is called.\n The Eviction Listener\nThe listener interface for receiving eviction events. The class that is interested in processing a eviction event\nimplements this interface. When the eviction event occurs,that object\'s onEviction method is invoked.\n The Heap Cache\nHeapCache uses LRULeast Recently Used as eviction strategy by the help of caffeine. \nAs a result, caffeine discards the least recently used items first when eviction required.\nEviction occurs if the size of the cache is equal to the cache capacity in a put operation\n The Off Heap Cache\nThe Class OffHeapCache is a cache that uses offheap byte buffers to store or retrieve data by serializing\nitems into bytes. To do so, OffHeapCache uses pointers to point array location of an item. OffHeapCache clears\nthe buffers periodically to gain free space if buffers are dirtyunused memory. It also does eviction depending on\naccess time to the objects.\nTo make offheap cache work to JVM Parameters "XX:MaxDirectMemorySize=4g" must be set. Buffer capacity of 8 mb \nis a good choice to start OffHeapCache. Let\'s see sample OffHeapCache use.\n\nBy default configuration, OffHeapCache will try to clean the places which are not used and marked as \ndirty periodically. What is more, it will do eviction periodically, too.\n\n The Versioned Off Heap Cache\nThe Class VersionedOffHeapCache is a type of offheap cache where cache items have versions that are incremented for each update.\nTo make versioned off heap cache work to JVM Parameters "XX:MaxDirectMemorySize=4g" must be set. Buffer capacity of 8 mb \nis a good choice to start VersionedOffHeapCache. Let\'s see sample VersionedOffHeapCache use.\n\n\n Redis Cache\nRedisCache is a cache that uses redis server for storing or retrieving data by serializing items into bytes. Please check out , and . Redis Cache doesn\'t have any capability of managing or dealing with redis cluster. Redis Cache can only talk to one redis server for the time being.\n\n\n Searching, Indexing and Query Execution\nimcache provides searching for all the caches by default. Searching is done by execute method of SearchableCache.\nExecute method takes a Query as an input and returns results as list. A query consists of criteria and filter. Here\nis an example use for queries.\n\nNote that queries to caches that live outside of JVM can\'t be executed. Thus, querying redis and memcache isn\'t possible.\n\nTo learn more about imcache please look at examples provided.\n\n Support\n Contributing\n Compiling Project\n\n License Header\n\n Coverage\n\nOpen where module is imcachecore, imcacheheap and etc.\n'
+    Existing Dependencies:
+    org.springframework:spring-context
+- com.cetsoft:imcache
+- org.springframework:spring-beans
+- org.mockito:mockito-all
+- org.springframework:spring-core
+- org.springframework:spring-tx
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<section class="content-header">
+<h1>
+
+     <?php foreach ($datos_user as $row) {?>
+
+
+      <b ><a href="<?php echo base_url('usuarios/ver/'. $row->id)?>"><i class="fa fa-dashboard"></i> <?= $row->nombre." ".$row->apellido?></a> </b>
+
+        <?php  }?>
+
+
+     
+  </h1>
+
+
+
+
+
+</section>
+
+<script>
+function mostrar(id){
+
+$("#div"+id).show();
+$("#div2"+id).show();
+$("#"+id).prop('required',true);
+$("#"+id).prop('disabled',false);
+
+
+
+} 
+
+function ocultar(id){
+
+   
+$("#"+id).prop('required',false);
+$("#"+id).prop('disabled',true);
+
+
+$("#div"+id).hide();
+$("#div2"+id).hide();
+
+
+
+} 
+</script>
+
+
+<section class="content">
+     <!-- Main row -->
+  <div class="row">
+    <!-- Left col -->
+    <section class="col-md-3">
+      <div class="nav-tabs-custom">
+          <div class="panel panel-default">
+            <div class="panel-heading">Roles</div>
+                <ul class="nav nav-tabs">
+                <?php 
+                    $i=0;
+                foreach ($roles as $row){?>
+              <li <?php if($i==0){?> class = "active" <?php }?>>
+                 <a style="cursor: pointer;" onclick="mostrar(<?=$row->id?>)" > <?= $row->nombre?></a>
+              </li>
+            <?php $i++; }?>
+            </ul>
+            <div class="panel-body">
+            <div class="tab-content">
+              <?php 
+                $j=0;
+                    
+                foreach ($roles as $row){ 
+                    
+                    
+                     if($j==0){
+                        $clase = "active";                        
+                     }else{
+                      $clase = "";  
+                     }
+                    ?>
+          
+            <div class="<?= $clase?> tab-pane" id="div<?php echo $row->id?>" >
+               <ul class="nav nav-tabs">
+                 <li class="active">
+                    <a style="cursor: pointer;" onclick="mostrar(<?=$row->id?>)" >Permisos </a>
+                  </li>
+               </ul>
+              <div class="panel-body">
+              
+               
+              
+               <div class="tab-content">
+         <?php if($j==0){
+            $j=0;
+            $clas="";
+         }?>
+         <div id="div2<?php echo $row->id?>" class="<?= $clase?> tab-pane" id="div<?php echo $row->id?>">
+         <?php foreach ($permisos_roles as $row2){ 
+           
+          if ($row2->roles_id==$row->id){
+              
+          
+
+
+             ?>
+              
+              <div class="row">
+
+                <div class="col-md-8"><?= $row2->nom
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>r(self):
+        return self.user_set.all()
+
+class GroupMember(models.Model):
+
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    group = models.ForeignKey(Group)
+ from __future__ import unicode_literals
+from django.contrib.auth.models import User
+from django.db.models import Model, ForeignKey, CASCADE, BooleanField
+
+
+# Create your models here.
+class Group(models.Model):
+
+    group_name = models.CharField(max_length=40)
+    group_description = models.TextField()
+    is_active = BooleanField(default=1)
+    group_admin = ForeignKey(User, on_delete=models.CASCADE)
+
+    def memberships(self):
+        return self.grpmember_set.all()
+
+    def members(self):
+        return self.memberships.user_set.all()
+
+    def __str__(self):
+        return "{0} - {1}".format(self.group_name, self.group_description)
+
+    def admin(self):
+        return self.group_admin.email
+
+    def membe
+
+Precision: 0
+Recall: 0
+F1 Score: 0

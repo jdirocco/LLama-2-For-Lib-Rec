@@ -1,0 +1,161 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: italiangrid/voms-admin-server
+    Project Description: VOMS Admin server\n\n\n\nThe Virtual Organization Membership Service is a Grid attribute authority which\nserves as central repository for VO user authorization information, providing\nsupport for sorting users into group hierarchies, keeping track of their roles\nand other attributes in order to issue trusted attribute certificates and\nassertions used in the Grid environment for authorization purposes.\n\nThe VOMS Admin service is a web application providing tools for administering\nthe VOMS VO structure. It provides an intuitive web user interface for daily\nadministration tasks.\n\n Build with Maven\n\nRequirements:\n\n Java 8\n Maven 3\n\nBuild it with the following command:\n\n mvn package\n\n Eclipse import instructions\n\nTo import the project in Eclipse for development, do as follows:\n\n mvn clean eclipse:clean\n mvn eclipse:eclipse\n\nFrom Eclipse menu, select \xe2\x80\x9cImport Existing Maven projects...\xe2\x80\x9d, and\npoint it to this project root directory.\n\n Dockerized development environment\n\nReauirements:\n\n Docker = v.1.12.0\n Dockercompose = v.1.9.0\n\nRunning\n\n dockercompose up\n\nWill setup a running vomsadminserver instance, running a single VO named test0\n'
+    Existing Dependencies:
+    org.hibernate:hibernate-c3p0
+- org.apache.commons:commons-math3
+- org.apache.tiles:tiles-jsp
+- org.italiangrid:voms-admin-api
+- org.slf4j:slf4j-api
+- axis:axis-saaj
+- commons-configuration:commons-configuration
+- org.opensaml:opensaml
+- com.jgeppert.struts2.bootstrap:struts2-bootstrap-plugin
+- com.google.guava:guava
+- axis:axis-jaxrpc
+- commons-cli:commons-cli
+- org.apache.struts:struts2-json-plugin
+- org.slf4j:jcl-over-slf4j
+- commons-collections:commons-collections
+- org.apache.struts:struts2-convention-plugin
+- org.apache.commons:commons-email
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 18 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<div class="col-lg-6">
+    <div class="card">
+        
+        <div class="card-body">
+            
+          <h4 class="card-title">{{ $title }}</h4>
+          <h6 class="card-subtitle">{{ $description }}</h6>
+          <form class="form pt-3" method="post" action="{{ $action }}" enctype="multipart/form-data">
+            @include($fields)
+            <div class="form-group">
+                <input type="submit" value="{{ $button_label }}" class="btn btn-success mr-2" />
+                <a  href="{{ $cancel_route }}" class="btn btn-light">Cancel</a>
+            </div>
+          </form>
+        </div>
+    </div>
+</div>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 18 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>r = 0
+      if self.count!= 0 {
+        self.currentIndex += 1
+        if self.currentIndex >= self.count {
+          self.currentIndex = 0
+        }
+      }
+      if let view = self.view {
+        UIView.animate(withDuration: 0.3) {
+          view.layoutIfNeeded()
+        }
+      }
+      return true
+    } else if recognizer.direction == UIPanGestureRecognizer.Direction.right {
+      recognizer.direction =.left
+    } else if recognizer.direction == UIPanGestureRecognizer.Direction.left {
+      recognizer.direction =.right
+    }
+    return false
+  }
+} import Foundation
+import UIKit
+
+extension CarouselViewController : UIGestureRecognizerDelegate {
+  func gestureRecognizer(
+    _ gestureRecognizer: UIGestureRecognizer,
+    shouldRecognizeSimultaneouslyWith
+        otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    return self.shouldRecognizeSimultaneously &&
+        gestureRecognizer == self.recognizer &&
+        otherGestureRecognizer == self.recognizer
+  }
+  
+   func handlePan(
+    recognizer: UIPanGestureRecognizer) -> Bool {
+    if recognizer.state!=.ended {
+      let translation = recognizer.translation(in: recognizer.view?.superview)
+      recognizer.setTranslation(CGPoint(x: 0, y: 0), in: recognizer.view)
+      var newPosition = self.position
+      newPosition = newPosition + translation.x
+      let width = (recognizer.view?.superview?.frame.size.width?? 0)
+      if self.count > 0 && width > 0 {
+        while newPosition - width >= -self.count * width {
+          newPosition -= width
+          self.currentIndex += 1
+          if self.currentIndex > self.count - 1 {
+            self.currentIndex = 0
+          }
+        }
+        while newPosition <= 0 {
+          newPosition += width
+          self.currentIndex -= 1
+          if self.currentIndex < 0 {
+            self.currentIndex = self.count - 1
+          }
+        }
+        self.position = newPosition
+        if let view = self.view {
+          UIView.animate(withDuration: 0.3) {
+            view.layoutIfNeeded()
+          }
+        }
+        return true
+      }
+    } else if recognizer.direction == UIPanGestureRecognizer.Direction.right {
+      self.currentIndex += 1
+      if self.currentIndex >= self.count {
+        self.currentIndex = 0
+      }
+      if let view = self.view {
+        UIView.animate(withDuration: 0.3) {
+          view.layoutIfNeeded()
+        }
+      }
+      return true
+    } else if recognizer.direction == UIPanGestureRecognizer.Direction.left {
+      self.currentIndex -= 1
+      if self.currentIndex < 0 {
+        self.currentIndex = self.count - 1
+      }
+      if let view = self.view {
+        UIView.animate(withDuration: 0.3) {
+          view.layoutIfNeeded()
+        }
+      }
+      return true
+    } else if
+        self.currentIndex!= 0 &&
+        self.currentIndex!= self.count &&
+        self.count > 0 &&
+       
+
+Precision: 0
+Recall: 0
+F1 Score: 0

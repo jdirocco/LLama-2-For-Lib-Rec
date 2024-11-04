@@ -1,0 +1,219 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: comunes/kune
+    Project Description: Kune\n======\n\n\n\nKune is a free and open source federated collaborative social network, focused on collaboration rather than just on communication. That is, it provides online realtime collaborative editing based on Apache Wave, decentralized social networking and web publishing, while focusing on workgroups rather than individuals. It aims to allow the creation of online spaces for collaborative work, where organizations and individuals can build projects online, coordinate common agendas, set up virtual meetings, publish on the web, and join organizations with similar interests. Kune is 100% free/libre software AGPLv3, built with free/libre tools.\n\n Try it\n\nSee if you want to try Kune or directly use it for collaboration.\n\n is the main Kune code repository.\n\n Installation\n\nSee the file for instructions on how to install and run Kune in your own server. Please follow closely.\n\n Development\n\nSee the file for developer information and guidelines.\n\n Troubleshooting\n\nSee the file if you have problems with the installation or the development.\n\n Copyright and Credits\n\nSee the and files for legal info and author/contributors.\n\n Bugs and feedback\n\nSee the file for information about current problems. You can also use kune.cc for reporting feedback.\n'
+    Existing Dependencies:
+    jmagick:jmagick
+- org.waveprotocol:clientscheduler-src
+- org.igniterealtime.smack:smack-java7
+- org.apache.lucene:lucene-core
+- org.adamtacy:gwt-fx
+- org.hibernate:hibernate-entitymanager
+- net.sf.dozer:dozer
+- org.waveprotocol:api-src
+- org.apache.maven.plugins:maven-release-plugin
+- com.google.code.findbugs:jsr305
+- eu.infomas:annotation-detector
+- org.ow2.asm:asm
+- commons-configuration:commons-configuration
+- org.eclipse.jetty:jetty-xml
+- org.liquibase:liquibase-plugin
+- org.jdom:jdom
+- org.quartz-scheduler:quartz
+- net.sf.json-lib:json-lib
+- org.igniterealtime:whack
+- com.google.guava:guava
+- org.waveprotocol:communication-src
+- commons-cli:commons-cli
+- cc.kune:gwt-initials-avatars-server
+- org.waveprotocol:crypto
+- com.arcbees:gwtchosen
+- javax.jdo:jdo2-api
+- commons-beanutils:commons-beanutils
+- com.gwtplatform:gwtp-all
+- org.eclipse.jetty.websocket:websocket-common
+- org.codehaus.jettison:jettison
+- org.eclipse.jetty:jetty-continuation
+- com.google.gwt.google-apis:gwt-gadgets
+- org.waveprotocol:clientcommon
+- org.gwtbootstrap3:gwtbootstrap3-extras
+- commons-collections:commons-collections
+- io.dropwizard.metrics:metrics-jvm
+- org.eclipse.jetty.websocket:websocket-servlet
+- org.waveprotocol:server
+- com.google.inject.extensions:guice-persist
+- com.allen-sauer.gwt.voices:gwt-voices
+- org.eclipse.jetty:jetty-proxy
+- junit:junit
+- com.calclab:emite
+- org.waveprotocol:client
+- org.waveprotocol:clientcommon-src
+- org.slf4j:slf4j-simple
+- io.dropwizard.metrics:metrics-servlets
+- org.waveprotocol:proto
+- commons-lang:commons-lang
+- com.google.guava:guava-gwt
+- com.extjs:gxt
+- org.apache.velocity:velocity
+- com.mashape.unirest:unirest-java
+- org.eclipse.jetty:jetty-annotations
+- org.hibernate:hibernate-ehcache
+- com.google.inject.extensions:guice-servlet
+- org.waveprotocol:box-src
+- org.apache.httpcomponents:httpcore
+- org.hibernate:hibernate-tools
+- org.waveprotocol:model
+- org.antlr:antlr
+- org.naturalcli:naturalcli
+- javax.inject:javax.inject
+- io.dropwizard.metrics:metrics-core
+- cc.kune:kune-common
+- com.google.gxp:google-gxp
+- org.apache.httpcomponents:httpclient
+- org.hibernate:hibernate-search
+- com.thetransactioncompany:cors-filter
+- com.google.code:sitemapgen4j
+- cc.kune:kune-java-gadget-lib
+- com.sun:tools
+- org.waveprotocol:concurrencycontrol-src
+- com.googlecode:gwtrpccommlayer
+- com.google.code.gson:gson
+- com.google.gwt:gwt-servlet
+- org.jsoup:jsoup
+- com.googlecode.gwtquery:gwtquery
+- com.bradrydzewski:gwt-cal
+- org.eclipse.jetty:jetty-servlets
+- org.vectomatic:lib-gwt-file
+- log4j:log4j
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 82 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <section id="contentSection">
+   <div class="row">
+    <div class="col-lg-8 col-md-8 col-sm-8">
+      <div class="left_content">
+        <div class="contact_area">
+          <h2>Contact Us</h2>
+          
+          <div id="success" class="alert alert-success invisible">
+          
+          </div>
+           
+          <div class="row">
+          
+        {!! Form::open(array('method'=>'GET', 'action' => 'UserController@contact', 'name' => 'contactform'))!!}
+                
+            <div class="col-lg-4">
+              <input name="name" type="text" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="col-lg-4">
+              <input name="email" type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+            <div class="col-lg-4">
+              <input name="subject" type="text" class="form-control" id="subject" placeholder="Enter Subject">
+            </div>
+          </div>
+          <br>
+          <div class="form-group">
+            <textarea name="message" id="message" class="form-control" rows="8" placeholder="Message"></textarea>
+          </div>
+          
+          
+          
+          <button class="btn btn-success " id="submit" type="submit">Send Message</button>
+            
+        {!! Form::close()!!}  
+          
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+      
+      <div class="single_sidebar wow fadeInDown">
+        <h2><span>Contact Info</span></h2>
+        <div  class="sidebar-box">
+          
+          <address  class="address">
+              <strong><b>Address:</b></strong> <br>
+             
+              <b>
+              <span style="text-align: left;">128, 2nd Floor,
+                            Above Surya Restaurant
+                            Opposite PNB Bank,
+                            G.P.B. Complex,
+                            Kharad, Dist. Pune - 412012</span><br>
+              <span style="text-align: left;">Phone: +91 20 25217729</span><br>
+               <span style="text-align: left;">Email: info@kharadtalim.org</span><br>
+                <span>Website: www.indiasmartcity.com</span>
+                
+              </b>
+              
+              </address>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 82 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>   $table->string('description');
+            $table->date('date');
+            $table->integer('total');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('orders');
+    }
+}
+ <?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateOrdersTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('orders', function (Blueprint $table) {
+            $table->id();
+            $table->integer('id_product');
+            $table->string('name');
+         
+
+Precision: 0
+Recall: 0
+F1 Score: 0

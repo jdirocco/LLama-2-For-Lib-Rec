@@ -1,0 +1,198 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: hotmob/passport
+    Project Description: AppFuse Modular Spring MVC Archetype\r\n\r\nIf you\'re reading this then you\'ve created your new project using Maven and\r\nappfusebasicspring. You have only created the shell of an AppFuse Java EE\r\napplication. The project object model pom is defined in the file pom.xml.\r\nThe application is ready to run as a web application. The pom.xml file is\r\npredefined with Hibernate as a persistence model and Spring MVC as the web\r\nframework.\r\n\r\nThere are two modules in this project. The first is "core" and is meant to \r\ncontain Services and DAOs. The second is "web" and contains any webrelated\r\nfiles. Using this modular archetype is recommended when you\'re planning on\r\nusing "core" in multiple applications, or you plan on having multiple clients\r\nfor the same backend.\r\n\r\nTo get started, complete the following steps:\r\n\r\n1. Download and install a MySQL 5.x database from\r\n From the command line, cd into the core directory and run "mvn install".\r\n\r\n3. From the command line, cd into the web directory and run "mvn jetty:run".\r\n\r\n4. View the application at More information can be found at:\r\n\r\n
+    Existing Dependencies:
+    org.springframework:spring-aop
+- org.springframework.social:spring-social-google
+- org.hibernate:hibernate-entitymanager
+- org.apache.cxf:cxf-rt-frontend-jaxws
+- org.slf4j:slf4j-api
+- org.springframework.security:spring-security-core
+- org.springframework:spring-jdbc
+- org.apache.cxf:cxf-rt-transports-http
+- org.springframework.social:spring-social-facebook
+- org.springframework.social:spring-social-core
+- org.opensaml:opensaml
+- org.springframework:spring-aspects
+- cglib:cglib-nodep
+- com.octo.captcha:jcaptcha
+- org.hibernate.java-persistence:jpa-api
+- org.springframework:spring-test
+- ognl:ognl
+- org.jmock:jmock
+- org.springframework.security:spring-security-config
+- org.jasig.cas:cas-server-support-ldap
+- commons-httpclient:commons-httpclient
+- net.sf.ehcache:ehcache-web
+- org.tuckey:urlrewritefilter
+- javax.xml.bind:jaxb-api
+- org.springframework.security:spring-security-cas
+- commons-beanutils:commons-beanutils
+- taglibs:standard
+- org.apache.cxf:cxf-rt-frontend-jaxrs
+- org.apache.cxf:cxf-rt-transports-http-jetty
+- org.slf4j:jcl-over-slf4j
+- displaytag:displaytag
+- org.jasig.cas:cas-server-core
+- commons-collections:commons-collections
+- junit:junit
+- org.aspectj:aspectjrt
+- org.springframework.security:spring-security-ldap
+- org.springframework.social:spring-social-twitter
+- org.springmodules:spring-modules-validation
+- net.sf.spring-json:spring-json
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 40 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+@extends('frontend.app')
+@section('body_content')
+<div class="row-fluid">
+    <div class="col-xs-12 text-center">
+        <h3 style="color: green">
+
+                        {{Session::get('message')}}
+
+        </h3>
+        <h3>Welcome To our Library</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec nisl odio. Mauris vehicula at nunc id posuere. Curabitur vitae erat id mauris interdum ultrices.</p>
+
+    </div>
+</div>
+<hr/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+<div class="container">
+    <div class="row">
+
+
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            <h4>Register Here....</h4>
+            <form method='post' action="{{url('/student_signup')}}"  enctype="multipart/form-data" >
+                {{csrf_field()}}
+                <div class="form-group">
+                    <label for="email">Name:</label>
+                    <p><input type="text" name='user_name' id='user_name' placeholder="Enter your Name" value="{{old('user_name')}}" class="form-control" ></p>
+                    <span style="color:red">{{$errors->first('user_name')}}</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <p><input type="email" name='email' id='email' placeholder="Enter your Email" value="{{old('email')}}" class="form-control" ></p>
+                    <span style="color:red">{{$errors->first('email')}}</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Password:</label>
+                    <p><input type="password" name='password' id='password' placeholder="Enter your Email" value="{{old('password')}}" class="form-control" ></p>
+                    <span style="color:red">{{$errors->first('password')}}</span>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Mobile:</label>
+                    <p><input type="number" name='mobile' id='mobile' placeholder="Enter your Phone" value="{{old('mobile')}}" class="form-control" ></p>
+                    <span style="color:red">{{$errors->first('mobile')}}</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Address</label>
+                    <p><input type="text" name='address' id='address' placeholder="Enter your Address" value="{{old('address')}}" class="form-control" ></p>
+                    <span style="color:red">{{$errors->first('address')}}</span>
+                </div>
+                <div class="form-group">
+                    <
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 40 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t.
+     * @return {string}      Returns a string that will be used in the
+     *                      output file.
+     */
+    getString(object: any): string;
+}
+export declare const stringifier: {
+    default: IStringifier;
+    json: IStringifier;
+    html: IStringifier;
+    md: IStringifier;
+    rst: IStringifier;
+    man: IStringifier;
+    txt: IStringifier;
+    yaml: IStringifier;
+};
+//# sourceMappingURL=stringifier.d.ts.map /**
+ * A stringification function takes a given object
+ * and converts it to a string.
+ * This stringifier is used in the CLI's `writeFiles()` and
+ * `writeFile()` functions.
+ *
+ * @param {*} object The value to stringify.
+ * @return {string}  Returns a string.
+ */
+export declare type StringifyFunction = (object: any) => string;
+export declare enum StringifierType {
+    json = "json",
+    html = "html",
+    md = "md",
+    rst = "rst",
+    man = "man",
+    txt = "txt",
+    yaml = "yaml"
+}
+/**
+ * This is the default stringifier.
+ */
+export declare const stringifierDefault: StringifyFunction;
+export declare const getStringifyFunction: (stringifierType: StringifierType | string) => StringifyFunction;
+/**
+ * Interface that should be implemented
+ * by any object that can convert to
+ * string.
+ */
+export interface IStringifier {
+    /**
+     * Gets string value.
+     *
+     * @param  {any} object The object to conver
+
+Precision: 0
+Recall: 0
+F1 Score: 0

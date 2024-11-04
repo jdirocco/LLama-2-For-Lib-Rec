@@ -1,0 +1,182 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: JMaNGOS/JMaNGOS
+    Project Description: = JMaNGOS General information =\r\n\r\nCopyright C JMaNGOS JMaNGOS is free software; you can redistribute it and/or modify\r\n it under the terms of the GNU General Public License as published by\r\n the Free Software Foundation; either version 2 of the License, or\r\n at your option any later version.\r\n\r\n This program is distributed in the hope that it will be useful,\r\n but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\r\n GNU General Public License for more details.\r\n\r\n You should have received a copy of the GNU General Public License\r\n along with this program; if not, write to the Free Software\r\n Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 021111307 USA\r\n\r\nJMaNGOS is a MMORPG Framework based mostly on Java. It is completely \r\nopen source, and is community supported.\r\nJMaNGOS in not MaNGOS on Java. It's a new way.\r\nIf you wish to contribute ideas or code please visit \r\nour site linked below or make pull requests to our github repo at \r\n further information on the JMaNGOS project, please visit our\r\nproject website at get nightly builds of the master branch of JMaNGOS, please visit\r\n including installation instructions can be found inside\r\nthe Wiki website at files to create the database can be found in the Sql directory. Files\r\nto update your database from an older revision/version can be found in the\r\nInstall/sql/update directory."
+    Existing Dependencies:
+    org.hibernate:hibernate-c3p0
+- org.jmangos.jmangos:tools
+- mysql:mysql-connector-java
+- org.codehaus.izpack:izpack-standalone-compiler
+- org.lwjgl.lwjgl:lwjgl
+- commons-io:commons-io
+- org.hibernate:hibernate-entitymanager
+- com.jcraft:jzlib
+- io.netty:netty
+- org.slf4j:slf4j-api
+- org.lwjgl.lwjgl:lwjgl_util
+- org.springframework:spring-jdbc
+- org.springframework:spring-tx
+- commons-lang:commons-lang
+- org.critterai:cai-nmgen
+- org.springframework.data:spring-data-jpa
+- org.hibernate:hibernate-core
+- org.springframework:spring-test
+- org.hibernate:hibernate-ehcache
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Update Pengguna</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form action="<?php echo base_url('index.php/Admin/pengguna/update_user');?>" method="post" enctype="multipart/form-data">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label>ID Pengguna</label>
+                    <input type="text" name="id_user" class="form-control" required value="<?php echo $user[0]->id_user;?>">
+                  </div>
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" class="form-control" required value="<?php echo $user[0]->email;?>">
+                  </div>
+                  <div class="form-group">
+                    <label>Nama</label>
+                    <input type="text" name="nama_lengkap" class="form-control" required value="<?php echo $user[0]->nama_lengkap;?>">
+                  </div>
+                  <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" class="form-control" required value="<?php echo $user[0]->password;?>">
+                  </div>
+                  <div class="form-group">
+                    <label>Kontak</label>
+                      <input type="number" name="no_telp" class="form-control" required value="<?php echo $user[0]->no_telp;?>">
+                  </div>
+                  <div>
+                  <img width="100" height="100" <?php echo $user[0]->image;?>>
+                  </div>
+                  <div class="form-group">
+                    <label>Upload Image</label>
+                    <div class="custom-file">
+                      <input type="file" name="image" id="customFile" />
+                    </div>
+                  </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Edit</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+            </div>
+          </div>
+      </div>
+    </section>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    </form>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="{{ asset('img/banner-02.jpg') }}" height='300px' width='300px' >  
+                
+            </div>
+        </div>
+    @endif
+    <div class="row">
+        <div class="col-lg-7 col-lg-offset-3 text-center">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4>Información de mi usuario</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-3 col-xs-5 text-center">
+                        <img src="#" alt="Foto de perfil" class="img-responsive img-thumbnail img-circle"> <br/>
+                        @yield('avatar')
+                        <a href="#" data-target="#modal_avatar" data-toggle="modal"><i class="fa fa-pencil text-danger"></i></a>
+                    </div>
+                    <div class="col-md-6">
+                        @yield('info_profile')
+                    </div><!-- /.col-md-6 -->
+                    <div class=" col-md-3 col-xs-7 text-left">
+                        @yield('info_stats')
+                    </div><!-- /.col-md-3 -->
+                    
+                </div><!-- /.panel-body -->
+            </div><!-- /.panel panel-info -->
+        </div><!-- /.col.sm-7 col-sm-offset-3 text-center -->
+        <br/>
+        <br/>
+        <div class="col-lg-7 col-lg-offset-3 text-center">
+            <div class="panel panel-primary">
+                <div class="panel-heading text-center">
+                    <h4>Mi cuenta</h4>
+
+                </div>
+                <div class="panel-body">
+                    @yield('info_account')
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@stop @extends('base')
+
+@section('css_section')
+    <link rel="stylesheet" href="css/estilo_perfil.css" />
+@stop
+
+@section('page_js')
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script>
+        $('document').ready(function(){
+           // alert('funciona');
+                $('.modal').modal_ajx();
+            });
+    </script>
+@stop
+
+@section('contenido_main')
+<br />
+<div class="row">
+    <div class="jumbotron">
+        <h1>Bienvenido a mi perfil</h1>
+        <p>Información personal</p>
+        <p>
+            <a class="btn btn-primary btn-lg" href="{{ url('perfil/edit') }}" role="button" target="_new">Editar mi perfil</a>
+        </p>
+
+       
+
+Precision: 0
+Recall: 0
+F1 Score: 0

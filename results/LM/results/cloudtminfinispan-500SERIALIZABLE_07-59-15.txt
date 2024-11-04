@@ -1,0 +1,172 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: cloudtm/infinispan-5.0.0.SERIALIZABLE
+    Project Description: The Infinispan project \n\nInfinispan is an open source LGPL licensed data grid platform. For more information on Infinispan, including HOWTOs, getting started guides, build instructions and downloading binaries, visit the project\'s website on \n\nThe Infinispan project team\n\n\n\n'
+    Existing Dependencies:
+    org.apache.lucene:lucene-core
+- org.springframework:spring-aop
+- org.apache.directory.server:apacheds-jdbm
+- jgoodies:forms
+- org.jboss.logging:jboss-logging-generator
+- org.rhq:rhq-core-plugin-api
+- org.jboss.logging:jboss-logging-processor
+- org.springframework:spring-test
+- org.jboss.netty:netty
+- ${project.groupId}:infinispan-server-hotrod
+- org.rhq.helpers:rhq-pluginAnnotations
+- org.milyn:milyn-smooks-csv
+- org.jclouds:jclouds-blobstore
+- org.jgroups:jgroups
+- org.apache.commons:commons-compress
+- com.sleepycat:je
+- org.jboss.naming:jnpserver
+- com.sun.xsom:xsom
+- org.json:json
+- org.jclouds.driver:jclouds-log4j
+- spy:memcached
+- org.slf4j:slf4j-simple
+- org.easymock:easymock
+- org.jboss.javaee:jboss-transaction-api
+- com.martiansoftware:jsap
+- org.infinispan:infinispan-cachestore-jdbc
+- org.springframework:spring-context
+- org.hibernate:hibernate-search
+- org.jboss.marshalling:jboss-marshalling
+- javax.persistence:persistence-api
+- c3p0:c3p0
+- org.rhq.helpers:rhq-pluginGen
+- org.jclouds:jclouds-allblobstore
+- log4j:log4j
+- org.jclouds.driver:jclouds-enterprise
+- org.rhq:rhq-jmx-plugin
+- org.milyn:milyn-smooks-javabean
+- com.thoughtworks.xstream:xstream
+- org.springframework:spring-jdbc
+- ${project.groupId}:infinispan-lucene-directory
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 40 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+
+<section class="container p-1">
+
+    <form action="<?=site_url('home/simpan_edit')?>" method="post" enctype="multipart/form-data">
+
+            <?php foreach($pengaturan as $pg):?>
+
+              <label for="input">Nama Sekolah</label>
+                <input name="nama_sekolah" id="input" class="form-control mb-1" value="<?=$pg->nama_sekolah?>">
+
+
+                <label for="input">Nomor Telepon</label>
+                <input name="nomor_telepon" id="input" class="form-control mb-1" type="number" value="<?=$pg->nomor_telepon?>">
+
+                <label for="input">Email Sekolah</label>
+                <input name="email_sekolah" id="input" class="form-control mb-1" type="email" value="<?=$pg->email_sekolah?>" >
+
+                <label for="input">Alamat Sekolah</label>
+                <input name="alamat_sekolah" id="input" class="form-control mb-1" type="text" value="<?=$pg->alamat_sekolah?>" >
+
+                <label for="input">Logo Sekolah</label>
+                <input name="logo_sekolah" id="input" class="form-control mb-2" type="file">
+
+
+            <button class="btn btn-success mt-4" type="submit">Simpan</button>
+
+            <?php endforeach;?>
+
+
+    </form>
+
+</section>
+
+<!-- 
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 40 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>  }
+
+    public function getUser()
+    {
+        return $this->hasOne(User::className(), ['id' => 'user_id']);
+    }
+
+    public static function getAll()
+    {
+        return self::find()->all();
+
+    }
+
+}
+ <?php
+
+namespace app\models;
+
+use Yii;
+
+/**
+ * This is the model class for table "message".
+ *
+ * @property int $id
+ * @property int $user_send_id
+ * @property string $message
+ * @property int $user_receive_id
+ */
+class Message extends \yii\db\ActiveRecord
+{
+    /**
+     * {@inheritdoc}
+     */
+    public static function tableName()
+    {
+        return'message';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function rules()
+    {
+        return [
+            [['user_send_id','message', 'user_receive_id'],'required'],
+            [['user_send_id', 'user_receive_id','readed'], 'integer'],
+            [['message'],'string'],
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'user_send_id' => 'User Send ID',
+           'message' => 'Message',
+            'user_receive_id' => 'User Receive ID',
+        ];
+  
+
+Precision: 0
+Recall: 0
+F1 Score: 0

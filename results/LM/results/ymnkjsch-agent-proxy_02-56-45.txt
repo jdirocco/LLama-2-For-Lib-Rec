@@ -1,0 +1,141 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: ymnk/jsch-agent-proxy
+    Project Description: jschagentproxy\na proxy to sshagent and Pageant in Java.\n\n Description\njschagentproxy is a proxy program to \'s and \nincluded . It will be easily integrated into , and users\nwill be allowed to use those programs in authentications.\nThis software has been developed for JSch, but it will be easily\napplicable to other ssh2 implementations in Java.\nThis software is licensed under .\n\n\n Build from Source\n $ git clone git://github.com/ymnk/jschagentproxy.git\n $ cd jschagentproxy\n $ mvn package\n $ mvn install\n\n Examples\n \n This sample demonstrates how to get accesses to Pageant. \n \n\t\t$ cd examples\n\t\t$ cd compile\n\t\t$ mvn exec:java \\\n\t\t Dexec.mainClass="com.jcraft.jsch.agentproxy.examples.UsingPageant"\n\n \n This sample demonstrates how to get accesses to sshagent. \n\n\t\t$ cd examples\n\t\t$ mvn compile\n\t\t$ mvn exec:java \\\n\t\t Dexec.mainClass="com.jcraft.jsch.agentproxy.examples.UsingSSHAgent"\n\n \n This sample demonstrates how to integrate jschagentproxy into JSch. \n\n\t\t$ cd examples\n\t\t$ mvn compile\n\t\t$ mvn exec:java \\\n\t\t Dexec.mainClass="com.jcraft.jsch.agentproxy.examples.JSchWithAgentProxy" \\\n\t\t Dexec.args="foo@bar.com"\n\n \n This sample demonstrates how to integrate jschagentproxy into sshj. \n\n\t\t$ cd examples\n\t\t$ mvn compile\n\t\t$ mvn exec:java \\\n\t\t Dexec.mainClass="com.jcraft.jsch.agentproxy.examples.SshjWithAgentProxy" \\\n\t\t Dexec.args="foo@bar.com"\n\n \n This sample demonstrates how to integrate jschagentproxy into Trilead SSH2 SVNKit fork. \n\n\t\t$ cd examples\n\t\t$ mvn compile\n\t\t$ mvn exec:java \\\n\t\t Dexec.mainClass="com.jcraft.jsch.agentproxy.examples.TrileadWithAgentProxy" \\\n\t\t Dexec.args="foo@bar.com date"\n\n Dependencies\nTo work as a proxy to sshagent and Pageant,\nthe current implementation depends on the following software,\n \n JNA: licensed under the and the \n junixsocket: licensed under the \n OpenBSD\'s netcat: for connections to sshagent, unix domain sockets must be\nhandled, and the current implementation has been using JNA or junixsocket for that purpose. Refer to following classes,\n \n \n \n \n\nNCUSocketFactory expects the external command ncOpenBSD\'s netcat, but\nyou don\'t have to install other third party software. \n\nAs for connections to Pageant, win32 APIs must be\nhandled, and JNA has been used in the current implementation for that purpose. Refer to the following class,\n\n \n\n\nIf you want to be free from JNA and junixsocket,\nimplement following interfaces without them,\n\n \n \n'
+    Existing Dependencies:
+    com.jcraft:jsch.agentproxy.usocket-nc
+- net.java.dev.jna:jna-platform
+- com.jcraft:jsch.agentproxy.pageant
+- net.java.dev.jna:jna
+- com.jcraft:jsch.agentproxy.sshagent
+- com.jcraft:jsch
+- com.trilead:trilead-ssh2
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- ##### Contact Area Start ##### -->
+    <section class="contact-area section-padding-100 bg-gray">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Form Area -->
+                <div class="col-12 col-lg-8">
+                   <form action="#" method="post">
+                        <div class="contact-form wow fadeInUp" data-wow-delay="100ms">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="contact-name" id="contact-name" placeholder="Your Name">                                  
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="contact-email" id="contact-email" placeholder="Your email">
+                                  
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn crose-btn mt-15">Send</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> #include "mongo/db/auth/authorization_session.h"
+#include "mongo/db/commands.h"
+#include "mongo/db/curop.h"
+#include "mongo/db/matcher/extensions_callback_disallow_extensions.h"
+#include "mongo/db/pipeline/aggregation_request_helper.h"
+#include "mongo/db/pipeline/document_source_merge_cursor.h"
+#include "mongo/rpc/get_status_from_command_result.h"
+#include "mongo/s/catalog_cache.h"
+#include "mongo/s/commands/cluster_commands_helpers.h"
+#include "mongo/s/grid.h"
+#include "mongo/s/stale_exception.h"
+
+namespace mongo {
+namespace {
+
+using std::string;
+
+/**
+ * MergeCursors command on mongos.
+ *
+ * Used to open one or more merging cursors and to retrieve results from those cursors.
+ *
+ * If a cursor has a non-empty list of remotes, there will be a remote cursor opened in each
+ * shard which contains the remote portions of results. In the event that the remote shard
+ * cannot be reached, the remote cursor is closed, the remote list is recomputed, and the
+ * operation retried. This retrying will continue until a cursor has an empty remote list.
+ * This means that the remote cursor will remain open for each non-empty remote list until it
+ * is exhausted.
+ *
+ * If the MergeCursors is killed, any open remote cursors are immediately killed without any
+ * cleanup.
+ *
+ * If multiple cursors are open, this command is used to retrieve each batch of results. This means
+ * that each cursor may have to wait until results are available on all other cursors in the
+ * list.
+ *
+ * For example, given the following list of sharded cursors: [A, B], and A has 10 results, B has 2
+ * results, the output may look like:
+ *
+ *   MergeCursors Command -> [{_id: A}, {_id: B}]
+ *   MergeCursors Response -> [10 docs from A] - wait for results from B
+ *   MergeCursors Command -> [{_id: B}, 2 docs from B] - wait for results from A
+ *   MergeCursors Response -> [10 docs from A, 2 docs from B]
+ */
+class MergeCursorsCmd : public Command {
+public:
+    MergeCursorsCmd() : Command("mergeCursors") {}
+
+    void help(std::stringstream& help) const override {
+        help << "internal command used to open a merge cursors for a set of sharded cursors.";
+    }
+
+    virtual bool isWriteCommandForConfigServer() const {
+        return false;
+    }
+
+    virtual bool slaveOk() const {
+        return false;
+    }
+
+    virtual bool maintenanceOk() const {
+        return false;
+    }
+
+    virtual bool adminOnly() const {
+        return true;
+    }
+
+    virtual void addRequiredPrivileges(const std::string& dbname,
+                                       const BSONObj& cmdObj,
+                                       std::vector<Privilege>* out) {
+        ActionSet actions;
+        actions
+
+Precision: 0
+Recall: 0
+F1 Score: 0

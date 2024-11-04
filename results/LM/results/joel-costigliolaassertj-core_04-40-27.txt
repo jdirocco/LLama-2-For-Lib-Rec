@@ -1,0 +1,157 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: joel-costigliola/assertj-core
+    Project Description: AssertJ Fluent Assertions for Java \n\n\n\n\n\n\n\n\nAssertJ provides a rich and intuitive set of stronglytyped assertions to use for unit testing with JUnit, TestNG or any other test framework.\n\n \n \n \n \n\nYou can ask questions in and make suggestions by simply creating an issue.\n\n AssertJ\'s goals\n\nAssertJ\'s ambition is to provide a rich and intuitive set of stronglytyped assertions for unit testing.\n\nThe idea is that disposal assertions should be specific to the type of the objects we are checking when writing unit tests. If you\'re checking the value of a , you use Stringspecific assertions. Checking the value of a ? Use Mapspecific assertions to easily check the contents of the map.\n\nAssertJ\'s assertions are super easy to use: just type and use code completion to show you all assertions available.\n\nAssertion missing? Please to discuss it and even better !\n\n\nAssertJ is composed of several modules:\n A core module to provide assertions for JDK types , , , , , ... see and .\n A Guava module to provide assertions for Guava types , ... see and .\n A to provide assertions for Joda Time types , see and .\n A to provide assertions for Neo4J types , , ... see and .\n A to provide assertions for relational database types , , ... see and .\n A provides a simple and intuitive API for functional testing of Swing user interfaces see and .\n\n Want to contribute?\n\nYou are encouraged to contribute any missing useful assertions. \n\nPlease read the and raise a PR!\n'
+    Existing Dependencies:
+    cglib:cglib-nodep
+- com.github.marschall:memoryfilesystem
+- org.mockito:mockito-core
+- org.mockito:org.mockito
+- com.google.guava:guava
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+
+
+
+
+<style type="text/css">
+    table.table-bordered {
+    border:1px solid #000;
+    margin-top:20px;
+    }
+    table.table-bordered > thead > tr > th {
+    border:1px solid #000;
+    }
+    table.table-bordered > tbody > tr > td {
+    border-right:1px solid #000;
+    border-left:1px solid #000;
+    }
+    table.table-bordered > tbody > tr > td:last-child {
+    border-right:1px solid #000;
+    }
+   .table td,.table th
+    {
+        border:1px solid
+ #000;
+    }
+</style>
+
+
+
+<?php
+$id = $invoice->id;
+$payment = DB::table('payments')->where('invoice_id', $id)->first();
+?>
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>SL.</th>
+                <th colspan="6">Product & Services</th>
+                <th class="text-right">Total</th>
+            </tr>
+            <tr>
+                            <th></th>
+                            <th>Description</th>
+                            <th>Qty</th>
+                            <th>Discount</th>
+                            <th>Unit Price</th>
+                            <th>Tax</th>
+                            <th>Total</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @php
+                $i = 1;  
+            @endphp
+
+            @foreach($data as $data)
+                <tr>
+                    <th scope="row"> {{$i++}} </th>
+                    <td> {{ $data->product_name }}</td>
+                    <td> {{ $data->quantity }}</td>
+                    <td> {{ $data->discount }}%</td>
+                    <td> {{ $data->unit_price }}</td>
+                        <td> {{ $data->tax }}%</td>
+                    <td> $ {{ number_format($data->amount, 2) }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+        <tbody>
+            <tr>
+                {{-- <td></td>
+                <td></td>
+                <td></td>
+                <td>Sub Total</td>
+                <td> $ {{ $invoice->sub_total }}</td> --}}
+            </tr>
+            <tr>
+                <td colspan="3" rowspan="2"></td>
+                <td>Tax</td>
+                <td id="tax">$ {{ $invoice->tax }}</td>
+            </tr>
+            <tr>
+                {{-- <th colspan="3" style="text-align: right;">Sub-Total</th>
+                <td> $ {{ number_format($invoice->sub_total - $invoice->tax, 2) }}</td> --}}
+            </tr>
+
+            <tr>
+                <th scope="row"></th>
+                <th></th>
+                <th
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>   }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+ ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace PP
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+     
+
+Precision: 0
+Recall: 0
+F1 Score: 0

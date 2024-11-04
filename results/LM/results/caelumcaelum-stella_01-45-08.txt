@@ -1,0 +1,143 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: caelum/caelum-stella
+    Project Description: Caelum Stella\n\n\n\nAlguns processos s\xc3\xa3o comuns e recorrentes em sistemas voltados para o p\xc3\xbablico brasileiro. O Stella vai te auxiliar nesse caso, oferecendo uma API simples para valida\xc3\xa7\xc3\xa3o e formata\xc3\xa7\xc3\xa3o de CPF, CNPJ e outros cadastros comuns no Brasil. Al\xc3\xa9m de oferecer uma API para trabalhar com boletos, n\xc3\xbameros e integra\xc3\xa7\xc3\xa3o com JSF, JPA/Hibernate etc.\n\nUm cl\xc3\xa1ssico \xc3\xa9 o pedido de . Criamos o Caelum Stella tamb\xc3\xa9m para ensinar as principais valida\xc3\xa7\xc3\xb5es brasileiras, seja em Java, JavaScript ou outra linguagem, nos nossos .\n\nConsulte a documenta\xc3\xa7\xc3\xa3o:\n\n a p\xc3\xa1gina de downloads e configura\xc3\xa7\xc3\xa3o de depend\xc3\xaancia via Maven:\n\n
+    Existing Dependencies:
+    org.hibernate:hibernate-commons-annotations
+- org.hibernate:hibernate-entitymanager
+- org.slf4j:slf4j-api
+- org.mockito:mockito-all
+- net.sf.jasperreports:jasperreports
+- jboss.seam.profiles:seam-facelets
+- ${project.groupId}:caelum-stella-bean-validation
+- org.jmock:jmock
+- commons-httpclient:commons-httpclient
+- net.sourceforge.barbecue:barbecue
+- com.sun.facelets:jsf-facelets
+- javassist:javassist
+- hsqldb:hsqldb
+- jboss.seam:jboss-seam-debug
+- br.com.caelum.stella:caelum-stella-core
+- org.jmock:jmock-legacy
+- cz.softeu:softeu-rewriter
+- junit:junit
+- pdfbox:pdfbox
+- ${project.groupId}:caelum-stella-faces
+- org.openqa.selenium.server:selenium-server
+- javax.el:el-api
+- org.openqa.selenium.client-drivers:selenium-java-client-driver
+- org.hibernate:hibernate-annotations
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 24 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<!doctype html>
+<html class="no-js" lang="">
+<?php $this->load->view('include/header');?>
+<body>
+	<div class="container-fluid">
+		<?php $this->load->view('dashboard/include/nav');?>
+		<div class="row  main-container">
+			<?php $this->load->view('dashboard/include/sidebar');?>
+						<div class="col-md-9">
+							<?php $this->load->view('dashboard/include/alert');?>
+							<nav class="breadcrumb">
+							  <a class="breadcrumb-item" href="<?php echo site_url('dashboard');?>"><span class="glyphicon glyphicon-home"></span> Beranda</a> > 
+							   <a class="breadcrumb-item" href="<?php echo site_url('Mahasiswa');?>"><span class="glyphicon glyphicon-home"></span> Kelola Mahasiswa</a> > 
+							  <span class="breadcrumb-item active"><span class="glyphicon glyphicon-edit"></span> Update Data</span>
+							</nav>
+							<div class="panel panel-primary">
+								<div class="heading">
+								<h3  class="panel-title">Update Data</h3> </div>
+												
+									<div class="panel-body">
+										<div class="col-md-6">
+												<div class="row">
+													<?php echo form_open(base_url('Mahasiswa/edit/'.$data->id_mahasiswa));?>
+														<div class="col-lg-4"><label> NPM</label></div>
+														<div class="col-lg-8">
+															<input type="text" class="form-control" placeholder="NPM" value="<?php echo $data->npm;?>" name="npm" required readonly> 
+														</div>
+												</div>
+												<br>
+												<div class="row">
+													<div class="col-lg-4"><label>Nama Mahasiswa</label></div>
+													<div class="col-lg-8">
+														<input type="text" class="form-control" placeholder="Nama" value="<?php echo $data->namasiswa;?>" name="nama" required> 
+			
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 24 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.yugabyte.yugastore.ui.filters;
+
+import javax.servlet.Filter;
+imporon;
+
+import org.springframework.stereotype.Component;
+
+import com.yugabyte.yugastore.dao.impl.ProductDAOImpl;
+import com.yugabyte.yugastore.dao.impl.UserDAOImpl;
+
+@Component
+public class InitFilter extends BaseFilter implements Filter{
+	
+	private UserDAOImpl userDao = new UserDAOImpl();
+	
+	private ProductDAOImpl productDao = new ProductDAOImpl();
+	
+	public void init(FilterConfig filterConfig) throws ServletException {}
+
+	public void destroy() {}
+
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+			throws IOException, ServletException {
+		
+		HttpServletRequest httpRequest = (HttpServletRequest) request;
+		HttpServletResponse httpResponse = (HttpServletResponse) response;
+		
+		String url = httpRequest.getServletPath();
+		if (url.equals("/")) {
+			request.setAttribute("productList",productDao.getProductList(0, 10));
+			request.setAttribute("productCount",productDao.productCount());
+		}
+		
+		//Check the session
+		HttpSession session = httpRequest.getSession();
+		session.setAttribute("sessionUser", userDao.findUserByName(""));
+		chain.doFilter(request, response);
+	}
+
+}
+t javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import java.io.IOExcepti
+
+Precision: 0
+Recall: 0
+F1 Score: 0

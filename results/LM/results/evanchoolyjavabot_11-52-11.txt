@@ -1,0 +1,177 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: evanchooly/javabot
+    Project Description: \n\njavabot\n=======\n\nfactoid bot for irc channels\n\n\nBuilding\n\nTo build and test Javabot, you\'ll need to do a few things.\n\n1. Install MongoDB.\n For Fedora, you can install it with \n \n On OS X, you can use\n \n If you\'re using , you can run a Docker image for MongoDB:\n \n\n Note that if you\'re on Windows, you may need to add network translation to handle port 27017; see for how this would look in VirtualBox.\n\n1. Copy to and update any properties as needed. If you want to run the web application\n as well, copy to and adjust as necessary. \n\n1. Start mongodb; one example command, which will locate the data files in the\n current directory, is this: \n \n In Docker, you\'d use:\n \n You can also use the :\n \n1. You will need to download the JavaDoc manually thanks to licensing issues with Java. To do this, go to the and navigate to the Java version of your choice; you\'ll see a "JDK Download" and a "Documentation Download" link. Download the documentation, accepting licenses as appropriate; this will give you a file named, for example, if that\'s the version you chose. Copy that file to the directory, under the name which is actually set in the file, under the key .\n1. Build and test.\n\nDeveloping\n\n\nIf you use IDEA, make sure you have "Use plugin registry" enabled in your Maven configuration.\n\nNote also that IDEA may not pick up the generated java source as part of the build path; if does not\nresolve after running at least once, then open up the javabot.iml file and add\n under the XML node.\n should look like this:\n\n \n \n \n \n \n \n \n \n \n\nTo test the web application aspects, you need to copy the to ; this will put the\nweb container on port 8081 by default.\n\nTesting on a Live Server\n\nTo quickly get javabot running on a live server, ensure you\'ve followed the steps in the Building section and change javabot.properties as follows:\n\n\n\nThen, start javabot using maven\n\nThe bot may take attempt to cycle through servers on testnet to connect if they are unavailable. Once it has been connected, invite it to a channel e.g. and issue commands to it. \n\nJavabot\'s server config can be changed after it has been initialized by connecting directly to mongodb as follows:\n\n\n'
+    Existing Dependencies:
+    io.dropwizard:dropwizard-auth
+- org.aeonbits.owner:owner
+- org.jboss.forge.roaster:roaster-jdt
+- org.testng:testng
+- org.slf4j:slf4j-api
+- net.htmlparser.jericho:jericho-html
+- org.seleniumhq.selenium:selenium-chrome-driver
+- com.antwerkz.critter:critter-core
+- commons-lang:commons-lang
+- org.zeroturnaround:zt-exec
+- org.reflections:reflections
+- net.swisstech.bitly:bitly-api-client
+- com.jayway.awaitility:awaitility
+- com.beust:jcommander
+- org.mongodb:mongo-java-driver
+- io.dropwizard:dropwizard-views-freemarker
+- org.jetbrains.kotlin:kotlin-stdlib
+- org.seleniumhq.selenium:selenium-firefox-driver
+- org.apache.httpcomponents:httpclient
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+    
+
+    <script src="<?php echo base_url();?>assets/plugins/jquery/jquery.min.js"></script>
+    <script>
+    //    $('#example').DataTable();
+        //$('body').DataTable();
+        //$('div').DataTable();
+       var table;
+    $(document).ready(function() {
+    
+    table = $('#mydata').DataTable({ 
+    "destroy": true,
+       "ordering": true,
+       "paging":   true,
+       "info": true,
+       "bProcessing":true,
+        "bServerSide": false,
+       "bAutoWidth": false,
+       "ordering": false,
+       "bSort":true,
+       "bFilter":true,
+       "bLengthChange":false,
+       "processing":false,
+       "serverSide":false,
+       "ajax":{
+        
+        
+        "url": "<?php echo base_url();?>admin/user_data/fetch_data2",
+        //"data" : function(d){
+            //d.f_date = $('#f_date').val();
+           //d.t_date = $('#t_date').val();
+         }
+    });
+     
+});
+    </script>
+    
+
+    <!-- Bootstrap 3.3.7 -->
+    <script src="<?php echo base_url();?>assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="<?php echo base_url();?>datatables.min.js"></script>
+    <!-- Morris.js charts -->
+    <script src="<?php echo base_url();?>assets/bower_components/raphael/raphael.min.js"></script>
+    <script src="<?php echo base_url();?>assets/bower_components/moment/min/moment.min.js"></script>
+    <script src="<?php echo base_url();?>assets/bower_components/morris.js/morris.min.js"></script>
+    <!-- Sparkline -->
+    <script src="<?php echo base_url();?>assets/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+    <!-- jvectormap -->
+    <script src="<?php echo base_url();?>assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="<?php echo base_url();?>assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="<?php echo base_url();?>assets/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="<?php echo base_url();?>assets/bower_components/moment/min/moment.min.js"></script>
+    <script src="<?php echo base_url();?>assets/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- datepicker -->
+    <script src="<?php echo base_url();?>assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <!-- Bootstrap WYSIHTML5 -->
+    <script src="<?php echo base_
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> 
+    // TODO: check if this is needed, it doesn't work
+//    // Check that the current thread does not already have a session 
+//    if (sessionFactory.getCurrentSession()!= null && sessionFactory.getCurrentSession().
+//            getSession(EntityMode.STATEMENT).getFlushMode()!= flushMode) {
+//      throw new HibernateException("Current session is already bound to " + sessionFactory.getCurrentSession() +
+//              ". It has " + sessionFactory.getCurrentSession().getSession(EntityMode.STATEMENT).getFlushMode() +
+//              " flush mode, but you tried to switch to " + flushMode);
+//    }
+    
+    // TODO: check if this is needed, it doesn't work
+//    // Check that the given Hibernate session is not associated with the current thread 
+//    for (SessionHolder sessionHolder : TransactionSynchronizationManager.getResourceMap().values()) {
+//      if (sessionFactory.getCurrentSession()!= null && sessionHolder.getSession() == sessionFactory.getCurrentSession()) {
+//        throw new HibernateException("Hibernate session from current thread is already bound: " + sessionFactory.getCurrentSession());
+//      }
+//    }
+    
+    // Switch to MANUAL flush mode 
+    SessionHolder sessionHolder = (SessionHolder) TransactionSynchronizationManager.getResource(sessionFactory); 
+    if (sessionHolder!= null && sessionHolder.getSession()!= null) { 
+      HibernateUtils.setFlushMode(sessionHolder.getSession().getSession(EntityMode.STATEMENT), flushMode);
+    }
+  }
+  
+} package net.ontopia.persistence.hibernate;
+
+import java.util.Collection;
+import java.util.Map;
+import net.ontopia.infoset.core.LocatorIF;
+import net.ontopia.topicmaps.core.AbstractTopicIF;
+import net.ontopia.topicmaps.core.AssociationIF;
+import net.ontopia.topicmaps.core.OccurrenceIF;
+import net.ontopia.topicmaps.core.TopicIF;
+import net.ontopia.topicmaps.core.TopicMapBuilderIF;
+import net.ontopia.topicmaps.impl.basic.InMemoryTopicMapStore;
+import net.ontopia.utils.OntopiaRuntimeException;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.hibernate.FlushMode;
+import org.hibernate.EntityMode;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.springframework.orm.hibernate3.SessionFactoryUtils;
+import org.springframework.orm.hibernate3.SessionHolder;
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
+
+/**
+ * INTERNAL: A TopicMap Store implementation which uses Hibernate as persistence
+ * framework to persist the topic map.
+ *
+ * @since 2.0
+ */
+public class HibernateTopicMapStore extends InMemoryTopicMapStore {
+
+  // Define a logging category.
+  private static final Log log = LogFactory.getLog(HibernateTopicMapStore.class.getName());
+
+  protected String sessionFactoryName;
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

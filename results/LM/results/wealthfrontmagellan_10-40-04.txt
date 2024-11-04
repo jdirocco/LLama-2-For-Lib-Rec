@@ -1,0 +1,214 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: wealthfront/magellan
+    Project Description: \n\n Magellan\n\n\n\nA simple, flexible, and practical navigation framework for Android.\n\n Note: This library is currently under development for the next major version.\n\n Why would I use Magellan?\n\n Simple: Intuitive abstractions and encapsulation make it easy to reason through code.\n Flexible: The infinitelynestable structure allows for many different styles of structuring an app and navigating between pages.\n Practical: We pay special attention to simplifying common patterns and removing daytoday boilerplate.\n Testable: Plain objects that are easy to instantiate make testing simple.\n \n Download\n\nAdd the dependencies you need in your :\n\n Core library\n\n\n\n Optional addons\n\n\n\n Learning\n\nFor an explanation of the core concepts of Magellan, see our , starting with .\n\nIf you\'re eager to start, check out our .\n\n License\n\n\n'
+    Existing Dependencies:
+    com.android.support:support-annotations
+- com.squareup.retrofit2:adapter-rxjava
+- io.reactivex.rxjava2:rxjava
+- org.robolectric:robolectric
+- com.jakewharton:butterknife-compiler
+- com.android.support:appcompat-v7
+- com.jakewharton:butterknife
+- com.squareup.retrofit2:converter-jackson
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+   
+   <?php $this->load->view('template/head')?>
+<div class="content-wrapper" id="container">
+<section class="content-header">
+  <h1>
+    <u>R U L E S</u> 
+    
+  </h1>
+  <ol class="breadcrumb">
+     <li><a href="<?php echo base_url('Dashboard')?>"><i class="fa fa-home"></i> Home</a></li>
+     <li><a href="<?php echo base_url('User/index')?>">Users List </a></li>
+    
+   
+    </ol>
+</section>
+<section class="content">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">Roles List </h3>
+        </div>
+    
+    <div class="box-body ">
+   
+  <table class="table table-responsive table-hover table-bordered">
+   
+  <tr class="bg-blue-active">
+    <th >#</th>
+    <th >Name</th>
+    
+    <th>Actions</th>
+  </tr>
+<?php 
+  
+  $i=1;
+  foreach ($data as $role) {?>
+  
+<tr >
+    <td ><?php echo $i?></td>
+    <td ><?php echo $role->role?></td>
+    <td>
+        
+          <a href="<?= site_url('roles/edit/'.$role->id_role);?>"><i class="fa fa-edit"></i></a>
+    </td> 
+
+</tr>
+
+
+<?php $i++;
+
+} 
+ ?>
+</table>
+
+
+
+
+    </div>
+    
+  </div>
+  </div>
+  </div>
+<section>
+</main> 
+
+ <?php $this->load->view('template/footer')?>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    return true;
+        }
+
+        public static void Log(string message)
+        {
+            if (!EnableLog) return;
+            string log = $"[{nameof(Clipboard)}] {message}";
+#if DEBUG
+            Debug.Log(log);
+#endif
+            // Debug.Log(log);
+        }
+    }
+} using System;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
+using UnityEngine;
+using UnityWeld.Binding.Editor.Exceptions;
+
+namespace UnityWeld.Binding.Editor
+{
+    public static class Clipboard
+    {
+        private static Stack<Tuple<string, bool>> undoStack;
+
+        public static bool UndoEnabled { get; set; }
+
+        public static bool EnableLog { get; set; }
+
+        /// <summary>
+        /// Returns true if the clipboard has at least one value.
+        /// </summary>
+        public static bool HasValue
+        {
+            get
+            {
+                // Return false if undo isn't enabled.
+                if (!UndoEnabled) return false;
+
+                // Otherwise pop off any values that haven't been undone and see if we still have a value.
+                PopOldValues();
+
+                return undoStack!= null && undoStack.Count > 0;
+            }
+        }
+
+        /// <summary>
+        /// Returns the value at the top of the stack.
+        /// </summary>
+        public static string Top
+        {
+            get
+            {
+                // If the clipboard is empty, return an empty string.
+                if (!HasValue) return string.Empty;
+
+                return undoStack.Peek().Item1;
+            }
+        }
+
+        public static void Push(string text)
+        {
+            if (undoStack == null) undoStack = new Stack<Tuple<string, bool>>();
+
+            // If there are multiple values that have been undone,
+            // remove those first before adding the new value.
+            PopOldValues();
+
+            // Only add the value if it's different.
+            string lastValue = string.Empty;
+            if (undoStack.Count > 0) lastValue = undoStack.Peek().Item1;
+            if (lastValue!= text) undoStack.Push(new Tuple<string, bool>(text, false));
+            else Log("Value is the same as before - no need to add to undo stack.");
+
+            // Log the operation.
+            Log($"Added: [{Top}] to clipboard.");
+        }
+
+        public static string Undo()
+        {
+            if (!UndoEnabled) throw new UndoDisabledException("Clipboard undo isn't currently enabled.");
+
+            // Remove any values that have been undone before.
+            PopOldValues();
+
+            // Return a null string if the clipboard is empty.
+            if (undoStack == null || undoStack.Count == 0) return string.Empty;
+
+            // Mark the current value as undone.
+            undoStack.First().Item2 = true;
+            string currentValue = undoStack.First().Item1;
+            Log($"Undo: [{currentValue}]");
+
+            return currentValue;
+        }
+
+        public static void Reset()
+        {
+            // Log the operation.
+            Log($"Reset clipboard.");
+
+            // Remove any values from
+
+Precision: 0
+Recall: 0
+F1 Score: 0

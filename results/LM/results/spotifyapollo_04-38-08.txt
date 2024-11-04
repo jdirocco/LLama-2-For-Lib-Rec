@@ -1,0 +1,194 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: spotify/apollo
+    Project Description: Apollo\n======\n\n\n\n\n\n\n Status: Archived\n\n \xe2\x9a\xa0\xef\xb8\x8f Apollo is heavily used within Spotify, however, most of its development has recently been done internally leveraging Apollo\'s module system. Because of this, and the fact that Apollo has very little if any use outside Spotify we want to signal this current state to the community by putting the project in archive mode. This means this project will no longer have new features, bug fixes or accept PRs for new features. Apollo development will continue internally in Spotify.\n\nApollo is a set of Java libraries that we use at Spotify when writing microservices. Apollo includes modules such as an HTTP server and a URI routing system, making it trivial to implement restful API services. \n\nApollo has been used in production at Spotify for a long time. As a part of the work to release version 1.0.0 we moved the development of Apollo into the open.\n\nThere are two main libraries in Apollo:\n\n \n \n\n Apollo API\nThe library is the Apollo library you are most likely to interact with.\nIt gives you the tools you need to define your service routes and your request/reply handlers.\n\nHere, for example, we define that our service will respond to a GET request on the path with\nthe string :\n\n\n Note that, for an Apollobased service, you can see the routes defined for a service by querying\n.\n\nThe apolloapi library provides several ways to help you define your request/reply handlers.\nYou can specify how responses should be serialized such as JSON. Read more about\nthis library in the .\n\n Apollo Core\nThe library manages the lifecycle loading, starting, and stopping of\nyour service. You do not usually need to interact directly with apollocore; think of it merely \nas "plumbing". For more information about this library, see the .\n\n Apollo Test\nIn addition to the two main Apollo libraries listed above, to help you write tests for your\nservice we have an additional library called . It has helpers to set up\na service for testing, and to mock outgoing request responses.\n\n Links\n\n\n\n\n\n Diagrams\n\n\n\n\n\n Code of conduct\nThis project adheres to the Open Code of Conductcodeofconduct. By participating, you are expected to honor this code.\n\ncodeofconduct:
+    Existing Dependencies:
+    com.spotify:apollo-bom
+- com.google.auto.value:auto-value
+- com.typesafe:config
+- com.squareup.okhttp3:okhttp
+- io.norberg:auto-matter
+- com.spotify:apollo-jetty-http-server
+- org.slf4j:slf4j-api
+- com.google.code.findbugs:jsr305
+- com.spotify:proto2json
+- org.mockito:mockito-all
+- org.freemarker:freemarker
+- org.hamcrest:hamcrest-core
+- org.springframework:spring-test
+- com.spotify:apollo-test
+- com.google.guava:guava
+- com.spotify:apollo-okhttp-client
+- info.cukes:cucumber-java
+- org.glassfish.jersey.core:jersey-client
+- com.google.auto.service:auto-service
+- com.spotify:apollo-core
+- com.spotify:apollo-extra
+- org.hamcrest:hamcrest-library
+- com.spotify:apollo-meta
+- com.jayway.jsonpath:json-path-assert
+- net.sourceforge.argparse4j:argparse4j
+- com.spotify:apollo-route
+- uk.org.lidalia:slf4j-test
+- com.spotify.metrics:semantic-metrics-ffwd-reporter
+- io.norberg:auto-matter-jackson
+- net.sf.jopt-simple:jopt-simple
+- joda-time:joda-time
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 32 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+    <!-- Custom CSS -->
+    <style>
+      #footer_main{
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+      }
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 32 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import {
+  IonApp,
+  IonHeader,
+  IonMenuButton,
+  IonRouterOutlet,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/react';
+import React from'react';
+import { Redirect, Route, Switch } from'react-router-dom';
+import Home from './pages/Home';
+import MyPage1 from './pages/MyPage1';
+import MyPage2 from './pages/MyPage2';
+
+const App: React.FC = () => (
+  <IonApp>
+    <IonHeader>
+      <IonRouterOutlet>
+        <IonToolbar>
+          <IonMenuButton color="dark" />
+          <IonTitle>My App</IonTitle>
+        </IonToolbar>
+      </IonRouterOutlet>
+    </IonHeader>
+
+    <IonRouterOutlet>
+      <Route
+        path="/home/:user"
+        render={({ match }) => <Home user={match.params.user} />}
+        exact={true}
+      />
+      <Route
+        path="/home"
+        render={() => <Home />}
+        exact={true}
+      />
+      <Route
+        path="/mypage1"
+        render={() => <MyPage1 />}
+        exact={true}
+      />
+      <Route
+        path="/mypage2"
+        render={() => <MyPage2 />}
+        exact={true}
+      />
+      <Redirect exact={true} from="/" to="/home" />
+    </IonRouterOutlet>
+    <IonRouterOutlet id="main">
+      <Route
+        path="/home2/:user"
+    </IonRouterOutlet>
+    <IonRouterOutlet id="main2">
+      <Route
+        path="/home3/:user"
+        render={({ match }) => <Home user={match.params.user} />}
+        exact={true}
+      />
+      <Route
+        path="/home3"
+        render={() => <Home />}
+        exact={true}
+      />
+      <Route
+        path="/mypage3"
+        render={() => <MyPage1 />}
+        exact={true}
+      />
+      <Route
+        path="/mypage4"
+        render={() => <MyPage2 />}
+        exact={true}
+      />
+      <Redirect exact={true} from="/" to="/home3" />
+    </IonRouterOutlet>
+  </IonApp>
+);
+
+export default App;
+      render={({ match }) => <Home user={match.params.user} />}
+        exact={true}
+      />
+      <Route
+        path="/home2"
+        render={() => <Home />}
+        exact={true}
+      />
+      <Route
+        path="/mypage5"
+        render={() => <MyPage1 />}
+        exact={true}
+      />
+      <Route
+        path="/mypage6"
+        render={() => <MyPage2 />}
+        exact={true}
+      />
+      <Redirect exact={true} from="/" to="/home2" />
+  
+
+Precision: 0
+Recall: 0
+F1 Score: 0

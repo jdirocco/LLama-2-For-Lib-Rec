@@ -1,0 +1,99 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: matsjj/thundernetwork
+    Project Description: thundernetwork\n\nActive development of this project has been moved to \n'
+    Existing Dependencies:
+    net.glxn:qrgen
+- mysql:mysql-connector-java
+- io.netty:netty-all
+- de.jensd:fontawesomefx
+- org.jetbrains.kotlin:kotlin-stdlib
+- org.apache.httpcomponents:httpclient
+- org.eclipse.jetty.websocket:websocket-client
+- com.squareup.okhttp:okhttp
+- org.bouncycastle:bcprov-jdk15on
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+    <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: linear-gradient(180deg,#0071a3,#00588e);">
+      <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justif
+      y-center align-items-center sidebar-brand m-0" href="#">
+          <div class="sidebar-brand-icon rotate-n-15"></div>
+          <div class="sidebar-brand-text mx-3"></div></a>
+        <hr class="sidebar-divider my-0">
+        <ul class="nav navbar-nav text-light" id="accordionSidebar">
+          <li class="nav-item" role="presentation"><a class="nav-link <?php if($_SESSION['page'] == 'dashboard'){echo "active";}?>" href="<?= base_url();?>dashboard"><i class="fas fa-tachometer mr-1"></i>Dashboard</a></li>
+          <li class="nav-item dropdown" role="presentation">
+            <a class="nav-link dropdown-toggle <?php if($_SESSION['page'] == 'data_pelaporan'){echo "active";}?>" data-toggle="dropdown" aria-expanded="true" href="#"><i class="fab fa-product-hunt mr-1"></i>Data Pelaporan</a>
+            <ul class="dropdown-menu" role="menu">
+                <li role="presentation" class="dropdown-item"><a href="<?= base_url();?>data_pelaporan/kriminalitas">Data Kriminalitas</a></li>
+                <li role="presentation" class="dropdown-item"><a href="<?= base_url();?>data_pelaporan/pemberhentian">Data Pemberhentian</a></li> 
+                <li role="presentation" class="dropdown-item"><a href="<?= base_url();?>data_pelaporan/perbaikan">Data Perbaikan</a></li> 
+            </ul>
+          </li>
+          <li class="nav-item dropdown" role="presentation">
+            <a class="nav-link dropdown-toggle <?php if($_SESSION['page'] == 'laporan'){echo "active";}?>" data-toggle="dropdown" aria-expanded="true" href="#"><i class="fab fa-product-hunt mr-1"></i>Laporan</a>
+            <ul class="dropdown-menu" role="menu">
+                <li role="presentation" class="dropdown-item"><a href="<?= base_url();?>laporan/kriminalitas">Laporan Kriminalitas</a></li>
+                <li role="presentation" class="dropdown-item"><a href="<?= base_url();?>laporan/pemberhentian">Laporan Pemberhentian</a></li> 
+                <li role="presentation" class="dropdown-item"><a href="<?= base_url();?>laporan/perbaikan">Laporan Perbaikan</a></li> 
+            </ul>
+          </li>
+          <li class="nav-item" role="presentation"><a class="nav-link <?php if($_SESSION['page'] == 'admin'){echo "active
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>nce = new TicketFactory();
+    }
+
+    @Synchronized("mutex")
+    public static TicketFactory getInstance() {
+        if (instance == null) {
+            instance = new TicketFactory();
+        }
+        return instance;
+    }
+
+    private TicketFactory(){
+    }
+
+    @Synchronized("mutex")
+    public abstract Ticket createTicket(int ticketPrice);
+}
+ package com.example.factoryPattern;
+
+
+import lombok.Synchronized;
+
+public abstract class TicketFactory {
+    private static TicketFactory instance;
+
+    public static final Object mutex = new Object();
+
+    public static void reset() {
+        insta
+
+Precision: 0
+Recall: 0
+F1 Score: 0

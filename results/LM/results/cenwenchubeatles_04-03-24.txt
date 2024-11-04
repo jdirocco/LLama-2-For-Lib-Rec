@@ -1,0 +1,147 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: cenwenchu/beatles
+    Project Description: \xe5\xb0\x8f\xe8\xa7\x84\xe6\xa8\xa1\xe5\x8d\xb3\xe6\x97\xb6\xe6\xb5\x81\xe6\x95\xb0\xe6\x8d\xae\xe5\x88\x86\xe6\x9e\x90\xe9\x9b\x86\xe7\xbe\xa4\n=====================\n\xe5\x88\x86\xe6\x9e\x90\xe8\xa7\x84\xe5\x88\x99\xe6\x8a\xbd\xe8\xb1\xa1\xe4\xba\x8eSQL\xef\xbc\x8c\xe8\xae\xa1\xe7\xae\x97\xe8\xa7\x84\xe5\x88\x99\xe9\x87\x87\xe7\x94\xa8MapReduce\xe6\xa8\xa1\xe5\xbc\x8f\xe3\x80\x82\n'
+    Existing Dependencies:
+    org.mortbay.jetty:jetty
+- org.apache.hadoop:hadoop-core
+- stax:stax-api
+- org.apache.zookeeper:zookeeper
+- commons-logging:commons-logging
+- commons-net:commons-net
+- org.springframework:spring-core
+- commons-lang:commons-lang
+- org.springframework:spring-mock
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+# **C#-Exam-Preparation**
+
+## _C# Advanced_ 
+
+---
+
+### Exam Preparation
+
+- [x] [Programming Basics with C# - Exam Preparation ](https://softuni.bg/trainings/1160/programming-basics-with-c-january-2016)
+
+- [x] [C# OOP Basics - Exam Preparation](https://softuni.bg/trainings/1502/csharp-oop-basics-march-2016)
+
+- [x] [C# Advanced - Exam Preparation](https://softuni.bg/trainings/2016/csharp-advanced-july-2016)
+
+- [x] [Data Types and Variables - June 2015](https://softuni.bg/courses/CSharp-Data-Types-and-Variables/1200?utm_source=SoftUni&utm_medium=CourseHomePage&utm_campaign=CSharp-Data-Type-And-Variables)
+
+- [x] [Advanced Data Types June 2015](https://softuni.bg/courses/CSharp-Advanced-Data-Types-and-Operators/1522/about?utm_source=SoftUni&utm_medium=CourseHomePage&utm_campaign=DataTypesAdvanced2015)
+
+- [x] [Programming Basics with C# - January 2016](https://softuni.bg/trainings/435/programming-basics-with-c-january-2016/about#lessons)
+
+- [x] [C# OOP Basics - February 2016](https://softuni.bg/trainings/566/csharp-oop-basics#overview)
+
+- [x] [C# Advanced - August 2016](https://softuni.bg/trainings/1162/csharp-advanced-august-2016)
+
+- [x] [Data Types and Variables - June 2015](https://softuni.bg/courses/CSharp-Data-Types-and-Variables/1200?utm_source=SoftUni&utm_medium=CourseHomePage&utm_campaign=CSharp-Data-Type-And-Variables)
+
+- [x] [Advanced Data Types June 2015](https://softuni.bg/courses/CSharp-Advanced-Data-Types-and-Operators/1522/about?utm_source=SoftUni&utm_medium=CourseHomePage&utm_campaign=DataTypesAdvanced2015)
+
+- [x] [Programming Basics with C# - January 2016](https://softuni.bg/trainings/435/programming-basics-with-c-january-2016/about#lessons)
+
+- [x] [C# OOP Basics - July 2016](https://softuni.bg/trainings/919/csharp-oop-basics-july-2016)
+
+- [x] [C
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s.add(s);
+    }
+
+    public String getString(int index){
+        return strings.get(index);
+    }
+
+} package net.minecraftrs.main.client;
+
+import org.lwjgl.input.Mouse;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MouseHandler {
+    public static MouseHandler instance = new MouseHandler();
+
+    boolean[] buttonsDown = new boolean[5];
+    boolean[] buttonsReleased = new boolean[5];
+    boolean[] buttons = new boolean[5];
+
+    public boolean[] getButtons(){
+        return buttonsDown;
+    }
+
+    public boolean[] getButtonsReleased(){
+        return buttonsReleased;
+    }
+
+    List<String> strings = new ArrayList<String>();
+
+    public MouseHandler() {
+        Mouse.create();
+        Mouse.getDX(); // initialize the mouse position
+        Mouse.getDY();
+    }
+
+    public void update(){
+        int dx = Mouse.getDX();
+        int dy = Mouse.getDY();
+        Mouse.getDX(); // reset
+        Mouse.getDY();
+        int x = Mouse.getX();
+        int y = Mouse.getY();
+
+        for(int i = 0; i < buttonsDown.length; i++){
+            buttonsDown[i] = Mouse.isButtonDown(i);
+            buttonsReleased[i] = Mouse.isButtonDown(i);
+        }
+
+        if(dx!=0 || dy!=0){ // mouse is moving
+            for(int i = 0; i < buttonsDown.length; i++){
+                buttonsDown[i] = Mouse.isButtonDown(i);
+            }
+        }else{ // mouse is not moving
+            boolean[] tmp = new boolean[5];
+            for(int i = 0; i < buttonsDown.length; i++){
+                if(buttons[i] &&!buttonsDown[i]) {
+                    buttonsReleased[i] = buttons[i];
+
+                }
+                tmp[i] = buttons[i];
+            }
+            buttons = tmp;
+        }
+    }
+
+    public void addString(String s){
+        string
+
+Precision: 0
+Recall: 0
+F1 Score: 0

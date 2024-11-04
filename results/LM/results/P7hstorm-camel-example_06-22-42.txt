@@ -1,0 +1,132 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: P7h/storm-camel-example
+    Project Description: Realtime analysis and Viz with StormCamelHighcharts\n\n\n You might also be interested in checking out extension of this repo for Twitter sentiment of states of US using D3.js Choropleth Map and Highcharts Columncharts on and also a similar project for UK Twitter Sentiment on .\n\n Introduction\nThis repository contains an application for demonstrating distributed framework by counting the names of the companies fed randomly by the code is an open source distributed realtime computation system, developed at BackType by Nathan Marz and team. It has been open sourced by Twitter project.\n\n Features\n Application receives a random company name from a Spout every 200 milliseconds.\n Bolt counts frequency of the each company name passed on from the Spout.\n This frequency is written to ActiveMQ using a JMSBolt.\n Camel is used to read these tuples from ActiveMQ and also write to a WebSocket.\n A pure HTML5 frontend reads from the above Websocket and visualizes the output in a Bar chart using Highcharts and updates the chart in realtime to reflect the latest count provided by the Bolt.\n This project has also been made compatible with both Eclipse IDE and IntelliJ IDEA.\n\t Import the project in your favorite IDE and you can quickly follow the code.\n As of today, this codebase has almost no or very less comments.\n\n Demo\n\n\n\n\n Dependencies\n Storm v0.9.3\n Camel v2.14.1\n ActiveMQ v5.10.0\n Spring v4.1.3.RELEASE\n xbean v4.1\n\nAlso, please check for complete information on the various dependencies of the project.\n\n Requirements\nYou need the following on your machine:\n\n Oracle JDK = 1.8.x\n Apache Maven = 3.2.3\n Clone this repo and import as an existing Maven project to either Eclipse IDE or IntelliJ IDEA.\n\t Please enable / download Maven Plugin in the IDE.\n\n Usage\nTo build and run this topology, you must use Java 1.8.\n\n Local Mode:\nLocal mode can also be run on Windows environment using either IntelliJ IDEA or Eclipse IDE.\nNote: Please be sure to clean your temp folder as it adds lot of temporary files in every run.\n\n Launch your favorite IDE and execute .\n All the required frameworks and libraries are downloaded by Maven as required in the above import process in the IDE.\n\t If not, please execute command once at the root of this repo.\n Launch a browser \n\t Click on "Start Viz" button to trigger the initialization.\n\t You can stop the visualization at any time by clicking on "Stop Viz" button.\n This chart updates every second and displays realtime visualization of the words processed by the Bolts.\n\n Remote Mode:\nTBA.\n\n Problems\nIf you find any issues, please report them either raising an here on Github or alert me on my Twitter handle . Or even better, please send a .\nAppreciate your help. Thanks!\n\n License\nCopyright &copy; 20132015 Robin van Breukelen and Prashanth Babu.\nLicensed under the .'
+    Existing Dependencies:
+    com.github.ptgoetz:storm-jms
+- org.apache.camel:camel-websocket
+- org.springframework:spring-context
+- org.apache.camel:camel-core
+- org.apache.activemq:activemq-web-console
+- org.apache.storm:storm-core
+- org.p7h:processor
+- org.springframework:spring-beans
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div class="row" >
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div id="mydiv">
+      <img src="<?php echo site_url()?>assets/img/loading_3.gif">
+      <h3>Loading... </h3>
+    </div>
+    </div>
+
+    <div class="col-md-4 pull-right">
+    <div class="input-group" style="width: 200px;">
+      <input type="text" id="myInput" name="search" placeholder="Search" class="form-control">
+      <div class="input-group-btn">
+
+      </div>
+    </div>
+    </div>
+    
+    </div>
+
+    <table  class="table table-hover table-bordered table-striped" id="myTable">
+    <thead>
+      <th>Date Created</th>
+      <th colspan="3" style="text-align: center;"><n class='text-primary'>Review</n></th>
+    </thead>
+    <tbody>
+    <?php if($review_status){ 
+      foreach($review_status as $review_stat){?>
+      
+      <tr>
+        <td>
+          <n class='text-warning'><i class="fa fa-clock-o"></i> <?php echo date('Y-m-d h:i A',strtotime($review_stat->date_created));?>
+         </n>
+        </td>
+        <td>
+          <?php if($review_stat->status=='pending'){?>
+            <a href="#"><button class='btn btn-sm btn-success'>Approve</button></a>
+
+            <a href="#"><button class='btn btn-sm btn-danger'>Reject</button></a>
+          <?php }else if($review_stat->status=='approved'){?>
+
+            <a href="#"><button class='btn btn-sm btn-primary'>Approved</button></a>
+          <?php }else if($review_stat->status=='approved'){?>
+            <a href="#"><button class='btn btn-sm btn-danger'>Rejected</button></a>
+          <?php }else if($review_stat->status==''){?>
+            <a href="#"><button class='btn btn-sm btn-danger'>Not Reviewed</button></a>
+          <?php }?>
+        </td>
+        <td>
+          <span style="font-size: 12px"><?php echo $review_stat->title_name." - ".$review_stat->first_name." ".$review_stat->last_name;?></span>
+        </td>
+        <td><?php echo $review_stat->date_from;?></td>
+        <td><?php echo $review_stat->date_to;?></td>
+      </tr>
+
+    <?php } }?>
+    </tbody>
+    </table>
+
+ 
+
+
+  <style type="text/css">
+    
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>nce(other, self.__class__):
+            return False
+        return self.__dict__ == other.__dict__
+ import json
+class Base(object):
+    """The base class of all the models in the application.
+
+    Attributes:
+        __slots__:
+            The list of attributes that will be serialized
+    """
+    __slots__ = ()
+
+    def __str__(self):
+        return str(self.__dict__)
+
+    def to_json(self):
+        return json.dumps(self.__dict__)
+
+    def __eq__(self, other):
+        if not isinsta
+
+Precision: 0
+Recall: 0
+F1 Score: 0

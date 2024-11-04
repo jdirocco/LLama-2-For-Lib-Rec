@@ -1,0 +1,104 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: casmi/casmi
+    Project Description: 2D/3D visualization for Java\n\n\n\n\n\n Overview\n\ncasmi is a visualization library for Java.\n\ncasmi supports 2D/3D realtime rendering based on OpenGL.\nWith assembling graphics primitives line, circle, sphere, etc., you can easily design scene layouts.\nSmooth tween animations and scene sequencing functions add rich UI/UX on your application.\n\n Getting Started\n\n 1. Create a project\n\nWe recommend to use .\n\n Maven Archetype\n\nRun the following command\n\n mvn archetype:generate Dfilter=com.github.casmi.archetypes:casmiquickstart\n\n Quickstart project\n\nYou can download quickstart project template from page or .\n\n 2. Build\n\nChange to the your project directory and execute:\n\n mvn compile\n\n 3. Run\n\nTo run, execute the following Required to specify the main class of your project\n\n mvn exec:java Dexec.mainClass="path.to.MainClass"\n\n 4. What\'s next?\n\nTake a .\n\n License\n\ncasmi is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by\nthe Free Software Foundation, either version 3 of the License, or at your option any later version.\n\nThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.\n\nYou should have received a copy of the GNU Lesser General Public License along with this program. If not, see .\n'
+    Existing Dependencies:
+    org.jogamp.jogl:jogl
+- org.jogamp.gluegen:gluegen-rt
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 3 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- ======= Footer ======= -->
+     <footer id="footer">
+
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+
+        <div class=" col-md-4">
+              <h3>Our Address</h3>
+              <p>Komplek Taman Pondok Indah, Jl. Kemang Timur No.7, RT.7/RW.3, Bangka, Kec. Mampang Prpt, Kota Jakarta Selatan,Daerah Khusus Ibukota Jakarta 12730</p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus" target="_blank"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4 style="color:#ffff">Useful Links</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6 footer-newsletter">
+              <h4>Our Newsletter</h4>
+              <p
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 3 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.jstarcraft.ai.model.neuralnetwork.layer;
+
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import com.jstarcraft.ai.mode   {
+        return new ParameterizedTestClassFactory(DenseLayerTest.class).getParameterizedTests();
+    }
+
+    @Override
+    protected Layer generateLayer() {
+        return new DenseLayer();
+    }
+
+}
+l.neuralnetwork.layer.DenseLayer;
+
+@RunWith(Parameterized.class)
+public class DenseLayerTest extends LayerTestCase {
+
+    @Parameterized.Parameters
+    public static Iterable<Object[]> getParameters()
+
+ 
+
+Precision: 0
+Recall: 0
+F1 Score: 0

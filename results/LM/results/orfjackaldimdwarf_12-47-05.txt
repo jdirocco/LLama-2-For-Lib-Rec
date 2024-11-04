@@ -1,0 +1,109 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: orfjackal/dimdwarf
+    Project Description: Dimdwarf Application Server\n===========================\n\nDimdwarf is an unintrusive distributed application server for Java. You write singlethreaded, eventdriven POJO code the server makes it multithreaded, persisted and transactional. The primary target audience is developers of online multiplayer games. The programming model is the same as on now . Dimdwarf applications can be deployed on Darkstar with minimal modifications and vice versa.\n\n Web Site: \n Mailing List: \n Source Code: \n Development Status: PreAlpha\n License: \n Developer: \n'
+    Existing Dependencies:
+    net.orfjackal.dimdwarf:dimdwarf-api-internal
+- org.slf4j:slf4j-api
+- com.google.code.findbugs:jsr305
+- asm:asm-all
+- org.jdave:jdave-junit4
+- asm:asm-tree
+- com.intellij:annotations
+- cglib:cglib-nodep
+- ${project.groupId}:launcher
+- org.scalatest:scalatest_2.9.1
+- fi.jumi:jumi-launcher
+- org.objenesis:objenesis
+- net.orfjackal.dimdwarf.dist:dimdwarf-dist
+- org.slf4j:slf4j-jdk14
+- org.scala-tools.testing:specs_2.9.1
+- net.orfjackal.dimdwarf:dimdwarf-core
+- org.hamcrest:hamcrest-library
+- org.specsy:specsy-scala_2.9.2
+- ${project.groupId}:dimdwarf-api-internal
+- com.google.inject:guice
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+      <div class="row">
+      
+      <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-body">
+
+                <form action="<?php echo site_url( 'admin/paket/save_paket' )?>" method="post">
+                    <div class="form-group">
+                      <div class="col-sm-6">
+                      <label for="">Kode Paket</label>
+                      <input type="text" class="form-control" name="kode_paket" id="kode_paket" placeholder="masukkan kode paket disini" value="<?php echo $kode_paket;?>" <?php if($kode_paket!=''){echo'readonly';}?>>
+                      <!-- <?php echo form_error( 'kode_paket', '<p style="color:red;">', '</p>' );?>
+ -->                    </div>
+
+                      <div class="col-sm-6">
+                      <label for="">Nama Paket</label>
+                      <input type="text" class="form-control" name="nama_paket" id="nama_paket" placeholder="masukkan nama paket disini" value="<?php echo $nama_paket;?>">
+                      <?php echo form_error( 'nama_paket', '<p style="color:red;">', '</p>' );?>
+                    </div>
+
+                    <div class="col-sm-6">
+                    <label for="">Tanggal Mulai Paket</label>
+                    <input type="text" class="form-control" name="tgl_mulai_paket" id="tgl_mulai_paket" data-date-format="yyyy-mm-dd"  data-link-field="dtp_input2" data-date-start-date="0d" placeholder="masukkan tanggal awal paket disini" value="<?php date_default_timezone_set('Asia/Jakarta'); echo date('Y-m-01');?>">
+                    <?php echo form_error( 'tgl_mulai_paket', '<p style="color:red;">', '</p>' );?>
+                  </div>
+
+                  <div class="col-sm-6">
+                  <label for="">Tanggal Selesai Paket</label>
+                  <input type="text" class="form-control" name="tgl_selesai_paket" id="tgl_selesai_paket" data-date-format="yyyy-mm-dd"  data-link-field="dtp_input2" data-date-start-date="0d" placeholder="masukkan tanggal akhir paket disini" value="<?php date_default_timezone_set('Asia/Jakarta'); echo date( 'Y-m-d', strtotime(date('Y-m-01'). " + 30 days"));?>">
+                  <?php echo form_error( 'tgl_selesai_paket', '<p style="color:red;">',
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>n(
+        (response) => response.json(),
+        (_) => throw Exception(
+            'An error occured while trying to fetch user data.'),
+      );
+}
+ import 'dart:convert';
+
+import 'package:flutter/material.dart';
+import 'constants.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import '../models/user_model.dart';
+
+class UserRepository {
+  Future<UserModel> fetchUser() async => http
+     .get(
+        '$baseUrl/user',
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+      )
+     .the
+
+Precision: 0
+Recall: 0
+F1 Score: 0

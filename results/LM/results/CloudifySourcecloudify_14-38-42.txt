@@ -1,0 +1,174 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: CloudifySource/cloudify
+    Project Description: \nWelcome to Cloudify\n======================\n\nThe purpose of this README file is to explain how one can easily build fully functional Cloudify version taking source code from GitHub.\n\nFor more information visit us at follow and open new issues please use Available Internet connection \n2. Installed Oracle JDK 6 or higher\n3. Installed Ant 1.8 or higher\n4. Installed maven 3 or higher \n5. System variable M2HOME must be defined and point to maven installation folder.\n\n\nBuild Instructions\n\n1. make sure that you have git, ant and maven installed.\n2. In command line, run the following commands: \n\n\n3. The Cloudify distribution will be available under the \'cloudify/releases/buildBUILDNUMBER/\' directory\n\nImport Cloudify to Eclipse\n\n1. Make sure that the Maven Eclipse Plugin is installed\n2. Import the Cloudify maven project. In the file menu click:\n \'ImportMavenExisting Maven Projects projects\' then select: cloudify/cloudify/pom.xml \n\n\nDebugging the CLI without cloud plugin support\n\n1. To debug the CLI without plugin support\n\n\n2. Connect the eclipse project to port 8000 and start the remote debugging.\n\nDebugging the CLI with cloud plugin support\n\n1. Build cloudify as described above\n2. Enable debugging option in the cloudify startup script:\n On Linux edit cloudify/tmp/tools/cli/cloudify.sh and append ${CLOUDIFYDEBUGOPTIONS} to the commandline adjacent to \n \n On Windows edit cloudify/tmptools/cli/cloudify.bat and append %CLOUDIFYDEBUGOPTIONS% to the commandline adjacent to \n \n3. Connect the eclipse project to port 9000 and start the remote debugging.\n\n\n\n\nCopyright and license\n\nCopyright c 2011 GigaSpaces Technologies Ltd. All rights reserved.\n\nLicensed under the Apache License, Version 2.0 the "License";\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at \n\n \nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\n\n'
+    Existing Dependencies:
+    org.springframework:spring-aop
+- org.springframework.ldap:spring-ldap-core-tiger
+- org.cloudifysource:esc-config
+- org.codehaus.groovy.modules.http-builder:http-builder
+- org.hyperic:sigar
+- com.gigaspaces:gs-runtime
+- org.springframework:spring-test
+- com.google.guava:guava
+- org.apache.commons:commons-exec
+- com.sun.jersey.contribs:jersey-apache-client
+- org.springframework.security:spring-security-web
+- commons-beanutils:commons-beanutils
+- com.jcraft:jsch
+- org.jclouds:jclouds-blobstore
+- org.apache.jclouds.driver:jclouds-bouncycastle
+- org.springframework.ldap:spring-ldap-ldif-core
+- commons-lang:commons-lang
+- org.hyperic:sigar-dist
+- org.springframework.ldap:spring-ldap-ldif-batch
+- com.sun.jersey:jersey-core
+- org.springframework.ldap:spring-ldap-core
+- org.apache.httpcomponents:httpcore
+- org.apache.commons:commons-vfs2
+- org.javassist:javassist
+- org.springframework:spring-context
+- org.cloudifysource:dsl
+- org.cloudifysource:rest-doclet
+- org.cloudifysource:rest-client
+- org.apache.jclouds:jclouds-allcompute
+- log4j:log4j
+- org.apache.maven:maven-project
+- com.sun:deploy
+- org.springframework.security:spring-security-core
+- commons-codec:commons-codec
+- org.springframework:spring-aspects
+- commons-httpclient:commons-httpclient
+- org.cloudifysource:domain
+- commons-logging:commons-logging
+- org.codehaus.jackson:jackson-mapper-asl
+- commons-net:commons-net
+- com.gigaspaces:gs-openspaces
+- org.apache.httpcomponents:httpmime
+- org.springframework.security:spring-security-ldap
+- com.googlecode.java-ipv6:java-ipv6
+- com.h2database:h2
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 46 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+    <div class="col-lg-9">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Data Pendaftar</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="ibox-content">
+                
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover dataTables-example" >
+                    <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Lengkap</th>
+                        <th>Nomor Kartu Keluarga</th>
+                        <th>No. Pendaftaran</th>
+                        <th>No. Kartu Keluarga</th>
+                        <th>Jumlah Keluarga</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="gradeX">
+                            <td>1</td>
+                            <td>Akbar Pratama</td>
+                            <td>3706092701100002</td>
+                            <td>130212-03-0100</td>
+                            <td>3706092701100002</td>
+                            <td>5</td>
+                            <td>Aktif</td>
+                            <td>
+                                    <a href="<?= site_url('pendaftaran/edit/');?>">
+                                        <button class="btn btn-info btn-sm" type="button"><i class="icon-pencil"> </i>&nbsp Ubah</button>
+                                    </a>
+                                    <button class="btn btn-danger btn-sm" type="button"><i class="icon-trash "> </i>&nbsp Hapus</button>
+                            </td>
+
+                        </tr>
+                        <tr class="gradeX">
+                            <td>2</td>
+                            <td>Akbar Pratama</td>
+                            <td>3706092701100002</td>
+                            <td>130212-03-0100</td>
+                            <td>3706092701100002</td>
+                            <td>5</td>
+                            <td>Aktif</td>
+                            <td>
+                                    <a href="<?= site_url('pendaftaran/detail/');?>">
+                                        <button class="btn btn-info btn-sm" type="button"><i class="icon-pencil"> </i>&nbsp Ubah</button>
+                                    </a>
+                                    <button class="btn btn-danger btn-sm" type="button"><i class="icon-trash "> </i>&nbsp Hapus</button>
+                            </
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 46 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e.log(error.message);
+  });
+ const {
+  makeExecutableSchema,
+  addMockFunctionsToSchema
+} = require('graphql-tools');
+const fetch = require('node-fetch');
+
+const resolvers = require('./resolvers');
+
+const schemaSource = require('./schemas')
+
+const schema = makeExecutableSchema({
+  typeDefs: schemaSource,
+  resolvers
+});
+
+addMockFunctionsToSchema({ schema });
+
+
+fetch('http://localhost:4000/graphql', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    query: '{ hello }',
+  }),
+})
+ .then(res => res.json())
+ .then(data => {
+    console.log(JSON.stringify(data, null, 2));
+  })
+ .catch(error => {
+    consol
+
+Precision: 0
+Recall: 0
+F1 Score: 0

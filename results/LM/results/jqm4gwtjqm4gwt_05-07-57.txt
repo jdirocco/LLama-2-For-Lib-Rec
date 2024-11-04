@@ -1,0 +1,145 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: jqm4gwt/jqm4gwt
+    Project Description: jqm4gwt \n=======\n\njqm4gwt is an advanced wrapper over the jQuery Mobile framework, which transforms it into widget library\nthat can be used in a GWT application. This allows GWT developers to develop mobile web apps with and leverage\nthe vibrant jQuery Mobile widgets community without having to hand code javascript. In addition, projects that\ncurrently leverage GWT can add a mobile channel with ease.\n\nNote that because this project is a wrapper into Java, you do not have to invoke javascript native methods,\nnor do you have to pass inline javascript to generic methods. You create widgets exactly as you do in the\nnormal GWT widgetset. In fact you don\'t have to have any understanding of how jQuery Mobile works behind\nthe scenes although of course it helps if you do.\n\nA quick example to create a jQuery Mobile enhanced button is: \n\nor the same as UiBinder template:\n\n\nThe project mirrors the release cycle of jQuery Mobile.\nThat is, when version x.y is released of JQM we try to then release version x.y of jqm4gwt to match.\nBug fixes in our code are released as x.y.z.\n\nThere is ,\nand a selfcontained version of the module providing all of the dependent jQuery Mobile JavaScript, CSS, and images.\n\nJqm4gwt also provides a useful form framework that enables rapid prototyping of form pages, including ajax submission and validation.\nSee more information, see the \n\nThese include the typical hello world and a show case of jQuery Mobile widgets and events.\n\nWhat\'s Supported\n========\n\nThe full jQuery Mobile widget set is supported. That is pages, dialogs, popups, buttons, form elements, list boxes, navigation, etc.\nJqm4gwt goes further and supports standard GWT MVP constructs Activities, Places, etc and mixes that with the jQuery Mobile navigation system seemlessly.\njQuery Mobile is exposed to GWT users via both a simple API and via\n.\n\nGetting Started\n========\n\nRead the . You will need to be familiar with GWT already.\n\nGetting It\n========\n\nLatest Release: 1.4.7 released 27Oct2016\n \n\n\nWant to talk about it? Join the .\n\nRelated Projects\n================\n\nIf you are looking for a GWT wrapper for the desktop \nthen \nor is where to look.\nFor a GWT wrapper of jQuery then is where to go.\n\n\n License\n\n'
+    Existing Dependencies:
+    ${project.groupId}:jqm4gwt-remote
+- org.sonatype.oss:oss-parent
+- com.google.gwt:gwt-user
+- com.sksamuel.jqm4gwt:jqm4gwt-library
+- com.sksamuel.jqm4gwt:jqm4gwt-plugins
+- ${project.groupId}:jqm4gwt-standalone
+- ${project.groupId}:jqm4gwt-datatables
+- com.google.appengine:appengine-tools-sdk
+- ${project.groupId}:jqm4gwt-grid960
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    @extends('layouts.master')
+    @section('title')
+     
+    <title>Dashboard </title>
+    @endsection
+    @section('content')
+    <section class="content-header">
+        <h1>
+         Dashboard
+        </h1>
+    </section>
+         
+            <section class="col-lg-12 connectedSortable">
+        
+             <div class="box box-solid">
+            <div class="overlay" ng-show="overlay"><img src="{!! asset('images/loading2.gif')!!}"  class="center"></div>
+            <div class="box-body">
+              <div class="container">
+                <div class="col-md-8 col-md-offset-2">
+                 <div class="row">
+                    <div class="col-md-3 center">
+                      <h1 ng-bind="total_user"></h1>
+                      <span>User</span>
+                     </div>
+                     <div class="col-md-3 center">
+                      <h1 ng-bind="total_admin"></h1>
+                      <span>Admin</span>
+                     </div>
+                     <div class="col-md-3 center">
+                      <h1 ng-bind="total_product_category"></h1>
+                      <span>Product Category</span>
+                     </div>
+                     <div class="col-md-3 center">
+                      <h1 ng-bind="total_product"></h1>
+                      <span>Product</span>
+                     </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            </div>
+          </section>
+
+            <!-- /.content -->
+           
+    <script src="{!! asset('dist/sweetalert.min.js')!!}"></script>
+    <link rel="stylesheet" href="{!! asset('dist/sweetalert.css')!!}">
+    <link rel="stylesheet" href="{!! asset('plugins/iCheck/all.css')!!}">
+    <script src="{!! asset('plugins/iCheck/icheck.min.js')!!}"></script>
+    <script src="{{asset('plugins/jquery.dataTables.min.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('plugins/jquery.dataTables.min.css')}}">
+     
+    <script>
+      var app = angular.module('app',[]);
+      app.controller('MainCtrl',function($scope,$http,$window){
+         var url = "{!! url('/admin/ajax/dashboard')!!}";
+         $scope.overlay = true;
+         $.post(url,
+               
+               {},
+               function(response){
+                 var data = response.data;
+                 $scope.total_user = data.total_user;
+                 $scope.total_admin = data.total_admin;
+                 $scope.total_product_category = data.total_product_category;
+                 $scope.total_product = data.total_product;
+                 $scope.overlay = false;
+               },"json"
+               );
+       
+         
+        
+      });
+    </script>
+    @endsection
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>   public string UserId { get; set; }
+    }
+} using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using DotNetRules.DataAccess.SqlServer.Attributes;
+
+namespace DotNetRules.DataAccess.SqlServer.Tests.Samples
+{
+    [Database(Name = "Sample")]
+    public class Customer
+    {
+
+        [TableName("Customer")]
+        [PrimaryKey("CustomerId")]
+        [AutoIncrement("CustomerId")]
+        public int CustomerId;
+
+        [Column("CustomerTypeId")]
+        public CustomerType CustomerType { get; set; }
+
+        [Column("UserId")]
+        [Index(Index.Unique)]
+     
+
+Precision: 0
+Recall: 0
+F1 Score: 0

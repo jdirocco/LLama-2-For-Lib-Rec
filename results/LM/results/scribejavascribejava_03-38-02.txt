@@ -1,0 +1,115 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: scribejava/scribejava
+    Project Description: Welcome to the home of ScribeJava, the simple OAuth client Java lib!\n\n \n\n\n Why use ScribeJava?\n\n Dead Simple\n\nWho said OAuth/OAuth2 was difficult? Configuring ScribeJava is so easy your grandma can do it! check it out:\n\n\n\nThat single line added newlines for readability is the only thing you need to configure ScribeJava with LinkedIn\'s OAuth API for example.\n\nWorking executable examples are \nCommon usage: \n\n Threadsafe\n\nHit ScribeJava as hard and with many threads as you like.\n\n Java 7 compatible\n\nThat\'s it. You can use it in old environments and in android apps.\nnote: To compile from sources you will need Java 9 or newer\n\n Async and other HTTP clients\n\nScribeJava support outofbox several HTTP clients:\n ning async http client 1.9.x maven module scribejavahttpclientning \n Async Http Client asynchttpclient 2.x maven module scribejavahttpclientahc \n OkHttp maven module scribejavahttpclientokhttp \n Apache HttpComponents HttpClient maven module scribejavahttpclientapache \n Armeria HTTP client required = java 8 \n any externally created HTTP client \n\n just add corresponding maven modules to your pom\n\n Supports many flows and additional features\n\n The OAuth 2.0 Authorization Framework, , \n The OAuth 2.0 Authorization Framework, \n The OAuth 2.0 Authorization Framework, , \n The OAuth 2.0 Authorization Framework, , \n The OAuth 2.0 Authorization Framework: Bearer Token Usage\n Proof Key for Code Exchange by OAuth Public Clients PKCE, \n OAuth 2.0 Token Revocation, \n OAuth 2.0 Device Authorization Grant \n The OAuth 1.0 Protocol, \n\n Supports all 50 major 1.0a and 2.0 OAuth APIs outofthebox\n\n Asana \n Automatic \n AWeber \n Box \n Dataporten \n Digg \n Discord \n \xd0\x94\xd0\xbe\xd0\xba\xd1\x82\xd0\xbe\xd1\x80 \xd0\xbd\xd0\xb0 \xd1\x80\xd0\xb0\xd0\xb1\xd0\xbe\xd1\x82\xd0\xb5 Dropbox \n Etsy \n Facebook , , \n Fitbit \n Flickr \n Foursquare , \n Frappe \n Freelancer \n Genius \n GitHub , \n Google , , , \n HeadHunter \xd0\xa5\xd1\x8d\xd0\xb4\xd0\xa5\xd0\xb0\xd0\xbd\xd1\x82\xd0\xb5\xd1\x80 \n HiOrgServer \n Imgur \n Instagram \n Kaixin \xe5\xbc\x80\xe5\xbf\x83\xe7\xbd\x91 \n Kakao \n Keycloak \n LinkedIn , , \n Mail.Ru , \n MediaWiki \n Meetup , \n Microsoft Azure Active Directory Azure AD \n Microsoft Azure Active Directory Azure AD 2.0 \n Microsoft Live \n Misfit \n NAVER \n Odnoklassniki \xd0\x9e\xd0\xb4\xd0\xbd\xd0\xbe\xd0\xba\xd0\xbb\xd0\xb0\xd1\x81\xd1\x81\xd0\xbd\xd0\xb8\xd0\xba\xd0\xb8 \n Polar \n Pinterest \n 500px \n Renren \n Salesforce , \n Sina , \n Skyrock \n Slack \n StackExchange \n The Things Network v1staging and v2preview , \n Trello \n Tumblr \n TUT.BY \n Twitter \n uCoz \n Viadeo \n VK \xd0\x92\xd0\x9a\xd0\xbe\xd0\xbd\xd1\x82\xd0\xb0\xd0\xba\xd1\x82\xd0\xb5 , , \n Wunderlist \n Xero \n XING \n Yahoo , \n check the \n\n Small and modular\n\nScribeJava\'s code is small about 1k LOC and simple to understand. No smartass or "clever" hacks here.\nYou can use only \'core\' or \'with apis\' maven modules\n\n AndroidReady\n\nWorks out of the box with androidTM applications.\n\n Stable & bulletproof\n\nGood test coverage to keep you safe from harm.\n\nWhen something bad actually happens, ScribeJava\'s meaningful error messages will tell you exactly what went wrong, when and where.\n\n Pull it from Maven Central!\n\nYou can pull ScribeJava from the central maven repository, just add these to your pom.xml file:\n\n\n\nAnd in case you need just core classes that\'s it, without any external API FB, VK, GitHub, Google etc specific code, you could pull just \'core\' artifact.\n\n\n How can I help ScribeJava\n\nFirst of all, Pull Requests are welcome, the second option is .\n\n When will ScribeJava support XXX new RFC, custom functionality, new API etc.\n\nWhen you will send the pull request. That\'s the way for a majority of changes here.\nOr you can ask someone to make the paid job for you.\nIn some cases, when I\'m interested in changes technically or financially, I can implement the request myself.\n\n Paid consulting\nIf you or your business depends on the Scribejava and you need any specific improvement or new feature not currently implemented in the Scribejava, consider contacting me about a paid job.\n\n Getting started in less than 2 minutes\n\nCheck the page and start rocking! Please Read the before creating an issue :\n\nSome useful info and answers you can find on the \n\nAlso, remember to read the that wrote to easily integrate a server side app with an API twitter in this case.\n\n Questions?\n\nFeel free to drop us an email or create issue right here on github.com\n\n Forks\n\nIf you have a useful fork that should be listed there please contact us\n'
+    Existing Dependencies:
+    com.squareup.okhttp3:okhttp
+- com.github.scribejava:scribejava-httpclient-okhttp
+- org.apache.httpcomponents:httpclient
+- org.apache.httpcomponents:httpasyncclient
+- com.google.code.gson:gson
+- com.squareup.okhttp3:mockwebserver
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <?php echo form_open($url);?>
+      <h2 class="text-center"><b>Register</b></h2>      
+  <div class="container">
+    <div id="login-row" class="row justify-content-center align-items-center">
+      <div id="login-column" class="col-md-6">
+        <div class="box">
+          <div class="form-group">
+            <label for="name" class="col-md-12 control-label">Name</label>
+
+            <div class="col-md-12">
+              <input id="name" type="text" class="form-control" name="name" required autofocus>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="col-md-12 control-label">E-Mail Address</label>
+
+            <div class="col-md-12">
+              <input id="email" type="email" class="form-control" name="email" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password" class="col-md-12 control-label">Password</label>
+
+            <div class="col-md-12">
+              <input id="password" type="password" class="form-control" name="password" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password-confirm" class="col-md-12 control-label">Confirm Password</label>
+  
+            <div class="col-md-12">
+              <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">
+                Register
+              </button>
+            </div><br>
+            <div class="text-center">
+              If you have an account,  <a href="<?php echo $url ='register'?>"><button type="button" class="btn btn-secondary">
+                Login
+              </button></a>
+            </div>
+          </div><br>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php echo form_close();?>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+}
+ using System.IO;
+
+namespace Mp4Explorer.SmoothStreaming.SmallPlayer
+{
+    public class SmoothStreamingPlaylist
+    {
+        public void Create(string path)
+        {
+            Directory.CreateDirectory(path);
+
+            var fileStream = File.CreateText(Path.Combine(path, "SmoothStreamingPlaylist"));
+
+            //fileStream.WriteLine("ManifestUri");
+
+            fileStream.Close();
+            fileStream.Dispose();
+        }
+    }
+
+Precision: 0
+Recall: 0
+F1 Score: 0

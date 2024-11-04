@@ -1,0 +1,152 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: jmock-developers/jmock-library
+    Project Description: JMock Library\n\n\n\n Maven\n\n Gradle\n\n Recent Changes\n 2.10.0\n JUnit 5 Support\n Swap @Rule JUnit4Mockery for @RegisterExtension JMock5Mockery\n Assign to a nonprivate JMock5Mockery or JUnit5 won\'t use it\n\n\n JUnit 4 moved to provided scope in org.jmock:jmock\n This allows dependents to use other versions of junit or other test frameworks e.g. junit 5\n\n Java7 Support will be dropped next release\n\n 2.9.0\n Dropped JDK 6 compliance.\n Exposed the InvocationDispatcher so that ThreadingPolicies \n\n Upgrading to 2.8.X\nAre you seeing NPEs?\n\nWe have had to make a breaking change to . Tests using for method signatures that require native types will throw .\n\nYou should change\n\n oneOfmock.methodWithIntParamswithanyInteger.class;\n\nto the following\n\n oneOfmock.methodWithIntParamswith.intIsanything;\nThis is due to a compiler change in Java 1.7. The 2.6.0 release was compiled with Java 1.6 so it did not suffer this problem.\n\n\n Advantages of jMock 2 over jMock 1\n Uses real method calls, not strings, so you can refactor more easily and\n autocomplete in the IDE.\n Customisation by delegation, not by inheritance.\n Many more pluginpoints for customisation.\n Independent of any testing framework: compatability with the testing\n framework is a pluginpoint.\n Can mock concrete classes without calling their constructors if\n you really want to.\n Uses Hamcrest matchers, so can use a large and evergrowing library\n of matchers in expectations.\n Expectations match in firstin, firstout order, so tests are easier to understand.\n\n Package Structure\n\n 2 is organised into published and internal packages. We guarantee backwards compatability of types in published packages within the same major version of jMock. There are no guarantees about backward compatability for types in internal packages.\n\nTypes defined in published packages may themselves define public methods that accept or return types from internal packages or inherit methods from types in internal packages. Such methods have no compatability guarantees and should not be considered as part of the published interface.\n\n\n Published packages\n\n org.jmock\n\nDSLstyle API\n\n org.jmock.api\n\n org.jmock.lib\n\nConvenient classes that implement the APIs in the core, are used by the DSLstyle API, and can be used in userdefined APIs \n\n org.jmock.integration\n\nClasses integrating jMock with different testing APIs, such as JUnit 3.x, JUnit 4.x and TestNG. \n\n\n Packages of example code\n\n org.jmock.lib.nonstd\n\nLib classes that rely on clever hacks or otherwise cannot be guaranteed to always work in all JVMs. There are no compatability guarantees with these classes. Use at your own risk.\n\n\n Internal packages\n\n org.jmock.internal\n\nInternal implementation details \n\n org.jmock.test\n\nTests for jMock itself\n\n\n Plugin Points\n\n Matcher\n\nControls the matching of invocations to expectations\n\n Action\n\nPerforms an action in response to an invocation\n\n Imposteriser\n\nWraps mock objects in an adapter of the correct type\n\n Expectation\n\nMatches an invocation and fakes its behaviour\n\n ExpectationErrorTranslator\n\nTranslates expectation errors into error type used by a specific \ntesting framework.\n\n MockObjectNamingScheme\n\nCreates names for mock objects based on the mocked type.\n\n Contributing\n\nIf you\'d like to contribute, then do the following:\n\n1. clone this repository \n2. install Maven on Mac OS, for example\n3. in order to generate a signed JAR. This will run all the tests. appears not to suffice.\n\n'
+    Existing Dependencies:
+    org.hamcrest:hamcrest-library
+- org.sonatype.oss:oss-parent
+- org.jmock:jmock-junit4
+- org.ow2.asm:asm
+- org.apache-extras.beanshell:bsh
+- org.hamcrest:hamcrest-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- jQuery -->
+    <script src="{{url('admin/vendor/jquery/jquery.min.js')}}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{url('admin/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="{{url('admin/vendor/metisMenu/metisMenu.min.js')}}"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="{{url('admin/vendor/raphael/raphael.min.js') }}"></script>
+    <script src="{{url('admin/vendor/morrisjs/morris.min.js') }}"></script>
+    <script src="{{url('admin/data/morris-data.js') }}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{url('admin/dist/js/sb-admin-2.js')}}"></script>
+<script type="text/javascript">
+    
+
+    function confirmDelete(id) {
+    
+    var x = confirm('Are you sure you want to delete this?');
+    if (x) {
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8000/admin/product/delete/" + id + " ",
+            success: function (response) {
+                alert("deleted");
+                location.reload();
+            }
+        });
+    } else {
+        return;
+    }
+}
+    
+</script>
+
+</body>
+</html>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t_name',
+        'last_name',
+        'email',
+        'password',
+    ];
+
+    /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password',
+       'remember_token',
+    ];
+
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+
+    /**
+     * @return HasMany
+     */
+    public function userRules(): HasMany
+    {
+        return $this->hasMany(UserRule::class);
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function userRoles(): HasMany
+    {
+        return $this->hasMany(UserRole::class);
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function userPermissions(): HasMany
+    {
+        return $this->hasMany(UserPermission::class);
+    }
+}
+ <?php
+
+namespace App\Models;
+
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
+
+class User extends Authenticatable
+{
+    use HasApiTokens, HasFactory, Notifiable;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var string[]
+     */
+    protected $fillable = [
+        'firs
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,203 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: neuroph/neuroph
+    Project Description: Neuroph Java Neural Network Platform Neuroph\n======\n\nIn order to make Neuroph project easier to use, navigate and maintain this repo has been splitted in two repos which contain Neuroph Framework and Neuroph Studio GUI. These two repos will be active and should be used. This old repo here will remain active for some time, but should not be used for new development and will not include latest additions.\n\n
+    Existing Dependencies:
+    net.sourceforge:javaocr
+- org.powermock:powermock-module-junit4
+- ${project.groupId}:neuroph-core
+- org.boofcv:openkinect
+- ${project.groupId}:neuroph-ocr
+- com.google.android:android
+- nz.ac.waikato.cms.weka:weka-dev
+- org.slf4j:slf4j-api
+- org.apache.commons:commons-lang3
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     // $( function() {
+     //  var $tabs = $( "#tabs" ).tabs();
+    //     $tabs.find( ".ui-tabs-nav" ).sortable({
+    //         axis: "x",
+    //         stop: function() {
+    //             $tabs.tabs( "refresh" );
+    //         }
+    //     });
+     // } );
+    
+
+  // var data = [2, 1, 3, 5, 4, 9];
+  // var data2 = [4, 3, 5, 1, 6, 1, 5, 6, 9, 0, 5, 4, 9];
+  // var data3 = [3, 7, 5, 4, 5, 7, 6];
+  // var data4 = [5, 3, 8, 9, 7, 1, 5, 6, 9, 0, 5, 4, 9];
+
+  var chart = c3.generate({
+    bindto: '#chart',
+    data: {
+        columns: [
+          ['data', 30, 200, 100, 400, 150, 250]
+        ],
+        type:'spline',
+        colors: {
+            data: '#1ab394'
+        },
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+    }
+  });
+
+$('#lineChart').sparkline(data, {
+    type: 'line',
+    width: 200,
+    height: 50,
+    lineColor: '#1ab394',
+    fillColor: "transparent",
+    spotColor: '#e7223d',
+    spotRadius: 4,
+    lineWidth: 2
+});
+
+$('#lineChart2').sparkline(data2, {
+    type: 'line',
+    width: 200,
+    height: 50,
+    lineColor: '#f3565d',
+    fillColor: "transparent",
+    spotColor: '#1ab394',
+    spotRadius: 4,
+    lineWidth: 2
+});
+
+$('#lineChart3').sparkline(data3, {
+    type: 'line',
+    width: 200,
+    height: 50,
+    lineColor: '#1ab394',
+    fillColor: "transparent",
+    spotColor: '#e7223d',
+    spotRadius: 4,
+    lineWidth: 2
+});
+
+$('#lineChart4').sparkline(data4, {
+    type: 'line',
+    width: 200,
+    height: 50,
+    lineColor: '#f3565d',
+    fillColor: "transparent",
+    spotColor: '#1ab394',
+    spotRadius: 4,
+    lineWidth: 2
+});
+
+
+
+$('#barChart').sparkline(data, {
+    type: 'bar',
+    barColor: '#f3565d',
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.example.myapplication.fragments;
+
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.os.Bundle;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.LinearSnapHelper;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SnapHelper;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.example.myapplication.R;
+import com.example.myapplication.adapters.HomeAdapter;
+import com.example.myapplication.models.Food;
+import com.example.myapplication.utils.DividerItemDecorations;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.MetadataChanges;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static android.content.ContentValues.TAG;
+
+/**
+ * A simple {@link Fragment} subclass.
+ * Use the {@link MyCartFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
+public class MyCartFragment extends Fragment {
+    private static final String TAG = "MyCartFragment";
+    private FirebaseAuth fAuth;
+    FirebaseFirestore fStore;
+    String userId;
+    private RecyclerView homeRecycerView;
+    FirestoreRecyclerOptions<Food> foodFirestoreRecyclerOptions;
+    HomeAdapter homeAdapter;
+    private SwipeRefreshLayout swipeRefreshLayout;
+    //    private Toolbar toolbar;
+    private String[] categories = new String[]{"Vegeterian", "Non Vegeterian", "Starter",
+            "Dessert", "Soups","Drinks"};
+    private String category;
+    ArrayList<Food> foodData;
+    Food food;
+    int position;
+
+    public MyCartFragment() {
+        // Required empty public constructor
+        category = new String("Vegeterian");
+    }
+
+    public static MyCartFragment newInstance(String title) {
+        MyCartFragment myCartFragment = new MyCartFragment();
+        Bundle args = new Bundle();
+        myCartFragment.setArguments(args);
+        return myCartFragment;
+    }
+
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,225 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: wicketstuff/core
+    Project Description: Wicket Stuff Core\n==================\n\n\n\n\nOverview:\n\n\n\nWicket Stuff is a collection of open source projects for the web framework created and maintained by the Wicket community.\n\nThe core release is essentially a container into which developers place their project that ensures that regular releases are made that pair the projects to a specific wicket version.\n\nThe project acceptance criteria is very broad. So long as it is wicket related you are welcome to add in your module.\n\nOur release process allows end users an easy way to track a project relative to the wicket release cycle.\n\nFor example, if a user sees a org.wicketstuff:someproject artifact with a version of 1.4.16.1 they can know immediately that it is based on wicket 1.4.16 and that it is the first point release the 1.4.16 version would have been the original release.\n\nProject Documentation Wiki:\n\n\n Documentation JavaDoc:\n\n\nJavaDocs are hosted at . Just append to ' the group id and the artifact id of a module to get its javadoc. For example:\n\n"
+    Existing Dependencies:
+    ${project.groupId}:async-task-impl
+- ${project.groupId}:wicketstuff-inmethod-grid
+- org.eclipse.jetty.aggregate:jetty-all
+- org.springframework:spring-test
+- ${project.groupId}:wicketstuff-console
+- org.apache.wicket:wicket-ioc
+- org.apache.wicket:wicket-core
+- javassist:javassist
+- de.sven-jacobs:loremipsum
+- ${project.groupId}:wicketstuff-googlecharts
+- junit:junit
+- org.apache.wicket:wicket-extensions
+- com.googlecode.htmlcompressor:htmlcompressor
+- org.slf4j:slf4j-simple
+- org.testng:testng
+- commons-dbcp:commons-dbcp
+- ${project.groupId}:wicketstuff-editable-grid
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<?php $__env->startSection('content');?>
+<style type="text/css">
+#divLoading
+{
+    display : none;
+}
+#divLoading.show
+{
+    display : block;
+    position : fixed;
+    z-index: 100;
+    background-image : url("<?php echo e(asset('images/ajax-loader.gif'));?>");
+    background-color:#666;
+    opacity : 0.4;
+    background-repeat : no-repeat;
+    background-position : center;
+    left : 0;
+    bottom : 0;
+    right : 0;
+    top : 0;
+}
+#loadinggif.show
+{
+    left : 10%;
+    top : 10%;
+    position : absolute;
+    z-index: 101;
+    width: 80%;
+}
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 95%;
+    }
+   .c_table td, th {
+        border: 1px solid #cdcdcd;
+        text-align: left;
+        padding: 3px;
+    }
+    th{
+        background-color: #2bacce;
+        color : #FFF;
+    }
+    tr:nth-child(even) {
+        background-color: #a6a6a6;
+    }
+   .c_table tr:nth-child(odd) {
+        background-color: #E8E8E8;
+    }
+   .c_table tr:nth-child(even) {
+        background-color: #EAF2D3;
+    }
+</style>
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table width="100%">
+                            <tr>
+                                <td width="49%" style="text-align: center;">
+                                <?php if(!empty($clientinfo->logo)):?>
+                                    <img src="<?php echo e(url($clientinfo->logo));?>" width="200">
+                                <?php endif;?>
+                                </td>
+                                <td width="3%" style="text-align: right;">
+                                </td>
+                                <td width="50%" style="text-align: left; ">
+                                    <span style="font-weight: bold; font-size: 26px;"><?php echo e($clientinfo->company);?></span>
+                                    <br>
+                                    <?php echo e($clientinfo->address);?>
+
+                                    <br>
+                                    <?php echo e(!empty($clientinfo->website)?'Website: '.$clientinfo->website:'');?>
+
+                                    <br>
+                                    <?php echo e(!empty($clientinfo->phone)?'Telephone: '.$clientinfo->phone:'');?>
+
+                                </td>
+                            </tr>
+                        </table>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import {
+    Component,
+    Input,
+    Output,
+    ViewChild,
+    EventEmitter
+} from "@angular/core";
+import {
+    FormGroup,
+    FormControl,
+    Validators,
+    FormBuilder,
+    AbstractControl,
+    ValidatorFn,
+    FormGroupDirective
+} from "@angular/forms";
+
+import {
+    HttpClient
+} from "@angular/common/http";
+import {
+    HttpHeaders
+} from "@angular/common/http";
+import {
+    NgxSpinnerService
+} from "ngx-spinner";
+import {
+    ToastrSer     if (!this.userForm.valid) {
+
+            this.toastr.error("Please make sure all the inputs are entered correctly!", 'Error!', {
+                timeOut: 4000
+            });
+            return;
+        }
+        // console.log(this.userForm.value)
+        if (!this.adduser) {
+            this.userForm.controls['id'].setValue(this.user.id);
+            var data = this.userForm.value;
+
+            var url = "/api/users?id=" + this.user.id;
+            var method = "put";
+        } else {
+            var data = this.userForm.value;
+            var url = "/api/users";
+            var method = "post";
+        }
+
+        this.showLoader = true;
+        this.http.post("/api/users", this.userForm.value)
+           .subscribe((res) => {
+                    this.showLoader = false;
+                    this.success.emit(true);
+                },
+                error => {
+                    this.toastr.error(error['_body'], 'Error!', {
+                        timeOut: 4000
+                    });
+                    this.showLoader = false;
+                    this.success.emit(false);
+                })
+    }
+}
+
+export const emailDomainValidator: ValidatorFn = (control: AbstractControl): {
+    [key: string]: any
+} => {
+    const forbidden = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
+    if (control.value && forbidden.test(control.value)) {
+        return {
+            invalidDomain: true
+        }
+    }
+    return null;
+};
+
+
+@Component({
+    selector: 'edituser',
+    templateUrl: './edituser.html',
+    providers: [NgxSpinnerService, ToastsManager]
+})
+export class EditUserComponent {
+    @Input() user;
+    // @Output()
+    // success: EventEmitter<any> = new EventEmitter<any
+
+Precision: 0
+Recall: 0
+F1 Score: 0

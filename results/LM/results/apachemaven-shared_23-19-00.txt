@@ -1,0 +1,202 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: apache/maven-shared
+    Project Description: Apache Maven Shared Components\n==============================\n\n list: dev@maven.apache.org\n'
+    Existing Dependencies:
+    org.assertj:assertj-core
+- org.codehaus.plexus:plexus-component-annotations
+- com.google.code.findbugs:jsr305
+- org.hamcrest:hamcrest-core
+- org.codehaus.plexus:plexus-archiver
+- org.codehaus.plexus:plexus-utils
+- org.apache.maven.shared.dependency-analyzer.tests:jarWithCompileDependency1
+- org.apache.maven.its.dependency:test-module1
+- jmock:jmock
+- org.apache.xmlgraphics:batik-swing
+- org.sonatype.aether:aether-api
+- org.eclipse.aether:aether-util
+- org.sonatype.plexus:plexus-build-api
+- org.apache.maven:maven-profile
+- junit:junit
+- org.apache.maven.plugin-testing:maven-plugin-testing-harness
+- org.easymock:easymock
+- org.apache.maven:maven-model
+- commons-lang:commons-lang
+- org.apache.maven.shared:maven-common-artifact-filters
+- org.apache.maven.shared:maven-shared-io
+- org.apache.commons:commons-lang3
+- org.fusesource.jansi:jansi
+- org.sonatype.aether:aether-util
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 25 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div class="row mt-4">
+    
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mt-6">
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-content">
+                   
+                    <div class="card-body pt-10">
+                        <div class="badge badge-warning">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <div class="font-size-20">
+                            <span class="font-weight-bold">{{ $users }}</span>
+                        </div>
+                    </div>
+                    <div class="card-footer text-left pt-0 pb-0"> 
+                        <div class="font-weight-bold">Users</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mt-6">
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-content">
+                   
+                    <div class="card-body pt-10">
+                        <div class="badge badge-success">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <div class="font-size-20">
+                            <span class="font-weight-bold">{{ $admins }}</span>
+                        </div>
+                    </div>
+                    <div class="card-footer text-left pt-0 pb-0"> 
+                        <div class="font-weight-bold">Admins</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 mt-6">
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-content">
+                   
+                    <div class="card-body pt-10">
+                        <div class="badge badge-info">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <div class="font-size-20">
+                            <span class="font-weight-bold">{{ $staff }}</span>
+                        </div>
+                    </div>
+                    <div class="card-footer text-left pt-0 pb-0"> 
+                        <div class="font-weight-bold">Staff</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+ 
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 25 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import { getSerdePlugin } from "@aws-sdk/middleware-serde";
+import { HttpRequest as __HttpRequest, HttpResponse as __HttpResponse } from "@aws-sdk/protocol-http";
+import { Command as $Command } from "@aws-sdk/smithy-client";
+import {
+  FinalizeHandlerArguments,
+  Handler,
+  HandlerExecutionContext,
+  HttpHandlerOptions as __HttpHandlerOptions,
+  MetadataBearer as __MetadataBearer,
+  MiddlewareStack,
+  SerdeContext as __SerdeContext,
+} from "@aws-sdk/types";
+
+import { DeleteDBParameterGroupMessage } from "../models/models_0";
+import {
+  deserializeAws_queryDeleteDBParameterGroupCommand,
+  serializeAws_queryDeleteDBParameterGroupCommand,
+} from "../protocols/Aws_query";
+import { RDSClientResolvedConfig, ServiceInputTypes, ServiceOutputTypes } from "../RDSClient";
+
+export interface DeleteDBParameterGroupCommandInput extends DeleteDBParameterGroupMessage {}
+export interface DeleteDBParameterGroupCommandOutput extends __MetadataBearer {}
+
+/**
+ * <p>Deletes a specified DB parameter group. The DB parameter group to be deleted cannot
+ *           be associated with any DB instances.</p>
+ * @example
+ * Use a bare-bones client and the command you need to make an API call.
+ * ```javascript
+ * import { RDSClient, DeleteDBParameterGroupCommand } from "@aws-sdk/client-rds"; // ES Modules import
+ * // const { RDSClient, DeleteDBParameterGroupCommand } = require("@aws-sdk/client-rds"); // CommonJS import
+ * const client = new RDSClient(config);
+ * const command = new DeleteDBParameterGroupCommand(input);
+ * const response = await client.send(command);
+ * ```
+ *
+ * @see {@link DeleteDBParameterGroupCommandInput} for command's `input` shape.
+ * @see {@link DeleteDBParameterGroupCommandOutput} for command's `response` shape.
+ * @see {@link RDSClientResolvedConfig | config} for RDSClient's `config` shape.
+ *
+ */
+export class DeleteDBParameterGroupCommand extends $Command<
+  DeleteDBParameterGroupCommandInput,
+  DeleteDBParameterGroupCommandOutput,
+  RDSClientResolvedConfig
+> {
+  // Start section: command_properties
+  // End section: command_properties
+
+  constructor(readonly input: DeleteDBParameterGroupCommandInput) {
+    // Start section: command_constructor
+    super();
+    // End section: command_constructor
+  }
+
+  /**
+   * @internal
+   */
+  resolveMiddleware(
+    clientStack: MiddlewareStack<ServiceInputTypes, ServiceOutputTypes>,
+    configuration: RDSClientResolvedConfig,
+    options?: __HttpHandlerOptions
+  ): Handler<DeleteDBParameterGroupCommandInput, DeleteDBParameterGroupCommandOutput> {
+    this.middlewareStack.use(getSerdePlugin(configuration, this.serialize, this.deserialize));
+
+    const stack = clientStack.concat(this.middlewareStack);
+
+    const { logger } = configuration;
+    const clientName = "RDSClient";
+    const commandName = "DeleteDBParameterGroupCommand";
+    const handlerExecutionContext: HandlerExecutionContext = {
+      logger,
+      clientName,
+      commandt> {
+    return deserializeAws_queryDeleteDBParameter
+
+Precision: 0
+Recall: 0
+F1 Score: 0

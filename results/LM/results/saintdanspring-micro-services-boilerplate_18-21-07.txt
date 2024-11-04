@@ -1,0 +1,108 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: saintdan/spring-micro-services-boilerplate
+    Project Description: springmicroservicesboilerplate\n\n\n\n Index\n\n \n \n \n \n \n \n \n \n\nspringmicroservicesboilerplate is a boilerplate which is very helpful for java programmer and friendly to front end.\n\nAnd build with:\n\n \n \n \n \n\nAnd use for filter.\n\n NOTE If you need RSA sign check, you can use of \n\n Build and Run \n\n\n\n NOTICE \n\n Validate failed Response http status is 422Unprocessable Entity\n Server error Response http status is 500Internal Server Error\n\n Usage \n\n Step 1: Import the to your database, I suggest you to use \n\n Step 2: Config your to choose cache type and token store type. \n\n Step 3: Access resources with Swagger. \n\nRun it, Open your browser and access .\n NOTE Default port is 8080, you can modify it which key is in .\n\n\n\nYou can test API by the tips.\n\n1. Get and with login API.\n\nand result is:\n\n\nYou\'ll get a 429 response when you add a "LimitKey" header value like "root" and request the api too often. \n3 times in 10 seconds, you can config it in application.yml.\n\nRequest with "LimitKey" header:\n\nand result is:\n\n\n2. Or get new with .\n\n\n3. Access users.\n\nand result is:\n\n\n Deploy \n\n1. Build war and use tomcat.\n2. Build jar and run \n3. Use Docker. You can build your docker image by . And run it with .\n\n License \n\n\n\nCopyright c since 2015 saintdan\n\n Version History \n\n'
+    Existing Dependencies:
+    org.springframework.boot:spring-boot-starter-data-jpa
+- io.springfox:springfox-swagger-ui
+- org.postgresql:postgresql
+- com.jayway.jsonpath:json-path-assert
+- org.springframework.security.oauth:spring-security-oauth2
+- org.apache.commons:commons-lang3
+- io.springfox:springfox-swagger2
+- org.springframework.boot:spring-boot-starter-web
+- org.springframework.boot:spring-boot-starter-security
+- net.kaczmarzyk:specification-arg-resolver
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}" defer></script>
+    {{-- <script src="{{ asset('js/bootstrap.bundle.js') }}" defer></script> --}}
+    <script src="{{ asset('js/bootstrap.min.js') }}" defer></script>
+
+    <!-- Scripts -->
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e:
+            raise NotImplementedError(
+                'The method `to_numpy` has not been implemented for class '
+                f'{self.__class__.__name__}.')
+
+    @classmethod
+    def from_numpy(cls, array):
+        """Creates a dataset from a NumPy array.
+
+        Arguments:
+            array (np.array): The NumPy array to create the dataset for.
+
+        Returns:
+            :class:`numpy_indexed.data.ArrayDataset`: The created dataset.
+        """
+        raise NotImplementedError(
+            'The method `from_numpy` has not been implemented for '
+            f'class {cls.__name__}.')
+ from..data import ArrayDataset
+
+
+class NumPyArrayDataset(ArrayDataset):
+    """A dataset backed by a NumPy array.
+
+   .. note::
+        In the future this will be replaced by :class:`numpy_indexed.data.ArrayDataset`.
+
+    Arguments:
+        array (np.array): The NumPy array to create the dataset for.
+    """
+    def __init__(self, array, **array_kwargs):
+        if 'copy' not in array_kwargs:
+            # By default we do not copy the array as we do not know if it is
+            # a copy yet.
+            array_kwargs['copy'] = False
+
+        # We call the super constructor with the array as `self.array` and
+        # the `array_kwargs`.
+        super(NumPyArrayDataset, self).__init__(array, array_kwargs=array_kwargs)
+
+    def to_numpy(self):
+        """Returns the dataset in NumPy array format.
+
+        Note:
+            This method can be slow and expensive if a dataset was created
+            from other datasets.
+
+        Returns:
+            np.array: The NumPy array representation of the dataset.
+        """
+        if isinstance(self, NumPyArrayDataset):
+            # If this object is a NumPy array, simply return it as it is already a
+            # NumPy array.
+            return self.array
+        els
+
+Precision: 0.0
+Recall: 0.0
+F1 Score: 0

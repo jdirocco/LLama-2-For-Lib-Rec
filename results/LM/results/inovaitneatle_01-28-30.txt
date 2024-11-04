@@ -1,0 +1,166 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: inovait/neatle
+    Project Description: NeatLE\n\nNeatLE is an Android BTLE Bluetooth low energy support library that simplifies management of BTLE connections, subscriptions, devices and operations.\nIt provides a single entry point for all BTLE related operations.\n\n Features\n Monitor a connection to a BTLE device.\n Send read / write commands and receive responses.\n Subscribe to characteristics and get notified of changes.\n\n Installation\n\nInclude the NeatLE library in your Android project as a Gradle dependency:\n\n\nReplace above with latest version: \n\n Examples\n\n Scan for nearby devices\n\n can be used to scan for all nearby BTLE devices that advertise specific service.\n\n\n\n Monitor for connections:\n\nA tries to connect to a specific BTLE device, and if configured with , will try to maintain that connection until the monitor is stopped.\nThe will be notified of any changes to the connection, e.g. device connected / disconnected.\n\n\n\n\n Create an operation:\n\nAn is a series of read / write commands that can be executed for a specific BTLE device.\nIt can have multiple read and write operations, that will be executed on the device sequentially.\n\nAn operation can also be executed more than once.\n\n Read operation\n\n\n\n Write operation\n\n\n\n Create a subscription:\n\nA listens for notification events on a specific service for a specific characteristic on the BTLE device, and reports them back to the caller.\n\nNote: An active subscription will keep a with the default setting alive.\n\n Permissions\n\nThe following permission are required by NeatLE and are already defined in it\'s manifest:\n\n\nThe permission is considered dangerous on Android 6.0 23 and up, and should be requested manually by the developer, before running NeatLE.\n\n\n License\n\n MIT License\n \n Copyright c 2017 Inova IT\n \n Permission is hereby granted, free of charge, to any person obtaining a copy\n of this software and associated documentation files the "Software", to deal\n in the Software without restriction, including without limitation the rights\n to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n copies of the Software, and to permit persons to whom the Software is\n furnished to do so, subject to the following conditions:\n \n The above copyright notice and this permission notice shall be included in all\n copies or substantial portions of the Software.\n \n THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n SOFTWARE.\n'
+    Existing Dependencies:
+    com.android.support:support-annotations
+- org.robolectric:robolectric
+- org.mockito:mockito-core
+- com.android.support:recyclerview-v7
+- com.jakewharton:butterknife-compiler
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <section id="contact" class="contact_section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="col-md-6 contact_left wow fadeInLeft">
+                            <div class="contact-info">
+                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration,
+                                    by injected humour, or randomised words.</p>
+                                <h3>Our Address</h3>
+                                <p>12345 Street name,California, USA.</p>
+                                <p>+1 234 567 8901</p>
+                                <p>+1 234 567 8901</p>
+                                <p>test@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 wow fadeInRight">
+                            <div id="message"></div>
+                            <form class="form" name="myform" id="myform" action="" method="post">
+                                <input type="text" name="full_name" id="full_name" placeholder="Full Name">
+                                <input type="text" name="email" id="email" placeholder="Email">
+                                <input type="text" name="phone" id="phone" placeholder="Phone">
+                                <textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+								<button class="btn btn-info" type="submit">SUBMIT</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> 160)
+								$data[] = '1';
+							else
+								$data[] = '0';
+						}
+					}
+					else
+					{
+						$data[] = '0';
+						$data[] = '0';
+					}
+				}
+				$fh = new FileHelper();
+				$fileName = $file->getTempName();
+				$fh->writeToFile($fileName,$data);
+				$file->saveAs($fileName);
+				return $file;
+			}
+		}
+	}
+
+	/**
+	 * @inheritdoc
+	 */
+	public function attributeLabels()
+	{
+		return ArrayHelper::merge(
+			parent::attributeLabels(),[
+				'image'	=> Yii::t('app','image'),
+				'statusId'	=> Yii::t('app','Status'),
+				'is_active'	=> Yii::t('app','Active?'),
+			]);
+	}
+
+	/**
+	 * @return \yii\db\ActiveQuery
+	 */
+    public function getStatus()
+	{
+	    return $this->hasOne(Status::className(), ['id' =>'status_id'])->from(Status::tableName());
+	}
+
+	/**
+	 * @return \yii\db\ActiveQuery
+	 */
+	public function getImage()
+	{
+		return $this->hasOne(File::className(), ['id' => 'image_id'])->from(File::tableName());
+	}
+
+	/**
+	 * @return \yii\db\ActiveQuery
+	 */
+	public function getFile()
+	{
+		return Image::find()
+			->where(['id'=>$this->id]);
+	}
+} namespace ommu\article\models;
+
+use Yii;
+use yii\helpers\Html;
+use app\models\CoreSettings;
+use yii\helpers\Inflector;
+use yii\helpers\ArrayHelper;
+use yii\behaviors\SluggableBehavior;
+use app\components\file\FileHelper;
+use app\components\file\Image as FileImage;
+
+class Image extends \app\components\ActiveRecord
+{
+	use \ommu\traits\UtilityTrait;
+
+	public $gridForbiddenColumn = ['id', 'publish','modified_date','modifiedDisplayname', 'updated_date'];
+
+	public $image;
+	public $is_active;
+	public $is_featured;
+	public $creationDisplayname;
+
+	/**
+	 * @return string the associated database table name
+	 */
+	public static function tableName()
+	{
+		return 'ommu_article_image';
+	}
+
+	/**
+	 * @return array validation rules for model attributes.
+	 */
+	public function rules()
+	{
+		return [
+			[['article_id', 'file_id'],'required'],
+			[['publish', 'article_id', 'file_id
+
+Precision: 0
+Recall: 0
+F1 Score: 0

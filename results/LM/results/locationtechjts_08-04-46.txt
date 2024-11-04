@@ -1,0 +1,192 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: locationtech/jts
+    Project Description: JTS Topology Suite\n==================\n\nThe JTS Topology Suite is a Java library for creating and manipulating vector geometry. It also provides a comprehensive set of geometry test cases, and the TestBuilder GUI application for working with and visualizing geometry and JTS functions.\n\n\n\n \n\n\n\n\nJTS is a project in the working group of the Eclipse Foundation.\n\n \n\n Requirements\n\nCurrently JTS targets Java 1.8 and above.\n\n Resources\n\n Code\n \n \n\n Websites\n \n \n\n Communication\n \n \n\n Forums\n \n \n\n License\n\nJTS is open source software. It is duallicensed under:\n\n \n a BSD Style License\n\nSee also:\n\n \n Licensing \n\n Documentation\n\n for the latest version of JTS\n Frequently Asked Questions \n Installing and using JTS \n Guide to tools included with JTS\n how to build and develop for JTS\n How to migrate from previous versions of JTS\n\n History\n\n \n History from the previous JTS SourceForge repo is in the branch \n Older versions of JTS can be found on SourceForge\n There is an archive of distros of older versions \n\n Contributing\n\nIf you are interested in contributing to JTS please read the .\n\n Downstream Projects\n\n Derivatives ports to other languages\n C\n .NET\n JavaScript\n Dart\n\n Via GEOS\n Python wrapper of GEOS\n R wrapper of GEOS\n Ruby wrapper of GEOS\n Swift library using GEOS\n\nThere are many projects using GEOS for a list see the .\n\n\n'
+    Existing Dependencies:
+    com.esri:jpe_sdk
+- com.oracle:ojdbc7
+- org.locationtech.jts.io:jts-io-common
+- org.jdom:jdom2
+- com.googlecode.json-simple:json-simple
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <script src="{{ asset('assets/js/vendors.min.js') }}"></script>
+     <script src="{{ asset('assets/vendors/chartjs/Chart.min.js') }}"></script>
+     <script src="{{ asset('assets/vendors/chartist-js/chartist.min.js') }}"></script>
+     <script src="{{ asset('assets/vendors/chartist-js/chartist-plugin-tooltip.min.js') }}"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+     <script src="{{ asset('assets/vendors/raphael/raphael.min.js') }}"></script>
+
+
+     <!-- Dashboard Scripts -->
+     <script src="{{ asset('assets/js/dashboard.js') }}"></script>
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js') }}"></script>
+    @yield('javascript')
+
+<script>
+    //DatePicker
+    $('.datepicker').datepicker({
+      enableOnReadonly: true,
+      todayHighlight: true,
+      autoclose       : true,
+      format          : 'dd-mm-yyyy'
+  });
+</script>
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>nstead of using `this`. 
+
+### 3. Using `super` for parent class properties.
+
+If you use `super` when calling the parent class constructor, you don't have to specify the parent class properties manually.
+
+You'll only need to specify the child class properties.
+
+```JavaScript
+class Animal {
+  constructor (species) {
+    this.species = species;
+  }
+}
+
+class Cat extends Animal {
+  constructor (species, name, age) {
+    super(species);
+    this.name = name;
+    this.age = age;
+  }
+}
+```
+
+The child class constructor can use `super` to call the parent class constructor. It passes the `species` as an argument. 
+
+Then the child class can pass the `name` and `age` to the parent class.
+
+### 4. Using static methods
+
+Static methods and variables are shared for all instances of a class.
+
+You can define a static method and use it in an instance of that class.
+
+```JavaScript
+class Person {
+  constructor (name) {
+    this.name = name;
+  }
+
+  static isPerson(obj) {
+    if (typeof obj!== 'object') return false
+    return obj.name!== undefined;
+  }
+}
+
+const me = new Person('Chris');
+if (Person.isPerson(me)) {
+  me.age = 28;
+}
+
+console.log(me); // { name: 'Chris', age: 28 }
+```
+
+### 5. Using abstract classes
+
+If you have a class with only abstract methods, you need to create an abstract class for that.
+
+An abstract class cannot be instantiated, but it can be extended.
+
+You can define the parent class with an abstract method and the child classes implement it.
+
+```JavaScript
+abstract class Animal {
+  constructor(species, name, age) {
+    this.species = species;
+    this.name = name;
+    this.age = age;
+  }
+
+  abstract sayHello() {
+
+  }
+}
+
+const cat = new Animal('Cat');  // This line will give you an error
+
+class Cat extends Animal {
+
+  constructor(species, name, age) {
+    super(species, name, age);
+  }
+
+  sayHello() {
+    console.log(`Hi, I'm ${this.name}`);
+  }
+}
+
+const tom = new Cat('Cat','Tom', 5);
+tom.sayHello(); // Hi, I'm Tom
+```
+
+### 6. Extending built-in classes
+
+You can create an inherited class for any built-in JavaScript class. 
+
+```JavaScript
+class BiggerString extends String {
+
+  sayHi() {
+    console.log(`Hi, I\'m ${this}`);
+  }
+
+}
+
+const hi = new BiggerString('Hi');
+hi.sayHi(); // Hi, I'm Hi
+```
+
+### 7. Using `this` keyword
+
+The value of `this` keyword depends on how the function is called. 
+
+If you call it directly, it is the global object.
+
+```JavaScript
+this; // window
+```
+
+If you call it inside a function, `this` is the value of the calling object.
+
+```JavaScript
+function a () {
+    console.log(this); // 'Hi, I\'m Hi'
+}
+
+'
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,163 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: wocommunity/wonder
+    Project Description: \n\nAbout Project Wonder\n\n\nProject Wonder is the largest open source collection of reusable WebObjects frameworks, applications and \nextensions. Also included in the Wonder collection are deployment software and web server adaptors. \n\nProject Wonder builds upon, extends and enhances WebObjects, along with automatically patching bugs in the core WebObjects frameworks. If you know Java, then Project Wonder is a very powerful and productive set of frameworks to build and deploy everything from basic dynamic web applications to high traffic, scalable multifunction server applications.\n\nWhat Can I Create With Project Wonder?\n\n\n Classic Web Applications. Everything you need to integrate with popular SQL database servers, server dynamic web pages, including Ajax functionality, and manage sessionbased user interaction with your application via a web browser.\n Server Applications that service requests from custom client front ends. iTunes itself is an example of a desktop application that interacts with a Project Wonder based serverside application.\n REST server. Everything you need to quickly build a databasebacked server application that integrates with REST clients in many popular request/response formats including xml, json, and plist.\n\nPrerequisites\n\n\nTo be proficent in developing web applications with Project Wonder, the following foundation skills and knowledge will be helpful:\n\n The Basics\n\n HTML\n CSS\n Java\n\n Even Better\n\n SQL\n JavaScript\n Design Patterns\n git\n\nGetting Started\n\n\nIf you are new to Project Wonder you should look at the community's \n\nWiki\n\n\nCheck the for more details on Project Wonder.\n\nTypical Deployment Stack\n\n\n Database Server MySQL, PostgreSQL, Oracle, MS SQL Server, etc.\n Application Server Project Wonder application on Linux or OS X. Some people even deploy on Windows\n Apache Server Apache with WebObjects adaptor module, modWebObjects\n\nDepending on your traffic and application load, the entire stack can run on as little as a 512MB Linux VPS or on a setup that includes thousands of servers that share the load of each component in the stack.\n\nBuilding from Source\n\n\nSee BUILD.txt to find out how to build Wonder.\n\n\nBinaries\n\n\nBinaries can be downloaded from the or \n\nChangelog\n\n\nYou can find changelogs for older releases in the Wiki section or for more recent releases on the .\n"
+    Existing Dependencies:
+    net.sourceforge:jode
+- wonder.eof:Validity
+- wonder.d2w:ERModernLook
+- wonder.misc:ERDirectToRest
+- jfree:jfreechart
+- com.webobjects:JavaXML
+- commons-cli:commons-cli
+- xml-security:xmlsec
+- wonder.businesslogic:ERTaggable
+- com.webobjects:JavaDirectToWeb
+- commons-collections:commons-collections
+- wonder.core:ERDirectToWeb
+- com.webobjects:JavaFoundation
+- wonder.ajax:ERIUI
+- wonder.core:ERPrototypes
+- wonder.businesslogic:ERCoreBusinessLogic
+- wonder.d2w:ERModernDirectToWeb
+- wonder.core:ERJavaMail
+- log4j:log4j
+- wonder.core:ERExtensions
+- wonder.eof:ERRest
+- commons-codec:commons-codec
+- com.webobjects:JavaEOControl
+- commons-httpclient:commons-httpclient
+- wonder.ajax:ERDivaLook
+- org.openid4java:openid4java
+- org.seleniumhq.selenium:selenium-firefox-driver
+- commons-logging:commons-logging
+- com.codeborne:selenide
+- jtidy:jtidy
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 31 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     @if(Auth::check())
+
+     <!-- Navigation-->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <a class="navbar-brand" href="/home/home_page">{{ Auth::user()->name }}</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+          <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Dashboard">
+            <a class="nav-link" href="{{ route('user.dashboard') }}">
+              <i class="fa fa-fw fa-dashboard"></i>
+              <span class="nav-link-text">Dashboard</span>
+            </a>
+          </li>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+              <i class="fa fa-fw fa-wrench"></i>
+              <span class="nav-link-text">Components</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseComponents">
+              <li>
+                <a href="{{ route('user.all_users') }}">All Users</a>
+              </li>
+            </ul>
+
+          </li>
+
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+              <i class="fa fa-fw fa-file"></i>
+              <span class="nav-link-text">Example Pages</span>
+            </a>
+            <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+              @if(Auth::user()->usertype == 'Admin')
+                <li>
+                  <a href="{{ route('user.all_users') }}">Add User</a>
+                </li>
+              @endif
+
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+          <li class="nav-item">
+            <a class="nav-link text-center" id="sidenavToggler">
+              <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+              <
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 31 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ---
+title: 托管实例诊断日志
+description: 了解如何将 Azure SQL 数据库的托管实例与 Azure Monitor 诊断日志绑定
+services: sql-database
+ms.service: sql-database
+ms.subservice: managed-instance
+ms.custom: ''
+ms.devlang: ''
+ms.topic: conceptual
+author: WenJason
+ms.author: v-jay
+ms.reviewer: jrasnik, carlrab
+origin.date: 01/12/2020
+ms.date: 02/17/2020
+ms.openlocfilehash: 2092742689712627560052575781417341784937
+ms.sourcegitcommit: 2ff0d073607bc746ffc638a84bb026d1705e543e
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87826659"
+---
+# <a name="azure-sql-managed-instance-diagnostic-logs"></a>Azure SQL 托管实例诊断日志
+[!INCLUDE[appliesto-sqlmi](../includes/appliesto-sqlmi.md)]
+
+通过 Azure SQL 数据库托管实例，你可以使用 [Azure Monitor 诊断日志](../azure-monitor/platform/platform-logs-overview.md)监视实例运行状况和数据库运行状况。
+
+## <a 在“日志”下，选择以下至少一个日志： 
+   - **ResourceUsageStats**
+   - **查询运行统计信息**
+   - **Errors**
+   - **DatabaseWaitStatistics**
+   - **Timeouts**
+   - **Blocks**
+   - **Deadlocks**
+   - **Storage**
+   - **SQLInsights**
+2. 选择“存储帐户”，并指定数据要存储在其中的存储帐户。
+   - 选择“每天一个文件”（每个日志都分析到单独的文件中）或“将数据追加到单个文件”（所有日志都追加到同一文件，文件可能会很大并且可能难以管理）  。 
+   - 选择“压缩”以压缩日志。 压缩日志是可以快速加载的一个选项，但压缩文件可能会很难管理，因为它们是以文本格式编写的。 Azure 门户支持的压缩文件格式为.gz。 
+
+  
+
+Precision: 0
+Recall: 0
+F1 Score: 0

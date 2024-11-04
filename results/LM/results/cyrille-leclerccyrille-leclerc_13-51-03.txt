@@ -1,0 +1,188 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: cyrille-leclerc/cyrille-leclerc
+    Project Description: '
+    Existing Dependencies:
+    com.jamonapi:jamon
+- org.springframework:spring-aop
+- org.hibernate:hibernate-entitymanager
+- com.thoughtworks.xstream:xstream
+- net.sf.dozer:dozer
+- org.slf4j:slf4j-api
+- org.springframework:spring-aspects
+- commons-jexl:commons-jexl
+- org.springframework:spring-test
+- org.quartz-scheduler:quartz
+- javax.activation:activation
+- xpp3:xpp3_min
+- org.apache.camel:camel-mvel
+- com.google.guava:guava
+- commons-httpclient:commons-httpclient
+- org.apache.camel:camel-ognl
+- javax.resource:connector-api
+- org.perf4j:perf4j
+- commons-beanutils:commons-beanutils
+- hsqldb:hsqldb
+- commons-net:commons-net
+- joda-time:joda-time
+- org.springframework:spring-core
+- org.springframework:spring-jms
+- commons-collections:commons-collections
+- com.sun.xsom:xsom
+- org.apache.derby:derby
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 28 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class M_barang extends CI_model {
+
+    public function tampil_data(){
+        return $this->db->get('tbl_barang');
+    }
+
+    public function tampil_data_barang(){
+        return $this->db->get_where('tbl_barang')->result_array();
+    }
+
+    public function tambah_barang($data,$table){
+        $this->db->insert($table,$data);
+    }
+
+    public function edit_barang($where,$table){
+    return $this->db->get_where($table,$where);
+    }
+
+    public function update_data($where,$data,$table){
+        $this->db->where($where);
+        $this->db->update($table,$data);
+    }
+
+    public function hapus_data($where,$table){
+        $this->db->where($where);
+        $this->db->delete($table);
+    }
+}
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 28 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    <div class="row">
+                    <div style="margin-top: 15px">
+
+                        <h3 class="text-center">
+                            <span class="text-danger">
+                                <u>
+                                    <i>
+                                        {{ __('messages.product_name') }}
+                                    </i>
+                                </u>
+                            </span>
+                        </h3>
+                        <h3 class="text-center">
+                            <span class="text-danger">
+                                <u>
+                                    <i>
+                                        {{ $product['title'] }}
+                                    </i>
+                                </u>
+                            </span>
+                        </h3>
+                    </div>
+
+                    <div style="margin-top: 15px">
+                        @if (session('success'))
+                            <div class="row alert alert-success">
+                                <span style="color:black">
+
+                                    <b>
+                                        {{ session('success') }}
+                                    </b>
+                                </span>
+                            </div>
+                        @endif
+                        @if (session('delete'))
+                            <div class="row alert alert-warning">
+                                <span style="color:red">
+
+                                    <b>
+                                        {{ session('delete') }}
+                                    </b>
+                                </span>
+                            </div>
+                        @endif
+                        <img id="preview" src="{{ asset('image/product_images/'. $product['image']) }}"
+                            class="rounded mx-auto d-block" alt="" height="95px" style="padding-top: 35px; ">
+
+                    </div>
+                    <div style="margin-top: 25px">
+                        <h3 class="text-center">
+
+                            <span id="price" class="price">{{ $product['price'] }}</span>
+                            {{ __('messages.EGP') }}
+                        </h3>
+                    </div>
+                    <div id="description" style="margin-top: 15px; text-align: justify;">
+                        <h4 class="text-center">
+                            <span>{{ $product['description'] }}</span>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
+        </div>
+
+    </div>
+
+
+@stop
+
+@section('footer')
+    <script>
+        var x = document.getElementById('quantity');
+
+        function myFunction() {
+            x.value = x.value - 1;
+
+            var price = document.getElementById('price').innerHTML
+            var quantity = document.getElementById('quantity').value
+            var total = price / quantity
+            var t = document.createTextNode(total);
+
+            if (document.getElementById('price').innerHTML >= 1) {
+                var y = document.getElementById('price')
+                y.innerHTML = price - 1
+            }
+            if (price == 0) {
+                var quantity = document.getElementById('quantity');
+                quantity.value = 0;
+                var y = document.getElementById('price');
+                y.innerHTML = quantity.value;
+                y.style.backgroundColor = "red";
+            }
+
+Precision: 0
+Recall: 0
+F1 Score: 0

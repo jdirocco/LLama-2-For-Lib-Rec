@@ -1,0 +1,195 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: alexholmes/hiped2
+    Project Description: Source code for Hadoop in Practice, Second Edition\n==================================================\n\nThis project contains the source code that accompanies the book\n.\n\n License\n\nApache version 2.0 for more details look at the .\n\n Usage\n\n Tarball\n\nThe easiest way to start working with the examples is to download a tarball distribution of this project.\nDoing so will mean that running your first example is just three steps away:\n\n1. Go to the and download the most recent tarball.\n2. Extract the contents ot the tarball.\n\n $ tar xzvf hippackage.tar.gz\n\n3. The examples in the book all use the script located in to\nexecute the examples. While it\'s not required, it\'s recommended that you\nadd to your\npath so that you can simply execute and execute the examples in the\nbook by directly copypasting the commands.\n\n4. Run the "hello world" example, which is\n\n\n\nDone! The tarball also includes the sources and JavaDocs.\n\n Building your own distribution\n\nHere you\'re going to checkout the trunk and then use Maven to run a build.\n\n1. Checkout the code.\n\n $ git clone git@github.com:alexholmes/hiped2.git\n\n2. Build the code and distribution tarball.\n\n\n\nThe JAR\'s and tarball will be under the directory. Now you can follow the instructions in the\n"Tarball" section above to explode the tarball and run an example.\n\n What\'s next?\n\nAt this point check out the book for more examples and how you can execute them. Or if you find any issues then\nplease go to the and open a new issue.'
+    Existing Dependencies:
+    org.apache.hadoop:hadoop-datajoin
+- org.codehaus.mojo:findbugs-maven-plugin
+- org.apache.avro:avro-tools
+- org.slf4j:slf4j-api
+- org.mockito:mockito-all
+- org.apache.mrunit:mrunit
+- com.twitter:parquet-hive-bundle
+- com.google.protobuf:protobuf-java
+- com.twitter.elephantbird:elephant-bird-hive
+- com.google.guava:guava
+- org.apache.hadoop:hadoop-hdfs
+- org.apache.hive:hive-common
+- com.googlecode.json-simple:json-simple
+- com.maxmind.geoip:geoip-api
+- org.apache.hadoop:hadoop-yarn-server-tests
+- net.sf.jopt-simple:jopt-simple
+- com.hadoop.gplcompression:hadoop-lzo
+- org.apache.hadoop:hadoop-common
+- com.twitter.elephantbird:elephant-bird-hadoop-compat
+- junit:junit
+- org.apache.hadoop:hadoop-mapreduce-client-hs
+- mysql:mysql-connector-java
+- com.twitter.elephantbird:elephant-bird-core
+- net.sf.opencsv:opencsv
+- kafka:kafka
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 26 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     var app = app || {};
+
+      app.AppView = Backbone.View.extend({
+        el: '#app',
+        initialize: function() {
+      this.listenTo(app.Todos, 'add', this.addOne);
+      this.listenTo(app.Todos,'reset', this.addAll);
+
+      this.footer = new app.FooterView({ collection: app.Todos });
+      this.main = new app.MainView();
+
+      this.listenTo(this.main, 'todoListAdd', this.addToCollection);
+
+      app.Todos.fetch();
+    },
+
+    addToCollection: function(todo){
+        app.Todos.add(todo);
+      },
+    addOne: function(todo) {
+      var view = new app.TodoView({model: todo});
+      $('#todo-list').append(view.render().el);
+    },
+
+    addAll: function() {
+      this.$('#todo-list').html('');
+      app.Todos.each(this.addOne, this);
+    }
+  });
+   app.TodoView = Backbone.View.extend({      
+      tagName: 'li',
+      
+      initialize: function() {
+        this.listenTo(this.model, 'change', this.render);
+        this.listenTo(this.model, 'destroy', this.remove);
+      },
+      
+      render: function() {
+        this.$el.html(this.model.get('title'));
+        if (this.model.get('completed') == true){
+          this.$el.toggleClass('completed', this.model.get('completed'));
+        }
+        return this;
+      }      
+    }); 
+    
+    
+    app.Todo = Backbone.Model.extend({
+      initialize: function(){
+      }
+    });        
+    
+    app.Todos = Backbone.Collection.extend({
+      url: '/todos',
+        model: app.Todo,
+        parse: function(resp) {
+        console.log('parse', resp);
+        return resp.content;
+      }
+    });
+    app.addTodoView = Backbone.View.extend({
+    events:{
+      "click #add-todo": "addTodo"
+    },    
+      initialize: function() {
+        this.listenTo(app.Todos, 'add', this.addOne);
+        this.listenTo(app.Todos,'reset', this.addAll);
+      },
+    addOne: function(todo) {
+        var view = new app.TodoView({model: todo});
+        $('#todo-list').append(view.render().el);
+    },
+     addAll: function() {
+      $('#todo-list').html('');
+      app.Todos.each(this.addOne, this);
+    },
+    addTodo: function(e){
+        this.createTodo(this.$('#text').val(), this.$('#description').val())
+    },
+    createTodo: function(text, description){
+        var todo = new app.Todo({title: text, done: false, description:description});
+        app.Todos.create(todo, {
+          //success: function(todo, data){
+          //  console.log(data.content);
+          //},
+          error: function(){
+           
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 26 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e;
+		}
+		
+		return false;
+	}
+
+} package com.jacamars.dsp.rtb.shared;
+
+/**
+ * A class that holds a single campaign and its ads. The class is designed to be used as a map key.
+ * @author Ben M. Faul
+ *
+ */
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CampaignAds {
+
+	List<Ad> ads = new ArrayList();
+	Campaign camp;
+	
+	public CampaignAds(Campaign camp, Ad ad) {
+		this.camp = camp;
+		ads.add(ad);
+	}
+	
+	@Override
+	public int hashCode() {		
+		if (ads.isEmpty())
+			return camp.getName().hashCode();
+		String hash = camp.getName() + ads.get(0).name.getHashCode();
+		return hash.hashCode();
+	}
+	
+	@Override
+	public boolean equals(Object obj)
+	{
+		CampaignAds cads = (CampaignAds)obj;
+		if (cads.camp!= camp)
+			return false;
+		if (cads.ads.isEmpty() || ads.isEmpty())
+			return true;
+		if (cads.ads.get(0).name.getHashCode() == ads.get(0).name.getHashCode()) {
+			if (cads.ads.size() == 1)
+				return true;
+			
+			if (ads.size() == 1)
+				return tru
+
+Precision: 0
+Recall: 0
+F1 Score: 0

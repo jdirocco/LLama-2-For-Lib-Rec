@@ -1,0 +1,187 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: mifos/head
+    Project Description: Welcome to the fight against poverty!\n\n Mifos: Changing the World... One Line at a Time\n\n \nHistory\n=======\n\nTHIS REPOSITORY IS HISTORICAL AND NO LONGER ACTIVELY MAINTAINED. SEE THIS FOR CURRENT MIFOS / APACHE FINERACT:\n Mifos X = Fineract: Fineract CN = Fineract CN Getting Started = \n\nOverview\n========\nMifos is a primarily Webfocused application for microfinance portfolio\nmanagement. Mifos tracks offices, customers, and associated savings, loan, and\nother accounts. Mifos includes a comprehensive reporting suite, and can be\ncustomized to meet the needs of any microfinance institution.\n\n\nQuick start\n========\nLicensing:\n See LICENSE.\n\nInstallation, Configuration, Running:\n See INSTALL.\n\nContributors:\n See AUTHORS.\n\n\nDevelopers\n========\nStart here:\n
+    Existing Dependencies:
+    org.apache.axis:axis-ant
+- commons-configuration:commons-configuration
+- pentaho-library:librepository
+- org.springframework:spring-test
+- org.quartz-scheduler:quartz
+- org.powermock:powermock-api-mockito
+- commons-cli:commons-cli
+- org.beanshell:bsh
+- struts:struts-legacy
+- org.mifos:mifos-server-jetty
+- pentaho-library:libloader
+- commons-lang:commons-lang
+- org.mifos:mifos-rest
+- org.hibernate:hibernate-ehcache
+- org.mifos:mifos-testFramework
+- org.mifos:mifos-server-workspace
+- org.apache.axis:axis
+- pentaho-library:libformula
+- log4j:log4j
+- ${birt.libs.groupId}:dataaggregationapi
+- ${birt.libs.groupId}:engineapi
+- org.hsqldb:hsqldb
+- com.thoughtworks.xstream:xstream
+- org.freemarker:freemarker
+- org.hibernate:hibernate-envers
+- commons-codec:commons-codec
+- org.mifos:mifos-abstract-domain
+- pentaho-library:libdocbundle
+- commons-logging:commons-logging
+- org.codehaus.jackson:jackson-mapper-asl
+- org.easymock:easymockclassextension
+- org.mifos:mifos-organization
+- commons-io:commons-io
+- org.springframework.webflow:spring-webflow
+- org.springframework:spring-expression
+- joda-time:joda-time-hibernate
+- org.hibernate:hibernate-validator
+- dom4j:dom4j
+- com.google.android:android-test
+- ${birt.libs.groupId}:coreapi_MIFOS-5119_MIFOS-5118
+- org.springframework.batch:spring-batch-core
+- org.slf4j:slf4j-log4j12
+- org.springframework.security:spring-security-acl
+- org.eclipse.jetty:jetty-util
+- org.hibernate:hibernate-entitymanager
+- pentaho-library:libxml
+- org.eclipse.jetty:jetty-plus
+- net.sf.json-lib:json-lib
+- pentaho-library:libbase
+- pentaho-report-designer:pentaho-reporting-engine-wizard-xul
+- ${birt.libs.groupId}:dataadapterapi
+- pentaho-library:libfonts
+- org.hamcrest:hamcrest-all
+- junit:junit
+- ${birt.libs.groupId}:modelapi
+- org.aspectj:aspectjweaver
+- org.springframework:spring-webmvc
+- org.springframework.security:spring-security-taglibs
+- bsf:bsf
+- org.mifos:mifos-serviceInterfaces
+- org.dbunit:dbunit
+- xmlunit:xmlunit
+- org.slf4j:slf4j-api
+- org.mockito:mockito-all
+- ${birt.libs.groupId}:org.w3c.css.sac
+- org.apache.poi:poi-ooxml
+- wsdl4j:wsdl4j
+- org.mifos:mifos-reporting-libs
+- pentaho-library:libsparkline
+- joda-time:joda-time
+- strutstest:strutstest
+- rhino:js
+- org.seleniumhq.selenium.client-drivers:selenium-java-client-driver
+- mysql:mysql-connector-java
+- pentaho-reporting-engine:pentaho-reporting-engine-classic-core
+- org.hibernate:hibernate-core
+- org.codehaus.jackson:jackson-core-asl
+- javax.servlet:jstl
+- org.mifos:mifos-war
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 80 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+        <div class="row">
+			<ol class="breadcrumb">
+
+                <li><a href="#">
+                    <em class="fa fa-home"></em>
+                </a></li>
+                <li class="active"><?php echo $title;?></li>
+            </ol>
+			
+			 <div class="col-lg-12">
+                    <h1 class="page-header">Pengajar</h1>
+                </div>
+			
+			<div class="container">
+			<div class="panel">
+                <div class="panel-body">
+				<a href="<?php echo base_url().'pengajar/add';?>"><button type="button" class="btn btn-primary">Tambah Data</button></a>
+				
+				<?php
+			 	if (empty($data)){?>
+				<p>Data Belum Ada</p>
+				<?php	} else
+					{ $no = 1;?>
+				<br /><br />
+				<table class="table table-bordered">
+				<thead>
+				<tr>
+				<th>No</th>
+				<th>Nama Pengajar</th>
+				<th>NIP</th>
+				<th>No HP</th>
+				<th>Alamat</th>
+				<th>Action</th>			
+				</tr>
+				</thead>
+				<tbody>
+				<?php
+				foreach($data as $row) {?>
+				<tr>
+				<td><?php echo $no; $no++;	?></td>
+				<td><?php echo $row['nama_pengajar'];	?></td>
+				<td><?php echo $row['nip'];	?></td>
+				<td><?php echo $row['no_hp_pengajar'];	?></td>
+				<td><?php echo substr($row['alamat'],0,10);?></td>
+				<td><a href="<?php echo base_url().'pengajar/edit/'.$row['id_pengajar'];?>"><button type="button" class="btn btn-primary">Update</button></a> | 
+				<a href="<?php echo base_url().'pengajar/delete/'.$row['id_pengajar'];?>"><button type="button" class="btn btn-danger">Delete</button></a></td>			
+				</tr>
+				<?php	}
+				}
+				?>
+				</tbody>
+				</table>
+					</div>
+					</div>
+					</div> 
+		
+				</div
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 80 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>.com/en/lucas-anderi/44662-lucas-anderi-style-1.html](https://www.readybrides.com/en/lucas-anderi/44662-lucas-anderi-style-1.html)
+ ---
+layout: post
+date: 2015-08-03
+title: "Lucas Anderi Style 1"
+category: Lucas Anderi
+tags: [Lucas Anderi]
+---
+### Lucas Anderi Style 1
+Just **$379.99**
+###      
+<table><tr><td>BRANDS</td><td>Lucas Anderi</td></tr></table>
+<a href="https://www.readybrides.com/en/lucas-anderi/44662-lucas-anderi-style-1.html"><img src="//img.readybrides.com/97144/lucas-anderi-style-1.jpg" alt="Lucas Anderi Style 1" style="width:100%;" /></a>
+
+<!-- break -->
+Buy it: [https://www.readybrides
+
+Precision: 0
+Recall: 0
+F1 Score: 0

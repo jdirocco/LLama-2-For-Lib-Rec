@@ -1,0 +1,182 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: tryggvil/eucalyptus
+    Project Description: EUCALYPTUS: Elastic Utility Computing Architecture \n for Linking Your Programs to Transiently Useful Systems\n\nEUCALYPTUS is an open source service overlay that implements elastic\ncomputing using existing resources. The goal of EUCALYPTUS is to allow\nsites with existing clusters and server infrastructure to cohost an\nelastic computing service that is interfacecompatible with Amazon\'s EC2.\n\nBecause EUCALYPTUS is designed to function as an overlay, it must be able to\nincorporate resources from different clusters or pools. For example,\nEUCALYPTUS allows its administrator to set up a "cloud" that permit users to\nvirtualized OS instances on a number of clusters transparently. Enabling the\nnecessary network interconnectivity in a way that is secure and portable is\none novel feature of EUCALYPTUS. Another stems from its ability to provide\ninterface compatibility with the existing Amazon EC2 service. EUCALYPTUS\nusers can develop using their own local resources and then transition\ndirectly some or all of their functionality to EC2.\n\nFinally, a key requirement of EUCALYPTUS is that it be able to serve as a\nresearch platform for elastic computing. To this end, its design makes two\nsignificant contributions. The first concerns the use of scarce network\nresources in a structured way. A EUCALYPTUS allocation can function\nequally well in an environment in which all processors have externally\nroutable IP addresses e.g. Amazon\'s current environment as well as one in\nwhich only a certain "head instance" is externally routable as is the case\nwith most academic research clusters today. Secondly, EUCALYPTUS\nleverages the extensive Linux packaging and deployment support that is\ncurrently available while requiring minimal modification to the existing\ninstalled OS base. Specifically, the target resources need only run a\nstandard Xenenabled kernel with Xen 3.1 or later hypervisor support. All\nother functionality installs directly without need for kernel patching or\nmodule additions to the host OS domain.\n\nFor more information and complete documentation, please visit our\nwebsite
+    Existing Dependencies:
+    org.hibernate:hibernate-c3p0
+- org.hibernate:hibernate-entitymanager
+- com.thoughtworks.xstream:xstream
+- org.apache.ws.commons.axiom:axiom-api
+- org.opensaml:opensaml
+- org.drools:drools-compiler
+- com.google.code.google-collections:google-collect
+- org.apache.axis2:mex
+- eucalyptus:interface
+- org.apache.axis2:axis2-jibx
+- eucalyptus:storage-manager
+- eucalyptus:cluster-manager
+- org.mortbay.jetty:jetty
+- org.apache.rampart:rahas
+- org.apache.ant:ant
+- org.apache.rampart:rampart
+- com.google.gwt:gwt-user
+- org.mule:mule-core
+- hsqldb:hsqldb
+- org.codehaus.jettison:jettison
+- org.mule.modules:mule-module-client
+- org.jibx:jibx-bind
+- org.mule.transports:mule-transport-vm
+- org.apache.ws.security:wss4j
+- junit:junit
+- org.codehaus.groovy.maven:gmaven-mojo
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 26 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     @php
+     $setting=DB::table('settings')->first();
+     $charge=$setting->shipping_charge;
+     $vat =$setting->vat;
+     @endphp
+   
+     <?php 
+
+     $cart=Cart::content();
+
+    ?>
+  <!-- checkout-area start -->
+    <div class="checkout-area ptb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="checkbox-form">		
+                        <h3>Billing Details</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="checkout-form-list">
+                                    <label>First Name <span class="required">*</span></label>										
+                                    <input placeholder="First Name" type="text" name="billing_name" wire:model='billing_name'>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="checkout-form-list">
+                                    <label>Phone  <span class="required">*</span></label>										
+                                    <input placeholder="Phone" type="text" name="billing_phone" wire:model='billing_phone'>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="checkout-form-list">
+                                    <label>Address <span class="required">*</span></label>										
+                                    <input placeholder="address" type="text" name="billing_address" wire:model='billing_address'>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="checkout-form-list create-acc">	
+                                    <input id="cbox" type="checkbox" name="checkout_toggle">
+                                    <label>Use my account</label>	
+                                </div>
+                                <!--coupon code area start-->
+                                <div class="checkout-form-list">
+                                    <label>Coupon Code</label>
+                                    <input placeholder="Coupon code" type="text">
+                                </div>
+                                <!--coupon code area end-->									
+                            </div>
+                        </div>
+                    </div>
+                </div>	
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="checkbox-form">		
+                        <h3>Shipping Details</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="checkout-form-list">
+                                    <label>First Name <span class="required">*</span></label>										
+                                    <input placeholder="First Name" type="text" name="s_first_name" wire:model='s_first_name'>
+                                </div>
+                
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 26 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.google.firebase.firestore.model.mutation;
+
+import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertNotSame;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+itic com.google.firebase.firestore.testutil.TestUtil.doc;
+import static com.google.firebase.firestore.testutil.TestUtil.map;
+
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import com.google.firebase.firestore.model.DocumentKey;
+import com.google.firebase.firestore.model.MutableDocument;
+import com.google.firebase.firestore.model.ObjectValue;
+import com.google.firebase.firestore.model.SnapshotVersion;
+import com.google.firebase.firestore.model.mutation.Mutation.FieldOrSubfield;
+import java.util.Map;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+/** Tests Mutation.FieldMask. */
+@RunWith(AndroidJUnit4.class)
+public class FieldMaskTest {
+  private static ObjectValue emptyObject() {
+    return ObjectValue.fromMap(map());
+  }
+
+  private static ObjectValue emptyObject(String key, ObjectValue value) {
+    return ObjectValue.fromMap(map(key, value));
+  }
+
+  private static ObjectValue emptyObject(String key1, ObjectValue value1, String key2, ObjectValue value2) {
+    return ObjectValue.fromMap(map(key1, value1, key2, value2));
+  }
+
+  private static ObjectValue emptyObject(String key1, ObjectValue value1, String key2, ObjectValue value2, String key3, ObjectValue value3) {
+    return ObjectValue.fromMap(map(key1, value1, key2, value2, key3, value3));
+  }
+
+  private static ObjectValue object(String key, ObjectValue value) {
+    return ObjectValue.fromMap(map(key, emptyObject())).set(key, value);
+  }
+
+  private static ObjectValue object(String key1, ObjectValue value1, String key2, ObjectValue value2) {
+    return ObjectValue.fromMap(map(key1, emptyObject())).set(key1, value1).set(key2, value2);
+  }
+
+  private static ObjectValue object(String key1, ObjectValue value1, String key2, ObjectValue value2, String key3, ObjectValue value3) {
+    return ObjectValue.fromMap(map(key1, emptyObject(), key2, emptyObject())).set(key1, value1).set(key2, value2).set(key3, value3);
+  }
+
+  @Test
+  public void testGetField() {
+    Mutation.FieldMask fieldMask = Mutation.FieldMask.empty();
+
+    assertEquals(FieldPath.EMPTY_PATH, fieldMask.getField(emptyObject()));
+    assertEquals(FieldPath.EMPTY_PATH, fieldMask.getField(object("a", emptyObject())));
+    assertEquals(FieldPath.EMPTY_PATH, fieldMask.getField(object("b", emptyObject())));
+    assertEquals(FieldPath.EMPTY_PATH, fieldMask.getField(object("b", empty
+
+Precision: 0
+Recall: 0
+F1 Score: 0

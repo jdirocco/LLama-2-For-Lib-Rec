@@ -1,0 +1,156 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: Skarafaz/mercury
+    Project Description: MercurySSH Commander EOL\n\n This app reached the EOL stage; it will not be available on Google Play anymore, but you can download if from FDroid.\n\nSimple Android app that sends preconfigured commands to remote servers via SSH.\n\n\n\n Usage\n\nTake a look at the to learn how to configure and use MercurySSH.\n\n Limitations\n\nThis app is intended to be used as a simple remote so interactive commands and output handling are not supported.\n\n License\n\nThis software is released under GPLv2 License, please refer to the attached LICENSE file for details.\n'
+    Existing Dependencies:
+    com.github.tony19:logback-android-core
+- com.afollestad.material-dialogs:core
+- commons-io:commons-io
+- com.android.support:recyclerview-v7
+- org.apache.commons:commons-lang3
+- org.slf4j:slf4j-api
+- com.jcraft:jsch
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+<?php $__env->startSection('title','Add new User');?>
+<?php echo $__env->make('main', array_except(get_defined_vars(), array('__data', '__path')))->render();?>
+<?php echo $__env->make('components/mainmenu', array_except(get_defined_vars(), array('__data', '__path')))->render();?>
+<?php echo $__env->make('components/breadcrumb', array_except(get_defined_vars(), array('__data', '__path')))->render();?>
+<div class="cat__content">
+
+    <!-- START: ecommerce/product-edit -->
+    <section class="card">
+        <div class="card-header">
+            <div class="dropdown pull-right">
+                <a href="<?php echo e(route('user-create'));?>" class="btn btn-success "><i class="fa fa-plus"></i>&nbsp; &nbsp; Add User &nbsp; &nbsp;</a>
+            </div>
+            <span class="cat__core__title">
+                <strong>User List</strong>
+            </span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <?php if(! $users->isEmpty()):?>
+
+            <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop();?>
+                <div class="col-lg-6">
+                    <div class="row m-b-lg">
+                        <div class="col-lg-4 col-lg-push-1">
+                            <div class="user__info">
+                                <div class="user__info__avatar">
+                                    <?php if(!empty($user->avatar)):?>
+                                      <?php $avatar = $user->avatar;?>
+                                    <?php else:?>
+                                      
+                                    <img src="<?php echo e(asset('assets/backend/images/default-avatar.jpg'));?>" alt="">
+                                    <?php endif;?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-lg-push-1">
+                            <div class="m-b-md">
+
+                                <h5 class="m-t-sm">
+                                    <strong><?php echo e($user->name);?></strong>
+                                </h5>
+                                <strong>Email</strong> :<small class="text-muted"><?php echo e($user->email);?></small><hr/>
+                                <small class="text-success"><span ><strong>Status :</strong> <?php echo e($user->status == 1? 'active':'Inactive');?></span></small><hr/>
+                                <strong>Register Date</strong> : <small class="text-danger"><?php echo e(date("l jS \of F Y h:i:s A"));?></small>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row user__contact">
+                        <div class="col-lg-2">
+                            <span class="contact-type">
+                               
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <div class="container-fluid" id="contacts">
+  <div class="container" >
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h1>Kontakt</h1>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <?php echo form_open_multipart('contact/send');?>
+            <div class="contact-form">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <!-- <div class="col-sm-6"> -->
+              <select name="category" id="category" class="form-control input-lg">
+                <option value="">Kies een categorie</option>
+                <?php foreach ($category as $c):?>
+                <option value="<?php echo $c->idCategory?>"> <?php echo $c->category_name;?></option>
+              <?php endforeach;?>
+              </select>
+            </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <input type="text" id="name" name="name" class="form-control" placeholder="Naam" value="<?= set_value('name');?>"/>
+                </div>
+                <div class="col-sm-6">
+                  <input type="text" id="email" name="email" class="form-control" placeholder="Email" value="<?= set_value('email');?>"/>
+           e="text" name="city" class="form-control" placeholder="Stad" value="<?= set_value('city');?>"/>
+                </div>
+                <div class="col-sm-6">
+                  <input type="text" name="zipCode" class="form-control" placeholder="Postcode" value="<?= set_value('zipcode');?>"/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12 col-sm-12">
+                  <textarea id="message" name="message" class="textarea form-control" rows="10" value="<?= set_value('message');?>" placeholder="Bericht"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12 col-sm-12">
+                  <button class="btn btn-default submit-button pull-left">Stuur</button>
+                </div>
+              </div> 
+            </div>
+            <?php echo form_close();?>
+          </div>
+    </form>
+  </div>
+</div>
+<?php if(isset($_SESSION['send_mail_error'])) {?>
+<div class="alert alert-danger">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Het is niet gelukt je bericht te versturen, probeer het later nog eens.</strong> 
+  </div>
+  <?php }?>
+
+  <?php if(isset($_SESSION['send_mail_success'])) {?>
+  <div class="alert alert-success">
+    <a href="#
+
+Precision: 0
+Recall: 0
+F1 Score: 0

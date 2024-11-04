@@ -1,0 +1,168 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: naturalprogrammer/spring-lemon
+    Project Description: Spring Lemon\r\n\r\n Note: for latest patterns and best practices, follow the successor developing realworld Spring REST APIs and microservices, you face many challenges like\r\n\r\n1. How to follow a stateless and efficient security model \xe2\x80\x93 using JWT authentication, session sliding etc.\r\n1. How to configure Spring Security to suit API development, e.g. returning 200 or 401 responses on login, configuring CORS, JSON vulnerability protection, etc.\r\n1. How to elegantly do validations and exceptions and send precise errors to the client.\r\n1. How to easily mix manual and bean validations in a single validation cycle.\r\n1. How exactly to support multiple social sign up/in, using OpenID Connect or OAuth2 providers such as Google and Facebook.\r\n1. How to code a robust user module with features like sign up, sign in, verify email, social sign up/in, update profile, forgot password, change password, change email, token authentication etc. and share it across all your applications.\r\n1. How to correctly and effeciently secure microservices, using longlived and shortlived JWTs.\r\n1. What would be good ways to test your API.\r\n1. How to do Captcha validation.\r\n1. How to properly organize application properties.\r\n1. How to use PATCH and JsonPatch to handle partial updates correctly.\r\n1. How to do all the above reactively, using WebFlux and WebFlux security.\r\n\r\nCoding all this rightly needs indepth knowledge of Spring. It also takes a lot of development time and effort, and needs to be properly maintained as new versions of Spring comes out.\r\n\r\nSpring Lemon relieves you of all this burden. It's a set of configurable and extensible libraries, providing all above features. Use these to develop quality reactive or nonreactive monolith or microservices applications quickly and easily. \r\n\r\nEven if you don't plan to use Spring Lemon, it's a good example to learn from, because it showcases the essential best practices for developing elegant web services and microservices using Spring.\r\n\r\nMost Spring Boot applications can use Spring Lemon straight away, with some simple configurations. But, if you don't find it suitable for your application, feel free to fork it, or just roll out your own library by learning its patterns and practices. Better yet, be a contributor!\r\n\r\nRead or watch for getting started.\r\n\r\n Libraries hierarchy\r\n\r\n : Useful for elegant exception handling and validation in any Spring project\r\n : Common for all things below\r\n : For developing Spring Web nonreactive microservices\r\n : For developing Spring Web nonreactive JPA microservices\r\n : For developing Spring Web nonreactive JPA monolith or authmicroservice\r\n : For developing Spring WebFlux reactive microservices\r\n : For developing Spring WebFlux reactive MongoDB microservices\r\n : For developing Spring WebFlux reactive MongoDB monolith or authmicroservice\r\n\r\nFor example usages, see\r\n\r\n \r\n \r\n and its \r\n and its \r\n\r\n Documentation and Resources\r\n\r\n Our \xe2\x80\x94 a live book discussing key realworld topics on developing Spring applications and APIs \xe2\x80\x94 is now available for FREE. to get it.\r\n\r\n1. Feature demo: Getting started guide\r\n 1. \r\n 1. \r\n1. \r\n1. Example applications\r\n \r\n \r\n and its \r\n and its \r\n1. of the above applications.\r\n1. \xe2\x80\x94 A sample AngularJS 1.x frontend. It'll work for the application developed in the above as well all the above example applications. See the on how to use it.\r\n1. \xe2\x80\x94 a live book discussing key realworld topics on developing Spring applications, APIs and microservoces. Includes many Spring Lemon topics. to get it now for FREE!\r\n1. \r\n1. \r\n1. Video tutorials coming soon:\r\n 1. Spring Framework 5 REST API Development \xe2\x80\x94 A Complete Blueprint For RealWorld Developers\r\n 1. Spring WebFlux Reactive REST API Development \xe2\x80\x94 A Complete Blueprint For RealWorld Developers\r\n 1. Microservices Using Spring Cloud \xe2\x80\x94 A Rapid Course For Real World Developers\r\n 1. Join to get notified and avail heavy discounts when the above courses get released\r\n\r\n Help and Support\r\n1. Community help is available at , under the tag. Do not miss to tag the questions with !\r\n1. for any bug or enhancement. Please check first that the issue isn't already reported earlier.\r\n1. Mentoring, training and professional help is provided by .\r\n\r\n Releases and Breaking Changes\r\n\r\n1. See .\r\n"
+    Existing Dependencies:
+    org.springframework.boot:spring-boot-starter-data-jpa
+- org.springframework.boot:spring-boot-starter-mail
+- com.github.fge:json-patch
+- org.springframework.security.oauth:spring-security-oauth2
+- org.apache.commons:commons-lang3
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     @if (count($errors)> 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors -> all() as $error)
+            <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif 
+
+
+    <form action="add_news" method="post" class="form-horizontal" enctype="multipart/form-data" >
+        {{ csrf_field() }}
+      <div class="form-group">
+        <label for="exampleInputEmail1">Заголовок</label>
+        <input type="text" name="title" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp">
+
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Текст</label>
+        <textarea class="form-control" name="text"></textarea>
+      </div>   
+
+
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Подкатегория</label>
+        <select class="form-control " name="category_id" id="exampleFormControlSelect1">
+            
+          @foreach ($categories as $category)
+          @if (old('category_id') == $category->id)
+          <option selected value="{{ $category->id }}">{{ $category->name }}</option>
+          @else
+            <option value="{{ $category->id }}">{{ $category->name }}</option>
+          @endif
+          @endforeach
+         
+       
+         
+        </select>
+      </div>
+
+
+       
+       
+      <div class="form-group">
+        <label for="exampleInputEmail1">Изображение</label>
+        <div >
+        <input type="file" name="image"  class="file" data-preview-file-type="any" data-upload-url="#">
+      </div>
+      </div>
+    
+    
+      
+      <button type="submit" class="btn btn-primary">Добавить</button>
+    </form> 
+
+
+    
+     <script>
+        $(document).ready(function() {
+     $(".file").fileinput({
+         showPreview:false,
+     });
+     
+     });
+        
+        </script>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import React from'react';
+import PropTypes from 'prop-types';
+import { Link, withRouter } from'react-router-dom';
+// Components
+import {
+  FormContainer,
+  Form,
+  Label,
+  TextInput,
+  Checkbox,
+  SubmitButton,
+} from '../../../components/Form';
+// Styles
+import { FormStyle } from '../../../styles/forms';
+
+const RegisterForm = ({ error, onSubmit, history }) =>
+  // error.code && history.push('/')
+  // console.log(error.code);
+  (
+    <FormContainer>
+      <FormStyle onSubmit={onSubmit}>
+        <Form>
+          <label htmlFor="username">
+            <Label>Username</Label>
+          </label>
+          <TextInput type="text" name="username" />
+          <label htmlFor="fullName">
+            <Label>Full Name</Label>
+          </label>
+          <TextInput type="text" name="fullName" />
+          <label htmlFor="email">
+            <Label>Email</Label>
+          </label>
+          <Te>
+              <Checkbox type="checkbox" id="privacy" name="privacy" required />
+              I agree to the{' '}
+              <Link to="/terms-and-conditions">terms and conditions</Link>
+             .
+            </Checkbox>
+            <Checkbox type="checkbox" id="newsletter" name="newsletter" required>
+              Send me the news.
+            </Checkbox>
+          </div>
+          <SubmitButton type="submit">Register</SubmitButton>
+        </Form>
+      </FormStyle>
+    </FormContainer>
+  );
+
+RegisterForm.propTypes = {
+  error: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  onSubmit: PropTypes.func.isRequired,
+};
+
+export default withRouter(RegisterForm);
+xtInput type="email" name="email" />
+          <label htmlFor="password">
+            <Label>Password</Label>
+          </label>
+          <TextInput type="password" name="password" />
+          <div>
+            <Checkbox type="checkbox" id="agency" name="agency" required
+
+Precision: 0
+Recall: 0
+F1 Score: 0

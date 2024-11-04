@@ -1,0 +1,162 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: techery/presenta
+    Project Description: What\'s this for?\nMortar and flow together provide a good way to follow MVP pattern and get rid of .\nNevertheless it adds some boilerplate to create a single Screen:\n\n1. Create class;\n2. Create innerclass for Dagger 1 or for Dagger 2 to provide view with presenter;\n3. Inject into the .\n\n already gives a way to provide view with presenter via scoped context, and step 2 is odd in most cases \xe2\x80\x93 that\'s what for. uses basic example with extra extra annotation to skip in the middle of injection.\n\n Getting started\nWorkflow is identical to mortarsample:\n\n1. Add root scope for Mortar, optionally link it with your Dagger main component;\n2. Add Flow support to main activity;\n3. Create Path screen with presenter and view refs.\n\nPresenta provides as a base class for presenters which want to benefit from Dagger and Mortar, so you have Dagger injections available inside presenter with no hassle.\n\n 1. Declare your using \n\n 2. Add Presenter\n\n 3. Use Mortar service to get presenter from View\n\n Arguments for presenter\nMost of the time would have arguments for presenter, which identifies data on screen to be loaded. It\'s easy with innerclass like presenter and still safe \xe2\x80\x93 as presenter is already linked to flow path and will be destroyed even before path is. Note and in next sample:\n\n Dagger\'s Component support \nIs still here. It\'s recommended to use @Scoped injection for singletons per path context. Presenta comes with and for this purpose. \n\n Additions\nMortarflow sample has useful PathContainers to show up working example of it\'s philisophy. Those containers and view helpers are reused in \n Dev. status\nExperimental, trying to use in prod. build.\n Installation\nUse jitpack.io\n\n\n\n\n\n\n'
+    Existing Dependencies:
+    com.jakewharton.madge:madge
+- com.squareup.flow:flow
+- org.glassfish:javax.annotation
+- com.jakewharton.timber:timber
+- com.squareup.retrofit:retrofit-mock
+- com.squareup.okhttp:okhttp
+- com.android.support:appcompat-v7
+- com.google.code.gson:gson
+- com.jakewharton:butterknife
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- jQuery -->
+    <script src="{{url('public/js/jquery.js')}}"></script>
+    <script src="{{url('public/js/jquery-3.3.1.min.js')}}"></script>
+    <!-- Bootstrap Core JavaScript -->
+     <script src="{{url('public/js/bootstrap.min.js')}}"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="{{url('public/js/metisMenu.min.js')}}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{url('public/js/startmin.js')}}"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="{{url('public/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{url('public/js/dataTables.bootstrap.min.js')}}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{url('public/js/startmin.js')}}"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+                responsive: true
+        });
+    });
+    </script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example1').DataTable({
+           // responsive: true
+        });
+    });
+    </script>
+    <script>
+    $(document).ready(function() {
+        $('.dataTables').DataTable({
+           // responsive: true
+        });
+    });
+    </script>
+</body>
+
+</html>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e: false,
+            });
+        }
+    });
+</script>
+@endsection <?php 
+$menu_name ='role_management';
+$rolePermitions=App\Helper\MyFuncs::menuPermission($menu_name);
+print_r($rolePermitions);exit();
+?>
+
+@extends('layouts.admin')
+
+@section('title', 'Admin | Create Permission')
+
+@section('content_header')
+    <h1>Create Permission</h1>
+@stop
+
+@section('content')
+    <!--start page wrapper -->
+<div class="page-content fade-in-up">
+    <div class="col-md-10">
+        <div class="ibox">
+            <div class="ibox-head">
+                <div class="ibox-title">Add Permission Form</div>
+            </div>
+            <div class="ibox-body">
+                <form action="{{url('permissions-store')}}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input name="name" placeholder="Name...." type="text" value="{{old('name')}}" class="form-control" id="name">  
+                        @if($errors->has('name'))
+                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                        @endif
+                    </div>
+
+                   @if($rolePermitions->can('permission')==true || Auth::user()->is_superadmin==1)
+                    <div class="form-group">
+                        <label for="role_name">Role Name</label>
+                        <select name="role_name" id="role_name" class="form-control" >
+                            <option value="">Select Role</option>
+                            @foreach(App\Helpers\MyFuncs::role_list() as $role)
+                            <option value="{{$role->id}}">{{$role->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    @endif
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a class="btn btn-warning" href="{{url('permission-list')}}">Back</a>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+<link rel="stylesheet" href="{{asset('public/css/bootstrap-tagsinput.css')}}">
+<link rel="stylesheet" href="{{asset('public/css/app_style.css')}}">
+@endsection
+@section('js') 
+
+<script src="{{ asset('public/plugins/select2/select2.min.js') }}" defer></script>
+
+<script src="{{asset('public/js/bootstrap-tagsinput.js')}}" defer></script>
+<script src="{{asset('public/js/typeahead.js')}}" defer></script>
+<script src="{{asset('public/js/app_function.js')}}" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.1
+
+Precision: 0
+Recall: 0
+F1 Score: 0

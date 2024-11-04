@@ -1,0 +1,163 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: jboss/metadata
+    Project Description: Metadata data for WildFly.\n========================\n\nThis library is in charge in parsing JakartaEE descriptors and Wildfly extensions.\n\n\nBuilding\n\n\nPrerequisites:\n\n JDK 11 or newer check \n Maven 3.6.0 or newer check \n On nix systems, make sure that the maximum number of open files for the user running the build is at least 4096\n check or more, depending on what other i/o intensive processes the user is running.\n\nTo build with your own Maven installation:\n\n mvn install\n\nLicense\n\n '
+    Existing Dependencies:
+    ${project.groupId}:jboss-metadata-common
+- org.jboss.spec.javax.annotation:jboss-annotations-api_1.2_spec
+- org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec
+- ${project.groupId}:jboss-metadata-test
+- org.jboss.test:jboss-test
+- org.jboss.spec.javax.interceptor:jboss-interceptors-api_1.2_spec
+- org.jboss.ejb3:jboss-ejb3-ext-api
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+    <!-- Start Slider -->
+    <section id="mu-slider">
+      <!-- Start single slider item -->
+      <div class="mu-slider-single">
+        <div class="mu-slider-img">
+          <figure>
+            <img src="<?php echo base_url();?>assets/img/slider/1.jpg" alt="img">
+          </figure>
+        </div>
+        <!-- Start single slider caption -->
+        <div class="mu-slider-content">
+          <!-- start title -->
+          <h4>Welcome To</h4>
+          <!-- end title -->
+          <!-- start caption -->
+          <h2>Academic <span class="mu-slider-title-span">Website</span></h2>
+          <!-- end caption -->
+        </div>
+        <!-- End single slider caption -->
+      </div>
+      <!-- Start single slider item -->
+      <div class="mu-slider-single">
+        <div class="mu-slider-img">
+          <figure>
+            <img src="<?php echo base_url();?>assets/img/slider/2.jpg" alt="img">
+          </figure>
+        </div>
+         <!-- Start single slider caption -->
+        <div class="mu-slider-content">
+          <!-- start title -->
+          <h4>Welcome To</h4>
+          <!-- end title -->
+          <!-- start caption -->
+          <h2>Academic <span class="mu-slider-title-span">Website</span></h2>
+          <!-- end caption -->
+        </div>
+        <!-- End single slider caption -->
+      </div>
+      <!-- Start single slider item -->
+      <div class="mu-slider-single">
+        <div class="mu-slider-img">
+          <figure>
+            <img src="<?php echo base_url();?>assets/img/slider/3.jpg" alt="img">
+          </figure>
+        </div>
+         <!-- Start single slider caption -->
+        <div class="mu-slider-content">
+          <!-- start title -->
+          <h4>Welcome To</h4>
+          <!-- end title -->
+          <!-- start caption -->
+          <h2>Academic <span class="mu-slider-title-span">Website</span></h2>
+          <!-- end caption -->
+        </div>
+        <!-- End single slider caption -->
+      </div>
+      <!-- Start single slider item -->
+      <div class="mu-slider-single">
+        <div class="mu-slider-img">
+          <figure>
+            <img src="<?php echo base_url();?>assets/img/slider/4.jpg" alt="img">
+          </figure>
+        </div>
+         <!-- Start single slider caption -->
+        <div class="mu-slider-content">
+          <!-- start title -->
+          <h4>Welcome To</h4>
+          <!-- end title -->
+          <!-- start caption -->
+          <h2>Academic <span class="mu-slider-title-span">Website</span></h2>
+          <!-- end caption -->
+        </div>
+        <!-- End single slider caption -->
+      </div>
+      <!-- Start single slider item -->
+      
+    </section>
+    <!-- End Slider -->
+
+    <br>
+    <br><br>
+    <br>
+    <br><br>
+    <br>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t;
+
+class CreatePostTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('post', function (Blueprint $table) {
+            $table->increments('p_id');
+            $table->string('title');
+            $table->mediumText('post');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
+    }
+}
+ <?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+use App\pos
+
+Precision: 0
+Recall: 0
+F1 Score: 0

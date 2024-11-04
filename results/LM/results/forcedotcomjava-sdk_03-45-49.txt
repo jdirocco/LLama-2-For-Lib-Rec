@@ -1,0 +1,211 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: forcedotcom/java-sdk
+    Project Description: NO LONGER MAINTAINED\n\nThis library is no longer maintained. Use for building Java applications that connect to the Force.com SOAP API or Bulk API.\n\n Database.com SDK for Java\n\nFor more information on how to use the Java SDK, please read our documentation at How to build\n\nThe Database.com SDK is built using version 2.2.1. Make sure you have the correct version of Maven installed on your system before attempting to build.\n\nRun the following maven command to build from source without running any tests\n\n mvn clean install DskipTests\n\nRun the following maven command to build from source and run only unit tests\n\n mvn clean install\n\nIn addition to unit tests, there are functional and integration tests located in the javasdktest submodule. Before running the functional and integration tests, you'll need to supply test org credentials in the properties file javasdktest/qautils/src/main/resources/forcesdktest.properties\n\nRun the following maven commands to compile and run all tests unit, functional and integration\n\n mvn clean install DskipTests DincludeTestModules\n mvn clean verify DincludeTestModules\n\nYou can run specific test suites by changing your working directory to a test submodule directory, such as javasdktest/forcejpatest/ , and then running the following maven command\n\n mvn verify\n\nKeep in mind that you still must run mvn clean install DskipTests DincludeTestModules from the root directory of the project before running any tests in the javasdktest submodules, otherwise tests may fail.\n"
+    Existing Dependencies:
+    org.springframework:spring-test
+- com.force.sdk:force-jpa-test
+- commons-lang:commons-lang
+- org.apache.httpcomponents:httpcore
+- log4j:log4j
+- cglib:cglib
+- com.googlecode.jmockit:com.googlecode.jmockit
+- com.force.sdk:force-springsecurity
+- commons-logging:commons-logging
+- org.apache.cxf:cxf-rt-frontend-jaxrs
+- commons-io:commons-io
+- com.force.sdk:force-codegen
+- org.slf4j:slf4j-log4j12
+- org.springframework:org.springframework
+- com.force.api:force-metadata-api
+- org.datanucleus:org.datanucleus
+- org.slf4j:org.slf4j
+- com.force.sdk:qa-utils
+- javax.ws.rs:jsr311-api
+- org.springframework:spring-webmvc
+- com.force.api:force-partner-api
+- com.force.sdk:force-jpa
+- com.google.inject:com.google.inject
+- org.slf4j:slf4j-api
+- com.googlecode.json-simple:com.googlecode.json-simple
+- com.google.inject:guice
+- org.codehaus.jackson:jackson-jaxrs
+- com.force.api:force-wsc
+- org.codehaus.jackson:jackson-core-asl
+- javax.servlet:jstl
+- com.google.collections:com.google.collections
+- org.springframework.security:spring-security-web
+- org.apache.geronimo.specs:org.apache.geronimo.specs
+- org.apache.geronimo.specs:geronimo-jpa_2.0_spec
+- org.springframework:spring-context
+- org.apache.xmlbeans:xmlbeans
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 36 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string str = "This is a test";
+    string::size_type pos;
+    // string::size_type pos2;
+
+    pos = str.find('i');
+    cout << str << " -> " << pos << endl;
+
+    pos = str.find("is", 2);
+    cout << str << " -> " << pos << endl;
+
+    pos = str.rfind('i');
+    cout << str << " -> " << pos << endl;
+
+    pos = str.find_first_of('i');
+    cout << str << " -> " << pos << endl;
+
+    pos = str.find_last_of('i');
+    cout << str << " -> " << pos << endl;
+
+    pos = str.find_first_not_of('i');
+    cout << str << " -> " << pos << endl;
+
+    pos = str.find_first_not_of("This is a test", 2);
+    cout << pos << endl;
+
+    pos = str.find_last_not_of('i');
+    cout << pos << endl;
+
+    pos = str.find_last_not_of("This is a test", 2);
+    cout << pos << endl;  
+
+    return 0;
+}
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 36 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e.com/embed/${videoId}?rel=0&amp;enablejsapi=1"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </ModalBody>
+            </Modal>
+          )}
+        </div>
+      </div>
+    </Layout>
+  );
+}
+
+Video.propTypes = {
+  pageContext: PropTypes.shape({
+    videoId: PropTypes.string.isRequired,
+  }).isRequired,
+  location: PropTypes.shape({
+    origin: PropTypes.string,
+  }).isRequired,
+  data: PropTypes.shape({
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+      }),
+    }),
+  }).isRequired,
+};
+
+export default Video;
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY, HH:mm A")
+            title
+            description
+            thumbnail {
+              name
+              childImageSharp {
+                gatsbyImageData(height: 3000, layout: FULL_WIDTH)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+ import React, { useState, useEffect } from'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import { Helmet } from'react-helmet';
+import { Layout } from '@components';
+import { Container, ThemeProvider } from'styled-components';
+import { theme } from '@styles';
+import { usePrefersReducedMotion } from '@hooks';
+import { Button, Icon, Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
+import '@styles/video.css';
+import { StyledHeading, StyledVideoContainer, StyledVideo } from './style';
+
+const DELTA = 100;
+
+function Video({ pageContext: { videoId }, location, data }) {
+  const [showModal, setShowModal] = useState(false);
+  const prefersReducedMotion = usePrefersReducedMotion();
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
+    const timeout = setTimeout(() => {
+      setShowModal(true);
+    }, DELTA);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  return (
+    <Layout location={location}>
+      <Helmet>
+        <title>Video | The Daily Gospel Project</title>
+        <meta name="description" content="The Video Page of The Daily Gospel Project" />
+        <meta property="og:type" content="website
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,178 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: vorburger/mifos-head
+    Project Description: Welcome to the fight against poverty!\n\n Mifos: Changing the World... One Line at a Time\n\n \n\nOverview\n========\nMifos is a primarily Webfocused application for microfinance portfolio\nmanagement. Mifos tracks offices, customers, and associated savings, loan, and\nother accounts. Mifos includes a comprehensive reporting suite, and can be\ncustomized to meet the needs of any microfinance institution.\n\n\nQuick start\n========\nLicensing:\n See LICENSE.\n\nInstallation, Configuration, Running:\n See INSTALL.\n\nContributors:\n See AUTHORS.\n\n\nDevelopers\n========\nStart here:\n
+    Existing Dependencies:
+    org.springframework:spring-aop
+- net.sf.dozer:dozer
+- asm:asm-all
+- commons-configuration:commons-configuration
+- org.springframework:spring-test
+- org.quartz-scheduler:quartz
+- commons-cli:commons-cli
+- org.markdownj:markdownj
+- commons-beanutils:commons-beanutils
+- commons-collections:commons-collections
+- org.mifos:mifos-cashflow
+- struts:struts-legacy
+- org.easymock:easymock
+- commons-lang:commons-lang
+- org.hibernate:hibernate-ehcache
+- org.mifos:mifos-testFramework
+- org.springframework:spring-context
+- log4j:log4j
+- com.thoughtworks.xstream:xstream
+- org.springframework.security:spring-security-core
+- org.freemarker:freemarker
+- org.hibernate:hibernate-envers
+- commons-codec:commons-codec
+- org.mifos:mifos-questionnaire
+- commons-httpclient:commons-httpclient
+- org.mifos:mifos-savings
+- commons-logging:commons-logging
+- org.codehaus.jackson:jackson-mapper-asl
+- junit-addons:junit-addons
+- org.easymock:easymockclassextension
+- commons-io:commons-io
+- org.springframework.webflow:spring-webflow
+- javax.servlet:jsp-api
+- org.mifos:mifos-userInterface
+- org.hibernate:hibernate-validator
+- dom4j:dom4j
+- org.springframework:spring-orm
+- org.springmodules:spring-modules-cache
+- org.springframework.batch:spring-batch-core
+- org.mifos:mifos-common
+- org.slf4j:slf4j-log4j12
+- org.springframework.security:spring-security-acl
+- javax.servlet:servlet-api
+- commons-digester:commons-digester
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 44 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<div class="content">
+            <div class="container-fluid">
+              <div id="msg"></div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header card-header-primary card-header-icon">
+                                <div class="card-icon">
+                                    <i class="material-icons">list</i>
+                                </div>
+                            <div>
+                                <a href="javascript:;" onclick="isShowAddNewModal()" class="btn btn-primary btn-round pull-right" style="float:right"><i class="material-icons">add_to_queue</i>Add New</a>
+                            </div>
+                                
+                            <h4 class="card-title"><?php echo $title;?></h4>
+                            </div>
+                            <div class="card-body">
+                               <table class="table table-hover" id="example1">
+                                <thead>
+                                    <tr>
+                                      <!-- <th>#</th> -->
+                                     <!--  <th>S.No</th> -->
+                                        <th>Category</th>
+                                        <th>Sub Category</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- <?php if($records):
+                                    foreach($records as $k => $r):?>
+                                    <tr id="row_<?php echo $r->id;?>">
+                                        <td><?php echo ++$k;?></td>
+                                        <td><?php echo $r->category_name;?></td>
+                                        <td><?php echo $r->sub_category_name;?></td>
+                                        <td>
+                                            <a href="javascript:;" onclick="isShowUpdateModal(<?php echo $r->id;?>, '<?php echo $r->category_name;?>', '<?php echo $r->sub_category_name;?>');" class="btn-xs" data-toggle="modal" data-target="#updateModal"><i class="material-icons">edit</i></a>
+
+                                            <a href="javascript:isRemove('<?php echo $r->id;?>');" class="btn-xs"> <i class="material-icons">delete</i> </a>
+                                            
+                                        </td>
+                                    </tr>
+                                    <?php endforeach;?>
+                                    <?php endif;?> -->
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+
+
+<!-- ADD MODAL -->
+<div class="modal" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add New Sub Category</h5>
+        <
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 44 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>nstance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        $title = 'Home';
+        $datauser = User::count();
+        $dataadmin = Admin::count();
+
+        return view('home', compact('title','datauser','dataadmin'));
+    }
+}
+ <?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\User;
+use App\Admin;
+
+class HomeController extends Controller
+{
+    /**
+     * Create a new controller i
+
+Precision: 0
+Recall: 0
+F1 Score: 0

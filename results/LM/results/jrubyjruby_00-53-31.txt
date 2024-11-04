@@ -1,0 +1,186 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: jruby/jruby
+    Project Description: JRuby an implementation of the Ruby language on the JVM\n\nMaster: , \n9.3 branch: , \n\n About\n\nJRuby is an implementation of the \nusing the JVM.\n\nIt aims to be a complete, correct and fast implementation of Ruby, at the same\ntime as providing powerful new features such as concurrency without a\n,\ntrue parallelism, and tight integration to the Java language to allow you to\nuse Java classes in your Ruby program and to allow JRuby to be embedded into a\nJava application.\n\nYou can use JRuby simply as a faster version of Ruby, you can use it to run Ruby\non the JVM and access powerful JVM libraries such as highly tuned concurrency\nprimitives, you can use it to embed Ruby as a scripting language in your Java\nprogram, or many other possibilities.\n\nWe're a welcoming community you can talk to us on .\nThere are core team members in the EU and US time zones.\n\nVisit the and the \nfor more information.\n\n Getting JRuby\n\nTo run JRuby you will need a JRE the Java VM runtime environment version 8 or higher.\n\nYour operating system may provide a JRE and JRuby in a package manager, but you may find that this\nversion is very old.\n\nAn alternative is to use one of the .\n\nFor you will need the\n plugin. You may find that your system\npackage manager can provide these. To see which versions of JRuby are available you should run:\n\n\n\nNote: if you do not regularly git update rbenv this list of versions may be out of date.\n\nWe recommend always selecting the latest version of JRuby from the list. \nYou can install that particular version 9.2.13.0 is just for illustration:\n\n\n\n\nFor you can simply do:\n\n\n\nUsing works too:\n\n\n\nYou can also that\nyou can unpack and run in place.\n\n Building JRuby\n\nSee for information about prerequisites, how to compile JRuby from source\nand how to test it.\n\n Authors\n\nStefan Matthias Aust, Anders Bengtsson, Geert Bevin, Ola Bini,\n Piergiuliano Bossi, Johannes Brodwall, Rocky Burt, Paul Butcher,\n Benoit Cerrina, Wyss Clemens, David Corbin, Benoit Daloze, Thomas E Enebo,\n Robert Feldt, Chad Fowler, Russ Freeman, Joey Gibson, Kiel Hodges,\n Xandy Johnson, Kelvin Liu, Kevin Menard, Alan Moore, Akinori Musha,\n Charles Nutter, Takashi Okamoto, Jan Arne Petersen, Tobias Reif, David Saff,\n Subramanya Sastry, Chris Seaton, Nick Sieger, Ed Sinjiashvili, Vladimir Sizikov,\n Daiki Ueno, Matthias Veit, Jason Voegele, Sergey Yevtushenko, Robert Yokota,\n and many gracious contributors from the community.\n\nJRuby uses code generously shared by the creator of the Ruby language,\nYukihiro Matsumoto .\n\nProject Contact: Thomas E Enebo \n\n License\n\nJRuby is licensed under a tri EPL/GPL/LGPL license. You can use it,\nredistribute it and/or modify it under the terms of the:\n\n Eclipse Public License version 2.0\n OR\n GNU General Public License version 2\n OR\n GNU Lesser General Public License version 2.1\n\nSome components have other licenses and copyright. See the \nfile for more specifics.\n"
+    Existing Dependencies:
+    org.slf4j:slf4j-api
+- rubygems:jar-dependencies
+- org.ow2.asm:asm
+- com.github.jnr:jnr-x86asm
+- org.openjdk.jmh:jmh-core-benchmarks
+- rubygems:net-telnet
+- com.headius:options
+- org.osgi:org.osgi.core
+- org.jruby.joni:joni
+- org.apache.ant:ant
+- com.github.jnr:jnr-posix
+- com.martiansoftware:nailgun-server
+- joda-time:joda-time
+- rubygems:rake
+- org.jruby.extras:bytelist
+- org.jruby.jcodings:jcodings
+- junit:junit
+- rubygems:test-unit
+- org.ow2.asm:asm-util
+- com.github.jnr:jnr-unixsocket
+- rubygems:did_you_mean
+- org.jruby:joda-timezones
+- rubygems:diff-lcs
+- org.jruby:jruby
+- com.jcraft:jzlib
+- org.slf4j:slf4j-simple
+- com.github.jnr:jnr-enxio
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 27 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<form action='#' method="post" id='addUser' enctype="multipart/form-data">
+
+    @csrf
+
+    <div class="col-sm-12">
+        <div class="row">
+
+            <div class="col-lg-3">
+
+                <div class="form-group">
+                    <label for="name">{{ __('messages.Name') }} :</label>
+                    <input type="text" class="form-control" name="name">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email"> Email :</label>
+                    <input type="email" class="form-control" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">{{__('messages.password')}}</label>
+                    <input type="password"  class="form-control" name="password">
+                </div>
+
+
+            </br>
+        </br>
+    </div>
+    <div class="col-lg-3">
+        <div class="form-group">
+            <label for="phone">Phone</label>
+
+            <input type="tel" class="form-control" name="phone">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">{{__('messages.Gender')}}</label>
+            <select class="custom-select my-1 mr-sm-2" name="gender">
+                <option selected>{{__('messages.Gender')}}</option>
+                <option value="male">{{__('messages.Male')}}</option>
+                <option value="female">{{__('messages.female')}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="image">{{__('messages.image')}}</label>
+            <input type="file" name="image">
+        </div>
+
+
+        
+    </div>
+    <div class="col-lg-3">
+        @livewire('city')
+    </div>
+
+    <div class="col-sm-6 mb-6 ml-6">
+            <button class="btn btn-primary" type="submit">{{__('messages.Save')}}</button>
+            <a href="{{route('home')}}">
+                <button class="btn btn-danger" type="button">{{__('messages.Cancel')}}</button>
+            </a>
+        </form>
+
+    </div>
+</div>
+</div>
+
+
+{{--<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>--}}
+{{--<script src="{{ asset('assets/js/jquery.dataTables.min.js') }}"></script>--}}
+{{--<script src="{{ asset('assets/js/jquery.dataTables.js') }}"></script>--}}
+{{--<script src="{{ asset('assets/js/dataTables.bootstrap.js') }}"></script>--}}
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 27 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import { Component, Input, OnInit, OnDestroy, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { AppSettings } from '../app.settings';
+import { DataService } from '../data.service';
+import { AuthService } from '../auth.service';
+
+import { MatDialog, MatDialogRef } from '@angular/material';
+import { ConfirmDialog } from '../confirm-dialog/confirm-dialog.component'
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
+
+@Component({
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.css']
+})
+
+export class Heat {
+
+    @Input() currentPage = '';
+    @Input() pageTitle = '';
+    @Output() currentPageChanging = new EventEmitter<string>();
+
+    constructor(private router: Router, private dataService: DataService, public dialog: MatDialog, private authService: AuthService) {
+
+    }
+
+    openConfirmationDialog(message: string, buttonText: string): Promise<any> {
+        let dialogRef = this.dialog.open(ConfirmDialogComponent, {
+            minWidth: '300px',
+            data: {
+                message: message,
+                buttonText: buttonText,
+            }
+        });
+
+        return dialogRef.afterClosed().catch(error => {
+            console.warn('Confirm Dialog was dismissed');
+        });
+
+    }
+
+    navigateToLogin(page) {
+        this.openConfirmationDialog(AppSettings.LOGIN_TEXT, AppSettings.LOGIN_BUTTON).then(result => {
+            if (result) {
+                localStorage.removeItem('user');
+                localStorage.removeItem('currentUser');
+                this.router.navigateByUrl('/login');
+            }
+        })
+    }
+}derComponen
+
+Precision: 0
+Recall: 0
+F1 Score: 0

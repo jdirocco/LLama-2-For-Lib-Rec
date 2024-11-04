@@ -1,0 +1,109 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: apache/servicemix4-kernel
+    Project Description: /\r\n Licensed to the Apache Software Foundation ASF under one or more\r\n contributor license agreements. See the NOTICE file distributed with\r\n this work for additional information regarding copyright ownership.\r\n The ASF licenses this file to You under the Apache License, Version 2.0\r\n the "License"; you may not use this file except in compliance with\r\n the License. You may obtain a copy of the License at\r\n \r\n \r\n Unless required by applicable law or agreed to in writing, software\r\n distributed under the License is distributed on an "AS IS" BASIS,\r\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n See the License for the specific language governing permissions and\r\n limitations under the License.\r\n /\r\n\r\nWelcome to Apache ServiceMix Kernel \r\n====================================\r\nApache ServiceMix Kernel is a small OSGi based kernel which provides a \r\nlightweight container onto which various bundles can be deployed.\r\n\r\nThe following features are included:\r\n Hot deployment: ServiceMix Kernel supports hot deployment of OSGi bundles by monitoring\r\n jar files inside the home/deploy directory. Each time a jar is copied in this folder,\r\n it will be installed inside the runtime. You can then update or delete it and changes will\r\n be handled automatically. In addition, the Kernel also supports exploded bundles and custom\r\n deployers a spring one is included by default.\r\n Dynamic configuration: Services are usually configured through the ConfigurationAdmin OSGi\r\n service. Such configuration can be defined in ServiceMix Kernel using property files inside\r\n the home/etc directory. These configurations are monitored and changes on the properties\r\n files will be propagated to the services.\r\n Logging System: using a centralized logging back end supported by Log4J, ServiceMix Kernel\r\n supports a number of different APIs JDK 1.4, JCL, SLF4J, Avalon, Tomcat, OSGi\r\n Provisioning: Provisioning of libraries or applications can be done through a number of\r\n different ways, by which they will be downloaded locally, installed and started.\r\n Native OS integration: ServiceMix Kernel can be integrated into your own Operating System as\r\n a service so that the lifecycle will be bound to your Operating System.\r\n Extensible Shell console: ServiceMix features a nice text console where you can manage the\r\n services, install new applications or libraries and manage their state. This shell is easily\r\n extensible by deploying new commands dynamically along with new features or applications.\r\n Remote access: use any SSH client to connect to the kernel and issue commands in the console\r\n Security framework based on JAAS\r\n Managing instances: ServiceMix Kernel provides simple commands for managing instances of\r\n ServiceMix Kernel. You can easily create, delete, start and stop instances of ServiceMix\r\n Kernel through the console.\r\n\r\nGetting Started\r\n===============\r\nFor an Apache ServiceMix Kernel source distribution, please read \r\nBUILDING.txt for instructions on building Apache ServiceMix Kernel. \r\n\r\nFor an Apache ServiceMix Kernel binary distribution, please read \r\nRELEASENOTES.txt for installation instructions and list of supported \r\nand unsupported features.\r\n\r\nAlternatively, you can also find out how to get started here:\r\n you need more help try talking to us on our mailing lists\r\n you find any issues with ServiceMix Kernel, please submit reports \r\nwith JIRA here:\r\n welcome contributions, and encourage you to get involved in the \r\nServiceMix community. If you\'d like to learn more about how you can \r\ncontribute, please see:\r\n thanks for using Apache ServiceMix.\r\n\r\n\r\nThe ServiceMix Team\r\n
+    Existing Dependencies:
+    org.apache.geronimo.gshell.wisdom:gshell-wisdom-core
+- org.apache.geronimo.gshell.commands:gshell-file
+- org.slf4j:slf4j-jdk14
+- org.apache.servicemix.specs:org.apache.servicemix.specs.jaxp-api-1.4
+- org.apache.servicemix.kernel.gshell:org.apache.servicemix.kernel.gshell.log
+- org.apache.servicemix.bundles:org.apache.servicemix.bundles.cglib
+- org.apache.servicemix.bundles:org.apache.servicemix.bundles.woodstox
+- org.ops4j.pax.url:pax-url-wrap
+- org.apache.servicemix.kernel.testing:org.apache.servicemix.kernel.testing.support
+- org.apache.servicemix.bundles:org.apache.servicemix.bundles.commons-httpclient
+- org.easymock:easymock
+- org.apache.servicemix.kernel:apache-servicemix-kernel
+- org.apache.servicemix.bundles:org.apache.servicemix.bundles.commons-codec
+- org.apache.servicemix.kernel:org.apache.servicemix.kernel.main
+- org.apache.servicemix.kernel.gshell:org.apache.servicemix.kernel.gshell.packages
+- org.apache.servicemix.kernel:org.apache.servicemix.kernel.client
+- log4j:log4j
+- org.apache.servicemix.kernel.jaas:org.apache.servicemix.kernel.jaas.modules
+- com.thoughtworks.xstream:xstream
+- org.apache.servicemix.bundles:org.apache.servicemix.bundles.jline
+- org.codehaus.plexus:plexus-component-api
+- commons-logging:commons-logging
+- org.apache.geronimo.gshell.support:gshell-spring
+- org.slf4j:slf4j-nop
+- org.osgi:jmx
+- org.apache.felix:org.osgi.core
+- org.apache.felix:org.apache.felix.framework
+- org.apache.geronimo.gshell.commands:gshell-text
+- org.apache.geronimo.specs:geronimo-annotation_1.0_spec
+- org.apache.servicemix.kernel.gshell:org.apache.servicemix.kernel.gshell.osgi
+- org.apache.servicemix.kernel:org.apache.servicemix.kernel.demos
+- org.apache.servicemix.kernel.testing:org.apache.servicemix.kernel.testing.itests
+- org.apache.servicemix.bundles:org.apache.servicemix.bundles.jaxp-ri
+- org.springframework.osgi:spring-osgi-annotation
+- org.apache.servicemix.kernel.gshell:org.apache.servicemix.kernel.gshell.admin
+- org.apache.servicemix.kernel:org.apache.servicemix.kernel.filemonitor
+- org.springframework.osgi:spring-osgi-test
+- org.codehaus.plexus:plexus-utils
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 39 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    </div>
+    <!-- /page content -->
+    
+  
+    
+    <script src="<?php echo base_url();?>assets/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="<?php echo base_url();?>assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="<?php echo base_url();?>assets/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="<?php echo base_url();?>assets/vendors/nprogress/nprogress.js"></script>
+    <!-- morris.js -->
+    <script src="<?php echo base_url();?>assets/vendors/raphael/raphael.min.js"></script>
+    <script src="<?php echo base_url();?>assets/vendors/morris.js/morris.min.js"></script>
+    
+    <!-- bootstrap-progressbar -->
+    <script src="<?php echo base_url();?>assets/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+   
+    <!-- Custom Theme Scripts -->
+    <script src="<?php echo base_url();?>assets/build/js/custom.min.js"></script>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 39 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+
+namespace CognitiveSearchIntegration.Runners.Models.Configs.Validation
+{
+    public class ValidateConfiguration
+    {
+        public List<string> ExpectedErrors { get; set; } = new();
+        public bool ThrowOnErrors { get; set; }
+        public bool Skip { get; set; }
+    }
+}
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,187 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: yandex-qatools/embedded-services
+    Project Description: Embedded services\n \n\nThis project allows you to easily start your project with the embedded database PostgreSQL, MongoDB services and connect \nthem with the embedded ElasticSearch instance for full text indexing and search.\n\n Why?\n\nIt\'s very easy to incorporate the embedded MongoDB/PostgreSQL within your test process.\n\n Maven\n\nAdd the following dependency to your pom.xml:\n\n How to run embedded MongoDB with ElasticSearch\n\n\n\n How to run embedded PostgreSQL with ElasticSearch\n\n\n'
+    Existing Dependencies:
+    org.mongodb:mongo-java-driver
+- org.xbib.elasticsearch.plugin:elasticsearch-river-jdbc
+- org.jodd:jodd
+- org.flywaydb:flyway-core
+- commons-io:commons-io
+- org.postgresql:postgresql
+- de.flapdoodle.embed:de.flapdoodle.embed.mongo
+- org.slf4j:slf4j-api
+- org.codehaus.groovy:groovy-all
+- org.mockito:mockito-all
+- org.slf4j:slf4j-log4j12
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+<!-- Start Footer -->
+<footer class="footer-area bg-f">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-6">
+				<h3>About Us</h3>
+				<p>Praesent eu vehicula velit, nec convallis lectus. Maecenas pulvinar euismod imperdiet. Maecenas at magna ipsum. </p>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<h3>Subscribe</h3>
+				<div class="subscribe_form">
+					<form class="subscribe_form">
+						<input name="EMAIL" id="subs-email" class="form_input" placeholder="Email Address..." type="email">
+						<button type="submit" class="submit">SUBSCRIBE</button>
+						<div class="clearfix"></div>
+					</form>
+				</div>
+				<ul class="list-inline f-social">
+					<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+					<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+					<li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<h3>Contact information</h3>
+				<p class="lead">Wall Street, New York, United States</p>
+				<p class="lead"><a href="#">+1 800 1236879</a></p>
+				<p><a href="#"> info@admin.com</a></p>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<h3>Opening hours</h3>
+				<p><span class="text-color">Monday: </span>Closed</p>
+				<p><span class="text-color">Tue-Wed :</span> 9:Am - 10 PM</p>
+				<p><span class="text-color">Thu-Fri :</span> 9:Am - 10 PM</p>
+				<p><span class="text-color">Sat-Sun :</span> 5:
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+      },
+      {
+        id: 3,
+        label: "Option 3",
+      },
+      {
+        id: 4,
+        label: "Option 4",
+      },
+      {
+        id: 5,
+        label: "Option 5",
+      },
+    ],
+  },
+};
+
+export default function CheckBox(props) {
+  return /* @__PURE__ */ React__default.createElement(core.Group, {
+    position: "center",
+  }, /* @__PURE__ */ React__default.createElement(
+    core.Group,
+    {
+      direction: "column",
+      spacing: "xs",
+      grow: true,
+    },
+    /* @__PURE__ */ React__default.createElement(core.Group, {
+      position: "apart",
+      direction: "row",
+    }, props.options.map((item) =>
+      /* @__PURE__ */ React__default.createElement(
+        core.Checkbox,
+        {
+          label: item.label,
+          id: item.id,
+          key: item.id,
+          style: props.customStyle,
+        },
+      ),
+    )),
+    /* @__PURE__ */ React__default.createElement(core.Group, {
+      position: "apart",
+      direction: "row",
+    }, props.options.map((item) =>
+      /* @__PURE__ */ React__default.createElement(
+        core.Checkbox,
+        {
+          label: item.label,
+          id: item.id,
+          key: item.id,
+          checked: true,
+          style: props.customStyle,
+        },
+      ),
+    )),
+    /* @__PURE__ */ React__default.createElement(core.Group, {
+      position: "apart",
+      direction: "row",
+    }, props.options.map((item) =>
+      /* @__PURE__ */ React__default.createElement(
+        core.Checkbox,
+        {
+          label: item.label,
+          id: item.id,
+          key: item.id,
+          disabled: true,
+          style: props.customStyle,
+        },
+      ),
+    )),
+    /* @__PURE__ */ React__default.createElement(core.Group, {
+      position: "apart",
+      direction: "column",
+      spacing: "xs",
+    }, props.options.map((item) =>
+      /* @__PURE__ */ React__default.createElement(
+        core.Group,
+        null,
+        /* @__PURE__ */ React__default.createElement(core.Group, {
+          position: "apart",
+          direction: "row",
+        }, /* @__PURE__ */ React__default.createElement(
+          core.Text,
+          {
+            size: "xs",
+            bold: true,
+          },
+          "Inline: ",
+        ), /* @__PURE__ */ React__default.createElement(
+          core.Checkbox,
+          {
+            label: item.label,
+            id: item.id,
+            key: item.id,
+            style: props.customStyle,
+          },
+        )),
+        /* @__PURE__ */ React__default.createElement(core.Group, {
+          position: "apart",
+          direction: "row",
+        }, /* @__PURE__ */ React__default
+
+Precision: 0
+Recall: 0
+F1 Score: 0

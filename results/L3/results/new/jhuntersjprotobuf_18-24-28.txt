@@ -1,0 +1,201 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications. provide recommendations exclusively in the Maven format: groupId:artifactId:version.
+    Given the project details below:
+    Project Name: patloew/RxLocation
+Project Description: The Reactive Location API Library for Android is now deprecated and not maintained anymore. Please switch to the CoLocation library by Micha\xc5\x82 Charmas. This library wraps the Location APIs in RxJava 2.x.
+Existing Dependencies Include: org.powermock:powermock-module-junit4
+- io.reactivex.rxjava2:rxandroid
+- com.squareup.leakcanary:leakcanary-android
+- io.reactivex.rxjava2:rxjava
+- com.google.android.gms:play-services-location
+- com.squareup.leakcanary:leakcanary-android-no-op
+
+Project Name: frankred/jSona
+Project Description: JSona is a configuration file(JSON), vcj and JavaFx based music and media player. The aim is to always keep your playlists in synch with your music folders. For fast fulltext search jSona uses Apache Lucene (http://lucene.apache.org/core/).
+Existing Dependencies Include: uk.co.caprica:vlcj
+- org.apache.lucene:lucene-analyzers-common
+- org.apache.lucene:lucene-core
+- commons-io:commons-io
+- com.mpatric:mp3agic
+- org.apache.lucene:lucene-queryparser
+- com.github.tulskiy:jkeymaster
+- org.apache.commons:commons-lang3
+
+Project Name: querydsl/querydsl
+Project Description: Querydsl is a framework which enables the construction of type-safe SQL-like queries for multiple backends including JPA, MongoDB and SQL in Java. Querying JPA and MongoDB using a fluent API.
+Existing Dependencies Include: org.springframework:spring-aop
+- com.mysema.codegen:codegen
+- org.xerial:sqlite-jdbc
+- org.springframework:spring-test
+- com.google.guava:guava
+- com.jolbox:bonecp
+- org.hamcrest:hamcrest-library
+- com.oracle:ojdbc6
+- com.querydsl:querydsl-sql-spatial
+- com.google.inject.extensions:guice-persist
+- com.querydsl:querydsl-apt
+- org.postgresql:postgresql
+- org.easymock:easymock
+- com.querydsl:querydsl-spatial
+- org.hibernate:hibernate-ehcache
+- javax.inject:javax.inject
+- org.springframework:spring-context
+- org.eclipse.persistence:eclipselink
+- org.firebirdsql.jdbc:jaybird-jdk16
+- log4j:log4j
+- org.mongodb.morphia:morphia
+- org.hsqldb:hsqldb
+- cglib:cglib
+- org.apache.lucene:lucene-queryparser
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.apache.maven:maven-project
+- org.hibernate:hibernate-envers
+- com.querydsl:querydsl-codegen
+- net.sourceforge.jtds:jtds
+- org.springframework.roo:org.springframework.roo.annotations
+- org.apache.ant:ant
+- com.querydsl:querydsl-lucene3
+- com.thoughtworks.proxytoys:proxytoys
+- org.scala-lang:scala-library
+- org.geolatte:geolatte-geom
+- com.h2database:h2
+- com.querydsl:querydsl-sql-codegen
+- org.hibernate:hibernate-annotations
+- org.scala-lang:scala-compiler
+- org.reflections:reflections
+- org.datanucleus:datanucleus-api-jdo
+- org.mongodb:mongo-java-driver
+- org.hibernate:hibernate-validator
+- com.infradna.tool:bridge-method-annotation
+- com.querydsl:querydsl-sql-spring
+- javax.transaction:jta
+- org.slf4j:slf4j-log4j12
+
+Project Name: GoogleCloudPlatform/google-cloud-datastore
+Project Description: This repository contains low-level Java and Python client libraries for Google Cloud Datastore. For more idiomatic and usable client libraries in these languages, please visit the [Google Cloud Dataastore Client for Java][java-datastore] and Google Cloud Database Client for Python
+Existing Dependencies Include: com.google.http-client:com.google.http-client
+- com.google.truth:com.google.truth
+- com.google.cloud.datastore:datastore-v1-proto-client
+- com.google.guava:com.google.guava
+- com.google.api-client:com.google.api-client
+- com.google.oauth-client:google-oauth-client
+- com.google.truth:truth
+- com.google.oauth-client:com.google.oauth-client
+
+Project Name: eclipse/tycho
+Project Description: Eclipse Tycho is a manifest-first way to build and build Eclipse plug-ins/OSGi bundles/RCP applications\n，nwith Maven. This repository contains all the features and documentation that will help you migrate to the official Eclipse site.
+Existing Dependencies Include: org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.codehaus.plexus:plexus-component-annotations
+- org.codehaus.plexus:plexus-container-default
+- org.eclipse.tycho:tycho-testing-harness
+- org.apache.maven:maven-core
+- org.eclipse.tycho:org.eclipse.jdt.compiler.apt
+- org.codehaus.plexus:plexus-utils
+- org.eclipse.tycho:org.eclipse.osgi
+- org.eclipse.tycho:tycho-core
+- org.apache.commons:commons-exec
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Reccomend me some of these libraries that can be added to the project to enhance its capabilities.
+    Project Name: jhunters/jprotobuf
+    Project Description: JProtobuf is a useful utility library for java programmer to use google protobuf library.\n<p align="center">Jprotobuf，JProtobyufｌJ Protobuf ，A useful utility Library for java programmers to use Google protobu library.
+    Existing Dependencies:
+    org.javassist:javassist
+- org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.apache.maven:maven-artifact-manager
+- commons-io:commons-io
+- com.google.auto.value:auto-value
+- org.jodd:jodd-core
+- javassist:javassist
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     Based on the project descriptions and dependencies, here are five library recommendations that could enhance the capabilities of the jhunters/jprotobuf project:
+
+   1. com.google.protobuf:protobuf-java:3.11.4 - This library provides a Java implementation of the Google Protocol Buffers data serialization format. It can help improve the project's performance and functionality by enabling more efficient data transfer and serialization.
+
+   2. org.apache.beam:beam-sdk-java:2.22.0 - This library provides a Java API for Apache Beam, a unified programming model for both batch and streaming data processing. It can help the project by enabling more efficient and scalable data processing capabilities.
+
+   3. org.projectlombok:lombok:1.18.20 - This library provides a set of annotations for Java that simplify the process of creating getters, setters, and other boilerplate code. It can help improve the project's code quality and reduce development time.
+
+   4. org.jetbrains.annotations:annotations-java5:11.0.3 - This library provides a set of annotations for Java that can help improve code quality and readability. It can help the project by providing more explicit type declarations and other functionalities.
+
+   5. io.netty:netty-all:4.1.32.Final - This library provides a set of tools and APIs for building network applications in Java. It can help improve the project's networking capabilities and provide more efficient and scalable communication between components.
+
+In summary, these libraries can help enhance the capabilities of the jhunters/jprotobuf project by providing more efficient data processing, simplified code development, improved code quality, and enhanced networking capabilities.
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> # Maven Dependencies
+
+Here are the Maven dependencies required for the project:
+
+1. Apache Beam:
+```xml
+<dependency>
+    <groupId>org.apache.beam</groupId>
+    <artifactId>beam-sdk-java</artifactId>
+    <version>2.22.0</version>
+</dependency>
+```
+2. Apache Protocol Buffers:
+```xml
+<dependency>
+    <groupId>com.google.protobuf</groupId>
+    <artifactId>protobuf-java</artifactId>
+    <version>3.11.4</version>
+</dependency>
+```
+3. Joda-Time:
+```xml
+<dependency>
+    <groupId>joda-time</groupId>
+    <artifactId>joda-time</artifactId>
+    <version>2.10.1</version>
+</dependency>
+```
+4. Logback:
+```xml
+<dependency>
+    <groupId>ch.qos.logback</groupId>
+    <artifactId>logback-classic</artifactId>
+    <version>1.2.3</version>
+</dependency>
+```
+5. slf4j-api:
+```xml
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>1.7.25</version>
+</dependency>
+```
+6. Java 8:
+```xml
+<dependency>
+    <groupId>java</groupId>
+    <artifactId>java-base</artifactId>
+    <version>1.8</version>
+</dependency>
+```
+Note that the version numbers may vary depending on the version of the project you are using.
+
+Precision: 0.2
+Recall: 0.125
+F1 Score: 0.15384615384615385
+
+Formatted Dependencies:
+org.javassist:javassist
+- org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.apache.maven:maven-artifact-manager
+- commons-io:commons-io
+- com.google.auto.value:auto-value
+- org.jodd:jodd-core
+- javassist:javassist
+ Test Dependencies:
+['com.baidu:jprotobuf', 'org.apache.maven:maven-toolchain', 'org.apache.maven:maven-plugin-api', 'com.google.protobuf:protobuf-java', 'com.baidu:jprotobuf-protoparser', 'com.squareup:protoparser', 'junit:junit', 'org.apache.maven:maven-artifact']

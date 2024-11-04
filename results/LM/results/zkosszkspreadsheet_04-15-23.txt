@@ -1,0 +1,86 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: zkoss/zkspreadsheet
+    Project Description: ZK Spreadsheet\n\nZK Spreadsheet is an open source embeddable webbased online spreadsheet that delivers the rich functionality of Excel within browsers using pure Java. With embeddable Excel functionality, developers are able to create interactive, collaborative, and dynamic enterprise applications easily.\n\n Newer. Better. Faster.\n Check out 2019 brandnew Web Spreadsheet from ZK Team.\n\n Release Process\n Naming Convention for abbreviation names\n1 Industry standard names, e.g., XML, HTML and URI:\n\tWe use all uppercase letters as other projects do.\n\tFor example, XMLs for the XML utilities\n\n2 ZK's names, e.g., ZK and ZUL:\n\tWe use uppercase for the first letter.\n\tFor example, ZkFns for the ZK EL functions, UiFactory for the UI factory\n\n\nzss\n\tThe ZK Spreadsheet component.\n\tIt includes ZK Spreadsheet component and associated data model APIs that you can\n\tuse to manipulate your spreadsheet documents.\n\n\nzssapp\n\tThe ZK Spreadsheet Live.\n\tA Web based ExcelR like application implemented with ZK Spreadsheet component\n\tand ZK Ajax framework document of ZK spreadsheet JavaScript codework with ZK Client Engine\n\t\n\nzpoi\n\tA library based on a part of the Apache POI spreadsheet library is adapted to be used with ZK Spreadsheet component\n\n\nzsstest\n\tA unit test set for zss.\n\t\n\nzssdemo\n\tA simple Web example application that demonstrate the power of ZK Spreadsheet.\n\t\n\nzssdemos\n\tThe Java EE version of the zssdemo"
+    Existing Dependencies:
+    org.zkoss.zk:zk
+- org.zkoss.zss:zsspdf
+- commons-io:commons-io
+- org.zkoss.zk:zul
+- com.google.inject.extensions:guice-throwingproviders
+- org.seleniumhq.selenium:selenium-chrome-driver
+- org.zkoss.zss:zssmodel
+- org.zkoss.poi:zpoi
+- commons-lang:commons-lang
+- org.zkoss.zk:zkex
+- org.reflections:reflections
+- org.seleniumhq.selenium:selenium-java
+- com.google.guiceberry:guiceberry
+- com.opera:operadriver
+- com.google.guava:guava
+- org.zkoss.zk:zkplus
+- org.seleniumhq.selenium:selenium-firefox-driver
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 18 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
+
+
+    </div>
+    <!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 18 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>nput-group-append">
+            @if($type == 'text')
+                <span class="input-group-text"><i class="fa fa-text"></i></span>
+            @endif
+            @if($type == 'tel')
+                <span class="input-group-text"><i class="fa fa-phone"></i></span>
+            @endif
+        </div>
+
+    </div>
+
+</div> 
+<div class="input-group">
+    @if(isset($name))
+        <input type="{{ $type }}" name="{{ $name }}" class="form-control" placeholder="{{ $placeholder?? '' }}" 
+        {{ isset($disabled)? 'disabled' : '' }} {{ isset($value)? 'value='.$value : '' }} />
+    @else
+        <input type="{{ $type }}" class="form-control" placeholder="{{ $placeholder?? '' }}" readonly />
+    @endif
+
+    <div class="input-group-append">
+        <div class="i
+
+Precision: 0
+Recall: 0
+F1 Score: 0

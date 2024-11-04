@@ -1,0 +1,103 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: AlejandroRivera/embedded-rabbitmq
+    Project Description: Embedded RabbitMQ\n\nCompatibility:\n\n\n\n\n\nBuilds: Linux\n\nOS X \n\nWindows \n\n\nReports:\n\n\n\nDist:\n\n\n\n\nSocial:\n\n\n\n\n\nThis library allows for the use of various RabbitMQ versions as if it was an embedded service that can be controlled \nfrom within the JVM.\n\nThe way it works is by downloading, from official repositories, the correct artifact for the given version and \noperating system, extracting it and starting the RabbitMQ Server with the specified configuration. \nThe broker can then be administered from within the JVM by using equivalent commands to or .\n\n Prerequisites:\n\n This project requires Java 7\n RabbitMQ Broker requires Erlang to be installed. \n\n Quick Start:\n\n 1. Add a dependency to this project\n\nFor Maven:\n\nFor Ivy: \n\nFor Gradle: \n\nFor SBT: \n\n is the latest released version of this project. \nFor more info visit \nor visit the page.\n\nFor releases, add the SonaType repository to your build system: \n 2. Start the RabbitMQ broker\n\n\n\nWhen is invoked, the EmbeddedRabbitMQ library will download the latest release from RabbitMQ.com that best matches \nyour Operating System. The artifact will be decompressed into a temporary folder, and a new OS process will launch the RabbitMQ broker.\n\nRead more about your RabbitMQ broker.\n\n 3. Verify RabbitMQ is working as you\'d expect\n\n\n 4. Stop the RabbitMQ broker:\n\n\n Customization\n\nCustomization is done through the and it\'s class.\nAll snippets below will refer to this:\n\n\n Define a RabbitMQ version to use:\n\nor \n\n\nBy using the method, the download URL, executable paths, etc. will be preset for Unix/Mac/Windows Operating Systems.\nYou can change the download source from the official servers and Github by using the method:\n\n\n\nSimilarly, if you wish to download another version and/or use another server by specifying a URL:\n\n\nor if you are okay with the existing artifact repositories but you just need a released version not listed in the enum:\n\n\n Downloaded files:\nBy default, EmbeddedRabbitMq will attempt to save downloaded files to . \nYou can change this by making use of the setter, which accepts both a directory or a file:\n\nWarning: If a file with the same name already exists, it will be overwritten. \n\nThe default behavior of this library is to reuse previously downloaded files. If you don\'t wish to use that behavior, disable it:\n\n\nTo ensure a corrupted or partially downloaded file isn\'t reused, the default behavior is to delete it when the issue is detected.\nThis means that a fresh copy is downloaded next time. To disable this behavior do:\n\n\n Extraction path:\nEmbeddedRabbitMq will decompress the downloaded file to a temporary folder. You can specify your own folder like so:\n\nWarning: The content of this folder will be overwritten every time by the newly extracted files/folders.\n\n Advanced RabbitMQ management\n\nIf you wish to control your RabbitMQ broker further, you can execute any of the commands available to you in the \ndirectory, like so:\n\n\nwhere:\n is something like no need for extension in Windows since it will be automatically appended.\n is a variablelength array list, where each element is a word eg. \n\nSee the JavaDocs for more information on and other helper classes like , , \n and which aim at making it easier to execute common commands.\n\n Enabling RabbitMQ Plugins:\n\nTo enable a plugin like , you can use the class like so:\n\nThis call will block until the command is completed.\n\nYou can verify by executing the method:\n\n\nYou can also see which other plugins where enabled implicitly, by calling the :\n\n\n FAQ:\n\n Troubleshooting:\n\n Q: RabbitMQ fails to start due to . Why is this and what can I do?\n \nA: This happens when RabbitMQ fails to be stopped correctly in a previous run. \nTo resolve this issue, manually identify the process and terminate it. To avoid this from happening again, ensure the \nmethod is invoked in your code.\n\n Q: RabbitMQ fails to start with a message . What\'s this about?\n\nA: RabbitMQ requires an installation of Erlang to be present in the system. Please install it first.\n\n Q: RabbitMQ fails to start with a message \n\nA: Most likely you don\'t have an updated version of Erlang installed. \n\nTo check the version of Erlang in your system execute:\n\n\nRabbitMQ requires:\n RabbitMQ v3.5.X requires Erlang at a minimum.\n RabbitMQ v3.6.X requires Erlang at a minimum or if you\'re using SSL/TLS.\n\nFor example, if your version is , you can run RabbitMQ v3.5.X but not 3.6.X.\n\nRead more here: Acknowledgements\nThis project was inspired from other excellent Open Source libraries, particularly \nand .\n\nBig thanks to the following OSS projects that made this project possible:\n \n and utils\n for extraction of compressed files.\n \n for execution of native OS processes.\n \n as a logging facade.\n\nAnd of course, the biggest thanks to and the team for their hard work. \n\n License\n\nThis project is released under , which basically means: \n You can do what you like with the software, as long as you include the required notices. \n This permissive license contains a patent license from the contributors of the code.\n \nSummary courtesy of: \n\n Say thanks\n\nIf you want to say thanks, you can:\n Star this project\n Donate: \n \n Contribute improvements\n \n'
+    Existing Dependencies:
+    org.tukaani:xz
+- org.apache.commons:commons-compress
+- org.zeroturnaround:zt-exec
+- com.rabbitmq:amqp-client
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    @include('admin.includes.alerts')
+    <form method="POST" action="">
+
+        @csrf
+        <div class="form-group">
+            <label>Nome completo</label>
+            <input type="text" name="name" class="form-control" placeholder="Nome completo" value="{{ $user->name?? old('name') }} ">
+        </div>
+
+        <div class="form-group">
+            <label>E-mail </label>
+            <input type="email" name="email" class="form-control" placeholder="Email" value="{{ $user->email?? old('email') }} ">
+        </div>
+
+        <div class="form-group">
+            <label>Avatar</label>
+            <input type="file" name="avatar" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label>Avatar</label>
+            <input type="file" name="avatar" class="form-control">
+        </div>
+        
+        <div class="form-group">
+            <label>Senha</label>
+            <input type="password" name="password" class="form-control" placeholder="Senha">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-dark">Salvar</button>
+        </div>
+    </form>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t:
+      return state;
+  }
+};
+
+export default reducer;
+ const initialState = {
+  data: {},
+  isLoading: false,
+  errorMsg: ''
+};
+
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'FETCH_DATA':
+      return Object.assign({}, state, {
+        isLoading: true
+      });
+    case 'FETCH_DATA_DONE':
+      return Object.assign({}, state, {
+        data: action.data,
+        isLoading: false,
+        errorMsg: ''
+      });
+    case 'FETCH_DATA_ERROR':
+      return Object.assign({}, state, {
+        isLoading: false,
+        errorMsg: action.errorMsg
+      });
+    defaul
+
+Precision: 0
+Recall: 0
+F1 Score: 0

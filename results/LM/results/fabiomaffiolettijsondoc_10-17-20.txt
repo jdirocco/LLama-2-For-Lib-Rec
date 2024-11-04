@@ -1,0 +1,146 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: fabiomaffioletti/jsondoc
+    Project Description: JSONDoc\nOfficial website: \n\n\n Want to contribute? Please follow these few guidelines:\n\n1. Open issue on Github so that we can discuss it\n2. When the issue is discussed and agreed, branch the code starting from the master branch, with branch name equals to "ISSUEX" where X is the number of the issue on Github\n3. Do not develop multiple features or bugfixes in the same branch, each feature/bugfix should have its branch and its code\n4. Before submitting a pull request, please write unit tests. I think it\'s fair to say that pull requests without unit tests will not be merged\n5. Submit the pull request\n\n How to report a bug\nOpen an issue on Github in this form, where GIVEN is the set of preconditions to reproduce the bug, WHEN is the action that should be taken to reproduce the bug and THEN is the bug description, together with if possible screenshots and/or error messages/log that visually describe the bug.\n\nGIVEN\n precondition 1\n precondition 2\n precondition n\n\nWHEN\n action 1 AND/OR action 2 AND/OR action n\n\nTHEN\n bug description with screenshots/messages/logs if possible\n'
+    Existing Dependencies:
+    org.apache.commons:commons-io
+- org.springframework:spring-test-mvc
+- org.jsondoc:jsondoc-springmvc
+- org.springframework.boot:org.springframework.boot
+- org.slf4j:slf4j-api
+- org.apache.maven:maven-core
+- org.reflections:reflections
+- org.springframework:spring-test
+- org.springframework:spring-webmvc
+- org.reflections:org.reflections
+- org.springframework.data:org.springframework.data
+- org.hibernate:hibernate-validator
+- org.jsondoc:jsondoc-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 13 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<script type="text/javascript">
+    function check_login(){
+        var uname = $('#uname').val();
+        var pwd = $('#pass').val();
+        
+        var msg = "";
+        msg += ((uname == '')? "Please enter username. <br/>\n" : "");
+        msg += ((pwd == '')? "Please enter Password. \n" : "");
+
+        if(msg!= ""){
+        // alert(msg);
+        $('#msg_error').html(msg);
+        return false;
+        }
+    }
+</script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+<style type="text/css">
+    
+    html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    @media (max-width: 768px) {
+        [class*="col-sm-"] {
+            padding: 15px 0;
+        }
+    }
+    
+   .container {
+        max-width: 950px;
+        margin: 40px auto 40px;
+    }
+    
+    #login-btn, #register-btn, #reset-btn {
+        display: block;
+        margin: 0 auto;
+    }
+   .form-header {
+        color: #00B4EF;
+        font-weight: 900;
+        font-size: 3em;
+        margin: 0 0 1rem 0;
+    }
+   .input-box {
+        position: relative;
+        margin: 0.2em 0 0.2em 0;
+    }
+   .input-field {
+        padding: 0.7em 0.7em 0.7em 4.7em;
+        margin: 0.2em 0 0.2em 0;
+        width: 100%;
+        display: block;
+        border: 3px solid #3999ff;
+    }
+    input[type="text"], input[type="password"] {
+        padding: 10px;
+        display: block;
+        width: 100%;
+        border: 3px solid #3999ff;
+    }
+   .input-icon {
+        background-color: #3999ff;
+        color: #fff;
+        padding: 0.8em 2em;
+        display: inline-block;
+        position: absolute;
+        width: 4em;
+        text-align: center;
+    }
+    #login-btn {
+        background-color: #00B4EF;
+        border: none;
+        width: 100px;
+        height: 40px;
+        padding: 0.5em 0.7em;
+        margin: 1em 0 2em 8.7em;
+        color: #fff;
+    }
+    #login-btn:hover {
+        background: -webkit-linear-gradient(#0089ef,#00B4EF);
+        background: -o-linear-gradient(#0089ef,#00B4EF);
+        background: -moz-linear-gradient(#0089ef,#00B4
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 13 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> 
+  - [ ] `npm i`
+  - [ ] `cd server`
+  - [ ] `npm i`
+  - [ ] `cd front`
+  - [ ] `npm i`
+  - [ ] `ng build --prod`
+ ## Steps for building app
+
+ - `git clone git@github.com:sahil-jariwala/react-node-mern-app.git`
+  - [ ] `cd react-node-mern-app`
+  - [ ] `mv.env.example.env`
+
+Precision: 0
+Recall: 0
+F1 Score: 0

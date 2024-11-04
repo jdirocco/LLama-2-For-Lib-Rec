@@ -1,0 +1,155 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: elaatifi/orika
+    Project Description: We've recently moved to a Github Organization repo ! \n\n\n\nOrika is a Java Bean mapping framework that recursively copies among other capabilities data from one object to another. It can be very useful when developing multilayered applications.\n"
+    Existing Dependencies:
+    org.hibernate:hibernate-commons-annotations
+- org.hibernate:hibernate-entitymanager
+- net.sf.dozer:dozer
+- org.eclipse.equinox:common
+- ma.glasnost.orika:orika-eclipse-tools
+- org.easymock:easymock
+- org.slf4j:slf4j-api
+- org.eclipse:text
+- com.google.caliper:caliper
+- janino:janino
+- org.springframework:spring-tx
+- commons-lang:commons-lang
+- org.hibernate:hibernate-core
+- org.eclipse.equinox:registry
+- org.springframework:spring-test
+- com.thoughtworks.paranamer:paranamer
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<!--- This file is part of Mura CMS.
+
+Mura CMS is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, Version 2 of the License.
+
+Mura CMS is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Mura CMS. If not, see <http://www.gnu.org/licenses/>.
+
+Linking Mura CMS statically or dynamically with other modules constitutes the preparation of a derivative work based on 
+Mura CMS. Thus, the terms and conditions of the GNU General Public License version 2 ("GPL") cover the entire combined work.
+
+However, as a special exception, the copyright holders of Mura CMS grant you permission to combine Mura CMS with programs
+or libraries that are released under the GNU Lesser General Public License version 2.1.
+
+In addition, as a special exception, the copyright holders of Mura CMS grant you permission to combine Mura CMS with 
+independent software modules (plugins, themes and bundles), and to distribute these plugins, themes and bundles without 
+Mura CMS under the license of your choice, provided that you follow these specific guidelines: 
+
+Your custom code 
+
+• Must not alter any default objects in the Mura CMS database and
+• May not alter the default display of the Mura CMS logo within Mura CMS and
+• Must not alter any files in the following directories.
+
+ /admin/
+ /tasks/
+ /config/
+ /requirements/mura/
+ /Application.cfc
+ /index.cfm
+ /MuraProxy.cfc
+
+You may copy and distribute Mura CMS with a plug-in, theme or bundle that meets the above guidelines as a combined work 
+under the terms of GPL for Mura CMS, provided that you include the source code of that other code when and as the GNU GPL 
+requires distribution of source code.
+
+For clarity, if you create a modified version of Mura CMS, you are not obligated to grant this special exception for your 
+modified version; it is your choice whether to do so, or to make such modified version available under the GNU General Public License 
+version 2 without this exception.  You may, if you choose, apply this exception to your own modified versions of Mura CMS.
+--->
+<cfset rsPlugins=application.pluginManager.getSitePlugins()>
+  <cfif arrayLen(rsPlugins.pluginName) eq 0>
+    <div id="noPlugins" class="help-block-empty">#application.rbFactory.getPlugin(session.siteid,'contentRenderer').dspPluginNotInstalled(session.rb)#</div>
+  <cfelse>
+      <cfoutput><table class="table table-striped table-condensed tablestats mura-table-truncated responsive" summary="#application.rbFactory.getKeyValue(session.rb,'layout.plugins')#">
+	<tr>
+	<th class="actions"></th>
+		<th class
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> #ifndef _PTHREAD_H 
+#define _PTHREAD_H 
+ 
+#include <sched.h> 
+#include <time.h> 
+#include <sys/types.h> 
+#include <sys/syscall.h> 
+ 
+#ifdef __cplusplus 
+extern "C" { 
+#endif 
+ 
+typedef struct 
+{ 
+  void *(*start_routine)(void *); 
+  void *arg; 
+} pthread_attr_t; 
+ 
+typedef struct 
+{ 
+  int pid; 
+} pthread_t; 
+ 
+int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine)(void *), void *arg); 
+int pthread_join(pthread_t thread, void **retval); 
+int pthread_detach(pthread_t thread); 
+void pthread_exit(void *retval); 
+pthread_t pthread_self(void); 
+int pthread_equal(pthread_t t1, pthread_t t2); 
+ 
+int pthread_attr_init(pthread_attr_t *attr); 
+int pthread_attr_setdetachstate(pthread_attr_t *attr, int detachstate); 
+int pthread_attr_setschedparam(pthread_attr_t *attr, const struct sched_param *param); 
+int pthread_attr_setstacksize(pthread_attr_t *attr, size_t stacksize); 
+int pthread_attr_destroy(pthread_attr_t *attr); 
+ 
+ 
+#define PTHREAD_CREATE_JOINABLE 0 
+#define PTHREAD_CREATE_DETACHED 1 
+ 
+#define PTHREAD_STACK_MIN 4096 
+ 
+#define PTHREAD_SCOPE_PROCESS 1 
+ 
+#ifdef __cplusplus 
+} 
+#endif 
+#endif 
+
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

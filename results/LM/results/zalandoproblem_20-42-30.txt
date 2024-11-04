@@ -1,0 +1,71 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: zalando/problem
+    Project Description: Problem\n\n\n\n\n\n\n\n\n\n\n\n\n Problem noun, /\xcb\x88p\xc9\xb9\xc9\x92bl\xc9\x99m/: A difficulty that has to be resolved or dealt with.\n\nProblem is a library that implements \n.\nIt comes with an extensible set of interfaces/implementations as well as convenient functions for every day use.\nIt\'s decoupled from any JSON library, but contains a separate module for Jackson.\n\n Features\n\n proposes a common approach for expressing errors in REST API implementations\n compatible with \n\n Dependencies\n\n Java 8\n Any build tool using Maven Central, or direct download\n Jackson optional\n Gson optional\n\n Installation\n\nAdd the following dependency to your project:\n\n\n\n Java Modules\n\nEven though the minimum requirement is still Java 8, all modules are Java 9 compatible:\n\n\n\n Configuration\n\nIn case you\'re using Jackson, make sure you register the module with your :\n\n\n\nAlternatively, you can use the SPI capabilities:\n\n\n\n Usage\n\n Creating problems\n\nThere are different ways to express problems. Ranging from limited, but easytouse to highly flexible and extensible, \nyet with slightly more effort:\n\n Generic\n\nThere are cases in which an is basically \nenough to convey the necessary information. Everything you need is the status you want to respond with and we will \ncreate a problem from it:\n\n\n\nWill produce this:\n\n\n\nAs specified by :\n\n The "about:blank" URI, when used as a problem type,\n indicates that the problem has no additional semantics beyond that of\n the HTTP status code.\n \n When "about:blank" is used, the title SHOULD be the same as the\n recommended HTTP status phrase for that code e.g., "Not Found" for\n 404, and so on, although it MAY be localized to suit client\n preferences expressed with the AcceptLanguage request header.\n\nBut you may also have the need to add some little hint, e.g. as a custom detail of the problem:\n\n\n\nWill produce this:\n\n\n\n Builder\n\nMost of the time you\'ll need to define specific problem types, that are unique to your application. And you want to \nconstruct problems in a more flexible way. This is where the Problem Builder comes into play. It offers a fluent API \nand allows to construct problem instances without the need to create custom classes:\n\n\n\nWill produce this:\n\n\n\nAlternatively you can add custom properties, i.e. others than , , , and :\n\n\n\nWill produce this:\n\n\n\n Custom Problems\n\nThe highest degree of flexibility and customizability is achieved by implementing directly. This is \nespecially convenient if you refer to it in a lot of places, i.e. it makes it easier to share. Alternatively you can\nextend :\n\n\n\n\n\nWill produce this:\n\n\n\n Throwing problems\n\nProblems have a loose, yet direct connection to Exceptions. Most of the time you\'ll find yourself transforming one \ninto the other. To make this a little bit easier there is an abstract implementation that subclasses \n: the . It allows to throw problems and is already in use by all default \nimplementations. Instead of implementing the interface, just inherit from :\n\n\n\nIf you already have an exception class that you want to extend, you should implement the "marker" interface :\n\n\n\nThe Jackson support module will recognize this interface and deal with the inherited properties from \naccordingly. Note: This interface only exists, because is a concrete class, rather than an interface.\n\n Handling problems\n\nReading problems is very specific to the JSON parser in use. This section assumes you\'re using Jackson, in which case \nreading/parsing problems usually boils down to this:\n\n\n\nIf you\'re using Jackson, please make sure you understand its \n feature. The supplied \nJackson module makes heavy use of it. Considering you have a custom problem type , you\'ll need to \nregister it as a subtype:\n\n\nYou also need to make sure you assign a to it and declare a :\n\n\n\nJackson is now able to deserialize specific problems into their respective types. By default, e.g. if a type is not \nassociated with a class, it will fallback to a . \n\n Catching problems\n\nIf you read about already, you should be familiar with . \nThis can be helpful if you read a problem, as a response from a server, and what to find out what it actually is. \nMultiple statements with checks could be an option, but usually nicer is this:\n\n\n\nIf you used the interface rather than you have to adjust your code a little bit:\n\n\n\n Stack traces and causal chains\n\nExceptions in Java can be chained/nested using causes. adapts the pattern seamlessly to problems:\n\n\n\nWill produce this:\n\n\n\nAnother important aspect of exceptions are stack traces, but since they leak implementation details to the outside world, \n\nin problems. That being said, there is a legitimate use case when you\'re debugging an issue on an integration environment\nand you don\'t have direct access to the log files. Serialization of stack traces can be enabled on the problem module:\n\n\n\nAfter enabling stack traces all problems will contain a property:\n\n\n\nSince we discourage the serialization of them, there is currently, by design, no way to deserialize them from JSON.\nNevertheless the runtime will fill in the stack trace when the problem instance is created. That stack trace is usually\nnot 100% correct, since it looks like the exception originated inside your deserialization framework. Problem comes\nwith a special service provider interface that can be registered using the \n. It can be used\nto modify the stack trace, e.g. remove all lines before your own client code, e.g. Jackson/HTTP client/etc.\n\n\n\nBy default no processing takes place.\n\n Getting help\n\nIf you have questions, concerns, bug reports, etc, please file an issue in this repository\'s Issue Tracker.\n\n Getting involved\n\nTo contribute, simply make a pull request and add a brief description 12 sentences of your addition or change. \nFor more details check the .\n\n Credits and references\n\n Spring Framework\n\nUsers of the are highly encouraged to check out , a library that seemlessly integrates problems into Spring.\n\n Micronaut Framework\nUsers of the are highly encouraged to check out , a library that seemlessly integrates problems into Micronaut error processing.\n\n Quarkus Framework\nUsers of the are highly encouraged to check out , a library that seemlessly integrates problems into Quarkus RESTeasy/JaxRS error processing. It also handles Problemfamily exceptions from library.\n'
+    Existing Dependencies:
+    org.junit.jupiter:junit-jupiter-engine
+- org.slf4j:slf4j-nop
+- org.hobsoft.hamcrest:hamcrest-compose
+- org.mockito:mockito-core
+- com.jayway.jsonpath:json-path-assert
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    @extends('layouts.main')
+
+@section('container');
+  <h1>Halaman About</h1>
+
+  <P class="mb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, quia, quibusdam voluptas, quisquam magni, iusto ipsa voluptatem dolore quod, autem iure dolores voluptate, nulla nesciunt. Voluptates, nisi?</P>
+
+@endsection 
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>  <h1><?= Html::encode($this->title)?></h1>
+
+    <?= $this->render('_form', [
+       'model' => $model,
+       'model_file' => $model_file,
+       'model_category' => $model_category,
+    ]);?>
+
+</div>
+ <?php
+
+use yii\helpers\Html;
+
+/* @var $this yii\web\View */
+/* @var $model common\entities\File */
+
+$this->title = 'Create File';
+$this->params['breadcrumbs'][] = ['label' => 'Files', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="file-create">
+
+  
+
+Precision: 0
+Recall: 0
+F1 Score: 0

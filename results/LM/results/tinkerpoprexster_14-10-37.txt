@@ -1,0 +1,124 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: tinkerpop/rexster
+    Project Description: ! TinkerPop is now a part of the Apache Software Foundation and "TinkerPop 3.x": is the latest incarnation of The TinkerPop. This project is TinkerPop 2.x and is no longer active. \n\nRexster is a graph server that exposes any "Blueprints": graph through HTTP/REST and a binary protocol called "RexPro": "Extensions": support standard traversal goals such as search, score, rank, and, in concert, recommendation. Rexster makes extensive use of "Blueprints": "Pipes": and "Gremlin": In this way its possible to run Rexster over various graph systems including:\n\n "TinkerGraph": inmemory graph\n "Neo4j": graph database\n "OrientDB": graph database\n "Sparksee": graph database\n "Titan": graph database\n "Sesame 2.0": compliant RDF stores\n Many "thirdparty": Blueprints implementations\n\nRexster provides a browserbased user interface known as "The Dog House": This interface allows for viewing vertices, edges, and their related properties. A webbased console for executing "Gremlin": scripts is provided along with a "Rexster Console": which allows remote evaluation of scripts within the Rexster Server context.\n\nThe documentation for Rexster can be found at this "location": Finally, please visit "TinkerPop": for other software products.\n'
+    Existing Dependencies:
+    com.tinkerpop.gremlin:gremlin-java
+- org.msgpack:msgpack
+- org.slf4j:slf4j-api
+- com.tinkerpop.rexster:rexster-protocol
+- com.sun.jersey:jersey-json
+- commons-configuration:commons-configuration
+- jline:jline
+- com.tinkerpop.blueprints:blueprints-rexster-graph
+- com.carrotsearch:junit-benchmarks
+- com.codahale.metrics:metrics-servlets
+- commons-cli:commons-cli
+- com.codahale.metrics:metrics-ganglia
+- org.codehaus.jettison:jettison
+- com.codahale.metrics:metrics-graphite
+- org.glassfish.grizzly:grizzly-http-servlet
+- org.glassfish.grizzly:grizzly-framework
+- com.tinkerpop:frames
+- com.tinkerpop.gremlin:gremlin-groovy
+- com.codahale.metrics:metrics-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+#!/usr/bin/python
+
+def fibo_iter_recursive(n):
+    a, b = 0, 1
+    print "Starting values a=%d, b=%d" % (a, b)
+        
+    for _ in xrange(n):
+        a, b = b, a + b
+        print "Fibo #%d: %s" % (_, a)
+
+if __name__ == '__main__':
+    fibo_iter_recursive(15)
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+						<a href="#" onclick="javascript:return false;"/>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+ <%@page import="com.jdc.balance.security.SecurityService"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
+<c:set var="user" value="${SecurityService.getUser()}" />
+
+<div id="sidebar">
+	<div class="sidebar-item sidebar-header">
+		<p>${user.name}</p>
+	</div>
+
+
+	<div class="sidebar-item">
+		<p><a href="<c:url value="/" />" class="${pageName eq 'home'? 'active' : ''}">Home</a></p>
+	</div>
+
+	<!-- <div class="sidebar-item">
+		<p><a href="<c:url value="/account" />" class="${pageName eq 'account'? 'active' : ''}">Account
+				Details</a></p>
+	</div> -->
+
+	<c:if test="${not empty user.role and (user.role.name eq 'Admin' or user.role.name eq 'Finance')}">
+
+		<div class="sidebar-item">
+			<button class="sidebar-item-heading" type="button" data-toggle="collapse"
+				data-target="#accounts" aria-expanded="false"
+				aria-controls="accounts">Account <span class="icon-right"></span></button>
+			<div class="sidebar-item-body collapse" id="accounts">
+				<a href="<c:url value="/account" />" class="${pageName eq 'account'? 'active' : ''}">All
+					Account</a>
+			</div>
+		</div>
+
+		<div class="sidebar-item">
+			<button class="sidebar-item-heading" type="button" data-toggle="collapse"
+				data-target="#user" aria-expanded="false"
+				aria-controls="user">User Management <span class="icon-right"></span></button>
+			<div class="sidebar-item-body collapse" id="user">
+				<a href="<c:url value="/user" />" class="${pageName eq 'user'? 'active' : ''}">All User</a>
+			</div>
+		</div>
+
+		<div class="sidebar-item">
+			<button class="sidebar-item-heading" type="button" data-toggle="collapse"
+				data-target="#report" aria-expanded="false"
+				aria-controls="report">Report <span class="icon-right"></span></button>
+			<div class="sidebar-item-body collapse" id="report
+
+Precision: 0
+Recall: 0
+F1 Score: 0
