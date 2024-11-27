@@ -1,0 +1,161 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: nysenate/OpenLegislation
+    Project Description: OpenLegislation\n====================\n\n\n\nDual BSD/GPL License. See the NYSenate licensing page Legislation is an open source web service developed inhouse by the New York State Senate to provide access to NYS legislative data including bills, resolutions, and laws. Developers can request a free key for the JSON API at The JSON API is documented at to legislative data are distributed by the Legislative Bill drafting Commission LBDC in a raw, plain text format. Open Legislation parses the updates in real time and redistributes the data through the JSON API for integration with various web applications. It is developed and run using several opensource technologies and frameworks including: \n\n Java 17\n Spring 5 Framework\n PostgreSQL\n Elasticsearch 7\n React\n Tomcat 8.5\n\n\n\nCurrent Senate Developers\n\n\n Kevin Caseiras \n Ken Zalewski \n Anthony Calabrese \n Jacob Keegan \n\nPast Developers\n\n\n Nathan Freitas \n Jared Williams \n Graylin Kim \n Ash Islam \n Sam Stouffer \n'
+    Existing Dependencies:
+    org.apache.tomcat.embed:tomcat-embed-websocket
+- com.fasterxml.jackson.datatype:jackson-datatype-jsr310
+- org.codehaus.woodstox:woodstox-core-asl
+- commons-io:commons-io
+- org.postgresql:postgresql
+- org.springframework:spring-websocket
+- org.slf4j:slf4j-api
+- org.springframework:spring-jdbc
+- org.elasticsearch:elasticsearch
+- javax.mail:mail
+- com.fasterxml.jackson.dataformat:jackson-dataformat-xml
+- org.springframework:spring-test
+- org.springframework:spring-webmvc
+- net.sf.ehcache:ehcache
+- org.apache.tomcat:tomcat-servlet-api
+- com.google.guava:guava
+- org.apache.shiro:shiro-spring
+- org.apache.shiro:shiro-web
+- org.mindrot:jbcrypt
+- org.springframework:spring-messaging
+- commons-cli:commons-cli
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 22 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+
+<div class="modal fade" id="add_data_Modal" data-backdrop="static" >
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <form method="post" id="sample_form" class="form-horizontal">
+            <div class="modal-header">
+             <h4 class="modal-title">Add</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body"> 
+                <div class="form-group row" >               
+                    <label class="col-sm-2 col-form-label">Employee Name</label>
+                    <label class="col-sm-4 col-form-label"><p id='empname'></p></label> 
+                </div>
+                <div class="form-group row" >   
+                    <label class="control-label col-sm-2 col-form-label">Salary Head</label>
+                    <div class="col-sm-4">
+                    <select  class="form-control required" id="salaryheadname" name="salaryheadname" autocomplete="nope" style="width:100%;" ></select></select>
+                    </div>
+                </div>
+                <div class="form-group row" >               
+                    <label class="control-label col-sm-2 col-form-label">Formula</label>
+                    <div class="col-sm-8">
+                   <input type="text" class="form-control" id="formula" placeholder="Enter Formula" name="formula" onblur="check_formula(this.value)" autocomplete="nope"/>
+                   </div>                      
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="hidden" name="action" id="action" />
+                <input type="hidden" name="hidden_id" id="hidden_id" />
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button class="btn btn-success" type="submit">Save changes</button>
+            </div>
+        </form>
+        </div>
+      </div>
+</div>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+        <div class="ibox ">
+            <div class="ibox-title">
+                <h5>Salary Head</h5>
+                
+            </div>
+            <div class="ibox-content">
+                <div class="">
+
+                <table id="salaryhead_data" class="table  dataTables-example " style="width:100%;" >
+                <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Salary</th>
+                    <th>Head</th>
+                    <th>Formula</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>                                                   
+                </tbody>
+                <tfoot>
+                        <tr>
+                            <th>No</th>
+                            <th>Sal
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 22 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeScreenComponent } from './homescreen/homescreen.component';
+import { AuthGuard } from './services/auth.guard';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { ContactUsComponent } from './contactus/contactus.compon: AboutComponent },
+  { path: 'contactus', component: ContactUsComponent },
+  { path: 'login', component: LoginComponent },
+  { path:'register', component: RegisterComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    canActivate: [AuthGuard],
+    data: { roles: ['admin'] }
+  },
+  // otherwise redirect to home
+  { path: '**', redirectTo: '' }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+ent';
+import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './registration/register.component';
+import { LogoutComponent } from './logout/logout.component';
+import { ReservationsComponent } from './reservations/reservations.component';
+import { AddRoomComponent } from './admin/addRoom/addRoom.component';
+
+const routes: Routes = [
+{ path: '', component: HomeScreenComponent },
+  { path: 'logout', component: LogoutComponent },
+  { path: 'about', component
+
+Precision: 0
+Recall: 0
+F1 Score: 0

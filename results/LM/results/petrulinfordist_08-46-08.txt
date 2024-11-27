@@ -1,0 +1,141 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: petrul/infordist
+    Project Description: Infordist\n=========\n\nComputing semantic distances using information distance, compression, NCD and such.\n\nYou've got the vectors, we've got the distances.\n\nWorking demo of what's in here, using a variant of : \xf0\x9f\x93\xac petru.dimulescu.at.gmail.com\n"
+    Existing Dependencies:
+    commons-discovery:commons-discovery
+- javax.faces:jsf-impl
+- org.apache.lucene:lucene-core
+- org.springframework:spring-aop
+- com.thoughtworks.xstream:xstream
+- org.apache.lucene:lucene-spellchecker
+- org.springframework:spring-jdbc
+- commons-httpclient:commons-httpclient
+- commons-cli:commons-cli
+- com.sun.facelets:jsf-facelets
+- org.gridgain:gridgain
+- pertinence:indexer_app
+- org.apache.commons:commons-compress
+- colt:colt
+- commons-collections:commons-collections
+- jtidy:jtidy
+- junit:junit
+- mysql:mysql-connector-java
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 18 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- Page Content -->
+    <div class="container" style="background-color:transparent">
+
+      <!-- Page Heading -->
+      
+
+      <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+
+          <h1 class="my-4">Pencarian
+            <small>Hasil</small>
+          </h1>
+
+          <!-- Blog Post -->
+
+<?php
+    if(isset($_POST['submit'])){
+        if(isset($_POST['keyword'])){
+            $keyword = $_POST['keyword'];
+            if ($query->num_rows() > 0) {
+                foreach ($query->result() as $row) {
+           ?>
+
+          <div class="card mb-4">
+            <div class="card-body">
+              
+<h3><a href="<?= base_url('blog/detail_artikel/'.$row->id_artikel);?>"><?=$row->judul;?></a></h3>
+<?php
+if($row->gambar_artikel=="null" || $row->gambar_artikel==""){
+    echo "";
+}else{
+   ?>
+<center>
+<img src="<?= base_url('assets/artikel/'.$row->gambar_artikel);?>" width="550px">
+</center>
+<?php
+}
+?>
+<p style="text-align: justify;"><?=$row->deskripsi;?></p>
+
+              <a href="<?= base_url('blog/detail_artikel/'.$row->id_artikel);?>" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <!--<div class="card-footer text-muted">
+              Posted on January 1, 2020 by
+              <a href="#">Start Bootstrap</a>
+            </div>-->
+          </div>
+<?php
+}
+}
+}
+}
+
+?>
+
+          
+
+        </div>
+
+
+        <!-- Sidebar Widgets Column -->
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 18 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+/**
+ * Template Name: Home
+ */
+$context          = Timber::get_context();
+$context['title'] = single_post_title('', false);
+
+$templates = array( 'page.twig', 'home.twig' );
+
+if ( post_password_required(Timber::get_);
+post()) ) {
+	Timber::render('single-password.twig', $context );
+} else {
+	Timber::render( $templates, $context );
+}
+
+Timber::render( array(
+	'page.twig',
+	'index.twig'
+), $context 
+
+Precision: 0
+Recall: 0
+F1 Score: 0

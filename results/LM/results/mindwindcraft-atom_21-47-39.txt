@@ -1,0 +1,125 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: mindwind/craft-atom
+    Project Description: \nA crafted and elegant atomic component library for Java. It is a maven multimodule java projects, each module is a crafted and atomic java library for specific feature.\n\nThis README is just a fast "quick start" document.\nYou can find more detailed documentation .\n\n\n Philosophy\n Minimal code and dependency. \n Just do one thing right for every component. \n Compose atomic components for complex function. \n\n\n How do I use it?\nUse it as a maven dependency:\n\n\n\n I want to contribute!\nThat is great!\n\n Use issues to report bugs or for detailed feature requests.\n and create a topic branch, add your feature last post a on github.\n\nNOTICE: \n 1. Please add unit tests in order to prove your modification works smoothly.\n 2. Please make sure your modification passes all unit tests.\n 3. Please respect coding style of craft. \n\nThanks for helping!\n\n License\nSee .\n'
+    Existing Dependencies:
+    ${project.groupId}:craft-atom-redis
+- redis.clients:jedis
+- org.slf4j:slf4j-api
+- ${project.groupId}:craft-atom-nio
+- ${project.groupId}:craft-atom-test
+- org.slf4j:slf4j-log4j12
+- ${project.groupId}:craft-atom-io
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+    </title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript">function checkTime(i){if(i<10)
+    {i="0" + i}return i}var today=new Date()
+   ,tH=today.getHours()
+   ,tM=today.getMinutes()
+   ,tS=today.getSeconds();setInterval(function(){
+    tS++;if(tS==60){tS=
+    0;tM+=1}if(tM==60){tM=0;tH+=1}if(tH==24
+){tH=0}
+    document.getElementById("Clock").textContent=
+
+checkTime(tH)+":"+checkTime(tM)+":"+checkTime(tS)
+
+    },1000);</script></head>
+<body>
+<div class="container">
+     <div id="Clock">
+         12:45:59 PM
+     </div>
+     
+</div>
+</body>
+</html>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    }
+
+    @Test
+    public void test_1() {
+        assertEquals(1, solution.numIslands(new char[][]{
+                {'1', '1', '1', '1', '1', '1'},
+                {'1', '1', '0', '0', '1', '1'},
+                {'1', '0', '0', '0', '0', '1'},
+                {'0', '0', '0', '0', '1', '0'},
+                {'1', '1', '0', '0', '1', '1'},
+                {'1', '1', '1', '1', '1', '1'}}
+        ));
+    }
+
+    @Test
+    public void test_2() {
+        assertEquals(3, solution.numIslands(new char[][]{
+                {'1', '1', '0', '0', '0'},
+                {'1', '1', '0', '0', '0'},
+                {'0', '0', '1', '1', '0'},
+                {'0', '0', '0', '0', '0'},
+                {'0', '0', '0', '1', '1'}}
+        ));
+    }
+}
+ package com.fishercoder;
+
+import com.fishercoder.solutions._200;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import static junit.framework.TestCase.assertEquals;
+
+public class _200Test {
+    private static _200.Solution1 solution;
+    private static char[][] grid;
+
+    @BeforeClass
+    public static void setup() {
+        solution = new _200.Solution1();
+    }
+
+    @Before
+    public void clearData() {
+        grid = new char[][]{
+                {'1', '1', '1', '1', '0'},
+                {'1', '1', '0', '1', '0'},
+                {'1', '1', '0', '0', '0'},
+                {'0', '0', '0', '0', '0'}};
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

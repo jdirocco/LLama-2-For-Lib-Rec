@@ -1,0 +1,171 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: bazaarvoice/ostrich
+    Project Description: Introduction\n============\nOstrich is a library that enables SOA architectures to be built quickly and easily. \n\nCurrently Ostrich requires that service consumers be JVM based. This will change in the future.\n\n\nQuick Start Guides\n==================\n \n \n \n \n'
+    Existing Dependencies:
+    com.bazaarvoice.ostrich.examples.dictionary:dictionary-client
+- com.bazaarvoice.ostrich:ostrich-dropwizard
+- com.bazaarvoice.ostrich:zookeeper
+- com.bazaarvoice.ostrich.zookeeper:ostrich-zookeeper-registry
+- com.bazaarvoice.ostrich.examples.calculator:calculator-client
+- org.slf4j:slf4j-api
+- com.bazaarvoice.ostrich.examples.dictionary:dictionary
+- io.dropwizard:dropwizard-client
+- commons-codec:commons-codec
+- com.bazaarvoice.ostrich:ostrich
+- com.google.guava:guava
+- com.bazaarvoice.ostrich:core
+- commons-cli:commons-cli
+- com.bazaarvoice.ostrich.examples:examples
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    	<section id="header-wrapper">
+            <article class="head">
+              
+                <div class="container clearfix">
+                    <div class="col-sm-3 col-xs-12 logo text-left text-sm-left text-md-center">
+                        <!-- logo-->
+                        
+                       <a href="<?php echo e(URL::to('/'));?>"><img src="<?php echo e(asset('public/img/logo.png'));?>" alt="logo" class="img-fluid"></a>
+                    </div>
+                    <div class="nav-wrapper text-sm-center text-md-left text-lg-left text-xl-left">
+                        <!-- nav-menu-->
+                        <?php echo $__env->make('inc.nav', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render();?> 
+                   	</div>
+                  
+                </div>
+            </article> 
+        </section>
+<?php /**PATH D:\xampp\htdocs\wantedly\resources\views/inc/nav.blade.php ENDPATH**/?>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>n_id);
+		}
+		
+		// --------------------------------------------------------------------
+		
+		/**
+		 * 
+		 * get list of the available languages
+		 * 
+		 * @access protected
+		 * @return array	array of available languages
+		 * 
+		 */
+		protected function _get_available_languages(){
+			
+			$available_languages = (array) $this->ci->config->item('available_languages'),
+			
+			return (!empty($this->available_languages))? $this->available_languages : $available_languages;
+		}
+		
+		// --------------------------------------------------------------------
+		
+		/**
+		 * 
+		 * get default language from CI config
+		 * 
+		 * @access protected
+		 * @return string	default language
+		 * 
+		 */
+		protected function _get_default_language(){
+		
+			return $this->ci->config->item('default_language');
+		}
+		
+		// --------------------------------------------------------------------
+		
+		/**
+		 * 
+		 * checks if given language has translation file
+		 * 
+		 * @access protected
+		 * @return bool
+		 * 
+		 */
+		protected function _is_language($language){
+			
+			if(isset($this->_lang_files[$language])){
+
+				return true;
+			}
+			
+			return false;			
+		}
+		
+		// --------------------------------------------------------------------
+		
+		/**
+		 * 
+		 * sets the default language for this session
+		 * 
+		 * @access protected
+		 * @param string $language	language to set
+		 * 
+		 */
+		protected function _set_default_language($language){
+			
+			$this->default_language = ($language);
+			
+			$this->_init_lang();
+			
+			$this->ci->session->set_userdata('language', ($this->default_language == $this->_get_default_language()? NULL : $this->default_language));
+		}
+		
+		// --------------------------------------------------------------------
+		
+		/**
+		 * 
+		 * set the default language for this session (from config)
+		 * 
+		 * @access protected
+		 * 
+		 */
+		protected function _default_language(){
+			
+			$this->default_language = $this->_get_default_language();
+			
+			$this->_init_lang();
+		}
+		
+		// --------------------------------------------------------------------
+		
+		/**
+		 * 
+		 * loads the language files
+		 * 
+		 * @access private
+		 * 
+		 */
+		private function _init_lang(){
+			
+			$CI =& get_instance();
+			$available_languages = $this->_get_available_languages();
+			
+			if (! isset($CI->lang) OR! is_object($
+
+Precision: 0
+Recall: 0
+F1 Score: 0

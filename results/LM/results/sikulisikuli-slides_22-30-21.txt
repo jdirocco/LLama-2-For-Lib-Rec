@@ -1,0 +1,126 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: sikuli/sikuli-slides
+    Project Description: sikulislides\n=============\nsikulislides is a new tool that enables you to automate and test Graphical User Interfaces GUIs \nusing presentation slides by adding screenshots and annotating them. sikulislides aims at enabling \nusers to automate GUIs and produce a live screenshot by screenshot tutorials without having to write code.\n\nFor more info visit .\n'
+    Existing Dependencies:
+    net.sf.opencsv:opencsv
+- org.antlr:stringtemplate
+- commons-io:commons-io
+- com.googlecode.json-simple:json-simple
+- org.slf4j:slf4j-api
+- org.mockito:mockito-all
+- com.install4j:api
+- org.slf4j:slf4j-log4j12
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+@extends('layouts.app')
+
+@section('css')
+<link rel="stylesheet" href="{{url('css/index.css')}}">
+@endsection
+
+@section('title')
+<title>Blog | Homepage</title>
+@endsection
+
+@section('content')
+
+<div class="wrapper">
+    <div class="header">
+        <div class="logo">
+            <h2>Larablog</h2>
+        </div>
+        
+       
+        <div class="navbar">
+            <a href="{{route('index')}}">Home</a>
+            <a href="{{route('about')}}">About</a>
+            <a href="{{route('contact')}}">Contact</a>
+            
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="title">
+            <h2>Welcome to Larablog</h2>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nulla eu mi iaculis mattis. Praesent non eros velit. Duis nec iaculis ipsum. Vestibulum eget eros nec lectus euismod ultricies quis id augue. Vivamus egestas, nisi ut lacinia malesuada, urna purus consequat nunc, a tincidunt erat nibh eget quam."</p>
+        </div>
+    </div>
+
+    
+    
+    
+</div>
+
+@endsection
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ﻿using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Volo.Abp.DependencyInjection;
+
+namespace EShopOnAbp.IdentityService.EntityFrameworkCore
+{
+    public class EntityFrameworkCoreIdentityServiceDbSchemaMigrator
+        : IIdentityServiceDbSchemaMigrator, ITransientDependency
+    {
+        private readonly IServiceProvider _serviceProvider;
+
+        public EntityFrameworkCoreIdentityServiceDbSchemaMigrator(
+            IServiceProvider serviceProvider)
+        {
+            _serviceProvider = serviceProvider;
+        }
+
+        public async Task MigrateAsync()
+        {
+            /* We intentionally resolving the IdentityServiceMigrationsDbCont
+                await context.Database.MigrateAsync();
+            }
+        }
+    }
+}ext
+             * from IServiceProvider (instead of direct constructor injection or
+             * IServiceScopeFactory) because this migration code needs
+             * to run on any tenant. In the current state of the application, IServiceProvider
+             * of the host is not available at the scope of the tenant.
+             */
+
+            await using var scope = _serviceProvider.CreateScope();
+
+            await using (var context = scope.ServiceProvider.GetRequiredService<IdentityServiceMigrationsDbContext>())
+            {
+                await context.Database.MigrateAsync();
+            }
+
+            await using (var context = scope.ServiceProvider.GetRequiredService<IdentityServiceDbContext>())
+            {
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,108 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: searchbox-io/Jest
+    Project Description: JEST This project is no longer being actively developed\n====\n\n\n\n\n\n\nJest is a Java HTTP Rest client for .\n\nRead great \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\n\nCopyright and License\n\n\nCopyright 2018 www.searchly.com\n\nLicensed under the Apache License, Version 2.0 the "License"; you may not use this work except in\ncompliance with the License. You may obtain a copy of the License in the LICENSE file, or at:\n\n required by applicable law or agreed to in writing, software distributed under the License is\ndistributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and limitations under the License.\n\n\n\nes:
+    Existing Dependencies:
+    commons-io:commons-io
+- org.apache.logging.log4j:log4j-core
+- org.slf4j:slf4j-api
+- org.apache.httpcomponents:httpclient-android
+- net.java.dev.jna:jna
+- org.elasticsearch:elasticsearch
+- org.elasticsearch.plugin:reindex-client
+- org.elasticsearch.plugin:transport-netty4-client
+- org.elasticsearch.test:framework
+- com.google.guava:guava
+- com.carrotsearch.randomizedtesting:randomizedtesting-runner
+- org.apache.httpcomponents:httpcore
+- org.apache.lucene:lucene-test-framework
+- org.apache.logging.log4j:log4j-api
+- org.apache.lucene:lucene-codecs
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 16 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div class="container">
+        <form action="<?php echo base_url()."index.php/admin/edit_data_karyawan_do";?>" method="post">
+        
+            <input type="hidden" name="id_karyawan" value="<?php echo $karyawan->id_karyawan;?>">
+            
+            <input type="text" name="nama_karyawan" placeholder="Nama Lengkap" value="<?php echo $karyawan->nama_karyawan;?>"><br>
+            <input type="text" name="tgl_lahir" placeholder="Tanggal Lahir" value="<?php echo $karyawan->tgl_lahir;?>"><br>
+            <input type="text" name="jenis_kelamin" placeholder="Jenis Kelamin" value="<?php echo $karyawan->jenis_kelamin;?>"><br>
+            <input type="text" name="agama" placeholder="Agama" value="<?php echo $karyawan->agama;?>"><br>
+            <input type="text" name="alamat_karyawan" placeholder="Alamat" value="<?php echo $karyawan->alamat_karyawan;?>"><br>
+            <input type="text" name="no_ktp" placeholder="Nomor KTP" value="<?php echo $karyawan->no_ktp;?>"><br>
+            <input type="text" name="no_tlp" placeholder="Nomor Telepon" value="<?php echo $karyawan->no_tlp;?>"><br>
+            <input type="text" name="email" placeholder="Email" value="<?php echo $karyawan->email;?>"><br>
+            <input type="submit" value="Simpan">
+           
+        </form>
+    </div>
+
+     <div class="clearfix"> </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </main>
+
+
+
+
+
+
+
+
+   
+
+<!-- js -->
+<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-2.1.4.min.js')?>"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.js')?>"></script> <!-- Necessary-JavaScript-File-For-Bootstrap --> 
+<!-- //js --> 
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 16 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.yahoo.vespa.hosted.controller.api.integration.stubs;
+
+import com.yahoo.vespa.hosted.controller.api.identifiers.ScrewdriverId;
+import com.yahoo.vespa.hosted.controller.api.identifiers.TenantId;
+import com.yahoo.vespa.hosted.controller.api.integration.BuildService;
+
+/**
+ * @author jonmv
+ */
+public class MockBuildService implements BuildService {
+
+    @Override
+    public BuildJob createNewBuildJob(TenantId tenant, String repository, String branch, String commit,
+                                                   String applicationZipFileName, String sourceRepoUrl,
+                                     ScrewdriverId screwdriverId, ScrewdriverId parentJob, String scmBranch,
+                                     String scmRepository, String jobType, String tenant, String application,
+                                     long timestamp, String buildNumber) {
+        return new MockBuildJob(screwdriverId.id());
+    }
+
+}          String projectId, String jobDefinitionName, String repositoryUrl,
+             
+
+Precision: 0
+Recall: 0
+F1 Score: 0

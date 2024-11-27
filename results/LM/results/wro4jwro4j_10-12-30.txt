@@ -1,0 +1,202 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: wro4j/wro4j
+    Project Description: Web Resource Optimizer for Java\n\n\n\n\n\n\n\nWro4j is a free and Open Source Java project which will help you to your web application page loading time. It can help you to keep your static resources js & css , merge & minify them at using a simple filter or using maven plugin and has a you may find useful when dealing with web resources.\n\n Getting Started\n\nWro4j has 2 possible operating modes:\n\n Runtime solution the resources are processed lazily after the first request. Assuming you have defined 100 groups and only one is requested, the remaining 99 won\'t be processed.\n Build time solution the resources are processed when the application is built. You are in control of defining what groups should be generated either all of them or only a subset enumerated in configuration.\n\nIf what you need is to have all resources available during application startup, then probably using a buildtime solution Maven plugin is the best suited for you. Alternatively, you could use the runtime solution and explicitly perform requests for all the groups after application startup.\n\nIn order to get started with Wro4j\'s runtime solution, you have to follow only 3 simple steps.\n\n Step 1: Add WroFilter to web.xml\n\n\n\n Step 2: Create wro.xml\n\n\n\n Step 3: Use optimized resources\n\n\n\n Documentation\n\nThe documentation for this project is located \n\n Issues\n\nFound a bug? Report it to the \n\n Feedback\n\nIf you have any questions or suggestions, please feel free to post a comment to the \n\n on Twitter.\n\n License\n\nThis project is available under the .\n'
+    Existing Dependencies:
+    commons-io:commons-io
+- org.webjars:jslint
+- org.webjars:json2
+- org.jruby:jruby-stdlib
+- org.slf4j:slf4j-api
+- org.webjars:jshint
+- org.hamcrest:hamcrest-core
+- com.github.lltyk:dojo-shrinksafe
+- org.apache.maven:maven-core
+- javax.servlet.jsp:jsp-api
+- org.mozilla:rhino
+- ${project.groupId}:wro4j-extensions
+- org.webjars:emberjs
+- org.codehaus.jsr166-mirror:jsr166
+- ${project.groupId}:wro4j-maven-plugin
+- org.springframework:spring-context
+- org.apache.ant:ant
+- nz.co.edmi:bourbon-gem-jar
+- org.apache.commons:commons-exec
+- ${project.groupId}:wro4j-core
+- org.webjars:less
+- ${project.groupId}:wro4j-runner
+- org.apache.commons:commons-lang3
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 24 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<?php $this->load->view('layout/navbar');?>
+<div class="page-wrap">
+    <?php $this->load->view('layout/sidebar');?>
+    <div class="main-content">
+        <div class="container-fluid">
+            <div class="page-header">
+                <div class="row align-items-end">
+                    <div class="col-lg-8">
+                        <div class="page-header-title">
+                            <i class="<?php echo $icone_view;?> bg-blue"></i>
+                            <div class="d-inline">
+                                <h5><?php echo $titulo;?></h5>
+                                <span><?php echo $sub_titulo;?></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <nav class="breadcrumb-container" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a title="Home" href="<?php echo base_url()?>"><i class="ik ik-home"></i></a>
+                                </li>
+                                <li class="breadcrumb-item">
+                                    <a ><?php echo $titulo;?></a>
+                                </li>
+                                
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <?php echo $titulo;?>
+                        </div>
+
+                        <div class="card-body">
+                            <form action="" id="" class="forms-sample" name="form_edit" method="POST">
+                                <div class="form-group">
+                                    <label>Razão Social</label>
+                                    <input type="text" class="form-control"  
+                                        name="fornecedor_nome_fantasia" 
+                                        value="<?php echo set_value('fornecedor_nome_fantasia');?>"
+                                        placeholder="Razão Social do fornecedor" required autofocus autocomplete="on" minlength="4" maxlength="200">
+                                    <?php echo form_error('fornecedor_razao_social', '<div class="text-danger">','</div>');?>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nome do Responsável</label>
+                                    <input type="text" class="form-control" 
+                                    name="fornecedor_nome"
+                                    value="<?php echo set_value('fornecedor_nome');?>"
+                                    placeholder="Nome do Responsável" required autofocus autocomplete="on" minlength="4" maxlength="200">
+                                    <?php echo form_error('fornecedor_nome_responsavel', '<div class="text-danger">','</div>');?>
+                                </div>
+
+                                <div class="form-group">
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 24 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+	public void update(float dt) {
+
+		// update position
+		posX += velX * dt;
+		posY += velY * dt;
+	}
+
+	// draw
+	public void draw(SpriteBatch batch) {
+		batch.begin();
+		batch.draw(texture, posX, posY, width, height);
+		batch.end();
+	}
+
+	public Texture getTexture() {
+		return texture;
+	}
+
+	public float getPosX() {
+		return posX;
+	}
+
+	public void setPosX(float posX) {
+		this.posX = posX;
+	}
+
+	public float getPosY() {
+		return posY;
+	}
+
+	public void setPosY(float posY) {
+		this.posY = posY;
+	}
+
+	public float getVelX() {
+		return velX;
+	}
+
+	public void setVelX(float velX) {
+		this.velX = velX;
+	}
+
+	public float getVelY() {
+		return velY;
+	}
+
+	public void setVelY(float velY) {
+		this.velY = velY;
+	}
+
+}
+ package com.mygdx.game.mario.objects.gametile;
+
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.math.Vector2;
+import com.mygdx.game.mario.MarioResourceManager;
+import com.mygdx.game.mario.game.TileMap;
+
+
+/**
+ * A tile is an image that represents a game level.
+ *
+ * @author mario
+ */
+public class Tile {
+	private float posX, posY;
+	private float velX, velY;
+	private final Texture texture;
+	final float width, height;
+
+
+	public Tile(Texture t, float posX, float posY) {
+		this.posX = posX;
+		this.posY = posY;
+		texture = t;
+		width = texture.getWidth();
+		height = texture.getHeight();
+		velX = 0;
+		velY = 0;
+	}
+
+	// update
+
+Precision: 0
+Recall: 0
+F1 Score: 0

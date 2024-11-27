@@ -1,0 +1,151 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: eclipse/jetty.project
+    Project Description: Eclipse Jetty\n\nEclipse Jetty is a lightweight, highly scalable, Javabased web server and Servlet engine.\nJetty\'s goal is to support web protocols HTTP/1, HTTP/2, HTTP/3, WebSocket, etc. in a high volume low latency way that provides maximum performance while retaining the ease of use and compatibility with years of Servlet development.\nJetty is a modern fully asynchronous web server that has a long history as a component oriented technology, and can be easily embedded into applications while still offering a solid traditional distribution for webapp deployment.\n\n Webapp Example\n\n\n\n Multiple Versions Webapp Example\n\n\n\n Embedded Jetty Example\n\n\n\n Embedded Servlet Example\n\n\n\n Building Jetty from Source\n\n\n\nFor more detailed information on building and contributing to the Jetty project, please see the .\n\n Documentation\n\n is available on the Eclipse Jetty website.\n\nThe documentation is divided into three guides, based on use case:\n\n The targets sysops, devops, and developers who want to install Eclipse Jetty as a standalone server to deploy web applications.\n\n The targets developers who want to use the Eclipse Jetty libraries in their applications, and advanced sysops/devops that want to customize the deployment of web applications.\n\n The targets developers that wish to contribute to the Jetty Project with code patches or documentation improvements.\n\n\n Commercial Support\n\nExpert advice and production support of Jetty are provided by .'
+    Existing Dependencies:
+    org.eclipse.jetty:jetty-alpn-server
+- org.eclipse.jetty:jetty-quickstart
+- org.eclipse.jetty:jetty-xml
+- org.eclipse.jetty:jetty-plus
+- org.eclipse.jetty.cdi:cdi-servlet
+- org.eclipse.jetty.example-async-rest:example-async-rest-jar
+- javax.transaction:javax.transaction-api
+- javax.annotation:javax.annotation-api
+- org.eclipse.jetty.websocket:websocket-common
+- org.eclipse.jetty:jetty-deploy
+- org.eclipse.jetty.http2:http2-client
+- org.eclipse.jetty.websocket:websocket-servlet
+- org.eclipse.jetty.example-async-rest:example-async-rest-webapp
+- org.eclipse.jetty:jetty-proxy
+- junit:junit
+- org.eclipse.jetty.http2:http2-server
+- org.apache.taglibs:taglibs-standard-spec
+- com.hazelcast:hazelcast-client
+- org.eclipse.jetty:jetty-annotations
+- org.eclipse.jetty:jetty-documentation
+- com.hazelcast:hazelcast
+- org.mortbay.jasper:apache-jsp
+- org.eclipse.jetty:jetty-rewrite
+- javax.websocket:javax.websocket-api
+- org.eclipse.jetty:jetty-jaspi
+- org.eclipse.jetty.http2:http2-common
+- javax.enterprise:cdi-api
+- com.sun.net.httpserver:http
+- org.eclipse.jetty:jetty-servlets
+- javax.servlet:javax.servlet-api
+- org.eclipse.jetty:jetty-http
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 32 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="banner header-text">
+      <div style="background-image: url('assets/images/banner-bg.jpeg')" class="owl-banner owl-carousel">
+        <?php $no=1;?>
+        <?php foreach ($slideshow as $key) :?>
+        
+        <div class="banner-item">
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=rq3-T_W1tRE" target="_blank"><img src="assets/img/slideshow/<?= $key['gambar'];?>"  style="width: auto; height: 620px;" alt=""></a>
+            <div class="slider-content">
+              <div style="background-color: white; opacity: 0.7;" class="d-table">
+                <div class="d-table-cell">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-8 offset-md-2">
+                        <div style="padding: 75px 0px 75px 0px;" class="slider-text">
+                          <!-- <p style="color: white;" class="text-uppercase">Penjualan</p> -->
+                          <h1 style="color: white;"><?= $key['judul'];?></h1>
+                          <!-- <p>Penjualan</p> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php endforeach;?>
+        
+      </div>
+    </div>
+    <!-- <a class="scroll-btn" href="#"><i class="fa fa-angle-double-down"></i>
+
+    </a>
+ -->     <!-- About Us Starts Here -->
+    <div class="about-us">
+      <div class="about-overlay">
+        <div class="container">
+          <div class="row">
+            <div style="text-align: center;" class="col-md-12">
+              <div class="about-item">
+                <!-- <p style="font-size: 48px;" class="text-uppercase">Tentang Toko</p> -->
+                <h2>Tentang Toko</h2>
+                <p style="font-size: larger;">
+                  Toko Pupuk Kami merupakan toko dengan sistem pembelajaran online. Toko Pupuk Kami bergerak dibidang pertanian dan pupuk organik yang berasal dari tanaman perkebunan. Toko pupuk kami juga memfokuskan untuk membantu pertanian dengan sistem tanam online.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+    <!-- About Us Ends Here -->
+    
+    <!-- Services Starts Here -->
+    <div class="services container-fluid">
+      <div class="container">
+        <h3 style="text-align: center;" class="text-uppercase">Meng
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 32 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>.setProperty("hibernate.jdbc.batch_size", jpaProperties.getProperty("hibernate.jdbc.batch_size"));
+        em.setProperty("hibernate.hbm2ddl.auto", jpaProperties.getProperty("hibernate.hbm2ddl.auto", "validate"));
+        em.setProperty("javax.persistence.schema-generation.database.action", jpaProperties.getProperty("javax.persistence.schema-generation.database.action", "none"));
+
+
+        return em;
+    }
+} public class DatabaseUtil {
+    
+    static public ConnectionFactory getConnectionFactory(Properties jpaProperties) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+        Properties em = new Properties();
+
+        //em.setProperty("hibernate.connection.url", jpaProperties.getProperty("hibernate.connection.url"));
+        //em.setProperty("hibernate.connection.password", jpaProperties.getProperty("hibernate.connection.password"));
+        //em.setProperty("hibernate.connection.username", jpaProperties.getProperty("hibernate.connection.username"));
+        //em.setProperty("hibernate.connection.driver_class", jpaProperties.getProperty("hibernate.connection.driver_class"));
+        em.setProperty("javax.persistence.jdbc.user", jpaProperties.getProperty("hibernate.connection.username"));
+        //em.setProperty("javax.persistence.jdbc.driver", jpaProperties.getProperty("hibernate.connection.driver_class"));
+        em.setProperty("javax.persistence.jdbc.url", jpaProperties.getProperty("connection.db.url"));
+        em.setProperty("javax.persistence.jdbc.password", jpaProperties.getProperty("connection.db.password"));
+        Class.forName(jpaProperties.getProperty("javax.persistence.jdbc.driver"));
+
+
+        em
+
+Precision: 0
+Recall: 0
+F1 Score: 0

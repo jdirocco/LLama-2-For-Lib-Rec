@@ -1,0 +1,99 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: MaksTuev/ferro
+    Project Description: THIS REPO IS DEPRECATED AND IS NO LONGER BEING ACTIVELY MAINTAINED \n\nFerro evolved into modules , , , repository Documentation in Russian. It contains modules, which is used for developing Android projects by mobile studio .\n\n Ferro\n\nSimple and powerful MVP library for Android \n\nFerro elegantly solves two ageold problems of Android Framework related to configuration changes:\n restore screen\'s data\n managing background tasks\n\nFirst problem is solved using permanent presenter, second using freezing rx events Observable doesn\'t unsubscribe.\nAlso new feature was added Ferro can freeze rx event when screen becomes invisible, and defreeze it when screen goes to foreground.\n\nThe schematic work of ferro:\n\n\n\nFerro is divided into 3 layers, each of one adds behavior to the previous. So you can use only part of Ferro, if you want.\n\nThe first layer:\n ferrocore\nThis library contains base classes for Activity and Fragment , PSS persistent screen scope. For each activity and fragment, based on this classes, will be created . You can get it by calling the method or . This object isn\'t destroyed when configuration changed, it is only destroyed when screen is finally destroyed e.g. after call . You can add listener, which will be called when destroyed. It has methods for storing and getting objects.\nIn reality, is actually a retained Fragment without view.\n\nThis mechanism is perfect for storing a presenter, that is done in the next extention:\n ferromvp\nThis library contains base classes for view, presenter and screen component. For each screen you need to extend , and or . \n\nThe will be saved in and reused when view recreated. In method you need to insert presenter to the view. The easiest way to do it is to use dagger component as . Due to this mechanism presenter is reused after configuration change. \n\nMethod will be called, when view is ready. Boolean parameter means that view is recreated after configuration change. You should show previously loaded data via this method, it data exists.\n\nIn you should override method with parameter instead of default method . Same for and method.\n\nIf you use Dagger, this library contains two scope annotations and . It also contains and , which can be used for getting access to Activity or Fragment inside objects, provided by Dagger screen component e.g. inside Navigator class.\n\nIt\'s lifecycle of screen\'s objects: \n\n\nThe next extention adds freeze logic for Rx events:\n ferromvprx\nClass contains freeze logic, scematic work of which shown in gif above. This class should be extended instead of .\n\nIf you subscribe to via one of methods,\nall rx events onNext, onError, onComplete would be frozen when view destroyed and unfrozen\nwhen view recreated.\nIf option is enabled it is enabled by default, all Rx events\nwould be also frozen when screen is paused and unfrozen when screen is resumed.\n\nWhen screen is finally destroyed, all subscriptions would be automatically unsubscribed.\n\n ferrorx\nThis library contains rx operators , , , , for RxJava2 and for RxJava1, which contains freeze logic. To apply it, you should pass this operator in method .\n\n\n Conclusion \nNobody likes to do the basic logic of the project dependent on thirdparty libraries. So, the Ferro is, generally speaking, set of simple ideas, and you can create you own base classes by using this ideas.\n\n Dependency\n\n\n\n\n License\n\n\n'
+    Existing Dependencies:
+    javax.inject:javax.inject
+- javax.annotation:jsr250-api
+- com.jakewharton.timber:timber
+- com.android.support:recyclerview-v7
+- com.annimon:stream
+- com.android.support:appcompat-v7
+- com.agna.ferro:ferro-mvp
+- com.agna.ferro:ferro-mvp-rx
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div class="container">
+        <h3>Edit Pesan</h3>
+        <?php 
+        $id = $this->uri->segment(3);
+        $sql = $this->db->query("SELECT * FROM pesan WHERE pesan_id='$id'")->row_array();?>
+        <form action="<?php base_url('Pesan/edit_pesan')?>" method="post" class="form-group">
+            <input type="hidden" name="pesan_id" value="<?=$sql['pesan_id']?>">
+
+            <div class="form-group form-check">
+                <input type="text" name="nama" class="form-control" placeholder="Nama" value="<?=$sql['nama']?>"><br>
+            </div>
+            <div class="form-group form-check">
+                <input type="email" name="email" class="form-control" placeholder="Email" value="<?=$sql['email']?>"><br>
+            </div>
+            <div class="form-group form-check">
+                <input type="text" name="judul" class="form-control" placeholder="Judul" value="<?=$sql['judul']?>"><br>
+            </div>
+            <div class="form-group form-check">
+                <input type="text" name="pesan" class="form-control" placeholder="Pesan" value="<?=$sql['pesan']?>"><br>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>r(message, cause);
+    }
+
+    public UnsupportedDataTypeException(Throwable cause) {
+        super(cause);
+    }
+
+} package org.apache.metamodel.data;
+
+import org.apache.metamodel.query.SelectItem;
+
+/**
+ * Exception thrown when trying to read from a {@link Row} or write to a {@link Column} using a type other than
+ * String, Integer or Date.
+ */
+public final class UnsupportedDataTypeException extends IllegalArgumentException {
+
+    private static final long serialVersionUID = 1L;
+
+    public UnsupportedDataTypeException(SelectItem item, Class<?> type) {
+        super("Can not use value of type '" + type + "' with select item: " + item);
+    }
+
+    public UnsupportedDataTypeException(Class<?> type) {
+        super("Unsupported datatype: " + type);
+    }
+
+    public UnsupportedDataTypeException(String message) {
+        super(message);
+    }
+
+    public UnsupportedDataTypeException(String message, Throwable cause) {
+        supe
+
+Precision: 0
+Recall: 0
+F1 Score: 0

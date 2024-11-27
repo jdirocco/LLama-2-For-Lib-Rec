@@ -1,0 +1,150 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: trivago/Heimdall.droid
+    Project Description: Heimdall\n\nHeimdall is an client specifically designed for easy usage and high flexibility. It supports all grants as described in as well as refreshing an access token as described in of the specification.\n\nThis library makes use of . Therefore you should be familar with .\n\nIf you are an iOS Developer then please take a look at the .\n\n\n\n\n\n\n Installation\n\nHeimdall is ready to be used via .\nSimply add the following code to your root :\n\n\n\nNow add the gradle dependency in your application\'s :\n\n\n\n Examples\n\nHeimdall\'s main class is the . It is responsible for retrieving a new access token and keeping it valid by refreshing it.\n\nIn order to initialize an instance, you need to pass an object implementing the interface. You can use the predefined if it suits your needs. Make sure that your is as secure as possible!\n\n\n\nOn your manager instance you can now call to receive a new access token. The grant instance you pass must implement the interface and your actual server call. \n\nHere is an example of an .\n\n\n\nYour manager instance also has a method called . This is probably the main reason we build this library. It firstly checks if the stored access token is expired and then either emits the unexpired one or refreshs it if it is expired using the passed refresh grant. \n\nHere is an example of an .\n\n\n\nMostly you will use the to authorize the user via a third party service such as Trakt.tv.\n\nThe implemention of a grant authorizing with Trakt.tv might look as following:\n\n\n\nUsing that grant with an Android WebView might look like this please note that we use here:\n\n\n\n Sample Application\n\nPlease also check out our sample application which performs an authorization against and displays a simple list of the user\'s watchlists.\n\nNote: In order to build the sample by yourself you have to and add the credentials wherever is used.\n\n\n About\n\nHeimdall was built by \n\n License\n\nHeimdall is licensed under Apache Version 2.0.\n'
+    Existing Dependencies:
+    com.android.support:recyclerview-v7
+- com.android.support:appcompat-v7
+- com.google.code.gson:gson
+- com.jakewharton:butterknife
+- org.parceler:parceler-api
+- com.android.support:cardview-v7
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" style="background-color:red;" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  John Pierce
+                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ﻿// Licensed to the.NET Foundation under one or more agreements.
+// The.NET Foundation licenses this file to you under the MIT license.
+// See the LICENSE file in the project root for more information.
+
+#nullable disable
+
+using System.Composition;
+using Microsoft.CodeAnalysis.Editor.Implementation.Highlighting;
+using Microsoft.CodeAnalysis.Host;
+using Microsoft.CodeAnalysis.Host.Mef;
+
+namespace Microsoft.CodeAnalysis.Editor.CSharp.KeywordHighlighting
+{
+    [ExportHighlighter(LanguageNames.CSharp)]
+    [Shared]
+    internal class CSharpHighlighter : AbstractKeywordHighlighter
+    {
+        [ImportingConstructor]
+        [Obsolete(MefConstruction.ImportingConstructorMessage, error: true)]
+        public CSharpHighlighter()
+        {
+        }
+
+        protected override bool IsHighlight        }
+    }
+}
+ingKeywordKind(SyntaxKind kind)
+        {
+            return kind == SyntaxKind.AbstractKeyword ||
+                kind == SyntaxKind.AsyncKeyword ||
+                kind == SyntaxKind.AwaitKeyword ||
+                kind == SyntaxKind.DoKeyword ||
+                kind == SyntaxKind.FalseKeyword ||
+                kind == SyntaxKind.ForKeyword ||
+                kind == SyntaxKind.GetKeyword ||
+                kind == SyntaxKind.NameOfKeyword ||
+                kind == SyntaxKind.NullKeyword ||
+                kind == SyntaxKind.ReadOnlyKeyword ||
+                kind == SyntaxKind.RefKeyword ||
+                kind == SyntaxKind.SealedKeyword ||
+                kind == SyntaxKind.SetKeyword ||
+                kind == SyntaxKind.ThisKeyword ||
+                kind == SyntaxKind.TrueKeyword ||
+                kind == SyntaxKind.ValueKeyword ||
+                kind == SyntaxKind.WhenKeyword ||
+                kind == SyntaxKind.WhereKeyword ||
+                kind == SyntaxKind.WhileKeyword ||
+                kind == SyntaxKind.YieldKeyword;
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

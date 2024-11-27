@@ -1,0 +1,161 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: apache/shiro
+    Project Description: \n\n\n\n\n\nApache Shiro\n============\n\n is a powerful and easytouse Java security framework that performs authentication, authorization, cryptography, and session management. With Shiro\xe2\x80\x99s easytounderstand API, you can quickly and easily secure any application \xe2\x80\x93 from the smallest mobile applications to the largest web and enterprise applications.\n\nDocumentation and Examples\n\n \n \n\nLicense\n\n\n'
+    Existing Dependencies:
+    org.apache.shiro:shiro-crypto-core
+- org.springframework:spring-test
+- org.apache.shiro:shiro-spring
+- org.hamcrest:java-hamcrest
+- org.apache.shiro:shiro-cas
+- commons-cli:commons-cli
+- commons-beanutils:commons-beanutils
+- org.apache.shiro:shiro-spring-boot-web-starter
+- org.slf4j:slf4j-simple
+- org.easymock:easymock
+- org.codehaus.groovy:groovy-all
+- commons-lang:commons-lang
+- javax.servlet.jsp:jsp-api
+- org.apache.shiro:shiro-config-core
+- org.apache.shiro:shiro-lang
+- org.hibernate:hibernate-ehcache
+- com.google.inject.extensions:guice-servlet
+- org.springframework:spring-context
+- org.apache.shiro:shiro-all
+- org.apache.shiro:shiro-cache
+- org.apache.commons:commons-configuration2
+- org.apache.shiro:shiro-jaxrs
+- log4j:log4j
+- ch.qos.logback:logback-classic
+- org.apache.shiro:shiro-servlet-plugin
+- commons-codec:commons-codec
+- org.apache.shiro:shiro-aspectj
+- org.powermock:powermock-api-easymock
+- org.powermock:powermock-module-junit4
+- org.apache.shiro.samples:samples-spring-client
+- org.hibernate:hibernate-annotations
+- org.apache.shiro:shiro-guice
+- org.apache.shiro:shiro-crypto-hash
+- org.springframework.boot:spring-boot-test
+- org.springframework.boot:spring-boot-starter
+- org.springframework:spring-orm
+- org.slf4j:slf4j-log4j12
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 38 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.2.0/css/tempusdominus-bootstrap-4.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/icheck-bootstrap@3.0.1/icheck-bootstrap.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.0.0-alpha/css/adminlte.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.2.3/css/OverlayScrollbars.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.0.3/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <!-- DataTable CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/v/bs4-4.1.1/dt-1.10.16/datatables.min.css"/>
+    
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    
+    <script>
+        // $(document).ready(function(){
+        //     $.post('<?php // echo base_url();?>//index.
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 38 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> 1)
+		{
+			return "0" + number;
+		}
+		else
+		{
+			return number;
+		}
+	}
+
+} package net.runelite.api;
+
+/**
+ * Represents all types of time, used for the time of day.
+ */
+public enum Time
+{
+	MORNING,
+	DAY,
+	EVENING,
+	NIGHT;
+
+	/**
+	 * Converts the value of time to the format used in-game.
+	 */
+	public String valueToClockFormat()
+	{
+		switch (this)
+		{
+			case DAY:
+				return "12";
+			case MORNING:
+				return "06";
+			case EVENING:
+				return "18";
+			case NIGHT:
+				return "25";
+			default:
+				throw new IllegalArgumentException("Time must be morning, day, evening or night.");
+		}
+	}
+
+	/**
+	 * Converts the value of the current time to the format used in-game.
+	 */
+	public String currentToClockFormat()
+	{
+		int number = Math.random() <= 8? 6 : (int) (Math.random() * 8) % 2 == 0? 8 : 0;
+
+		if ((int) (Math.random() * 10) % 10 ==
+
+Precision: 0
+Recall: 0
+F1 Score: 0

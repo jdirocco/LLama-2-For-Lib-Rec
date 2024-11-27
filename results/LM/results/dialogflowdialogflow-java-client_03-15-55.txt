@@ -1,0 +1,176 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: dialogflow/dialogflow-java-client
+    Project Description: DEPRECATED Java SDK for api.ai\n\n| Deprecated |\n||\n| This Dialogflow client library and Dialogflow API V1 . Please migrate to Dialogflow API V2 and the |\n\n \n\nThe API.AI Java SDK makes it easy to integrate speech recognition with natural language processing API on Android devices. API.AI allows using voice commands and integration with dialog scenarios defined for a particular agent in API.AI.\n\n\nAuthentication is accomplished through setting the client access token when initializing an object. The client access token specifies which agent will be used for natural language processing.\n\nNote: The API.AI Java SDK only makes query requests, and cannot be used to manage entities and intents. Instead, use the API.AI user interface or REST API to create, retrieve, update, and delete entities and intents.\n\n\n Tutorial\nThis section contains a detailed tutorial on how to work with libai. This tutorial was written for .\n\n\n Quick Start\n1. Create an API.AI agent with entities and intents, or use one that you've already created. See the API.AI documentation for instructions on how to do this. \n2. Open .\n3. From the start screen or File menu , choose Open.... \n4. In the Open project dialog, fill Path to apiaijavasdk directory, then expand exmaples directory and choose one of the client examples. Then click Ok. \n5. Open Run, choose Edit Configuration. In the Run/Debug Configuration Dialog, fill program arguments with your Client access token \n6. If there are no errors, you can get the result using Idea Input/Output to make text request textclient.\n\n Work with library source code \nIf you want to work with library source code, for some reason, follow these steps:\n\n1. First of all, execute the steps specified in Quick Start. Only then go to the next step here.\n2. Open File, choose Project Structure..., choose Modules. Add new module libai. After this choose textclientor voice client module. Remove Maven: ai.api.libai:1.1.0 and Add Module dependency libai. After this click Apply. \n3. Try to Run. If there are no errors, you can get the result using Idea Input/Output to make text request textclient.\n\n\n\n\n"
+    Existing Dependencies:
+    commons-io:commons-io
+- org.apache.logging.log4j:log4j-core
+- org.apache.httpcomponents:httpclient
+- org.slf4j:slf4j-api
+- com.android.support:appcompat-v7
+- com.google.code.gson:gson
+- ai.api:libai
+- ai.api:libai-base
+- ai.api:sdk
+- ai.api.libai.samples:libai-samples
+- ai.api.libai.web:libai-web-servlet
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <!-- User Profile-->
+                        <li>
+                            <!-- User Profile-->
+                            <div class="user-profile d-flex no-block dropdown m-t-20">
+                                <div class="user-pic"><img src="<?php echo base_url();?>assets/images/users/1.jpg" alt="users" class="rounded-circle" width="40" /></div>
+                                <div class="user-content hide-menu m-l-10">
+                                    <a href="javascript:void(0)" class="" id="Userdd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <h5 class="m-b-0 user-name font-medium"><?php echo $this->session->userdata('username');?><i class="fa fa-angle-down"></i></h5>
+                                        <span class="op-5 user-email">johndoe@gmail.com</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Userdd">
+                                        <!-- <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a> -->
+                                        <!-- <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a> -->
+                                        <!-- <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i> Inbox</a> -->
+                                        
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="<?php echo site_url('login/logout');?>"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End User Profile-->
+                        </li>
+                        <!-- User Profile-->
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo site_url();?>" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard </span></a></li>
+
+                        <?php if($this->session->userdata('akses')==1){?>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo site_url('users');?>" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span class="hide-menu">Users
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using TweetApp.Data.Entities;
+using TweetApp.Hubs;
+using TweetApp.Service;
+
+namespace TweetApp.Controllers
+{
+    [Route("api/[controller]")]
+    public class ChatsController : ControllerBase
+    {
+        private readonly IHubChatClient _client;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly ApplicationDbContext _context;
+
+        public ChatsController(IHubChatClient client, SignInManager<ApplicationUser> signInManager, ApplicationDbContext context)
+        {
+            _client = client;
+            _signInManager = signInManager;
+            _context = context;
+        }
+
+        [HttpGet("[action]")]
+        public IActionResult GetAllChatRooms()
+        {
+            var data = _context.ChatRooms.ToList();
+            return Ok(data);
+        }
+
+        [HttpGet("[action]")]
+        [Authorize]
+        public IActionResult GetAllChatRoomByUserId()
+        {
+            var data = _context.ChatUser.Where(c => c.UserId == _signInManager.UserManager.GetUserId(HttpContext.User));
+            return Ok(data);
+        }
+
+
+        [HttpGet("[action]")]
+        [Authorize]
+        public IActionResult GetChatRoomByChatId(int ChatId)
+        {
+            var data = _context.ChatMessages.Where(c => c.ChatId == ChatId);
+            return Ok(data);
+        }
+
+        [HttpPost]
+        [Authorize]
+        public IActionResult Create(ChatRoom room)
+        {
+            room.Users = _signInManager.UserManager.GetUserId(HttpContext.User);
+            room.LastMessage = DateTime.Now;
+
+
+
+            //var userId = _signInManager.Context.GetUserId();
+            //var user = _context.Users.Find(userId);
+
+            _context.Add(room);
+            //var ChatUser = new ChatUser{
+
+            //}
+
+            var ChatUser = new ChatUser();
+
+            //ChatUser.UserId = 
+            ChatUser.ChatId = room.ChatId;
+            ChatUser.UserId = _signInManager.UserManager.GetUserId();
+
+            _context.ChatUsers.Add(ChatUser);
+
+            _context.SaveChanges();
+            _client.Notify();
+            return Created("", room);
+        }
+
+        [HttpGet("[action]")]
+        public IActionResult SendMessageTest([FromQuery]int Id)
+        {
+            var message = new ChatMessage
+            { Id = 1, Message = "Hello" };
+            //return Ok("Hello World");
+            _client.SendMessage("1", message);
+            //_client.SendMessage();
+            return Ok();
+        }
+
+    }
+}
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

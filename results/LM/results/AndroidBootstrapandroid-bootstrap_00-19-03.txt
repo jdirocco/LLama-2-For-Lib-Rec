@@ -1,0 +1,186 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: AndroidBootstrap/android-bootstrap
+    Project Description: androidbootstrap\nBootstrap TBC. Watch this space. \n'
+    Existing Dependencies:
+    javax.annotation:jsr250-api
+- com.jakewharton.timber:timber
+- org.robolectric:robolectric
+- com.android.support:appcompat-v7
+- com.nineoldandroids:library
+- com.google.code.gson:gson
+- com.jakewharton:butterknife
+- com.google.dagger:dagger
+- com.actionbarsherlock:viewpagerindicator
+- com.android.support.test.uiautomator:uiautomator-v18
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="card card-primary">
+        <div class="card-header">
+          <h3 class="card-title">{{trans('admin/productadd.product_info')}}</h3>
+        </div>
+        @if ($errors->has('sku'))
+           <p style="color:red"> {{$errors->first('sku')}}</p>
+          @endif
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form action="{{route('storeproduct')}}"  method="post" enctype="multipart/form-data">
+            @csrf
+          <div class="card-body">
+
+            <div class="form-row">
+                <div class="col-md-6">
+                    <label for="sku">Product code</label>
+                    <input type="text" class="form-control" id="sku" value="{{old('sku')}}" name="sku" placeholder="Product code">
+                </div>
+                <div class="col-md-6">
+                    <label for="sku">Product name</label>
+                    <input type="text" class="form-control" id="sku" value="{{old('name')}}" name="name" placeholder="Product name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6">
+                    <label for="sku">Price</label>
+                    <input type="text" class="form-control" id="price" value="{{old('price')}}" name="price" placeholder="Price">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6">
+                    <label for="sku">Discount</label>
+                    <input type="text" class="form-control" id="discount" value="{{old('discount')}}" name="discount" placeholder="Discount">
+                </div>
+            <div class="col-md-6">
+                <label for="status">Status</label>
+                <select name="status" id="status" class="form-control">
+                    <option value="1">Còn hàng</option>
+                    <option value="0">Het hàng</option>
+                </select>
+            </div>
+            </div>
+            <div class="form-group">
+                <label for="sku">Description</label>
+                <textarea id="description"  class="form-control" name="description">{{old('description')}}</textarea>
+              {{-- <small>We'll never share your email with anyone else.</small> --}}
+            </div>
+            <div class="form-row">
+                <div class="col-md-6">
+                        <label for="inputEmail4">Select category</label>
+                        <select id="category_id" class="form-control" name="category_id">
+                            <option selected value="">Select Category</option>
+
+                            @foreach ($categorys as $category)
+                                @if($category->parentId ==0 && $category->id!=1)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                        @foreach($categorys as $category2)
+                                            @if($category2->parentId ==$category->id )
+                                               
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>  }
+
+  private void test(List<String> expected) {
+    final String[] actual = this.service.buildCommand("test");
+    assertThat(Arrays.asList(actual)).containsExactly(
+        expected.toArray(new String[expected.size()]));
+  }
+
+} package io.github.glytching.dragoman.ql.listener;
+
+import io.github.glytching.dragoman.ql.domain.Pagination;
+import io.github.glytching.dragoman.ql.domain.SelectClause;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+/**
+ * Tests the {@link MongoService} class.
+ */
+public class MongoServiceTest {
+
+  private MongoService service;
+
+  @BeforeEach
+  public void setUp() {
+    this.service = new MongoService();
+  }
+
+  @Test
+  public void willBuildACommandFromASelectClause() {
+    SelectClause s = SelectClause.builder().build();
+
+    List<String> commands =
+        new ArrayList<>(
+            Arrays.asList(new String[] {
+                "db",
+                "test",
+                "aggregate",
+                "[{'$project': {}}, {'$group': {'_id': '$test'}}]"
+            }));
+
+    // note that the service does not add any pagination so expect the empty page
+    test(commands);
+  }
+
+  @Test
+  public void willBuildAnAggregationCommandFromASelectClause() {
+    SelectClause s = SelectClause.builder()
+                                .select("test", "field")
+                                .from("test")
+                                .build();
+
+    List<String> commands =
+        new ArrayList<>(
+            Arrays.asList(new String[] {"db", "test", "aggregate", "[{'$match': {'$or': "
+                + "['test']}}, {'$project': {'field': 1}}, {'$group': {'_id': '$field'}}]"}));
+
+    // note that the service does not add any pagination so expect the empty page
+    test(commands);
+  }
+
+  @Test
+  public void willBuildAnAggregateCommandWithPagination() {
+    SelectClause s = SelectClause.builder()
+                                .select("field")
+                                .from("test")
+                                .offset(1)
+                                .limit(2)
+                                .build();
+
+    List<String> commands = Collections.unmodifiableList(
+        Arrays.asList(new String[] {"db", "test", "aggregate", "[{'$project': {'field': 1}}, "
+            + "{'$group': {'_id': '$field'}}, {'$limit': 2}, {'$skip': 1}]"}));
+
+    // note that the service does not add any pagination so expect the empty page
+    test(commands);
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

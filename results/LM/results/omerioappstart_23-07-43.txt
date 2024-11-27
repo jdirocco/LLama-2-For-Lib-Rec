@@ -1,0 +1,219 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: omerio/appstart
+    Project Description: Appstart\n========\n\nAppstart is an opinionated Java boilerplate template for rapid development of multimodule .\n\n\n Overall Architecture\n\n\n\n\n Key Technologies/Libraries\n\nThe following key technologies/libraries are used by Appstart. You can either use some or all of these technologies depending on your needs:\n\n App Engine Services\n\n cron.xml for a cron job that run every midnight on the backend module and archives any old todos. This must be included with the default module appstartfrontend rather than any other modules as mentioned \n API Explorer for Cloud Endpoints: \n Backend module port number might be different, check you dev server output: \n\n TODO:\n Create documentations.\n Add sample unit tests that uses the App Engine local unit testing libraries.\n Create Cloud Endpoints frontend code to authenticate a user and refresh the OAuth token once it expires.\n Provide an option on the frontend to use either the JAXRS REST or Cloud Endpoints.\n Create a Maven archetype to easily scaffold projects.\n\n Contributing:\n\nContributions are welcome and encouraged, simply fork the project make your changes and submit a pull request.\n\n License\n\nOpen Source Apache License 2.0\n\n\n1:
+    Existing Dependencies:
+    jstl:jstl
+- com.googlecode.objectify:objectify
+- com.sun.jersey:jersey-servlet
+- org.apache.commons:commons-lang3
+- com.sun.jersey:jersey-json
+- com.google.appengine:appengine-api-stubs
+- com.google.appengine:appengine-api-1.0-sdk
+- javax.ws.rs:jsr311-api
+- com.google.appengine:appengine-endpoints
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+         
+         <div class="row">         
+            <div class="col-md-12">
+                <button type="button" class="btn btn-success btn-lg pull-right" data-toggle="modal" data-target="#addNew"><i class="fa fa-plus"></i>Add New</button>    
+            </div>
+         </div> 
+         
+
+
+         <br><br>
+         <div class="table-responsive">
+            <table id="myTable" class="table table-bordered">
+                <thead style="background-color:#39B6AF;color: white;">
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Image</th>
+                    <th>Description</th>
+                    <th></th>
+                </thead>
+                
+                <tbody id="table">
+                    <?php 
+                        $i = 1;
+
+                        if ($result->num_rows() > 0) {
+                            foreach ($result->result() as $row) {?>
+                                <tr>
+                                    <td><?=$i?></td>
+                                    <td><?=$row->name?></td>
+                                    <td><?=$row->position?></td>
+                                    <td><div class="col-xs-12" style="padding-left: 0;"><img src="<?=$row->image?>" style="width:100px;"></div></td>
+                                    <td><?=$row->description?></td>
+                                    <td><a class="btn btn-warning" type="button" onclick="edit(<?=$row->id?>)"><span class="glyphicon glyphicon-pencil" ></span>Edit</a><a style="margin-left:40px;" class="btn btn-danger" type="button" onclick="deleteItem(<?=$row->id?>,'our_team')"><span class="glyphicon glyphicon-remove" ></span>Delete</a></td>
+                                </tr>
+                                <?php
+                            
+                            $i++;}
+                        }else{
+
+                    }
+                   ?>
+                    
+                    
+                </tbody>
+            </table>
+        </div> 
+        
+         
+     </div><!--/.main-->
+
+     <!-- Modal for Add -->
+    <div id="addNew" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+        
+            <!-- Modal content-->
+            <div class="modal-content">
+            <div class="modal-header"  style="background-color: #39B6AF;color: white;">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add</h4>
+            </div>
+            <div class="modal-body">
+                <?php echo form_open_multipart('our_team/save');?>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label >Name :</
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> 0.85f, 1, 0, 0.8f,
+            -100,
+            100,
+            (float) 0.85f, 1, 0, 0.8f
+        );
+        addEntity(player, new Point2D(628, 100)); //player spawnpoint
+        addEntity(player, new Point2D(328, 100));
+
+        setGameEntityCollisions(true);
+    }
+
+    public static void addEntity(IEntity a, IPoint aPos) {
+        addEntity(a, aPos.getX(), aPos.getY());
+    }
+
+    public static void addEntity(IEntity a, float x, float y) {
+        addEntity(a);
+        a.setPosition(x, y);
+    }
+
+    public static void addEntity(IEntity a) {
+        getEntities().add(a);
+
+        if(a.getComponent(IRenderer.class)!= null) {
+            getRend().addRendererToScreen(a.getComponent(IRenderer.class));
+        }
+
+        if(!a.getComponent(ISoundSource.class).empty() && a.getComponent(ISoundEmitter.class).empty()) {
+            a.addComponent(new SoundEmitter());
+        }
+        if(a.getComponent(IUpdate.class)!= null && a.getComponent(IUpdate.class).getClass().equals(UpdateCompound.class)) {
+            a.getComponent(IUpdate.class).addComponent(new PhysicsUpdatable());
+            //a.getComponent(IUpdate.class).addComponent(new PhysicsUpdatable());
+        }
+    }
+
+    /**
+     * Remove entity from list.
+     *
+     * @param a
+     */
+    private static void removeEntity(IEntity a) {
+        getEntities().remove(a);
+
+    }
+
+    public static void setPause(boolean val){
+        isPaused = val;
+    }
+
+    /**
+     * Returns the game instance.
+     */
+    public static Game get() {
+        if (game == null)
+            game = new Game();
+
+        return game;
+    }
+
+    /**
+     * Get the entitylist.
+     * @return
+     */
+    public static EntityList getEntities() {
+        return EntityList.get();
+    }
+
+    /**
+     * Returns the current gametime in seconds.
+     * @return
+     */
+    public static float getTime() {
+        return gameTime;
+    }
+
+    /**
+     * Returns the current gametime in seconds.
+     * @return
+     */
+    public static float getDeltaTime() {
+        return deltaTime;
+    }
+
+    /**
+     * Get the screenmanager.
+     */
+    public static ScreenManager getSm() {
+        return ScreenManager.get();
+    }
+
+    /**
+     * Return the render.
+     */
+    public static RenderCompound getRend() {
+        return RenderCompound.get();
+    }
+
+    /**
+     * Get the camera.
+     */
+    public static ICamera getCam() {
+        return Cam.get();
+    }
+
+    //TODO: Move all game logic out of here. Maybe create another class.
+    @Override
+    public void update(float dt) {
+
+Precision: 0
+Recall: 0
+F1 Score: 0

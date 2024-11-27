@@ -1,0 +1,216 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications. provide recommendations exclusively in the Maven format: groupId:artifactId:version.
+    Given the project details below:
+    Project Name: patloew/RxLocation
+Project Description: The Reactive Location API Library for Android is now deprecated and not maintained anymore. Please switch to the CoLocation library by Micha\xc5\x82 Charmas. This library wraps the Location APIs in RxJava 2.x.
+Existing Dependencies Include: org.powermock:powermock-module-junit4
+- io.reactivex.rxjava2:rxandroid
+- com.squareup.leakcanary:leakcanary-android
+- io.reactivex.rxjava2:rxjava
+- com.google.android.gms:play-services-location
+- com.squareup.leakcanary:leakcanary-android-no-op
+
+Project Name: frankred/jSona
+Project Description: JSona is a configuration file(JSON), vcj and JavaFx based music and media player. The aim is to always keep your playlists in synch with your music folders. For fast fulltext search jSona uses Apache Lucene (http://lucene.apache.org/core/).
+Existing Dependencies Include: uk.co.caprica:vlcj
+- org.apache.lucene:lucene-analyzers-common
+- org.apache.lucene:lucene-core
+- commons-io:commons-io
+- com.mpatric:mp3agic
+- org.apache.lucene:lucene-queryparser
+- com.github.tulskiy:jkeymaster
+- org.apache.commons:commons-lang3
+
+Project Name: querydsl/querydsl
+Project Description: Querydsl is a framework which enables the construction of type-safe SQL-like queries for multiple backends including JPA, MongoDB and SQL in Java. Querying JPA and MongoDB using a fluent API.
+Existing Dependencies Include: org.springframework:spring-aop
+- com.mysema.codegen:codegen
+- org.xerial:sqlite-jdbc
+- org.springframework:spring-test
+- com.google.guava:guava
+- com.jolbox:bonecp
+- org.hamcrest:hamcrest-library
+- com.oracle:ojdbc6
+- com.querydsl:querydsl-sql-spatial
+- com.google.inject.extensions:guice-persist
+- com.querydsl:querydsl-apt
+- org.postgresql:postgresql
+- org.easymock:easymock
+- com.querydsl:querydsl-spatial
+- org.hibernate:hibernate-ehcache
+- javax.inject:javax.inject
+- org.springframework:spring-context
+- org.eclipse.persistence:eclipselink
+- org.firebirdsql.jdbc:jaybird-jdk16
+- log4j:log4j
+- org.mongodb.morphia:morphia
+- org.hsqldb:hsqldb
+- cglib:cglib
+- org.apache.lucene:lucene-queryparser
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.apache.maven:maven-project
+- org.hibernate:hibernate-envers
+- com.querydsl:querydsl-codegen
+- net.sourceforge.jtds:jtds
+- org.springframework.roo:org.springframework.roo.annotations
+- org.apache.ant:ant
+- com.querydsl:querydsl-lucene3
+- com.thoughtworks.proxytoys:proxytoys
+- org.scala-lang:scala-library
+- org.geolatte:geolatte-geom
+- com.h2database:h2
+- com.querydsl:querydsl-sql-codegen
+- org.hibernate:hibernate-annotations
+- org.scala-lang:scala-compiler
+- org.reflections:reflections
+- org.datanucleus:datanucleus-api-jdo
+- org.mongodb:mongo-java-driver
+- org.hibernate:hibernate-validator
+- com.infradna.tool:bridge-method-annotation
+- com.querydsl:querydsl-sql-spring
+- javax.transaction:jta
+- org.slf4j:slf4j-log4j12
+
+Project Name: GoogleCloudPlatform/google-cloud-datastore
+Project Description: This repository contains low-level Java and Python client libraries for Google Cloud Datastore. For more idiomatic and usable client libraries in these languages, please visit the [Google Cloud Dataastore Client for Java][java-datastore] and Google Cloud Database Client for Python
+Existing Dependencies Include: com.google.http-client:com.google.http-client
+- com.google.truth:com.google.truth
+- com.google.cloud.datastore:datastore-v1-proto-client
+- com.google.guava:com.google.guava
+- com.google.api-client:com.google.api-client
+- com.google.oauth-client:google-oauth-client
+- com.google.truth:truth
+- com.google.oauth-client:com.google.oauth-client
+
+Project Name: eclipse/tycho
+Project Description: Eclipse Tycho is a manifest-first way to build and build Eclipse plug-ins/OSGi bundles/RCP applications\n，nwith Maven. This repository contains all the features and documentation that will help you migrate to the official Eclipse site.
+Existing Dependencies Include: org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.codehaus.plexus:plexus-component-annotations
+- org.codehaus.plexus:plexus-container-default
+- org.eclipse.tycho:tycho-testing-harness
+- org.apache.maven:maven-core
+- org.eclipse.tycho:org.eclipse.jdt.compiler.apt
+- org.codehaus.plexus:plexus-utils
+- org.eclipse.tycho:org.eclipse.osgi
+- org.eclipse.tycho:tycho-core
+- org.apache.commons:commons-exec
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Reccomend me some of these libraries that can be added to the project to enhance its capabilities.
+    Project Name: spheras/messic
+    Project Description: MESSIC is a free software project that aims to convert this mess of music into an ordered catalog of music and play it in a confortable way. It gives you absolute control of your music.
+    Existing Dependencies:
+    org.springframework:spring-aop
+- org.hibernate:hibernate-entitymanager
+- org.messic:messic-starter
+- com.google.apis:google-api-services-youtube
+- org.springframework.security:spring-security-core
+- org.mockito:mockito-all
+- org.springframework:spring-jdbc
+- net.jthink:jaudiotagger
+- commons-codec:commons-codec
+- org.springframework:spring-aspects
+- org.springframework:spring-test
+- org.fourthline.cling:cling-support
+- org.springframework.security:spring-security-config
+- org.osgi:org.osgi.core
+- net.coobird:thumbnailator
+- commons-cli:commons-cli
+- org.springframework:spring-oxm
+- org.springframework.security:spring-security-web
+- commons-logging:commons-logging
+- taglibs:standard
+- org.springframework:spring-core
+- org.messic:messic-server-common
+- org.messic:messic-server-datamodel
+- commons-collections:commons-collections
+- org.springframework:spring-webmvc-portlet
+- junit:junit
+- com.h2database:h2
+- org.messic:messic-server-webapp
+- commons-io:commons-io
+- commons-dbcp:commons-dbcp
+- org.springframework:spring-tx
+- commons-lang:commons-lang
+- org.aspectj:aspectjweaver
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     Based on the project description and existing dependencies, here are five libraries that could enhance the capabilities of the spheras/messic project:
+
+    1. org.springframework.data:spring-data - This library provides a simple and consistent API for accessing and manipulating data in various databases and data sources. It could help simplify the project's data access and management, and provide better support for data-driven applications.
+
+    2. org.hibernate:hibernate-search - This library provides a powerful search engine for Java applications, and could help improve the project's search functionality and performance. It is built on top of Hibernate, so it would be easy to integrate with the project's existing Hibernate dependencies.
+
+    3. commons-codec:commons-codec - This library provides a set of utility classes for working with binary data, such as encoding and decoding strings and bytes. It could help improve the project's performance and efficiency when handling binary data.
+
+    4. org.springframework.security:spring-security-oauth2 - This library provides support for implementing OAuth2 authentication and authorization in Spring-based applications. It could help improve the project's security features and provide better support for user authentication and authorization.
+
+    5. com.google.guava:guava - This library provides a set of utility classes for working with collections, strings, and other common data structures. It could help simplify the project's code and improve its performance and efficiency.
+
+     Overall, these libraries could help enhance the project's capabilities, improve performance, and provide better support for data-driven applications and security features. They are all compatible with the existing dependencies, and could be easily integrated into the project.
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> # Maven Dependencies for the Project
+
+The following are the Maven dependencies required for the project:
+
+1. org.springframework:spring-context:5.2.8.RELEASE
+2. org.springframework:spring-web:5.2.8.RELEASE
+3. org.springframework:spring-webmvc:5.2.8.RELEASE
+4. org.springframework.data:spring-data-jpa:2.2.8.RELEASE
+5. org.hibernate:hibernate-core:5.4.32.Final
+6. org.hibernate:hibernate-entitymanager:5.4.32.Final
+7. org.springframework.boot:spring-boot-starter-data-jpa:2.2.8.RELEASE
+8. org.springframework.boot:spring-boot-starter-web:2.2.8.RELEASE
+9. org.springframework.boot:spring-boot-starter-security:2.2.8.RELEASE
+10. org.springframework.boot:spring-boot-starter-test:2.2.8.RELEASE
+
+Note that the versions of the dependencies may vary based on the Spring Boot version you are using. It is important to ensure that all the dependencies are compatible with each other and with the Spring Boot version you are using.
+
+Precision: 0.8
+Recall: 0.12121212121212122
+F1 Score: 0.2105263157894737
+
+Formatted Dependencies:
+org.springframework:spring-aop
+- org.hibernate:hibernate-entitymanager
+- org.messic:messic-starter
+- com.google.apis:google-api-services-youtube
+- org.springframework.security:spring-security-core
+- org.mockito:mockito-all
+- org.springframework:spring-jdbc
+- net.jthink:jaudiotagger
+- commons-codec:commons-codec
+- org.springframework:spring-aspects
+- org.springframework:spring-test
+- org.fourthline.cling:cling-support
+- org.springframework.security:spring-security-config
+- org.osgi:org.osgi.core
+- net.coobird:thumbnailator
+- commons-cli:commons-cli
+- org.springframework:spring-oxm
+- org.springframework.security:spring-security-web
+- commons-logging:commons-logging
+- taglibs:standard
+- org.springframework:spring-core
+- org.messic:messic-server-common
+- org.messic:messic-server-datamodel
+- commons-collections:commons-collections
+- org.springframework:spring-webmvc-portlet
+- junit:junit
+- com.h2database:h2
+- org.messic:messic-server-webapp
+- commons-io:commons-io
+- commons-dbcp:commons-dbcp
+- org.springframework:spring-tx
+- commons-lang:commons-lang
+- org.aspectj:aspectjweaver
+ Test Dependencies:
+['org.springframework:spring-expression', 'com.google.http-client:google-http-client-jackson2', 'org.hibernate:hibernate-core', 'org.springframework:spring-webmvc', 'org.messic:messic-server-osgiservices', 'org.messic:messic-service', 'org.messic:messic-server-webapp-logics', 'org.messic:messic-server-dlna', 'com.google.api-client:google-api-client', 'org.apache.felix:org.apache.felix.bundlerepository', 'org.springframework:spring-context', 'net.java.dev.jna:jna-platform', 'com.octo.captcha:jcaptcha-integration-simple-servlet', 'org.apache.httpcomponents:httpclient', 'org.messic:messic-configuration', 'org.jsondoc:jsondoc-core', 'com.sun:tools', 'org.apache.commons:commons-lang3', 'org.springframework:spring-beans', 'org.messic:messic-server-api-playlists', 'org.springframework:spring-orm', 'com.fasterxml.jackson.core:jackson-databind', 'org.slf4j:slf4j-log4j12', 'org.springframework:spring-web', 'org.messic:messic-server-api', 'org.springframework:spring-context-support', 'log4j:log4j', 'org.messic:messic-server-plugin-tagwizard-audiotagger', 'javax.servlet:servlet-api', 'javax.servlet:jstl', 'commons-fileupload:commons-fileupload', 'org.apache.felix:org.apache.felix.main', 'org.fourthline.cling:cling-core']

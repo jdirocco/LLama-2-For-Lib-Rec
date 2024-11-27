@@ -1,0 +1,114 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: octo-online/RoboSpice-samples
+    Project Description: RoboSpicesamples\n\n\nAll samples of the RoboSpice library.\n\n\n Convert samples to Ant projects\n\n\n\n\nyour project is now antready, the libs folder contains all needed dependencies to add robospice and extensions modules to your project.\n\nThis method works for every sample project. Once you got all the needed jar files, you can move them to your own projects.\n\nNote : you will need to define the environment variable to point to you android SDK home folder for maven to work.\n'
+    Existing Dependencies:
+    com.actionbarsherlock:actionbarsherlock
+- com.octo.android.robospice:robospice-ui-spicelist
+- com.octo.android.robospice:robospice-okhttp
+- com.octo.android.robospice:robospice-ormlite-content-provider
+- com.tojc.ormlite.android:ormlite-content-provider-compiler
+- com.google.android:android
+- com.j256.ormlite:ormlite-android
+- commons-logging:commons-logging
+- com.octo.android.robospice:robospice-retrofit
+- com.google.android:annotations
+- org.codehaus.jackson:jackson-mapper-asl
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     // 1. 引入依赖
+var express = require('express');
+var bodyParser = require("body-parser");
+var app = express();
+app.use(bodyParser.urlencoded({
+    extended:false,
+}))
+app.use(bodyParser.json())
+
+app.engine('html',require('express-art-template'));
+app.set('view engine','html');
+var mysql = require("./model/mysql");
+
+// 设置监听的端口
+app.listen(3000)
+
+// 2. 处理跨域
+app.all('*', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+   res.header('Access-Control-Allow-Method', '*');
+  next();
+});
+
+
+
+// 3. 处理请求
+// 3-1 处理登陆请求
+app.post('/login',(req,res)=>{
+    var username = req.body.username
+    var password = req.body.password
+    mysql.select(username,password,res,"login")
+})
+// 3-2 处理注册请求
+app.post('/regist',(req,res)=>{
+    var username = req.body.username
+    var password = req.body.password
+    mysql.insert(username,password,res,"regist")
+})
+
+app.get('/list',(req,res)=>{
+    mysql.selectAll(res,'list')
+})
+
+app.post('/delete',(req,res)=>{
+    var id = req.query.id
+    mysql.delete(id,res,"delete")
+})
+
+app.post('/update',(req,res)=>{
+    var id = req.body.id
+    var title = req.body.title
+    mysql.update(id,title,res,"update")
+})
+
+
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>nction (req, res) {
+  res.send({
+    title: 'Node.js + MongoDB',
+    message: 'Welcome to the API'
+  });
+});
+
+module.exports = router; const express = require('express');
+const router = express.Router();
+
+router.get('/', fu
+
+Precision: 0
+Recall: 0
+F1 Score: 0

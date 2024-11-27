@@ -1,0 +1,176 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: Netflix/spectator
+    Project Description: \n\n\n\n Spectator\n\nSimple library for instrumenting code to record dimensional time series.\n\n Requirements\n\n Java 8 or higher.\n Java 7 or higher for spectator 0.27.x or earlier.\n\n Documentation\n\n \n \n\n Dependencies\n\nTo instrument your code you need to depend on the api library. This provides the minimal interfaces\nfor you to code against and build test cases. The only dependency is slf4j.\n\n\n\nIf running at Netflix with the standard platform, see the\n page on the\nwiki.\n\n Instrumenting Code\n\nSuppose we have a server and we want to keep track of:\n\n Number of requests received with dimensions for breaking down by status code, country, and\n the exception type if the request fails in an unexpected way.\n Latency for handling requests.\n Summary of the response sizes.\n Current number of active connections on the server.\n\nHere is some sample code that does that:\n\n\n'
+    Existing Dependencies:
+    io.dropwizard.metrics:metrics-core
+- org.springframework:spring-web
+- org.openjdk.jmh:jmh-generator-annprocess
+- log4j:log4j
+- org.apache.spark:spark-core_2.10
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    	<div class="page-header">
+        <div class="container">
+          <h1 class="entry-title">Dashboard</h1>     
+          <div class="breadcrumbs">
+            <ul class="breadcrumb">
+              <li><a href="#">Home</a></li>
+              <li class="active">Dashboard</li>
+            </ul><!--/breadcrumbs-->
+          </div><!--/breadcrumbs-->
+        </div>
+      </div>
+
+
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<div class="content-box-header">
+					
+					<div class="col-sm-6">
+						<div class="title">
+							<h4 style="font-family: 'Arbutus',cursive;">Welcome <b><?php echo $user['full_name']?></b><br>
+							<h6>Your current role: <b><?php echo $user['role_name']?></b></h6>
+						</div>
+					</div>
+
+					<div class="col-sm-6 text-right">
+						<div class="actions">
+							<!-- <a href="#modal-new-account" class="btn btn-sm btn-primary" data-toggle="modal"><i class="fa fa-plus"></i> New account</a> -->
+
+							<a href="#" data-toggle="modal" data-target="#modal-change-password" class="btn btn-sm btn-primary"><i class="fa fa-key"></i> Change password</a>
+						</div>
+					</div>
+				</div><!--/content-box-header-->	
+				<div class="content-box-large box-with-header">	
+                       
+				</div><!--/content-box-large-->
+			</div><!--/col-lg-12-->
+			</div><!--/row-->
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { TypeOrmCrudService } from '@nestjsx/crud-typeorm';
+import { CategoryEntity } from'src/entities/category.entity';
+import { Repository } from 'typeorm';
+
+@Injectable()
+export class CategoryService extends TypeOrmCrudService<CategoryEntity> {
+  constructor(@InjectRepository(CategoryEntity) repo) {
+    super(repo);
+  }
+
+  async getAllCategories() {
+    const categories = this.repo.find({
+      relations: ['user','recipes'],
+    });
+
+    return categories;
+  }
+
+  async getCategoryById(id: number) {
+    const category = await this.repo.findOne({
+      where: {
+        id,
+      },
+      relations: ['user','recipes'],
+    });
+
+    if (!category)
+      return { message: 'Category does not exist' };
+
+    return category;
+  }
+
+  async createCategory(name: string) {
+    const categoryExists = this.repo.findOne({
+      name,
+    });
+
+    if (categoryExists)
+      return { message: 'Category already registered' };
+
+    const category = await this.repo.create({ name });
+    await this.repo.save(category);
+
+    return category;
+  }
+
+  async updateCategory(
+    id: number,
+    { name }: {
+      name: string;
+    },
+  ) {
+    let category = await this.repo.findO    const category = await this.repo.findOne({
+      where: {
+        id,
+      },
+      relations: ['user','recipes'],
+    });
+
+    if (!category)
+      return { message: 'Category does not exist' };
+
+    await this.repo.delete(id);
+
+    return { message: 'Category deleted successfully' };
+  }
+}
+ne({
+      where: {
+        id,
+      },
+      relations: ['user','recipes'],
+    });
+
+    if (!category)
+      return { message: 'Category does not exist' };
+
+    let categoryExists = await this.repo.findOne({
+      name,
+    });
+
+    if (categoryExists)
+      return { message: 'Category already registered' };
+
+    category = {
+     ...category,
+     ...{
+        name,
+      }
+    };
+
+    await this.repo.save(category);
+
+    return category;
+  }
+
+  async deleteCategory(id: number) {
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

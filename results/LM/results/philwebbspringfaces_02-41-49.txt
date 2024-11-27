@@ -1,0 +1,137 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: philwebb/springfaces
+    Project Description: Spring JSF Integration for Spring 3 & JSF 2\n 20092011 the original author or authors.\n\nLicensed under the Apache License, Version 2.0 the "License";\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\n\n\nINSTRUCTIONS\n============\n\nBuilding\n\nBuild using Maven 3.0.3 or above\n mvn clean install\n\nFor full integration tests\n mvn Pintegrationtest clean install\n\n\nRunning the sample\n\nTo run the travel advisor sample application:\n\n cd springfacessamples/springfacestraveladvisor\n mvn cargo:run\n \n\n'
+    Existing Dependencies:
+    org.hibernate:hibernate-entitymanager
+- org.springframework:spring-test
+- org.hamcrest:hamcrest-library
+- ${project.groupId}:springfaces-traveladvisor
+- org.springframework:spring-core
+- org.apache.myfaces.core:myfaces-impl
+- org.glassfish.web:el-impl
+- junit:junit
+- ${project.groupId}:springfaces
+- org.primefaces:primefaces
+- javax.el:el-api
+- com.sun.faces:jsf-impl
+- org.springframework.data:spring-data-jpa
+- com.sun.faces:jsf-api
+- org.seleniumhq.selenium:selenium-java
+- org.springframework:spring-webmvc
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    function getUserData(){
+        $.ajax({
+            url:"{{route('user-data')}}",
+            dataType:"json",
+            success:function(data){
+                console.log(data.name);
+            }
+        })
+    }
+    
+    
+    getUserData();
+    
+    
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t_data)
+    #
+#     # print(df.to_csv())
+ from pandas import read_csv
+import pandas as pd, os
+import re
+
+def remove_html(text):
+    return re.sub(r'<.*?(>|$)', '...', str(text)[0:20])
+
+def process_dataframe(dataframe):
+    return dataframe.replace({'comment':'NA'})[['comment', 'label']]
+
+def load_data(folder_path):
+    file_list = os.listdir(folder_path)
+    dataframe_list = list()
+    
+    for file in file_list:
+        dataframe_list.append(process_dataframe(read_csv(folder_path+'/'+file)))
+    return pd.concat(dataframe_list)
+    
+    # file_name = folder_path+'/'+filename
+    # if not os.path.exists(file_name):
+    #     return pd.DataFrame(), pd.DataFrame()
+    #
+    # file_list_pos = []
+    # file_list_neg = []
+    #
+    # file_name_pos_list = os.listdir(folder_path+"/pos")
+    # file_list_pos = [folder_path+"/pos/" + str(x) for x in file_name_pos_list]
+    # file_name_neg_list = os.listdir(folder_path+"/neg")
+    # file_list_neg = [folder_path+"/neg/" + str(x) for x in file_name_neg_list]
+    #
+    # #print(file_list)
+    # df = pd.DataFrame()
+    # for file in file_list_pos:
+    #     data = load_csv(file)
+    #     data['label'] = 1
+    #     temp_data = pd.DataFrame(data)
+    #     temp_data['source'] = file
+    #     df = pd.concat([df,temp_data])
+    # print("Positive")
+    # print(df)
+    # df = pd.DataFrame()
+    # for file in file_list_neg:
+    #     data = load_csv(file)
+    #     data['label'] = 0
+    #     temp_data = pd.DataFrame(data)
+    #     temp_data['source'] = file
+    #     df = pd.concat([df,temp_data])
+    # print("Negative")
+    # print(df)
+    # return pd.DataFrame(df_pos)
+    # return data
+    # return pd.concat(df_pos, df_neg)
+    # return pd.concat(df_pos, df_neg).to_csv()
+
+# if __name__ == '__main__':
+#     # print(process_dataframe(read_csv(sys.argv[1])))
+#     data = process_dataframe(read_csv(sys.argv[1]))
+#     print(data)
+#     #print('pos', df.label.sum())
+#     #print('neg', (df.label==0).sum())
+
+    # print('pos', sum(df.label))
+    # print('neg', sum(df.label == 0))
+
+    # pos = sum(df['label']==1)
+    # neg = sum(df['label']==0)
+    #
+    #
+
+Precision: 0
+Recall: 0
+F1 Score: 0

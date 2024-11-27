@@ -1,0 +1,234 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: spring-projects/spring-data-commons
+    Project Description: = Spring Data Commons image: image:"Revved up by Gradle Enterprise", link=" Data Core"\n\n Data Commons is part of the umbrella Spring Data project that provides shared infrastructure across the Spring Data projects. It contains technology neutral repository interfaces as well as a metadata model for persisting Java classes.\n\nOur primary goals are:\n\n Powerful Repository and custom objectmapping abstractions\n Support for crossstore persistence\n Dynamic query generation from query method names\n Implementation domain base classes providing basic properties\n Support for transparent auditing created, last changed\n Possibility to integrate custom repository code\n Easy Spring integration with custom namespace\n\n== Code of Conduct\n\nThis project is governed by the Code of Conduct. By participating, you are expected to uphold this code of conduct. Please report unacceptable behavior to springcodeofconduct@pivotal.io.\n\n== Getting Started\n\n=== Maven configuration\n\nAdd the Maven dependency:\n\nsource,xml\n\n\n org.springframework.data\n springdatacommons\n ${version}\n\n\n\nIf you\'d rather like the latest snapshots of the upcoming major version, use our Maven snapshot repository and declare the appropriate dependency version.\n\nsource,xml\n\n\n org.springframework.data\n springdatacommons\n ${version}SNAPSHOT\n\n\n\n springlibssnapshot\n Spring Snapshot Repository\n Getting Help\n\nHaving trouble with Spring Data? We\xe2\x80\x99d love to help!\n\n Check the\n documentation, and Learn the Spring basics \xe2\x80\x93 Spring Data builds on Spring Framework, check the website for a wealth of reference documentation.\nIf you are just starting out with Spring, try one of the If you are upgrading, check out the releases and the notes for "" features.\n Ask a question we monitor for questions tagged with can also chat with the community on Report bugs with Spring Data Commons at Reporting Issues\n\nSpring Data uses GitHub as issue tracking system to record bugs and feature requests. If you want to raise an issue, please follow the recommendations below:\n\n Before you log a bug, please search the\n tracker to see if someone has already reported the problem.\n If the issue doesn\xe2\x80\x99t already exist, a new issue.\n Please provide as much information as possible with the issue report, we like to know the version of Spring Data that you are using and JVM version.\n If you need to paste code, or include a stack trace use Markdown mvntarget/site/reference/html/index.html.\n\n== License\n\nSpring Data Commons is Open Source software released under the 2.0 license.\n'
+    Existing Dependencies:
+    io.javaslang:javaslang
+- io.projectreactor:reactor-core
+- com.querydsl:querydsl-apt
+- xmlunit:xmlunit
+- org.threeten:threetenbp
+- javax.el:el-api
+- org.codehaus.groovy:groovy-all
+- org.springframework:spring-tx
+- org.springframework:spring-expression
+- javax.interceptor:javax.interceptor-api
+- org.springframework:spring-webmvc
+- com.querydsl:querydsl-collections
+- com.jayway.jsonpath:json-path
+- com.google.guava:guava
+- org.jetbrains.kotlin:kotlin-test
+- com.nhaarman:mockito-kotlin
+- org.apache.openwebbeans:openwebbeans-se
+- javax.ejb:ejb-api
+- org.springframework:spring-context
+- org.springframework:spring-oxm
+- io.reactivex:rxjava-reactive-streams
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 21 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Fastcoo</title>
+
+    <meta name="description" content="A responsive bootstrap 4 admin dashboard template by hencework" />
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+
+    <!-- Custom CSS -->
+
+    <link type="text/css" href="{{ URL::asset('dashboard/css/custom.css') }}" rel="stylesheet" />
+
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800;900&display=swap');
+body {
+    margin: 0;
+    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+    font-weight: 900;
+    height: 100vh;
+    overflow: auto;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 600px;
+    background-color: #000;
+}
+
+#particles-js canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 360px;
+}
+
+.card.form-container {
+    padding: 2rem 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+   .card.form-container {
+        width: 100%;
+        min-width: 360px;
+        padding: 12rem 2rem;
+    }
+}
+
+#login {
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.btn {
+    padding: 0.7rem 2rem;
+    width: 150px;
+    height: 35px;
+    border-
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 21 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> #pragma once
+
+#include <cstdint>
+
+#include "hphp/runtime/base/array-data.h"
+#include "hphp/runtime/base/array-data-helpers.h"
+#include "hphp/runtime/base/array-common.h"
+#include "hphp/runtime/base/mixed-array.h"
+#include "hphp/runtime/base/sort-flags.h"
+#include "hphp/runtime/base/tv-val.h"
+#include "hphp/runtime/base/tv-mutate.h"
+#include "hphp/runtime/base/tv-refcount.h"
+#include "hphp/runtime/base/tv-type.h"
+#include "hphp/runtime/base/typed-value.h"
+#include "hphp/runtime/base/header-kind.h"
+
+#include "hphp/runtime/vm/member-operations.h"
+
+#include "hphp/util/type-scan.h"
+#include "hphp/util/alloc.h"
+#include "hphp/util/stack-trace.h"
+
+#include "hphp/parser/location.h"
+#include "hphp/parser/parser.h"
+#include "hphp/parser/hphp.tab.hpp"
+#include <folly/Lazy.h>
+#include <folly/SharedMutex.h>
+
+#include <tbb/concurrent_hash_map.h>
+
+#include <boost/container/flat_map.hpp>
+#include <boost/container/flat_set.hpp>
+
+#include "hphp/runtime/base/string-offset.h"
+
+namespace HPHP {
+
+//////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////
+
+/*
+ * KeyTypes below are used for both the ArrayData::m_kind field, as well
+ * as the array function lookup key.  They must be in this order so we
+ * can compactly encode the key in a single array function lookup.
+ */
+
+/*
+ * The following enums are used for keyTypes and must be kept in sync with the
+ * array_kind_mapping table in the emit code.
+ */
+
+enum ArrayKind : uint8_t {
+  kPackedKind = 0,
+  kMixedKind = 1,
+  kEmptyKind = 2,
+  kDictKind = 3,
+  kKeysetKind = 4,
+  kVecKind = 5,
+};
+
+static_assert(ArrayKind::kVecKind <= std::numeric_limits<uint8_t>::max(), "");
+
+inline size_t arrayKindAsIndex(ArrayKind kind) {
+  return size_t(kind);
+}
+
+enum IntishCast {
+    AllowCastAndWarn = 0,
+    AllowCastNoWarn = 1,
+    NoCast = 2,
+};
+
+// We store kPackedKind in m_kind for unmarked (that is, refcount == 1)
+// arrays that don't need to be refcounted. All other array
+// implementations store in m_kind a kind that has the bottom bit set.
+enum ArrayKindFlag : uint8_t {
+  ArrayKindFlag::kUnmarked = 0,
+  ArrayKindFlag::kMarked = 1
+};
+
+// These constants are used for type-hints in IR generation
+
+Precision: 0
+Recall: 0
+F1 Score: 0

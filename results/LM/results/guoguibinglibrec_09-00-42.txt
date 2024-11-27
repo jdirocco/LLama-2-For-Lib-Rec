@@ -1,0 +1,146 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: guoguibing/librec
+    Project Description: \n\nLibRec is a Java library for recommender systems Java version 1.7 or higher required. It implements a suit of stateoftheart recommendation algorithms, aiming to resolve two classic recommendation tasks: rating prediction and item ranking. \n\n\n\n LibRec Demo\nA movie recommender system is designed and .\n\n Documentation\nPlease refer to and \n\n Authors Words about the NEW Version\nIt has been a year since the last version was released. In this year, lots of changes have been taken to the LibRec project, and the most significant one is the formulation of the LibRec team. The team pushes forward the development of LibRec with the wisdom of many experts, and the collaboration of experienced and enthusiastic contributors. Without their great efforts and hardworking, it is impossible to reach the state that a single developer may dream of. \n\nLibRec 2.0 is not the end of our teamwork, but just the begining of greater objectives. We aim to continously provide NEXT versions for better experience and performance. There are many directions and goals in plan, and we will do our best to make them happen. It is always exciting to receive any code contributions, suggestions, comments from all our LibRec users. \n\nWe hope you enjoy the new version!\n\nPS: Follow us on WeChat to have firsthand and uptodate information about LibRec. \n\n\n\n Features\n\n Rich Algorithms: More than 70 recommendation algorithms have been implemented, and more will be done.\n High Modularity: Six main components including data split, data conversion, similarity, algorithms, evaluators and filters.\n Great Performance: More efficient implementations than other counterparts while producing comparable accuracy.\n Flexible Configuration: Low coupling, flexible and either external textual or internal API configuration.\n Simple Usage: Can get executed in a few lines of codes, and a number of demos are provided for easy start.\n Easy Expansion: A set of recommendation interfaces for easy expansion to implement new recommenders.\n\n \n\nThe procedure of LibRec is illustrated as follows. \n\n \n\n Download\n\nby maven\n\n\nby packages\n\n \n \n \n \n \n\n\n Execution \nYou can run LibRec with configurations from command arguments:\n\n\nlibrec rec exec D rec.recommender.class=itemcluster D rec.pgm.number=10 D rec.iterator.maximum=20\n\n\nor from a configuration file:\n\n\nlibrec rec exec conf itemclustertest.properties\n\n\n Code Snippet\n\nYou can use LibRec as a part of your projects, and use the following codes to run a recommender. \n\n\npublic void mainString , , , , Li Wenxi, , , , , , , , Tan Jiale, , , etc. We gratefully thank Mr. Lijun Dai for designing and contributing the logo of LibRec, and also many thanks to for implementing and sharing a . \n\nWe also appreciate many others for reporting bugs and issues, and for providing valuable suggestions and support. \n\n Publications\nPlease cite the following papers if LibRec is helpful to your research. \n\n1. G. Guo, J. Zhang, Z. Sun and N. YorkeSmith, , in Posters, Demos, Latebreaking Results and Workshop Proceedings of the 23rd Conference on User Modelling, Adaptation and Personalization UMAP, 2015.\n2. G. Guo, J. Zhang and N. YorkeSmith, TrustSVD: Collaborative Filtering with Both the Explicit and Implicit Influence of User Trust and of Item Ratings, in Proceedings of the 29th AAAI Conference on Artificial Intelligence AAAI, 2015, 123129.\n3. Z. Sun, G. Guo and J. Zhang, Exploiting Implicit Item Relationships for Recommender Systems, in Proceedings of the 23rd International Conference on User Modeling, Adaptation and Personalization UMAP, 2015.\n\n\n GPL License\n\nLibRec is : you can redistribute it and/or modify it under the terms of the as published by the Free Software Foundation, either version 3 of the License, or at your option any later version. LibRec is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. \n\nYou should have received a copy of the GNU General Public License along with LibRec. If not, see
+    Existing Dependencies:
+    commons-codec:commons-codec
+- commons-cli:commons-cli
+- commons-io:commons-io
+- log4j:log4j
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+    
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+  </footer>
+
+    
+
+
+<!--./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 2.2.3 -->
+<script src="{{ asset ("admin.min.js") }}"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="{{ asset ("bootstrap/js/bootstrap.min.js") }}"></script>
+<!-- AdminLTE App -->
+<script src="{{ asset ("dist/js/app.min.js") }}"></script>
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. Slimscroll is required when using the
+     fixed layout. -->
+</body>
+</html>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t(self.name, self.age)
+
+# 创建对象
+p1 = Person('刘德华', 55)
+print(str(p1))
+print(p1)
+
+# 打印出类中的类属性
+print('Person类中的类属性:')
+for k, v in Person.__dict__.items():
+    print(k, ':', v)
+
+# 打印出类中的实例属性, 包含继承的类的属性
+print('\nPerson类中的实例属性:')
+for k, v in p1.__dict__.items():
+    print(k, ':', v)
+
+# 通过类调用类方法
+Person.show_count()
+# 通过实例调用类方法(类和实例均可用)
+p1.show_count() 
+"""
+    类属性与实例属性:
+        - 类属性是通过在类中给属性赋值, 但没有在__init__中做赋值来创建的属性
+        - 实例属性是类中的属性, 在__init__中做了赋值, 实例创建后会调用__init__方法
+"""
+
+class Person:
+    # 创建类属性
+    name = '张无忌'
+    age = 100
+
+    # 类方法
+    @staticmethod
+    def show_count():
+        print('Person类中共有 %d 个实例对象' % Person.count)
+
+    # 构造方法, 用于创建对象实例
+    def __init__(self, name, age):
+        # Person类中共有多少个实例对象
+        Person.count += 1
+
+        # 调用实例方法
+        self.name = name
+        self.age = age
+
+    # 实例方法
+    def __str__(self):
+        return '[%s:%d]' % (self.name, self.age)
+
+    # 实例方法
+    def __repr__(self):
+        return '<Person %s: %d>' % (self.name, self.age)
+
+    # 实例方法
+    def __del__(self):  # 当实例销毁时调用
+        # Person类中共有多少个实例对象
+        Person.count -= 1
+
+# Person类中共有多少个实例对象
+Person.count = 0
+
+# 子类继承
+class Student(Person):
+    def __init__(self, name, age):
+        # 调用父类的构造方法(类和实例都可以调用, 实例创建时会调用构造方法)
+        Person.__init__(self, name, age + 1)
+
+    # 覆盖父类的方法
+    """
+        def __str__(self):  # 重写父类方法(类和实例均可用)
+            return '[%s:%d]' % (self.name, self.age)
+    """
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

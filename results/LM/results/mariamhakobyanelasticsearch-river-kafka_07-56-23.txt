@@ -1,0 +1,185 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: mariamhakobyan/elasticsearch-river-kafka
+    Project Description: Kafka River Plugin for ElasticSearch\n=========\n\nThe Kafka River plugin allows you to read messages from Kafka and index bulked messages into elasticsearch.\nThe bulk size the number of messages to be indexed in one request and concurrent request number is configurable.\nThe Kafka River also supports consuming messages from multiple Kafka brokers and multiple partitions. \n\nThe plugin uses the latest Kafka and Elasticsearch version.\n Kafka version 0.8.2.1\n Elasticsearch version 1.6.0\n\nThe plugin is periodically updated, if there are newer versions of any dependencies.\nIt is available in the .\n\nSetup\n==========\n\n1. Install Kafka if you are working on local environment See for instructions on how to Download and Build.\n\n2. Install the plugin \n\n\nExample:\n\n\nIf it doesn\'t work, clone git repository and build plugin manually.\n Build the plugin it will create a zip file here: $PROJECTPATH/target/elasticsearchriverkafka1.2.1SNAPSHOTplugin.zip\n Install the plugin from target into elasticsearch\n \n\n\nUpdate installed plugin\n\n\n\nConfiguration\n=========\n\nTo deploy Kafka river into Elasticsearch as a plugin, execute:\n\n\n NOTE: Type "kafka" is required and must not be changed. It corresponds the type, given in the source code, by which elasticsearch is able to associate created river with the installed plugin.\n \n Example:\n\n \n \nThe detailed description of each parameter:\n \n required The river name to be created in elasticsearch.\n optional Zookeeper server host. Default is: \n optional Zookeeper server connection timeout in milliseconds. Default is: \n optional The name of the topic where you want to send Kafka message. Default is: \n optional The kafka message type, which then will be inserted into ES keeping the same type. Default is: . The following options are available: \n : Inserts json message into ES separating each json property into ES document property.\n example:\n \n \n : Inserts string message into ES as a documet, where the key name is , and the value is the received message.\n example:\n \n \n optional The name of elasticsearch index. Default is: \n optional The mapping type of elasticsearch index. Default is: \n optional The number of messages to be bulk indexed into elasticsearch. Default is: \n optional The number of concurrent requests of indexing that will be allowed. A value of 0 means that only a single request will be allowed to be executed. A value of 1 means 1 concurrent request is allowed to be executed while accumulating new bulk requests. Default is: \n optional The action type against how the messages should be processed. Default is: . The following options are available:\n : Creates documents in ES with the field set to the received message.\n : Deletes documents from ES based on field set in the received message.\n : Execute incoming messages as a raw query.\n optional The number of seconds/minutes/hours after which any remaining messages get flushed to elasticsearch, even if the number of messages has not reached. The time values are represented like: "12h", "3m", "5s". Default is: 12 hours\n\n\n Statsd configuration:\n\n optional The statsd server host name. Default is: \n optional The statsd server port number. Default is: 8125\n optional Prefix to be added to all statsd metric keys. Default is: \n optional The interval, in seconds, in which to report metrics to the statsd server. Default is: 10 seconds\n\n\nTo delete the existing river, execute:\n \n \n\nExample:\n \n\n\nTo see the indexed data:\n\n\n\nTo delete the index:\n\n\nKafka Consumer details\n=========\n\nCurrently Consumer Group Java API high level api is used to create the Kafka Consumer, which keeps track of offset automatically. This enables the River to read kafka messages from multiple brokers and multiple partitions.\n\n\nLicense\n=========\nCopyright C 2014 Mariam Hakobyan. See \n\n\nContributing\n============\n1. Fork the repository on Github\n2. Create a named feature branch\n3. Develop your changes in a branch\n4. Write tests for your change if applicable\n5. Ensure all the tests are passing\n6. Submit a Pull Request using Github\n\n\n'
+    Existing Dependencies:
+    org.apache.kafka:kafka_2.11
+- com.yammer.metrics:metrics-core
+- com.yammer.metrics:metrics-graphite
+- org.scala-lang:scala-library
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     @extends('layouts.app')
+
+@section('content')
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="panel panel panel-info">
+                <div class="panel-heading">Tambah Data</div>
+                <div class="panel-body">
+
+    {!! Form::open(['url'=>'barang'])!!}
+    <div class="form-group">
+        {{ Form::label('kode_barang','Kode Barang')}}
+        @if ($errors->has('kode_barang'))
+            <span class="help-block">
+                <strong>{{ $errors->first('kode_barang') }}</strong>
+            </span>
+        @endif
+        {!! Form::text('kode_barang',null,['class'=>'form-control'])!!}
+    </div>
+
+    <div class="form-group{{ $errors->has('nama')?'has-error' : '' }}">
+        {{ Form::label('nama','Nama Barang')}}
+        @if ($errors->has('nama'))
+            <span class="help-block">
+                <strong>{{ $errors->first('nama') }}</strong>
+            </span>
+        @endif
+        {!! Form::text('nama',null,['class'=>'form-control'])!!}
+    </div>
+
+    <div class="form-group{{ $errors->has('jenis')?'has-error' : '' }}">
+        {{ Form::label('jenis','Jenis Barang')}}
+        @if ($errors->has('jenis'))
+            <span class="help-block">
+                <strong>{{ $errors->first('jenis') }}</strong>
+            </span>
+        @endif
+        {!! Form::text('jenis',null,['class'=>'form-control'])!!}
+    </div>
+ 
+         <div class="form-group{{ $errors->has('harga_beli')?'has-error' : '' }}">
+        {{ Form::label('harga_beli','Harga Barang')}}
+        @if ($errors->has('harga_beli'))
+            <span class="help-block">
+                <strong>{{ $errors->first('harga_beli') }}</strong>
+            </span>
+        @endif
+        {!! Form::text('harga_beli',null,['class'=>'form-control'])!!}
+    </div>
+
+     <div class="form-group{{ $errors->has('harga_jual')?'has-error' : '' }}">
+        {{ Form::label('harga_jual','Harga Jual Barang')}}
+        @if ($errors->has('harga_jual'))
+            <span class="help-block">
+                <strong>{{ $errors->first('harga_jual') }}</strong>
+            </span>
+        @endif
+        {!! Form::text('harga_jual',null,['class'=>'form-control'])!!}
+    </div>
+ 
+ 
+
+
+    <div class="form-group{{ $errors->has('satuan')?'has-error' : '' }}">
+
+        {!! Form::label('satuan','satuan')!!}
+        @if ($errors->has('
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import 'package:flutter/material.dart';
+import 'package:flutter_app_redux/common/config/config.dart';
+import 'package:flutter_app_redux/common/http/interceptor/log_interceptor.dart';
+import 'pac    child: Container(
+        color: Colors.blue,
+        child: Center(
+          child: Text("这是第二个页面"),
+        ),
+      ),
+    );
+  }
+}
+kage:flutter_app_redux/common/http/net.dart';
+import 'package:flutter_app_redux/common/http/net_client.dart';
+import 'package:flutter_app_redux/common/utils/utils.dart';
+
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    getUser();
+    initNet();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Plugin example app'),
+      ),
+      body: Center(
+          child: GestureDetector(
+        child: Container(
+          width: 100,
+          height: 100,
+          color: Colors.yellow,
+        ),
+        onTap: () => {Navigator.pushNamed(context, "/second")},
+      )),
+    );
+  }
+
+  //获取用户信息
+  void getUser() {
+    var url = "$BASE_URL/user";
+    Net.instance
+       .get(url, null, {Config.USER_ID: "1001", Config.USER_PWD: "123456"})
+       .then((result) {
+      print(Utils.object2string(result));
+      if (result!= null) {
+        print("${result["data"]}");
+        print("${result["data2"]}");
+      } else {
+        print("result is null");
+      }
+    });
+  }
+
+  //初始化网络
+  void initNet() {
+    NetClient.instance.init();
+  }
+}
+
+//第二个页面
+class SecondPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Plugin example app'),
+      ),
+  
+
+Precision: 0
+Recall: 0
+F1 Score: 0

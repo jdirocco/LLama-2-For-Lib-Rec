@@ -1,0 +1,153 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: yandex-qatools/postgresql-embedded
+    Project Description: Embedded PostgreSQL Server\n\n\n\n\nEmbedded PostgreSQL server provides a platform neutral way for running postgres binaries in unittests.\nThis library is based on . \n\n Note: this project is not being actively maintained anymore\nSorry for any inconvinience, but this project needs active maintainers. If anyone is interested in becoming the maintainer please let me know.\n\n Officially recommended alternative\nPlease be adviced that the main maintainer of this project has successfuly migrated to the use of . This is the best possible alternative nowadays.\n\n Motivation\n\n It\'s much easier than installing specific version manually\n You can choose the version right from the code\n You can start your development environment with the PostgreSQL embedded with the single command\n\n Maven\n\nAdd the following dependency to your pom.xml:\n\n Gradle\n\nAdd a line to build.gradle:\n\n\n Howto\n\nHere is the example of how to launch and use the embedded PostgreSQL instance\n\n\nNote that EmbeddedPostgres implements , \nwhich means that you can use it with a \nstatement in Java = 7 to have it automatically stopped.\n\n How to avoid archive extraction on every run\n\nYou can specify the cached artifact store to avoid archives downloading and extraction in case if a directory remains on every run.\n\n\n How to configure logging\n\nJust configure your own appenders. Here is the example of typical file:\n\n\n\n How to use your custom version of PostgreSQL\n\nPass the required interface implementation as a first argument of the object:\n\n\n\n Known issues\n A lot of issues have been reported for this library under Windows. Please try to use the suggested way of start up and use\nthe cached artifact storage to avoid extraction of the archive as extraction is extremely slow under Windows: \n\n\n PostgreSQL server is known to not start under the privileged user which means you cannot start it under root/Administrator of your system: \n\n \n . \n \n However some users have launched it successfully on Windows under Administrator, so you can try anyway. \n \n Supported Versions\n\n 11.2: on Mac OS X and Windows 64 bit\n 10.7, 9.6.12, 9.5.16: on Linux, Windows, Mac OS X\n any custom version\n'
+    Existing Dependencies:
+    org.springframework:spring-context
+- org.slf4j:jul-to-slf4j
+- de.flapdoodle.embed:de.flapdoodle.embed.process
+- org.postgresql:postgresql
+- org.springframework:spring-beans
+- org.springframework:spring-core
+- org.slf4j:slf4j-log4j12
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="/add_product/{{$id}}">
+        {{csrf_field()}}
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Product Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="product_name" name="product_name" >
+            </div>
+        </div>    
+            <div class="form-group row">
+            	<label class="col-sm-2 col-form-label">Select Category</label>
+            	<div class="col-sm-10">
+                <select class="browser-default custom-select" name="parent_id">
+                    @foreach($categories as $categorie)
+                   <option value="{{$categorie->id}}">{{$categorie->name}}</option>
+                    @endforeach
+                    
+                </select>
+            </div>
+            </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Quantity</label>
+            <div class="col-sm-10">
+              <div class="controls">
+                <input type="number" class="form-control" id="quantity" name="quantity">
+              </div>
+            </div>
+        </div>
+        
+        <div class="form-group row">
+             <label class="col-sm-2 col-form-label">Product Price</label>
+             <div class="col-sm-10">
+              <div class="controls">
+                <input type="text" class="form-control" id="product_price" name="product_price">
+              </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Discount</label>
+            <div class="col-sm-10">
+                 <div class="controls">
+                  <input type="text" class="form-control" id="discount" name="discount">
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Product Image</label>
+            <div class="col-sm-10">
+              <div class="controls">
+                <input type="file" class="form-control" id="photo" name="photo">
+              </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Description</label>
+            <div class="col-sm-10">
+               <input type="text" class="form-control" id="description" name="description">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Size</label>
+            <div class="col-sm-10">
+              <div class="controls">
+                      @if($id==0)
+                <input type="text" class="form-control" id="size" name="size">
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ---
+layout: page
+title: Acerca de
+subtitle:
+---
+
+Mis nombre es **Alberto Sánchez**, actualmente vivo en **Guadalajara, México**.
+
+### Mi trabajo
+
+Soy un desarrollador Web Full Stack, en la actualidad mi enfasis es en **Backend**, con los lenguajes JavaScript (ES6, NodeJS, TypeScript, etc), pero en la actualidad estoy trabajando con **Python** y su framework Flask para el backend y **Angular** para el frontend.
+
+También he trabajado con el stack **LAMP** (Linux+Apache+MySQL+PHP), con el que desarrollé un sitio web para la Universidad de Córdoba en la cual trabajé durante un semestre.
+
+Por cierto que me considero aún un aprendiz de todo esto, por tanto tengo que mejorar y me gustaría hacerlo.
+
+### Mi experiencia
+
+Actualmente trabaja como desarrollador Full Stack en [Beytle](http://www.beyatle.com), una startup de Guadalajara enfocada en el mundo del marketing online (SEM, SEO, etc), que ha sido de gran ayuda para mi carrera profesional hasta el momento.
+
+Mis experiencias profesionales anteriores fueron:
+
+- **Ingeniería de Sistemas, Taller Mecánico y Electrónico de la Universidad de Córdoba**. Estudie en el 2010, donde hice mi ingeniería en Sistemas y después una pasantía de seis meses como técnico en un taller mecanizado en Córdoba, Argentina.
+- **Sistemas y Procesos Industriales, Ingeniería Electrónica, Electrónica Industrial y Telecomunicaciones**, en la Universidad de Guadalajara, en el 2011.
+- **Ingeniería de Sistemas**, en la Universidad de Guadalajara, en el 2012.
+- **Ingeniería de Sistemas**, en la Universidad de Guadalajara, en el 2013.
+- **Estudio de la Universidad de Guadalajara**, del 2014 al 2017.
+- **Desarrollador Full Stack en [Beytle](http://www.beyatle.com)**.
+
+### Mis intereses
+
+Actualmente estoy interesado en los proyectos de **IA** y **Machine Learning**, y en **Blockchain**, pero me interesa aprender sobre todo cualquier tecnología que me ayude en la creación de aplicaciones y que me pueda servir, ya sea que es algo que ya existe y estoy probando o que es algo nuevo que pueda mejorar mis conocimientos.
+
+En cuanto a los videojuegos, actualmente me gustan los de **RPG**, principalmente los del género **JRPG**. Estoy jugando bastante a **Final Fantasy** y **Chrono Trigger**.
+
+Aunque me gusta mucho escuchar **Música Electrónica**. Actualmente escucho bastante **Techno**, principalmente **Industrial**.
+
+En cuanto a la **Cocina** me gustan los **Pescados** y en especial el **Pulpo**.
+
+### Contacto
+
+[Github](http://www.github.com/alberto-sanchez)
+
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

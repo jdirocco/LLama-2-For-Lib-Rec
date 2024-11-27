@@ -1,0 +1,140 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: nurkiewicz/spring-js
+    Project Description: == JavaScript dynamic language support in Spring framework ==\n\nspringcontext component fork allowing to write Spring beans using JavaScript. For details please refer to:\n\n
+    Existing Dependencies:
+    org.easymock:org.easymock
+- javax.xml:jaxrpc-api
+- org.springframework:spring-aop
+- org.jruby:jruby
+- org.easymock:easymock
+- org.apache.geronimo.specs:geronimo-jta_1.1_spec
+- commons-dbcp:commons-dbcp
+- org.atinject:inject-tck
+- org.codehaus.groovy:groovy-all
+- org.aspectj:aspectjweaver
+- org.springframework:spring-expression
+- cglib:cglib-nodep
+- org.springframework:spring-instrument
+- backport-util-concurrent:backport-util-concurrent
+- org.springframework:spring-test
+- org.springframework:spring-asm
+- org.apache.geronimo.specs:geronimo-jms_1.1_spec
+- javax.ejb:ejb-api
+- javax.inject:javax.inject
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 19 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- Main -->
+      @section('maincontent')
+    <section id="main" class="wrapper style1">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-12-narrower">
+                    <header>
+                        <h2>Welcome to 4U</h2>
+                    </header>
+                    <h4>Our aim is to provide a service to the public that is easy to access and use. </h4>
+                    <p>
+                        We want all of our services to be free so that you can use them without having to worry about how much it is costing you. We will never ask you any personal information about you and never collect data to sell. We want our service to be free for everyone and we don't want to make any profit out of it.
+                    </p>
+                    <ul class="actions">
+                        <li><a href="" class="button big">Learn More</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-12-narrower imp-narrower">
+                    <img src="/images/banner.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+      @endsection
+      <!-- /Main -->
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 19 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>   <td><img src="img/2.png" alt=""></td>
+            <td class="text-center"><img src="img/3.png" alt="" style="width: 75%;"></td>
+            <td><img src="img/4.png" alt=""></td>
+            <td><img src="img/5.png" alt=""></td>
+            <td><img src="img/6.png" alt=""></td>
+          </tr>
+          <tr>
+            <td><img src="img/7.png" alt=""></td>
+            <td><img src="img/1.png" alt=""></td>
+            <td><img src="img/2.png" alt=""></td>
+            <td class="text-center"><img src="img/3.png" alt="" style="width: 75%;"></td>
+            <td><img src="img/4.png" alt=""></td>
+            <td><img src="img/5.png" alt=""></td>
+            <td><img src="img/6.png" alt=""></td>
+            <td><img src="img/7.png" alt=""></td>
+          </tr>
+          <tr>
+            <td><img src="img/1.png" alt=""></td>
+            <td><img src="img/2.png" alt=""></td>
+            <td><img src="img/3.png" alt=""></td>
+            <td class="text-center"><img src="img/4.png" alt="" style="width: 75%;"></td>
+            <td><img src="img/5.png" alt=""></td>
+            <td><img src="img/6.png" alt=""></td>
+            <td><img src="img/7.png" alt=""></td>
+            <td><img src="img/8.png" alt=""></td>
+          </tr>
+        </table>
+       <br>
+
+    </div>   
+  </div>
+
+  
+  <!-- Footer -->
+  <footer id="contactanos" class="text-center" style="background-color: #000;">
+    <div class="container">    
+      <h4 class="text-white">Contactanos!</h4>
+      <p class="lead text-white">Para cualquier consulta o aclaraciones comunicate con nosotros:</br>
+        Correo: </br>
+        WhatsApp:  </br>
+        Telefono: </br>
+      </p>
+
+      <div class="social-icons">
+        <a href="#">
+            <i class="fa fa-instagram"></i>
+          </a>
+        <a href="#">
+          <i class="fa fa-facebook-official"></i>
+        </a>
+        <a href="#">
+            <i class="fa fa-youtube" aria-hidden="true"></i>
+          </a>
+        <a href="#">
+          <i class="fa fa-phone"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center" style="background-color: #222;">© 2018 Copyright:
+      <a href=""> www.gimnasioelite
+
+Precision: 0
+Recall: 0
+F1 Score: 0

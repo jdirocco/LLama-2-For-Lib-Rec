@@ -1,0 +1,153 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: timmolter/XChange
+    Project Description: XChange\n\n\n\n\nXChange is a Java library providing a simple and consistent API for interacting with 60 Bitcoin and other crypto currency exchanges, providing a consistent interface for trading and accessing market data.\n\n Important!\n\nThe world of Bitcoin changes quickly and XChange is no exception. For the latest bugfixes and features you should use the or build yourself from the branch. See below for more details about building with Maven. To report bugs and see what issues people are currently working on see the .\n\n Description\n\nXChange is a Java based library providing a simple and consistent API for interacting with a diverse set of crypto currency exchanges.\n\nBasic usage is very simple: Create an instance, get the appropriate service, and request data. More complex usages are progressively detailed below.\n\n REST API\n Public Market Data\n\nTo use public APIs which do not require authentication:\n\n\n\n Private Account Info\n\nTo use APIs which require authentication, create an with your API credentials and pass this to :\n\n\n\nPlease Note: while most exchanges use just an API key and secret key, others such as on Bitstamp or on Coinbase Pro are exchangespecific. For more examples of adding the keys to the , including storing them in a configuration file, see .\n\nOnce you have an authenticated , the private API services, and , can be used to access private data:\n\n\n\nAll exchange implementations expose the same API, but you can also directly access the underlying "raw" data from the individual exchanges if you need to.\n\n Websocket API\n\nThe above API is usually fully supported on all exchanges and is best used for occasional requests and polling on relatively long intervals. Many exchanges, however, heavily limit the frequency that these requests can be made, and advise instead that you use their websocket API if you need streaming or realtime data.\n\nFor a smaller number of exchanges, the websocketbased API is also available. This uses to allow you to efficiently subscribe to changes relating to thousands of coin pairs without requiring large numbers of threads.\n\nYou will need to import an additional dependency for the exchange you are using see below, then example usage is as follows:\n\n\n\nAuthentication, if supported for the exchange, works the same way as for the main API, via an . For more information on what is supported, see the Wiki.\n\n More information\n\nNow go ahead and , and .\n\nMore information about reactive streams can be found at the .\n\n Features\n\n \n\n Wiki\n\n \n \n \n \n \n \n \n \n \n\n Continuous Integration\n\n\n\n Getting Started\n\n NonMaven\n\n \n \n\n Maven\n\nThe XChange release artifacts are hosted on Maven Central: \n\nAdd the following dependencies in your pom.xml file. You will need at least xchangecore. Add the additional dependencies for the exchange modules you are interested in XYZ shown only for a placeholder. There is example code for all the modules in xchangeexamples.\n\n\n\nIf it is available for your exchange, you may also want to use the streaming API:\n\n\n\nFor snapshots, add the following repository to your pom.xml file.\n\n\n\nThe current snapshot version is:\n\n 5.1.2SNAPSHOT\n\n Building with Maven\n\nInstruction | Command\n | \nrun unit tests | \nrun unit and integration tests | \ninstall in local Maven repo | \ncreate project javadocs | \ngenerate dependency tree | \ncheck for dependency updates | \ncheck for plugin updates | \ncode format | \n\n Bugs\n\nPlease report any bugs or submit feature requests to .\n\n Contributing\n\nIf you\'d like to submit a new implementation for another exchange, please take a look at first, as there are lots of timesaving tips!\n\nFor more information such as a contributor list and a list of known projects depending on XChange, visit the .\n'
+    Existing Dependencies:
+    org.powermock:powermock-module-junit4
+- commons-io:commons-io
+- ${project.groupId}:xchange-core
+- org.powermock:powermock-api-mockito
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 4 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+                 
+            </div>
+            <!-- Basic Examples -->
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                                Data Barang
+                            </h2>
+                            <br>
+                            <a href="javascript:void(0);" id="addmodal" class="btn btn-primary waves-effect">  <i class="material-icons">add_circle</i>  Tambah Data </a>
+ 
+                        </div>
+                        <div class="body">
+                                  <div class = "table-responsive">
+                                  <table class="table table-bordered table-striped table-hover js-basic-example" id="example" style="width:100%">
+                                    <thead  >
+                                        <tr> 
+                                            <th style="width:5%;">No</th> 
+                                            <th style="width:10%">Kode</th>  
+                                            <th style="width:10%;">Nama</th> 
+                                            <th style="width:10%">Jenis</th>  
+                                            <th style="width:5%">Keterangan</th> 
+                                            <th style="width:10%">Stok</th>  
+                                            <th style="width:5%">Harga</th>  
+                                            <th style="width:5%;text-align: center">Aksi</th>  
+                                        </tr>
+                                    </thead> 
+                                </table> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+
+
+        </div>
+    </section>
+
+   
+
+
+
+    <!-- form tambah dan ubah data -->
+    <div class="modal fade" id="defaultModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="defaultModalLabel">Form Tambah Data</h4>
+                        </div>
+                        <div class="modal-body">
+                              <form method="post" id="user_form" enctype="multipart/form-data">   
+                               
+                                    <input type="hidden" name="id" id="id">  
+
+
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label>Kode Barang</label>
+                                            <input type="text" name="kode_barang" id="kode_barang" class="form-control" placeholder="Kode Barang" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <label>Nama Barang</label>
+                                            <input type="text" name="nama" id="nama" class="form
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 4 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>n
+     */
+    public static String toUtf8(int codePoint) {
+        char[] chars = Character.toChars(codePoint);
+        return new String(chars);
+    }
+}
+ package org.soraworld.violet.util;
+
+/**
+ * @author Himmelt
+ */
+public final class UnicodeUtil {
+
+    /**
+     * Returns a string containing the supplied code point as its only character.
+     * @param codePoint Unicode code point (valid range {@code 0} to
+     *          {@link Character#MAX_CODE_POINT})
+     * @return String containing just the code point.
+     * @throws IllegalArgumentException {@code codePoint} is not a Unicode
+     *     code point.
+     * @see Integer#toChars(int)
+     */
+    public static String toUtf8(char codePoint) {
+        char[] chars = new char[1];
+        chars[0] = codePoint;
+        return new String(chars);
+    }
+
+    /**
+     * Returns a string containing the supplied code point as its only character.
+     * @param codePoint Unicode code point (valid range {@code 0} to
+     *          {@link Integer#MAX_VALUE})
+     * @return String containing just the code point.
+     * @throws IllegalArgumentException {@code codePoint} is not a Unicode
+     *     code point.
+     * @see Integer#toChars(int)
+     * @see Character#isBmpCodePoint(int)
+     * @see Character#highSurrogate(int)
+     * @see Character#lowSurrogate(int)
+     * @since 1.10
+     * @hide
+
+Precision: 0
+Recall: 0
+F1 Score: 0

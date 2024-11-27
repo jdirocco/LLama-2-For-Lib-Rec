@@ -1,0 +1,161 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: seam/mail
+    Project Description: Building\n\n\n Run mvn clean install\n To create the zip distribution, run mvn clean install Pdistribution the resulting zip is located in dist/target/seammail${version}.zip \n The readme.txt placed in the distribution is not this one, see dist/src/main/assembly/readme.txt\n\nTesting\n\nrun mvn clean verify'
+    Existing Dependencies:
+    org.jboss.arquillian.core:org.jboss.arquillian.core
+- org.jboss.shrinkwrap:org.jboss.shrinkwrap
+- org.mockito:org.mockito
+- org.jboss.arquillian.junit:org.jboss.arquillian.junit
+- org.slf4j:slf4j-api
+- org.apache.openwebbeans:org.apache.openwebbeans
+- org.freemarker:freemarker
+- org.apache.openjpa:org.apache.openjpa
+- org.osgi:org.osgi
+- org.seleniumhq.selenium:org.seleniumhq.selenium
+- net.sf.scannotation:net.sf.scannotation
+- org.jboss.arquillian.container:org.jboss.arquillian.container
+- javax.activation:activation
+- com.google.guava:guava
+- org.jboss.seam.mail:seam-mail
+- saxpath:saxpath
+- org.hsqldb:org.hsqldb
+- org.jboss.arquillian.config:org.jboss.arquillian.config
+- org.jboss.solder:solder-logging
+- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-impl-maven
+- com.ocpsoft:com.ocpsoft
+- org.jboss.test-jsf:org.jboss.test-jsf
+- org.python:jython
+- org.apache.openejb:org.apache.openejb
+- com.sun.jersey:com.sun.jersey
+- ant:ant
+- org.apache.openwebbeans.test:org.apache.openwebbeans.test
+- commons-logging:commons-logging
+- org.jboss.seam:seam-bom
+- javassist:javassist
+- org.jboss.test:org.jboss.test
+- org.jboss.spec:org.jboss.spec
+- org.hibernate:org.hibernate
+- org.slf4j:org.slf4j
+- org.zeroturnaround:javarebel-sdk
+- jdom:jdom
+- org.jboss.arquillian.extension:org.jboss.arquillian.extension
+- org.apache.myfaces.core:org.apache.myfaces.core
+- org.jboss.shrinkwrap.descriptors:org.jboss.shrinkwrap.descriptors
+- junit:junit
+- jaxen:jaxen
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 41 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+        </div>
+
+    </div>
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+<script src="<?= base_url()?>/assets/vendor/jquery/jquery.min.js"></script> 
+<script src="<?= base_url()?>/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?= base_url()?>/assets/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="<?= base_url()?>/assets/js/datatables-data.js"></script> 
+ 
+</body>
+</html>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 41 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s, 0, 1, 0));
+
+    if (pixels[0].x > 0.5)
+        discard;
+} #version 330
+
+#include "common.glsl"
+
+in vec2 position;
+in vec2 tex_coord;
+in vec3 normal_in;
+
+layout(location = 0) out vec4 position_out;
+layout(location = 1) out vec3 normal_out;
+layout(location = 2) out vec3 tangent_out;
+layout(location = 3) out vec3 bitangent_out;
+layout(location = 4) out vec2 tex_coord_out;
+layout(location = 5) out float light_out;
+
+layout(std140) uniform CameraViewProj
+{
+    mat4 view;
+    mat4 proj;
+};
+
+struct Vertex
+{
+    vec3 position;
+    vec3 normal;
+    vec3 tangent;
+    vec3 bitangent;
+    vec2 tex_coord;
+};
+
+layout(std430, binding = 0) buffer VertexBuffer
+{
+    Vertex vertices[];
+};
+
+void main()
+{
+    Vertex vertex = vertices[gl_VertexID];
+    vec4 world_position_eye_space = view * vec4(vertex.position, 1);
+
+    tex_coord_out = tex_coord;
+    position_out = world_position_eye_space;
+    normal_out = mat3(view) * vertex.normal;
+    tangent_out = mat3(view) * vertex.tangent;
+    bitangent_out = mat3(view) * vertex.bitangent;
+
+    gl_Position = proj * vec4(vertex.position.x, vertex.position.y, vertex.position.z, 1.0);
+
+    vec4 clip_pos = view * vec4(vertex.position, 1.0);
+    vec4 light_pos = view * vec4(0.0f, 60.f, 0.f, 1.0f);
+    vec3 L = normalize(light_pos.xyz - clip_pos.xyz);
+    vec3 N = normalize(vertex.normal);
+
+    float intensity = dot(N, L);
+    intensity = clamp(intensity, 0.2f, 1.f);
+    light_out = 20.5f;
+
+    vec4 pixel;
+    vec2 pixel_center[4];
+    float radius[3];
+    int n_segments;
+
+    pixel.xy = tex_coord_out + 0.01f;
+    pixel.zw = vec2(gl_FragCoord.xy + 0.01f);
+
+    pixel_center[0] = vec2(position.x + 0.01f, position.y + 0.01f);
+    pixel_center[1] = vec2(position.x - 0.01f, position.y + 0.01f);
+    pixel_center[2] = vec2(position.x + 0.01f, position.y - 0.01f);
+    pixel_center[3] = vec2(position.x - 0.01f, position.y - 0
+
+Precision: 0
+Recall: 0
+F1 Score: 0

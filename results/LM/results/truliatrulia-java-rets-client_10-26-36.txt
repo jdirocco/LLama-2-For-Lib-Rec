@@ -1,0 +1,116 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: trulia/trulia-java-rets-client
+    Project Description: truliajavaretsclient\n=================\n\nThe Trulia Java RETS Client is a library used to access data on RETS compliant servers.\nThis is a fork of the master branch, which it self is a fork of the .\n\n\nSimple example of a search:\n\n\n\tpublic static void mainString\n'
+    Existing Dependencies:
+    commons-codec:commons-codec
+- org.apache.httpcomponents:httpclient
+- log4j:log4j
+- jdom:jdom
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <html>
+      
+    <head>
+    <title>My Awesome Login Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <style>
+       .registerbtn {
+   background-color: #FF3E4F;
+   color: #ffffff;
+   font-weight: bold;
+   cursor: pointer;
+   width: 50%;
+   border-radius: 50px;
+   border: none;
+   padding: 15px;
+   font-size: 17px;
+   background-color: #FF3E4F;
+   }
+        /* Full-width input fields */
+input[type=text], input[type=password] {
+   width: 100%;
+   padding: 15px;
+   margin: 5px 0 22px 0;
+   border: none;
+   background: #f1f1f1;
+   }
+         input[type=text], input[type=password] {
+   width: 50%;
+   
+   padding: 5px 20px;
+   
+   margin: 8px 0 15px 0;
+  
+   }
+    input[type=file] {
+   
+   padding: 5px 20px;
+   
+   margin: 8px 0 15px 0;
+   float:right;
+  
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    if (!this._data) {
+            this._data = new DataService();
+        }
+        this._data.getAllUsers().subscribe((result: HttpResult<User[]>) => {
+            this.users = result.data as User[];
+            this.totalSize = this.users.length;
+            this.users = this.users.slice(0, 5);
+        });
+    }
+}
+ import { Component, OnInit } from '@angular/core'; 
+import { User, HttpResult } from '../shared/models';
+import { DataService } from '../shared/dataService/data.service';
+
+@Component({
+    selector: 'user',
+    template: `<h2>User List:</h2>
+                <h2>Total Users:{{totalSize}}</h2>
+                <user-list [item]="users"></user-list>`
+})
+export class UserComponent {
+    users: Array<User> = [];
+    totalSize:number = 0;
+    _data: DataService;
+    constructor() { 
+    
+
+Precision: 0
+Recall: 0
+F1 Score: 0

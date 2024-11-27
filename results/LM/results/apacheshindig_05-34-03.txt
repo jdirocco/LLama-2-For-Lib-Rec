@@ -1,0 +1,141 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: apache/shindig
+    Project Description: Apache Shindig\n\n What is it?\n \n\n Shindig is a JavaScript container and implementations of the backend APIs\n and proxy required for hosting OpenSocial applications.\n\n Documentation\n \n\n The most uptodate documentation can be found at Read BUILDJAVA for instructions on how to build and run the Java server.\n\n Read java/README for instructions on how to run a Java gadget server.\n\n Read php/README for instructions on how to run a php gadget server.\n\n Read javascript/README for instructions for using the Shindig Gadget Container \n JavaScript to enable your page to render Gadgets.\n\n Read features/README for instructions on how to use features.\n\n Licensing\n \n\n Please see the file called LICENSE in the java and php directories.\n\n Shindig URLS\n \n\n Home Page: Downloads: Mailing Lists: Source Code: Issue Tracking: Wiki: distribution includes cryptographic software. The country in\nwhich you currently reside may have restrictions on the import,\npossession, use, and/or reexport to another country, of\nencryption software. BEFORE using any encryption software, please\ncheck your country's laws, regulations and policies concerning the\nimport, possession, or use, and reexport of encryption software, to\nsee if this is permitted. See for more\ninformation.\n\nThe U.S. Government Department of Commerce, Bureau of Industry and\nSecurity BIS, has classified this software as Export Commodity\nControl Number ECCN 5D002.C.1, which includes information security\nsoftware using or performing cryptographic functions with asymmetric\nalgorithms. The form and manner of this Apache Software Foundation\ndistribution makes it eligible for export under the License Exception\nENC Technology Software Unrestricted TSU exception see the BIS\nExport Administration Regulations, Section 740.13 for both object\ncode and source code.\n\nThe following provides more details on the included cryptographic\nsoftware:\n\n Apache Shindig PHP interfaces with the mcrypt API\n to provide encryption\n of messages using the AES standard.\n\n Apache Shindig interfaces with the Java JCE APIs to provide\n encryption of messages using the AES standard.\n\n"
+    Existing Dependencies:
+    org.hibernate:hibernate-entitymanager
+- com.thoughtworks.xstream:xstream
+- net.sf.ezmorph:ezmorph
+- caja:json_simple
+- commons-codec:commons-codec
+- net.sf.json-lib:json-lib
+- commons-httpclient:commons-httpclient
+- org.apache.shindig:shindig-social-api
+- com.ibm.icu:icu4j
+- org.mortbay.jetty:jetty
+- commons-logging:commons-logging
+- hsqldb:hsqldb
+- joda-time:joda-time
+- junit-addons:junit-addons
+- org.easymock:easymockclassextension
+- rhino:js
+- org.hamcrest:hamcrest-all
+- commons-collections:commons-collections
+- rome:rome
+- org.json:json
+- org.apache.derby:derby
+- junit:junit
+- commons-io:commons-io
+- org.easymock:easymock
+- org.apache.shindig:shindig-features
+- commons-dbcp:commons-dbcp
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 26 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    	<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="box box-success">
+
+				<div class="box-header with-border">
+					<h3 class="box-title">DAFTAR USER</h3>
+				</div>
+
+				<div class="box-body">
+					
+						<form action="<?php echo site_url('User/simpan');?>" class="form-horizontal" method="post">  
+						  <div class="text-danger">
+						  <?php echo $this->session->flashdata('alert');?>
+						  </div>
+				
+						  <div class="form-group">
+							<label  class="col-sm-2">ID User :</label>
+							<div class="col-sm-9">
+							  <input type="text" readonly class="form-control" name="id_user"  required>
+							</div>
+						  </div>
+				  
+						  <div class="form-group">
+							<label  class="col-sm-2">NIP :</label>
+							<div class="col-sm-9">
+							  <input type="text" readonly class="form-control" name="nip" required>
+							</div>
+						  </div>
+					
+						  <div class="form-group">
+							<label  class="col-sm-2">Username :</label>
+							<div class="col-sm-9">
+							  <input type="text" readonly class="form-control" name="username" required>
+							</div>
+						  </div>
+						
+						  <div class="form-group">
+							<label  class="col-sm-2">Password :</label>
+							<div class="col-sm-9">
+							  <input type="password" class="form-control" required name="password" required placeholder="password">
+							</div>
+						  </div>
+				  
+						  <div class="form-group">
+							<label  class="col-sm-2">Nama :</label>
+							<div class="col-sm-9">
+							  <input type="text" readonly class="form-control" name="nama" required>
+							</div>
+						  </div>
+
+							<div class="form-group" >
+				
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 26 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>nput_dir = args["input_dir"]
+    output_dir = args["output_dir"]
+
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    for filename in os.listdir(input_dir):
+        filePath = os.path.join(input_dir, filename)
+        if os.path.isfile(filePath) and filename.endswith(".txt"):
+            print("Processing file: {0}".format(filename))
+            output_filename = os.path.join(output_dir, filename)
+            with open(filePath, "rb") as f_input:
+                with gzip.open(output_filename, mode="wb") as f_output:
+                    for line in f_input:
+                        f_output.write(line.encode("utf8")) Copyright 2020-2021 NVIDIA Corporation. All rights reserved.
+  SPDX-License-Identifier: MIT
+"""
+
+import sys
+import os
+import gzip
+import argparse
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Convert text documents')
+    parser.add_argument('input_dir', help='Source directory')
+    parser.add_argument('output_dir', help='Target directory')
+    args = vars(parser.parse_args())
+    i
+
+Precision: 0
+Recall: 0
+F1 Score: 0

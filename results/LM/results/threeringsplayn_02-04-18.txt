@@ -1,0 +1,181 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: threerings/playn
+    Project Description: PlayN is a crossplatform Java game development library written in Java that targets HTML5\nbrowsers via GWT, desktop JVMs, Android and iOS devices.\n\n NOTE\n\nThis is the legacy 1.x version of the PlayN library which is no longer actively developed. Active\ndevelopment is happening on PlayN 2.x which is hosted at playn/playn.\n\nUnless you mean to be using the legacy 1.x version of PlayN and potentially submitting bug fix or\nother maintenance patches, you should immediately proceed to the 2.x site.\n\nLicensing\n\n\nUnless otherwise stated, all source files are licensed under the Apache License, Version 2.0:\n\n Copyright 20112014 The PlayN Authors\n\n Licensed under the Apache License, Version 2.0 the "License"; you may not use this file\n except in compliance with the License. You may obtain a copy of the License at\n\n Unless required by applicable law or agreed to in writing, software distributed under the\n License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,\n either express or implied. See the License for the specific language governing permissions and\n limitations under the License.\n\nAndroid: wiki:
+    Existing Dependencies:
+    com.xamarin:mono-data-sqlite
+- org.lwjgl.lwjgl:lwjgl
+- com.googlecode.playn:playn-swt-java
+- ${groupId}:${rootArtifactId}-core
+- com.googlecode.playn:playn-android-nativelib
+- org.lwjgl.lwjgl:lwjgl_util
+- com.xamarin:monotouch
+- org.java-websocket:Java-WebSocket
+- com.samskivert:pythagoras
+- org.robovm:robovm-rt
+- org.robovm:robovm-cocoatouch
+- com.google.appengine:appengine-api-1.0-sdk
+- com.googlecode.playn:playn-robovm
+- com.google.gwt:gwt-dev
+- com.google.android:apk-expansion
+- com.google.appengine:appengine-testing
+- org.lwjgl.lwjgl:lwjgl-platform
+- ${groupId}:${rootArtifactId}-assets
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 19 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+           Data
+           
+          </h1>
+          <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Examples</a></li>
+             <li class="active"><a href="#">Data Siswa</a></li>
+             <li class="active">Edit Data Siswa</li>
+
+
+          </ol>
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+              <!-- general form elements -->
+             
+
+              <!-- Form Element sizes -->
+              <div class="box box-success">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Edit Data Siswa</h3>
+                </div><!-- /.box-header -->
+                <?php echo form_open('Siswa/update','',array('id'=>$this->uri->segment(3)));?>
+                <div class="box-body ">
+                  <div class="row">
+                   <!-- /.box-body -->
+            <div class="col-md-5">
+                   <div class="form-group">
+                  <label>NISN</label>
+                  <input type="text" value="<?php echo $record['nisn']?>" class="form-control" disabled="disabled">
+                  <input type="hidden" value="<?php echo $record['nisn']?>" name="a" class="form-control" >
+                  
+                </div>
+                 <div class="form-group">
+                  <label>NIS</label>
+                  <input type="text" name="b" value="<?php echo $record['nis']?>" class="form-control" >
+                </div>
+
+                <div class="form-group">
+                  <label>Nama Lengkap</label>
+                  <input type="text" name="c" value="<?php  echo $record['nama']?>" class="form-control" >
+                </div>
+                <div class="form-group">
+                  <label>Tempat lahir</label>
+                  <input type="text" name="d" class="form-control" value="<?php echo $record['tmp_lahir']?>">
+                </div>
+
+                <div class="form-group">
+                  <label>Tanggal Lahir</label>
+                  <input type="date" name="e" class="form-control" value="<?php echo $record['tgl_lahir']?>">
+                </div>
+
+                  <div class="form-group">
+                  <label>Jenis Kelamin</label>
+                 <select class="form-control selectpicker show-tick"  name="f" style="width: 100%;">
+                  <option value="<?php echo $record['jk']?>" selected="selected"><?php echo $record['jk']?></option>
+                  <option>----Pilih Jenis Kelamin----</option>
+              
+                    <option
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 19 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    * @return mixed
+     */
+    public function delete($data)
+    {
+        return $this->model->whereIn('id', $data)->update(['status' => 0]);
+    }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function find($id)
+    {
+        return $this->model->findOrFail($id);
+    }
+
+} <?php namespace App\Repositories\Permission;
+
+use App\Repositories\Eloquent\Repository;
+//Models
+use Spatie\Permission\Models\Permission;
+
+class EloquentPermission extends Repository implements PermissionRepository
+{
+    /**
+     * @return string
+     */
+    public function model()
+    {
+        return Permission::class;
+    }
+
+    /**
+     * @param array $data
+     * @return mixed
+     */
+    public function create(array $data)
+    {
+        return $this->model->create([
+            'name' => $data['name'],
+            'guard_name' => $data['guard']
+        ]);
+    }
+
+    /**
+     * @param array $data
+     * @return bool
+     */
+    public function update(array $data)
+    {
+        $this->find($data['id'])->update([
+            'name' => $data['name'],
+            'guard_name' => $data['guard'],
+           'status' => $data['status']
+        ]);
+        return true;
+    }
+
+    /**
+     * @param array $data
+ 
+
+Precision: 0
+Recall: 0
+F1 Score: 0

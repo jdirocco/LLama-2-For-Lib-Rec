@@ -1,0 +1,171 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: docusign/docusign-java-client
+    Project Description: The Official DocuSign eSignature Java Client SDK\n\n from the , you merely need to install it by following the instructions below.\n\nNote: DocuSign uses Eclipse with Maven for testing purposes.\n\n Maven:\n1. In Eclipse, create a new project by selecting File New Project.\n2. In the New Project Wizard, expand Maven, then select Maven Project.\n3. Leave Create a simple project unchecked.\n4. Select Next, then provide a unique groupId and artifactId.\n5. In the directory where you've saved your project, open the pom.xml file.\n6. In the pom.xml file, locate the node.\n7. Add: \n \n8. If your project is still open, restart Eclipse.\n\n Dependencies\nThis client has the following external dependencies:\n io.swaggerjar:1.5.17\n org.glassfish.jersey.corejar:2.29.1\n org.glassfish.jersey.mediajar:2.29.1\n org.glassfish.jersey.media2.29.1\n com.fasterxml.jackson.corejar:2.12.1\n com.fasterxml.jackson.corejar:2.12.1\n com.fasterxml.jackson.core2.12.1\n junitjar:4.13.1\n com.apache.oltu.oauth2:org.apache.oltu.oauth2.client:1.0.2\n com.auth03.4.1\n org.bouncycastle1.60\n\n Code examples\nYou can find on our GitHub a selfexecuting package of code examples for the eSignature Java SDK, called a , that demonstrates common use cases. You can also download a version preconfigured for your DocuSign developer account from . These examples can use either the or authentication workflows.\n\n OAuth implementations\nFor details regarding which type of OAuth grant will work best for your DocuSign integration, see in the .\n\nFor security purposes, DocuSign recommends using the flow.\n\n Support\nLog issues against this client through GitHub. We also have an .\n\n License\nThe DocuSign eSignature Java Client SDK is licensed under the .\n\n Additional resources\n \n \n \n \n\ntravisimage: "
+    Existing Dependencies:
+    com.brsanthu:migbase64
+- javax.annotation:jsr250-api
+- com.sun.jersey:jersey-client
+- com.fasterxml.jackson.core:jackson-databind
+- com.fasterxml.jackson.datatype:jackson-datatype-joda
+- com.sun.jersey.contribs:jersey-multipart
+- joda-time:joda-time
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+  @php
+  $title = 'Edit User';
+  @endphp
+  @extends('auth.layouts.app')
+  @section('main-content')
+      <div class="card-body">
+        
+
+        <form role="form" method="post" action="{{route('user.update',$user->id)}}">
+        @csrf
+        <div class="row">
+          <div class="col-sm-12">
+           
+
+          <div class="form-group">
+              @if ($errors->has('name'))
+              <span class="text-danger">{{ $errors->first('name') }}</span>
+               @endif
+            <input type="text" name="name" id="name" class="form-control" value="{{$user->name}}" placeholder="Full Name">
+             
+          </div>
+
+          <div class="form-group">
+              @if ($errors->has('email'))
+              <span class="text-danger">{{ $errors->first('email') }}</span>
+               @endif
+            <input type="email" name="email" value="{{$user->email}}" id="email" class="form-control" placeholder="Email">
+           
+          </div>
+          <div class="form-group">
+                <label for="role_id">Select User Role:</label>
+              @if ($errors->has('role_id'))
+              <span class="text-danger">{{ $errors->first('role_id') }}</span>
+               @endif
+              <select name="role_id" id="role_id" class="form-control">
+                <option value="" style="display: none" selected>Select User Roles</option>
+              @foreach ($roles as $role)
+                 
+              <option value="{{$role->id}}"  {{ $role->name == $userRole->role->name?'selected' : '' }}>{{$role->name}}</option>
+                
+              @endforeach
+
+              </select>
+            </div>
+            <div class="form-group">
+              @if ($errors->has('mobile_number'))
+              <span class="text-danger">{{ $errors->first('mobile_number') }}</span>
+               @endif
+            <input type="number" name="mobile_number" id="mobile_number" class="form-control" value="{{$user->mobile_number}}" placeholder="Mobile Number">
+             
+          </div>
+            <div class="form-group">
+              @if ($errors->has('address'))
+              <span class="text-danger">{{ $errors->first('address') }}</span>
+               @endif
+            <input type="text" name="address" id="address" class="form-control" value="{{$user->address}}" placeholder="Address">
+             
+          </div>
+          
+          <div class="form-group">
+              @if ($errors->has('status'))
+              <span class="text-danger">{{ $errors->first('status') }}</span>
+               @endif
+           <select name="status" id="" class="form-control">
+             <option value="" style="display: none" selected >Select User Role</option>
+             <option value="0" 
+             {{ $user->status == 0?'selected' : '' }}>Inactive</option> 
+             <option value="1" 
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t(x: 1, y: 0, width: 1, height: 1))
+        } else {
+            let image = self.backgroundImage(for:.normal)
+            let newImage = image?.resizableImage(
+                withCapInsets: UIEdgeInsets(top: edge, left: edge, bottom: edge, right: edge),
+                resizingMode:.tile)
+            self.setBackgroundImage(newImage, for:.normal)
+        }
+    }
+
+    private func backgroundImage(for state: UIControl.State) -> UIImage? {
+        if let image = self.currentBackgroundImage(for: state) {
+            return image
+        } else {
+            if let image = self.currentBackgroundImage(for:.normal) {
+                return image
+            } else {
+                return nil
+            }
+        }
+    }
+
+    private func currentBackgroundImage(for state: UIControl.State) -> UIImage? {
+        let states = controlStateList(state)
+        for s in states {
+            if let image = self.backgroundImage(for: s) {
+                return image
+            }
+        }
+        return self.backgroundImage(for: state)
+    }
+
+    func setTitle(_ title: String?, state: UIControl.State) {
+        if title == self.title(for: state) {
+            return
+        }
+        self.setTitle(title, for: state)
+        self.setNeedsLayout()
+    }
+} import UIKit
+
+extension UIButton {
+    private var edge: CGFloat {
+        var edge: CGFloat = 0
+        for view in self.subviews where!view.isHidden {
+            if view is UIImageView {
+                let rect = view.frame
+                let size = rect.size
+                let width = min(size.width, size.height)
+                let edge = floor((size.width - width) / 2)
+                if edge > 0 {
+                    return edge
+                }
+            }
+        }
+        return 0
+    }
+
+    func setup() {
+        if #available(iOS 15.0, *) {
+            self.backgroundConfiguration =.menuSeparator(.defaul
+
+Precision: 0
+Recall: 0
+F1 Score: 0

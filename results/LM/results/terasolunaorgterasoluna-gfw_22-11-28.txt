@@ -1,0 +1,136 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: terasolunaorg/terasoluna-gfw
+    Project Description: TERASOLUNA Server Framework for Java 5.x Common Library\n\nThe common library of TERASOLUNA Server Framework for Java 5.x is a library of useful and unobtrusive common functionalities.\n\n\n\n Projects of Common Library\n\nAll modules included in TERASOLUNA Server Framework for Java 5.x Common Library are listed up in the .\n\n Getting Started\n\n Using as a part of Template Blank Project\n\nIn order to start using the common libaries, start with downloading Template Blank Project. Blank project already contains dependecies defined for TERASOLUNA Server Framework for Java 5.x Common Library. Template Blank Projects are available from the following links:\n\n Recommended\n Using maven\n\nCommon Library can be downloaded using maven through the following settings in pom.xml file. \n\nTwo types of settings are possible. \n\n1. Using parent\n2. Without using parent\n\n Using parent\n\nDefine parent project in pom file\n\n\n\nAfter adding above, add the following dependency definitions. \nOnly the required ones.\n\n\n\nThere is no need of settings related to version. \n\nPlugins are also already set in parent.\n\n Without using parent\n\nAdd the following dependency definitions. \n\nOnly the required ones.\n\n\n\n How to contribute\n\nContributing bug report, pull request, any comments etc. is welcome !! Please see the for details.\n\n\n\n TERASOLUNA Global Framework\n\nThe common library of TERASOLUNA Global Framework is maintained under branch.\n\n License\nThe TERASOLUNA Server Framework for Java 5.x is released under Apache License, Version 2.0.\n'
+    Existing Dependencies:
+    com.fasterxml.jackson.datatype:jackson-datatype-jsr310
+- org.apache.tiles:tiles-jsp
+- org.springframework:spring-aop
+- org.hibernate:hibernate-entitymanager
+- net.sf.dozer:dozer
+- org.terasoluna.gfw:terasoluna-gfw-web
+- ${project.groupId}:terasoluna-gfw-security-web
+- org.slf4j:slf4j-api
+- org.terasoluna.gfw:terasoluna-gfw-security-core-dependencies
+- org.springframework.security:spring-security-core
+- javax.el:javax.el-api
+- org.springframework:spring-aspects
+- org.terasoluna.gfw.codepoints:terasoluna-gfw-codepoints-jisx0201
+- org.terasoluna.gfw:terasoluna-gfw-web-jsp
+- org.springframework:spring-test
+- org.mybatis:mybatis
+- org.terasoluna.gfw:terasoluna-gfw-jodatime
+- com.google.guava:guava
+- org.terasoluna.gfw:terasoluna-gfw-security-web-dependencies
+- org.terasoluna.gfw.codepoints:terasoluna-gfw-codepoints-jisx0208
+- org.springframework.security:spring-security-config
+- org.springframework.data:spring-data-commons
+- org.terasoluna.gfw:terasoluna-gfw-jodatime-dependencies
+- org.hamcrest:hamcrest-library
+- org.springframework.security:spring-security-web
+- commons-beanutils:commons-beanutils
+- com.fasterxml.jackson.datatype:jackson-datatype-joda
+- io.spring.platform:platform-bom
+- joda-time:joda-time
+- org.apache.taglibs:taglibs-standard-jstlel
+- org.terasoluna.gfw:terasoluna-gfw-recommended-dependencies
+- org.terasoluna.gfw:terasoluna-gfw-security-web
+- org.slf4j:jcl-over-slf4j
+- org.terasoluna.gfw:terasoluna-gfw-jpa-dependencies
+- org.terasoluna.gfw:terasoluna-gfw-common
+- org.apache.tomcat:tomcat-jsp-api
+- commons-collections:commons-collections
+- ${project.groupId}:terasoluna-gfw-jodatime
+- org.apache.commons:commons-dbcp2
+- junit:junit
+- org.mybatis:mybatis-spring
+- org.terasoluna.gfw:terasoluna-gfw-web-jsp-dependencies
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 42 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    	<!-- ============ Hero Section =============== -->
+      <section class="hero-section">
+      	<div class="hero-slider owl-carousel">
+      		<div class="hs-item set-bg" data-setbg="/img/hero-slider/bg-1.jpg">
+      			<div class="hs-text">
+      				<div class="container">
+      					<div class="row">
+      						<div class="col-lg-8">
+      							<div class="hs-sub-text">
+      								<p>Discover <span>New Experience</span> with us!</p>
+      							</div>
+      							<h2 class="hs-title">Travelling & Leisure</h2>
+      							<p class="hs-des">Awesome tour packages with the best service in the town. We are providing the best tours & travel packages.</p>
+      							<div class="price-range-wrap">
+      								<p>
+      									Travelers’ Choice Awards: 4.7 based on 1693 reviews
+      								</p>
+      								<div class="price-range-block clearfix">
+      									<p>Price Range: </p>
+      									<div class="price-range" data-min="0" data-max="1500" data-unit="$"></div>
+      								</div>
+      							</div>
+      						</div>
+      					</div>
+      				</div>
+      				<div class="slide-num-holder" id="snh-1"></div>
+      			</div>
+      		</div>
+      		<div class="hs-item set-bg" data-setbg="/img/hero-slider/hero_bg4.jpg">
+      			<div class="hs-text">
+      				<div class="container">
+      					<div class="row">
+      						<div class="col-lg-8">
+      							<div class="hs-sub-text">
+      								<p>Discover <span>New Experience</span> with us!</p>
+      							</div>
+      							<h2 class="hs-title">Travelling & Leisure</h2>
+      							<p class="hs-des">Awesome tour packages with the best service in the town. We are providing the best tours & travel packages.</p>
+      							<div class="price-range-wrap">
+      								<p>
+      									Travelers’ Choice Awards: 4.7 based on 
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 42 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.mohammadalijayas.kootstrap.domain
+
+import com.mohammadalijayas.kootstrap.domain.exception.BusinessValidationException
+
+data class Email(private val email: String?) {
+
+    init {
+        if (email.isNullOrBlank()) throw BusinessValidationException("Email should not be empty")
+        if (!email!!.matches("^[_A-z0-9-\\+]+(\\.[_A-z0-9-]+)*@[A-z0-9-]+(\\.[A-z0-9]+)*(\\.[A-z]{2,})$".toRegex())) {
+            throw BusinessValidationException("Email is in invalid format")
+        }
+    }
+
+    fun isEqualTo(otherEmail: String): Boolean 
+    }
+
+}{
+        return email.equals(otherEmail, ignoreCase = true)
+
+Precision: 0
+Recall: 0
+F1 Score: 0

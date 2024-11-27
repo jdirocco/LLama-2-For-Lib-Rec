@@ -1,0 +1,170 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: awslabs/kinesis-aggregation
+    Project Description: Kinesis Record Aggregation & Deaggregation Modules for AWS Lambda\n\nThe Amazon Kinesis Producer Library KPL gives you the ability to write data to Amazon Kinesis with a highly efficient, asyncronous delivery model that can improve performance. The KPL is extremely powerful, but is currently only available as a Java API wrapper around a C executable which may not be suitable for all deployment environments. Similarly, the Kinesis Client Library KCL provides automatic deaggregation of KPL aggregated records, but not all Kinesis consumer applications, such as those running on AWS Lambda, are currently capable of leveraging this deaggregation capability.\n\n\nHow the Kinesis Producer Library Publishes Data\n\nThe components in this project give you the ability to process and create KPL compatible serialised data within AWS Lambda, in Java, Node.js and Python. These components can also be used as part of the Kinesis Client Library a . However, this project has several limitations:\n\n It only generates data, and doesn\'t perform delivery to the stream like the KPL. You still have to call PutRecords to push data to Kinesis Data Streams\n It doesn\'t manage data across multiple streams like KPL the interface assumes that all data is sent to a single Stream\n\n Aggregation\n\nOne of the main advantages of the KPL is its ability to use record aggregation to increase payload size and improve throughput. While this project is not a replacement for the full KPL, it does provide you the ability to easily aggregate multiple user records into larger aggregated records that make more efficient use of available bandwidth and reduce cost. This data is encoded using Google Protocol Buffers, and returned to the calling function for subsequent use. You can then publish to Kinesis and the data is compatible with consumers using the KCL or these Deaggregation modules.\n\n\n\n Caution you should only use Kinesis Aggregation outside of the Kinesis Producer Library for lowvalue messages where loss of a small number of messages is not critical. Aggregation results in messages being tagged to Shards, and in cases where the Stream is mutating during Aggregation, this can result in messages being rejected by the API. . Kinesis Deaggregation is compatible with all KPL published data and can be used safely. \n\n Deaggregation\n\nThe components in this library allow you to efficiently deaggregate protocol buffer encoded aggregated records in any application, including AWS Lambda.\n \n\n\n Language Specific Implementations\n\nAWS Lambda supports Java, Node.js, Python and Go as programming languages. We have included support for those languages so that you can create and process UserRecords via standalone modules. Documentation is provided for each language:\n\n| Language | Location |\n: | : \n| Java | |\n| Node.js Javascript | |\n| Python | |\n| Go | |\n\n\n\nCopyright Amazon.com, Inc. or its affiliates. All Rights Reserved.\n\nLicensed under the Apache License, Version 2.0 the "License";\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n'
+    Existing Dependencies:
+    com.amazonaws:amazon-kinesis-producer
+- ${project.groupId}:KinesisDeaggregator
+- com.amazonaws.services.kinesis:KinesisDeaggregator
+- ${project.groupId}:KinesisTestConsumers
+- com.amazonaws:aws-java-sdk-kinesis
+- com.amazonaws:aws-lambda-java-core
+- commons-codec:commons-codec
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <section id="main-content">
+          <section class="wrapper">            
+              <!--overview start-->
+			<div class="row">
+				<div class="col-lg-12">
+					<h3 class="page-header"><i class="fa fa-laptop"></i> Dashboard</h3>
+					<ol class="breadcrumb">
+						<li><i class="fa fa-home"></i><a href="<?php echo base_url('c_siswa/siswa_dashboard');?>">Beranda</a></li>
+						<li><i class="fa fa-laptop"></i>Dashboard</li>						  	
+					</ol>
+				</div>
+			</div>
+              
+            <div class="row">
+              				
+			  <div class="col-md-6 portlets">
+              <div class="panel panel-default">
+				<div class="panel-heading">
+              	Informasi
+				</div>              				
+				<div class="panel-body no-padding" style="text-align: center;">
+					<center> <h5>Judul TA</h5></center>
+				</div>
+				<div class="panel-footer">
+              	<div class="text-center">
+				<?php if ($this->session->userdata('status')=="siswa") {
+               ?>
+					<a href="http://localhost/siak_uas/index.php/c_siswa/lihat_tugas/<?php echo $id_judul;?>/<?php echo $id_pkl;?>" class="btn btn-xs btn-success">Lihat Tugas <?php echo $nama_judul;?></a>
+					<br>
+					&nbsp;
+					&nbsp;
+					<?= anchor('c_siswa/lihat_nilai_siswa_pdf/'.$id_judul."/".$id_pkl, 'Lihat Nilai', 'class="btn btn-xs btn-danger"');?> 
+					<?php
+                 }
+                ?>
+					
+					
+					
+				</div>
+			  </div><!-- /.panel-->
+			  </div><!-- /.col-->
+			  
+            
+
+            </div><!-- /.row -->
+			
+		
+
+            
+          </section>
+      </section>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="<?php echo base_url();?>assets/js/jquery.js"></script>
+    <script src="<?php echo base_url();?>assets/js/jquery-1.8.3.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="<?php echo base_url();?>assets/js/jquery.dc
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    return {...initialState };
+  }
+};
+
+export default createReducer(initialState, actions);
+ import { createReducer } from '../../../utils';
+
+const initialState = {
+  data: {},
+  isLoading: false,
+  isLoaded: false,
+  errors: null,
+  status: null,
+};
+
+const actions = {
+  SET_LOADING: state => ({
+   ...state,
+    isLoading: true,
+    isLoaded: false,
+  }),
+
+  SET_LOADING_SUCCESS: (state, { data }) => ({
+   ...state,
+    data,
+    isLoading: false,
+    isLoaded: true,
+  }),
+
+  SET_LOADING_ERROR: (state, { errors, status }) => ({
+   ...state,
+    errors,
+    status,
+    isLoading: false,
+  }),
+};
+
+// @ts-ignore
+const load = () => initialState;
+
+actions.load = {
+  pending: load,
+  success: (state, { data }) => ({...state, data }),
+  error: (state, { errors, status }) => ({
+   ...state,
+    errors,
+    status,
+  }),
+  fulfilled: load,
+};
+
+actions.reset = {
+  success: () => initialState,
+  error: state => ({...state, errors: null, status: null }),
+};
+
+actions.logout = {
+  success: () => initialState,
+  error: state => ({...state, errors: null, status: null }),
+};
+
+actions.get = {
+  success: (state, { data }) => ({
+   ...state,
+    data,
+  }),
+};
+
+actions.update = {
+  pending: () => initialState,
+  success: () => {
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

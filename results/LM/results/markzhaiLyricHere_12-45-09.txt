@@ -1,0 +1,146 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: markzhai/LyricHere
+    Project Description: Lyric Here \r\n==========\r\nMaterial design music and lyric player. Using Android\'s new android.media.MediaMetadata series api to implement. \r\n\r\nPrerequisites\r\n\r\n Android SDK v14\r\n\r\nFeatures\r\n\r\n Local music browser and player.\r\n Music player widget, notification widget.\r\n Lyric directly refresh on notification, see it whenever you want.\r\n Powerful LyricView which supports scrolling up and down to change offset.\r\n Receive broadcast from popular music players and pop up lyric open notification.\r\n\r\nTODOPull request is welcomed\r\n\r\n Upgrade LyricView to more powerful.\r\n Use Google Design Support UI AppBar, CoordinatorLayout, etc.\r\n Better implementation for Music player, show lyric directly.\r\n Download lyric from server and upload to server.\r\n Add support lyric file encoding autorecognize.\r\n\r\nTested\r\n\r\n Nexus 6 5.1.1\r\n OnePlus 4.3\r\n\r\nScreenshots\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nLIBRARY\r\n\r\n Android Support Library cardview, appcompat, design, mediarouter\r\n \r\n \r\n \r\n \r\n \r\n '
+    Existing Dependencies:
+    com.hannesdorfmann.mosby:viewstate
+- com.chrisanderson.mediabrowsercompat:library
+- com.raizlabs.android:DBFlow-Compiler
+- com.raizlabs.android:DBFlow
+- com.hannesdorfmann.mosby:mvp
+- com.android.support:mediarouter-v7
+- frankiesardo:icepick-processor
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md 12">
+            <div class="card ">
+              <div class="card-header card-header-success card-header-icon">
+                <div class="card-icon">
+                  <i class="material-icons">store</i>
+                </div>
+                <div class="card-header-success card-header-text">                  
+                  <h4>Pesanan Masuk
+                   <p style="font-size:12px">Total Pesanan Hari Ini :</p>  
+
+                  @foreach ($pesanans as $pesanan)
+                  @endforeach
+                  <a href="#" style="font-size:25px">{{count($pesanans)}}</a>
+                  </h4>
+                </div>
+                <a href="#" class="btn btn-round btn-sm btn-default">Pesanan</a>
+              </div>
+              <div class="card-body" >
+                <div class="table-responsive ps">
+                  <table class="table table-hover table-bordered" id="tabel">
+                    <thead class="text-warning">
+                      <th>
+                       No
+                      </th>
+                      <th>
+                        Nama Pemesan
+                      </th>
+                      <th>
+                        Alamat
+                      </th>
+                      <th>
+                        No Hp
+                      </th>
+                      <th>
+                        Status
+                      </th>
+                      <th>
+                        Aksi
+                      </th>
+                    </thead>
+                    <tbody>                   
+                    <tr>
+                    @foreach ($pesanans as $pesanan)
+                       <td>{{$loop->iteration}}</td>
+                       <td>{{$pesanan->user->name}}</td>                                 
+                       <td>{{$pesanan->alamat}}</td>
+                       <td>{{$pesanan->no_hp}}</td>
+                       <td>
+                       @if($pesanan->status==1)
+                       Sudah diambil
+                       @else
+                        <a href="" class="badge badge-danger">Belum Diambil</a>
+                       @endif
+                       </td>
+                       <td width="5%">
+                        <a href="#" data-toggle="modal" data-target="#exampleModal{{$pesanan->id}}" class="btn btn-danger btn-sm">
+                        <i class="material-icons">info</i>
+                    </a>
+                       </td>
+                       </tr>
+                      {{-- MODAL INFORMATION --}}
+                      @if ($pesanan->status==1)
+                        
+                      
+                      @else
+                      <div class="modal fade" id="exampleModal{{$pesanan->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class HomeController extends Controller
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $ts->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        return view('home');
+    }
+
+   
+}
+hi
+
+Precision: 0
+Recall: 0
+F1 Score: 0

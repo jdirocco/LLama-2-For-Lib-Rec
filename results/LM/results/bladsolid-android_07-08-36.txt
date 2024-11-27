@@ -1,0 +1,178 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: blad/solid-android
+    Project Description: SOLID: Noun Project Browser Circa 2015\n============================\n\n\n\nThis project\'s goal is to be a demonstration of how can\nbe applied to Android development.\n\n\n\n\n\n\n Contributing\n\nContributions are welcome to the project. The goal is to adhere to the SOLID principles.\n\n Bug Fixes\n\nBug fixes can be contributed via pull requests for this project.\n\n Features\n\nFeatures can be contributed via pullrequests for this project.\n\n Tools & Libraries\n\n \n \n \n \n \n \n \n \n\n Graphics & Icons\n\n The Noun Project\n\n is the source for some the graphics used in this application. The following users\' work was used:\n\n created by \n created by \n public domain icon\n\nThe noun project is a great resource for finding clip art for use in applications.\n\n Android Asset Studio\n\nIcon generator that allows you to quickly and easily generate icons from existing source images, clipart, or text. You can generate Launcher icons, Action bar and tab icons, Notification icons and Generic icons. The asset studio allows you to adjust sizing, padding, and tint icons.\n\n\n\n Material Palette\n\nMaterial Pallet is a simple web app that allows you to generate a color\npallet and export the corresponding xml. This allows nondesigners to pick a pallet\nthat makes sense visually, and aligns with the guidelines for Material Design.\n\nAdditionally this helps enforce the correct use of color names in Android themes.\n\n\n\n Running this Project\n\nFrom Android Studio simply choose to import and select the in the\nroot directory of the repository. Android Studio will set everything else up\nautomatically.\n\n The Noun Project API Keys\n\nTo obtain api keys for The Noun Project visit the page for additional information\n\nOnce you have the API key and secret, replace the placeholder values in: .\n\n\n\n License\n\n Copyright 2014 Bladymir Tellez\n\n Licensed under the Apache License, Version 2.0 the "License";\n you may not use this file except in compliance with the License.\n You may obtain a copy of the License at\n\n Unless required by applicable law or agreed to in writing, software\n distributed under the License is distributed on an "AS IS" BASIS,\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n See the License for the specific language governing permissions and\n limitations under the License.\n'
+    Existing Dependencies:
+    com.android.support:support-v13
+- com.jayway.android.robotium:robotium-solo
+- com.squareup.dagger:dagger
+- io.replay:replay-android
+- com.google.dexmaker:dexmaker
+- com.squareup.okhttp:okhttp
+- com.android.support:appcompat-v7
+- com.google.code.gson:gson
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+      {{--  <link href='../resources/views/layouts/bootstrap.min.css'>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  --}}
+      <link rel="icon" type="image/png" sizes="32x32" href="/img/favico.png">
+  	 {{--  <link rel="stylesheet" href="../resources/views/layouts/style.css">
+        <link rel="stylesheet" href="../public/css/style.css">  --}}
+
+    <title>@yield('title')</title>
+
+     <!-- Bootstrap core CSS -->
+      <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
+      
+      <!-- Custom styles for this template -->
+      <link href="http://getbootstrap.com/docs/4.0/examples/album/album.css" rel="stylesheet">
+   
+         <!-- Bootstrap core CSS -->
+         <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
+
+     {{--  <!-- Bootstrap core CSS -->
+      <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
+    
+      <!-- Custom styles for this template -->
+      <link href="http://getbootstrap.com/docs/4.0/examples/album/album.css" rel="stylesheet">  --}}
+
+  	  <link href="../resources/css/app.css" rel="stylesheet"> 
+      <link rel="stylesheet" href="{{url('assets/bootstrap/css/bootstrap.min.css')}}">
+      <link rel="stylesheet" href="{{url('assets/fontawesome/css/all.min.css')}}">
+      <link rel="stylesheet" href="{{url('assets/css/style.css')}}">
+
+      <style>
+         .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+
+         .jumbotron {
+              padding-top: 3rem;
+              padding-bottom: 3rem;
+              margin-bottom: 0;
+              background: #FFC852;
+                      color: #495057;
+                      border-radius: 10px;
+                       -webkit-backdrop-filter: saturate(180%) blur(20px);
+              background-color: rgba(248, 249, 250, 0.9);
+              }
+         .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+              }
+
+         
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+        }
+
+        public async Task<List<UserDTO>> GetUsersAsync()
+        {
+            return await _unitOfWork.Repository<User>().GetAsync(x => x.IsActive, x => x.LastName.AsAscending());
+        }
+
+        public void UpdateUser(UserDTO user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateUsers(List<UserDTO> users)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+ using DotNetCoreArchitecture.Application;
+using DotNetCoreArchitecture.Database;
+using DotNetCoreArchitecture.Model.Dtos;
+using DotNetCoreArchitecture.Model.Models;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using URF.Core.Abstractions.Services;
+using URF.Core.Filters;
+
+namespace DotNetCoreArchitecture.Application.Services
+{
+    public class UserService : IUserService
+    {
+        private readonly IUnitOfWork _unitOfWork;
+
+        public UserService(IUnitOfWork unitOfWork)
+        {
+            _unitOfWork = unitOfWork;
+        }
+
+        public void AddUser(UserDTO user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddUsers(List<UserDTO> users)
+        {
+            throw new NotImplementedException();
+        }
+
+        public UserDTO DeleteUser(Guid userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<UserDTO> DeleteUsers(List<Guid> userIds)
+        {
+            throw new NotImplementedException();
+        }
+
+        public UserDTO GetUser(Guid userId, bool includeRelations)
+        {
+            return _unitOfWork.Repository<User>().Get(userId);
+        }
+
+        public UserDTO GetUser(UserFilter userFilter, bool includeRelations)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<UserDTO> GetUserAsync(Guid userId, bool includeRelations)
+        {
+            return await _unitOfWork.Repository<User>().GetAsync(userId);
+        }
+
+        public async Task<UserDTO> GetUserAsync(UserFilter userFilter, bool includeRelations)
+        {
+            throw new NotImplementedException();
+
+Precision: 0
+Recall: 0
+F1 Score: 0

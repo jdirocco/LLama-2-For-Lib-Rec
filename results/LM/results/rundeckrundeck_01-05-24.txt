@@ -1,0 +1,160 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: rundeck/rundeck
+    Project Description: Rundeck\n========\n\n| Travis | Deb | RPM | War |\n|||||\n|||||\n\nRundeck is an open source automation service with a web console,\ncommand line tools and a WebAPI.\nIt lets you easily run automation tasks across a set of nodes.\n\n Site: \n\n Latest documentation: \n\n Get Help: \n\n Installation: \n\n\nSee the for the latest version information.\n\n\nHow To Build:\n=====\n\nPrimary build is supported with gradle. More info in the .\n\nRequirements: Java 1.8, NodeJs 16\n\nBuild with Gradle\n\n\nProduces: \n\n ./gradlew build\n\nDocker Build\n\n\nUses the war artifact and produces a docker image.\n\nCreates image , you can define to add additional tags\n\n ./gradlew officialBuild\n\nDocumentation\n======\n\nAvailable online at \n\nFAQ: \n\nDevelopment\n======\n\nRefer to the to get set up using IntelliJ IDEA or Eclipse/STS.\n\n at github.com\n\nDo you have changes to contribute? Please see the wiki page.\n\nLicense\n======\n\nCopyright 2023 Rundeck, Inc.\n\nLicensed under the Apache License, Version 2.0 the "License";\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n'
+    Existing Dependencies:
+    org.codehaus.groovy:groovy-all
+- scm:git
+- org.eclipse.jgit:org.eclipse.jgit
+- cglib:cglib-nodep
+- com.squareup.retrofit2:retrofit-mock
+- org.projectlombok:lombok
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+@php
+
+  $total = 0;
+
+@endphp
+  
+@foreach($order->products as $product)
+    @php
+    
+    $total += ($product->price*$product->pivot->quantity);
+     
+    @endphp
+    
+    <tr>
+        <th scope="row">{{$loop->iteration}}</th>
+        <td>{{$product->name}}</td>
+        <td>{{$product->price}}</td>
+        <td>{{$product->pivot->quantity}}</td>
+        <td>{{($product->price*$product->pivot->quantity)}}</td>
+      </tr>
+@endforeach
+<hr>
+<div class="row">
+    <div class="col text-right">
+        <h6 class="font-weight-bold">الاجمالي : {{$total}} </h6>
+    </div>
+</div>
+  
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use PDF;
+
+
+class LaporanController extends Controller
+{
+    public function index() {
+        $laporan = DB::table('tb_laporan')->paginate('10');
+        return view('Laporan.index', ['laporan' => $laporan]);
+    }
+
+    public function tambah() {
+        return view ('Laporan.tambah');
+    }
+
+    public function store(Request $request) {
+        $validated = $request->validate([
+            
+            'tanggal' =>'required|date',
+            'judul' =>'required|unique:tb_laporan|max:255',
+            'konten' =>'required',
+            // 'file' =>'required|file|image|mimes:jpeg,png,jpg|max:6000',
+            
+
+        ]);
+        
+        $nama_file = null;
+
+        if($request->file('file')) {
+            $file = $request->file('file');
+            $nama_file = time()."_".$file->getClientOriginalName();
+
+            $tujuan_upload = 'data_file';
+            $file->move($tujuan_upload,$nama_file);
+
+        }
+
+        DB::table('tb_laporan')->insert(
+            [
+            'tanggal' => $request->tanggal,
+            'judul' => $request->judul,
+            'konten' => $request->konten,
+            'file' => $nama_file,
+            
+        ]);
+
+       // $request->session()->flash('Pesan', 'Data berhasil disimpan');
+    
+        return redirect('laporan');
+
+    }
+
+    public function edit($idLaporan) {
+        $laporan = DB::table('tb_laporan')->where('idLaporan',$idLaporan)->get();
+        return view('laporan.edit', ['laporan' => $laporan]);
+       
+    }
+
+    public function update(Request $request, $idLaporan) {
+        DB::table('tb_laporan')->where('idLaporan',$idLaporan)->update([
+               $pdf->loadHTML($html);
+        return $pdf->stream();
+
+    }
+}  
+         'judul' => $request->judul,
+         'konten' => $request->konten,
+         'file' => $request->file('file'),
+         'tanggal' => $request->tanggal,
+
+        ]); // 
+        return redirect('laporan');
+    }
+
+    public function delete($idLaporan) {
+        DB::table('tb_laporan')->where('idLaporan',$idLaporan)->delete();
+        return redirect('laporan');
+       
+
+    }
+
+    public function cetak_pdf() {
+        $laporan = DB::table('tb_laporan')->get();
+     
+        $pdf =  PDF::loadview('Laporan.laporan_pdf', ['laporan'=>$laporan]);
+        // return $pdf->download
+
+Precision: 0
+Recall: 0
+F1 Score: 0

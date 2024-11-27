@@ -1,0 +1,129 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: xhochy/logolyze
+    Project Description: LogoLyze is a software to display an analyze graphs of all kind that are \navailable in an \nLogoLyze is optimized for maximum flexiblity, regarding analyzation \ncapabilities as well as the possibility to use the\nsoftware with differently structured databases.\n \nGraph OLAP has been handled in theory by several scientists \n.\nAccording to our research, there has not been an easy to use, production ready\nsoftware to visualize this data.\n \nThe software has been developed in a practical course at the\n\nby Timo Paulssen, Florian Larysch, Andreas Fried, Uwe L. Korn and Lukas Barth.\nThe project was motivated by the research project .\n'
+    Existing Dependencies:
+    com.thoughtworks.xstream:xstream
+- org.apache.xmlgraphics:batik-svggen
+- net.sf.jung:jung2
+- net.sf.jung:jung-visualization
+- org.yaml:snakeyaml
+- org.easytesting:fest-swing
+- org.mockito:mockito-all
+- com.xhochy.carameldb:carameldb
+- com.google.inject:guice
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+        <?php 
+
+                                            if (! function_exists('get_db_config')) {
+                                                function get_db_config()
+                                                {
+                                                    if (Session::get('dbname')) {
+                                                                    $config['database']['connection']['pgsql'] = array(
+                                                                                    'driver' => 'pgsql',
+                                                                                    'host' => '167.71.230.68',
+                                                                                    'database'  =>'sales_report',
+                                                                                    'username'  =>'sales_report',
+                                                                                    'password'  =>'sales_report',
+                                                                                    'charset' => 'utf8',
+                                                                                    'prefix' => '',
+                                                                    );
+
+                                                                    return $config['database']['connection']['pgsql'];
+
+                                                                }else{
+
+                                                                    $config['database']['connection']['pgsql'] = array(
+                                                                                    'driver' => 'pgsql',
+                                                                                    'host' => '167.71.230.26',
+                                                                                    'database'  => 'pos_db',
+                                                                                    'username'  => 'pos',
+                                                                                    'password'  => 'pos@456',
+                                                                                    'charset' => 'utf8',
+                                                                                    'prefix' => '',
+                                                                    );
+
+                                                                    return $config['database']['connection']['pgsql'];
+
+                                                                }
+                                                                
+                                                    }
+                                            }
+
+
+        
+
+        $conn = pg_connect("host=167.71.230.68 port=5432 dbname=sales_report user=sales_report password=sales_report");
+        
+        // $conn = pg_connect("host=167.71.230.26 port=5432 dbname=pos_db user=pos password=pos@456");
+        
+        $sql = "select 
+		* from
+																	(
+																		SELECT 
+																			DISTINCT
+																				t_cust_order_row.order_row_id,
+																				t_cust_order.order_no,
+																				t_cust_order.order_type,
+																				t_cust_order_row.order_qty,
+																				t_cust_order_row.item_desc,
+																				t_cust_order_row.
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import { Component, Input } from "@angular/core";
+
+@Component({
+  selector: "app-spinner",
+  template: `
+    <ng-content *ngIf="!show"></ng-content>
+    <div *ngIf="show">
+      <div class="spin  <svg viewBox="0 0 50 50" class="spinner-svg" stroke="currentColor">
+          <polygon
+            cx="0 25"
+            cy="0 25"
+            fill="none"
+            stroke-width="6"
+            r="20"
+            points="
+            5.818,49.812 24.75,33.578
+            44.582,49.812 24.75,0
+            "
+          ></polygon>
+        </svg>
+      </div>
+    </div>
+  `,
+  styles: [``],
+})
+export class SpinnerComponent {
+  @Input() show = true;
+}
+ner">
+      
+
+Precision: 0
+Recall: 0
+F1 Score: 0

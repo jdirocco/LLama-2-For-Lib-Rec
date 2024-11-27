@@ -1,0 +1,150 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: jdmr/mateo
+    Project Description: MATEO\n\nProyecto que busca ayudar a peque\xc3\xb1as empresas de servicio a administrar su negocio. \n\nParticipa haciendo un fork y enviando pull requests.\n\nPor cuestiones de integraci\xc3\xb3n con un sistema local es necesario instalar la \nlibrer\xc3\xada JDBC de Oracle, la cual, por cuestiones de licencia, no podr\xc3\xa1n encontrar\nen los repositorios p\xc3\xbablicos de Maven. Para poder instalarlo es necesario \nconseguir el driver ojdbc6.jar Este se puede encontrar dentro del sitio de\nOracle e instalarlo en su repositorio local maven con la siguiente instrucci\xc3\xb3n:\n\nmvn install:installfile Dfile=/Users/jdmr/Downloads/ojdbc6.jar DgroupId=oracle DartifactId=ojdbc6 Dversion=11.2.0.3 Dpackaging=jar'
+    Existing Dependencies:
+    mysql:mysql-connector-java
+- net.sf.opencsv:opencsv
+- org.apache.commons:commons-io
+- org.springframework:spring-aop
+- commons-io:commons-io
+- org.springframework:spring-test-mvc
+- org.springframework.webflow:spring-js
+- org.sitemesh:sitemesh
+- commons-dbcp:commons-dbcp
+- org.springframework.webflow:spring-webflow
+- net.sf.jasperreports:jasperreports
+- org.hamcrest:hamcrest-core
+- oracle:ojdbc6
+- commons-lang:commons-lang
+- org.springframework:spring-expression
+- org.jboss.spec:jboss-javaee-web-6.0
+- org.hibernate:hibernate-core
+- javax.mail:mail
+- org.springframework:spring-test
+- org.springframework:spring-webmvc
+- org.hibernate:hibernate-ehcache
+- ognl:ognl
+- org.springframework.security:spring-security-config
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 23 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+    
+      <div class="row">
+            <div class="col-md-8 col-md-offset-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><?php echo $title;?>
+                        <!-- <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span> -->
+                    </div>
+                    <div class="panel-body">
+
+                     <div class="form-group">
+                     <label for="">Jenis Barang</label>
+
+                      <select class="form-control" required="">
+                      <option value="">- PILIH -</option>
+                      <?php foreach ($jenisbarang as $jnsbar) {?>
+                        <option value="<?php echo $jnsbar->idjenisbarang;?>"><?php echo $jnsbar->jenisbarang;?></option>
+
+                      <?php } ?>
+                      </select>
+                  </div>
+
+                       <div class="form-group">
+                     <label for="">Merk Barang</label>
+
+                      <select class="form-control" required="">
+                      <option value="">- PILIH -</option>
+                      <?php foreach ($jenisbarang as $jnsbar) {?>
+                        <option value="<?php echo $jnsbar->idjenisbarang;?>"><?php echo $jnsbar->jenisbarang;?></option>
+
+                      <?php } ?>
+                      </select>
+                  </div>
+
+                     <div class="form-group">
+                     <label for="">Kode Barang</label>
+                    <input type="text" name="kodebar" class="form-control" required="" id="kodebar">
+
+                  </div>
+
+                     <div class="form-group">
+                     <label for="">Nama Barang</label>
+                    <input type="text" name="namabarang" class="form-control" required="" id="namabarang">
+
+                  </div>
+
+                  <div class="form-group">
+                     <label for="">Harga</label>
+                    <input type="text" name="harga" class="form-control" required="" id="harga">
+                  </div>
+
+                  <div class="form-group">
+                     <label for="">Stok</label>
+                    <input type="text" name="stok" class="form-control" required="" id="stok">
+                  </div>
+
+                  <div class="form-group">
+                     <label for="">Satuan</label>
+                    <input type="text" name="satuan" class="form-control" required="" id="satuan">
+                  </div>
+
+              
+
+                    </div>
+                </div>    
+            </div>
+
+      <div class="row" style="padding-top: 20px; padding-bottom: 30px;">
+      
+        <div class="col-md-10">
+        </div>
+        <div class="col-md-2">
+      <button type="submit"  style="font-size: 20px;" id="add" class
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 23 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>  return "OK"
+} // EXPECTED_REACHABLE_NODES: 996
+// MODULE: lib
+// FILE: lib.kt
+
+// MODULE: main(lib)
+// FILE: main.kt
+fun box(): String {
+    val list: Collection<*>? = null
+    if ((list as? List<Int>)?.get(0)!= null) {
+        return "fail 1"
+    }
+    if ((list as? List<Int>)?.get(0) == null) {
+        return "fail 2"
+    }
+    if ((list as? List<Int>)?.get(0)!= null) {
+        return "fail 3"
+    }
+  
+
+Precision: 0
+Recall: 0
+F1 Score: 0

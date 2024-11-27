@@ -1,0 +1,100 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: rodrigodealer/mybatis-crlf-fixed
+    Project Description: mybatiscrlffixed\n==================\n\nTo pack, just run: \n\n1. $ mvn package \n\n2. Get a coffee :\n'
+    Existing Dependencies:
+    commons-logging:commons-logging
+- org.slf4j:slf4j-api
+- commons-dbcp:commons-dbcp
+- org.slf4j:slf4j-log4j12
+- postgresql:postgresql
+- javax.transaction:transaction-api
+- org.apache.velocity:velocity
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+@if(count($errors) > 0)
+
+    @foreach ($errors->all() as $error)
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ $error }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endforeach
+@else
+    <div class="alert alert-primary ">
+        <button type="button" class="close"  aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        
+    </div>
+@endif
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s.props.onClick}>
+                    {this.props.icon}
+                </Button>
+            </div>
+        );
+    }
+}
+
+IconButton.displayName = 'IconButton';
+
+
+export default IconButton;
+ 'use strict';
+
+import React, {Component, PropTypes} from'react';
+import Button from'material-ui/Button';
+import classnames from 'classnames';
+import styles from './IconButton.css';
+
+class IconButton extends Component {
+
+    static propTypes = {
+        className: PropTypes.string,
+        disabled: PropTypes.bool,
+        icon: PropTypes.any,
+        onClick: PropTypes.func.isRequired,
+    };
+
+    constructor (props) {
+        super(props);
+    }
+
+    render () {
+        return (
+            <div className={classnames(styles.root, this.props.className)}>
+                <Button raised disabled={this.props.disabled} onClick={thi
+
+Precision: 0
+Recall: 0
+F1 Score: 0

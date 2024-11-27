@@ -1,0 +1,208 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: inthepocket/ibeacon-scanner-android
+    Project Description: iBeacon scanner android \n\n\n.\n\nlicenseimage:
+    Existing Dependencies:
+    com.squareup.leakcanary:leakcanary-android
+- com.android.support:support-annotations
+- com.squareup.leakcanary:leakcanary-android-no-op
+- org.robolectric:robolectric
+- com.jakewharton:butterknife-compiler
+- com.google.dexmaker:dexmaker
+- com.android.support:appcompat-v7
+- com.android.support:design
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<!--====================================
+=            Navigation Top            =
+=====================================-->
+
+<?php $this->load->view('top-bar');?>
+
+<!--====  End of Navigation Top  ====<--/>
+<?php $this->load->view('header');?>
+
+<!--====  End of header  ====<--/>
+
+
+
+<!--===========================================
+=            Page Title Section            =
+============================================-->
+<div class="page-title-area" style="height:180px; ">
+  <div class="page-title-overlay" ></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-title" style="padding-bottom:15pt;">
+          <h1 style="text-align:center; color:#fff; ">Courses</h1>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>
+
+
+ <!--====  End of Page Title Section  ====-->
+
+
+ <!--=====
+   Courses Section
+   =====--> 
+ <section class="section course-section">
+  <div class="container">
+    <div class="row">
+      
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="single-course">
+          <div class="course-thumb">
+            <a href="#">
+              <img src="<?php echo base_url()?>assets/dist/img/course-2.png" alt=""> 
+            </a>
+            <div class="course-cat bg-primary">
+              <span>FULL COURSE</span>
+            </div>
+          </div>      
+          <div class="course-details">
+            <h4>
+              <a href="#">Introduction to Business and Management Studies (BM505)</a>
+            </h4>
+            <p style=" font-size:12px; ">
+              The programme is designed with an emphasis on the theoretical and practical aspects of business administration and management. It provides students with basic understanding of the principles of management. 
+            </p>
+            <a href="#" class="enroll-course">
+              <span class="course-fee" >Courses Fee: <b>500</b></span>
+              <button class="btn btn-success" style="border-radius: 20px; ">Enroll Now</button>
+            </a>
+          </div>
+       </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="single-course">
+          <div class="course-thumb">
+            <a href="#">
+              <img src="<?php echo base_url()?>assets/dist/img/course-2.png" alt=""> 
+            </a>
+            <div class="course-cat">
+              <span>FULL COURSE</span>
+            </div>
+          </div>     
+          <div class="course-details">
+            <h4>
+              <a href="#">Introduction to Business and Management Studies (BM505)</a>
+            </h4>
+            <p>
+              The programme is
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.jamonapi.utils;
+
+import com.codahale.metrics.MetricRegistry;
+import com.codahale.metrics.Timer;
+
+import java.lang.reflect.Method;
+import java.util.concurrent.TimeUnit;
+
+import static com.jamonapi.utils.JamonUtils.*;
+
+/**  A wrapper that uses codahale Metrics library to track execution time of methods.
+ *
+ * Example
+ * <code>
+ *  <p><pre>
+ *   {@code
+ *     // wrap method
+ *       Timer wrapped = MetricsWrapper.wrap(this.getClass(), "getFoo()", "Foo");
+ *
+ *     // wrap static method
+ *       Timer wrapped = MetricsWrapper.wrap(MetricsWrapper.class, "getFoo()", "Foo");
+ *  </pre>
+ *  </code>
+ */
+class MetricsWrapper implements TimerWrapper {
+  private static final String CLASS = "class";
+  private static final String METHOD = "method";
+  private static final String LABEL = "label";
+  private static final String METHODNAME_PATTERN = "%s.%s";
+  private static final String TIMER_PATTERN = "%s.%s.time";
+  private final MetricRegistry mRegistry;
+
+  MetricsWrapper(MetricRegistry mRegistry) {
+    this.mRegistry = mRegistry;
+  }
+
+  @Override
+  public Timer wrap(Class<?> c, String method, String label) {
+    Object timer = newTimer(c, method, label);
+//    Timer wrapped = mRegistry.timer (timer.toString());
+//    mRegistry.remove(timer.toString());
+    return (Timer) timer;
+  }
+
+  @Override
+  public Timer wrap(String method, String label) {
+    Object timer = newTimer(method, label);
+//    Timer wrapped = mRegistry.timer (timer.toString());
+//    mRegistry.remove(timer.toString());
+    return (Timer) timer;
+  }
+
+  @Override
+  public Timer wrap(String method, String label, String category) {
+    Object timer = newTimer(method, label, category);
+//    Timer wrapped = mRegistry.timer (timer.toString());
+//    mRegistry.remove(timer.toString());
+    return (Timer) timer;
+  }
+
+  @Override
+  public Timer wrap(Method method, String label) {
+    Object timer = newTimer(method, label);
+//    Timer wrapped = mRegistry.timer (timer.toString());
+//    mRegistry.remove(timer.toString());
+    return (Timer) timer;
+  }
+
+  private Timer newTimer(Class<?> c, String method, String label) {
+    String key = String.format(METHODNAME_PATTERN, c.getCanonicalName(), method);
+    String timer = String.format(TIMER_PATTERN, c.getCanonicalName(), method);
+
+    MetricRegistry mRegistry = new MetricRegistry();
+    mRegistry.timer (timer);
+    return mRegistry.timer (timer);
+
+//    Object timer = newObject(TIMER_PATTERN, c.getCanonicalName(), method);
+//    Timer wrapped = mRegistry.timer (timer.toString());
+//    mRegistry.remove(timer.toString());
+//    return wrapped;
+  }
+
+  private
+
+Precision: 0
+Recall: 0
+F1 Score: 0

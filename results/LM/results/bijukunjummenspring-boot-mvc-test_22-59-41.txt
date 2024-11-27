@@ -1,0 +1,183 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: bijukunjummen/spring-boot-mvc-test
+    Project Description: springbootmvctest\n====================\nA sample web application using springboot\n\nRun using maven command:\n\nmvn springboot:run\n\nand access the page at the url
+    Existing Dependencies:
+    org.springframework.security:org.springframework.security
+- org.springframework.boot:org.springframework.boot
+- org.springframework.ws:org.springframework.ws
+- org.spockframework:org.spockframework
+- org.springframework.social:org.springframework.social
+- org.apache.solr:org.apache.solr
+- org.crashub:org.crashub
+- org.glassfish.jersey.core:org.glassfish.jersey.core
+- org.freemarker:org.freemarker
+- javax.servlet:javax.servlet
+- org.apache.tomcat.embed:org.apache.tomcat.embed
+- org.thymeleaf:thymeleaf-spring4
+- org.apache.tomcat:org.apache.tomcat
+- commons-beanutils:commons-beanutils
+- javax.jms:javax.jms
+- org.webjars:bootstrap
+- org.apache.activemq:org.apache.activemq
+- org.flywaydb:org.flywaydb
+- org.springframework.cloud:spring-cloud-cloudfoundry-connector
+- com.atomikos:com.atomikos
+- commons-collections:commons-collections
+- org.slf4j:org.slf4j
+- org.thymeleaf:org.thymeleaf
+- junit:junit
+- org.springframework.boot:spring-boot-starter-actuator
+- org.apache.logging.log4j:org.apache.logging.log4j
+- org.glassfish.jersey.media:org.glassfish.jersey.media
+- mysql:mysql
+- org.hamcrest:org.hamcrest
+- com.github.mxab.thymeleaf.extras:com.github.mxab.thymeleaf.extras
+- org.liquibase:org.liquibase
+- com.sun.mail:com.sun.mail
+- org.codehaus.groovy:org.codehaus.groovy
+- org.eclipse.jetty.websocket:org.eclipse.jetty.websocket
+- org.springframework.boot:spring-boot-starter-test
+- nz.net.ultraq.thymeleaf:nz.net.ultraq.thymeleaf
+- org.eclipse.jetty.orbit:org.eclipse.jetty.orbit
+- com.google.code.gson:com.google.code.gson
+- org.eclipse.jetty:org.eclipse.jetty
+- org.springframework.boot:spring-boot-starter-web
+- postgresql:postgresql
+- org.apache.httpcomponents:org.apache.httpcomponents
+- org.codehaus.btm:org.codehaus.btm
+- log4j:log4j
+- org.apache.commons:org.apache.commons
+- org.webjars:jquery
+- org.springframework.boot:spring-boot-starter-tomcat
+- javax.mail:javax.mail
+- ch.qos.logback:ch.qos.logback
+- org.springframework.boot:spring-boot-starter-data-jpa
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 51 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="form-group{{ $errors->has('id_user')?'has-error' : '' }}">
+        <div class="col-md-3 col-lg-3 col-xs-3">
+            <h4>Id Usuario:</h4>
+        </div>
+        <div class="col-xs-6 col-md-6 col-lg-6">
+                <!--{{ Form::text('id_user', $value = null, $attributes = ['class'=>'form-control','name'=>'name']) }}-->
+                {{ Form::text('id_user', null, $attributes = ['class'=>'form-control','placeholder'=>'Ej: 1']) }}
+            @if ($errors->has('id_user'))
+                <span class="help-block alert-danger">
+                    <strong>{{ $errors->first('id_user') }}</strong>
+                </span>
+            @endif
+        </div>
+    </div>
+
+     <div class="form-group{{ $errors->has('fecha')?'has-error' : '' }}">
+        <div class="col-md-3 col-lg-3 col-xs-3">
+            <h4>Fecha:</h4>
+        </div>
+        <div class="col-xs-6 col-md-6 col-lg-6">
+                {{ Form::text('fecha', null, $attributes = ['class'=>'form-control','placeholder'=>'AAAA-MM-DD ']) }}
+            @if ($errors->has('fecha'))
+                <span class="help-block alert-danger">
+                    <strong>{{ $errors->first('fecha') }}</strong>
+                </span>
+            @endif
+        </div>
+    </div>
+
+    <div class="form-group{{ $errors->has('id_carrera')?'has-error' : '' }}">
+        <div class="col-md-3 col-lg-3 col-xs-3">
+            <h4>Carrera:</h4>
+        </div>
+        <div class="col-xs-6 col-md-6 col-lg-6">
+             {{ Form::select('id_carrera', $carreras,null,['class' => 'form-control', 'placeholder' => 'Selecciona la carrera']) }}
+            @if ($errors->has('id_user'))
+                <span class="help-block alert-danger">
+                    <strong>{{ $errors->first('id_user') }}</strong>
+                </span>
+            @endif
+        </div>
+    </div>
+    
+    
+    <!--<div class="form-group{{ $errors->has('id_materia1')?'has-error' : '' }}">
+        <div class="col-md-3 col-lg-3 col-xs-3">
+            <h4>Materia:</h4>
+        </div>
+        <div class="col-xs-6 col-md-6 col-lg-6">
+            {{ Form::select('id_materia', $materias,null, ['class' => 'form-control', 'placeholder' => 'Selecciona la carrera']) }}
+            @if ($errors->has('id_user'))
+                <span class="help-block alert-danger">
+                    <strong>{{ $errors->first('
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 51 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>r) {
+
+													$data['error_warning'] = $this->error['warning'];
+												} else {
+													$data['error_warning'] = '';
+												}
+
+												if ($this->error['name']) {
+													$data['error_name'] = $this->error['name'];
+												} else {
+													$data['error_name'] = '';
+												}
+
+												if ($this->error['email']) {
+													$data['error_email'] = $this->error['email'];
+												} else {
+													$data['error_email'] = '';
+												}
+
+												if ($this->request->post['password']) {
+													if ($this->error['password']) {
+														$data['error_password'] = $this->error['password'];
+													} else {
+														$data['error_password'] = '';
+													}
+												} else {
+													$data['error_password'] = '';
+												}
+
+												if ($this->error['confirm']) {
+													$data['error_confirm'] = $this->error['confirm'];
+												} else {
+													$data['error_confirm'] = '';
+												}
+
+												if ($this->error['firstname']) {
+													$data['error_firstname'] = $this->error['firstname'];
+												} else {
+													$data['error_firstname'] = '';
+												}
+
+												if ($this->error['lastname']) {
+													$data['error_lastname'] = $this->error['lastname'];
+												} else {
+													$data['error_lastname'] = '';
+				
+
+Precision: 0
+Recall: 0
+F1 Score: 0

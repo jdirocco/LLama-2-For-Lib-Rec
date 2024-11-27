@@ -1,0 +1,230 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: GluuFederation/oxAuth
+    Project Description: oxAuth\n\noxAuth is an open source OpenID Connect Provider OP and UMA Authorization Server AS. The project also includes OpenID Connect Client code which can be used by websites to validate tokens. \n\noxAuth currently implements all required aspects of the OpenID Connect stack, including an OAuth 2.0 authorization server, Simple Web Discovery, Dynamic Client Registration, JSON Web Tokens, JSON Web Keys, and User Info Endpoint.\n\noxAuth is tightly coupled with . \n\noxAuth configuration is stored in LDAP, and oxTrust is needed to generate the proper configuration. For deployment instructions, use the \n'
+    Existing Dependencies:
+    com.google.code.findbugs:jsr305
+- commons-configuration:commons-configuration
+- com.amazonaws:aws-java-sdk-sns
+- org.eclipse.jetty:jetty-plus
+- org.xdi:oxcore-saml
+- org.quartz-scheduler:quartz
+- com.google.guava:guava
+- org.python:jython
+- commons-cli:commons-cli
+- commons-beanutils:commons-beanutils
+- javax.annotation:javax.annotation-api
+- org.richfaces:richfaces-a4j
+- org.codehaus.jettison:jettison
+- org.ocpsoft.rewrite:rewrite-servlet
+- org.xdi:oxcore-model
+- org.eclipse.jetty:jetty-deploy
+- org.jboss.resteasy:jaxrs-api
+- javax.jms:javax.jms-api
+- commons-collections:commons-collections
+- junit:junit
+- org.richfaces:richfaces
+- org.jboss.shrinkwrap.descriptors:shrinkwrap-descriptors-impl-javaee
+- org.ocpsoft.rewrite:rewrite-config-prettyfaces
+- org.jboss.resteasy:resteasy-jaxb-provider
+- javax.el:el-api
+- org.xdi:oxcore-server
+- org.xdi:oxcore-service
+- commons-lang:commons-lang
+- com.sun.faces:jsf-api
+- org.eclipse.jetty:jetty-annotations
+- org.jboss.resteasy:resteasy-servlet-initializer
+- org.apache.commons:commons-pool2
+- org.apache.httpcomponents:httpcore
+- org.jboss.resteasy:resteasy-jackson-provider
+- org.xdi:oxcore-ldap
+- io.dropwizard.metrics:metrics-core
+- javax.validation:validation-api
+- net.sf.ehcache:ehcache-core
+- org.apache.httpcomponents:httpclient
+- org.gluu:oxnotify-model
+- org.jboss.resteasy:resteasy-cdi
+- javax.websocket:javax.websocket-api
+- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-bom
+- org.apache.activemq:activemq-client
+- com.fasterxml.jackson.core:jackson-core
+- javax.enterprise:cdi-api
+- org.xdi:oxauth-static
+- com.wordnik:swagger-annotations
+- log4j:log4j
+- javax.servlet:javax.servlet-api
+- org.xdi:oxauth-model
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 52 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- Main content --> 
+    <section class="content">
+
+      <!-- Default box -->
+      <div class="box">
+        <div class="box-header with-border">
+
+          <?php if ($this->session->userdata('level') == 2):?>
+            <div align="left">
+              <button class="btn btn-default" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class=""></i> Filter</button>
+
+              <div class="collapse" id="collapseExample">
+                <div class="well">
+                  <div class="form-group">
+                    <label for="filter" class="col-sm-2 control-label">Filter :</label>
+
+                    <div class="col-sm-10">
+                      <select class="form-control select2" multiple="multiple" data-placeholder="Select a Filter" style="width: 100%;">
+                        <?php foreach ($dataFilter->result() as $filter):?>
+                          <option value="<?php echo $filter->id;?>"><?php echo $filter->nama;?></option>
+                        <?php endforeach?>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="button" id="btn-filter" class="btn btn-default"><i class="fa fa-filter"></i> Filter</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <?php endif?>
+
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+              <i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+              <i class="fa fa-times"></i></button>
+          </div>
+        </div>
+        <div class="box-body">
+         
+          <button class="btn btn-default" data-toggle="modal" data-target="#modal-tambah"><i class="fa fa-plus"></i> Tambah</button>
+
+          <br><br>
+
+          <table id="tableDT" class="table table-bordered table-striped">
+            <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <?php if ($this->session->userdata('level') == 1):?>
+              <th>Tanggal</th>
+              <?php endif?>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php 
+              $no = 1;
+              foreach ($dataPelatihan->result() as $pelatihan):
+           ?>
+            <tr>
+              <td><?php echo $no++;?></td>
+              <td><?php echo $pelatihan->nama_pelatihan;?></td>
+              <?php if ($this->session->userdata('
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 52 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s)
+    return 0;
+
+  int i, n;
+
+  for (n = i = 0; n < ns; n++) {
+    struct stat buf;
+    if (lstat (dir, &buf)) {
+      perror(dir);
+      exit(1);
+    }
+    if (S_ISDIR(buf.st_mode))
+      i += ls(n + 1, dir);
+    else {
+      if (!l)
+        printf("%s:\n", dir);
+      else
+        printf("%d: %*s%s\n", n, l - 1, "", dir);
+    }
+
+    if (!(dir = strchr(dir, '\0')) || *dir++!= '/')
+      break;
+  }
+
+  return i;
+}
+
+int
+main(int argc, char *argv[])
+{
+  int i, r;
+
+  if (argc <= 1) {
+    r = ls(0, ".");
+
+  } else for (r = i = 0; i < argc; r += ls(0, argv[i++]));
+
+  printf("total: %d\n", r);
+  return 0;
+}
+ #include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <dirent.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+int
+ls(int ns, char *dir) {
+  DIR *d;
+
+  if (!(d = opendir(dir)))
+    return 0;
+
+  int l = 1;
+  if (ns)
+    l += strlen(dir) + 1;
+
+  while (0!= fchdir(dir)) {
+    if (!(dir = strchr(dir, '\0')) || *dir++!= '/')
+      break;
+  }
+
+  struct dirent *e;
+  while (0!= (e = readdir(d))) {
+    if (strcmp(e->d_name, ".") && strcmp(e->d_name, "..")) {
+      char *path = malloc(strlen(dir) + 1 + strlen(e->d_name) + 2);
+      sprintf(path, "%s/%s", dir, e->d_name);
+      ls(ns + 1, path);
+      free(path);
+    }
+  }
+  closedir(d);
+
+  if (n
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,124 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: pchmn/MaterialChipsInput
+    Project Description: component for Android. The library provides two views : and .\n\n\n\n\n\n Demo\n\n\n Setup\n\nTo use this library your must be = 15.\n\nIn your project level build.gradle :\n\n\nIn your app level build.gradle :\n\n\n ChipsInput\nThis view implements the Material Design . \n\nIt is composed of a collection of chips and an input . Touching a chip open a full detailed view if non disable. The above describes the behavior of the view.\n\nBut everything is configurable optional avatar icon, optional full detailed view, ... so you can use the view for non contact chips.\n Basic Usage\n\n XML\nUse the ChipsInput view in your layout with default options :\n\n\nYou can also customize it all attributes :\n\n\n Suggestions\nYou can pass a object, which represents your suggestions, to the view, so it will work as a\n :\n\n 1. Create a class that implements or use directly the class included in the library :\n\n\n 2. Then in your activity, or anything else, build your suggestion list of or and pass it to the view :\n\n\n Get the selected list\nWhen you want you can get the current list of chips selected by the user :\n\n\nThat\'s it, there is nothing more to do.\n\n Advanced Usage\n ChipsListener\nThe view provides a listener to interact with the input :\n\n\n Add and remove chips manually\nYou don\'t have to pass a to the view and you can do the trick manually. Thanks to the you can be notified when the user is typing and do your own work.\n\n\n\n Add a chip\nThere are multiple implementations :\n\n\n Remove a chip\nThere are multiple implementations :\n\n\nAfter you added or removed a chip the will be triggered.\n\n Get the selected list\nWhen you want you can get the current list of chips selected by the user :\n\n\n ChipsInput attributes\n\nAttribute | Type | Description | Default\n | | | \n | | Hint of the input when there is no chip | null\n | | Hint color | android default \n | | Text color when user types | android default\n | | Max rows of chips | 2\n | | Label color of the chips | android default\n | | Whether the chips have avatar icon or not | true\n | | Whether the chips are deletable delete icon or not | false\n | | Delete icon color of the chips | white/black\n | | Background color of the chips | grey\n | | Whether to show full detailed view or not when touching a chip | true\n | | Full detailed view text color | white/balck\n | | Background color of the full detailed view | colorAccent\n | | Delete icon color of the full detailed view | white/black\n | | Background color of the filterable list of suggestions | white\n | | Text color of the filterable list of suggestions | black\n\n\n ChipView\nThis view implements the chip component according to the with configurable options background color, text color, ....\n\n\n\n Usage\n\n\n ChipView attributes\n\nAttribute | Type | Description | Default\n | | | \n | | Label of the chip | null\n | | Label color of the chip | android default\n | | Whether the chip has avatar icon or not | false\n | | Avatar icon resource | null\n | | Whether the chip is deletable delete icon or not | false\n | | Delete icon color of the chip | grey\n | | Background color of the chip | grey\n\n Listeners\n\n\nOn chip click listener :\n\n\nOn delete button click listener :\n\n\n Sample\n\nA sample app with some use cases of the library is available on this \n\nYou can also download the sample APK \n\n Credits\n\n \n \n \n\n License\n\n\n'
+    Existing Dependencies:
+    io.reactivex.rxjava2:rxjava
+- com.tbruyelle.rxpermissions2:rxpermissions
+- com.android.support:recyclerview-v7
+- com.jakewharton:butterknife-compiler
+- de.hdodenhof:circleimageview
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    	$(document).ready(function(){
+    $("#submit-btn").click(function(){ 
+    	var url = $("#myform").attr('action');
+        if($('textarea[name=description]').val() == ''){
+        	$(".error-description").text("*Please fill description").addClass("error");
+        	return false;
+        }else{
+        	$(".error-description").text("").removeClass("error");
+        	var form  = document.getElementById("myform");
+        	var form_data = new FormData(form); 
+        	$.ajax({
+		      type: 'POST',
+		      url: url,
+		      processData: false,
+		      contentType: false,
+		      data:form_data,
+		      cache: false,
+		      beforeSend: function () {
+		        $('#submit-btn').html($('#loading-img-btn').show());
+		      },
+		      success: function (data) {
+		      	console.log(data);
+		        var data = JSON.parse(data);
+		        if (data.success == "success") {
+		          toastr.success(data.msg);
+		          window.setTimeout(function() {window.location.href = data.url;},10);
+		        }else{
+		          toastr.error(data.msg);
+		        }
+		         $('#submit-btn').html($('#loading-img-btn').hide());
+		      },
+		      error: function (response) {
+		        alert('error');
+		      }
+		    });
+        }
+    });
+});
+$(document).ready(function(){
+    $(".upload-img").click(function (e) {
+	    $("#upload-file").click();
+	    e.preventDefault();
+	    e.stopPropagation();
+	});
+    $("#upload-file").change(function(){
+        if (typeof (FileReader)!= "undefined") {
+            var image_holder = $(".upload-preview");
+            image_holder.empty();
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $("<img/>", {
+                    "src": e.target.result,
+                    "class": "img-respo img-thumbnail rounded mr-2 mb-2"
+                }).appendTo(image_holder);
+            }
+            image_holder.show();
+            reader.readAsDataURL($(this)[0].files[0]);
+        }else{
+            alert("This browser not support File reader");
+        }
+    });
+});
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>.
+ */
+@Data
+@JsonIgnoreProperties(ignoreUnknown = true)
+public final class Error {
+
+  private String description;
+
+  private String message;
+
+  private int statusCode;
+
+}
+ package com.github.cmag.baseapp.model.api;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
+
+/**
+ * The Error object for API calls.
+ * 
+ * @author cmag
+
+Precision: 0
+Recall: 0
+F1 Score: 0

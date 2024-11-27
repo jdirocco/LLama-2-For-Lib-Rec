@@ -1,0 +1,186 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: google/identity-toolkit-java-client
+    Project Description: This is Java client library for Google Identity Toolkit services.\n\nSample usage\n=====================\n/\n initialize Gitkit client instance\n /\nGitkitClient gitkitClient = GitkitClient.newBuilder\n .setGoogleClientId"youroauth2webclientidatGoogle"\n .setServiceAccountEmail"yourserviceaccountemailatGoogledeveloperconsole"\n .setKeyStreamnew FileInputStream"pathtoyourserviceaccountprivatefile"\n .setWidgetUrl"/gitkit.jsp"\n .setCookieName"gtoken"\n .build;\n\n// Verifies a GitkitToken\nGitkitUser gitkitUser = gitkitClient.validateTokenInRequestrequest;\n\n// Download all accounts from Google Identity Toolkit\nIterator userIterator = gitkitClient.getAllUsers;\nwhile userIterator.hasNext {\n // individual user info is returned in userIterator.next\n}\n'
+    Existing Dependencies:
+    commons-codec:commons-codec
+- net.sf.jsr107cache:jsr107cache
+- org.codehaus.jackson:jackson-core-asl
+- com.google.guava:guava
+- org.apache.tomcat:tomcat-servlet-api
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    	
+    		
+    	
+    		
+    	
+    		
+    	
+    	<!-- 
+
+    	
+    		BEGIN CONTACT FORM 
+    		 
+    	
+     -->
+     <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- <div class="form-container" style="background: #198473!important;"> -->
+                @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+                @endif
+            <form id="contact" action="/contact/store" method="post">
+              @csrf
+                <ul class="alert-danger">
+                  <?php $x=0;?>
+                    @foreach($errors->all() as $error)
+                    
+                    <?php if($x=='0'):?>
+                    <br>
+                    <?php endif;?>
+                    {{ $error }}
+                    <?php $x++;?>
+                    @endforeach
+               </ul>
+              <h3><span class="text_color_red">Contact</span> us</h3>
+        
+
+                <fieldset>
+                  <input name="name"  @error('name') is-invalid @enderror placeholder="Name *" type="text" value="{{old('name')}}" tabindex="1" >
+                  @error('name') <strong style="color:red">{{$message}}</strong> @enderror
+                </fieldset>
+
+                <fieldset>
+                  <input name="email" @error('email') is-invalid @enderror type="text"  placeholder="E-mail *" value="{{old('email')}}" tabindex="2" >
+                  @error('email') <strong style="color:red">{{$message}}</strong> @enderror
+                </fieldset>
+                
+                <fieldset>
+                  <input name="phone" @error('phone') is-invalid @enderror type="text" placeholder="Phone *" value="{{old('phone')}}" tabindex="3" >
+                  @error('phone') <strong style="color:red">{{$message}}</strong> @enderror
+                </fieldset>
+
+                <fieldset>
+                <textarea name="msg" @error('msg') is-invalid @enderror  placeholder="Message *" tabindex="4"> {{old('msg')}}</textarea>
+                @error('msg') <strong style="color:red">{{$message}}</strong> @enderror
+                </fieldset>
+                <fieldset>
+                  <button type="submit" name="submit" id="contact-submit" data-submit="...Sending" >Send</button>
+                </fieldset>
+            </form>    
+
+         <!--  <ul class="alert-danger">
+            <li></li>
+            <li></li>
+            <li></li><br>
+            <li></li>
+            <li></li><br>
+            <li></li>
+           <li></li>
+          </ul> -->
+
+            <!-- </div> End /.contact-form-container -->
+          </div> <!-- /.col-md-10 -->
+        </div> <!-- /.row -->    
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s.map((user) => (
+                        <ListItem key={user.id} divider>
+                            <ListItemIcon>
+                                <PeopleIcon />
+                            </ListItemIcon>
+                            <ListItemText primary={user.email} />
+                            {isCurrentUserAdmin && (
+                                <ListItemSecondaryAction>
+                                    <Button onClick={() => {
+                                        setIsDialogOpen(true);
+                                        setUserId(user.id);
+                                    }}>
+                                        <RemoveIcon />
+                                    </Button>
+                                    <AdminUserDialog
+                                        isOpen={isDialogOpen}
+                                        userId={userId}
+                                        setIsDialogOpen={setIsDialogOpen}
+                                    />
+                                </ListItemSecondaryAction>
+                            )}
+                        </ListItem>
+                    ))}
+                </List>
+            )}
+
+        </CardContent>
+    );
+}
+ import Button from "@material-ui/core/Button";
+import CardContent from "@material-ui/core/CardContent";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
+import ListItemText from "@material-ui/core/ListItemText";
+import { makeStyles } from "@material-ui/core/styles";
+import PeopleIcon from "@material-ui/icons/People";
+import RemoveIcon from "@material-ui/icons/Remove";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import AdminUserDialog from "../../AdminUserDialog/AdminUserDialog";
+
+const useStyles = makeStyles((theme) => ({
+    cardContent: {
+        paddingTop: 0,
+    },
+}));
+
+export default function AdminUserList() {
+    const classes = useStyles();
+    const [users, setUsers] = useState([]);
+    const [isDialogOpen, setIsDialogOpen] = useState(false);
+    const [userId, setUserId] = useState("");
+    const { currentUser: user } = useSelector((state) => state.userReducer);
+    const { users: otherUsers } = useSelector((state) => state.userReducer);
+    const isCurrentUserAdmin = useSelector((state) => state.userReducer)
+       .currentUser.role === "ADMIN";
+
+    useEffect(() => {
+        if (user.id && user.role === "ADMIN") {
+            setUsers(otherUsers.filter((user) => user.id!== user.id));
+        }
+    }, [user, otherUsers]);
+    if (!user.id) return "";
+    return (
+        <CardContent className={classes.cardContent}>
+            {users.length!== 0 && (
+                <List dense={true}>
+                    {user
+
+Precision: 0
+Recall: 0
+F1 Score: 0

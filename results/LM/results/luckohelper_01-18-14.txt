@@ -1,0 +1,160 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: lucko/helper
+    Project Description: \n helper \n\nhelper is a development toolkit / library for Bukkit plugin developers. It provides a number of utilities and extended APIs which help to reduce boilerplate code and offer alternative paradigms for creating content.\n\n History\n\n\xf0\x9f\x92\xa1 helper started off as a library to experiment with an alternative paradigm for creating . Over time, more functionality has been added, usually as a response to a specific development need as I completed freelance work.\n\n\xf0\x9f\x8c\x8d I don\'t use helper in any of my public projects it\'s quite a big library, and I don\'t like to add bloat unnecessarily!\n\n\xe2\x9c\x85 However, it has been used extensively in a number of private server projects, most notably, in most custom plugins on servers operated by TheArchon, PrimeMC, etc. I\'m also aware of a number of other developers / development teams who still actively use helper, which is awesome!\n\n Status\n\nI\'m no longer actively working on further API additions, but the project is still being used frequently by various development teams, and I accept pull requests!\n\n Links\n\n download links for the standalone helper plugins\n almostfullycomplete documentation for helper\n\n\n Modules\n : The main helper project\n \n\n : Provides SQL datasources using HikariCP.\n \n\n : Provides Redis clients and implements the helper Messaging system using Jedis.\n \n\n : Provides MongoDB datasources.\n \n\n : Implements the helper Messaging system using LilyPad.\n \n\n : Provides a cached lookup service for player profiles.\n \n\n : JavaScript plugins using Nashorn.\n \n\n Feature Overview\n\n functional event handling and flexible listener registration\n easy access to the Bukkit scheduler\n a chain of operations Futures executing between both sync and async threads\n metadata with generic types, automatically expiring values and more\n message channel abstraction\n create commands using the builder pattern\n asynchronous scoreboard using ProtocolLib\n lightweight by highly adaptable and flexible menu abstraction\n easily design menu layouts without having to worry about slot ids\n make random selections from collections of weighted elements\n sets of distributed and uniformly partitioned elements\n a lookup repository and cache for player uuid & name profiles\n automatically create plugin.yml files for your projects using annotations\n download & install maven dependencies at runtime\n a family of interfaces to help easily manipulate objects which can be unregistered, stopped, or gracefully halted\n immutable and GSON compatible alternatives for common Bukkit objects\n wrapper for BungeeCord\'s plugin messaging API\n javascript plugins using helperjs and Nashorn\n\n\n'
+    Existing Dependencies:
+    org.mongodb:mongo-java-driver
+- co.aikar:minecraft-timings
+- com.flowpowered:flow-math
+- lilypad.client.connect:api
+- redis.clients:jedis
+- org.mariadb.jdbc:mariadb-java-client
+- com.comphenix.protocol:ProtocolLib-API
+- com.google.code.findbugs:jsr305
+- ninja.leaping.configurate:configurate-gson
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     var _token = $('input[name="_token"]').val();
+     var url_add_new =  $('input[name="url-add-new"]').val();
+     var url_load_data = $('input[name="url-load-data"]').val();
+     var url_delete_data = $('input[name="url-delete-data"]').val();
+
+     $('#add_new').on('click',function(){
+         $('#form-add-edit-new')["0"].reset();
+         $('#form-add-edit-new-error').children().remove();
+
+         $('#name_add_error').text('');
+         $('#url_add_error').html('');
+         // $('#status_add_error').text('')
+         $('.add-edit-btn-save').text('Save');
+         $('.add-edit-btn-save').prepend("<i class='fa fa-floppy-o'></i> ");
+         $('.modal-title').text('Add new category');
+         $('#modal-add-edit').modal("show");
+     });
+
+     //add new 
+
+     $('.add-edit-btn-save').on('click',function(){
+
+         var form_add_data = $( "#form-add-edit-new" ).serialize();
+
+         $.ajax({
+           type: "POST",
+           url : url_add_new,
+           data: form_add_data,
+           success:function(data){
+            if(data.error == 'true'){ 
+                $('#form-add-edit-new-error').append("<div class='alert alert-danger'>"+ data.message +"</div>");
+                $('#name_edit_error').text(data.name_error);
+                $('#url_edit_error').text(data.url_error);
+            }else{    
+                $('.add-edit-btn-save').append("<img src='"+url+'/public/img/gif-load.gif'+"'style='width:25px'/>");
+                $('.add-edit-btn-save').prop('disabled', true);
+                if (data.id) {
+                    $('#'+data.id).remove();
+                    $('#categories').append("<tr id="+data.id+"><td>"+ data.category_name +"</td><td><i class='"+data.status_css+"'></i></td><td>"+ data.url +"</td><td><button type='button' class='btn btn-sm btn-success btn-edit' data-category='"+data.name+"' data-id='"+data.id+"' data-url='"+data.url+"' data-status='"+data.status+"'><i class='fa fa-edit'></i></button><button type='button'data-id='"+data.id+"'data-url='"+ url_delete_data +"' class='btn btn-sm btn-danger btn-delete' ><i class='fa fa-trash-o'></i></button></td></tr>");
+                }
+                $('.add-edit-btn-save').text('Save');
+                $('.modal-title').text('Edit category');
+                setTimeout(function(){ 
+                    $('#modal-add-edit').modal("hide");
+                    $('#modal-add-edit').on('hidden.bs.modal', function (e){
+                        $('#form-add-edit-new').trigger("reset");
+                        $('#form-add-edit-new-error
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using X.Data;
+
+namespace X.App.Views.mgr.log
+{
+    public class list : xmg
+    {
+        protected override string GetParmNames
+        {
+            get { return "page-rows-date"; }
+        }
+        protected override void InitDict()
+        {
+            base.InitDict();
+            dict.Add("op", "操作");
+            dict.Add("name", "执行人");
+            dict.Add("action", "执行动作(插入)");
+            dict.Add("action1", "执行动作(修改)");
+            dict.Add("action2", "执行动作(删除)");
+            dict.Add("action3", "执行动作(导入)");
+            dict.Add("action4", "执行动作(导出)");
+        }
+
+        protected override XResp Execute()
+        {
+            var qstr = GetParmValue("date");
+            var qdate = DateTime.Now;
+
+            if (string.IsNullOrEmpty(qstr))
+            {
+                qstr = "1";
+            }
+            if (qstr.Length > 1) qstr = "2";
+            var qs = "1-2";//日期
+
+            if (int.TryParse(qstr, out int qt)) qs = qt + "-" + (qt + 1);//周，月
+
+            var qd = DateTime.Now;
+            DateTime qd1, qd2;
+            if (qs == "1-2")
+            {
+                qd1 = qd.AddDays(1 - Convert.ToInt32(qdate.ToString("d")));
+                qd2 = qd.AddDays(7 - Convert.ToInt32(qdate.ToString("d")));
+            }
+            else
+              qd1 = qd.AddMonths(Convert.ToInt32(qstr) - 1);
+                qd2 = qd.AddMonths(Convert.ToInt32(qstr));
+
+            }
+
+
+            x_log log = new x_log();
+
+            var list = log.list(qd1, qd2).ToList();
+            rtn = list.Count;
+
+            rt.child = new XResp[]
+            {
+                new XResp { name="list",value=list }
+            };
+
+            return rt;
+        }
+    }
+}
+{
+              
+
+Precision: 0
+Recall: 0
+F1 Score: 0

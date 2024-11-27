@@ -1,0 +1,156 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: dboissier/nosql4idea
+    Project Description: NoSql Plugin for IntelliJ IDEA version 0.1.0SNAPSHOT\n\n Description\nThis plugin is a fork from and intends to integrate Redis and Couchbase databases. Please note that the Couchbase integration is experimental because I am not a strong user of this database.\n\n Current status: EAP\n\n \n \n\n Plugin Compatibility\n\nThis plugin is built with JDK 1.7 and idea 14.1 version.\n\nThe plugin has been tested with the following databases:\n MongoDB 2.7 and 3.0\n Redis 2.8.21\n Couchbase Community 4.0.0\n\n Installation \n \nTo install it : \n\n Configuration\n\nOn the right, you will see a new tool window named NoSql Explorer\n\n\n\n Click on the Wrench Icon from the toolbar and you will be redirected to the Plugin Settings.\n You can specify the mongo and redis CLI paths at the top of the panel\n To add a server, click on the \\\\ button and choose you database vendor\n\n\n\n Click on the OK button and enter the settings of your database\n\n\n\n When all your dabatase are configured you should see then in the explorer panel\n \n\n\n Viewing the Redis database content\n\nDouble click on the database icon from your redis server and the results will appear as a tab\n\n\n\nYou can filter the results Currently, it runs a command. A will replace it in the future for optimization purpose.\n\nLike the Properties editor, you can group your data by prefix. Click on the corresponding icon and then click on the Elipsis icon to set you separator\n\n\n\n Viewing the Couchbase database content\n \nDouble click on the database icon from your couchbase server and the results will appear as a tab\n\n\n\nImportant note\nTo get the results from each bucket, an Index must be created. Otherwise an error message is raised.\n\n Roadmap\n\n 0.1.0\n\n integrate Redis : view results with 'Group by prefix' feature like properties editor\n integrate Couchbase : view results \n\n 0.2.0\n\n delete, update and add features for Redis and Couchbase\n\n\n"
+    Existing Dependencies:
+    com.intellij:util
+- org.slf4j:slf4j-nop
+- commons-io:commons-io
+- redis.clients:jedis
+- com.intellij:jna
+- org.mockito:mockito-all
+- com.intellij:resources
+- commons-lang:commons-lang
+- com.intellij:swingx-core
+- com.intellij:extensions
+- com.intellij:annotations
+- com.intellij:idea
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <section class="main-content-wrapper">
+            <section id="main-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!--breadcrumbs start -->
+                        <ul class="breadcrumb">
+
+                            <li><a href="<?php echo base_url();?>admin/Dashboard">Dashboard</a></li>
+                            <li>Edit Categories</li>
+                            
+                        </ul>
+                    </div>
+                        <h1 class="h1">Categories</h1>
+                    </div>
+                    
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                           <div class="panel-heading">
+
+                            <h3 class="panel-title">Edit Categories</h3>
+
+                           </div>   
+           <div class="panel-body">
+                                <div class="col-md-12">
+                                    <form class="form-horizontal" action="<?php echo base_url();?>admin/Categories/update" method="post">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <h3>Edit Categories</h3>
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+
+                                                <input value="<?php echo $edit_category[0]['name'];?>" name="name" type="text" class="form-control" placeholder="name" aria-required="true" aria-invalid="false" >
+
+                                                <input  value="<?php echo $edit_category[0]['id'];?>" type="hidden" name="id" class="form-control" placeholder="name" aria-required="true" aria-invalid="false">
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+
+                                                <textarea class="ckeditor" id="ckeditor" name="detail" >
+                                                    <?php echo $edit_category[0]['description'];?>
+                                                </textarea>
+                                                
+
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <button type="submit" name="edit_category" class="btn btn-success btn-block">Edit Categories</button>
+                                            </div>
+                                        </div>
+                                        </form>
+                                    </div>
+
+
+
+
+
+                                </div>
+                                <!-- /.row (nested) -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+            </section>
+
+            <script src="//cdn.ckeditor.com/4.11.2/standard/ckeditor.js"></script>
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
+
+import { IonicModule } from '@ionic/angular';
+
+import { AddToBasketPage } from './add-to-basket.page';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: AddToBasketPage
+  }
+];
+
+@NgModule({
+  imports: [
+    CommonModule,
+    FormsModul
+
+  ],
+  declarations: [AddToBasketPage]
+})
+export class AddToBasketPageModule {}
+e,
+    IonicModule,
+    RouterModule.forChild(routes)
+  ],
+  exports: [
+
+Precision: 0
+Recall: 0
+F1 Score: 0

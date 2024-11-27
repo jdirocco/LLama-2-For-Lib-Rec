@@ -1,0 +1,178 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: ox-it/wl-evaluation
+    Project Description: BUILDING EVALUATION\n\nThe evaluation project can be built and deployed with Sakai 2.5.x, 2.6.x, 2.7.x, or 2.8.x. \nThis is enabled by use of maven profiles, which are described in maven documentation:\n\n do a full build of evaluation for sakai 2.5.x, it is not necessary to specify a profile. \nThe "full" profile provides default dependencies that are compatible with 2.5.x. The "full" \nprofile is activated by default.\n\nTo do a full build for sakai 2.6.x, you can specify the "sakai2.6" profile on the command \nline.\n\nTo do a full build for sakai 2.7.x or 2.8.x, you can specify the "sakai2.7" profile on the \ncommand line.\n\nTo do an "api" or "tool" build, it is necessary to specify the "api" or "tool" profile AND \na sakaiversion profile "sakai2.5", "sakai2.6" or "sakai2.7" on the command line. The "api" \nand "tool" builds would be missing dependencies if you do not specify a sakaiversion profile.\n\nTo do a "ddl" build, you simply specify the "ddl" profile on the command line since this does \nnot depend on the sakai version.\n \nFor example, to do a full build of evaluation with Sakai 2.7, you might enter the following \nmaven command on the command line: \n\n\tmvn clean install P sakai2.7\n\nYou can specify multiple profiles. These are used by various contrib projects in sakai to avoid \nhaving to have patches or attempt to maintain multiple branches of the same code if the only \nthing that it needs to take care of are projects that change groupId/artifactId. Occasionally \nAPI\'s change and a patch may be required for different versions as well, but that is not the \ncase for evaluation yet. \n\nIn addition to specifying the profile when building/deploying, you will need to change the \nhardcoded version of sakai in the parent element of evalsys\'s root pom. By default, it looks \nlike this:\n\n \n master\n org.sakaiproject\n 2.5.4\n ../master/pom.xml\n \n\nIf you want to build with sakai 2.6.3 instead of sakai 2.5.4, you would change that as follows \nbefore building/deploying:\n\n \n master\n org.sakaiproject\n 2.6.3\n ../master/pom.xml\n \n'
+    Existing Dependencies:
+    org.freemarker:freemarker
+- jta:jta
+- org.springframework:spring-mock
+- commons-codec:commons-codec
+- cglib:cglib-nodep
+- org.sakaiproject.oxford.shortenedurl:oxford-shortenedurl-api
+- org.sakaiproject.hierarchy:hierarchy-api
+- jfree:jfreechart
+- uk.org.ponder.sakairsf:sakairsf
+- uk.org.ponder.sakairsf:SakaiRSFComponents-evolvers
+- org.apache.poi:poi-ooxml
+- org.sakaiproject.evaluation:sakai-evaluation-api
+- org.sakaiproject.entitybroker:entitybroker-api
+- commons-logging:commons-logging
+- hsqldb:hsqldb
+- org.sakaiproject:generic-dao
+- org.apache.poi:poi
+- jdom:jdom
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 19 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<template>
+  <div class="container-fluid">
+    <div v-for="(pessoa, index) in pessoas" :key="index">
+      <div class="row bg-white m-0">
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <h5 class="text-primary d-flex flex-row">
+                {{index + 1}} - 
+                {{pessoa.pessoa.nome}}
+                ({{pessoa.pessoa.email}})
+              </h5>
+            </div>
+          </div>
+          <div>
+            <div class="row mt-3 bg-primary" style="margin:0; padding:0;">
+              <div class="col">
+              </div>
+              <div class="col-8 text-white text-center p-3" style="margin:0; padding:0;">
+                <h6>{{"Peso - "+pessoa.pessoa.peso}}</h6>
+              </div>
+              <div class="col-2 text-white text-center p-3" style="margin:0; padding:0;">
+                <h6>{{formatarData(pessoa.pessoa.dt_nasc)}}</h6>
+              </div>
+              <div class="col-2 text-white text-center align-self-end p-3" style="margin:0; padding:0;">
+                <b-dropdown
+                  id="dropdown-dropright"
+                  text="Ações"
+                  size="xl"
+                  variant="success"
+                  right
+                >
+                  <template v-slot:button-content>
+                    <b-iconstack
+                      font-scale="1"
+                    >
+                      <b-icon-list/>
+                      <b-icon-chevron-compact-double style="margin-top:5px; margin-left:5px;" />
+                    </b-iconstack>
+                  </template>
+                  <b-dropdown-item>
+                    <b-link href="#" @click="editar_pessoa(pessoa, index)" class="btn text-primary">
+                    <b-icon icon="pencil-square"></b-icon> Editar
+                    </b-link>
+                  </b-dropdown-item>
+                  <b-dropdown-item>
+                    <b-link href="#" @click="excluir_pessoa(pessoa.id, index)" class="btn text-danger">
+                    <b-icon icon="trash"></b-icon> Excluir
+                    </b-link>
+                  </b-dropdown-item>
+                  <b-dropdown-item>
+                    <b-link href="#" @click="abrir_modal_peso(pessoa.pessoa, pessoa.pessoa.peso)" class="btn text-info">
+                    <b-icon icon="weight-pound"></b-icon> Peso
+                    </b-link>
+                  </b-dropdown-item>
+                  <b-dropdown-item>
+                    <b-link href="#" @click="abrir_modal_altura(pessoa.pessoa, pessoa.pessoa.altura)" class="btn text-
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 19 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package io.pravega.client.segment.impl;
+
+import com.google.common.base.Preconditions;
+import java.io.IOException;
+import java.util.AbstractIterator;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import lombok.extern.slf4j.Slf4j;
+
+import static io.netty.handler.codec.http.HttpResponseStatus.BAD_REQUEST;
+
+import static io.netty.handler.codec.http.HttpResponseStatus.CONFLICT;
+import static io.netty.handler.codec.http.HttpResponseStatus.FORBIDDEN;
+import static io.netty.handler.codec.http.HttpResponseStatus.GONE;
+import static io.netty.handler.codec.http.HttpResponseStatus.TOO_MANY_REQUESTS;
+import static io.pravega.auth.AuthHandler.Permissions.READ;
+import static io.pravega.auth.AuthHandler.Permissions.WRITE;
+
+/**
+ * An object that manages the state for a particular segment. 
+ * It is responsible for fetching the segment's properties from the 
+ * controller and caching them locally. It also caches the locations of 
+ * the segment's current owners and the hosts of the segment store instances.
+ * It is responsible for refreshing this state at appropriate intervals. 
+ * And it is responsible for maintaining the ordering and validity
+ * of the segments in the scope.
+ * 
+ */
+@Slf4j
+public class SegmentStateStore implements AutoCloseable {
+
+    private static final AtomicLong SEQUENCE_NUMBER_UPDATER = new AtomicLong();
+    private static final Function<Integer, ScheduledFuture<?>> ZERO_DURATION_FUTURE = delay -> CompletableFuture.completedFuture(null);
+    
+    private final SegmentMetadataClient metadataClient;
+    private final Controller controller;
+    private final ConcurrentMap<String, SegmentWithRange> segments;
+    private final ScheduledExecutorService executor;
+    private final int refreshPeriod;
+    private final AtomicReference<ScheduledFuture<?>> refreshFuture;
+
+    private final String scope;
+    
+    SegmentStateStore(String scope, SegmentMetadataClient metadataClient, Controller controller,
+                                                                            ScheduledExecutorService executor, int refreshPeriod) {
+        this.segments = new ConcurrentHashMap<>();
+        this.metadataClient = Preconditions.checkNotNull(metadataClient);
+        this.controller = controller;
+        this.scope = scope;
+        this.executor = executor;
+        this.refreshPeriod = refreshPeriod;
+        this.refreshFuture = new AtomicReference<>();
+        
+        // Fetch the latest set of segments for this scope and store them in the segments map.
+        refresh();
+    }
+    
+
+Precision: 0
+Recall: 0
+F1 Score: 0

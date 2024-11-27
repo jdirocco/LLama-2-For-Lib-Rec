@@ -1,0 +1,136 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: xdevs23/Cornowser
+    Project Description: Cornowser\n\n\nThe modern premium web browser for Android. This project is still in development phase.\n\n\n\n\nImportant: The Crosswalk project has been discontinued a while ago. Since it is practically dead and I don\'t have time for continuing development on this browser as of now, this project is at least temporarily discontinued.\n\nCornowser is intended to be fast, modern and inituitive.\nPowered by the , basing on Chromium, this browser is as powerful and modern, as you get it from latest Chromium releases.\n\nAlso visit our !\n\nI, , do the main work on this project, helps and supports me. We also have some translators for our app. Please visit our to get more information.\n\n\n\nThis browser achieves 486 out of 555 points in the .\nNote: due to changes in the Beta HTML5 Test, all scores are now lower. Please don\'t consider the updated screenshots as a worse score than before.\nGoogle Chrome for Android achieves 488 points.\n\nAccording to these results this browser is ready for HTML5.\n\n Chrome score:\n\n\n Cornowser score:\n\n\n Screenshots\n\nSee .\n\n\n\n License\n\n MIT License\n\nDo whatever you want with it, but don\'t forget to mention me and don\'t change the license. \n\n\n'
+    Existing Dependencies:
+    org.apache.commons:commons-io
+- com.android.support:cardview-v7
+- com.github.rey5137:material
+- org.xwalk:xwalk_core_library_canary
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+    <div id="layoutSidenav_content">
+    <main>
+       
+
+        
+
+        <form action="#" method="post">
+            <div class="container p-5" id="properties-content">
+            <div class="row mt-5">
+                <div class="container-fluid">
+                    <div class="row">
+                        
+                        <div class="col-md-12">
+                            <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <p>Name</p>
+                                            <input type="text" name="name" value="" placeholder="" class="form-control"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <p>Phone Number</p>
+                                            <input type="text" name="phone_number" value="" placeholder="" class="form-control"/>
+                                        </div>
+                                    </div>
+
+                            </div><!-- row -->
+                        </div> <!-- col-md-12 -->
+                        
+                        <div class="col-md-6 mt-4">
+                            <h5>Address</h5>
+                            <div class="form-group">
+                                <p>Address</p>
+                                <textarea style="width: 100%;" type="text" name="address" cols="30" rows="10"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <p>Country</p>
+                                <select name="country" placeholder="Select Country" class="custom-select">
+                                    <?php foreach($countries as $country):?>  
+                                        <option value="<?= $country[0]?>"
+                                                <?= (!empty($user->country) && $user->country == $country[0])?'selected' : ''?>
+                                                    >
+                                                <?= $country[1]?>
+                                            </option>
+                                    <?php endforeach;?>
+
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-12 mt-4">
+                                    <h5>Accounts</h5>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <p>Email</p>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input type="text" name="email" value="" placeholder="" class="form-control"/>
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary" type="button">
+                                                    <i class="fas fa-check"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p>Password</p>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input type
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>r(new InputStreamReader(new ByteArrayInputStream(contentBytes)));
+        return builder.build(in);
+    }
+     private static Object loadFromXML(String content, Class type) throws IOException {
+        Object result = null;
+        try {
+            ObjectMapper om = new ObjectMapper();
+            result = om.readValue(content, type);
+        } catch (Exception ex) {
+            logger.debug("Unable to parse using ObjectMapper.  Try using XStream.");
+            XStreamBuilder xstream = new XStreamBuilder(type);
+            result = xstream.fromXML(content);
+        }
+        return result;
+    }
+
+    private static Object loadFromXML(String content, XStreamBuilder builder) throws IOException {
+        byte[] contentBytes = content.getBytes("UTF-8");
+        XStreamReader in = XStreamUtils.getXStream().createReade
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,236 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: cucumber/cucumber-jvm
+    Project Description: Cucumber JVM\n\n\n\n\n\n\n\n\nCucumberJVM is a pure Java implementation of Cucumber.\nYou can it with\nthe tool of your choice.\n\nCucumberJVM also integrates with all the popular\n.\n\n Getting started\n\n \n \n \n\n Upgrading?\n\nMigration instructions from previous major versions and a long form\nexplanation of noteworthy changes can be found in the \n\nThe changes for the current major version can be found in the .\n\n Questions, Problems, Help needed?\n\nPlease ask on\n\n .\n \n\n Bugs and Feature requests\n\nYou can register bugs and feature requests in the\n.\n\nPlease bear in mind that this project is almost entirely developed by\nvolunteers. If you do not provide the implementation yourself or pay someone\nto do it for you, the bug might never get fixed. If it is a serious bug, other\npeople than you might care enough to provide a fix.\n\n Contributing\n\nIf you'd like to contribute to the documentation, checkout\n\notherwise see our\n.\n"
+    Existing Dependencies:
+    io.cucumber:cucumber-core
+- org.webbitserver:webbit
+- org.webbitserver:webbit-rest
+- org.springframework:spring-aop
+- org.hibernate:hibernate-entitymanager
+- org.hamcrest:hamcrest-core
+- info.cukes:cucumber-html
+- org.springframework:spring-test
+- com.google.guava:guava
+- org.ops4j.pax.url:pax-url-aether
+- io.cucumber:cucumber-picocontainer
+- org.osgi:org.osgi.core
+- net.jodah:typetools
+- com.google.android:android
+- org.ops4j.pax.exam:pax-exam
+- junit:junit
+- io.cucumber:cucumber-android
+- org.robolectric:robolectric
+- io.cucumber:cucumber-spring
+- org.apache.openejb:openejb-core
+- org.springframework:spring-webmvc
+- javax.inject:javax.inject
+- org.picocontainer:picocontainer
+- org.jsoup:jsoup
+- org.springframework:spring-web
+- javax.enterprise:cdi-api
+- ch.qos.logback:logback-core
+- org.dbunit:dbunit
+- org.seleniumhq.selenium:selenium-server
+- javax.servlet:javax.servlet-api
+- ch.qos.logback:logback-classic
+- org.ops4j.pax.exam:pax-exam-junit4
+- de.akquinet.jbosscc:jbosscc-needle
+- io.cucumber.android-examples:cukelator
+- org.hsqldb:hsqldb
+- io.cucumber:cucumber-java
+- org.jboss.weld.se:weld-se
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 38 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <style>
+
+        .form-control:focus {
+             color: green;
+             background-color: #ccc;
+             border-color: #45c2a2;
+         }
+
+        .form-control {
+             color: green;
+         }
+
+        .card {
+             box-shadow: 0 1px 3px 0 rgba(0, 0, 0,.1), 0 1px 2px 0 rgba(0, 0, 0,.06)!important;
+         }
+
+
+     </style>
+
+
+
+
+
+
+
+
+     
+
+     @include('website.partials._header')
+
+     
+
+     
+
+     
+     <!-- ================ Start Page Title ======================= -->
+     <section class="title-transparent page-title" style="background:url({{asset('public/website/assets/images/titlebg.jpg')}}) no-repeat center / cover">
+         <div class="container">
+             <div class="title-content">
+                 <h1>Checkout</h1>
+                 <div class="bread-crumb">
+                     <ul>
+                         <li><a href="{{URL::to('/')}}">Home</a></li>
+                         <li><span>Checkout</span></li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </section>
+     <!-- ================ End Page Title ======================= -->
+
+
+     @if ($message = Session::get('success'))
+     <div class="alert alert-success">
+       <p>{{ $message }}</p>
+     </div>
+   @endif
+   
+   
+   @if ($message = Session::get('error'))
+   <div class="alert alert-danger">
+     <p>{{ $message }}</p>
+   </div>
+ @endif
+ 
+
+
+    <section style="padding-top: 40px;padding-bottom: 40px">
+        <div class="container">
+            <h4 class="text-center">Checkout</h4>
+            <hr>
+            <div class="row">
+                <div class="col-lg-7 col-12">
+                    
+                    <?php
+                        $data = Session::get('data');
+                        $address = $data['address'];
+                        $address2 = $data['address2'];
+                        $city = $data['city'];
+                        $state = $data['state'];
+                        $zipcode  = $data['zipcode'];
+                   ?>
+ 
+
+                <form method="post" action="{{url('/placeorder')}}">
+                  {{csrf_field()}}
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                                <div class="mb-3">
+                                <label class="form-label label-style"><i class="fa fa-user" aria-hidden="true"></i> Name</label>
+                                <input type="text" class="form-control" value="{{Auth::user()->name}}" disabled="">
+                                </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="mb-3">
+                            <label class="form-label label-style"><i class
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 38 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t.add(1);
+        list.add(2);
+        list.add(3);
+        // 核心方法
+        list.remove(2);
+        // 预期: 1-3
+        System.out.println(list);
+    }
+}
+ package leetcodejava.array;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+/**
+ * This is the solution of No. 718 problem in the LeetCode,
+ * the website of the problem is as follow:
+ * https://leetcode-cn.com/problems/max-number-of-k-sum-pairs
+ * <p>
+ * The description of problem is as follow:
+ * ==========================================================================================================
+ * 给定一个整数数组和一个整数 k, 你需要在数组里找到 最长的子数组 且满足其得到的子数组内元素总和为最多为 k 的那个子数组。
+ * 然后，请返回该子数组的长度。如果不存在符合条件的子数组，返回 0.
+ * <p>
+ * 示例 1:
+ * 输入: [1, -1, 5, 2, -1, 3, 3], k = 3
+ * 输出: 4
+ * 解释: 子数组 [1, -1, 5, 2] 和 [3, -1, 3] 都是符合题意的，但是 [1, -1, 5, 2] 的长度更大，所以返回 4。
+ * <p>
+ * 来源：力扣（LeetCode）
+ * ==========================================================================================================
+ *
+ * @author zhangyu (zhangyuyu417@gmail.com)
+ */
+public class MaxNumberofKSubarray718 {
+
+    @Test
+    public void maxNumberOfKSubarrayTest() {
+        int nums[] = {1, -1, 5, 2, -1, 3, 3};
+        int k = 3;
+
+        Assert.assertEquals(result.maxNumberOfKSubarrays(nums, k), 4);
+    }
+
+
+    /**
+     * 最大子数组的长度和
+     *
+     * @param nums 数组
+     * @param k    和的值
+     * @return 最大值
+     */
+    public int maxNumberOfKSubarrays(int[] nums, int k) {
+        if (nums == null || nums.length == 0 || nums.length <= k) {
+            return 0;
+        }
+        // 定义两个指针
+        int head = 0;
+        int tail = 0;
+        // 定义滑动窗口之和
+        int sum = 0;
+        // 定义最大值
+        int maxSum = Integer.MIN_VALUE;
+        // 定义当前数组和的最大值
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

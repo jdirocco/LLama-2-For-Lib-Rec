@@ -1,0 +1,161 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: swapnildipankar/java_jersey_spring_hibernate_maven
+    Project Description: Archetype starter project to create RESTful WS using Java, Jersey WS, Spring, Hibernate, Maven, Liquibase. Sample code for integrating with Hibernate/MySQL and MongoDB/NoSQL.\nNote: This is a skeletal archetype framework. Using the sample code, developers can send a sample CURL call see section "Sample test CURL calls" below to the running web service and see the changes propagated all the way to the databases. There are, currently, two webservice end points, /user and /purchase for demonstrating MySQL and MongoDB respectively. Developers will have to write the actual functionality to make use of the framework.\n\n New: Support for MongoDB\n Coming Up: Support for Cassandra\n Coming Up: Support for NuoDB\n\n Developers:\n Parth Parekh parthparekh at gmail dot com\n Swapnil Dipankar dswapnil at gmail dot com\n\n Technologies used in the project\n Java\n Jersey WS Framework\n Spring Framework\n Hibernate\n Maven\n Liquibase\n MySQL\n Mongo DB\n\n Prerequisite packages\nNote: The project has been tested on several versions of Mac OSX and Ubuntu Linux, but can work on any other platform as long as the packages mentioned in this section are available on the platform. Ensure that the user has sudo access to the host\n OpenJDK SDK run command sudo aptget install openjdk6jdk, if not present Note: Sun JDK can be used instead of OpenJDK without impacting the functionality of the framework\n Git run command sudo aptget install git or sudo aptget install gitcore, if not present\n Maven run command sudo aptget install maven2, if not present\n Curl run command sudo aptget install curl, if not present\n MySQL Server run command sudo aptget install mysqlserver, if not present\n MongoDB run command sudo aptget install mongodb, if not present\n Vim optional run command sudo aptget install vim, if not present\n IntelliJ Idea Community Edition optional download IDE from Cocoa REST Client optional, this is only for Mac OSX download from Prerequisite MySQL database and tables\n Ensure that MySQL is running and has the root password as password Else, modify the hibernate.cfg.xml file with correct database credentials\n Ensure that database test exists Else, create a database test with the access credentials specified in hibernate.cfg.xml file\n\n Prerequisite MongoDB database\n Ensure that MongoDB is running run command mongod master dbpath pathtodirectorythatwillcontaindatabasedata\n Ensure that database purchase has user with credentials purchaseuser, purchase4user Else, modify the credentials in file resources/mongodb/mongoconfig.json\n\n Steps to compile, install and run code\nRun the following commands in the given sequence:\n git clone cd javajerseyspringhibernatemaven\n mvn clean install Depending on the connection speed, this step may take several minutes when executing this command for the first time\n mvn resources:resources liquibase:update P databaselocalhost Dliquibase.password=password This creates the table user in the database test\n mvn tomcat7:run The tomcat server should now be ready to accept requests on port 8400\n\n Sample test CURL calls this uses MySQL for persistence\n POST Request:\n\n\n Response:\n\n\n PUT Request:\n\n\n Response:\n\n\n GET By User ID Request:\n\n\n Response:\n\n\n GET By UserName Request:\n\n\n Response:\n\n\n DELETE Request:\n\n\n Response: Notice that the user gets marked as \'DELETED\' and is not removed from the database\n\n\n Sample test CURL calls this uses MongoDB for persistence\n POST Request:\n\n\n Response:\n\n'
+    Existing Dependencies:
+    mysql:mysql-connector-java
+- org.springframework:spring-aop
+- org.hibernate:hibernate-entitymanager
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.springframework:spring-jdbc
+- org.springframework:spring-tx
+- commons-lang:commons-lang
+- org.springframework:spring-expression
+- org.springframework:spring-aspects
+- org.springframework:spring-instrument
+- org.liquibase:liquibase-plugin
+- org.springframework:spring-test
+- org.springframework:spring-webmvc
+- org.mongodb:mongo-java-driver
+- org.springframework:spring-context
+- org.springframework:spring-oxm
+- javax.validation:validation-api
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- Modal -->
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Form Tambah Data</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('kamar.store') }}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">No Kamar</label>
+                        <input type="text" name="no_kamar" class="form-control @error('no_kamar') is-invalid @enderror" id="no_kamar" aria-describedby="emailHelp" placeholder="No Kamar">
+                        @error('no_kamar')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Keluarga</label>
+                        <input type="number" name="keluarga" class="form-control @error('keluarga') is-invalid @enderror" id="keluarga" aria-describedby="emailHelp" placeholder="Anggota Keluarga" value="1">
+                        @error('keluarga')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Tipe Kamar</label>
+                        <select class="form-control @error('tipe_kamar') is-invalid @enderror" id="tipe_kamar" name="tipe_kamar" required>
+                            <option value="">Pilih Tipe</option>
+                            <option value="Deluxe">Deluxe</option>
+                            <option value="Superior">Superior</option>
+                        </select>
+                        @error('tipe_kamar')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Status</label>
+                        <select class="form-control @error('status') is-invalid @enderror" id="status" name="status" required>
+                            <option value="">Pilih Status</option>
+                            <option value="Tersedia">Tersedia</option>
+                            <option value="Tidak Tersedia">Tidak Tersedia</option>
+                        </select>
+                        @error('status')
+                            <div class="invalid-feedback">
+                                {{ $
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    if (!this.props.disabled && this.props.onKeyDown) {
+      this.props.onKeyDown(e, this.props.value);
+    }
+  }
+
+  render () {
+    const {children} = this.props;
+
+    return (
+      <div
+        role='row'
+        className='row-item'
+        tabIndex='0'>
+        {children}
+      </div>
+    );
+  }
+}
+
+Row.defaultProps = {
+  disabled: false,
+  onFocus() {},
+  onKeyDown() {}
+};
+
+// Row.propTypes = {
+//   disabled: PropTypes.bool,
+//   onClick: PropTypes.func,
+//   onFocus: PropTypes.func,
+//   onKeyDown: PropTypes.func,
+//   value: PropTypes.string,
+//   children: PropTypes.element
+// };
+
+export default Row;
+ import React from'react';
+import PropTypes from 'prop-types';
+
+class Row extends React.Component {
+  focus () {
+    this.rowItem.focus();
+  }
+
+  componentDidMount () {
+    this.rowItem.addEventListener('focus', this.handleFocus.bind(this));
+    this.rowItem.addEventListener('keydown', this.handleKeyDown.bind(this));
+  }
+
+  handleFocus (e) {
+    if (!this.props.disabled && this.props.onFocus) {
+      this.props.onFocus(e, this.props.value);
+    }
+  }
+
+  handleKeyDown (e) {
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

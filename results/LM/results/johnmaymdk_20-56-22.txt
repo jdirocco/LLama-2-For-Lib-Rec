@@ -1,0 +1,195 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: johnmay/mdk
+    Project Description: Model Development Kit MDK\n\nThe MDK is a modular open source library for simplifying procedures when handling metabolic models\nand metabolomes. The kit was written at by \nand . The library was previously named CheMet after the\n but was renamed as it's function\nbecame more defined. The name MDK is derived from The CDK\nwhich is one of the major constituent and used throughout the library to handle chemical structure.\n\n Key Features\n intuitive object model for handling metabolic network/model chemistry CDK and gene/proteins BioJava\n service framework using WebServices and NoSQL local storage\n semantic annotation of crossreferences\n fast read/write of models\n import/resolution of multiple formats including SBML, KGML, Excel\n incubation/testing for tools prior to deployment in CDK\n core library used by \n project\n\n Extra Dependencies\n\nTo build this project you need to install CAF and MacWidgets. You need to install MacWidgets manually as follows: \n\n\n\n License\n\nThe MDK is licensed under .\n\n Getting the library\n\n Maven\n\nThe easiest way to use the library is with the build automation tool and adding\na module dependency in the . The example below shows adding the lucene service module, any required\ndependencies that the defined module needs will automatically be downloaded by maven.\n\n\n\nThe MDK modules are currently deployed to the EBI Maven Repository and the following should be defined in the\n section:\n\n\n\n Jar\n\nComing soon\n\n\n\n\n\n"
+    Existing Dependencies:
+    ${project.groupId}:mdk-domain-entity
+- uk.ac.ebi.mdk:mdk-service-core
+- ${project.groupId}:mdk-tool-search-tree
+- com.google.guava:guava
+- commons-cli:commons-cli
+- org.openscience.cdk:cdk-data
+- ${project.groupId}:mdk-domain-observation
+- org.openscience.cdk:cdk-core
+- org.jooq:jooq-meta
+- uk.ac.ebi.mdk:mdk-domain-observation
+- uk.ac.ebi.mdk:mdk-domain-identifier
+- ${project.groupId}:mdk-service-rest
+- org.openscience.cdk:cdk-smarts
+- commons-lang:commons-lang
+- org.openscience.cdk:cdk-interfaces
+- ${project.groupId}:mdk-io-data-observation
+- org.openscience.cdk:cdk-inchi
+- axis:axis
+- org.apache.lucene:lucene-analyzers
+- org.openscience.cdk:cdk-fingerprint
+- org.jooq:jooq-codegen
+- log4j:log4j
+- ${project.groupId}:mdk-domain-annotation
+- org.hsqldb:hsqldb
+- cglib:cglib
+- ${project.groupId}:mdk-apps-core
+- org.codehaus.woodstox:woodstox-core-lgpl
+- javax.activation:activation
+- uk.ac.ebi.mdk:mdk-io-xml-parsers
+- org.openscience.cdk:cdk-extra
+- uk.ac.ebi.caf:caf-utility
+- org.apache.commons:commons-math
+- ${project.groupId}:mdk-io-data-entity
+- net.sf.opencsv:opencsv
+- org.openscience.cdk:cdk-io
+- ${project.groupId}:mdk-io-xml-parsers
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 36 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <section class="container my-5">
+        <h2>
+            Modifier le post
+        </h2>
+
+        <div class="card p-5">
+        {{-- <form action="{{route('posts.update', $post->slug)}}" method="POST"> --}}
+        <form action="{{route('posts.update', $post->id)}}" method="POST" enctype="multipart/form-data">
+            @csrf
+            @method('PUT')
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" name="title" value="{{$post->title}}">
+            </div>
+            <div class="form-group">
+                <label for="body">Content</label>
+                <input class="form-control" rows="5" id="body" type="text" name="body" value="{{$post->body}}">
+                </textarea>
+            </div>
+                
+            <div class="form-group">
+                <label for="image">Image : </label>
+            <input  id="image" type="file" name="image" class="form-control-file" accept=".png,.jpg">
+            </div>
+
+            
+            <button type="submit" style="float:right" class="btn btn-dark">Modifier</button>
+            
+            </form>
+        </div>
+
+
+    </section>
+    
+        
+    
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 36 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>nstants.C_CALL_ID);
+            }
+        }
+        // 检查请求的参数
+        String[] checkParams = method.getAnnotation(CheckParams.class).requestParams();
+        String[] checkResult = checkParam(requestData, checkParams);
+        // 如果不满足条件，则直接返回
+        if (checkResult!= null) {
+            responseData = ResponseUtil.buildResponseString(checkResult[0], null,
+                    null, ResponseUtil.ResponseCode.FAIL);
+        } else {
+            responseData = (String) serviceBean.service(method.getName(), requestData, request);
+        }
+        // 将结果写入到Response
+        response.getWriter().write(responseData);
+        response.getWriter().flush();
+    }
+
+    /**
+     * 检查Request请求的参数
+     *
+     * @param requestData
+     * @param requestParams
+     * @return
+     */
+    private static String[] checkParam(String requestData, String[] requestParams) {
+        if (requestParams.length <= 0) {
+            return null;
+        }
+        for (String requestParam : requestParams) {
+            if (!requestData.contains(requestParam)) {
+                return new String[]{requestParam, "Request Parameters Missing."};
+            }
+        }
+        return null;
+    }
+}
+ package io.renren.common.interceptor;
+
+import io.renren.common.annotation.CheckParams;
+import io.renren.common.annotation.RequestMapping;
+import io.renren.common.util.JsonUtils;
+import io.renren.common.util.RequestUtil;
+import io.renren.common.util.ResponseUtil;
+import org.springframework.stereotype.Component;
+import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.lang.reflect.Method;
+
+/**
+ * Created by zyanycall@gmail.com on 14:10.
+ * http请求拦截器
+ */
+@Component
+public class HttpInterceptor implements HandlerInterceptor {
+
+    /**
+     * 在调用controller.method的时候执行
+     */
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception e) throws Exception {
+
+    }
+
+    /**
+     * 在controller.method执行之前执行
+     */
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        Method method = (Method) handler;
+        RequestMapping r = method.getAnnotation(RequestMapping.class);
+        String callId = RequestUtil.getRequestParameter(request, ResponseConstants.C_CALL_ID);
+        if (r!= null &&!r.isCrossService()) {
+            if (callId == null ||!callId.equalsIgnoreCase(r.getCallId())) {
+                response.getWriter().write("The callId is wrong.");
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * 在controller.method执行后
+
+Precision: 0
+Recall: 0
+F1 Score: 0

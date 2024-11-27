@@ -1,0 +1,177 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: airlift/slice
+    Project Description: Slice\n\n\n \n Slice 2.0\n\nSlice is a Java library for efficiently working with Java byte arrays. Slice provides fast and efficient\nmethods such as read a at an index without having to assemble the from individual bytes. \nIn addition to reading and writing single private values, there are methods to bulk transfer data to and \nfrom primitive arrays. \n\n IO Streams\n\nSlice provides classes for interacting with InputStreams and OutputStreams. The classes support the same\nfast single primitive access and bulk transfer methods as the Slice class.\n\n UTF8\n\nSlice provides a library for interacting UTF8 data stored in byte arrays. The UTF8 library provides\nfunctions to count code points, substring, trim, case change, and so on.\n\n Unsafe Usage\n\nThe Slice Library uses to bulk transfer data between byte arrays and other array types\ndirectly as there is no other way to do this in Java today. The proposed Memory Access API JEP 370 may\nprovide support for this feature, and assuming performance is good, this library will be updated to use\nonce it is available. Due to the direct usage of Unsafe, this library can only be used on a little endian\nCPU.\n\n Legacy Slice\n \nVersion of Slice before 2.0 support offheap memory and can be backed by any Java primitive array type.\nThese features were rarely used, and were removed in version 2.0 to simplify the codebase. If you need\nthese versions, they are available in the \nbranch.\n'
+    Existing Dependencies:
+    io.airlift:io.airlift
+- org.mockito:org.mockito
+- org.testng:testng
+- org.hamcrest:org.hamcrest
+- org.objenesis:org.objenesis
+- com.google.code.findbugs:jsr305
+- com.google.inject:com.google.inject
+- javax.ws.rs:javax.ws.rs
+- org.assertj:org.assertj
+- org.openjdk.jol:jol-core
+- javax.annotation:javax.annotation
+- com.fasterxml.jackson.datatype:com.fasterxml.jackson.datatype
+- org.testng:org.testng
+- javax.validation:javax.validation
+- javax.servlet:javax.servlet
+- com.fasterxml.jackson.module:com.fasterxml.jackson.module
+- com.google.guava:guava
+- org.weakref:org.weakref
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 18 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+
+
+
+@extends('layouts.app');
+@section('content')
+
+
+<link rel="stylesheet" type="text/css" href="/css/app.css">
+<br>
+<h1>
+{{$title}}
+</h1>
+
+<form action="/posts/{{$post->id}}" method="POST">
+@method('PUT')
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input type="text" class="form-control" id="title" name='title' value='{{ $post->title}}' aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Body</label>
+    <textarea class="form-control" id="exampleInputPassword1" name="body" rows='30' cols='50' >{{$post->body}}</textarea>
+  </div>
+  <button type="submit" class="btn btn-success">Edit Post</button>
+{{csrf_field()}}
+
+</form>
+
+
+
+@stop
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 18 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>  * @param  \App\User  $user
+     * @return mixed
+     */
+    public function forceDelete(User $user)
+    {
+        //
+    }
+}
+ <?php
+
+namespace App\Policies;
+
+use Illuminate\Support\Facades\Gate;
+use App\User;
+use App\Teacher;
+
+class TeacherPolicy
+{
+    /**
+     * Determine whether the user can view any teachers.
+     *
+     * @param  \App\User  $user
+     * @return mixed
+     */
+    public function viewAny(User $user)
+    {
+        return Gate::allows('view-teachers');
+    }
+
+    /**
+     * Determine whether the user can view the teacher.
+     *
+     * @param  \App\User  $user
+     * @param  \App\Teacher  $teacher
+     * @return mixed
+     */
+    public function view(User $user, Teacher $teacher)
+    {
+        //
+    }
+
+    /**
+     * Determine whether the user can create teachers.
+     *
+     * @param  \App\User  $user
+     * @return mixed
+     */
+    public function create(User $user)
+    {
+        return Gate::allows('create-teachers');
+    }
+
+    /**
+     * Determine whether the user can update the teacher.
+     *
+     * @param  \App\User  $user
+     * @param  \App\Teacher  $teacher
+     * @return mixed
+     */
+    public function update(User $user, Teacher $teacher)
+    {
+        return Gate::allows('update-teachers');
+    }
+
+    /**
+     * Determine whether the user can delete the teacher.
+     *
+     * @param  \App\User  $user
+     * @param  \App\Teacher  $teacher
+     * @return mixed
+     */
+    public function delete(User $user, Teacher $teacher)
+    {
+        return Gate::allows('delete-teachers');
+    }
+
+    /**
+     * Determine whether the user can restore the teacher.
+     *
+     * @param  \App\User  $user
+     * @param  \App\Teacher  $teacher
+     * @return mixed
+     */
+    public function restore(User $user, Teacher $teacher)
+    {
+        return Gate::allows('restore-teachers');
+    }
+
+    /**
+     * Determine whether the user can permanently delete the teacher.
+     *
+   
+
+Precision: 0
+Recall: 0
+F1 Score: 0

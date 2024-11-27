@@ -1,0 +1,117 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: patloew/RxLocation
+    Project Description: Reactive Location API Library for Android\n\n \n\nThis library is now deprecated and not maintained anymore. Please switch to the library.\n\nThis library wraps the Location APIs in Observables, Singles, Maybes and Completables. No more managing GoogleApiClients! Also, the resolution of the location settings check is optionally handled by the lib.\n\nFor , please take a look at the library by Micha\xc5\x82 Charmas.\n\n Usage\n\nCreate an RxLocation instance once, preferably in your Application\'s or by using a dependency injection framework. The RxLocation class is very similar to the classes provided by the Location APIs. Instead of you can use . Make sure to have the Location and Activity Recognition permissions from Marshmallow on, if they are needed by your API requests.\n\nExample:\n\n\n\nThe following APIs are wrapped by this library:\n\n via \n via \n via \n via \n via \n\nChecking the location settings is simplified with this library, by providing a via , which handles showing the resolution dialog if the location settings do not satisfy your request. It returns if the settings are satisfied optionally after showing the dialog, if a resolution is possible, and otherwise. If you want to handle the yourself, you can do so via .\n\nAn optional global default timeout for all Location API requests made through the library can be set via . In addition, timeouts can be set when creating a new Observable by providing timeout parameters, e.g. . These parameters override the default timeout. When a timeout occurs, a StatusException is provided via . Keep in mind that these timeouts only apply to calls to the Location API, e.g. when registering a location update listener. As an example, the timeout provided to does not mean that you will not receive location updates anymore after 15 seconds. Use on your locationRequest for this use case.\n\nDon\'t forget to dispose of your Subscriber/Observer when you are finished:\n\n\n\nAs an alternative, multiple Disposables can be collected to dipose of at once via :\n\n\n\nYou can also obtain a , which connects on subscribe and disconnects on dispose via .\n\nThe following Exceptions are thrown in the lib and provided via :\n\n : When the call to the Location APIs was not successful or timed out\n : When connecting to the GoogleApiClient was not successful.\n : When the GoogleApiClient connection was suspended.\n : When you try to call an API without proper permissions.\n : When you use and the location settings were not satisfied, even after handling the resolution.\n\nWhen using the Geocoding component of RxLocation, exceptions can be thrown even after disposing, which can lead to app crashes. To prevent this, install a global , e.g. in your Application class.\n\n Sample\n\nA basic sample app is available in the project.\n\n Setup\n\nThe latest version 1.0.5 of this library is available on Maven Central. Add the following to your :\n\n\n\nIf you want to use a newer version of Google Play Services, declare the newer version in your . This then overrides the version declared in the library.\n\nFrom v1.0.4 on, RxLocation only works with Android gradle plugin 3.0.0 or higher, since it uses Java 8 language features. \nAnd don\'t forget to set the source code compatibility to Java 8:\n\n\n\n Testing\n\nWhen unit testing your app\'s classes, RxLocation behavior can be mocked easily. See the in the project for an example test.\n\n Credits\n\nThe code for managing the GoogleApiClient was adapted from the library by Micha\xc5\x82 Charmas, which is licensed under the Apache License, Version 2.0.\n\n Donations\n\nIf you like the library and want to support the creator for development/maintenance, you can make a donation in Bitcoin to . Thank you!\n\n License\n\n\tCopyright 2016 Patrick L\xc3\xb6wenstein\n\n\tLicensed under the Apache License, Version 2.0 the "License";\n\tyou may not use this file except in compliance with the License.\n\tYou may obtain a copy of the License at\n\n\t required by applicable law or agreed to in writing, software\n\tdistributed under the License is distributed on an "AS IS" BASIS,\n\tWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n\tSee the License for the specific language governing permissions and\n\tlimitations under the License.\n'
+    Existing Dependencies:
+    org.powermock:powermock-module-junit4
+- io.reactivex.rxjava2:rxandroid
+- com.squareup.leakcanary:leakcanary-android
+- io.reactivex.rxjava2:rxjava
+- com.google.android.gms:play-services-location
+- com.squareup.leakcanary:leakcanary-android-no-op
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- ============================== Script ============================== -->
+     <script>
+         $(function() {
+            $(".preloader").fadeOut();
+         });
+         $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+         });
+         // ============================================================== 
+         // Login and Recover Password 
+         // ============================================================== 
+         $('#to-recover').on("click", function() {
+            $("#loginform").slideUp();
+            $("#recoverform").fadeIn();
+         });
+      </script>
+   </body>
+</html>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import numpy as np
+import pandas as pd
+import pytest
+
+from sklego.preprocessing import BinBinner
+from tests.conftest import general_checks
+
+
+@pytest.mark.parametrize(
+    "test_fn",
+    [
+        pd.DataFrame(
+            np.array(
+                [
+                    [1, 1, 1.1, 0],
+                    [0, 0.2, np.nan, np.inf],
+                    [0, 0.2, np.nan, 1],
+                    [-1, 1, 1.1, 1],
+                    [0, 0.2, np.nan, np.inf],
+                    [-1, 1, 1.1, np.inf],
+         _df, expected)
+           [-1, 1, 1.1, 2],
+                ]
+            ),
+            columns=["col1", "col2", "col3", "col4"],
+            dtype="object",
+        ),
+        pd.DataFrame(
+            np.array(
+                [
+                    [1, 1, 1.1, 0],
+                    [1, 0.2, np.nan, 1],
+                    [0, 0.2, np.nan, 1],
+                    [-1, 1, 1.1, 1],
+                    [0, 0.2, np.nan, 1],
+                    [-1, 1, 1.1, np.inf],
+                    [-1, 1, 1.1, 2],
+                ]
+            ),
+            columns=["col1", "col2", "col3", "col4"],
+            dtype=object,
+        ),
+    ],
+)
+def test_bin_binner(test_fn):
+    binner = BinBinner(n_bins=3)
+    expected = pd.DataFrame(
+        {
+            "col1": [0, 0, 0, 1, 1, 1, 1],
+            "col2": [1, 0, 0, 2, 0, 2, 2],
+            "col3": [1, 0, 1, 1, 0, 1, 1],
+            "col4": [1, 0, 0, 1, 0, 1, 2],
+        },
+        dtype="category",
+    )
+    out = binner.fit_transform(test_fn)
+    pd.testing.assert_frame_equal(out, expected)
+    out_df = binner.fit_transform(test_fn.to_numpy())
+    pd.testing.assert_frame_equal(out
+
+Precision: 0
+Recall: 0
+F1 Score: 0

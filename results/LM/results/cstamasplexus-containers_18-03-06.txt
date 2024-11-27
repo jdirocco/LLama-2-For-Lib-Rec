@@ -1,0 +1,228 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: cstamas/plexus-containers
+    Project Description: Plexus IoC Container\n====================\n\nHave fun \nt\n'
+    Existing Dependencies:
+    org.codehaus.plexus:plexus-classworlds
+- org.codehaus.plexus:plexus-component-annotations
+- org.apache.maven:maven-project
+- org.codehaus.plexus:plexus-container-default
+- org.apache.maven:maven-model
+- org.codehaus.plexus:plexus-archiver
+- org.codehaus.plexus:plexus-utils
+- com.google.code.google-collections:google-collect
+- plexus:plexus-container-default
+- com.thoughtworks.qdox:qdox
+- commons-cli:commons-cli
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <section class="ftco-section bg-light ftco-slant ftco-slant-white">
+      <div class="container-fluid px-5">
+        <div class="row">
+          <div class="col-md-12 mt-0 mt-lg-5">
+          <table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Judul</th>
+      <th scope="col">Deskripsi</th>
+      <th scope="col">Tahun Terbit</th>
+      <th scope="col">Akses</th>
+      <th scope="col">Tanggal Masuk</th>
+      <th scope="col">Status</th>
+      <th scope="col" colspan="2">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php $i=1;?>
+    <?php foreach ($buku_kategori as $buku) :?>
+    <tr>
+      <th scope="row"><?=$i;?></th>
+      <th scope="row"><?= $buku['buku_judul']?></th>
+      <th scope="row"><?= $buku['buku_deskripsi']?></th>
+      <th scope="row"><?= $buku['buku_tahunterbit']?></th>
+      <th scope="row"><?= $buku['akses']?></th>
+      <th scope="row"><?= $buku['tanggal_masuk']?></th>
+      <th scope="row">
+        <?php if ( $buku['status'] == 1) :?>
+          <span class="badge badge-success">Tersedia</span>
+        <?php else :?>
+            <span class="badge badge-danger">Terpinjam</span>
+        <?php endif;?>
+      </th>
+
+
+      <th scope="row">
+         <a href="<?=site_url();?>/pengunjung/detail_buku/<?= $buku['buku_id'];?>" class="btn btn-success">Detail</a>
+      </th>
+
+      <th scope="row">
+        <?=anchor( 'pengunjung/detail_buku/'. $buku['buku_id'], '<a class="btn btn-primary"><i class="fas fa-eye"></i></a>')?>
+      </th>
+    </tr>
+      <?php $i++;?>
+    <?php endforeach;?>
+  </tbody>
+</table>
+            <!-- <div class="row">
+              <div class="col-md-12 col-lg-12">
+                  <div class="ftco-animate">
+                      <div class="blog-entry align-self-stretch">
+          <a href="<?=site_url();?>/pengunjung/detail_buku/<?= $buku['buku_id'];?>" class="block-20" style="background-image:  background: url('<?=base_url();?>/assets/img/Buku1.jpg' );">
+          </a>
+          <div class="text p-4">
+           <div class="meta">
+           
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+
+    /**
+     * @var array
+     */
+    protected $hidden = ['password'];
+
+    /**
+     * @var array
+     */
+    protected $dates = ['deleted_at'];
+
+    /**
+     * @var bool
+     */
+    public $incrementing = true;
+
+    /**
+     * @var bool
+     */
+    public $timestamps = true;
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function permissions()
+    {
+        return $this->belongsToMany(Permission::class)->withPivot('expires')->withTimestamps();
+    }
+
+    /**
+     * @param  mixed  $query
+     * @return mixed
+     */
+    public function scopeWhereCan($query, $ability)
+    {
+        return $query->whereHas(
+            'role.role_permission',
+            function ($q) use ($ability) {
+                $q->where('permission', $ability);
+            }
+        );
+    }
+
+    /**
+     * Return user permissions
+     * @return array
+     */
+    public function getPermissions()
+    {
+        $permissions = [];
+        if (count($this->permissions)) {
+
+            foreach ($this->permissions as $permission) {
+                if (!$permission->pivot->expires || $permission->pivot->expires > time()) {
+                    $permissions[$permission->id] = [
+                        'name' => $permission->name,
+                        'ability' => $permission->ability,
+                        'expires' => $permission->pivot->expires,
+                    ];
+                }
+            }
+        }
+        return $permissions;
+    }
+}
+ <?php
+
+namespace Litepie\User\Models;
+
+use Hash;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Litepie\Roles\Models\Role;
+use Litepie\Roles\Models\Traits\UserRole;
+use Litepie\User\Events\UserEvent;
+use Litepie\User\Notifications\ResetPassword;
+use Litepie\User\Notifications\UserConfirmation;
+
+/**
+ * Class User.
+ */
+class User extends Authenticatable
+{
+    use UserRole,
+        Notifiable,
+        Concerns\Attribute,
+        Concerns\Relationship,
+        Concerns\Scope,
+        Concerns\User,
+        Concerns\UserScopeTrait,;
+
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected $table = 'users';
+
+    /**
+     * User has many roles.
+     */
+    public $role = 'default';
+
+    /**
+     * User has notfies.
+     *
+     * @var array
+     */
+    protected $notifyRoles = ['user'];
+
+    /**
+     * The event map for the model.
+     *
+     * @var array
+     */
+    protected $dispatchesEvents = [
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

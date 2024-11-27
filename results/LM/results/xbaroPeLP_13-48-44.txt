@@ -1,0 +1,164 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: xbaro/PeLP
+    Project Description: MANUAL DE INSTALACI\xc3\xaeN PELp\n\n Requisitos\n\nLOS REQUISITOS PARA UNA CORRECTA INSTALACI\xc3\xaeN SON:\n JBOSS 4.2.3\n MAVEN 3.0.3\n JDK 6\n ESTAR EN LA RED DE LA UOC\n\nPASSOS PARA LA INSTALACI\xc3\xaeN\n\nEJECUTAMOS EL SIGUEINTE COMANDO PARA QUE TODAS LAS DEPENDENCIES LAS DETECTE EL ECLIPSE EN CASO DE NETBEAN NOLOSE, LO TENDREIS QUE BUSCAR\n\n MVN ECLIPSE:ECLIPSE\n\nPARA PODER VER LOS CAMBIOS QUE REALIZAMOS EL PROYECTO EJECUTAMOS EL SIGUIENTE COMANDO: \n\n MVN DENV=LOCAL CLEAN PACKAGE DMAVEN.TEST.SKIP=TRUE\n\nESTO LO QUE REALIZA ES UNA COMPILAZON DEL PROYECTO TOTAL Y LO INSERTA EN EL SERVIDOR JBOSS QUE TENGAIS CONFIGURADO. TODO ESTO SE EJECUTADO DESDE EL POM.XML. EN EL PROYECTO VEREIS LOS COMENTARIOS DE DONDE SE PARAMETRIZA PARA QUE DEPLOYE EN VUESTRO SERVIDOR.\n\n CONFIGURACI\xc3\xaeN DE BASE DE DATOS\n\nEN LA CARPETA SRC/MAIN/RESOURCES/JBOSS HAY UN DATASOURCE QUE SE LLAMA PELPDS.XML\n\nAQUI TENEIS QUE CONFIGURAR LOS CREDENCIALES DE VUESTRO SERVIDOR MYSQL.\n\nTODO EL TEMA DE CONECI\xc3\xaeN DE BASE DE DATOS FUNCIONA POR HIBERNATE ANNOTATIONS.\n\nTENDREIS QUE CONFIGURAR LOS DIFERNTES DAO,S Y SUS MODELOS VO. TODO ESTA EXTRUCUTRADO POR SUS CARPETAS UOC.EDU.MODEL.VO PARA MODELOS Y UOC.EDU.MODEL.DAO LOS DAO,S. \n\nHAY EJEMPLOS PARA QUE PODAIS VER COMO FUNCIONA.\n\n\n LICENSE\n\nUniversitat Oberta de catalunya'
+    Existing Dependencies:
+    mysql:mysql-connector-java
+- org.springframework:spring-aop
+- org.hibernate:hibernate-entitymanager
+- org.hibernate:hibernate-annotations
+- org.slf4j:slf4j-api
+- org.apache.amber:amber-oauth2-client
+- biz.source_code:base64coder
+- org.springframework:spring-jdbc
+- org.springframework:spring-tx
+- org.hibernate:hibernate-core
+- org.apache.axis2:axis2-spring
+- org.apache.httpcomponents:httpcore
+- org.apache.struts:struts2-spring-plugin
+- org.apache.axis2:axis2-kernel
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<?php $__env->startSection('title','Admin Login');?>
+<?php $__env->startSection('content');?>
+<div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Admin  <?php echo e(__('Login'));?></div>
+
+                    <div class="card-body">
+                        <form method="POST" action="<?php echo e(route('admin.login.submit'));?>">
+                            <?php echo csrf_field();?>
+
+                             <a href="<?php echo e(route('admin.register'));?>" class="nav-link">Register</a>
+                            <div class="form-group row">
+                                <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+
+                                <div class="col-md-6">
+                                    <input id="email" type="email" class="form-control <?php if ($errors->has('email')) :
+if (isset($message)) { $messageCache = $message; }
+$message = $errors->first('email');?> is-invalid <?php unset($message);
+if (isset($messageCache)) { $message = $messageCache; }
+endif;?>" name="email" value="<?php echo e(old('email'));?>" required autocomplete="email" autofocus>
+
+                                    <?php if ($errors->has('email')) :
+if (isset($message)) { $messageCache = $message; }
+$message = $errors->first('email');?>
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong><?php echo e($message);?></strong>
+                                        </span>
+                                    <?php unset($message);
+if (isset($messageCache)) { $message = $messageCache; }
+endif;?>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+
+                                <div class="col-md-6">
+                                    <input id="password" type="password" class="form-control <?php if ($errors->has('password')) :
+if (isset($message)) { $messageCache = $message; }
+$message = $errors->first('password');?> is-invalid <?php unset($message);
+if (isset($messageCache)) { $message = $messageCache; }
+endif;?>" name="password" required autocomplete="current-password">
+
+                                    <?php if ($errors->has('password')) :
+if (isset($message)) { $messageCache = $message; }
+$message = $errors->first('password');?>
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong><?php echo e($message);?></strong>
+                                        </span>
+                                    <?php unset($message);
+if (isset($messageCache)) { $message = $messageCache; }
+endif;?>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-6 offset-md-4">
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e.
+
+```
+python3.7 -m venv venv
+source venv/bin/activate
+pip3 install --upgrade pip
+pip3 install -r requirements.txt
+export FLASK_APP=hello
+flask run
+# Open browser to http://127.0.0.1:5000
+```
+ # Hello Flask
+
+This is a basic Flask app example to get up and running quickly. 
+
+```
+export FLASK_APP=hello
+flask run
+# Open browser to http://127.0.0.1:5000
+```
+
+For more advanced examples and deployment check out [Flask Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world).
+
+
+# Docker Container
+
+You can build and run this app with a docker container.
+
+```
+docker build -t flaskhelloapp.
+docker run -p 80:5000 --rm flaskhelloapp
+# Open browser to http://0.0.0.0
+```
+
+# Virtual Environment
+
+This application can be run in a virtual environment using Python3.7 and pip3.
+First create the virtual environment and activate it, then install the application's requirements,
+set the FLASK_APP environment variable, and run the app.
+
+```
+python3.8 -m venv venv
+source venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+export FLASK_APP=hello
+flask run
+# Open browser to http://127.0.0.1:5000
+```
+
+# Python3.7
+
+Alternativly, if you have Python3.7 you can set up the virtual environment in the project directory.
+Then install the application's requirements, set the FLASK_APP environment variable, and run the app.
+The following example uses Python3.7 and pip3.
+If you have Python2 installed with a virtual environment you will probably need to use Python3 instead of Python3.7 in the exampl
+
+Precision: 0
+Recall: 0
+F1 Score: 0

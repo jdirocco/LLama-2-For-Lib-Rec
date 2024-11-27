@@ -1,0 +1,148 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: Raizlabs/DBFlow
+    Project Description: README\n\n\n\n \n\nDBFlow is fast, efficient, and featurerich Kotlin database library built on SQLite for Android. DBFlow utilizes annotation processing to generate SQLite boilerplate for you and provides a powerful SQLite query language that makes using SQLite a joy.\n\nDBFlow is built from a collection of some of the best features of many database libraries. Don\'t let an ORM or library get in your way, let the code you write in your applications be the best as possible.\n\nDBFlow Contains:\n\nKotlin: Built using the language, the library is superconcise, nullsafe and efficient.\n\nAnnotation Processor: Generates the necessary code that you don\'t need to write.\n\nCore: Contains the main annotations and misc classes that are shared across all of DBFlow.\n\nDBFlow: The main library artifact used in conjunction with the previous two artifacts.\n\nCoroutines: Adds coroutine support for queries.\n\nRX Java: Enable applications to be reactive by listening to DB changes and ensuring your subscribers are uptodate.\n\nPaging: Android architecture component paging library support for queries via .\n\nLiveData: Android architecture LiveData support for queries on table changes.\n\nSQLCipher: Easy database encryption support in this library.\n\nSQLite Query Language: Enabling autocompletion on sqlite queries combined with Kotlin language features means SQLitelike syntax.\n\n Changelog\n\nChanges exist in the .\n\n Usage Docs\n\nFor more detailed usage, check out it out \n\n Including in your project\n\nAdd jitpack.io to your project\'s repositories:\n\n\n\nAdd artifacts to your project:\n\n\n\n Pull Requests\n\nI welcome and encourage all pull requests. Here are some basic rules to follow to ensure timely addition of your request: 1. Match coding style \\braces, spacing, etc.\\ This is best achieved using Reformat Code shortcut, commandoptionL on Mac and CtrlAltL on Windows, with Android Studio defaults. 2. If its a feature, bugfix, or anything please only change code to what you specify. 3. Please keep PR titles easy to read and descriptive of changes, this will make them easier to merge :\\ 4. Pull requests must be made against branch. Any other branch \\unless specified by the maintainers\\ will get rejected. 5. Have fun!\n\n Maintainer\n\nOriginally created by , a company\n\nMaintained by \\\\\n\n'
+    Existing Dependencies:
+    com.android.support:support-annotations
+- io.reactivex.rxjava2:rxjava
+- org.glassfish:javax.annotation
+- org.robolectric:robolectric
+- com.squareup:javapoet
+- com.android.support:appcompat-v7
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div id="wrapper">
+
+    
+        
+    <div id="page-container" class="sidebar-o side-scroll page-header-fixed page-header-modern main-content-boxed">
+
+
+
+     <?php $this->load->view('all/comp/profil');?>
+
+
+            <!-- Sidebar -->
+            <?php $this->load->view('all/comp/menu');?>
+            <!-- END Sidebar -->
+
+            <!-- Header -->
+            <?php $this->load->view('all/comp/header');?>
+            <!-- END Header -->
+
+            <!-- Main Container -->
+            <main id="main-container">
+
+
+<!-- Page Content -->
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+        <!-- Breadcrumb -->
+        <?php $this->load->view('all/comp/breadcrumb');?>
+        <div class="block">
+            <ul class="nav nav-tabs nav-tabs-alt nav-justified" data-toggle="tabs">
+                <li class="active">
+                    <a href="#profil"><i class="fa fa-info-circle sidebar-nav-icon"></i> Profil</a>
+                </li>
+                <?php if(isset($user[0]['id_karyawan'])){?>
+                <li>
+                    <a href="#data-personal"><i class="fa fa-user sidebar-nav-icon"></i> Data Personal</a>
+                </li>
+            <?php }?>
+            </ul>
+            <div class="block-content tab-content">
+                <!-- Profil -->
+                <div class="tab-pane fade fade-up in active" id="profil">
+                    <div class="row">
+                    <form id="profil-form" action="" method="post"  class="form-horizontal form-bordered">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" >Username <span class="text-danger">*</span></label>
+                                    <div class="col-md-7">
+                                        <input id="username" type="email" id="username" name="username" class="form-control"  placeholder="Username" value="<?= $user[0]['email']?>" readonly="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" >Nama Lengkap <span class="text-danger">*</span></label>
+                                    <div class="col-md-7">
+                                        <input id="nama" type="text" id="nama" name="nama" class="form-control"  placeholder="Nama Lengkap" value="<?= $user[0]['nama_lengkap']?>">
+                                    </div>
+                                </div>
+
+                                <div id="prodi" class="form-group">
+                                    <label class="col-md-3 control-label">Kategori <span class="text-danger">*</span></label>
+                                    <div class="col-md-7">
+                                        <?php if($user[0]['status'] == 'Dosen')
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import Foundation
+
+public struct BetaFeedbackItem: Codable {
+    enum CodingKeys: String, CodingKey {
+        case type
+        case id
+        case attributes
+    }
+    enum RootKeys: String, CodingKey {
+        case feedback
+    }
+    
+    public let type: String
+    public let id: String
+    public let attributes: BetaFeedbackAttributes
+}
+
+pub  public let appVersion: String?
+    
+    public init(firstName: String, lastName: String?, feedbackType: String, opSys: String, appVersion: String?) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.feedbackType = feedbackType
+        self.opSys = opSys
+        self.appVersion = appVersion
+    }
+}
+
+lic struct BetaFeedbackAttributes: Codable {
+    enum CodingKeys: String, CodingKey {
+        case firstName
+        case lastName
+        case feedbackType
+        case opSys
+        case appVersion
+        case createdDate
+    }
+    
+    public var firstName: String
+    public var lastName: String?
+    public var feedbackType: String
+    public var opSys: String
+  
+
+Precision: 0
+Recall: 0
+F1 Score: 0

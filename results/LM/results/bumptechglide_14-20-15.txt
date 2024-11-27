@@ -1,0 +1,202 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: bumptech/glide
+    Project Description: Glide\n=====\n\n\n| into the aar which can be interpreted by R8 automatically\n\nHow do I use Glide?\n\nCheck out the section to set up the project and then:\n\n\nYou may also find precompiled APKs on the section to setup the project and then edit the files however you wish.\nAndroid Studio26 cleanly imports both Glide\'s source and tests and is the recommended way to work with Glide.\n\nTo open the project in Android Studio:\n\n1. Go to File menu or the Welcome Screen\n2. Click on Open...\n3. Navigate to Glide\'s root directory.\n4. Select \n\nFor more details, see the Contributing docs page27.\n\nGetting Help\n\nTo report a specific problem or feature request, open a new issue on Github5. For questions, suggestions, or\nanything else, email Glide\'s discussion group6, or join our IRC channel: irc.freenode.netglidelibrary13.\n\nContributing\n\nBefore submitting pull requests, contributors must sign Google\'s individual contributor license agreement7.\n\nThanks\n\n The Android team and Jake Wharton for the disk cache implementation8 Glide\'s disk cache is based on.\n Dave Smith for the GIF decoder gist9 Glide\'s GIF decoder is based on.\n Chris Banes for his gradlemvnpush10 script.\n Corey Hall for Glide\'s amazing logo11.\n Everyone who has contributed code and reported issues!\n\nAuthor\n\nSam Judd @sjudd on GitHub, @samajudd on Twitter\n\nLicense\n\nBSD, part MIT and Apache 2.0. See the LICENSE16 file for details.\n\nDisclaimer\n\nThis is not an official Google product.\n\n1: static/glidelogo.png\n12:
+    Existing Dependencies:
+    com.squareup.retrofit2:adapter-rxjava
+- com.google.android:android
+- com.caverock:androidsvg
+- com.squareup.okhttp:okhttp
+- :annotation
+- com.google.code.findbugs:jsr305
+- com.google.code.gson:gson
+- com.squareup.retrofit2:converter-gson
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <?php 
+    $userid = $this->session->userdata('userid');
+    $this->db->where('userid',$userid);
+    $query = $this->db->get('users');
+    foreach ($query->result() as $row):
+
+   ?>
+
+<?php
+        $data = new stdClass();
+        $data->userid = $row->userid;
+        $data->firstname = $row->firstname;
+        $data->lastname = $row->lastname;
+        $data->email = $row->email;
+        $data->contact = $row->contact;
+        $data->address = $row->address;
+        $data->status = $row->status;
+        $data->role = $row->role;
+        $data->image = $row->image;
+        $data->date = $row->date;
+?>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="<?php echo base_url('uploads/images/profile/'. $user->image);?>" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p><?php echo $user->firstname.' '.$user->lastname; ?></p>
+          <a href="#"><?php echo $user->role; ?></a>
+        </div>
+      </div>
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+          <li><a href="<?=base_url()?>dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        <li class="active treeview menu-open">
+          <a href="#">
+            <i class="fa  fa-user-circle "></i> <span>Account Setting</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu" style="display: block;">
+          <li><a href="<?=base_url()?>users/profile"><i class="fa fa-user-circle "></i> <span>Profile</span></a></li>
+
+
+            <li><a href="<?=base_url('users/changepass')?>"><i class="fa  fa-key"></i> <span>Change Password</span></a></li>
+            
+          </ul>
+        </li>
+
+       <li class="active treeview menu-open">
+          <a href="#">
+            <i class="fa fa-users"></i> <span>Users</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu" style="display: block;">
+          <li><a href="<?=base_url()?>users/list"><i class="fa fa-users"></
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>  }
+    
+    public func add(key: String, value: String, to: URL) -> URL {
+        var components = URLComponents(url: to, resolvingAgainstBaseURL: true)!
+        var queryItems: [URLQueryItem]
+        
+        if let currentQueryItems = components.queryItems {
+            queryItems = currentQueryItems
+        } else {
+            queryItems = []
+        }
+        
+        if let currentKeyItems = queryItems.filter({ $0.name == key }) {
+            queryItems.removeObjects(in: currentKeyItems)
+        }
+        
+        queryItems.append(URLQueryItem(name: key, value: value))
+        components.queryItems = queryItems
+        
+        return components.url!
+    }
+    
+    /// 忽略协议的URL转化为字符串
+    func ignoreSchemeURLToString(_ urlString: String?) -> String {
+        if let urlString = urlString {
+            if let url = URL(string: urlString),
+                let url = ignoreSchemeURL(url) {
+                return url.absoluteString
+            } else {
+                return urlString
+            }
+        } else {
+            return ""
+        }
+    }
+    
+    func ignoreSchemeURL(_ url: URL) -> URL? {
+        var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
+        var queryItems = urlComponents?.queryItems
+        
+        let urlString = url.absoluteString
+        
+        let isIgnoreSchemeUrl = (self.config.ignoreSchemes as NSArray).contains(url.scheme?? "")
+        if!isIgnoreSchemeUrl {
+            return url
+        }
+        
+        if let scheme = url.scheme {
+            queryItems?.insert(URLQueryItem(name: "_", value: scheme), at: 0)
+            urlComponents?.queryItems = queryItems
+        }
+        
+        if let url = urlComponents?.url {
+            return url
+        } else {
+            return nil
+        }
+    }
+    
+    func getAppStoreSchemeURL(_ appScheme:String?,appBundleId:String) -> URL? {
+        if let appStoreScheme = appScheme,
+            let url = URL(string: appStoreScheme + appBundleId) {
+            return url
+        } else {
+            return nil
+        }
+    }
+    
+    // 获取当前屏幕显示的viewContoller
+    public func getCurrentViewController() -> UIViewController? {
+        var currentViewController = UIApplication.shared.keyWindow?.rootViewController
+        while currentViewController!.presentedViewController!= nil {
+            // 防止又弹窗了
+            let presentViewController = currentViewController!.presentedViewController
+            if presentViewController!.isKind(of: UINavigationController.self) || presentViewController!.isKind(of: UIAlertController.self) {
+                currentViewController = presentViewController
+            } else {
+                return  currentViewController
+            }
+        }
+        return currentViewController
+    }
+    
+}
+
+extension JKRouter: UIAlertViewDelegate {}
+ //
+//  JKRouter.swift
+//  Pods-ZJKit_Example
+//
+//  Created by 张炯 on 2018/6/7.
+//
+
+import UIKit
+
+public enum
+
+Precision: 0
+Recall: 0
+F1 Score: 0

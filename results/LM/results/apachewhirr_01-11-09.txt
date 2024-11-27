@@ -1,0 +1,191 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: apache/whirr
+    Project Description: Apache Whirr\n\nWhirr is a set of libraries for running cloud services.\n\nRelease notes are in src/site/xdoc/releasenotes.xml.\n\nWebsite: start: Software Notice\n\nThis distribution includes cryptographic software. The country in \nwhich you currently reside may have restrictions on the import, \npossession, use, and/or reexport to another country, of \nencryption software. BEFORE using any encryption software, please \ncheck your country's laws, regulations and policies concerning the\nimport, possession, or use, and reexport of encryption software, to \nsee if this is permitted. See for more\ninformation.\n\nThe U.S. Government Department of Commerce, Bureau of Industry and\nSecurity BIS, has classified this software as Export Commodity \nControl Number ECCN 5D002.C.1, which includes information security\nsoftware using or performing cryptographic functions with asymmetric\nalgorithms. The form and manner of this Apache Software Foundation\ndistribution makes it eligible for export under the License Exception\nENC Technology Software Unrestricted TSU exception see the BIS \nExport Administration Regulations, Section 740.13 for both object \ncode and source code.\n\nThe following provides more details on the included cryptographic\nsoftware:\n\n Whirr requires the JSch library for SSH support:\n Whirr requires NotYetCommonsSSL for SSH keypair checking:\n The jclouds enterprise module requires the BouncyCastle Java cryptography APIs:\n \n Export classifications and source links can be found\n at "
+    Existing Dependencies:
+    org.jclouds:jclouds-log4j
+- org.apache.hadoop:zookeeper
+- commons-configuration:commons-configuration
+- ${project.groupId}:whirr-core
+- org.apache.hadoop:hadoop-core
+- net.sf.jopt-simple:jopt-simple
+- org.slf4j:org.slf4j
+- org.hamcrest:hamcrest-all
+- junit:junit
+- org.hamcrest:org.hamcrest
+- org.jclouds:jclouds-enterprise
+- apache:cassandra
+- log4j:log4j
+- apache:thrift
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    @extends('backend.backend_template')
+    @section('content')
+    
+    <div class="row justify-content-between">
+        <h1>Blog</h1>
+        <a href="{{route('admin.blogCreate')}}" class="btn btn-success" >Create New Blog</a>
+    </div>
+    
+    <section class="section">
+        
+      <div class="section-body">
+        
+        @if (session('status'))
+        <div class="alert alert-success alert-dismissible show fade">
+          <button class="close" data-dismiss="alert">
+            <span>×</span>
+          </button>
+          <strong>{{ session('status')}}</strong> 
+        </div>
+
+      @endif
+
+
+        <div class="card">
+          <div class="card-header">
+            <a href="{{route('admin.blogCreate')}}" class="btn btn-icon icon-left btn-primary"> 
+                <i class="fas fa-plus"></i>
+                Add
+            
+            </a>
+
+            <!-- <button class="btn btn-icon icon-left btn-warning" id="btnExportToExcel">
+                <i class="fas fa-file-excel"></i>
+                Export Excel
+            </button>
+
+            <button class="btn btn-icon icon-left btn-warning" id="btnExportToPdf">
+                <i class="fas fa-file-pdf"></i>
+                Export Pdf
+            </button>
+
+             <form class="form-inline" method="post" action="blog_excel">-->
+                
+            <form class="d-inline" method="post" action="{{route('admin.blogExportExcel')}}">
+                @csrf
+                <button id="btnExportToExcel" class="btn btn-success mr-4 " type="submit">
+                    <i class="fas fa-file-excel"></i> Export to Excel
+                </button>
+            </form>
+
+            <form class="d-inline" method="post" action="{{route('admin.blogExportExcel')}}">
+                @csrf
+                <button id="btnExportToPdf" class="btn btn-success " type="submit">
+                    <i class="fas fa-file-pdf"></i> Export to Pdf
+                </button>
+            </form>
+
+            
+
+
+           </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-striped" id="myTable">
+                <thead>
+                  <tr >
+                    <th>No</th>
+                    <!-- <th>ID</th> -->
+                    <th >Title</th>
+                    <th >Blog</th>
+                    <th >Author</th>
+                    <th>Action</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    @php $i = 1; @endphp
+                    @foreach ($blogs as $blog)
+                        <tr class="{{$i}}">
+                            <td> 1</td>
+                            <!--<td>{{$loop->index + 1}}</td>-->
+                            <!--<td><img src="{{asset($blog->photo_path)}}" width="10
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>nceof Array) {
+            return value.indexOf(field) >= 0;
+        } else {
+        }
+        if (typeof field ==='string') {
+            return field === value;
+        } else {
+        }
+        return field === value;
+    };
+
+}
+ import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({ name: 'filter' })
+export class ArrayFilterPipe implements PipeTransform {
+
+    transform(array: any[], query: string): any {
+        if (query) {
+            return array.filter(item => this._isMatch(item, query));
+        }
+        return array;
+    }
+
+    private _find(obj, path) {
+        if (!obj) {
+            return;
+        }
+        return path.split('.').reduce(
+            (acc, part) => acc && acc[part], obj
+        );
+    }
+
+    private _isMatch(item, query) {
+        const fields: Array<string> = query.split('+');
+        for (let i = 0, len = fields.length; i < len; i++) {
+            if (!this._findMatch(item, fields[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private _findMatch(item, field) {
+        let value = this._find(item, field) || '';
+        if (field.match) {
+            return value.toString().match(new RegExp(field.match));
+        }
+        value = value.toString();
+        if (Array.isArray(field)) {
+            return field.indexOf(value) >= 0;
+        } else if (field.indexOf(':')) {
+            const values = field.split(':');
+            for (let a = 0, alen = values.length; a < alen; a++) {
+                if (this._findMatch(item, values[a])) {
+                    return true;
+                }
+            }
+            return false;
+        } else if (typeof field === 'object' || field insta
+
+Precision: 0
+Recall: 0
+F1 Score: 0

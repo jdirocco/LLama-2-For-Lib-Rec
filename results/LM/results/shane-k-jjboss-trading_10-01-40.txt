@@ -1,0 +1,143 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: shane-k-j/jboss-trading
+    Project Description: JBoss EAP 6\n\n1 Add a management user username=admin, password=password.\n\n2 standalone.sh serverconfig standalonefull.xml\n\n3 mvn clean install Plocalhostremote'
+    Existing Dependencies:
+    com.jboss.trading:trading-test-config
+- com.jboss.trading:trading-ws-client
+- org.jboss.as:jboss-as-ejb-client-bom
+- com.jboss.trading:trading-test
+- com.jboss.trading:trading-rest-client
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.slf4j:slf4j-simple
+- org.jboss.spec:jboss-javaee-6.0
+- org.slf4j:slf4j-api
+- org.jboss.sasl:jboss-sasl
+- com.jboss.trading:trading-rest
+- org.jboss.xnio:xnio-nio
+- org.jboss.spec.javax.jms:jboss-jms-api_1.1_spec
+- com.jboss.trading:trading-ws
+- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_1.1_spec
+- org.jboss.resteasy:resteasy-jaxrs
+- org.jboss.marshalling:jboss-marshalling-river
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 18 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+@extends('layouts.front')
+@section('style')
+    <link rel="stylesheet" href="{{ asset('front/css/select.css') }}">
+@endsection
+@section('content')
+
+    <!-- Start Bradcaump area -->
+    <div class="ht__bradcaump__area bg-image--6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bradcaump__inner text-center">
+                        <h2 class="bradcaump-title">Checkout</h2>
+                        <nav class="bradcaump-content">
+                            <a class="breadcrumb_item" href="{{ route('home') }}">Home</a>
+                            <span class="brd-separetor">/</span>
+                            <span class="breadcrumb_item active">checkout</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Bradcaump area -->
+    <!-- Start Checkout Area -->
+    <section class="our-checkout-area clearfix">
+        <div class="container">
+            @php
+                $sub_total = 0
+            @endphp
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="coupon_accordion">
+                        @if (count($cart))
+                        <div class="coupon_accordion_head">
+                            <div id="collapse" class="btn">
+                                <h4>Have a coupon? </h4>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div id="payment-1" class="payment-content">
+                            <form method="POST" action="{{ route('coupon.add') }}" class="login">
+                                @csrf
+                                <div class="form-group">
+                                    <input type="text" name="couponCode" required="">
+                                    <button class="btn btn-primary">Add Coupon</button>
+                                </div>
+                            </form>
+                        </div>
+                        @endif
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                @if ($cart->count() > 0)
+
+                <div class="col-lg-12">
+                    <div class="col-12">
+                        <div class="table_desc">
+                            <div class="cart_page table-responsive">
+                                <form class="form-horizontal" action="{{ route('payment') }}" method="POST" novalidate="novalidate">
+                                    @csrf
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="product_name" style="width: 350px;">Product</th>
+                                    <th class="product_quantity" style="width: 120px;">Quantity</th>
+                                    <th class="product_total" style="width: 120px;">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($cart as $item
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 18 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>rvice.setUser({ user: null })
+  }
+}
+ const service = require('../services/auth')
+
+module.exports = {
+  get: (req, res, next) => {
+    const { user } = req
+    if (!user) throw { code: 401, message: 'Please sign in to access this page' }
+    res.set('user', JSON.stringify(user))
+  },
+
+  post: (req, res, next) => {
+    const { body } = req
+    return service.authenticate({ username: body.username, password: body.password })
+  },
+
+  logout: (req, res, next) => {
+    se
+
+Precision: 0
+Recall: 0
+F1 Score: 0

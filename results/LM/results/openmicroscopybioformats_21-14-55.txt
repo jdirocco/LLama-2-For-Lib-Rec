@@ -1,0 +1,135 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: openmicroscopy/bioformats
+    Project Description: BioFormats\n\n\n\n\nBioFormats is a standalone Java library for reading and writing life sciences\nimage file formats. It is capable of parsing both pixels and metadata for a\nlarge number of formats, as well as writing to several formats.\n\nIf you are having an issue with BioFormats and need support, please see the\n.\n\nPurpose\n\n\nBioFormats' primary purpose is to convert proprietary microscopy data into \nan open standard called the OME data model, particularly into the OMETIFF \nfile format. See \nfor further information.\n\nSupported formats\n\n\nBioFormats supports .\n\n\nFor users\n\n\n\nuse BioFormats to read and write microscopy formats.\n\n\nFor developers\n\n\nYou can use BioFormats to easily .\n\n\nMore information\n\n\nFor more information, see the .\n\nPull request testing\n\n\nWe welcome pull requests from anyone, but ask that you please verify the\nfollowing before submitting a pull request:\n\n verify that the branch merges cleanly into \n verify that the branch compiles with the Ant targets\n verify that the branch compiles using Maven\n verify that the branch does not use syntax or API specific to Java 1.8\n run the unit tests and correct any failures\n test at least one file in each affected format, using the \n command\n internal developers only: \n against directories corresponding to the affected formats\n make sure that your commits contain the correct authorship information and,\n if necessary, a signedoffby line\n make sure that the commit messages or pull request comment contains\n sufficient information for the reviewers to understand what problem was\n fixed and how to test it\n"
+    Existing Dependencies:
+    xalan:serializer
+- org.openmicroscopy:specification
+- edu.ucar:netcdf
+- org.openmicroscopy:metakit
+- com.google.guava:guava
+- net.imagej:ij
+- ${project.groupId}:bio-formats_plugins
+- org.perf4j:perf4j
+- ch.systems.cisd:jhdf5
+- com.jgoodies:jgoodies-forms
+- com.drewnoakes:metadata-extractor
+- org.openmicroscopy:ome-mdbtools
+- ${project.groupId}:formats-bsd
+- org.openmicroscopy:ome-xml
+- org.apache.velocity:velocity
+- ${project.groupId}:turbojpeg
+- ome:jxrlib-all
+- ch.qos.logback:logback-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 19 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+<section class="content">
+        <div class="container-fluid">
+            <div class="block-header">
+			<div class="row clearfix">
+			
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-cyan hover-expand-effect">
+                        <div class="icon">
+                            <i class="material-icons">help</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">TICKET</div>
+                            <div class="number count-to" data-from="0" data-to="<?php echo $this->db->count_all_results('ticket');?>" data-speed="1000" data-fresh-interval="20">  </div>
+                        </div>
+                    </div>
+                </div>
+					
+							
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-light-green hover-expand-effect">
+                        <div class="icon">
+                            <i class="material-icons">person</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">Pegawai</div>
+                            <div class="number count-to" data-from="0" data-to="243" data-speed="1000" data-fresh-interval="20">  </div>
+                        </div>
+                    </div>
+                </div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-orange hover-expand-effect">
+                        <div class="icon">
+                            <i class="material-icons">person</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">Kasir</div>
+                            <div class="number count-to" data-from="0" data-to="1225" data-speed="1000" data-fresh-interval="20"></div>
+                        </div>
+                    </div>
+                </div>
+				
+				
+				
+				  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box bg-red hover-expand-effect">
+                        <div class="icon">
+                            <i class="material-icons">person</i>
+                        </div>
+                        <div class="content">
+                            <div class="text">Admin</div>
+                            <div class="number count-to" data-from="0" data-to="243" data-speed="1000" data-fresh-interval="20">  </div>
+                        </div>
+                    </div>
+                </div>
+				
+				
+            </div>
+			<!-- Basic Alerts -->
+            <
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 19 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>   return $this->hasMany(Order::class);
+    }
+}
+ <?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Category extends Model
+{
+    use HasFactory;
+
+    protected $guarded = [];
+
+    public function products(){
+        return $this->hasMany(Product::class);
+    }
+
+    public function orders(){
+     
+
+Precision: 0
+Recall: 0
+F1 Score: 0

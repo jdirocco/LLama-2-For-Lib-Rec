@@ -1,0 +1,174 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: bergerkiller/BKCommonLib
+    Project Description: About\nBKCommonLib is an utility library for doing a whole lot more with CraftBukkit servers.\nThis old repository hosts BKCommonLib for Minecraft/Forge 1.7.10. A much more updated\nversion for newer versions of Minecraft is available .\n\n Download\nYou can download a release from the release subdirectory in this repository.\n\n\n\n\n Old Stuff\nThis is a libraryplugin system, introducing a lot of utility classes\n\nIt also simplifies coding:\n PluginBase: allows quick registering and monitoring of plugins being enabled\n AsyncTask: allows quick task starting and dynamic incode creation\n Utilities for virtually every needed task ahead, from mathematics to obtaining an entity by UUID\n Custom nodebased configuration extension\n BlockLocation, BlockMap and BlockSet to safely use blocks in maps and sets\n ItemParser class to generate a parser from user and use it during item transactions\n Nanosecond StopWatch class for performance monitoring\n Operation class to handle entities, players, chunks and worlds the way you want it\n\nLicense:\n\nCopyright C 2013 bergerkiller\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files the "Software", to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.'
+    Existing Dependencies:
+    com.googlecode.openpojo:openpojo
+- org.spinotmc:spinot
+- cglib:cglib-nodep
+- com.narrowtux:ShowCase
+- me.snowleo:BleedingMobs
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<?
+$title='Clients & Projects';
+include('template/header.php');
+?>
+
+        <div id="page-wrapper">
+
+<div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Clients</h1>
+                </div>
+            </div>
+
+<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <button type='button' class='btn btn-info'>Add Client</button>
+                        </div>
+                         <div class="panel-body">
+                            <div class="table-responsive">
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                         <th>Projects</th> 
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="">
+                                            <td>John Smith</td>
+                                            <td>email@example.com</td>
+                                          <td><button type='button' class='btn btn-info'>Add Project</button>
+
+                                          </td>
+                                        </tr>
+                                        <tr class="">
+                                            <td>John Smith</td>
+                                            <td>email@example.com</td>
+                                          <td><button type='button' class='btn btn-info'>Add Project</button>
+
+                                          </td>
+                                        </tr>
+                                        <tr class="">
+                                            <td>John Smith</td>
+                                            <td>email@example.com</td>
+                                        <td><button type='button' class='btn btn-info'>Add Project</button>
+
+                                          </td>
+                                        </tr>
+                                        <tr class="">
+                                            <td>John Smith</td>
+                                            <td>email@example.com</td>
+                                          <td><button type='button' class='btn btn-info'>Add Project</button>
+
+                                          </td>
+                                        </tr>
+                                        <tr class="">
+                                            <td>John Smith</td>
+                                            <td>email@example.com</td>
+                                         <td><button type='button' class='btn btn-info'>Add Project</button>
+
+                                          </td>
+                                        </tr>
+                                        <tr class="">
+                                            <td>John Smith</td>
+                                            <td>email@example.com</td>
+                                          <td><button type='button' class='btn btn-info'>Add Project</button>
+
+                                          </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
+
+                    </div>
+
+                    
+                </div>
+            </div>
+
+    
+
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+
+<?php 
+include('template/footer.php');
+?>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>  * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password','remember_token',
+    ];
+
+    /**
+     * User can has many posts.
+     **/
+    public function posts()
+    {
+        return $this->hasMany('App\Models\Posts', 'user_id');
+    }
+}
+ <?php
+
+namespace App;
+
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class User extends Authenticatable
+{
+    use Notifiable;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'fullname', 'email', 'password', 'gender', 'birthday', 'role'
+    ];
+
+    /**
+   
+
+Precision: 0
+Recall: 0
+F1 Score: 0

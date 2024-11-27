@@ -1,0 +1,126 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: gabrielemariotti/cardslib
+    Project Description: Card Library\nTravis master: \nTravis dev: \n\n\nCard Library provides an easy way to display a UI Card using the Official Google CardView in your Android app.\n\nBefore using this library I recommend that you check out the new Google Material Guidelines.Don\'t over cardify your UI.\n\n\n\n\n Examples\n\n\n\n\n Sample application: The demo is a showcase of the functionality of the library.\n\n\t \n\t \n Extras application: The demoextras contains some examples of integration with other libraries\n\t\n\t\n\n \n Support\nJoin the : \n\n\n\t\na place to discuss the library, share screenshots, ask for tips, talk with the author....\xef\xbb\xbf\n\nIf you would like, you can support my work, donating through the demo app.\n\n\n Doc\n\nSee the to know all card library features and all customizations.\nThe Guide provides an extensive doc, with all tips and full examples. Don\'t miss it.\n\n\n Setup\n\nCard Library is pushed to Maven Central as an AAR, so you just need to add the following dependency to your .\n\n dependencies {\n //Core\n compile \'com.github.gabrielemariotti.cards2.1.0\'\n \n //Optional for builtin cards\n compile \'com.github.gabrielemariotti.cards2.1.0\'\n \n //Optional for RecyclerView\n compile \'com.github.gabrielemariotti.cards2.1.0\'\n \n //Optional for staggered grid view\n compile \'com.github.gabrielemariotti.cards2.1.0\'\n \n //Optional for drag and drop\n compile \'com.github.gabrielemariotti.cards2.1.0\'\n \n //Optional for twoway coming soon\n //compile \'com.github.gabrielemariotti.cards2.1.0\'\n \n }\n\nIf you would like to use the last v1 stable version you can use:\n \n dependencies {\n //Core card library\n compile \'com.github.gabrielemariotti.cards1.9.1\'\n\n //Extra card library, it is required only if you want to use integrations with other libraries\n compile \'com.github.gabrielemariotti.cards1.9.1\'\n }\n\n\n ChangeLog\n\n A complete changelog\n\n\nAcknowledgements\n\n\n Thanks to Roman Nurik1 for AndroidSwipeToDismiss2 classes and UndoBarController3 classes.\n Thanks to Niek Haarman4 for some ideas and code taken from his ListViewAnimations5.\n Thanks to Chris Banes6 for ForegroundLinearLayout7 class See this post8 for more info.\n Thanks to Taylor Ling9 for drag and drop icon.\n Thanks to Frankie Sardo10 for some ideas and code taken from his LinearListView11\n Thanks to Google for code and idea from Google IO 1412\n\nCredits\n\n\nAuthor: Gabriele Mariotti gabri.mariotti@gmail.com\n\n\n \n\n\n \n\n\n \n\n\nLicense\n\n\n Copyright 20132014 Gabriele Mariotti\n\n Licensed under the Apache License, Version 2.0 the "License";\n you may not use this file except in compliance with the License.\n You may obtain a copy of the License at\n\n Unless required by applicable law or agreed to in writing, software\n distributed under the License is distributed on an "AS IS" BASIS,\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n See the License for the specific language governing permissions and\n limitations under the License.\n\n\n\n\n\nGoogle and the Google Maps logo are registered trademarks of Google Inc., used with permission.\n\n 1: 2: 3: 4: 5: 6: 7: 8: 9: 10: 11: 12:
+    Existing Dependencies:
+    com.github.chrisbanes.actionbarpulltorefresh:library
+- com.android.support:support-annotations
+- com.android.support:recyclerview-v7
+- org.lucasr.twowayview:core
+- com.squareup.okhttp:okhttp
+- com.survivingwithandroid:weatherlib
+- com.github.castorflex.smoothprogressbar:library-circular
+- com.android.support:appcompat-v7
+- com.nostra13.universalimageloader:universal-image-loader
+- com.melnykov:floatingactionbutton
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Daftar Pengajar</h1>
+                </div>
+            </div>
+            <div class ="row">
+            <div class="col-lg-12">
+                    <?php if($this->session->flashdata('pesan')!= null):?>
+                     <div class="alert alert-warning">
+                    <?= $this->session->flashdata('pesan');?></div>    
+                <?php endif?>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="panel panel-default"></div>
+                    <div class="panel-body">
+<a href="<?= base_url()?>pengajar/tambah_pengajar" class="btn btn-success btn-sm">Tambah Pengajar </a><br><br>
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr class="bg-primary">
+                       <td align="center">NO</td>
+                       <td align="center"><center>Foto Diri</center></td>
+                       <td align="center"><center>Nama</center></td>
+					   <td align="center"><center>Alamat</center></td>
+					   <td align="center"><center>No. Telepon</center></td>
+                       <td align="center">Aksi</td>
+					   <td align="center">Detail</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                   
+                    $no=1;
+                    foreach ($daftar_pengajar as $row):
+                       ?>
+                        <tr class="odd gradeX">
+                            <td><?php echo $no++?></td>
+                            <td><center><img width="200" height="200" src="<?php echo base_url('assets/gambarmengajar/'.$row->foto)?>"></center></td>
+                            <td><?= $row->nama_guru;?></td>
+							<td><?= $row->alamat;?></td>
+							
+							<td class="center"><?= $row->no_tlp;?></td>
+                           
+                            <td>
+<a href="<?= base_url('pengajar/delete/'.$row->id_guru.'')?>"class="btn btn-danger btn-sm">Hapus</a>
+<a href="<?= base_url('pengajar/edit_profil/'.$row->id_guru.'')?>"class="btn btn-success btn-sm">Edit</a>
+<a href="<?= base_url('pengajar/detail_pengajar/'.$row->id_guru.'')?>"class="btn btn-warning btn-sm">Detail</a></td>
+			<td>
+                        </tr>
+                        <?php
+                    endforeach;
+                
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.github.dakyskye.ticie;
+    private final String lastName;
+
+    @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
+    public CustomerNameDto(@JsonProperty(value = "first_name", required = true) String firstName,
+                            @JsonProperty(value = "last_name", required = true) String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+}
+tats.domain;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class CustomerNameDto {
+    private final String firstNam
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,120 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: magnusja/libaums
+    Project Description: libaums\n=======\n\n\n\n\nA library to access USB mass storage devices pen drives, external HDDs, card readers using the Android USB Host API. Currently it supports the SCSI command set and the FAT32 file system.\n\n How to use\n\n Install\n\nThe library can be included into your project like this:\n\n\n\nIf you need the HTTP or the storage provider module:\n\n\n\n Basics\n Query available mass storage devices\n\n Java\n\n\n\n Kotlin\n\n\n\n Permissions\n\nYour app needs to get permission from the user at run time to be able to communicate the device. From a you can get the underlying to do so.\n\n Java\nkotlin\nval permissionIntent = PendingIntent.getBroadcastthis, 0, IntentACTIONUSBPERMISSION, 0;\nusbManager.requestPermissiondevice.usDevice, permissionIntent;\njava\nUsbFile root = currentFs.getRootDirectory;\n\nUsbFile.\n\n\nLibaums Library to access USB Mass Storage Devices \nLicense: Apache 2.0 see license.txt for details \nAuthor: Magnus Jahnen, github@mgns.tech \nAdvisor: Nils Kannengie\xc3\x9fer, nils.kannengiesser at tum.de \nSupervisor: Prof. Uwe Baumgarten, baumgaru at in.tum.de \n\nTechnische Universit\xc3\xa4t M\xc3\xbcnchen TUM \nLehrstuhl/Fachgebiet f\xc3\xbcr Betriebssysteme \nwww.os.in.tum.de \n'
+    Existing Dependencies:
+    org.apache.commons:commons-io
+- com.android.support:support-annotations
+- org.xenei:junit-contracts
+- com.android.support:appcompat-v7
+- com.android.support:design
+- com.github.magnusja:java-fs
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<div class="col-md-8">
+    <h3 class="font-20">Lista de Productos</h3>
+</div>
+
+<div class="col-md-4">
+    <a href="{{ route('create_product') }}" class="btn btn-info float-right font-10 m-r-15">
+        <i class="fas fa-plus"></i>&nbsp;&nbsp;Nuevo Producto
+    </a>
+</div>
+
+<table id="product-data-table" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Tipo de Producto</th>
+            <th>Tipo de Producto</th>
+            <th class="not-sortable">&nbsp;</th>
+            <th class="not-sortable">&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<script>
+    let productDataTable = $('#product-data-table').DataTable( {
+        dom: "<'row'<'col-sm-12 col-md-5'l><'col-sm-12 col-md-7'f>>" +
+        "<'row'<'col-sm-12'tr>>" +
+        "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+        responsive: true,
+        processing: true,
+        autoWidth: false,
+        serverSide: true,
+        ajax: '{!! route('product_datatables')!!}',
+        language: {
+            "processing": "Procesando...",
+            "lengthMenu": "Mostrar _MENU_ registros",
+            "zeroRecords": "No se encontraron resultados",
+            "emptyTable": "Ningún dato disponible en esta tabla",
+            "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+            "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+            "infoFiltered": "(filtrado de un total de _MAX_ registros)",
+            "search": "Buscar",
+            "infoThousands": ",",
+            "loadingRecords": "Cargando...",
+            "paginate": {
+                "first": "Primero",
+                "last": "Último",
+                "next": "Siguiente",
+                "previous": "Anterior"
+            },
+            "aria": {
+                "sortAscending": ": Activar para ordenar la columna de manera ascendente",
+                "sortDescending": ": Activar para ordenar la columna de manera descendente"
+            },
+            "buttons": {
+                "copy": "Copiar",
+                "colvis": "Visibilidad",
+                "collection": "Colección",
+                "colvisRestore": "Restaurar visibilidad",
+                "copyKeys": "Presione ctrl o u2318 + C para copiar los datos de la tabla al portapapeles del sistema. <br
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s(self, data=None, status=None, message=None):
+        return self.make_response(data, status, message)
+ # -*- coding: utf-8 -*-
+import re
+import sys
+
+from flask import Flask
+
+
+class Api(Flask):
+
+    def make_response(self, data=None, status_code=None, message=None):
+        if message:
+            return message
+        return super(Api, self).make_response(data, status_code)
+
+    def make_succes
+
+Precision: 0
+Recall: 0
+F1 Score: 0

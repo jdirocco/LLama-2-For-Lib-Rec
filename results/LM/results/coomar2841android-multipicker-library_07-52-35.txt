@@ -1,0 +1,112 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: coomar2841/android-multipicker-library
+    Project Description: Android Multipicker Library Images, Videos, Files, Audios, Contacts\n\n\nMakes it easy and simple to integrate "Attach that file" feature into your android apps.\n\nDon\'t worry about various devices/OS variations.\n\nDon\'t worry about outofmemory errors.\n\nDon\'t worry about creating thumbnails to show a preview.\n\nPicking up any file for your app, and it\'s details.\n\nPicking up audio files.\n\n Code less for capturing images/videos/files\n Choose images from device or take a photo\n Choose videos from device or record one\n Choose files available on your device\n Choose audio files available on your device\n Choose a contact from the phonebook\n Works with almost all content providers\n Get all metadata about the media that you would probably need\n Similar code base to implement irrespective of Android version of device.\n\n\n Gradle\n\n\n Maven\n\n\nSee for code snippets.\n\nTry out the sample app if you want to test it out first.\n\n\n \n\n\n Recent changes\n\n Version 1.6.2\n Issue 180: Crash "FileProvider" metadata not found\n\n Version 1.6.1\n Issue 180: use of "requestLegacyExternalStorage"\n\n Version 1.6\n Issue 120: Image selection issue in Android 8.0\n Other minor bug fixes.\n\n Version 1.5\n Issue 126: UPT: Made picker classes non final\n Issue 47: Add quality/compression level property\n Issue 130: android.database.CursorIndexOutOfBoundsException\n Issue 121: CursorIndexOutOfBoundsException\n\n Version 1.3\n Updated build tools and min SDK version\n Issue 86: Added equals and hashcode methods\n\n\n License\n\n\nCopyright 2018 Kumar Bibek\n\nLicensed under the Apache License, Version 2.0 the "License";\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n \n\n\t\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\n\n'
+    Existing Dependencies:
+    net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent
+- com.github.bumptech.glide:glide
+- com.android.support:recyclerview-v7
+- com.google.android.gms:play-services-ads
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    @if (Session::has('message'))
+     
+    {!! "<h6>". Session::get('message'). "</h6>"!!}
+    @endif
+    
+    
+
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">First name</th>
+                <th scope="col">Last name</th>
+                <th scope="col">Birth date</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Nationality</th>
+                <th scope="col">Email</th> 
+                <th scope="col">Phone number</th>
+                <th scope="col">Actions</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody> 
+             @foreach ($data as $value)
+            <tr>
+                <td>{{ $value['id'] }}</td>
+                <td>{{ $value['firstName'] }}</td>
+                <td>{{ $value['lastName'] }}</td>
+                <td>{{ $value['birthDate'] }}</td>
+                <td>{{ $value['gender'] }}</td>
+                <td>{{ $value['nationality'] }}</td>
+                <td>{{ $value['email'] }}</td>
+                <td>{{ $value['phoneNumber'] }}</td>
+                <td>
+                    <a class= "btn btn-success " href="{{ route('edit',  $value['id'])}}"> Edit </a>
+                </td>     
+                <td>
+                    <a class="btn btn-danger" href="{{ route('delete',  $value['id']) }}">Delete</span></a>
+                </td>
+                </tr> 
+                @endforeach
+        </tbody>
+    </table>
+    
+    <div class="row align-items-start">
+        <div class="d-flex justify-content-center">
+            {{ $data->links() }}
+        </div>
+    </div>
+
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
+     */
+    public function handle($request, Closure $next)
+    {
+        return $next($request);
+    }
+}
+ <?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+
+class User
+{
+    /**
+     * Handle an incoming request.
+ 
+
+Precision: 0
+Recall: 0
+F1 Score: 0

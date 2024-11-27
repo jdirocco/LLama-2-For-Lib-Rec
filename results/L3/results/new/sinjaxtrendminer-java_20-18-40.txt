@@ -1,0 +1,267 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications. provide recommendations exclusively in the Maven format: groupId:artifactId:version.
+    Given the project details below:
+    Project Name: patloew/RxLocation
+Project Description: The Reactive Location API Library for Android is now deprecated and not maintained anymore. Please switch to the CoLocation library by Micha\xc5\x82 Charmas. This library wraps the Location APIs in RxJava 2.x.
+Existing Dependencies Include: org.powermock:powermock-module-junit4
+- io.reactivex.rxjava2:rxandroid
+- com.squareup.leakcanary:leakcanary-android
+- io.reactivex.rxjava2:rxjava
+- com.google.android.gms:play-services-location
+- com.squareup.leakcanary:leakcanary-android-no-op
+
+Project Name: frankred/jSona
+Project Description: JSona is a configuration file(JSON), vcj and JavaFx based music and media player. The aim is to always keep your playlists in synch with your music folders. For fast fulltext search jSona uses Apache Lucene (http://lucene.apache.org/core/).
+Existing Dependencies Include: uk.co.caprica:vlcj
+- org.apache.lucene:lucene-analyzers-common
+- org.apache.lucene:lucene-core
+- commons-io:commons-io
+- com.mpatric:mp3agic
+- org.apache.lucene:lucene-queryparser
+- com.github.tulskiy:jkeymaster
+- org.apache.commons:commons-lang3
+
+Project Name: querydsl/querydsl
+Project Description: Querydsl is a framework which enables the construction of type-safe SQL-like queries for multiple backends including JPA, MongoDB and SQL in Java. Querying JPA and MongoDB using a fluent API.
+Existing Dependencies Include: org.springframework:spring-aop
+- com.mysema.codegen:codegen
+- org.xerial:sqlite-jdbc
+- org.springframework:spring-test
+- com.google.guava:guava
+- com.jolbox:bonecp
+- org.hamcrest:hamcrest-library
+- com.oracle:ojdbc6
+- com.querydsl:querydsl-sql-spatial
+- com.google.inject.extensions:guice-persist
+- com.querydsl:querydsl-apt
+- org.postgresql:postgresql
+- org.easymock:easymock
+- com.querydsl:querydsl-spatial
+- org.hibernate:hibernate-ehcache
+- javax.inject:javax.inject
+- org.springframework:spring-context
+- org.eclipse.persistence:eclipselink
+- org.firebirdsql.jdbc:jaybird-jdk16
+- log4j:log4j
+- org.mongodb.morphia:morphia
+- org.hsqldb:hsqldb
+- cglib:cglib
+- org.apache.lucene:lucene-queryparser
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.apache.maven:maven-project
+- org.hibernate:hibernate-envers
+- com.querydsl:querydsl-codegen
+- net.sourceforge.jtds:jtds
+- org.springframework.roo:org.springframework.roo.annotations
+- org.apache.ant:ant
+- com.querydsl:querydsl-lucene3
+- com.thoughtworks.proxytoys:proxytoys
+- org.scala-lang:scala-library
+- org.geolatte:geolatte-geom
+- com.h2database:h2
+- com.querydsl:querydsl-sql-codegen
+- org.hibernate:hibernate-annotations
+- org.scala-lang:scala-compiler
+- org.reflections:reflections
+- org.datanucleus:datanucleus-api-jdo
+- org.mongodb:mongo-java-driver
+- org.hibernate:hibernate-validator
+- com.infradna.tool:bridge-method-annotation
+- com.querydsl:querydsl-sql-spring
+- javax.transaction:jta
+- org.slf4j:slf4j-log4j12
+
+Project Name: GoogleCloudPlatform/google-cloud-datastore
+Project Description: This repository contains low-level Java and Python client libraries for Google Cloud Datastore. For more idiomatic and usable client libraries in these languages, please visit the [Google Cloud Dataastore Client for Java][java-datastore] and Google Cloud Database Client for Python
+Existing Dependencies Include: com.google.http-client:com.google.http-client
+- com.google.truth:com.google.truth
+- com.google.cloud.datastore:datastore-v1-proto-client
+- com.google.guava:com.google.guava
+- com.google.api-client:com.google.api-client
+- com.google.oauth-client:google-oauth-client
+- com.google.truth:truth
+- com.google.oauth-client:com.google.oauth-client
+
+Project Name: eclipse/tycho
+Project Description: Eclipse Tycho is a manifest-first way to build and build Eclipse plug-ins/OSGi bundles/RCP applications\n，nwith Maven. This repository contains all the features and documentation that will help you migrate to the official Eclipse site.
+Existing Dependencies Include: org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.codehaus.plexus:plexus-component-annotations
+- org.codehaus.plexus:plexus-container-default
+- org.eclipse.tycho:tycho-testing-harness
+- org.apache.maven:maven-core
+- org.eclipse.tycho:org.eclipse.jdt.compiler.apt
+- org.codehaus.plexus:plexus-utils
+- org.eclipse.tycho:org.eclipse.osgi
+- org.eclipse.tycho:tycho-core
+- org.apache.commons:commons-exec
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Reccomend me some of these libraries that can be added to the project to enhance its capabilities.
+    Project Name: sinjax/trendminer-java
+    Project Description: This tool was created for efficient text processing and analysis of social media text. It works in an online setting or over batches of data. It has a pipeline architecture, with the user having control over the modules that he wishes to run, each module adding to the input.
+    Existing Dependencies:
+    org.geonames:geonames
+- org.apache.lucene:lucene-core
+- org.openimaj:machine-learning
+- org.apache.lucene:lucene-queryparser
+- org.restlet.jse:org.restlet.ext.json
+- org.trendminer:twitter
+- org.openimaj:nearest-neighbour
+- org.apache.opennlp:opennlp-maxent
+- org.openimaj.hadoop.tools:core-hadoop-tool
+- org.openimaj:core-experiment
+- org.arabidopsis.ahocorasick:ahocorasick
+- org.ostermiller:utils
+- de.bwaldvogel:liblinear-dense
+- org.restlet.jse:org.restlet
+- com.jayway.jsonpath:json-path
+- org.openimaj:core-feature
+- uk.co.magus.fourstore:4store-client
+- org.trendminer:test-resources
+- info.bliki.wiki:bliki-core
+- com.jayway.jsonpath:json-path-assert
+- org.trendminer.hadoop.tools:HadoopTwitterPreprocessingTool
+- joda-time:joda-time
+- org.trendminer.tools:TwitterPreprocessingTool
+- org.openimaj:test-resources
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     As an AI specializing in software library recommendations for Java applications, I analyzed the provided project details and found the following five libraries that could enhance the project's capabilities:
+
+1. com.querydsl:querydsl-sql-spatial: This library provides spatial queries and operations for Java applications, which could be useful for the project's geospatial analysis functionality. It supports various spatial databases, including PostGIS and MySQL with spatial extensions. By integrating this library, the project can perform efficient spatial queries and operations, improving its overall performance and functionality.
+
+2. org.locationtech.jts:jts-topology: This library provides a Java implementation of the JTS (Java Topology Suite) library, which is a widely-used spatial library for Java. JTS provides a range of spatial operations, including geometry manipulation, intersection, and proximity queries. By incorporating this library, the project can benefit from JTS's robust set of spatial functions, enhancing its spatial analysis capabilities.
+
+3. org.openimaj:openimaj-core: This library provides a comprehensive set of machine learning algorithms and tools for Java applications. It includes functions for clustering, classification, regression, and more. By integrating this library, the project can leverage powerful machine learning techniques to improve its text analysis and classification functionality.
+
+4. com.github.mr-stern:commons-text-analysis: This library provides a range of text analysis functions for Java applications, including tokenization, stemming, and lemmatization. It also includes tools for text similarity and clustering. By incorporating this library, the project can enhance its text analysis capabilities, enabling more sophisticated analysis and processing of text data.
+
+5. de.johannesrohde:java-matrix-library: This library provides a set of matrix operations and linear algebra functions for Java applications. It includes support for dense and sparse matrices, as well as matrix factorization and eigenvalue decomposition. By integrating this library, the project can improve its matrix-based operations and enhance its performance in tasks such as data analysis and machine learning.
+
+In conclusion, these five libraries can enhance the project's capabilities in various ways, including spatial analysis, machine learning, text analysis, and matrix operations. By incorporating these libraries, the project can improve its overall performance, functionality, and robustness, ultimately providing better results and insights for its users.
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> # Maven Dependencies
+
+Here are the Maven dependencies required for the project:
+
+1. Apache Commons Lang:
+```xml
+<dependency>
+  <groupId>org.apache.commons</groupId>
+  <artifactId>commons-lang3</artifactId>
+  <version>3.9</version>
+</dependency>
+```
+2. Apache Commons Math:
+```xml
+<dependency>
+  <groupId>org.apache.commons</groupId>
+  <artifactId>commons-math3</artifactId>
+  <version>3.9</version>
+</dependency>
+```
+3. Apache Commons Statistics:
+```xml
+<dependency>
+  <groupId>org.apache.commons</groupId>
+  <artifactId>commons-statistics</artifactId>
+  <version>1.2</version>
+</dependency>
+```
+4. Joda-Time:
+```xml
+<dependency>
+  <groupId>joda-time</groupId>
+  <artifactId>joda-time</artifactId>
+  <version>2.9.9</version>
+</dependency>
+```
+5. Guava:
+```xml
+<dependency>
+  <groupId>com.google.guava</groupId>
+  <artifactId>guava</artifactId>
+  <version>28.0-jre</version>
+</dependency>
+```
+6. Jackson:
+```xml
+<dependency>
+  <groupId>com.fasterxml.jackson.core</groupId>
+  <artifactId>jackson-databind</artifactId>
+  <version>2.9.8</version>
+</dependency>
+```
+7. Apache Commons Text:
+```xml
+<dependency>
+  <groupId>org.apache.commons</groupId>
+  <artifactId>commons-text</artifactId>
+  <version>1.3</version>
+</dependency>
+```
+8. Apache Commons IO:
+```xml
+<dependency>
+  <groupId>org.apache.commons</groupId>
+  <artifactId>commons-io</artifactId>
+  <version>2.4</version>
+</dependency>
+```
+9. Hamcrest:
+```xml
+<dependency>
+  <groupId>org.hamcrest</groupId>
+  <artifactId>hamcrest-library</artifactId>
+  <version>1.3</version>
+</dependency>
+```
+10. JUnit:
+```xml
+<dependency>
+  <groupId>junit</groupId>
+  <artifactId>junit</artifactId>
+  <version>4.12</version>
+</dependency>
+```
+Please note that the versions of the dependencies may vary based on your project's requirements and the latest available versions at the time of writing this answer.
+
+Precision: 0.2
+Recall: 0.041666666666666664
+F1 Score: 0.06896551724137931
+
+Formatted Dependencies:
+org.geonames:geonames
+- org.apache.lucene:lucene-core
+- org.openimaj:machine-learning
+- org.apache.lucene:lucene-queryparser
+- org.restlet.jse:org.restlet.ext.json
+- org.trendminer:twitter
+- org.openimaj:nearest-neighbour
+- org.apache.opennlp:opennlp-maxent
+- org.openimaj.hadoop.tools:core-hadoop-tool
+- org.openimaj:core-experiment
+- org.arabidopsis.ahocorasick:ahocorasick
+- org.ostermiller:utils
+- de.bwaldvogel:liblinear-dense
+- org.restlet.jse:org.restlet
+- com.jayway.jsonpath:json-path
+- org.openimaj:core-feature
+- uk.co.magus.fourstore:4store-client
+- org.trendminer:test-resources
+- info.bliki.wiki:bliki-core
+- com.jayway.jsonpath:json-path-assert
+- org.trendminer.hadoop.tools:HadoopTwitterPreprocessingTool
+- joda-time:joda-time
+- org.trendminer.tools:TwitterPreprocessingTool
+- org.openimaj:test-resources
+ Test Dependencies:
+['net.sourceforge.jmatio:jmatio', 'org.openimaj:clustering', 'org.openimaj:core-rdf', 'com.twitter:twitter-text', 'org.apache.opennlp:opennlp-tools', 'junit:junit', 'de.bwaldvogel:liblinear', 'mysql:mysql-connector-java', 'org.apache.lucene:lucene-analyzers-common', 'org.openimaj.tools:core-tool', 'commons-lang:commons-lang', 'org.openimaj:core-hadoop', 'org.apache.opennlp:opennlp-uima', 'org.openimaj:nlp', 'org.restlet.jse:org.restlet.ext.fileupload', 'org.twitter4j:twitter4j-core', 'org.openimaj:core-math', 'org.mongodb:mongo-java-driver', 'org.openimaj:core', 'org.twitter4j:twitter4j-stream', 'com.google.code.gson:gson', 'jmatio:jmatio', 'tw.edu.ntu.csie:libsvm', 'gov.sandia.foundry:gov-sandia-cognition-text-core']

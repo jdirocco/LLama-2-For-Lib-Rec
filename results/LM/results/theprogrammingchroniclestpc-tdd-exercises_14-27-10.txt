@@ -1,0 +1,194 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: theprogrammingchronicles/tpc-tdd-exercises
+    Project Description: TestDriven Development Exercises\n'
+    Existing Dependencies:
+    org.mockito:mockito-all
+- javax.servlet.jsp:jsp-api
+- taglibs:standard
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 3 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div id="page-wrapper">
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                <?php echo $subPage;?>
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+        <div class="col-lg-6">
+
+            <form role="form" name="myForm" action="<?php echo site_url();?>/AdminUser/saveUser" method="POST" enctype="multipart/form-data" onsubmit="return validation()">
+                <input type="hidden" name="userID" value="<?php if(isset($edit_user_data[0]['user_info_id'])) echo $edit_user_data[0]['user_info_id'];?>">
+                <div class="form-group">
+                    <label>First Name <span style="font-size: 12px;">(required)</span></label>
+                    <input class="form-control" name="firstName" value="<?php if(isset($edit_user_data[0]['user_name'])) echo $edit_user_data[0]['user_name'];?>" placeholder="Your first name" required>
+                </div>
+                <div class="form-group">
+                    <label>Last Name <span style="font-size: 12px;">(required)</span></label>
+                    <input class="form-control" name="lastName" value="<?php if(isset($edit_user_data[0]['user_last_name'])) echo $edit_user_data[0]['user_last_name'];?>" placeholder="Your last name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address <span style="font-size: 12px;">(required)</span></label>
+                    <input class="form-control" name="email" value="<?php if(isset($edit_user_data[0]['user_email'])) echo $edit_user_data[0]['user_email'];?>" type="email" placeholder="Your email" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input class="form-control" name="phoneNumber" value="<?php if(isset($edit_user_data[0]['user_phone_no'])) echo $edit_user_data[0]['user_phone_no'];?>" placeholder="Your phone number" type="number" minlength="10" min="0">
+                </div>
+                <div class="form-group">
+                    <label>Password <span style="font-size: 12px;">(required)</span></label>
+                    <input class="form-control" name="password" value="" placeholder="Your password" type="password" required>
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password <span style="font-size: 12px;">(required)</span></label>
+                    <input class="form-control" name="confirmPassword" value="" placeholder="Confirm password" type="password" onBlur="confirmPassword()" id="confirmPassword" required>
+                </div>
+                <div class="form-group
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 3 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e,
+        ),
+      ),
+    );
+  }
+}
+ import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+
+import '../../../core/components/circular_progress.dart';
+import '../login_controller.dart';
+
+class LoginPage extends StatefulWidget {
+  final String title;
+
+  const LoginPage({Key? key, this.title = 'Login'}) : super(key: key);
+
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final LoginController _login = Modular.get<LoginController>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        padding: EdgeInsets.only(
+          top: 50,
+          left: 20,
+          right: 20,
+        ),
+        child: _login.isLoading.value
+           ? CircularProgress()
+            : Center(
+                child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    "assets/flutter_logo.png",
+                    width: 75.0,
+                  ),
+                  Text('Login'),
+                  Observer(builder: (_) => _login.isAuthenticated.value
+                     ? Text('Login com Sucesso')
+                      : Text('')),
+                ],
+              ),
+            ),
+      ),
+    );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _login.getUser();
+  }
+
+  @override
+  void dispose() {
+    _login.getUser();
+    super.dispose();
+  }
+
+  void _login() async {
+    await Modular.to.pushReplacementNamed('/home');
+  }
+
+  Future<void> _register() async {
+    await Modular.to.pushReplacementNamed('/login');
+  }
+
+  Widget _button(String label, Function() onPressed, {bool login = false}) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ButtonTheme(
+        minWidth: 300.0,
+        child: ElevatedButton(
+          child: Text(
+            label,
+            style: const TextStyle(
+              color: Colors.white,
+            ),
+          ),
+          onPressed: onPressed,
+          style: ElevatedButton.styleFrom(
+            textStyle: const TextStyle(fontSize: 20),
+            elevation: 10,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30),
+            ),
+            primary: login? Colors.blue : Colors.red,
+          ),
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        padding: EdgeInsets.only(
+          top: 50,
+          left: 20,
+          right: 20,
+        ),
+        child: Column(
+          children: [
+            _login
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,163 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: drtshock/Essentials
+    Project Description: \n\n\n\n\n\n\n\nThis is a fork of Essentials called EssentialsX.\n\nIf you are using this, do NOT ask Essentials for support.\n\nThe official upstream repository for the original Essentials project is at Why use EssentialsX?\n\nEssentialsX is a continuation of the Essentials plugin suite, updated to support modern Minecraft and Spigot versions.\n\nIt provides countless new features, performance enhancements and fixes that are not available in the original\nEssentials or SpigotEssentials. \n\nIf you\'re coming from the original Essentials plugin, EssentialsX is a dropin replacement for Essentials. It does,\nhowever, have some new requirements:\n\n EssentialsX requires CraftBukkit, Spigot or Paper to run. Other server software may work, but these are not tested\n by the team and we may not be able to help with any issues that occur.\n EssentialsX currently supports Minecraft versions 1.8.8, 1.9.4, 1.10.2, 1.11.2, 1.12.2, 1.13.2, 1.14.4, 1.15.2, \n 1.16.5, 1.17.1, 1.18.2, 1.19.4, and 1.20.4.\n EssentialsX currently requires Java 8 or higher. We recommend using the latest Java version supported by your\n server software.\n EssentialsX requires to enable using chat prefix/suffixes and\n group support from supported permissions plugins.\n We recommend using for permissions and groups.\n If you have an unsupported permissions plugin but still want to use wildcards, enable in\n the configuration. Otherwise, the plugin will fall back to configbased permissions.\n\n\n Support\n\nNeed help with using EssentialsX? Join the to ask for help and discuss EssentialsX.\n\nIf you need to report a bug or want to suggest a new feature, you can .\n\n\n Building\n\nTo build EssentialsX, you need JDK 8 or higher installed on your system.\n\nClone this repository, then run the following command:\n\n On Linux or macOS: \n On Windows: \n\nYou can then find builds of EssentialsX modules in the directory.\n\n Running a test server\n\nYou can also run a test server from your development environment using the following command:\n\n On Linux or macOS: \n On Windows: \n\nNote the without it, you will run several servers at once, which will likely crash Gradle.\n\n\n Using EssentialsX in your plugin\n\nDo you want to integrate with EssentialsX in your plugin? You can build your plugin against the EssentialsX API,\navailable from the EssentialsX Maven repo.\n\nReleases are hosted on the Maven repo at , while snapshots including dev\nbuilds are hosted at .\n\nTo add EssentialsX to your build system, you should use the following artifacts:\n\n| Type | Group ID | Artifact ID | Version |\n|:|:|:|:|\n| Latest release | | | |\n| Snapshots | | | |\n| Older releases | | | |\n\nNote: until version , EssentialsX used the group ID. \nFrom onwards, EssentialsX uses the group ID. \nWhen updating your plugin, make sure you use the correct group ID.\n\nYou can find more information, including Maven and Gradle examples, at the\n.\n\n Support the EssentialsX project\n\nWant to help improve EssentialsX? There are several ways you can support and contribute to the project.\n\n Donate to EssentialsX\n\nDonations allow us to cover the costs of our infrastructure, and also enable us to keep updating EssentialsX with new\nfeatures and for new Minecraft versions.\n\nYou can support us with a oneoff or monthly donation via ,\nand you\'ll get a badge on GitHub for supporting the project through this.\n\nAlternatively, you can also donate monthly to the EssentialsX project on ,\nor you can make a oneoff donation on our .\n\nIf you can\'t make a donation, don\'t worry! There are lots of other ways to contribute:\n\n Contributing directly to EssentialsX\n\n Are you a developer? We\'re always happy to receive bug fixes and feature additions as pull requests.\n Do you speak multiple languages? If so, we always welcome contributions to our community translations.\n .\n\nSee to find out more.\n\n Providing support to other users\n\n Do you run a server? Take a look at our\n \n and \n issues, where you can find issues that need extra testing and investigation.\n Do you want to help others set up EssentialsX? You can contribute to the\n . You can also join the\n and provide direct community support to other EssentialsX users.\n'
+    Existing Dependencies:
+    org.bukkit:craftbukkit
+- MultiCurrency:MultiCurrency
+- net.ess3:ReflectionProvider
+- com.maxmind.geoip:geoip-api
+- net.ess3:NMSProvider
+- net.ess3:LegacyProvider
+- net.milkbowl.vault:Vault
+- org.bukkit:bukkit
+- iConomy:iConomy6
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+    <div class="card-body">
+        <h5 class="card-title mb-4">{{ $title }}</h5>
+        <!-- Table with stripped rows -->
+        <table class="table datatable">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Role</th>
+                    <th scope="col" class="relative px-6 py-3">
+                        <span class="sr-only">Edit</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @forelse ($customers as $customer)
+                    <tr>
+                        <th scope="row">{{ $customer->id }}</th>
+                        <td>{{ $customer->name }}</td>
+                        <td>{{ $customer->email }}</td>
+                        <td>{{ $customer->phone }}</td>
+                        <td>{{ $customer->role }}</td>
+                        <td>
+                            @if (auth()->user()->role === $customer->role)
+                                <button data-customer="{{ $customer}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded w-20">Edit Role</button>
+                            @else
+                                
+                            @endif
+                            <form class="inline-block" action="{{ route('customers.destroy', $customer->id) }}" method="POST" onsubmit="return confirm('Are you sure?');">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded" value="Delete">
+                            </form>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="6" class="text-center p-5">
+                             Data not found
+                        </td>
+                    </tr>
+                @endforelse
+            </tbody>
+        </table>
+        <!-- End Table with stripped rows -->
+
+     </div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s,
+      :message
+    ]
+  end
+end
+ defmodule Ecto.Rut.Validator do
+  @doc """
+  Validate the given rut with the given options.
+
+
+  """
+  def validate(rut, options \\ []) do
+    if Ecto.Rut.is_valid?(rut) do
+      []
+    else
+      [{:error, :not_a_valid_rut, options[:message] || default_message()}]
+    end
+  end
+
+  defp default_message() do
+    %{
+      "es" => "No es un RUT válido",
+      "en" => "Is not a valid RUT"
+    }
+  end
+
+  @doc false
+  def validate_options(options) do
+    validate_format_options(options)
+  end
+
+  @doc false
+  defp validate_format_options(options) do
+    if not Keyword.has_key?(options, :message) and Keyword.has_key?(options, :format) do
+      validate_format_options([{:message, default_message()} | options])
+    else
+      validate_format_options(options)
+    end
+  end
+
+  defp validate_format_options(options) do
+    if Keyword.has_key?(options, :message) and not Keyword.has_key?(options, :format) do
+      validate_format_options([{:format, :full} | options])
+    else
+      options
+    end
+  end
+
+  def format_message(options) do
+    format = options[:format] || :short
+
+    %{
+      0 => Ecto.Rut.format(options[:value], format)
+    }
+  end
+
+  def format(options) do
+    validate_options(options)
+    |> Keyword.merge([format: :full])
+    |> format_message()
+  end
+
+  @doc """
+  Returns the list of options.
+  """
+  def __validator_options__() do
+    [
+      :format,
+      :min_dv_value
+
+Precision: 0
+Recall: 0
+F1 Score: 0

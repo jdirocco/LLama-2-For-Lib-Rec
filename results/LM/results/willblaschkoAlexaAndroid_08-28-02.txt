@@ -1,0 +1,97 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: willblaschko/AlexaAndroid
+    Project Description: Alexa Voice Library\n\n=======\n\nA library and sample app to abstract access to the Amazon Alexa service for Android applications.\n\nFirst and foremost, my goal with this project is to help others who have less of an understanding of Java, Android, or both, to be able to quickly and easily integrate the Amazon Alexa platform into their own applications.\n\nFor getting started with the Amazon Alexa platform, take a look over here: updated with functionality for the Alexa .\n\n Applications\n\n Sample Application\n\nCurious about what the library can do? A quick example of the three main functions live recorded audio events, texttospeech intents, prerecorded audio intents, plus sample code can be found in the \n\n Compiling and running the sample application\n Follow the process for creating a connected device detailed at the Amazon link at the top of the Readme.\n Add your apikey.txt file part of the Amazon process to the app/src/main/assets folder\n Change to the value for my Alexa application that you configured for "Application Type Id" above.\n Build and run the sample app using Gradle from the command line or Android Studio!\n\n Production Application\n\nOr see what the library can do when converted into a full package, complete with optional alwayson listener: \n\n Using the Library\n\nMost of the library can be accessed through the and classes, both of which are singletons.\n\n Installation\n\n Ensure you\'re pulling from jcenter for your project projectlevel build.gradle:\n\n Add the library to your imports applicationlevel build.gradle:\n\n Follow the process for creating a connected device detailed in the Amazon link at the top of the Readme.\n Follow the instructions for adding your key and preparing the Login with Amazon activity from the \n Add your apikey.txt file part of the Login with Amazon process detailed in the link above to the app/src/main/assets folder.\n Start integration and testing!\n\n Library Instantiation and Basic Return Parsing\n\n\n\n\n Recipes\n\nHere\'s a quick overview of the code that will likely be required to create a solid application, check the for more details.\n\n Logging In To Amazon\n\n\n Send Live Audio bonus: check for permission\n\n\n Send Prerecorded Audio\n\n\n Send Text Request\n\n\n Play Returned Content\n\n\n Everything Else\n\nLet me know if you would like to contribute to this library!\n\n Thanks\n for MP3 work\n'
+    Existing Dependencies:
+    com.intellij:annotations
+- com.android.support:support-annotations
+- com.squareup.okhttp3:okhttp
+- org.hamcrest:hamcrest-library
+- org.greenrobot:eventbus
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
+    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
+    {{-- @if($user->role=='admin') --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/adminStyle.css') }}">
+    {{-- @else --}}
+    <link rel="stylesheet" type="text/css"  href="{{ asset('assets/css/employeeStyle.css') }}">
+{{-- @endif --}}
+    {{-- <link rel="stylesheet" type="text/css"  href="{{ asset('assets/css/style.css') }}"> --}}
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use App\Http\Requests;
+use App\Models\Posts;
+
+class PagesController extends Controller
+{
+    public function getIndex() {
+        $posts = Posts::orderBy('created_at', 'desc')->limit(4)->get();
+        return view('pages.welcome')->withPosts($posts);
+    }
+
+    public function getAbout() {
+        return view('pages.about');
+    }
+
+    public function getContact() {
+        return view('pages.contact');
+    }
+
+    public function getPosts() {
+
+        $posts = Posts::orderBy('created_at', 'desc')->paginate(10);
+        return view('pages.posts')->withPosts($posts);
+        
+    	
+    }
+
+    public function getSingle($slug) {
+        // fetch the Post
+        $post = Posts::where('slug', '=', $slug)->first();
+
+        // return the view and pass in the Post object
+        return view('pages.post')->withPost($post);
+    }
+
+}
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

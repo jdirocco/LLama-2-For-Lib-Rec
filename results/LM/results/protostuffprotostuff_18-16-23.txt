@@ -1,0 +1,222 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: protostuff/protostuff
+    Project Description: \n\n\nA java serialization library with builtin support for forwardbackward compatibility schema evolution and validation.\n\n efficient, both in speed and memory\n flexible, supporting pluggable formats\n\n Usecase\n messaging layer in RPC\n storage format in the datastore or cache\n\nFor more information, go to Maven\n\n1. For the core formats protostuff, protobuf, graph\n \n \n\n2. For schemas generated at runtime\n \n \n\n Usage\n\n\n Important for version 1.8.x\nIf you are to purely use this to replace java serialization no compatibility with protobuf, set the following system properties:\n\n\nYou can also customize it programmatically:\n\n\nUse it:\n\n\nQuestions/Concerns/Suggestions\n\n\n subscribe to 1.6 or higher\n\nBuild Requirements\n\n\nMaven 3.2.3 or higher\n\nDeveloping with eclipse\n\n\n'
+    Existing Dependencies:
+    org.codehaus.plexus:plexus-classworlds
+- org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.antlr:stringtemplate
+- io.protostuff:protostuff-maven-plugin
+- org.codehaus.plexus:plexus-component-annotations
+- org.apache.maven:maven-model
+- io.protostuff:protostuff-parser
+- org.hamcrest:hamcrest-core
+- org.apache.maven:maven-core
+- org.apache.velocity:velocity
+- org.codehaus.plexus:plexus-utils
+- io.protostuff:protostuff-runtime
+- io.protostuff:protostuff-core
+- io.protostuff:protostuff-api
+- com.fasterxml.jackson.dataformat:jackson-dataformat-smile
+- io.protostuff:protostuff-runtime-view
+- org.antlr:antlr-runtime
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">Tambah Kamar</li>
+        </ol>
+
+        <!-- DataTables Example -->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-plus-circle"></i>
+            Form tambah kamar
+            <div style="float: right;">
+              <a href="<?= base_url('admin/kamar')?>" title="kembali"><i class="fas fa-arrow-left"></i></a>
+            </div>
+          </div>
+          <div class="card-body">
+            <?php echo validation_errors(" ","</p>");?>
+            <form method="post" enctype="multipart/form-data" action="<?= base_url('admin/tambah_kamar');?>">
+              <div class="form-group">
+                <label>Nama kamar</label>
+                <input type="text" class="form-control" id="nm_kamar" name="nm_kamar" required autofocus>
+              </div>
+              <div class="form-group">
+                <label>Harga</label>
+                <input type="number" class="form-control" id="harga" name="harga" required autofocus>
+              </div>
+              <div class="form-group">
+                <label>Keterangan</label>
+                <textarea class="form-control" id="ket" name="ket" required></textarea>
+              </div>
+              <div class="form-group">
+                <label>Foto kamar</label>
+                <input type="file" class="form-control"  name="foto" required >
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit">Tambah <i class="fas fa-plus-circle"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container-fluid -->
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import { getRepository } from "typeorm";
+
+import { AppError } from "../../../errors/AppError";
+import { User } from "../../../models/User";
+
+import { IUserRepository } from "../../IUserRepository";
+
+export class UserRepository implements IUserRepository {
+  private ormRepository: Repository<User>;
+
+  constructor() {
+    this.ormRepository = getRepository(User);
+  }
+
+  public async findById(id: string): Promise<User | undefined> {
+    const user = await this.ormRepository.findOne(id);
+    return user;
+  }
+
+  public async deleteUser(id: string): Promise<void> {
+    await this.ormRepository.delete(id);
+    return;
+  }
+
+  public async findByName(name: string) {
+    if (!name) {
+      throw new AppError("The name field cannot be empty or invalid.");
+    }
+
+    const user = await this.ormRepository.findOne({
+      name,
+    });
+
+    return user;
+  }
+
+  public async findByEmail(email: string) {
+    if (!email) {
+      throw new AppError("The Email field cannot be empty or invalid.");
+    }
+
+    const user = await this.ormRepository.findOne({
+      email,
+    });
+
+    return user;
+  }
+
+  public async findByEmailOrUsername(
+    email: string,
+    username?: string
+  ): Promise<User | undefined> {
+    if (!username) {
+      throw new AppError("The username field cannot be empty or invalid.");
+    }
+
+    const user = await this.ormRepository.findOne({
+      where: [{ email }, { username }],
+    });
+
+    return user;
+  }
+
+  public async findByIdAndToken(id: string, token: string) {
+    const user = await this.ormRepository.findOne({
+      where: { id, token },
+    });
+
+    if (!user) {
+      throw new AppError("Invalid Token!");
+    }
+
+    return user;
+  }
+
+  public async findByEmailAndPassword(
+    email: string,
+    password: string
+  ): Promise<User | undefined> {
+    const user = await this.ormRepository.findOne({
+      where: { email, password },
+    });
+
+    return user;
+  }
+
+  public async createUser(user: User): Promise<void> {
+    await this.ormRepository.save(user);
+
+    return;
+  }
+
+  public async createOrUpdate({
+    userId: userId!,
+    token: token!,
+  }: {
+    userId?: string | undefined;
+    token?: string | undefined;
+  }): Promise<void> {
+    const user = await this.ormRepository.findOne(userId);
+
+    if (!user) {
+      throw new AppError("Invalid User!");
+    }
+
+    const userUpdatedData = {
+     ...user,
+      token,
+    };
+
+    await this.ormRepository.save(userUpdatedData);
+
+    return;
+  }
+
+  public async getTokenByUserId(userId: string): Promise<string> {
+    const user = await this.ormRepository.findOne(userId);
+
+    return user!.token;
+  }
+}
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

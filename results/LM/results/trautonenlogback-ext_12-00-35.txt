@@ -1,0 +1,198 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: trautonen/logback-ext
+    Project Description: Logback Extensions\n==================\n\n\n\n\nExtensions for Logback logging library mainly for appenders aimed for Amazon Web Services,\nincluding CloudWatch Logs, DynamoDB, Kinesis, SNS and SQS appenders. Contains also high\nperformance asynchronous appender based on LMAX disrupotr and some utilities like Jackson JSON\nencoder.\n\n\n Using Logback Extensions\n\nLogback Extensions requires Java 7 or newer. Include desired modules in your project's\ndependency management and configure the appenders or encoders using Logback's XML configutation\nor Java API.\n\n\n Modules\n\nAll modules belong to group . See each module for specific documentation.\n\n Extensions core module: \n AWS core module: \n Jackson JSON encoder: \n LMAX Disruptor appender: \n CloudWatch appender: \n DynamoDB appender: \n Kinesis appender: \n SNS appender: \n SQS appender: \n\n\n AWS Authentication\n\nAll AWS based appenders require IAM authentication. The default credentials provider from\n creates a credential chain in the following order.\n\n1. Environment variables and \n2. System properties and \n3. Appender configuration properties and \n4. AWS profile configuration file \n5. EC2 instance role\n\nBest practice for EC2 instances is to use instance role only. With instance role no access keys or\nsecret keys are exposed if the server is compromised.\n\n\n Continuous Integration\n\nTravisCI builds the project with Oracle JDK 7 and 8. Builds created with Oracle JDK 7 are deployed\nto Sonatype OSSRH.\n"
+    Existing Dependencies:
+    org.eluder.logback:logback-ext-core
+- org.assertj:assertj-core
+- com.amazonaws:aws-java-sdk-logs
+- com.amazonaws:aws-java-sdk-dynamodb
+- com.amazonaws:aws-java-sdk-kinesis
+- com.lmax:disruptor
+- ch.qos.logback:logback-access
+- com.amazonaws:aws-java-sdk-sns
+- org.eluder:eluder-parent
+- org.eluder.logback:logback-ext
+- org.eluder.logback:logback-ext-sns-appender
+- com.google.guava:guava
+- com.fasterxml.jackson.core:jackson-databind
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 13 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <?php  $this->load->view('admin/includes/header')?>
+      <?php  $this->load->view('admin/includes/sidebar')?>
+            <div class="page-wrapper">
+               <!-- ============================================================== -->
+               <!-- Bread crumb and right sidebar toggle -->
+               <!-- ============================================================== -->
+               <div class="page-breadcrumb">
+                  <div class="row">
+                     <div class="col-12 d-flex no-block align-items-center">
+                        <h4 class="page-title">Manage Blogs</h4>
+                        <div class="ml-auto text-right">
+                           <nav aria-label="breadcrumb">
+                              <ol class="breadcrumb">
+                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                 <li class="breadcrumb-item active" aria-current="page">
+                                    Manage Blogs
+                                 </li>
+                              </ol>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- ============================================================== -->
+               <!-- End Bread crumb and right sidebar toggle -->
+               <!-- ============================================================== -->
+               <!-- ============================================================== -->
+               <!-- Container fluid  -->
+               <!-- ============================================================== -->
+               <div class="container-fluid">
+                  <!-- ============================================================== -->
+                  <!-- Start Page Content -->
+                  <!-- ============================================================== -->
+                  <div class="row">
+                     <div class="col-8 offset-2">
+                        <!-- column -->
+                        <div class="col-lg-12">
+                           <div class="card">
+                              <h2 class="card-title">
+                               
+                               <?php if($this->session->flashdata('success')){?>
+                                 <div class="alert alert-success alert-dismissible">
+                                  <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                  <strong style="color:#FFFFFF;"> <?php echo $this->session->flashdata('success');?></strong> 
+                                 </div>
+                               <?php }?>
+
+                               <?php if($this->session->flashdata('error')){?>
+                                 <div class="alert alert-danger alert-dismissible">
+                                  <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                  <strong style="color:red;"> <?php echo $this->session->flashdata('error');?></strong> 
+                                 </div>
+                               <?php }?>
+
+                              Add Blog</h2>
+                              <div class="card-body">
+
+                               <form action="<?php echo base_url()?>admin/Blogs/add_blog" method="post" enctype="multipart/form-data">
+                                  <div class="basic-elements">
+                                   
+                                       <div class="row">
+                                           <div class="col-md-8">
+                                              <div class="form-group">
+                                                <input type="text" name="title" required="" class="form-control" placeholder="Title of Blog
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 13 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>  }
+}
+ package com.mrousavy.camera.frameprocessor
+
+import android.graphics.Image
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import org.jetbrains.annotations.NotNull
+import org.jetbrains.annotations.Nullable
+
+data class ImageProxy(
+  val image: Image,
+  val format: ImageFormat,
+  val orientation: ImageOrientation
+)
+
+data class ImageProxyInternal(@NotNull private val imageProxy: ImageProxy) : ImageProxy by imageProxy
+
+/**
+ * This class represents an image that has been received by a [FrameProcessor].
+ *
+ * To obtain an `ImageProxy` instance, register a `FrameProcessor` using [FrameProcessorPlugin.addFrameProcessor].
+ */
+expect abstract class ImageWrapper constructor(private val imageProxy: ImageProxy) : ImageProxy by imageProxy {
+  /**
+   * The format of this image's pixel data.
+   *
+   * See [ImageFormat] for more information.
+   */
+  @NotNull
+  override val format: ImageFormat
+
+  /**
+   * A description of the rotation applied to this image.
+   *
+   * @see [rotationDegrees]
+   */
+  @NotNull
+  override val orientation: ImageOrientation
+
+  /**
+   * Returns the rotation applied to this image.
+   *
+   * If [orientation] is not [ImageOrientation.UP], [rotationDegrees] will be different from zero.
+   *
+   * @see [orientation]
+   */
+  @NotNull
+  override val rotationDegrees: Double
+    get() {
+      return when (orientation) {
+        ImageOrientation.UP -> 0.0
+        ImageOrientation.DOWN -> 180.0
+        ImageOrientation.LEFT -> 270.0
+        ImageOrientation.RIGHT -> 90.0
+      }
+    }
+
+  /**
+   * The timestamp of the image.
+   */
+  @Nullable
+  override val timestamp: Double?
+
+  /**
+   * Returns a [ByteBuffer] containing this image's pixel data. Note: this is only available on Android. On iOS, [toImage] returns an [Image] instead.
+   *
+   * The pixel data returned by this method depends on the [ImageFormat] of this `ImageProxy`.
+   *
+   * @see [format]
+   */
+  fun toByteBuffer(): ByteBuffer
+
+  /**
+   * Returns an [Image] containing this image's pixel data. Note: this is only available on iOS. On Android, [toByteBuffer] returns a [ByteBuffer] instead.
+   *
+   * The pixel data returned by this method depends on the [ImageFormat] of this `ImageProxy`.
+   *
+   * @see [format]
+   */
+  suspend fun toImage(): Image
+
+  suspend fun <T> map(fn: suspend (ImageProxy) -> T): T {
+    return withContext(Dispatchers.Main.immediate) {
+      fn(imageProxy)
+    }
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

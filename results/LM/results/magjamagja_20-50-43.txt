@@ -1,0 +1,116 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: magja/magja
+    Project Description: Magja | Magento Java Connector\n\n\n\n\nMagja is a Java Connector for Magento's SOAP API that allows easy integration with the popular shop system\nand allows to exchange all data available by the Magento API.\n\n Core Features\n Basic support for Magento 1.x SOAP API V1\n Allows access to:\n Product\n Product Media\n Product Link\n Product Categories\n Product Attributes\n Country\n Region\n Customer\n Order\n Invoice\n Cart\n Extensible without code generation for custom API\n\n Documentation\n\nThe official documentation is located on the .\n\n Development notes\n\nWe use Travis CI to ensure that builds are passing. CodeCov is used to measure test coverage and SonarQube to find bugs.\n\nMagja is build using Apache Maven. Please run:\n\n mvn clean package\n\nto build the software. There is a Maven profile included, running the entire integrationtest suite against a Magento Shop.\nPlease make sure to place your file in and run the following command to execute the integration tests:\n\n mvn clean install P itest\n\nFo producing a release, the following command is used only if you have enough permissions to do so:\n\n mvn batchmode Dmaven.test.skip=true Dresume=false clean release:prepare release:perform\n\n Sonar metrics\n\n\n\n\n\n\n References and History\n\nMagja has been developed on Google Code, so old resources are still available at:\n\n Magja at google code: Installation for use: Setup project for development: Wiki Pages: "
+    Existing Dependencies:
+    org.apache.axis2:axis2-kernel
+- org.slf4j:jul-to-slf4j
+- commons-io:commons-io
+- org.apache.axis2:axis2-adb
+- commons-logging:commons-logging
+- org.apache.geronimo.specs:geronimo-activation_1.1_spec
+- org.apache.commons:commons-lang3
+- org.slf4j:slf4j-api
+- commons-beanutils:commons-beanutils
+- org.apache.axis2:axis2-transport-local
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+<section class="section_20">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 text-center order-2 col-md-offset-0">
+                    <h3 class="text-white">{{ $title->title }}</h3>
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> #ifndef RAVL_DPIIMAGECONV_HH
+#define RAVL_DPIIMAGECONV_HH 1
+//////////////////////////////////////////////////////////////////////////
+//! docentry="Ravl.API.Images.Display.Video.Video IO" 
+//! lib=RavlVideoIO
+//! file="Ravl/Contrib/DPIImage/DPImageConv.hh"
+
+#define INSTANTIATE_SAVELOADAS(C) \
+  template ostream &operator<<(ostream &s,const C &v) \
+  { \
+  static const char *s2 = "<" + typeName(C()) + ">"; \
+    return s << DPImageConverter<C>::Convert(v); \
+  }
+
+#define INSTANTIATE_SAVELOADAS_R(C) \
+  template istream &onst char *s2 = "<" + typeName(C()) + ">"; \
+    return s >> DPImageConverter<C>::Convert(ret); \
+  }
+
+#include "Ravl/DP/Image.hh"
+#include "Ravl/Image/ByteRGBValue.hh"
+#include "Ravl/Image/RGBValue.hh"
+#include "Ravl/Image/RGBdValue.hh"
+
+namespace RavlImageN {
+  using namespace RavlImageN;
+  
+  template<> class DPImageConverter<ByteRGBValueC> {
+  public:
+    static ImageC<ByteRGBValueC> Convert(const ImageC<ByteRGBValueC> &img)
+    { return img; }
+  };
+
+  template<> class DPImageConverter<RGBValueC> {
+  public:
+    static ImageC<RGBValueC> Convert(const ImageC<ByteRGBValueC> &img)
+    { return ImageC<RGBValueC>(img); }
+  };
+
+  template<> class DPImageConverter<RGBdValueC> {
+  public:
+    static ImageC<RGBdValueC> Convert(const ImageC<RGBValueC> &img)
+    { return ImageC<RGBdValueC>(img); }
+  };
+
+  INSTANTIATE_SAVELOADAS(ImageC<ByteRGBValueC>);
+  INSTANTIATE_SAVELOADAS(ByteRGBValueC);
+
+#if 0 
+  INSTANTIATE_SAVELOADAS(ImageC<RGBValueC>);
+  INSTANTIATE_SAVELOADAS(RGBValueC);
+  INSTANTIATE_SAVELOADAS(RGBdValueC);
+#endif
+
+}
+
+
+#endifperator>>( istream &s,C &ret) { \
+  static co
+
+Precision: 0
+Recall: 0
+F1 Score: 0

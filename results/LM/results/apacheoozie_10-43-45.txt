@@ -1,0 +1,185 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: apache/oozie
+    Project Description: Apache Oozie\n=============\n\nWhat is Oozie\n\n\nOozie is an extensible, scalable and reliable system to define, manage, schedule, and execute complex Hadoop workloads via web services. More specifically, this includes:\n\n XMLbased declarative framework to specify a job or a complex workflow of dependent jobs.\n Support different types of job such as Hadoop MapReduce, Pipe, Streaming, Pig, Hive and custom java applications.\n Workflow scheduling based on frequency and/or data availability.\n Monitoring capability, automatic retry and failure handing of jobs.\n Extensible and pluggable architecture to allow arbitrary grid programming paradigms.\n Authentication, authorization, and capacityaware load throttling to allow multitenant software as a service.\n\nOozie Overview\n\n\nOozie is a server based Workflow Engine specialized in running workflow jobs with actions that run Hadoop Map/Reduce and Pig jobs.\n\nOozie is a Java WebApplication that runs in a Java servletcontainer.\n\nFor the purposes of Oozie, a workflow is a collection of actions i.e. Hadoop Map/Reduce jobs, Pig jobs arranged in a control dependency DAG Directed Acyclic Graph. "control dependency" from one action to another means that the second action can\'t run until the first action has completed.\n\nOozie workflows definitions are written in hPDL a XML Process Definition Language similar to JBOSS JBPM jPDL.\n\nOozie workflow actions start jobs in remote systems i.e. Hadoop, Pig. Upon action completion, the remote systems callback Oozie to notify the action completion, at this point Oozie proceeds to the next action in the workflow.\n\nOozie workflows contain control flow nodes and action nodes.\n\nControl flow nodes define the beginning and the end of a workflow start , end and fail nodes and provide a mechanism to control the workflow execution path decision , fork and join nodes.\n\nAction nodes are the mechanism by which a workflow triggers the execution of a computation/processing task. Oozie provides support for different types of actions: Hadoop mapreduce, Hadoop file system, Pig, SSH, HTTP, eMail and Oozie subworkflow. Oozie can be extended to support additional type of actions.\n\nOozie workflows can be parameterized using variables like ${inputDir} within the workflow definition. When submitting a workflow job values for the parameters must be provided. If properly parameterized i.e. using different output directories several identical workflow jobs can concurrently.\n\nDocumentations :\n\nOozie web service is bundle with the builtin details documentation.\n\nMore information could be found at:\n Quick Start:\n Hadoop Versions:\n\n\nThis version of Oozie was primarily tested against Hadoop 2.4.x and 2.6.x.\n\n\n\nIf you have any questions/issues, please send an email to:\n\nuser@oozie.apache.org\n\nSubscribe using the link:\n\n
+    Existing Dependencies:
+    org.powermock:powermock-core
+- org.apache.spark:spark-bagel_${spark.scala.binary.version}
+- org.apache.hadoop:hadoop-minikdc
+- org.quartz-scheduler:quartz
+- jline:jline
+- org.apache.spark:spark-graphx_${spark.scala.binary.version}
+- org.powermock:powermock-api-mockito
+- org.apache.hadoop:hadoop-yarn-api
+- org.apache.hive.hcatalog:hive-webhcat-java-client
+- com.google.guava:guava
+- org.apache.hadoop:hadoop-yarn-server-common
+- commons-cli:commons-cli
+- com.oracle:ojdbc6
+- org.apache.oozie:oozie-sharelib-hcatalog
+- org.apache.hadoop:hadoop-distcp
+- org.apache.activemq:activemq-broker
+- org.apache.oozie:oozie-sharelib-spark
+- org.apache.spark:spark-repl_${spark.scala.binary.version}
+- org.apache.hive:hive-cli
+- org.apache.curator:curator-recipes
+- org.slf4j:slf4j-simple
+- commons-lang:commons-lang
+- javax.servlet.jsp:jsp-api
+- org.apache.httpcomponents:httpcore
+- log4j:apache-log4j-extras
+- io.dropwizard.metrics:metrics-core
+- org.apache.hive:hive-exec
+- org.apache.oozie:oozie-sharelib-pig
+- org.eclipse.jetty:jetty-rewrite
+- info.ganglia.gmetric4j:gmetric4j
+- org.apache.commons:commons-lang3
+- com.google.code.gson:gson
+- log4j:log4j
+- org.eclipse.jetty:jetty-http
+- org.apache.spark:spark-hive_${spark.scala.binary.version}
+- org.apache.openjpa:openjpa-jdbc
+- org.apache.oozie:oozie-sharelib-hive2
+- dk.brics.automaton:automaton
+- org.apache.hadoop:hadoop-streaming
+- commons-codec:commons-codec
+- org.apache.hadoop:hadoop-yarn-server-web-proxy
+- org.apache.spark:spark-streaming-flume_${spark.scala.binary.version}
+- com.googlecode.json-simple:json-simple
+- commons-logging:commons-logging
+- org.apache.openjpa:openjpa-persistence
+- org.codehaus.jackson:jackson-mapper-asl
+- com.icegreen:greenmail
+- org.powermock:powermock-module-junit4
+- commons-el:commons-el
+- commons-io:commons-io
+- org.python:jython-standalone
+- org.apache.curator:curator-x-discovery
+- javax.mail:mail
+- org.eclipse.jetty:jetty-server
+- org.antlr:antlr-runtime
+- org.eclipse.jetty:jetty-servlet
+- org.apache.openjpa:openjpa-persistence-jdbc
+- org.slf4j:slf4j-log4j12
+- guru.nidi:graphviz-java
+- org.apache.hadoop:hadoop-tools
+- commons-pool:commons-pool
+- org.apache.spark:spark-sql_${spark.scala.binary.version}
+- xerces:xercesImpl
+- javax.servlet:servlet-api
+- org.apache.hive:hive-jdbc
+- org.eclipse.jetty:jetty-util
+- org.eclipse.jetty:jetty-webapp
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 67 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="row">
+        <section class="col-md-12">
+          <!-- Custom Tabs -->
+          <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#tab_1" data-toggle="tab">Data User</a></li>
+              
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="tab_1">
+
+          <div class="row">
+          <div class="col-md-12">
+
+
+          
+          
+
+          <section class="panel">
+            <header class="panel-heading"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+             Data User
+            </header>
+            <div class="panel-body">
+              <div class="box-header">  
+             <form  action="" method="Post" >
+                <label>Pilih Tahun </label>    
+              <select name="Tahun" class="form-control" id="pilih_tahun">
+                <?php foreach ($Tahun as $key):?>
+                <option value="<?php echo $key['Tahun'];?>"><?php echo $key['Tahun'];?></option>
+               <?php endforeach?>
+              </select> 
+              
+           </form>   
+          </div><hr />
+          <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Id</th>
+                         <th>Nip</th>
+                         <th>Nama</th>
+                         <th>Jabatan</th>
+                         <th>Pangkat</th>                     
+                      </tr>
+                    </thead>
+                    <tbody id="TampilPegawai"> 
+              
+                    
+                  </tbody> 
+              </table>
+          </div><!-- /content-panel -->
+          </div><!-- /col-md-12 -->
+          </div><!-- /row -->
+  </section><?php 
+
+?>
+
+            </div><!-- /.tab-pane -->
+           
+               </div><!-- /.tab-pane -->
+            </div><!-- /.tab-content -->
+          </div><!-- /.nav-tabs-custom -->
+        </section><!-- /.Left col -->
+      </div><!-- /.row (main row) -->  
+
+
+
+      <!-- jQuery UI 1.11.4 -->
+      <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+    
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 67 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ﻿using System;
+using S    {
+    }
+}
+ystem.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Crestron.SimplSharp.CrestronIO
+{
+    public struct DriveType
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,147 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: pac4j/vertx-pac4j
+    Project Description: \n \n\n\n\nThe project is an easy and powerful security library for Vert.x 4 web applications and web services which supports authentication and authorization, but also application logout and advanced features like CSRF protection.\nIt supports authentication and authorization, but also advanced features like session fixation and CSRF protection.\nIt\'s based on Java 11, Vert.x 4.2 and on the v5. It\'s available under the Apache 2 license.\n\n\n\n1 A represents an authentication mechanism. It performs the login process and returns a user profile. An indirect client is for web applications authentication while a direct client is for web services authentication:\n\n&9656; OAuth SAML CAS OpenID Connect HTTP OpenID Google App Engine Kerberos LDAP SQL JWT MongoDB CouchDB IP address REST API\n\n2 An is meant to check authorizations on the authenticated user profiles or on the current web context:\n\n&9656; Roles/permissions Anonymous/rememberme/fully authenticated Profile type, attribute CORS CSRF Security headers IP address, HTTP method\n\n3 A defines whether the must be applied and can be used for additional web processing\n\n4 The protects an url by checking that the user is authenticated and that the authorizations are valid, according to the clients and authorizers configuration. If the user is not authenticated, it performs authentication for direct clients or starts the login process for indirect clients\n\n5 The finishes the login process for an indirect client\n\n6 The logs out the user from the application and triggers the logout at the identity provider level.\n\n\n Usage\n\n 1 \n\n 2 Define:\n\n the \n the , only for web applications\n the \n\n 3 \n\n 4 \n\n\n Demo\n\nThe demo webapp: is available for tests and implement many authentication mechanisms: Facebook, Twitter, form, basic auth, CAS, SAML, OpenID Connect, Strava, JWT...\n\n\n Versions\n\nThe latest released version is the , available in the .\nThe is under development.\n\nSee the . Learn more by browsing the and the .\n\nSee the as well.\n\n\n Need help?\n\nYou can use the or the .\n\n'
+    Existing Dependencies:
+    io.vertx:vertx-rx-java
+- io.vertx:vertx-web
+- org.jetbrains.kotlin:kotlin-stdlib
+- org.pac4j:pac4j-cas
+- org.pac4j:pac4j-http
+- org.pac4j:pac4j-oidc
+- org.pac4j:pac4j-core
+- org.mockito:mockito-all
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+
+
+                <!--<small>Optional description</small>-->
+            </h1>
+            <!--<ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+                <li class="active">Here</li>
+            </ol>-->
+        </section>
+
+        <!-- Main content -->
+        <section class="content container-fluid">
+
+            <!--------------------------
+              | Your Page Content Here |
+              -------------------------->
+
+            <div class="box-header">
+                <h3 class="box-title">Inventario Actual</h3>
+                <a href="<?php echo base_url();?>index.php/Producto/agregar" class="btn btn-info btn-xs" title="Nuevo Producto" data-toggle="tooltip">
+                    <i class="fa fa-plus"></i>
+                </a>
+            </div>
+            <!-- /.box-header -->
+            <div class="col-md-12 no-pad">
+                <div class="box-tools">
+                    <div class="input-group margin-bottom-15" style="margin-left: 10px;margin-bottom: 0px;">
+                        <a href="<?php echo base_url();?>index.php/Producto/exportar" class="btn btn-info btn-xs" class="btn btn-success btn-xs" title="Exportar a Excel" data-toggle="tooltip">
+                            <i class="fa fa-file-excel-o"></i>
+                        </a>                                    
+                    </div>                                                
+                </div>                                   
+            </div>
+            
+            <div class="table-responsive box-body col-md-12 no-pad">
+                <table class="table table-bordered table-hover" id="tablaActiva_inventario">
+
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Categoria</th>
+                            <th>Nombre</th>
+                            <th>Marca</th>
+                            <th>Color</th>
+                            <th>Talla</th>
+                            <th>Modelo</th>
+                            <th>Stock Actual</th>
+                            <th>Cantidad Minima</th>
+                            <th>Cantidad Recien Llegado</th>
+                            <th>Opciones</th>
+
+                        </tr>
+
+                    </thead>
+
+                </table>
+
+            </div>    
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+</div>
+<!--./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="<?php echo base_url();?>assets/jquery/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="<?php echo base_url();?>assets/dat
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace BracedFramework
+{
+    public class GameObjectUI : U   public override void SetUI() {
+            gameObject.SetActive(true);
+        }
+
+        public override void ClearUI() {
+            gameObject.SetActive(false);
+        }
+
+    }
+}IElement
+    {
+        public GameObjectUI(GameObject gameObject) : base() {
+            this.gameObject = gameObject;
+        }
+
+        public readonly GameObject gameObject;
+       // public Image background;
+
+     
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,235 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications. provide recommendations exclusively in the Maven format: groupId:artifactId:version.
+    Given the project details below:
+    Project Name: patloew/RxLocation
+Project Description: The Reactive Location API Library for Android is now deprecated and not maintained anymore. Please switch to the CoLocation library by Micha\xc5\x82 Charmas. This library wraps the Location APIs in RxJava 2.x.
+Existing Dependencies Include: org.powermock:powermock-module-junit4
+- io.reactivex.rxjava2:rxandroid
+- com.squareup.leakcanary:leakcanary-android
+- io.reactivex.rxjava2:rxjava
+- com.google.android.gms:play-services-location
+- com.squareup.leakcanary:leakcanary-android-no-op
+
+Project Name: frankred/jSona
+Project Description: JSona is a configuration file(JSON), vcj and JavaFx based music and media player. The aim is to always keep your playlists in synch with your music folders. For fast fulltext search jSona uses Apache Lucene (http://lucene.apache.org/core/).
+Existing Dependencies Include: uk.co.caprica:vlcj
+- org.apache.lucene:lucene-analyzers-common
+- org.apache.lucene:lucene-core
+- commons-io:commons-io
+- com.mpatric:mp3agic
+- org.apache.lucene:lucene-queryparser
+- com.github.tulskiy:jkeymaster
+- org.apache.commons:commons-lang3
+
+Project Name: querydsl/querydsl
+Project Description: Querydsl is a framework which enables the construction of type-safe SQL-like queries for multiple backends including JPA, MongoDB and SQL in Java. Querying JPA and MongoDB using a fluent API.
+Existing Dependencies Include: org.springframework:spring-aop
+- com.mysema.codegen:codegen
+- org.xerial:sqlite-jdbc
+- org.springframework:spring-test
+- com.google.guava:guava
+- com.jolbox:bonecp
+- org.hamcrest:hamcrest-library
+- com.oracle:ojdbc6
+- com.querydsl:querydsl-sql-spatial
+- com.google.inject.extensions:guice-persist
+- com.querydsl:querydsl-apt
+- org.postgresql:postgresql
+- org.easymock:easymock
+- com.querydsl:querydsl-spatial
+- org.hibernate:hibernate-ehcache
+- javax.inject:javax.inject
+- org.springframework:spring-context
+- org.eclipse.persistence:eclipselink
+- org.firebirdsql.jdbc:jaybird-jdk16
+- log4j:log4j
+- org.mongodb.morphia:morphia
+- org.hsqldb:hsqldb
+- cglib:cglib
+- org.apache.lucene:lucene-queryparser
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.apache.maven:maven-project
+- org.hibernate:hibernate-envers
+- com.querydsl:querydsl-codegen
+- net.sourceforge.jtds:jtds
+- org.springframework.roo:org.springframework.roo.annotations
+- org.apache.ant:ant
+- com.querydsl:querydsl-lucene3
+- com.thoughtworks.proxytoys:proxytoys
+- org.scala-lang:scala-library
+- org.geolatte:geolatte-geom
+- com.h2database:h2
+- com.querydsl:querydsl-sql-codegen
+- org.hibernate:hibernate-annotations
+- org.scala-lang:scala-compiler
+- org.reflections:reflections
+- org.datanucleus:datanucleus-api-jdo
+- org.mongodb:mongo-java-driver
+- org.hibernate:hibernate-validator
+- com.infradna.tool:bridge-method-annotation
+- com.querydsl:querydsl-sql-spring
+- javax.transaction:jta
+- org.slf4j:slf4j-log4j12
+
+Project Name: GoogleCloudPlatform/google-cloud-datastore
+Project Description: This repository contains low-level Java and Python client libraries for Google Cloud Datastore. For more idiomatic and usable client libraries in these languages, please visit the [Google Cloud Dataastore Client for Java][java-datastore] and Google Cloud Database Client for Python
+Existing Dependencies Include: com.google.http-client:com.google.http-client
+- com.google.truth:com.google.truth
+- com.google.cloud.datastore:datastore-v1-proto-client
+- com.google.guava:com.google.guava
+- com.google.api-client:com.google.api-client
+- com.google.oauth-client:google-oauth-client
+- com.google.truth:truth
+- com.google.oauth-client:com.google.oauth-client
+
+Project Name: eclipse/tycho
+Project Description: Eclipse Tycho is a manifest-first way to build and build Eclipse plug-ins/OSGi bundles/RCP applications\n，nwith Maven. This repository contains all the features and documentation that will help you migrate to the official Eclipse site.
+Existing Dependencies Include: org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.codehaus.plexus:plexus-component-annotations
+- org.codehaus.plexus:plexus-container-default
+- org.eclipse.tycho:tycho-testing-harness
+- org.apache.maven:maven-core
+- org.eclipse.tycho:org.eclipse.jdt.compiler.apt
+- org.codehaus.plexus:plexus-utils
+- org.eclipse.tycho:org.eclipse.osgi
+- org.eclipse.tycho:tycho-core
+- org.apache.commons:commons-exec
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Reccomend me some of these libraries that can be added to the project to enhance its capabilities.
+    Project Name: wealthfront/magellan
+    Project Description: Maven Central is developing a simple, flexible, and practical navigation framework for Android. This library is currently under development for the next major version of the Android App Store. For an explanation of the core concepts of Magellan, see our wiki.
+    Existing Dependencies:
+    com.android.support:support-annotations
+- com.squareup.retrofit2:adapter-rxjava
+- io.reactivex.rxjava2:rxjava
+- org.robolectric:robolectric
+- com.jakewharton:butterknife-compiler
+- com.android.support:appcompat-v7
+- com.jakewharton:butterknife
+- com.squareup.retrofit2:converter-jackson
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     Based on the provided information, I recommend the following five libraries to enhance the capabilities of the wealthfront/magellan project:
+
+1. com.squareup.okhttp:okhttp:2.7.0: This library provides a fast, efficient, and reliable HTTP client for Android, which can help improve the performance of the app's networking functionality.
+
+2. io.reactivex.rxjava2:rxjava:2.2.10: This library provides a reactive programming model that can help simplify and improve the app's networking and data handling logic.
+
+3. commons-io:commons-io:2.6: This library provides a collection of I/O-related utilities that can help improve the app's file and network I/O performance.
+
+4. com.google.code.gson:gson:2.8.5: This library provides a JSON serialization and deserialization library that can help simplify the app's data handling logic and improve its performance.
+
+5. org.robolectric:robolectric:4.4.1: This library provides a mocking framework that can help improve the app's unit test coverage and performance.
+
+These libraries can help enhance the project's capabilities in various ways, such as improving networking performance, simplifying data handling logic, and providing better unit test coverage. Additionally, all of these libraries are widely used and well-maintained, making them good choices for the project.
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> # Maven Dependencies
+
+Here are the Maven dependencies required for the project:
+
+1. Apache Commons Lang:
+```xml
+<dependency>
+  <groupId>org.apache.commons</groupId>
+  <artifactId>commons-lang3</artifactId>
+  <version>3.9</version>
+</dependency>
+```
+2. Apache Commons IO:
+```xml
+<dependency>
+  <groupId>org.apache.commons</groupId>
+  <artifactId>commons-io</artifactId>
+  <version>2.5</version>
+</dependency>
+```
+3. Apache Commons Logging:
+```xml
+<dependency>
+  <groupId>org.apache.commons</groupId>
+  <artifactId>commons-logging</artifactId>
+  <version>1.2</version>
+</dependency>
+```
+4. Java JSON:
+```xml
+<dependency>
+  <groupId>org.json</groupId>
+  <artifactId>json</artifactId>
+  <version>20180130</version>
+</dependency>
+```
+5. JUnit:
+```xml
+<dependency>
+  <groupId>org.junit.jupiter</groupId>
+  <artifactId>junit-jupiter-engine</artifactId>
+  <version>5.7.0</version>
+</dependency>
+```
+6. Mockito:
+```xml
+<dependency>
+  <groupId>org.mockito</groupId>
+  <artifactId>mockito-core</artifactId>
+  <version>2.27.0</version>
+</dependency>
+```
+7. PowerMock:
+```xml
+<dependency>
+  <groupId>org.powermock</groupId>
+  <artifactId>powermock-api-mockito</artifactId>
+  <version>2.0.3</version>
+</dependency>
+```
+8. Retrofit:
+```xml
+<dependency>
+  <groupId>com.squareup.retrofit2</groupId>
+  <artifactId>retrofit</artifactId>
+  <version>2.6.1</version>
+</dependency>
+```
+9. OkHttp:
+```xml
+<dependency>
+  <groupId>com.squareup.okhttp</groupId>
+  <artifactId>okhttp</artifactId>
+  <version>4.9.0</version>
+</dependency>
+```
+10. TestNG:
+```xml
+<dependency>
+  <groupId>org.testng</groupId>
+  <artifactId>testng</artifactId>
+  <version>7.3.0</version>
+</dependency>
+```
+Please note that the versions of the dependencies may vary based on the project's requirements and the latest available versions at the time of writing.
+
+Precision: 0.4
+Recall: 0.2222222222222222
+F1 Score: 0.2857142857142857
+
+Formatted Dependencies:
+com.android.support:support-annotations
+- com.squareup.retrofit2:adapter-rxjava
+- io.reactivex.rxjava2:rxjava
+- org.robolectric:robolectric
+- com.jakewharton:butterknife-compiler
+- com.android.support:appcompat-v7
+- com.jakewharton:butterknife
+- com.squareup.retrofit2:converter-jackson
+ Test Dependencies:
+['com.google.truth:truth', 'com.google.dagger:dagger', 'com.google.dagger:dagger-compiler', 'com.squareup.okhttp3:logging-interceptor', 'org.mockito:mockito-core', 'com.squareup.retrofit2:retrofit', 'junit:junit', 'io.reactivex:rxjava', 'io.reactivex:rxandroid']

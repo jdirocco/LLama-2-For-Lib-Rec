@@ -1,0 +1,139 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: helun/Ektorp
+    Project Description: Ektorp \n\nEktorp is a persistence API that uses as storage engine. The goal of Ektorp is to combine JPA like functionality with the simplicity and flexibility that CouchDB provides.\n\nFeatures\n\nHere are some good reasons why you should consider using Ektorp in your project:\n\n Rich domain models. With the powerful JSONobject mapping provided by \n\nSimple API\n\nIt is very easy to get started with Ektorp:\n\n\n\nOutoftheBox CRUD\n\nEktorp features a generic repository support class. It provides all Create, Read, Update and Delete operations for a persistent class.\n\nHere\'s how a SofaRepository implemented with the generic repository looks like\n\n\n\nThis repository will have the following methods "out of the box":\n\n\n\nConvenient Management of View Definitions\n\nThe concept of views in CouchDB can be a little daunting at first and there will always be the task of managing view definitions to go along your mapped classes.\nEktorp provides two solutions for this:\n\nEmbedded View Definitions\n\nIt is possible to embed view definitions in your repository classes through a @View annotation:\n\n\n\nAutomatic view generation for finder methods\n\nFinder methods annotated with @GenerateView will have their view definitions automatically created.\nCouchDbRepositorySupport will generate a "bytag" view in CouchDB at application start up for the method "findByTag" in the example above.\n\nSimple and Powerful JSON / Object Mapping\n\nThe JSON / Object mapping in Ektorp is handled by the excellent from Ektorp.\n\nQuery for Objects\n\nIf the view\'s result value field is a document, Ektorp can load the result as a List of Objects\n\n\n\nScalar queries\n\nIt is possible to query for scalar values. Currently just String and int values are supported.\n\n\n\nIt is of course possible to parse a string value as JSON.\nView Result as Raw JSON Stream\n\nThe most flexible method is query for stream. The result is returned as a stream.\n\n\n\nTry it Out\n\n Download binaries from \n\nIf you are using Maven:\n\n\n\nGetting Help\n\nYou can usually get quick answers at the \n\njackson:
+    Existing Dependencies:
+    org.ektorp:org.ektorp
+- commons-io:commons-io
+- org.apache.httpcomponents:httpclient-cache
+- org.slf4j:slf4j-simple
+- org.slf4j:slf4j-api
+- org.mockito:mockito-all
+- org.aspectj:aspectjweaver
+- commons-lang:commons-lang
+- org.springframework:spring-context
+- org.apache.httpcomponents:httpclient
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+<script src="https://cdn.tiny.cloud/1/qx28561760933q74342404573192900941591603062153/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script><script>tinymce.init({ target:'[id]' });</script>
+
+<x-dashboard-layout title="Edit Question">
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+
+    <form action="{{ route('admin.question.update',$question->id) }}" method="POST">
+    @csrf
+        @method('put')
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Edit Question</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
+              <li class="breadcrumb-item"><a href="{{ route('admin.question.index') }}">Question</a></li>
+            <li class="breadcrumb-item active">edit</li>
+
+
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+
+    @include('dashboard.includes.alerts.success')
+    @include('dashboard.includes.alerts.errors')
+
+        <div class="row mb-2">
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Title</th>
+
+                  <th class="text-center">Control</th>
+                </tr>
+                </thead>
+                <tbody>
+                  <tr >
+                  <th scope="row">1</th>
+                  <td>Title</td>
+
+                  <td class="text-center">
+                    <a href="" class="btn btn-success">
+
+                        <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="" class="btn btn-danger">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+
+            </div>
+            <!-- /.card-body -->
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-primary card-outline">
+              <div class="card-header">
+                <h3 class="card-title">Add Question </h3>
+              </div>
+              <div class="card-body">
+                <form >
+                  <div class="row">
+                      <div class="col-6">
+                        <label for="exampleInputPassword1">Title</label>
+              <input
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    public string? Description { get; set; } = null;
+
+        public IReadOnlyCollection<string>? Dependencies { get; set; } = Array.Empty<string>();
+
+        public IReadOnlyList<string>? Arguments => null;
+    }
+}
+ ﻿using System;
+using System.Collections.Generic;
+
+namespace TIKSN.HookTask
+{
+    public sealed class HookTaskDescriptor
+    {
+        public string Name { get; set; } = null!;
+
+        public string? Alias { get; set; } = null;
+
+    
+
+Precision: 0
+Recall: 0
+F1 Score: 0

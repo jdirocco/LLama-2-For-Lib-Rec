@@ -1,0 +1,112 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: ragnor/simple-spring-memcached
+    Project Description: Simple Spring Memcached\n=======================\n\nA dropin library to enable memcached caching in Spring beans via annotations.\n\nMost of documentation has been moved to github but still some docs are available only on .\n\n Introduction \n\nDistributed caching can be a big, hairy, intricate, and complex proposition when using it extensively.\n\nSimple Spring Memcached SSM attempts to simplify implementation for several basic use cases.\n\n28062019 New version 4.1.3 with Amazon ElastiCache, Spring 5.1/5.0/4.3 and Java based configuration support is available!\nSSM can also work as a cache backend in Spring Cache @Cacheable. Please check . \n\nThis project enables caching in Springmanaged beans, by using Java 5 Annotations and Spring/AspectJ AOP on top of the , or client. Using Simple Spring Memcached requires only a little bit of configuration and the addition of some specific annotations on the methods whose output or input is being cached. \n\n\n Usage \n\nIf you are using maven, you can try it now:\n\n \n \n com.google.code.simplespringmemcached\n xmemcachedprovider\n 4.1.3\n \n \n\nand define connection to memcached on localhost using java based configuration:\n\t\n @Configuration\n public class LocalSSMConfiguration extends AbstractSSMConfiguration {\n\t @Bean\n\t @Overwrite\n\t public CacheFactory defaultMemcachedClient {\n\t final CacheConfiguration conf = new CacheConfiguration;\n\t conf.setConsistentHashingtrue;\n\t final CacheFactory cf = new CacheFactory;\n\t cf.setCacheClientFactorynew com.google.code.ssm.providers.xmemcached.MemcacheClientFactoryImpl;\n\t cf.setAddressProvidernew DefaultAddressProvider"127.0.0.1:11211";\n\t cf.setConfigurationconf;\n\t return cf;\n\t }\n\t} \n\nor in old fashion way using XML:\n\n \n\n \n \n\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\nNow you can annotate method to cache result:\n\n @ReadThroughSingleCachenamespace = "CplxObj", expiration = 3600\n public ComplexObject getComplexObjectFromDB@ParameterValueKeyProvider Long complexObjectPk {\n // ...\n return result;\n }\n\nIf you already using Spring Cache you may use SSM as an another .\n\nNeed more? Please read .\n\n Documentation \nProject documentation is available on . \nJavadocs of current release are hosted on . \nSource code from master branch is built and tested on:\n codeship: \n\n Contact Us \n\nIf you have any questions, feel free to ask them on the . UPDATE: Sorry, this link was bad up until 02 Aug \'09, because I fatfingered when creating the Google Group. I incorrectly misspelled it as \'simplespringmemEcached\'. So sorry about that!\n\nAlso, let us know if you are using SSM in your project, and we will list it in on the Wiki.\n'
+    Existing Dependencies:
+    com.google.code.simple-spring-memcached:jmemcached-core
+- org.springframework:spring-aop
+- org.easymock:easymock
+- org.slf4j:slf4j-api
+- com.google.code.findbugs:jsr305
+- com.googlecode.xmemcached:xmemcached
+- commons-lang:commons-lang
+- org.aspectj:aspectjweaver
+- com.google.code.findbugs:annotations
+- org.springframework:spring-test
+- org.projectlombok:lombok
+- net.spy:spymemcached
+- org.springframework:spring-context
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<style>
+    /*.navbar-fixed-top{height: 100px;} */
+</style>
+<div class="navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <ul class="nav nav-pills" >
+      <li><img src="<?php echo base_url();?>assets/images/logo1.png" height="100" /></li>
+      <li class="active"><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>About</a></li>
+      <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="glyphicon glyphicon-education" aria-hidden="true"></span>Courses<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="<?php echo base_url();?>admin/course">Add new Course</a></li>
+          <li><a href="#">Dropdown2</a></li>
+          <li><a href="#">Dropdown3</a></li>
+        </ul>
+      </li>
+       <li><a  href="<?php echo base_url();?>admin/teacher"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Teachers</a></li>
+       <li><a  href="<?php echo base_url();?>admin/students"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Students</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>Settings</a></li>
+      <li><a href="<?php echo base_url();?>admin/login/logout"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>Logout</a></li>
+      </div>
+    </ul>
+  </div>
+</div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    public function setDefaultOptions(ArrayInterface $resolver, array $options)
+    {
+        $resolver->setDefaults(['value' => null]);
+    }
+
+    public function setData(array &$data, $model, Field $field, ArrayInterface $resolver, array $options)
+    {
+        if (isset($options['value'])) {
+            $data['attr']['value'] = $options['value'];
+        }
+        $data['attr']['value'] = $model->get($field->getName());
+    }
+}
+ <?php
+
+namespace Bravesheep\CrudifyBundle\Definition\Index;
+
+use Bravesheep\CrudifyBundle\Definition\Index\AbstractIndexField;
+use Bravesheep\CrudifyBundle\Definition\Index\Options\ArrayInterface;
+use Bravesheep\CrudifyBundle\Definition\Index\Options\Field;
+
+class Text extends AbstractIndexField
+{
+    /**
+     * Get the HTML5 input type
+     * @return string
+     */
+    public function getInputType()
+    {
+        return 'text';
+    }
+
+    public function getTemplate()
+    {
+        return 'CrudifyBundle:Definition:field.html.twig';
+    }
+
+
+
+Precision: 0.0
+Recall: 0.0
+F1 Score: 0

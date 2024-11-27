@@ -1,0 +1,192 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: motech/TAMA-Web
+    Project Description: '
+    Existing Dependencies:
+    org.springframework:spring-aop
+- org.motechproject:motech-pillreminder-api
+- org.springframework:spring-test
+- org.powermock:powermock-api-mockito
+- org.motechproject.tama:tama.refdata
+- org.motechproject:motech-deliverytools-common
+- org.drools:drools-spring
+- org.springframework.security:spring-security-web
+- org.motechproject.tama:tama.ivr
+- org.motechproject:tama-symptoms-reporting
+- commons-collections:commons-collections
+- org.motechproject:motech-platform-decisiontree-common
+- org.apache.tiles:tiles-core
+- org.motechproject:motech-sms-api
+- org.jasypt:jasypt
+- org.springframework:spring-test-mvc
+- commons-lang:commons-lang
+- org.apache.velocity:velocity
+- org.motechproject:motech-platform-server-api
+- xml-apis:xml-apis
+- org.springframework:spring-context
+- org.springframework.webflow:spring-js-resources
+- org.motechproject.tama:tama.tools
+- org.motechproject:motech-platform-scheduler
+- org.motechproject.tama:tama.dailypillreminder
+- org.seleniumhq.selenium:selenium-server
+- cglib:cglib
+- com.thoughtworks.xstream:xstream
+- org.ektorp:org.ektorp.spring
+- org.springframework.security:spring-security-core
+- org.motechproject.tama:tama.healthtips
+- org.springframework:spring-aspects
+- org.drools:drools-compiler
+- org.seleniumhq.selenium:selenium-support
+- org.motechproject:motech-sms-http
+- commons-httpclient:commons-httpclient
+- org.drools:drools-api
+- org.seleniumhq.selenium:selenium-firefox-driver
+- org.codehaus.jackson:jackson-mapper-asl
+- org.motechproject:motech-testing-utils
+- org.apache.poi:poi
+- org.motechproject.tama:tama.fourdayrecall
+- org.motechproject:motech-appointments-api
+- org.powermock:powermock-module-junit4
+- org.motechproject:motech-job-handler-invoker
+- javax.mail:mail
+- org.seleniumhq.selenium:selenium-java
+- org.motechproject.tama:tama.symptomreporting
+- org.hibernate:hibernate-validator
+- org.motechproject.tama:tama.reporting
+- org.slf4j:slf4j-log4j12
+- com.googlecode.lambdaj:lambdaj
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 52 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="modal fade" id="modal-form-karyawan"  tabindex="-1" role="dialog"  arial-labelledby="modal-form"  arial-hidden="true">
+
+                        <div class="modal-dialog modal-info modal-lg"  role="document">
+
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+
+                                    <h4 class="modal-title">Tambah Data </h4>
+
+                                    <button type="button" class="close"  data-dismiss="modal"  arial-label="Close">
+
+                                        <span aria-hidden="true">×</span>
+
+                                    </button>
+
+                                </div>
+
+
+
+                                <div class="modal-body">
+
+                                    <div class="py-12">
+
+                                        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+                                            <div class="bg-white  overflow-hidden shadow-xl sm:rounded-lg px-4 py-4">
+
+                                                <form action="{{ route('karyawan.store') }}" method="POST" enctype="multipart/form-data">
+
+                                                  {{ csrf_field() }}
+
+
+
+                                                  <div class="form-group">
+
+                                                    <label for="name" class="form-control-label">Nama Karyawan</label>
+
+                                                    <input type="text" class="form-control" name="name">
+
+                                                  </div>
+
+
+                                                  <div class="form-group">
+
+                                                    <div class="form-check">
+                                                        <label class="from-check-label">
+                                                          <input type="radio"  class="form-check-input" name="jabatan" id="jabatan" value="Karyawan">Karyawan
+                                                        </label>
+                                                        
+                                                    </div>
+
+                                                    <div class="form-check">
+
+                                                        <label class="from-check-label">
+
+                                                          <input type="radio"  class="form-check-input" name="jabatan" id="jabatan" value="Manajer">Manajer 
+                                                        </label>
+                                                        
+                                                      </div>
+
+                                                      <div class="form-check">
+
+                                                        <label class="from-check-label">
+
+                                                          <input type="radio" class="form-check-input" name="jabatan" id="jabatan2" value="Pemilik">Pemilik 
+                                                        </label>
+                                                        
+                                                    </div>
+                                                    
+                                                  </div>
+
+
+                                                  <div class="modal-footer">
+
+                                                      <button type="submit" class="btn btn-primary">Submit</button>
+
+                                                  </div>
+
+                                                </form>
+
+                                            </div>
+                                       
+
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 52 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    return "Hello from the other side, my friend!"
+
+if __name__ == "__main__":
+  port = sys.argv[1] if (len(sys.argv) > 1) else 30000
+  app.run(port=int(port), host="0.0.0.0", debug=True)
+
+ # -*- coding: utf-8 -*-
+"""Hello, world! This is a sample Flask app"""
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

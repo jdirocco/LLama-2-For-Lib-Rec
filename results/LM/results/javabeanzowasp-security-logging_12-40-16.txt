@@ -1,0 +1,142 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: javabeanz/owasp-security-logging
+    Project Description: \n\n\n\n\n\n\n\nView our on SlideShare.\n\n Usage with Maven: \nAs of version 1.1.0 Logback and Log4j support are in separate projects. To use OWASP Security Logging with Logback, add the following Maven dependency to pom.xml:\n\n\nAlso see \n\nTo use it with Log4j, add: \n\n\nLog4j users please see \n\nMaven imports will automatically include the common classes. If using OWASP Security Logging on your classpath, you need to include securityloggingcommonVERSION.jar in addition to the correct jar for either Logback or Log4j. \n\n\n\nlicenseurl:
+    Existing Dependencies:
+    org.apache.logging.log4j:log4j-core
+- org.slf4j:slf4j-api
+- org.owasp:security-logging
+- org.mockito:mockito-all
+- org.hamcrest:hamcrest-core
+- org.owasp:security-logging-common
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <header id="header">
+    <nav class="navbar fixed-top bg-light">
+      <div class="container">
+        <div class="navbar-translate">
+          <a class="navbar-brand" href="#" rel="tooltip" title="Coded by Creative Tim" data-placement="bottom">
+            <img style="max-width:132px;" src="{{ asset('img/logo.png') }}" class="logo" alt="Logo" data-src="{{ asset('img/logo.png') }}" data-src-retina="{{ asset('img/logo.png') }}">
+          </a>
+          <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar bar1"></span>
+            <span class="navbar-toggler-bar bar2"></span>
+            <span class="navbar-toggler-bar bar3"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navigation">
+         <ul class="navbar-nav">
+         <li class="dropdown nav-item">
+           <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+              <i class="fa fa-globe"></i> {{ config('app.locale') }}
+           </a>
+           <div class="dropdown-menu">
+             <p class="dropdown-item" href="{{ route('localization.switch', 'en') }}">
+               <i class="fa fa-globe"></i> English
+             </p>
+             <p class="dropdown-item" href="{{ route('localization.switch', 'fr') }}">
+               <i class="fa fa-globe"></i> French
+             </p>
+           </div>
+          </li>
+          <li class="dropdown nav-item">
+            <a href="#" id="navbarDropdownMenuLink1" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="now-ui-icons design_app"></i>
+                {{ config('app.locale') }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+	           @if (config('app.locale') === 'en')
+                <a class="dropdown-item" 
+                   id="en" 
+                   href="{{ route('localization.switch', 'fr') }}">
+                    <i class="now-ui-icons text_caps-small"></i> 
+                    FR
+                </a>
+               @else
+                <a class="dropdown-item" 
+                   id="fr"
+                   href="{{ route('localization.switch', 'en') }}">
+                   <i class="now-ui-icons text_caps-small"></i>
+                   EN
+                </a>
+              @endif
+            </div>
+          </li>
+          <li class="nav-item">
+            <button id="scroll-top" type="button" class="btn  btn-neutral  btn-round btn-lg" data-toggle="tool
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>  *
+     * @return array
+     */
+    public function rules()
+    {
+        return [
+            'name' =>'required|max:255',
+            'description' =>'required|max:255',
+            'image' =>'required',
+            'price' =>'required|integer'
+        ];
+    }
+
+    public function persist()
+  {    
+
+  
+
+
+      auth()->user()->publish(
+     new Product(request(['image', 'name','description','price']))
+     
+  );
+
+  
+ 
+  }; 
+}
+ <?php
+
+namespace App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+use App\Product;
+class ProductRequest extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize()
+    {
+        return true;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+   
+
+Precision: 0
+Recall: 0
+F1 Score: 0

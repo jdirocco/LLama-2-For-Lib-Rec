@@ -1,0 +1,152 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: michal-luszczuk/tomorrow-mvp
+    Project Description: \n\n Please read to know why this library was created\n\n\n\n Tomorrow Android MVP library with loaders\nLibrary to help all of you in MVP pattern with loaders to retain presenters implementation without even knowing or having any idea how loaders really work.\n\n Gradle Dependency\n\n1. Because Tomorrow library project is stored on maven repository, firstly you need to be sure that jcenter maven declaration in your project root file.\n\n \n\n\n2. Now you can easily add gradle dependency to your actual module file \n \n \n Simple usage\n\n1. Firsty you have to define your View layer class and Presenter class.\n\n Your preseter must extend class which handle lifecycle actions and also view actions.\n 1. If you want to handle only configuration change retain, you don\xe2\x80\x99t have to do anything, because by default presenter object will be retained.\nJust remember that for the first time presenter method will be called with bundle object\n\n 2. If you want to additionally handle proces kill and its restoration you could use method to save presenter state, and later restore state using Bundle object passed in method.\n \n \n \n\n\n2. Having your view object and presenter object defined you could use or according to a component type you want to use.\n\n Regardless of which component we want to use, next step is to override two required methods.\n\n 1. First one is method which should return instance of object representing our MVP view layer.\n \n 2. Second one is an instance of factory object which will be used later to automatically create our Presenter object. \n 1. First factory method is to construct presenter object\n 1. should return class type of our presenter which our factory is creating\n \n Here is example of Fragment class with \n \n \n\n Sample\n\nPlease check sample application in module of this project.\n\n\n Internals\n How this library works\n Concept\nConcept of this library is mainly to retain Presenter between configuration changes and to restore it's state in case of any other \nsystem events like i.e. process kill. It's Presenter layer separation from strong Activity/Fragment lifecycle events. \n\nLoaders looks like a very good tool for that.\n\n Loader\nWe know that loader could retain orientation changes inside that's why we could hold strong reference to any object.\nOnly thing is to properly get this reference later.\n\nTo create and store presenter object class is used.\nIt extends class and it's implementation main goals are:\n\n1. Use factory to create presenter for the first time\n2. Hold reference to presenter object as long as it's possible\n3. Deliver presenter reference. \n\n\n\n Bridge between Activity/Fragment and Loaders\n\nIf we've got implementation of our Loader class next important thing is to use it with Activity/Fragment component properly.\n\nAll core logic for that is mostly stored inside class.\n\n is responsible for retrieving presenter object with knowledge\nof how loaders are stored and managed inside app components like Activity or Fragment.\n\nWe could divide it's behavior for two paths:\n\n1. Use standard behavior on with callbacks to initialize/create loader and retrieve it's load result \n2. Search for already existing loader with reference to already created Presenter\n\n\n\nWhy we divide those behavior between two? Inside loaders implementation exists a bug \nwhich could cause calling Loader callback twice.\nThat's why we are directly looking for Loader reference from Loader manager and not using this callback way\n\n BasePresenterActivity & BasePresenterFragment\nClasses are internally using mechanism to make it all work.\nTheir role is to:\n\n1. Use to retrieve presenter object\n2. Call specific lifecycle methods on presenter\n3. Manage view layer and bind it to presenter object\n\n\n\n\n\n\n\n\n"
+    Existing Dependencies:
+    com.squareup.retrofit2:adapter-rxjava
+- com.android.support:recyclerview-v7
+- com.jakewharton:butterknife-compiler
+- com.squareup.retrofit2:retrofit
+- com.android.support:appcompat-v7
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div class="content-header" >
+      <div class="container-fluid">
+        <div class="row mb-2" style="margin-top: 40px; border-bottom-style: groove; border-bottom-width: 1px">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark"><?php echo $maintitle;?></h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <table id="tbl_users" class="table table-striped" style="width:100%">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Nombres</th>              
+                <th>Teléfono</th>
+                <th>Correo</th>
+                <th>Fecha de registro</th>
+                <th>Acciones</th>
+              </tr>                  
+            </thead>
+            <tbody>
+              <?php
+              foreach ($listado as $list)
+               {                
+             ?>
+                <tr>
+                  <td><?php echo $list['id_user'];?></td>
+                  <td><?php echo $list['nom_user'];?></td>              
+                  <td><?php echo $list['phono_user'];?></td>
+                  <td><?php echo $list['mail_user'];?></td>
+                  <td><?php echo $list['date_user'];?></td>
+                  <td >
+                      <a class="btn btn-outline-light" title="Editar información personal" data-toggle="modal" data-target="#edit_info_personal" href="" onclick="javascript:ver_modal_user('<?php echo $list['id_user'];?>','<?php echo $list['nom_user'];?>','<?php echo $list['phono_user'];?>','<?php echo $list['mail_user'];?>','<?php echo $list['type_user'];?>' );" ><i class="far fa-edit text-primary" ></i></a>
+
+                      <a class="btn btn-outline-light" title="Editar contraseña" data-toggle="modal" data-target="#edit_pass" href="" onclick="javascript:ver_modal_pass_user('<?php echo $list['id_user'];?>','<?php echo $list['nom_user'];?>' );" ><i class="fas fa-pencil-alt  text-success"></i></a>
+
+                      <a class="btn btn-outline-light" title="Eliminar cuenta del usuario" data-toggle="modal" data-target="#delete_user" href=""
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    // 禁止修改原始数组
+    'no-param-reassign': ['error', { 'props': false }],
+    // 禁用 console
+    'no-console': process.env.NODE_ENV === 'production'? 'error' : 'off',
+    // 禁止修改正则表示式
+    'no-regex-spaces': 2,
+    // 禁用 debugger
+    'no-debugger': process.env.NODE_ENV === 'production'? 'error' : 'off',
+    // 禁止使用空解构模式
+    'no-empty-pattern': 'error',
+
+    // ECMAScript 6
+    'arrow-parens': ['error', 'always'],
+    // 要求箭头函数的参数使用圆括号
+    'no-useless-computed-key': 'error',
+    // 不能使用没有必要的计算属性
+    'template-curly-spacing': ['error', 'always'],
+    // 模板字符串中的空格
+    'no-unused-vars': 'off',
+    // 禁止出现未使用过的变量
+    'no-unused-expressions': 'off',
+    'no-unused-labels': 'off',
+    'no-labels': 'off',
+    'no-restricted-imports': 'off',
+    'no-restricted-exports': 'off',
+    'no-await-in-loop': 'off',
+  },
+};
+ module.exports = {
+  extends: [
+    'eslint:recommended', // 推荐的标准
+  ],
+  env: {
+    browser: true,
+    es6: true,
+  },
+  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaVersion: 9,
+    sourceType:'module',
+  },
+  rules: {
+   'max-len': ['error', 120],
+    // 一行最多 120 字符
+    'linebreak-style': ['error', 'unix'],
+    // 使用 Unix 换行符
+    'arrow-parens': ['error', 'always'],
+    // 要求箭头函数的参数使用括号
+    'indent': ['error', 2, { 'SwitchCase': 1 }],
+   'space-before-function-paren': 0,
+   'space-before-blocks': 'error',
+    'object-curly-spacing': ['error', 'always'],
+    // 强制使用一致的换行符风格
+    'quotes': ['error','single'],
+    // 字符串必须使用单引号
+    'prefer-const': ['error', {
+      'destructuring': 'any', // 允许在解构赋值时使用变量声明
+      'ignoreReadBeforeAssign': false,
+    }],
+    'prefer-template': 2,
+    // 强制使用模板字面量代替字符串连接
+    'prefer-
+
+Precision: 0
+Recall: 0
+F1 Score: 0

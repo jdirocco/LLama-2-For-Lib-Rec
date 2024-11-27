@@ -1,0 +1,182 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: yongjhih/drupalfit
+    Project Description: drupalfit\n=========\n\n\n\n\n\n \n\n\n\n\n\nA drupal services rest client with retrofit for android\n\n\n\nUsage\n=====\n\n Initialization\n\n\n\n register\n\n\n\n login\n\n\n\n logout after login\n\n\n\n getNode\n\n\n\n addComment\n\n\n\n getComment\n\n\n\nBonus\n=====\n\n Signin with facebook access token Depend on and getProfile with.\n\nIt\'s easy to integrate facebook sdk.\n\n\n\nInstallation\n============\n\nbuild.gradle:\n\n\n\nLicense LICENSE\n===================\n\n\n'
+    Existing Dependencies:
+    com.squareup.okhttp:okhttp
+- com.android.support:appcompat-v7
+- com.fasterxml.jackson.core:jackson-databind
+- com.github.johnpersano:supertoasts
+- com.jakewharton:butterknife
+- com.fasterxml.jackson.core:jackson-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+    <div class="main-content">
+        <div class="container-fluid">
+        <?php if( $this->session->flashdata('gagal_upload')) :?>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Error!</strong> <?= $this->session->flashdata('gagal_upload');?>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <?php endif;?>
+
+                <!-- OVERVIEW -->
+                <div class="panel panel-headline">
+                        
+                        <!-- <div class="panel">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h3 class="panel-title">Input Data</h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="panel-body"> -->
+                                <form method="post" action="<?= base_url();?>pegawai/tambah/" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Nama Pegawai</label>
+                                    <input type="text" name="nama" class="form-control" id="nama" aria-describedby="nama"
+                                        placeholder="Nama Pegawai">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Tanggal Lahir</label>
+                                    <input type="date" name="tgl_lahir" class="form-control" id="tgl_lahir"
+                                        aria-describedby="tgl_lahir" placeholder="Tanggal Lahir">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlFile1">Foto Pegawai</label>
+                                    <input type="file" class="form-control-file" id="foto_pegawai" name="foto_pegawai">
+                                </div>
+                                <div class="form-group">
+                                    <label for="alamat">Alamat Pegawai</label>
+                                    <textarea name="alamat" class="form-control" id="alamat" cols="30"
+                                        rows="10"></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary ">Simpan</button>
+                                <a href="<?= base_url();?>pegawai" class="btn btn-danger">Batal</a>
+                            </form>
+                            <!-- </div>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> /*!
+ * @file
+ *
+ * @brief This fn_t;
+
+/*!
+ * @defgroup i2c I2C driver
+ *
+ * @brief API for the I2C driver.
+ *
+ * @{
+ */
+
+/**
+ * @brief I2C driver initialization
+ *
+ * @param i2c_instance_t* i2c instance to initialize
+ * @param i2c_instance_config_t* configuration parameters
+ *
+ * @return void
+ */
+void i2c_init(i2c_instance_t* i2c, i2c_instance_config_t* config);
+
+/**
+ * @brief I2C driver read operation
+ *
+ * @param i2c_instance_t* i2c instance to read from
+ * @param unsigned int device address
+ * @param unsigned int register
+ * @param uint8_t* data buffer to read data into
+ * @param unsigned int number of bytes to read
+ *
+ * @return int 0 on success, -1 on error
+ */
+int i2c_read(i2c_instance_t* i2c, unsigned int device_address,
+    unsigned int register_address, uint8_t data[], unsigned int count);
+
+/**
+ * @brief I2C driver write operation
+ *
+ * @param i2c_instance_t* i2c instance to write to
+ * @param unsigned int device address
+ * @param unsigned int register
+ * @param uint8_t* data to write
+ * @param unsigned int number of bytes to write
+ *
+ * @return int 0 on success, -1 on error
+ */
+int i2c_write(i2c_instance_t* i2c, unsigned int device_address,
+    unsigned int register_address, uint8_t const data[], unsigned int count);
+
+/**
+ * @brief I2C driver write byte operation
+ *
+ * @param i2c_instance_t* i2c instance to write to
+ * @param unsigned int device address
+ * @param unsigned int register
+ * @param uint8_t* data to write
+ * @param unsigned int number of bytes to write
+ *
+ * @return int 0 on success, -1 on error
+ */
+int i2c_write_byte(i2c_instance_t* i2c, unsigned int device_address,
+    unsigned int register_address, uint8_t data);
+
+/**
+ * @brief I2C driver write read operation
+ *
+ * @param i2c_instance_t* i2c instance to write read to from
+ * @param unsigned int device address to read from
+ * @param unsigned int read register
+ * @param uint8_t* data buffer to read data into
+ * @param unsigned int number of bytes to read
+ * @param unsigned int device address to write to
+ * @param unsigned int write register
+ * @param uint8_t* buffer of data to write
+ * @param unsigned int number of bytes to write
+ *
+ * @return int 0 on success, -1 on error
+ */
+int i2c_wrrd(i2c_instance_t* i2c, unsigned int read_device_address,
+    unsigned int read_register, uint8_t data[], unsigned int read_count,
+    unsigned int write_device_address, unsigned int write_register,
+    uint8_t const data[], unsigned int write_count);
+
+/**
+ * @brief I2C driver
+
+Precision: 0
+Recall: 0
+F1 Score: 0

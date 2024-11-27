@@ -1,0 +1,122 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: Bilibili/boxing
+    Project Description: boxing\n\nAndroid multimedia selector based on MVP mode. \n\n boxing Inside: \n\n\n Feature\n\n Custom UI\n Multiple/single selection, preview and crop function\n Gif support\n Video selection\n Image compression\n Gif encodecheckout feature/gifencode to have fun, see \n\n Download\n\nCore version: only contain the core function.\n\nUI version: contain UI implements base on core version.\n\n Maven\n\nCore version\n\n\n\nUI version\n\n\n\n Gradle\n\nCore version \n\n\nUI version\n\n\n Preview\n\n\n\n\n\n Getting Started\n\n Media loading initializationrequired\n\n\n Image cropping initializationoptional\n\n Build BoxingConfig\n Specify the modeMode.SINGLEIMG, Mode.MULTIIMG, Mode.VIDEO with camera and gif support. \n\n Get Boxing, set Intent and call start\n\n Get Result\n\n Advanced usage\nMedia loading and image cropping initialization are the same as Simple Usage.\n\n Customize Activity and Fragment\n Extends AbsBoxingViewActivity and AbsBoxingViewFragment.\n call to start.\n\n Only customize Fragment\n Extends AbsBoxingViewFragment,no AbsBoxingViewActivity.\n call to start.\n\n\n FileProvider \nUse camera in Android N, add this in AndroidManifest.xml \n\n\n Kotlin Support\nStay hungry, stay foolish.\ncheckout for fun.\n\n TODO\nSupport different config at the same moment.\n\n License\n\nCopyright 2017 Bilibili\nLicensed under the Apache License, Version 2.0 the "License"; you may not use this file except in compliance with the License. You may obtain a copy of the License at\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.'
+    Existing Dependencies:
+    org.powermock:powermock-module-junit4
+- org.powermock:powermock-module-junit4-rule
+- com.github.bumptech.glide:glide
+- com.squareup.picasso:picasso
+- com.facebook.fresco:animated-gif
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <?php require "template_cabecera.php";?>
+
+
+      <?php require "template_menu.php";?>
+      
+  <div class="banner-index">
+    <div class="container">
+      <div class="text-encabezado wow fadeInDown">
+        <div class="title">
+          <h1>Sitios de interes</h1>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+   <div id="fh5co-blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4">
+          <div class="fh5co-blog animate-box">
+            <a href="#"><img class="img-responsive" src="images/imagen1.jpg" alt=""></a>
+            <div class="blog-text">
+              <div class="product-title">
+                <a href="#"><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo nisi, eum!</b></a>
+              </div>
+              <div class="product-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500
+              </div>
+            </div> 
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <div class="fh5co-blog animate-box">
+            <a href="#"><img class="img-responsive" src="images/imagen2.jpg" alt=""></a>
+            <div class="blog-text">
+              <div class="product-title">
+                <a href="#"><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo nisi, eum!</b></a>
+              </div>
+              <div class="product-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500
+              </div>
+            </div> 
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <div class="fh5co-blog animate-box">
+            <a href="#"><img class="img-responsive" src="images/imagen3.jpg" alt=""></a>
+            <div class="blog-text">
+              <div class="product-title">
+                <a href="#"><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo nisi, eum!</b></a>
+              </div>
+              <div class="product-description">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500
+              </div>
+            </div> 
+          </div>
+        </div>
+        <div class="clearfix visible-lg-block visible-md-block visible-sm-block visible-xs-block"></div>
+        <div class="col-lg-4 col-md-4">
+          <div class="fh5
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    return 0;
+}
+ #include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int n; cin >> n;
+    vector<int> v(n), w(n), u(n);
+    for(int i = 0; i < n; i++) {
+        cin >> v[i] >> w[i];
+    }
+    sort(w.begin(), w.end());
+    reverse(v.begin(), v.end());
+    for(int i = 0; i < n; i++) {
+        u[i] = lower_bound(w.begin(), w.end(), v[i]) - w.begin();
+    }
+    sort(u.begin(), u.end());
+    for(int i = 0; i < n; i++) {
+        cout << u[i] << " ";
+    }
+    cout << endl;
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

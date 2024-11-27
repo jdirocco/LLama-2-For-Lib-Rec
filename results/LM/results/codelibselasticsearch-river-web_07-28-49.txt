@@ -1,0 +1,210 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: codelibs/elasticsearch-river-web
+    Project Description: River Web does not sync up with the latest elasticsearch. Fess is Enterprise Search Server and contains the same features as River Web. See \n\nElasticsearch River Web\n=======================\n\n Overview\n\nElasticsearch River Web is a web crawler application for Elasticsearch.\nThis application provides a feature to crawl web sites and extract the content by CSS Query.\nAs of version 1.5, River Web is not Elasticsearch plugin\n\nIf you want to use Full Text Search Server, please see .\n\n Version\n\n| River Web | Tested on ES | Download |\n|::|::|::|\n| master | 2.4.X | |\n| 2.4.0 | 2.4.0 | |\n| 2.0.2 | 2.3.1 | |\n| 2.0.1 | 2.2.0 | |\n| 2.0.0 | 2.1.2 | |\n\nFor old version, see or .\n\n Issues/Questions\n\nPlease file an .\nJapanese forum is .\n\n Installation\n\n Install River Web \n\n Zip File\n\n $ unzip elasticsearchriverweb.\nFor example, create a mapping with attachment type:\n\n curl XPUT "localhost:9200/web/test/mapping?pretty" d \'{\n "test" : {\n "properties" : {\n ...\n "myattachment" : {\n "type" : "attachment",\n "fields" : {\n "file" : { "index" : "no" },\n "title" : { "store" : "yes" },\n "date" : { "store" : "yes" },\n "author" : { "store" : "yes" },\n "keywords" : { "store" : "yes" },\n "contenttype" : { "store" : "yes" },\n "contentlength" : { "store" : "yes" }\n }\n }\n ...\n\nand then start your river. In "properties" object, when a value of "type" is "attachment", the crawled url is stored as base64encoded data.\n\n curl XPUT localhost:9200/.riverweb/config/2 d \'{\n "index" : "web",\n "type" : "data",\n "urls" : "",\n ...\n "target" : .\n\n\n Where is crawled data stored?\n\ncrawled data are stored to ".s2robot" index during cralwing, data extracted from them are stored to your index specified by a river setting, and then data in "robot" index are removed when the crawler is finished.\n\n Powered By\n\n : DI Container\n : Web Crawler\n'
+    Existing Dependencies:
+    javax.transaction:javax.transaction-api
+- org.codelibs.fess:fess-crawler-lasta
+- org.slf4j:slf4j-log4j12
+- org.dbflute.utflute:utflute-lasta-di
+- org.elasticsearch:elasticsearch
+- org.jsoup:jsoup
+- org.slf4j:jcl-over-slf4j
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+    
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>
+          Pages
+          <small>Edition</small>
+        </h1>
+        <ol class="breadcrumb">
+          <li><a href="/dashboard"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+          <li><a href="/pages">Page</a></li>
+          <li class="active">Edit Page</li>
+        </ol>
+      </section>
+
+      <!-- Main content -->
+      <section class="content">
+
+        <h2>Modification d'une page </h2>
+        <a href="/pages" class="btn btn-primary">Retour</a>
+        <br><br>
+
+        <div class="col-md-7 col-sm-6">
+
+            <?php 
+
+                echo form_open("pages/update", array("class" => "form-horizontal") );
+                $hidden = array(
+                  'id' => $page->id,
+                );
+                echo form_hidden($hidden);
+
+                $name = array(
+                  'name' => 'name',
+                  'id' => 'name',
+                  'value' => $page->name,
+                  'class' => 'form-control', 
+                  'placeholder' => 'Titre du post',
+                  );
+
+                $content =  array(
+                  'name' => 'content',
+                  'class' => 'form-control',  
+                  'value' => $page->content,
+                  'id' => 'content', 
+                  'placeholder' => 'Texte du post.',
+              
+                  );
+
+
+                $status = array(
+                  'name' =>'status',
+                  'id' =>'status',
+                  'type' =>'select',
+                  'class' => 'form-control', 
+                  'value' => $page->status,
+                );
+        
+
+                $btn_update = array(
+                    'name' => 'btn_update',
+                    'id' => 'btn_update',
+                    'value' => 'Update',
+                    'type' =>'submit',
+                    'class' => 'btn btn-primary pull-right',
+
+                    );        
+
+           ?>
+                <div  class="form-group">
+                    
+                    <input name="title" type="text" id="title" placeholder="Titre du post" value="<?php echo set_value('title', $page->name);?>" class="form-control <?php  echo form_error('title')!= ''? 'is-invalid':'';?>" >
+                    <?php echo form_error('title');?>
+                </div>
+                
+                <div  class="form-group">
+                    <textarea name="textarea-content" class="form-control" rows="30"><?= $page->content;?></textarea>
+                    <textarea name="txt_content" class="textarea" rows="30"><?= $page->content;?></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <select name="categorie" id="categorie">
+                        <?php
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>n_type
+        self.value = value
+        self.start = position
+
+    def __str__(self):
+        return f"{self.position_type}:{self.value}"
+
+
+class Instruction:
+    """
+    Representa un objeto de instrucción
+    """
+
+    def __init__(self, code, position, value):
+        self.type_instruction = code
+        self.position = position
+        self.value = value
+        # Creación de la posición de memoria que ocupa la instrucción
+        self.memory = Memory(self.position, self.value)
+
+        self.operands = []
+        self.opcode = None
+        self.operand1 = None
+        self.operand2 = None
+        self.label = None
+        self.jmp = None
+
+    def execute_instruction(self, register):
+        """
+        Ejecuta la instrucción
+        """
+
+        # print(self.type_instruction, ':', str(self.memory.start).rjust(4), str(self.memory.value).rjust(3),
+        #       self.memory)
+
+        if isinstance(self.type_instruction, str):
+            if self.type_instruction == 'JMP':
+                # Código JMP
+                jump = self.value[1:]
+                try:
+                    value = int(jump)
+                except ValueError as e:
+                    value = self.value[1:]
+                    return jump, value
+                return jump, value
+            if self.type_instruction == 'HLT':
+                sys.exit(0)
+            print(f"ERROR: Instrucción no reconocida {self.type_instruction}")
+            sys.exit(0)
+        else:
+            self.opcode = self.type_instruction
+            # self.label = label
+            self.operands = [self.value[0],
+                             self.value[1]] if len(self.value) == 2 \
+                else [self.value[1],
+                      self.value[2]]
+
+            try:
+                self.operand1 = int(self.operands[0])
+            except ValueError:
+                self.operand1 = self.value[0]
+            try:
+                self.operand2 = int(self.operands[1])
+            except ValueError:
+                self.operand2 = self.value[1]
+
+            try:
+                if isinstance(self.operand1, int) and self.operand1 < 16:
+                    self.operand1 = register.get(self.operand1)
+                if isinstance(self.operand2, int) and self.operand2 < 16:
+                    self.operand2 = register.get(self.operand2)
+            except KeyError:
+                print(f"ERROR: Operandos no reconocidos {self.operand1}, {self.operand2}")
+                sys.exit(0)
+
+            opcode = opcodes.get(self.opcode)
+            if self.opcode == 'ADD':
+                # Código ADD
+                return opcode, register[self.operand1], register[self.operand2]
+            return opcode, register[self.operand1], self.operand2
+
+
+def create_instruction(code, position, value):
+
+Precision: 0
+Recall: 0
+F1 Score: 0

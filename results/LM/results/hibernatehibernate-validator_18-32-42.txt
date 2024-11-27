@@ -1,0 +1,134 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: hibernate/hibernate-validator
+    Project Description: Hibernate Validator\n\nVersion: 8.0.1.Final 20230620\n\n\n What is it?\n\nThis is the reference implementation of .\nJakarta Bean Validation defines a metadata model and API for JavaBean as well as method validation.\nThe default metadata source are annotations, with the ability to override and extend\nthe metadata through the use of XML validation descriptors.\n\n Documentation\n\nThe documentation for this release is included in the docs directory of the distribution package or can be accessed .\n\n Release Notes\n\nThe full list of changes for this release can be found in changelog.txt.\n\n System Requirements\n\nJDK 8 or above.\n\n Using Hibernate Validator\n\n In case you use the distribution archive from the download site, copy dist/hibernatevalidator&lt;version&gt;.jar together with all\njar files from dist/lib/required into the classpath of your application. For the purposes of logging, Hibernate Validator uses\nthe JBoss Logging API, an abstraction layer which supports several logging solutions such e.g. log4j or the logging framework\nprovided by the JDK as implementation. Just add a supported logging library to the classpath e.g. log4j&lt;version&gt;.jar and JBoss\nLogging will delegate any log requests to that provider.\n\n Add the following artifact to your Maven/Ivy/Gradle dependency list:\n\n \n org.hibernate.validator\n hibernatevalidator\n 8.0.1.Final\n \n\n You also need an API and implementation of the Unified Expression Language. These dependencies must be explicitly added in an SE environment.\n In a Jakarta EE environment, they are often already provided.\n\n \n org.glassfish.expressly\n expressly\n 5.0.0\n \n\n Jakarta Bean Validation defines integration points with . If your application runs\nin an environment which does not provide this integration out of the box, you may use the Hibernate Validator CDI portable\nextension by adding the following dependency:\n\n \n org.hibernate.validator\n hibernatevalidatorcdi\n 8.0.1.Final\n \n\n hibernatevalidatorannotationprocessor&lt;version&gt;.jar is an optional jar which can be integrated with your build\nenvironment respectively IDE to verify that constraint annotations are correctly used. Refer to the for more information.\n\n Licensing\n\nHibernate Validator itself as well as the Jakarta Bean Validation API and TCK are all provided and distributed under\nthe Apache Software License 2.0. Refer to license.txt for more information.\n\n Build from Source\n\nYou can build Hibernate Validator from source by cloning the git repository .\nYou will also need a JDK 17 and Maven 3 = 3.3.1. With these prerequisites in place you can compile the source via:\n\n mvn clean install\n\nThere are more build options available as well. For more information refer to .\n\n Continuous Integration\n\nThe official Continuous Integration service for the project is hosted on .\n\nWe provide a file so that you can enable CI for your GitHub fork by enabling the build in .\n\n Hibernate Validator URLs\n\n \n \n \n \n \n | \n'
+    Existing Dependencies:
+    org.assertj:assertj-core
+- org.glassfish:javax.el
+- org.javamoney:moneta
+- ${project.groupId}:hibernate-validator-test-utils
+- org.jboss.logging:jboss-logging-processor
+- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-api-maven
+- org.jboss.shrinkwrap:shrinkwrap-impl-base
+- com.google.guava:guava
+- org.ops4j.pax.url:pax-url-aether
+- org.osgi:org.osgi.core
+- javax.annotation:javax.annotation-api
+- javax.money:money-api
+- org.ops4j.pax.exam:pax-exam
+- junit:junit
+- org.hibernate.beanvalidation.tck:beanvalidation-tck-tests
+- org.jboss.shrinkwrap.descriptors:shrinkwrap-descriptors-impl-javaee
+- ${project.groupId}:hibernate-validator-modules
+- org.codehaus.groovy:groovy-jsr223
+- org.hibernate.validator:hibernate-validator-cdi
+- org.easymock:easymock
+- javax.inject:javax.inject
+- javax.validation:validation-api
+- com.fasterxml:classmate
+- javax.enterprise:cdi-api
+- org.jsoup:jsoup
+- org.jboss.logging:jboss-logging-annotations
+- log4j:log4j
+- org.hibernate.javax.persistence:hibernate-jpa-2.1-api
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 28 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div class="form-group">
+        {{ Form::label('name', 'Name') }}
+        {{ Form::text('name', $value = null, array_merge(['class' => 'form-control','required' => false])) }}
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="form-group">
+                {{ Form::label('email', 'Email') }}
+                {{ Form::email('email', $value = null, array_merge(['class' => 'form-control','required' => true])) }}
+            </div>
+            <!-- /.form-group -->
+            <div class="form-group">
+                {{ Form::label('password', 'Password') }}
+                {{ Form::password('password', array_merge(['class' => 'form-control','required' => true])) }}
+            </div>
+
+        </div>
+        <!-- /.col -->
+        <div class="col-md-7">
+            <div class="form-group">
+                {{ Form::label('phone', 'Phone') }}
+                {{ Form::text('phone', $value = null, array_merge(['class' => 'form-control','required' => true])) }}
+            </div>
+            <div class="form-group">
+                {{ Form::label('birthdate', 'Birthday') }}
+                {{ Form::date('birthdate', $value = null, array_merge(['class' => 'form-control','required' => false])) }}
+            </div>
+            <!-- /.form-group -->
+        </div>
+    </div>
+
+    <hr>
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="form-group">
+                {{ Form::label('role_id', 'Role') }}
+                {{ Form::select('role_id',\App\Http\Controllers\Admin\UserController::roles(), $value=null, $attributes = array_merge(['class' => 'form-control','required' => false,'placeholder' => "Select Role"])) }}
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="form-group">
+                {{ Form::label('country_id', 'Country') }}
+                {{ Form::select('country_id',\App\Http\Controllers\Admin\UserController::countries(), $value=null, $attributes = array_merge(['class' => 'form-control','required' => false,'placeholder' => "Select Country"])) }}
+            </div>
+            <!-- /.form-group -->
+        </div>
+        
+        <!-- /.col -->
+        <div class="col-md-4">
+            <div class="form-group">
+                {{ Form::label('city_id', 'City') }}
+                {{ Form::select('city_id',[], $value=null, $attributes = array_merge(['class' => 'form-control','required' => false,'placeholder' => "Select City"])) }}
+            </div>
+            <div class="form-group">
+                {{ Form::label('gender', 'Gender') }}
+                {{ Form::select('gender',['male' => 'Male','female' => 'Female'], $value=null, $attributes = array_merge(['class' => 'form-control','required' => false,'placeholder' => "Select
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 28 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> #import <UIKit/UIKit.h>
+#import "LHQToolsProtocol.h"
+
+@interface LHQTools : e;
++ (CGSize)getImageSizeFromURL:(NSString*)path;
++ (NSDictionary*)getDictionaryFromFile:(NSString*)fileName;
+
+
+//获得本地图片的大小，返回的是字节数
++ (CGFloat)getImageDataSizeWithLocalImage:(UIImage *)image;
+@endNSObject
+
++ (void)log:(NSString*)messag
+
+Precision: 0
+Recall: 0
+F1 Score: 0

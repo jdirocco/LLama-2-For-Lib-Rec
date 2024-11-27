@@ -1,0 +1,143 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: lukaspili/Auto-Mortar
+    Project Description: Auto Mortar\n\nMortar / Flow / Dagger 2 requires to write a lot of boilerplate code. \nAuto Mortar is an annotation processor that focuses on eliminating the maximum of that boilerplate. No magic tricks here, just some straightforward and human readable code generated for you.\n\n\n "Traditional" way\n\n\n\n With Auto Mortar\n\nYou only write the Presenter class.\n\n\n\n The big picture\n\n1. Create the presenter class recommanded name syntax is \n2. Annotate the presenter with \n3. Rebuild the project in order to trigger the annotation processor\n4. Use and as you wish :\n\n\n How does it work\n\nThe annotation processor generates during compilation 3 classes for each annotated presenter. \nFor the ShowUserPresenter class, it will generate:\n\n ShowUserScreen\n ShowUserScreenComponent\n ShowUserScreen.Module\n\nAll the generated code is readable and accessible in your IDE, in the same way Dagger 2 does.\n\n\n Screen\n\nThe generated screen is named XyzScreen, while your presenter should be named XyzPresenter. \nThe screen contains the generated Module as a static subclass. \n\nThe generated screen can be annoted with your custom annotation. \nIn order to do so, you have to first annotate the presenter with that annotation, and then specify the annotation class in member.\n\nFor instance, if you have a annotation you want to apply on the generated screen:\n\n\n\nThe generated screen will look like:\n\n\n\nIf you configured Auto Mortar to make the generated screens extend from , you can then use them with Flow.\n\n\n\nTo see how to configure Auto Mortar and how to pass navigation parameters between screens, see below.\n\n\n Component\n\nThe component generation relies on the Auto Dagger2 library. \nSee the readme of Auto Dagger2 for details: \n\n\n Module\n\nThe generated module is named XyzScreen.Module and declares a provider method for the presenter. The right dependencies will be injected. \nThe presenter must use constructor injection for its dependencies. Field or setter injection is not supported.\n\nGenerated module looks like:\n\n\n\n\n Auto Mortar configuration\n\nYou can also customize the code generation through a configuration annotation. \nCreate a new empty interface or class, and annotate it with . All configuration options are exposed as members of .\n\n\n\nIf you don\'t provide a configuration, the default will be used see . Only one configuration per project is supported.\n\n\n Passing parameters between screens\n\nWhen you navigate from one screen to another, you often want to pass some parameters. \n generates all for you. You just have do declare the navigation parameters in your presenter, like a normal dependecy injected by dagger. \nThe only difference is that you have to annotate it with in the presenter constructor.\n\n\n\nThat\'s all! will generate the following screen and module for you.\n\n\n\nFinally, navigate between screens like you would normally do: \n\n\n\n Component factory and helper\n\nWhen using Mortar and Flow together, you would setup a context factory that setups the mortar context associated with the screen to display. You would use to create the component associated to the screen, using reflection. \n generates for you the method that create the component without reflection.\nThe generated screen implements a interface that declares the createComponent method. It takes the component dependency as parameter, and returns an instance of the component. It looks like:\n\n\n\nThe generated screen provides also a helper static get method that retreives the component from the context:\n\n\n\n\n Dagger scope\n\nIn the same way as Auto Dagger2 works, you need to annotate your presenter with a dagger scope annotation an annotation that is itself annotated with .\nAuto mortar will detect this annotation, and will apply it on the generated module and component.\n\nIf you don\'t provide scope annotation on the presenter, the generated module and component will be unscoped.\n\n\n Demo\n\nCheck the sample project for demo. \nYou can also check a full demo project with Auto Mortar here: \n\n\n\n Installation\n\nBeware that the groupId changed to com.github.lukaspili.automortar\n\n\n\n\n Status\n\nStable API.\n\n\n Author\n\n Lukasz Piliszczuk \n\n\n License\n\nAuto Mortar is released under the MIT license. See the LICENSE file for details.\n\n\n'
+    Existing Dependencies:
+    com.github.lukaspili.processor-workflow:processor-workflow
+- com.google.auto:auto-common
+- com.jakewharton.timber:timber
+- com.android.support:recyclerview-v7
+- com.squareup.retrofit:retrofit
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <link href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <div class="breadcrumbs">
+            <div class="breadcrumbs-inner">
+                <div class="row m-0">
+                    <div class="col-sm-4">
+                        <div class="page-header float-left">
+                            <div class="page-title">
+                                <h1>Dashboard</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="page-header float-right">
+                            <div class="page-title">
+                                <ol class="breadcrumb text-right">
+                                    <li><a href="home">Dashboard</a></li>
+
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<section>
+    <div class="contents container-fluid">
+    <div class="row d-flex justify-content-center">
+            <div class="col-md-10">
+            <div class="table responsive">
+             
+                
+            <table class="table table-striped table-hover" id="tabel">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col"><h5>No</h5></th>
+                    <th scope="col"><h5>Tahun</h5></th>
+                    
+                    <th scope="col"><h5>Aksi</h5></th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+            $no =1;
+            foreach($data->result_array() as $row):
+                 $id = $row['id_tahun_ajaran'];
+           ?>
+            <tr> 
+            <th scope="col"><?=$no?></th>
+            <th scope="col"><?=$row['tahun_ajaran'];?></th>
+            
+            <th>
+            <a href="#editTahun" data-toggle="modal" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+            <!-- <a href="#hapusTahun" data-toggle="modal" class="btn btn-danger"><i class="icon fa fa-trash"></i></a></td> -->
+            </th>
+            </tr>
+            <?php
+            $no++;
+            endforeach;
+           ?>
+            </tbody>
+        </table>
+            </div>
+            </div>
+        </div>
+
+</section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel" align="center">Tambah Tahun Ajaran </h3>
+        <button type="button" class="close" data-dismiss
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import React from'react'
+
+import Layout from '../layouts/Layout'
+import { Link } from 'gatsby'
+
+const HomePage = () => (
+  <Layout>
+    <main>
+      <h1>Home page</h1>
+      <ul>
+        <li>
+          <Link to="/about/">About</Link>
+  /Layout>
+)
+
+export default HomePage
+      </li>
+        <li>
+          <Link to="/blog/">Blog</Link>
+        </li>
+        <li>
+          <Link to="/contact/">Contact Us</Link>
+        </li>
+      </ul>
+    </main>
+  <
+
+Precision: 0
+Recall: 0
+F1 Score: 0

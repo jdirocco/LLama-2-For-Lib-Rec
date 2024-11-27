@@ -1,0 +1,148 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: marklogic/java-client-api
+    Project Description: \n\n\n\n\n The MarkLogic Java Client\n\nThe MarkLogic Java Client makes it easy to write, read, delete, and find documents\nin a database. The client requires connecting to a \n and is ideal for applications wishing to \nbuild upon the MarkLogic REST API. \n\nThe client supports the following core features of the MarkLogic database:\n\n Write and read binary, JSON, text, and XML documents.\n Query data structure trees, markedup text, and all the hybrids in between those extremes.\n Project values, tuples, and triples from hierarchical documents and aggregate over them.\n Patch documents with partial updates.\n Use Optimistic Locking to detect contention without creating locks on the server.\n Execute ACID modifications so the change either succeeds or throws an exception.\n Execute multistatement transactions so changes to multiple documents succeed or fail together.\n Call Data Services by means of a Java interface on the client for data functionality \nimplemented by an endpoint on the server.\n\nThe client can be used in applications running on Java 8, 11, and 17. If you are using Java 11 or higher and intend\nto use , please see the section below for ensuring that the\nnecessary dependencies are available in your application\'s classpath.\n\n QuickStart\n\nTo use the client in your project, include the following in your file:\n\n \n com.marklogic\n marklogicclientapi\n 6.4.1\n \n\nTo use the client in your project, include the following in your file:\n\n dependencies {\n implementation "com.marklogic6.4.1"\n }\n\nNext, read to get started.\n\nFull documentation is available at:\n\n \n \n\n Including JAXB support \n\nIf you are using Java 11 or higher including Java 17 and you wish to use \nwith the client, you\'ll need to include JAXB API and implementation dependencies as those are no \nlonger included in Java 11 and higher.\n\nFor Maven, include the following in your pom.xml file:\n\n \n javax.xml.bind\n jaxbapi\n 2.3.1\n \n \n org.glassfish.jaxb\n jaxbruntime\n 2.3.2\n \n \n org.glassfish.jaxb\n jaxbcore\n 2.3.0.1\n \n\nFor Gradle, include the following in your build.gradle file this can be included in the same block \nas the one that includes the marklogicclientapi dependency:\n\n dependencies {\n implementation "javax.xml.bind2.3.1"\n implementation "org.glassfish.jaxb2.3.2"\n implementation "org.glassfish.jaxb2.3.0.1"\n }\n\nYou are free to use any implementation of JAXB that you wish, but you need to ensure that you\'re using a JAXB \nimplementation that corresponds to the interfaces. JAXB 3.0 and 4.0 interfaces are packaged under \n, and the Java API does not yet depend on those interfaces. \n\nThus, you are free to include an implementation of JAXB 3.0 or 4.0 in your project for your own use; it will not \naffect the Java API. A caveat though is if you are trying to use different major versions of the same JAXB \nimplementation library such as then you will run into an expected dependency \nconflict between the two versions of the library. This can be worked around by using a different implementation of \nJAXB 3.0 or JAXB 4.0 for example:\n\n dependencies {\n // JAXB 2 dependencies required by Java Client\n implementation "javax.xml.bind2.3.1"\n implementation "org.glassfish.jaxb2.3.2"\n implementation "org.glassfish.jaxb2.3.0.1"\n \n // JAXB 4 dependencies required by other application code\n implementation "jakarta.xml.bind:jakarta.xml.bindapi:4.0.0"\n implementation "com.sun.xml.bind4.0.1"\n }\n\nThe client will soon be updated to use the newer interfaces. Until then, the above approach\nor one similar to it will allow for both the old and new JAXB interfaces and implementations to exist together in the\nsame classpath.\n\n Support\n\nThe MarkLogic Java Client is maintained by Engineering and is made available under \nthe . It is designed for use in production applications with MarkLogic Server. \nEveryone is encouraged to file bug reports, feature requests, and pull requests through . \nThis input is critical and will be carefully considered. However, we can\xe2\x80\x99t promise a specific resolution or timeframe \nfor any request. In addition, MarkLogic provides technical support for of the Java Client to \nlicensed customers under the terms outlined in the . Customers with an \nactive maintenance contract can sign up for MarkLogic Technical Support on our .\n'
+    Existing Dependencies:
+    net.sf.opencsv:opencsv
+- org.jvnet.mimepull:mimepull
+- org.geonames:geonames
+- xmlunit:xmlunit
+- xom:xom
+- com.fasterxml.jackson.dataformat:jackson-dataformat-csv
+- com.sun.jersey:jersey-client
+- ch.raffael.pegdown-doclet:pegdown-doclet
+- org.slf4j:slf4j-api
+- org.mockito:mockito-all
+- net.sourceforge.htmlcleaner:htmlcleaner
+- com.fasterxml.jackson.dataformat:jackson-dataformat-xml
+- com.sun.jersey:jersey-core
+- com.marklogic:marklogic-xcc
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<div class="container">
+
+    <div class="row mt-3">
+        <div class="col-md-6">
+
+        
+
+        <div class="card">
+            
+            <div class="card-body">
+                <!-- <h5 class="card-title">Form</h5> -->
+                <!-- <?php if (validation_errors()) :?>
+                <div class="alert alert-danger" role="alert">
+                    <?= validation_errors();?>
+                </div>
+                <?php endif;?> -->
+                
+            <form action="" method="post">
+            <input type="hidden" name="id_jadwal" value="<?= $id_jadwal;?>">
+            <div class="form-group">
+                <div class="form-group">
+                    <label form="nama">Nomor Antrian</label>
+                <input type="text" name="nomor" class="form-control" id="nama" value="<?= $antrian_no;?>" readonly>
+                </div>
+
+
+                <label form="nama">Nama</label>
+                <input type="text" name="nama_pasien" class="form-control" id="nama" value="<?= $data_pendaftaran['nama'];?>" readonly>
+            </div>
+            <div class="form-group">
+                <label form="nama">Tanggal Lahir</label>
+                <input type="text" name="tanggal_lahir" class="form-control" id="nama" value="<?= $data_pendaftaran['tanggal_lahir'];?>" readonly>
+            </div>
+            <div class="form-group">
+                <label form="nama">Jenis Kelamin</label>
+                <input type="text" name="jenis_kelamin" class="form-control" id="nama" value="<?= $data_pendaftaran['jenis_kelamin'];?>" readonly>
+            </div>
+
+        
+
+
+
+                <button type="submit" name="tambah" class="btn btn-primary float-right">Next</button>
+                
+            </form>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> # 概要
+
+- [概要](#概要)
+- [インストール](#インストール)
+- [使用方法](#使用方法)
+- [追加](#追加)
+
+## インストール
+
+```
+$ git clone https://github.com/ninomae-tsuki/ninomae-tsuki-bot
+$ cd ninomae-tsuki-bot
+$ npm install
+```
+
+## 使用方法
+
+1. `config.js`を編集
+2. `token`の箇所を、自分のDiscord botのトークンに変更して保存する
+3. `!`と入力するとコマンドが認識される。
+
+```
+$ npm start
+```
+
+### 追加
+
+以下のような`[コマンド]`を`commands`に追加し、コマンドの名前を`name`に、説明を`description`に、実行するコマンドを`exec`という名  description: '',
+  exec: function (args, text, bot, info) {},
+  admin: false,
+},
+```
+
+### コマンドの追加方法
+
+`ninomae-tsuki-bot/commands.txt` の中に追加する。
+
+- `name`はコマンドの名前
+- `description`はコマンドの説明
+- `exec`の中にそのコマンドを入れる
+- `admin`は説明が抜かれた
+
+
+前で入れる。
+
+```js
+{
+  name: '',
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

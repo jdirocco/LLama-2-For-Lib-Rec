@@ -1,0 +1,149 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: konmik/nucleus
+    Project Description: Nucleus\n=======\n\n Deprecation notice\n\nNucleus is not under develpment anymore. It turns out that Redux architecture scales way better than MVP/MVI/MVVM/MVxxx and I do not see further development of Nucleus valuable.\n\nI recommend considering as a simple Redux implementation.\n\n Info\n\n \n\n\nNucleus is a simple Android library, which utilizes the pattern\nto properly connect background tasks with visual parts of an application.\n\n\n\n\n\n Introduction\n\nSome time has passed since \nand \ncompletely superseded \nand in our applications.\n\nBut there are still some defects in our applications even when using such advanced technologies:\n An application is unable to continue a background task execution after a configuration change.\n An application does not automatically restart a background task after a process restart.\n\nWhile most applications work without such capabilities, their absence is an obvious bug that just sits there\nand waits for a user who pressed "Login" button while being in a subway and switched to another application\nbecause his network connection was too slow. Bugs that almost any application produce in such cases\nare numerous.\n\nAndroid docs are covering such problems very briefly, take a look at:\n\n"If an activity implements its lifecycle methods correctly, and saves\nits current state, killing its process will not have a visible effect on\nthe user experience, because when the user navigates back to the activity,\nthe activity restores all of its visible state."\n\nThis is not true there WILL be a visible effect because we\'re not restoring background tasks.\nThe application will restore it\'s visual state, but it will forget what it is doing.\nSo, if an application restores a progress bar, but does not restore the background task itself \na user will see the usual "progress bar forever" bug.\n\n Nucleus\' main features\n\n In case of configuration change Nucleus automatically reattaches all running background tasks to the new View.\nThe application will not forget what it is doing.\n\n In case of process restart Nucleus automatically restarts background tasks.\nEven when running on a low memory device or waiting for a long running background task completion,\nthe application is still reliable.\n\n The entire library has been built keeping in mind.\nAnyone can read and understand it easily.\n\n The library does not depend on Dagger, you don\'t need to write a whole class just to inject a presenter. One annotation\nis all you need. Despite presenters are instantiated without Dagger, their dependencies can still be injected.\n\n Presenter in Nucleus is an external class that does not depend on View, this automatically prevents any troubles\nthat are connected with activity context leaks.\n\n History\n\nAt the moment of the first release, the library main idea was to be the simplest possible MVP implementation.\n\nA couple of months later, I finally realized that RxJava has became the tool number one for smart background threads handling,\nso RxPresenter appeared. Since that moment, the main focus shifted in the direction of RxJava support.\n\nThe correct lifecycle handling was something that seemed obvious to me from the beginning, so I did not make\nan accent on this feature in the library description. However, since those times, more MVP libraries appeared,\nnow I need to differentiate Nucleus from other implementations. The library description\nbecame: "Nucleus is a simple Android library, which utilizes the ModelViewPresenter pattern\nto properly connect background tasks with visual parts of an application."\n\n Include this library:\n\n\n\nFor additional view classes , include:\n\n\n\nFor additional view class include:\n\n\n\nProGuard config:\n\n\n\n For RxJava 2:\n\n\n\n\nFor additional view classes , include:\n\n\n\nFor additional view class include:\n\n\n\nHint: you can just copy/paste those classes code into ANY View class\nto keep your View classes hierarchy as you like to.\n\nProGuard config:\n\n\n'
+    Existing Dependencies:
+    com.squareup.dagger:dagger
+- frankiesardo:icepick-processor
+- frankiesardo:icepick
+- javax.annotation:javax.annotation-api
+- org.mockito:mockito-all
+- com.jakewharton:butterknife
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="col-6 col-lg-2">
+
+      <img class="navbar-brand-full" src="https://www.agronielsen.com/encampo/public/imagenes/icono-agronielsen-presentacion.png"  style="margin-left:10px; height:50px">
+      <img class="navbar-brand-minimized" src="https://www.agronielsen.com/encampo/public/imagenes/icono-agronielsen.png" width="30" height="30" >
+
+    </a>
+
+  </div>
+    
+      
+  <div class="nav-item d-md-down-none">
+  </div>
+     
+  <div class="nav-item d-md-down-none">
+  </div>
+    
+  <div class="nav-item d-md-down-none">
+  </div>
+    
+  <div class="nav-item d-md-down-none">
+  </div>
+     
+  <div class="nav-item d-md-down-none">
+  </div>
+     
+  <div class="nav-item d-md-down-none">
+  </div>
+
+  </div>
+
+    <ul class="nav navbar-nav ml-auto">
+
+    
+      
+      
+      <li class="nav-item d-md-down-none">
+        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+          <i class="icon-bell"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right mt-2">
+          <div class="top-notifications__content">
+            <div class="top-notifications__headline">Notifications</div>
+            <div class="top-notifications__notifications-container">
+              
+              <?php
+
+                  use Carbon\Carbon;
+                     $now = Carbon::now();
+                     $end = Carbon::parse('2018-03-30');
+                     $dias = $now->diffInDays($end);
+                     $dif = 10 - $dias; 
+             ?>
+              <div>
+                <a class="top-notifications__notifications-item">
+                  <div class="top-notifications__item-wrapper align-items-center d-flex justify-content-between">
+                    <div class="top-notifications__item-icon"><img src="https://www.agronielsen.com/encampo/public/imagenes/icono-agronielsen-presentacion-2-mini.png" width="32" height="32" alt=""></div>
+                    <div>
+                      <div class="top-notifications__item-name">Nueva Version Disponible</div>
+                      <div class="top-notifications__item-description">
+                        <?php echo "Hay una nueva version de AgroNielsen disponible: <br> V. ".$version." <br>Descárgala en: <br> https://www.agronielsen.com/descargas";?>
+                      </div>
+                    </div>
+                  </div>
+                </a
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> 
+@extends('app')
+
+@section('content')
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">
+                {{--                <a href="{{route('user.create')}}" class="btn btn-primary">添加数据</a>--}}
+            </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>名称</th>
+                        <th class="text-center">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    @foreach($list as $item)
+                        <tr>
+                            <td>{{$item['id']}}</td>
+                            <td>{{$item['name']}}</td>
+
+                            <td class="text-center">
+                                <a href="{{asset('good/create/'.$item)}}" class="btn btn-sm btn-warning">添加商品</a>
+                                <a href="{{asset('good/list/'.$item->id)}}" class="btn btn-sm btn-info">商品列表</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#good').addClass("active");
+    </script>
+@endsection
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

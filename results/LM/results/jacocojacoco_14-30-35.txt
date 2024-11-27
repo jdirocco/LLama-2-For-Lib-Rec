@@ -1,0 +1,201 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: jacoco/jacoco
+    Project Description: JaCoCo Java Code Coverage Library\n=================================\n\n\n\n\nJaCoCo is a free Java code coverage library distributed under the Eclipse Public\nLicense.\n\n Starting Points\n\n I want to use JaCoCo \xe2\x86\x92 , , , , \n I want to know how JaCoCo works \xe2\x86\x92 \n I have a question \xe2\x86\x92 , , \n I found a bug \xe2\x86\x92 \n I have an idea \xe2\x86\x92 , \n'
+    Existing Dependencies:
+    jacoco:setup-parent
+- jacoco:it-multi-module
+- @project.groupId@:org.jacoco.agent
+- jacoco:child1
+- jacoco:it-report-aggregate
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="col-xs-6">
+            <div class="panel panel-default panelpanel">
+                <div class="panel-heading">
+                
+                    <p>
+                        <?php
+                            if($this->session->userdata('usertype') == "Administrator")
+                            {
+                               echo anchor('site/adduser', 'New User', array('class'=>'btn btn-primary btn-xs'));
+                            }
+                       
+                       ?>
+                    </p>
+                   
+                </div>
+                <div class="panel-body">
+           
+            <table class="table table-bordered text-center table-striped">
+                <thead class="thead-light">
+                <tr > 
+                    <th scope="col" class="col-xs-1">#</th>
+                    <th scope="col" class="col-xs-2">Username</th>
+                    <th scope="col" class="col-xs-2">Full name</th>
+                    <th scope="col" class="col-xs-1">Type</th>
+                    <th scope="col" class="col-xs-1">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <?php
+                   if (!empty($users)) {
+                        $count = 0;
+                        foreach ($users as $row) {
+                            $count++;
+                       ?>
+                    <tr >
+                        <th scope="row" class="col-xs-1" ><?php echo $count;?></th> 
+                        <td class="col-xs-2" ><?php echo $row->username_fname_lname;?></td>
+                        <td class="col-xs-2" ><?php echo $row->first_name.' '.$row->last_name;?></td>
+                        <td class="col-xs-1" ><?php echo $row->user_type;?></td>
+                        <td class="col-xs-1" >
+                            <button type="button" class="btn btn-sm btn-info"
+                                    <?php
+                                    if ($this->session->userdata('usertype')!= "Administrator") {
+                                        echo "disabled=true";
+                                    }
+                                   ?>
+
+                                    >
+                                    <?php
+                                        if ($this->session->userdata('usertype') == "Administrator") {
+                                            echo anchor('site/edituser/'. $row->user_id, 'Edit', array('title'=>'Edit','class'=>'text-success'));
+                                        }
+                                  
+                                   ?>
+                            </button>
+                        </td>
+                    </tr>
+                    <?php } } else {
+                   ?>
+                    <tr>
+                        <td scope="row" colspan="5" >No records.</td>
+                    </tr>
+                <?php }?>
+                </tbody>
+            </table>
+                 </div>   
+            </div>
+        </div>
+ 
+        
+    </div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e.data.data)
+            this.form = response.data.data;
+          } else {
+            this.$Notice.error({
+              title: '错误',
+              desc: response.data.msg,
+            })
+          }
+        }).catch(err => {
+        })
+      },
+      submit() {
+        let that = this;
+        this.$Modal.confirm({
+          title:"提交信息",
+          onOk() {
+            that.$refs['form'].validate((valid) => {
+              if (valid) {
+                axios.post(that.url + '/user/changeInfo', this.form).then(function (response) {
+                  if (response.data.status == '0') {
+                    that.$Message.success(response.data.msg);
+                    setTimeout(function () {
+                      window.location.reload();
+                    }, 500);
+                  } else {
+                    that.$Message.error(response.data.msg);
+                  }
+                }).catch(err => {
+                  that.$Message.error('请求错误！')
+                })
+              }
+            })
+          },
+          onCancel() {
+
+          }
+        })
+      },
+      changePassword() {
+        window.open(window.location.origin + "/#/changePassword");
+      }
+    }
+  }
+</script>
+<style scoped>
+
+</style> <template>
+  <div>
+    <Form ref="form" :rules="rules" :model="form" style="width: 800px;margin-left: 120px">
+      <Form-item label="真实姓名" prop="realname">
+        <Input v-model="form.realname"/>
+      </Form-item>
+      <Form-item label="昵称" prop="nickname">
+        <Input v-model="form.nickname"/>
+      </Form-item>
+      <Form-item label="手机号码" prop="mobile">
+        <Input v-model="form.mobile"/>
+      </Form-item>
+      <Form-item label="额外信息" prop="extra_info">
+        <Input v-model="form.extra_info"/>
+      </Form-item>
+      <Form-item label="密保问题" prop="safe_question">
+        <Input v-model="form.safe_question"/>
+      </Form-item>
+      <Form-item label="密保答案" prop="safe_answer">
+        <Input v-model="form.safe_answer"/>
+      </Form-item>
+      <Form-item>
+        <Button type="primary" long @click="submit">提交</Button>
+      </Form-item>
+    </Form>
+    <Button type="default" style="margin-left: 140px;" @click="changePassword">修改密码</Button>
+  </div>
+</template>
+<script>
+  import axios from 'axios'
+  import {
+    API
+  } from '../../config'
+
+  export default {
+    mounted() {
+      this.url = API.DEV_URL
+      this.loadData()
+    },
+    data() {
+      return {
+        url: API.DEV_URL,
+        form: {
+          realname:
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,141 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: OpenSmpp/opensmpp
+    Project Description: OpenSmpp\n\nJava library implementing the SMPP protocol, and allowing development of\nExternal Short Message Entities ESMEs and more\n\nIt is based on the OpenSmpp library from is based on the original Logica SMPP libraries. It contains several\nbug fixes, and has been generally refactored.\n\n Modules\n\n core the core library\n charset character sets useful in SMPP\n client a simple SMPP client\n sim a simple SMSC simulator\n\n Versions\n\nVersions of this project are managed according to the\n specification.\n\n Build Status\n\n\n\n License\n\nCopyright c 2005, OpenSmpp Project\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification,\nare permitted provided that the following conditions are met:\n\n Redistributions of source code must retain the above copyright notice,\n this list of conditions and the following disclaimer.\n\n Redistributions in binary form must reproduce the above copyright notice,\n this list of conditions and the following disclaimer in the documentation\n and/or other materials provided with the distribution.\n\n Neither the name of the OpenSmpp Project nor the names of its contributors\n may be used to endorse or promote products derived from this software\n without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY\nEXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES\nOF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT\nSHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,\nINCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES INCLUDING, BUT NOT LIMITED\nTO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR\nBUSINESS INTERRUPTION HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN\nCONTRACT, STRICT LIABILITY, OR TORT INCLUDING NEGLIGENCE OR OTHERWISE ARISING IN ANY\nWAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\nThis software was originally issued under the Logica Open Source License Version 1.0,\nbut was subsequently put in the public domain under the current BSD licence, which was\ndeemed closest to the spirit of the original licence.\n'
+    Existing Dependencies:
+    org.powermock:powermock-module-junit4
+- org.opensmpp:opensmpp-core
+- org.slf4j:slf4j-api
+- org.opensmpp:opensmpp-client
+- org.opensmpp:opensmpp-sim
+- org.mockito:mockito-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="row">
+
+        </div>
+
+      <div class="form-group row">
+            <div class="col-sm-2" ><label for="codigo">Cedula:</label></div>
+            <div class="col-sm-4">
+                <input type="text" name="cedula" id="cedula" value="<?php echo set_value('cedula',@$persona->cedula);?>" class="form-control" required  readonly  />
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-sm-2" ><label for="nombres">Nombres:</label></div>
+            <div class="col-sm-4">
+             
+                <input type="text" name="nombres" id="nombres" value="<?php echo set_value('nombres',@$persona->nombres);?>" class="form-control" required placeholder="Escriba el Nombre" />
+            </div>
+            <div class="clearfix"></div>
+         
+            <div class="col-sm-2" ><label for="apellidos">Apellidos:</label></div>
+            <div class="col-sm-4">
+                <input type="text" name="apellidos" id="apellidos" value="<?php echo set_value('apellidos',@$persona->apellidos);?>" class="form-control" required placeholder="Escriba el Apellido" />
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="col-sm-2" ><label for="correoelectronico">Correo:</label></div>
+            <div class="col-sm-4">
+                <input type="email" name="correoelectronico" id="correoelectronico" value="<?php echo set_value('correoelectronico',@$persona->correo_electronico);?>" class="form-control" placeholder="correo@ejemplo.com" required />
+            </div>
+            <div class="clearfix"></div>
+
+            <div class='col-sm-2'><label for="fechanacimiento">Fecha Nacimiento:</label></div>
+            <div class='col-sm-4'>
+                <input type='date' name='fechanacimiento' id='fechanacimiento' value='<?php echo set_value('fechanacimiento',@$persona->fecha_nacimiento);?>' class='form-control' required /><br/>
+            </div>
+            <div class='clearfix'></div>
+
+        <div class=' col-sm-2'><label for="foto" >Foto:</label></div>
+        <div class=' col-sm-4'><input type="file" class='form-control' name='foto' id='foto' value='<?php echo @$persona->foto;?>' /></div>
+
+        <div class=' clearfix'></div>
+
+        <div class=' col-sm-2'><label for="telefonomovil" >Telefono Movil:</label></div>
+        <div class=' col-sm-4'><input type="text" class='form-control' name='telefonomovil' id='telefonomovil' value='
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import { createContext, useContext } from'react';
+import React from'react';
+
+interface IThemeProps
+  extends React.CSSProperties,
+    React.HTMLAttributes<HTMLElement> {
+  themeType?: string;
+}
+
+const DefaultTheme = {
+  color: 'rgb(34, 34, 34)',
+  background: 'rgb(250, 250, 250)',
+} as IThemeProps;
+
+interface IThemeContext extends IThemeProps {
+  setTheme?: (theme: IThemeProps, type: string) => void;
+}
+
+interface IThemeProviderProps {
+  theme?: IThementext(
+  DefaultTheme,
+  'ThemeProvider',
+);
+
+const ThemeConsumer = ThemeContext.Consumer;
+const ThemeProvider = ThemeContext.Provider;
+
+export const useTheme = () => {
+  const { theme } = useContext(ThemeContext);
+  return theme?? DefaultTheme;
+};
+
+export const withTheme = <T, R>(Component: React.ComponentType<T>) => {
+  const NewComponent = (props: R & T) => {
+    return <ThemeContext.Consumer>{({ theme }) => <Component {...props} theme={theme} />}</ThemeContext.Consumer>;
+  };
+  // eslint-disable-next-line no-process-env
+  return process.env.NODE_ENV!== 'production'
+   ? NewComponent
+    : // @ts-ignore
+      React.memo(NewComponent);
+};
+
+export { ThemeConsumer, ThemeProvider };
+Props;
+}
+
+const ThemeContext = createContext<IThemeContext>({
+  theme: DefaultTheme,
+});
+
+if (process.env.NODE_ENV!== 'production') {
+  // eslint-disable-next-line no-console
+  console.log('Please use the `withTheme` higher-order component.');
+}
+
+ThemeContext.displayName = 'ThemeContext';
+
+export const ThemeContextProvider = ThemeCo
+
+Precision: 0
+Recall: 0
+F1 Score: 0

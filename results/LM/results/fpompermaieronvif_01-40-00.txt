@@ -1,0 +1,150 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: fpompermaier/onvif
+    Project Description: Java ONVIF Open Network Video Interface Forum\n\nONVIF is a community to standardize communication between IPbased security products like cameras.\n\nThis project aims to improve tried to convice its author to use to my code but it seems we have different objectives: my goal is to create a project that focus on the funny part of the development of an ONVIF application, keeping the interaction with the WS as simple as possible and delege that annoying part to Apache CXF in order to not waste the developer time in writing and MAINTAINING code that interacts with ONVIF web services.\nMy wish is to help other developers willing to contribute to an enterpriselevel Java library for ONVIF devices.\n\nApported improvements\n=============\n Project mavenization and modularization separation between Java stubs and application and \n WS client generation using Apache CXF maven plugin declaring the specific Onvif specification of each wsdl\n maintainability and extendability of the overall code\n Separation of Test/examples from other code\n\nRebuilding WS stubs\n=============\n\nIf you need to change the list of managed WSDLs in onvif/onvifwsclient/src/main/resources/wsdl and thus you need to regenerate the WS Java stubs using the , you need to go through the following steps:\n 1. Download Onvif WSDLs to onvif/onvifwsclient/src/main/resources/wsdl appending the version before the .wsdl suffix.\n For example, from main dir onvif use you can run the following shell commmand:\n\n 1. Update WSDLLocations constants if needed within class de.onvif.utils.WSDLLocations module onvifjava\n 1. Add required urlrewriting rules if needed to onvif/onvifwsclient/src/main/resources/wsdl/jaxwscatalog.xml\n 1. Delete old Java classes in onvif/onvifwsclient/src/main/java\n 1. Run the class generation command: decomment goal and phase of cxfcodegenplugin in onvifwsclient pom.xml and run \n 1. To see how to properly add a new ONVIF service to OnvifDevice look into OnvifDevice.init\n\nTODOS\n=============\nMy next goals are:\n 1. Create an active community of enthusiastic developers the crazier you are, the better\n 1. Write a more comprehensive examples e.g. subscribe to an event notification, use I/O ports, etc...\n 1. Create consistent Onvif specifications tags at least for onvifwsclient. For example: 2.4, 2.5, etc...\n 1. Fix WSDiscovery example with my camera it doesn't work at all\n 1. Write a simple UI to test the device functionalities\n 1. Fix offline mode xml files in local folder \n"
+    Existing Dependencies:
+    commons-codec:commons-codec
+- org.apache.cxf:cxf-rt-transports-http-jetty
+- org.onvif:onvif-ws-client
+- commons-io:commons-io
+- org.apache.cxf:cxf-rt-ws-security
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- footer-bottom area-start -->
+     <div class="footer-bottom">
+        <div class="footer-reserved">
+           <div class="container">
+            <div class="row">
+                <div class="col-md-7 order-last">
+                    <div class="copyright">
+                        <p>Copyright © <a href="https://www.bootstrapdash.com/" target="_blank" rel="nofollow">BootstrapDash</a> 2021. All Rights Reserved</p>
+                    </div>
+                </div>
+                <div class="col-md-5 order-first">
+                    <div class="payment">
+                        <img src="<?=base_url()?>template/img/icons/payment.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer-bottom area-end -->
+</div>
+<!-- Footer Area End -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="" method="post">
+                <div class="mb-3">
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" aria-describedby="password1"placeholder="Password">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/po
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e_id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User', 'user_id');
+    }
+}
+ <?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Message extends Model
+{
+    protected $table ='messages';
+    protected $fillable = ['content', 'user_id','messageable_type','messageable_id'];
+
+    public function messageable()
+    {
+        return $this->morphTo();
+    }
+
+    public function conversation()
+    {
+        return $this->belongsTo(
+            'App\Models\Conversation',
+           'messageable_id',
+            'id'
+        );
+    }
+
+    public function comment(){
+        return $this->belongsTo(
+            'App\Models\Comment','messageable_id', 'id'
+        );
+    }
+
+    public function task(){
+        return $this->belongsTo(
+            'App\Models\Task','messageable_id', 'id'
+        );
+    }
+
+    public function tasklist(){
+        return $this->belongsTo('App\Models\TaskList','messageable_id','id');
+    }
+
+    public function project(){
+        return $this->belongsTo('App\Models\Project','messageable_id','id');
+    }
+
+    public function file()
+    {
+        return $this->belongsTo('App\Models\File','messageabl
+
+Precision: 0
+Recall: 0
+F1 Score: 0

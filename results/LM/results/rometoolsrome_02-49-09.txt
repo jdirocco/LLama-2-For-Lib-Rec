@@ -1,0 +1,146 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: rometools/rome
+    Project Description: ROME\n\n\n\n\nROME is a Java framework for RSS and Atom feeds. The framework consist of several modules:\n\n| Module | Description |\n| | |\n| | Library for generating and parsing RSS and Atom feeds. |\n| | Generators and parsers for extensions like MediaRSS, GeoRSS and others. |\n| | parsers and tools. |\n| | Internal utility classes. |\n\n Getting started\n\n System Requirements\nStarting with ROME 2.x Java 8 or higher is required. The only exception is version 2.0.0, which requires Java 11. However, this has been corrected in version \n2.1.0.\n\n Dependency Maven\n\n\n Parse a feed\n\nBeware! The variant used in this example is deprecated and works only for simplest cases. Please consider using a separate library for fetching the \nfeed see examples in .\n\n Generate a feed\n\n'
+    Existing Dependencies:
+    xmlunit:xmlunit
+- jetty:jetty
+- com.github.tomakehurst:wiremock
+- org.slf4j:slf4j-api
+- com.rometools:rome-modules
+- org.apache.felix:org.apache.felix.framework
+- com.rometools:rome
+- com.rometools:rome-certiorem
+- javax.servlet.jsp:jsp-api
+- net.oauth.core:oauth
+- com.google.inject.extensions:guice-servlet
+- commons-httpclient:commons-httpclient
+- org.ops4j.pax.exam:pax-exam-container-native
+- com.rometools:rome-certiorem-webapp
+- org.jdom:jdom2
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+ 
+  <footer class="footer-area section-padding-80-0">
+      
+      
+      <div class="container">
+        <div class="row justify-content-between">
+          
+         
+          <?php if(!empty($footers->footer)):?>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="footer-widget mb-80">
+
+               <img src="<?php echo e(url('storage/'.$footers->footer->image));?>" alt="">
+                
+                <!--<h4 class="widget-title">About Us</h4>
+                <p><?php echo e($footers->footer->description);?></p>-->
+                 <a class="btn footer-contact-btn w-100" href="<?php echo e(url('/about'));?>" class="btn footer-contact-btn w-100">Contact Us</a>
+               </li>
+               </ul>
+             </div>
+          </div>
+        <?php endif;?> 
+          
+          <?php if(!empty($footers->social)):?>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="footer-widget mb-80">
+              <h4 class="widget-title">Social Media</h4>
+              <a href="<?php echo e($footers->social->facebook);?>" class="facebook" data-toggle="tooltip" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="<?php echo e($footers->social->twitter);?>" class="twitter" data-toggle="tooltip" title="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="<?php echo e($footers->social->instagram);?>" class="instagram" data-toggle="tooltip" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="youtube" data-toggle="tooltip" title="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href=" <?php echo e($footers->social->vimeo);?>" class="vimeo" data-toggle="tooltip" title="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+            </div>
+          </div>
+        <?php endif;?>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="footer-widget mb-80">
+              <h4 class="widget-title">Contact</h4>
+              <!-- Contact Area Start -->
+              <div class="contact-info-area d-flex">
+               <?php if(!empty($footers->footer)):?>
+                <!-- Single Contact Info -->
+                <div class="single-contact-info d-flex align-items-center">
+                  <div class="icon mr-30">
+                    <i class="fa fa-map-marker"  aria-hidden="true"></i>
+                  </div>
+                  <div class="text">
+                    <p><?php echo e($footers->footer->address);?></p>
+                  </div>
+                </div>
+                <!-- Single Contact Info -->
+                <div class="single-contact
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>   {
+                return (int)value;
+            }
+
+            throw new ArgumentOutOfRangeException("The given value can not be converted to an integer.");
+        }
+
+        private static void ThrowIfNull(object value)
+        {
+            if (null == value)
+            {
+                var message = String.Format(CultureInfo.InvariantCulture, "The given argument is null and can therefore not be converted to a {0}.", typeof(int).FullName);
+                throw new ArgumentNullException("value", message);
+            }
+        }
+    }
+} ﻿using System;
+using System.Globalization;
+
+namespace ByteDev.Nuget
+{
+    /// <summary>
+    /// Represents a conversion extension methods.
+    /// </summary>
+    public static class ConversionExtensions
+    {
+        /// <summary>
+        /// Converts <paramref name="value" /> to an <see cref="T:System.Int32" />.
+        /// </summary>
+        /// <exception cref="T:System.ArgumentNullException"><paramref name="value" /> is null.</exception>
+        /// <exception cref="T:System.ArgumentException"><paramref name="value" /> does not contain any text.</exception>
+        /// <exception cref="T:System.ArgumentException"><paramref name="value"> can not be converted to an integer.</exception>
+        public static int ToInt(this object value)
+        {
+            ThrowIfNull(value);
+
+            if (Int32.TryParse(value.ToString(), out var result))
+            {
+                return result;
+            }
+
+            if(value.ToString().Trim().Length > 0)
+         
+
+Precision: 0
+Recall: 0
+F1 Score: 0

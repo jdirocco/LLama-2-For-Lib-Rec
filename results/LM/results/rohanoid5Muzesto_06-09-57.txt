@@ -1,0 +1,192 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: rohanoid5/Muzesto
+    Project Description: Muzesto\nMuzesto is an open source android music player. Muzesto emphasizes on the visualization factor to make the whole audio listening experience immersive and unique. The Floating Play/Pause widget works as a companion to the app. \n\n\n\n Screenshots\n\n\n\n\n\n\n\n\n\n\n\n Contact Me\nrohanoid5@gmail.com\n\n Credits\n \n \n \n \n \n\n License\n\nc 2016 Rohan Dey \n\nThis is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or at your option any later version. \n\nThis software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. \n\nYou should have received a copy of the GNU General Public License along with this app. If not, see .\n'
+    Existing Dependencies:
+    com.anthonycr.grant:permissions
+- com.android.support:percent
+- com.android.support:palette-v7
+- de.hdodenhof:circleimageview
+- com.squareup.okhttp:okhttp
+- com.vistrav:pop
+- com.yalantis:eqwaves
+- com.squareup.retrofit:retrofit
+- com.thebluealliance:spectrum
+- net.steamcrafted:materialiconlib
+- com.squareup.okhttp:okhttp-urlconnection
+- com.jaeger.statusbaruitl:library
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    ////////////////////////
+    //
+    // 
+    //
+    ////////////////////////
+    // 
+    //
+    // 
+    //
+
+    public class User
+    {
+        public string id { get; set; }
+        public string user_name { get; set; }
+        public string password { get; set; }
+        public string first_name { get; set; }
+        public string last_name { get; set; }
+        public string email_address { get; set; }
+        public string phone { get; set; }
+        public string address { get; set; }
+    }
+
+    public class Login
+    {
+        public string username { get; set; }
+        public string password { get; set; }
+    }
+
+    
+
+    ////////////////////////
+    //
+    // 
+    //
+    ////////////////////////
+    // 
+    //
+    // 
+    //
+
+    /// <summary>
+    /// The API response for a single user.
+    /// </summary>
+    /// <returns></returns>
+    [DataContract]
+    [Route("/api/user")]
+    public class UserResponse
+    {
+        /// <summary>
+        /// Gives the User object for the API. This is what we expect to be returned when we call the /user endpoint.
+        /// </summary>
+        /// <param name="user"></param>
+        public UserResponse(User user)
+        {
+            this.user = user;
+        }
+
+        [DataMember(Name = "user")]
+        public User user { get; set; }
+    }
+
+
+    /// <summary>
+    /// This is an example of a custom response for our login call. This is what we expect from our /login endpoint.
+    /// </summary>
+    [Route("/api/user/login")]
+    public class LoginResponse
+    {
+        /// <summary>
+        /// We're using this as an example of a custom API response to the call.
+        /// </summary>
+        /// <param name="login"></param>
+        public LoginResponse(Login login)
+        {
+            this.login = login;
+        }
+        
+        [DataMember(Name = "login")]
+        public Login login { get; set; }
+    }
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>r = 12,
+               .maxbit = 17,
+               .entry_idx = 0,
+               .reserved  = 0
+            }
+        },
+       .entries = 1,
+       .entry = bcm56780_a0_ina_2_4_13_lta_bcmltx_field_demux_l3_ipv6_address_compression_strength_profilet_lookup0_nhop_1_strengthf_0_value_entry
+    },
+};
+const bcmlrd_field_selector_t bcm56780_a0_ina_2_4_13_lrd_field_demux_l3_ipv6_address_compression_strength_profilet_lookup0_nhop_1_strengthf_0_src_field_desc = {
+   .field_id  = BCM56780_A0_INA_2_4_13_L3_IPV6_ADDRESS_COMPRESSION_STRENGTH_PROFILEt_LOOKUP0_NHOP_1_STRENGTHf,
+   .field_idx = 0,
+   .minbit    = 32,
+   .maxbit    = 37,
+   .entry_idx = 0,
+   .reserved  = 0
+};
+
+const bcmltd_field_desc_t
+bcm56780_a0_ina_2_4_13_lrd_field_demux_l3_ipv6_address_compression_strength_profilet_lookup0_nhop_1_strengthf_0_dst_field_desc[8] = {
+    {
+       .field_id  = KEY_0f,
+       .field_idx = 0,
+       .minbit    = 148,
+       .maxbit    = 153,
+       .entry_idx = 0,
+       .reserved  = 0,
+    },
+    {
+       .field_id  = MASK_0f,
+       .field_idx = 0,
+       .minbit    = 198,
+       .maxbit    = 203,
+       .entry_idx = 0,
+       .reserved  = 0,
+    },
+    {
+       .field_id  = KEY_0f,
+       .field_idx = 0,
+       .minbit    = 154,
+       .maxbit    = 163,
+       .entry_idx = 0,
+       .reserved  = 0,
+    },
+    {
+       .field_id  = MASK_0f,
+       .field_idx = 0,
+       .minbit    = 204,
+       .maxbit    = 215,
+       .entry_idx = 0,
+       .reserved  = 0,
+    },
+    {
+       .field_id  = KEY_0f,
+       .field_idx = 0,
+       .minbit    = 26,
+       .maxbit    = 31,
+       .entry_idx = 0,
+       .reserved  = 0,
+    },
+    {
+       .field_id  = MASK_0
+
+Precision: 0
+Recall: 0
+F1 Score: 0

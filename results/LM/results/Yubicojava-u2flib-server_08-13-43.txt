@@ -1,0 +1,107 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: Yubico/java-u2flib-server
+    Project Description: == javau2flibserver\n\nNOTE: OBSOLETE: This project is no longer maintained.\nU2F has been superseded by Authentication,\nand this project is superseded by recommend using WebAuthn instead.\n\nimage:"Build Status", link=""\nimage:"Coverage Status", link=""\n\nServerside library for Java. Provides functionality for registering\nU2F devices and authenticating with said devices.\n\n== Migrating to WebAuthn\n\nSee the from U2F section\nin the documentation.\n\n=== Dependency\n\nMaven:\nsource, xml\n \n com.yubico\n u2flibservercore\n 0.19.12\n \n\nGradle:\nsource, groovy\n repositories{ mavenCentral }\n dependencies {\n compile \'com.yubico0.19.12\'\n }\n\n=== Example Usage\nNOTE: Make sure that you have read a U2F library before continuing.\n\nsource, java\n\n\nprivate abstract Iterable getRegistrationsString username;\n\n@GET\npublic View startAuthenticationString username throws NoEligibleDevicesException {\n\n // Generate a challenge for each U2F device that this user has registered\n SignRequestData requestData\n = u2f.startSignatureSERVERADDRESS, getRegistrationsusername;\n\n // Store the challenges for future reference\n requestStorage.putrequestData.getRequestId, requestData.toJson;\n\n // Return an HTML page containing the challenges\n return new AuthenticationViewrequestData.toJson, username;\n}\n\n@POST\npublic String finishAuthenticationSignResponse response, String username throws\n DeviceCompromisedException {\n\n // Get the challenges that we stored when starting the authentication\n SignRequestData signRequest\n = requestStorage.removeresponse.getRequestId;\n\n // Verify the that the given response is valid for one of the registered devices\n u2f.finishSignaturesignRequest,\n response,\n getRegistrationsusername;\n\n return "Successfully authenticated!";\n}\n\n\nIn the above example will return the U2F devices currently associated with a given user.\nThis is most likely stored in a database. \nSee link:u2flibserverdemo for a complete demo server including registration and storage of U2F devices.\n\n=== JavaDoc\nJavaDoc can be found at Attestation\nThe attestation module enables you to restrict registrations to certain U2F devices e.g. devices made by a specific vendor. It can also provide metadata for devices.\n\n=== Serialization\nAll relevant classes implement , so instead of using , you can use Java\'s built in serialization mechanism.\nInternally the classes use Jackson to serialize to and from JSON, and the ObjectMapper from Jackson can be used.\n'
+    Existing Dependencies:
+    io.dropwizard:dropwizard-views-freemarker
+- org.slf4j:slf4j-simple
+- org.slf4j:slf4j-api
+- io.dropwizard:dropwizard-views
+- com.fasterxml.jackson.core:jackson-databind
+- org.freemarker:freemarker
+- org.mockito:mockito-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- jQuery  -->
+    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/js/bootstrap-rtl.min.js')}}"></script>
+    <script src="{{asset('assets/js/detect.js')}}"></script>
+    <script src="{{asset('assets/js/fastclick.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.slimscroll.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.blockUI.js')}}"></script>
+    <script src="{{asset('assets/js/waves.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.nicescroll.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.scrollTo.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/switchery/switchery.min.js')}}"></script>
+    @yield('script')
+    <!-- App js -->
+    <script src="{{asset('assets/js/jquery.core.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.app.js')}}"></script>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>rintln(x);
+}
+
+void loop(){
+    digitalWrite(13, LOW);
+    delay(500);
+    digitalWrite(13, HIGH);
+    delay(500);
+}
+
+void onMessageReceived(const char *topic, const uint8_t *payload, const unsigned int length) {
+    digitalWrite(13, HIGH);
+}
+ #include <PubSubClient.h>
+#include <ESP8266WiFi.h>
+#include <WiFiClient.h>
+#include <EEPROM.h>
+
+WiFiClient espClient;
+PubSubClient client(espClient);
+
+const char* ssid = "MeshNetwork";
+const char* password = "meshnetwork";
+const char* mqtt_server = "10.0.0.4";
+
+char mac[13];
+int count = 0;
+int count2 = 0;
+int x = 0;
+
+void setup(){
+    pinMode(13,OUTPUT);
+    x = 5;
+
+    WiFi.begin(ssid, password);
+    WiFi.mode(WIFI_STA);
+    WiFi.setAutoReconnect(true);
+
+    while(WiFi.status()!= WL_CONNECTED) {
+        delay(500);
+    }
+
+    sprintf(mac,"%02X%02X%02X%02X%02X%02X",WiFi.macAddress()[0],WiFi.macAddress()[1],WiFi.macAddress()[2],WiFi.macAddress()[3],WiFi.macAddress()[4],WiFi.macAddress()[5]);
+  //  client.setCallback(onMessageReceived);
+  //  client.subscribe("/ESP8266/#");
+    client.connect("ESP8266");
+//    client.publish("/ESP8266", "Hello from ESP8266");
+
+//   Serial.p
+
+Precision: 0
+Recall: 0
+F1 Score: 0

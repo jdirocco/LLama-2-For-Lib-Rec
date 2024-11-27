@@ -1,0 +1,164 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: Yubico/yubioath-android
+    Project Description: NOTE: The development of Yubico Authenticator for Android has moved to Android application for OATH with YubiKeys\nThis app is hosted on Google Play as\n Authenticator.\n\nSee the file COPYING for copyright and license information.\n\n=== Introduction\nThis is an authenticator app compatible with the OATH standard for time and\ncounter based numeric OTPs, as used by many online services. To store these\ncredentials and generate the codes, it uses a compatible YubiKey, connected\neither via NFC or USB requiresa USB Onthego cable, or USBC. The USB\nfunctionality requires your mobile device to support USB Host mode, and for CCID\nto be enabled on your YubiKey.\n\nAdd credentials by tapping the action button near the bottom right, and\nselecting either to add a credential by scanning a QR code, or by entering a\nBase32 encoded secret manually.\n\nOnce credentials have been added, simply tap or connect your YubiKey to display\ncodes.\n\n=== Development\nThis app is developed in Android Studio, using gradle for building. To build the\nAPK from the command line, run:\n\n $ ./gradlew assemble\n\nOnce done the .apk file can be found in the app/build/outputs/apk/ directory.\n\n=== Issues\n\nPlease report app issues in\n issue tracker on GitHub.\n'
+    Existing Dependencies:
+    android.arch.lifecycle:runtime
+- org.robolectric:robolectric
+- org.jetbrains.kotlinx:kotlinx-coroutines-core
+- android.arch.lifecycle:compiler
+- org.jetbrains.anko:anko-coroutines
+- com.android.support:appcompat-v7
+- com.android.support:design
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <section id="main" class="clearfix  ad-profile-page">
+      <div class="container">
+
+        <div class="breadcrumb-section">
+          <!-- breadcrumb -->
+          <ol class="breadcrumb">
+            <li><a href="<?php echo site_url()?>">Home</a></li>
+            <li>Profile</li>
+          </ol><!-- bb-end -->
+          <!--  -->
+          <h2 class="title"><?php echo $res->name?></h2>
+          <a href="<?php echo site_url('edit_profile/')?>" class="link">Edit Profile</a>
+          <div class="pull-right" style="margin-top:4px;">
+            <div>
+              <a href="<?php echo site_url('user_profile/')?>" class="btn btn-primary btn-lg" >
+                <span class="fa fa-user"></span> My Profile 
+              </a>
+              <a href="<?php echo site_url('user_profile/')?>" class="btn btn-primary btn-lg" >
+                <span class="fa fa-list"></span> My All Jobs 
+              </a>
+            </div>
+          <?php 
+            $jobCount = (int) $this->session->userdata('jobPost');
+            if($jobCount > 0 )
+            {
+                $j = $jobCount-1;
+                $jobId = $this->session->userdata('jobId'.$j);
+         ?>  
+              <a href="<?php echo site_url('posted_job/'.$jobId.'/')?>" class="btn btn-primary btn-lg" >
+                <span class="fa fa-pencil"></span> My Last Posted Job 
+              </a>
+          <?php 
+            }
+           ?>
+          </div>
+        </div><!-- bd-section-end -->
+
+        <div class="ad-profile">
+          <div class="row">
+            <div class="col-sm-3">
+              <!-- profile-left -->
+              <div class="profile-left">
+                <!-- user-photo -->
+                <div class="user-photo">
+                  <a href="#">
+                    <?php if(!empty($res->image)){?>
+                    <img class="img-rounded"  src="<?php echo site_url('uploads/employers/images/'.$res->image)?>" title="<?php echo $res->name?>">
+                  <?php }else{?>
+
+                    <img class="img-rounded"  src="<?php echo site_url('uploads/employers/images/default-logo.png')?>" title="<?php echo $res->name?>">
+                    <?php }?>
+                  <span class="name"><?php echo $res->name?></span> </a>
+                </div><!-- user-photo-end -->
+
+
+                <ul>
+                  <li><a href="<?php echo site_url('my_resume/')?>" title="">My Resume</a></li>
+                  <li class="active"><a href="<?php echo site_url('profile')?>" title="">Profile</a></li>                 
+                  <li><a href="<?php echo site_url('message/')?>" title="">Message</a></li>
+                  <li><a href="" title=""><i class
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+/* Prototype  : proto int strcspn(string str, string mask [,$input = 10.5;
+var_dump( strcspn($input, $mask) );
+
+$input = array($mask);
+var_dump( strcspn($input, $mask) );
+
+echo "Done"
+?>
+ int start [, int len]])
+ * Description: Finds length of initial segment consisting entirely of characters not found in mask.
+                If start or/and length is provided works like strcspn(substr($s,$start,$len),$bad_chars) 
+ * Source code: ext/standard/string.c
+ * Alias to functions: none
+*/
+
+echo "*** Testing strcspn() : error conditions ***\n";
+// Zero arguments
+echo "\n-- Testing strcspn() function with Zero arguments --";
+var_dump( strcspn() );
+
+//Test strcspn with one more than the expected number of arguments
+echo "\n-- Testing strcspn() function with more than expected no. of arguments --";
+$str ='string_val';
+$str1 ='string_val1';
+$start = 2;
+$len = 5;
+$extra_arg = 10;
+var_dump( strcspn($str, $str1, $start, $len, $extra_arg) );
+
+echo "Done"
+?>
+
+ int start [, int len]])
+ * Function is implemented in ext/standard/string.c
+*/
+
+echo "*** Testing strcspn() : error conditions ***\n";
+$str ='string_val';
+$str1 ='string_val1';
+$mask ='string_val';
+
+$start = 2;
+$len = 5;
+$extra_arg = 10;
+
+echo "\n-- Testing strcspn() function with no arguments --";
+var_dump( strcspn() );
+
+echo "\n-- Testing strcspn() function with less than expected no. of arguments --";
+var_dump( strcspn($str) );
+
+echo "\n-- Testing strcspn() function with more than expected no. of arguments --";
+var_dump( strcspn($str, $str1, $start, $len, $extra_arg) );
+
+echo "\n-- Testing strcspn() function with an invalid mask --\n";
+$input = "hello world";
+$mask = 120;
+var_dump( strcspn($input, $mask) );
+echo "\n-- Testing strcspn() with input as float --";
+$mask = '1abcde';
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

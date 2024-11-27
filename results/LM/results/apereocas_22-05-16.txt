@@ -1,0 +1,161 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: apereo/cas
+    Project Description: \n\n\n\n Central Authentication Service CAS\n\n\n\n\n, more commonly referred to as CAS. CAS is an\nenterprise multilingual single signon solution for the web and attempts to be a comprehensive platform for your authentication and authorization needs.\n\nCAS is an open and welldocumented authentication protocol. The primary implementation of the protocol is an opensource Java server\ncomponent by the same name hosted here, with support for a plethora of additional authentication protocols and features such a SAML2, OpenID Connect\nand many many more.\n\n Contributions\n\n |\n| | |\n\nAdditional resources are available as follows:\n\n and\n.\n\n Development , licensed under . Our\ncommunity has access to all releases of the CAS software with absolutely no costs. We welcome contributions from our community of all\ntypes and sizes. The time and effort to develop and maintain this project is dedicated by a group\nof and contribute.\n\ncascodecov:
+    Existing Dependencies:
+    :support
+- :core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 2 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-upper">Come On In</span>
+                <span class="section-heading-lower">We're Open</span>
+              </h2>
+              <p class="mb-0">
+                Every Cup of Coffee We Serve Is Our Promise To You
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+  
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 2 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> // @flow
+
+import * as React from'react';
+import autobind from 'autobind-decorator';
+import type { ContextMenuItem } from '../../../context-menu/context-menu';
+import type { Workspace } from '../../workspace';
+import type { Request } from '../../../models/request';
+import { showContextMenu, ContextSubMenu } from '../../../context-menu';
+import * as db from '../../../common/database';
+import * as models from '../../../models';
+import type { GrpcRequest } from '../../../models/grpc-request';
+import type { GrpcDispatch, Dispatcher } from '../context/reducer';
+import { DropdownHint } from 'insomnia-components';
+
+type Props = {
+  workspace: Workspace,
+  handleSend: Function,
+  handleSendAndDownload: Function,
+  handleCopyAsCurl: Function,
+  handleToggleShareExport: Function,
+
+  // Optional
+  requestGroup:?models.RequestGroup,
+  requestGroupIndex:?number,
+  request:?Request,
+  requestIndex:?number,
+  grpcRequest:?GrpcReq  return [
+      {
+        type:'submenu',
+        text: 'Send Request',
+        submenu: [
+          {
+            text: 'Send',
+            click: this.handleSend,
+          },
+          {
+            text: 'Send and Download',
+            click: this.handleSendAndDownload,
+          },
+        ],
+      },
+      {
+        type:'separator',
+      },
+      {
+        text: 'Copy cURL',
+        click: this.handleCopyAsCurl,
+      },
+      {
+        type:'separator',
+      },
+      {
+        text: 'Share Request',
+        click: this.handleToggleShareExport,
+      },
+    ];
+  };
+
+  _render() {
+    const { request, grpcRequest, handleCreateRequestInWorkspace } = this.props;
+    if (!request &&!grpcRequest) {
+      return (
+        <DropdownHint>
+          <i className="fa fa-plus-circle" />
+        </DropdownHint>
+      );
+    }
+
+    return (
+      <ContextSubMenu icon="more-horiz" iconRight openDirection="right" items={this._getItems()} noChevron>
+        {request? (
+          <li key={request._id}>
+            <button className="no-icon-button" onClick={handleCreateRequestInWorkspace}>
+              <i className="fa fa-file-o" />
+              Create New Request
+            </button>
+          </li>
+        ) : undefined}
+      </ContextSubMenu>
+    );
+  }
+
+  render() {
+    const { request, grpcRequest, disabled } = this.props;
+
+    if (!request &&!grpcRequest) {
+      return null;
+    }
+
+    return (
+      <GrpcDispatch.Consumer>
+        {dispatch => (
+          <button
+            onClick={showContextMenu}
+            ref={this._setRef}
+            title="Request Actions"
+            className="btn btn--compactwide btn--outlined"
+            disabled={disabled}>
+            {this._render()}
+            {this._renderContextMenu({ dispatch })}
+          </button>
+        )}
+      </GrpcDispatch.Consumer>
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

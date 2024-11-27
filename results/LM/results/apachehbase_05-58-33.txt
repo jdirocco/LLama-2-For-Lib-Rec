@@ -1,0 +1,190 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: apache/hbase
+    Project Description: \n\n\n\n is an opensource, distributed, versioned, columnoriented store modeled after Google\' : A Distributed Storage System for Structured Data by Chang et al. Just as Bigtable leverages the distributed data storage provided by the Google File System, HBase provides Bigtablelike capabilities on top of .\n\n Getting Start\nTo get started using HBase, the full documentation for this release can be found under the doc/ directory that accompanies this README. Using a browser, open the docs/index.html to view the project home page or browse The hbase \'\' has a \'quick start\' section and is where you should being your exploration of the hbase project.\n\nThe latest HBase can be downloaded from the .\n\nWe use mailing lists to send notice and discuss. The mailing lists and archives are listed \n\n How to Contribute\nThe source code can be found at HBase issue tracker is at that, the public registration for has been disabled due to spam. If you want to contribute to HBase, please visit the page to submit your request. Please make sure to select hbase as the \'ASF project you want to file a ticket\' so we can receive your request and process it.\n\n NOTE: we need to process the requests manually so it may take sometime, for example, up to a week, for us to respond to your request.\n\n About\nApache HBase is made available under the \n\nThe HBase distribution includes cryptographic software. See the export control notice .\n'
+    Existing Dependencies:
+    org.glassfish:javax.el
+- org.apache.htrace:htrace-core
+- org.apache.hbase:hbase-metrics
+- com.google.protobuf:protobuf-java
+- org.apache.hbase:hbase-annotations
+- org.apache.hadoop:hadoop-hdfs
+- commons-cli:commons-cli
+- com.github.stephenc.findbugs:findbugs-annotations
+- org.apache.hbase:hbase-external-blockcache
+- org.apache.spark:spark-streaming_${scala.binary.version}
+- org.glassfish.web:javax.servlet.jsp
+- javax.ws.rs:javax.ws.rs-api
+- org.scalatest:scalatest_${scala.binary.version}
+- org.scalamock:scalamock-scalatest-support_${scala.binary.version}
+- org.apache.httpcomponents:httpcore
+- org.jruby:jruby-complete
+- org.apache.thrift:libthrift
+- io.dropwizard.metrics:metrics-core
+- org.apache.hbase:hbase-server
+- org.apache.commons:commons-lang3
+- org.apache.yetus:audience-annotations
+- log4j:log4j
+- org.eclipse.jetty:jetty-http
+- com.google.errorprone:error_prone_annotation
+- org.apache.hbase.thirdparty:hbase-shaded-miscellaneous
+- io.netty:netty
+- commons-codec:commons-codec
+- com.google.auto.service:auto-service
+- org.apache.hadoop:hadoop-mapreduce-client-core
+- commons-logging:commons-logging
+- org.apache.hbase:hbase-it
+- org.scala-lang:scala-library
+- org.apache.hbase:hbase-mapreduce
+- org.apache.hbase:hbase-thrift
+- org.eclipse.jetty:jetty-jsp
+- commons-io:commons-io
+- org.apache.zookeeper:zookeeper
+- org.eclipse.jetty:jetty-server
+- org.eclipse.jetty:jetty-servlet
+- org.apache.hadoop:hadoop-mapreduce-client-jobclient
+- org.apache.hbase:hbase-hadoop-compat
+- org.apache.hbase.thirdparty:hbase-shaded-protobuf
+- org.slf4j:slf4j-log4j12
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 44 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <?php 
+    //echo $this->render('_form', [
+       //'model' => $model,
+   // ]);
+   ?>
+    
+    <script type="text/ng-template"  id="my-modal.html">
+      <div class="modal-header">
+        <h3 class="modal-title">I'm a modal!</h3>
+      </div>
+      <div class="modal-body" ng-bind-html="body">Body
+      </div>
+      <div class="modal-footer">
+        <button ng-click="ok()" class="btn btn-primary" data-dismiss="modal" id="modalbutton" ng-bind-html="footer">Footer</button>
+        <button ng-click="cancel()" class="btn btn-warning">Close</button>
+      </div>
+    </script>
+    <?php 
+    //if($model->scenario == 'create')
+        //{
+            $form_scenario = 1;
+    //    }
+    //else
+    //{
+            //$form_scenario = '';
+    //    }
+    
+   ?>
+    
+    <div class="row">
+      <!-- left column -->
+      <div class="col-md-12">
+        <!-- general form elements -->
+        <div class="box box-primary">
+          <div class="box-header with-border">
+            <h3 class="box-title">Form 1.0</h3>
+          </div>
+          <div class="alert alert-danger display-hide">
+                <button class="close" data-close="alert"></button> You have some form errors. Please check below. </div>
+        <div class="alert alert-success display-hide">
+                <button class="close" data-close="alert"></button> Your form validation is successful! </div>
+                 <?php //echo Html::activeHiddenInput($model, 'id');?>
+                   <?php //echo Html::activeHiddenInput($model, 'user_id');?>
+             <?php 
+            echo $this->render('_form', [
+               'model' => $model,
+                'form_scenario' => $form_scenario,
+            ]);
+           ?>
+        </div>
+        <?php 
+            echo $this->render('_form_add', [
+               'model' => $model,
+                'form_scenario' => $form_scenario,
+            ]);
+           ?>
+      </div>
+    </div>
+    <?php /*
+    <div class="row">
+        <div class="col-md-12">
+            <div class="portlet box red">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-cogs"></i><?php echo $this->title;?>
+                    </div>
+                    <div class="tools">
+                        <a href="#widget-config" data-toggle="modal" class="config">
+                        </a>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <!-- BEGIN FORM-->
+                    <br />
+                    <br />
+                    <?php //echo Html::activeHiddenInput($model, 'id');?>
+                    <?php //echo Html::activeHiddenInput($model, 'user_id');?>
+
+                    <?= $
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 44 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> #import <CoreData/NSManagedObject.h>
+
+@class NSNumber, NSDate, NSString;
+
+@interface HealthPlatformWake : NSManagedObject
+
+@property (nonatomic,copy) NSNumber * anonymizedBeacon; 
+@property (nonatomic,copy) NSNumber * anonymizedLocation; 
+@property (nonatomic,copy) NSNumber * batteryStatus; 
+@property (nonatomic,copy) erty (nonatomic,copy) NSNumber * wakeWifiScanCount; 
+@property (nonatomic,copy) NSNumber * wakeWifiScanDuration; 
+@property (assign,nonatomic) long long eventIdentifier; 
+@property (assign,nonatomic) BOOL submitted; 
+-(id)description;
+@endNSDate * creationDate; 
+@property (nonatomic,copy) NSNumber * durationFromWake; 
+@property (nonatomic,copy) NSNumber * durationToWake; 
+@property (nonatomic,copy) NSDate * eventDate; 
+@property (nonatomic,copy) NSNumber * expectedGS; 
+@property (nonatomic,copy) NSNumber * gsFromWake; 
+@property (nonatomic,copy) NSNumber * gsToWake; 
+@property (nonatomic,copy) NSString * identifier; 
+@property (nonatomic,copy) NSNumber * localDaysSinceSunday; 
+@property (nonatomic,copy) NSNumber * localTime; 
+@property (nonatomic,copy) NSNumber * localTimeQuarterHourSlot; 
+@property (nonatomic,copy) NSNumber * lowBattery; 
+@property (nonatomic,copy) NSNumber * networkQuality; 
+@property (nonatomic,copy) NSNumber * wakeMotionStateCnt; 
+@property (nonatomic,copy) NSNumber * wakeReasonCode; 
+@property (nonatomic,copy) NSNumber * wakeReasonTypeCode; 
+@property (nonatomic,copy) NSNumber * wakeTypeCode; 
+@property (nonatomic,copy) NSNumber * wiFiState; 
+@prop
+
+Precision: 0
+Recall: 0
+F1 Score: 0

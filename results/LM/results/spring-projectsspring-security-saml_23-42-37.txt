@@ -1,0 +1,110 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: spring-projects/spring-security-saml
+    Project Description: === Maintenance Mode\n\nThis project is in maintenance mode and each EndofLife on 6 October 2021. Please use Security\'s SAML support instead.\n\nNOTE: In the past, there were and branches, though these are not maintained, and PRs are no longer being considered on these branches.\nNo further releases will be issued from these two branches.\nPlease feel free to fork the repository if you need to make changes.\n\nWe continue to consider pull requests for 1.0.x bug fixes, but are not actively developing this project.\n\nimage:"Build Status", link=""\n\n= Spring SAML\n\nSpring SAML Extension allows seamless inclusion of SAML 2.0 Service Provider capabilities in Spring applications.\nAll products supporting SAML 2.0 in Identity Provider mode e.g. ADFS 2.0, Shibboleth, OpenAM/OpenSSO, Ping Federate, Okta can be used to connect with Spring SAML Extension.\n\nFor a detailed list of features and access to the latest release, please visit projects.\n\n== Code of Conduct\nPlease see our of conduct.\n\n== Dependencies\n\nSpring Security SAML publishes GA general availability versions to Central, so you can just add the following to your POM:\n\nsource,xml\n\n\n org.springframework.security.extensions\n springsecuritysaml\n 1.0.10.RELEASE\n\n\n\nor the following to :\n\nsource,gradle\n\nimplementation \'org.springframework.security.extensions1.0.10.RELEASE\'\n\n\nSee Spring artifacts for more information.\n\n== Documentation\n\nBe sure to read the Security SAML Reference.\nJavaDoc is also available in Spring Security API Documentation.\n\n== Quick Start\n\nWe recommend you visit Security SAML Reference\'s quick start.\n\nOr, feel free to check out online demonstration.\n\n== Building from Source\nSpring Security SAML uses a build system.\nIn the instructions below, is invoked from the root of the source tree and serves as a crossplatform, selfcontained bootstrap mechanism for the build.\n\n=== Prerequisites\n and a Spring Security SAML is compatible with JDK 1.6.\n\nBe sure that your environment variable points to the JDK folder extracted from the download.\n\n=== Checkout sources\nindent=0\n\ngit clone git@github.com:springprojects/springsecuritysaml.git\n\n\n=== Install all spring\\ jars into your local Maven cache\nindent=0\n\n./gradlew install\n\n\n=== Compile and test; build all jars, distribution zips, and docs\nindent=0\n\n./gradlew build\n\n\nDiscover more commands with .\nSee also Spring Framework\'s from Source documentation.\n\n== Getting Support\nCheck out the Security SAML tag on Stack Overflow.\n support is available too.\n\nCommercial: vladimir@v7security.com\n\n== Contributing\n requests are welcome; see the guidelines for details.\n'
+    Existing Dependencies:
+    org.springframework:spring-aop
+- xmlunit:xmlunit
+- org.easymock:easymock
+- org.slf4j:slf4j-api
+- org.springframework.security:spring-security-core
+- org.opensaml:opensaml
+- org.springframework:spring-test
+- org.springframework:spring-webmvc
+- org.springframework.security.extensions:spring-security-saml2-core
+- org.springframework.security:spring-security-config
+- javax.servlet:jsp-api
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+  <div class="container-fluid">
+    <hr>
+    <footer>
+      <p>Copyright @ 2000-@Year@</p>
+    </footer>
+  </div>
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery.js"></script>
+  <!-- bootstrap-transition.js depends on popper.js -->
+  <script src="js/bootstrap.js"></script>
+
+  <%--<script id="script" src="./assets/js/scripts.js"></script>--%>
+  <script type="text/javascript">
+
+    $(function () {
+      // Handler for.ready() called.
+    });
+  </script>
+</body>
+
+</html>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.mohsinkd786.rest_interface;
+
+import com.mohsinkd786.config.MongoConfig;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.List;
+
+@RestController
+@RequestMapping("/api/v1")
+public class BookmarkController {
+
+    private final BookmarkService bookmarkService;
+
+    public BookmarkController(BookmarkService bookmarkService) {
+        this.bookmarkService = bookmarkService;
+    }
+
+    @GetMapping("/bookmarks")
+    List<Bookmark> getAllBookMarks() {
+        return bookmarkService.getAllBookmarks();
+    }
+
+    @PostMapping("/bookmarks")
+    Bookmark saveBookmark(@Valid @Reque    @GetMapping("/bookmarks/{id}")
+    Bookmark getBookmark(@PathVariable String id) {
+        return bookmarkService.getBookmark(id).orElseThrow(() -> new RuntimeException("Bookmark not found with id: " + id));
+    }
+    @ResponseBody
+    @DeleteMapping("/bookmarks/{id}")
+    void delete(@PathVariable String id) {
+        bookmarkService.delete(id);
+    }
+
+}
+stBody Bookmark newBookmark) {
+        return bookmarkService.create(newBookmark.getUrl(), newBookmark.getTag());
+    }
+
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

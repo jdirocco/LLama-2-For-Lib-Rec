@@ -1,0 +1,150 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: fcrepo4/fcrepo4
+    Project Description: \n\n | \n | \n |\n |\n\n\nFedora is a robust, modular, open source repository system for the management and dissemination of digital content.\nIt is especially suited for digital libraries and archives, both for access and preservation. It is also used to\nprovide specialized access to very large and complex digital collections of historic and cultural materials as well\nas scientific data. Fedora has a worldwide installed user base that includes academic and cultural heritage\norganizations, universities, research institutions, university libraries, national libraries, and government agencies.\nThe Fedora community is supported by the stewardship of the organization.\n\n Technical goals:\n Enhanced preservation sensibilities including preservation storage layer transparency\n Improved scalability and performance\n More flexible storage options\n Improved durability\n Improved reporting and metrics\n\n Downloads\n\nThe current webdeployable version of Fedora can be downloaded from the \n\nor from . These artifacts can be deployed directly in a Jetty or Tomcat container\nas described in the guide to .\n\n Contributing\n\nContributions to the Fedora project are always welcome. These may take the form of testing the application, clarifying documentation\nor writing code.\n\nCode contributions will take the form of pull requests to this repository. They also require a signed\n on file before\na pull request can be merged. New developers may wish to review \n\nas it explains both the process and standards for test coverage, style and documentation.\n\n Getting help\n\nThere are two community mailing lists where you can post questions or raise topics for discussion. Everyone is\nwelcome to subscribe and participate.\n\n of the developers are available on Slack in the and channels, hosted by .\n\nIn addition, there are weekly Zoom which anyone may\n join.\n\n Building and running Fedora from source\n\nSystem Requirements\n Java 11\n Maven 3.6.3\n\n\n\nThe compiled Fedora war file can be found in . This can be deployed directly to a servlet container as\ndescribed in the .\n\n\nIf deployed locally using a war file called , the web application will typically be available at\n are two convenient methods for testing the Fedora application by launching it directly from the command line.\n\nOne option is to use the "one click" application, which comes with an embedded Jetty servlet. This can be optionally built by running:\n\n mvn install pl fcrepowebapp P oneclick\n\nand can be started by either doubleclicking on the jar file or by running the following command:\n\n java jar ./fcrepowebapp/target/fcrepowebappjettyconsole.jar\n\nBy default, a Fedora home directory, , is created in the current directory. You can change the default location by passing in an argument when starting the oneclick, e.g.:\n\n java Dfcrepo.home=/data/fedorahome jar fcrepowebappjettyconsole.jar\n\nAn alternative is use the maven command: \n\n\n\nFor both of these methods, your Fedora repository will be available at: \n\nNote: You may need to set the $JAVAHOME property, since Maven uses it to find the Java runtime to use, overriding your PATH.\n will show which version of Java is being used by Maven, e.g.:\n\n\n\nTo set your $JAVAHOME environment variable:\n\n\n\n'
+    Existing Dependencies:
+    com.fasterxml.jackson.datatype:jackson-datatype-jsr310
+- org.springframework:spring-aop
+- org.apache.jena:jena-arq
+- org.slf4j:slf4j-api
+- commons-codec:commons-codec
+- org.w3:ldp-testsuite
+- org.fcrepo:fcrepo-event-serialization
+- org.eclipse.jetty:jetty-jmx
+- org.fcrepo:fcrepo-http-commons
+- org.springframework:spring-test
+- org.apache.jena:apache-jena-libs
+- com.google.guava:guava
+- org.jboss.logging:jboss-logging
+- com.jayway.awaitility:awaitility
+- javax.jcr:jcr
+- org.modeshape.bom:modeshape-bom-embedded
+- org.jboss.jbossts:jbossjta
+- org.modeshape:modeshape-web-jcr
+- org.fcrepo:fcrepo-http-api
+- javax.annotation:javax.annotation-api
+- org.glassfish.grizzly:grizzly-http-servlet
+- org.eclipse.jetty:jetty-deploy
+- org.springframework:spring-core
+- org.jgroups:jgroups
+- org.fcrepo:fcrepo-auth-common
+- javax:javaee-api
+- com.fasterxml.jackson.core:jackson-annotations
+- org.slf4j:jcl-over-slf4j
+- org.modeshape:modeshape-jcr
+- org.apache.httpcomponents:httpmime
+- org.fcrepo:fcrepo-configs
+- junit:junit
+- io.dropwizard.metrics:metrics-graphite
+- com.mchange:c3p0
+- mysql:mysql-connector-java
+- org.postgresql:postgresql
+- commons-io:commons-io
+- org.apache.activemq:activemq-kahadb-store
+- org.apache.httpcomponents:httpclient-cache
+- io.dropwizard.metrics:metrics-servlets
+- net.sourceforge.htmlunit:htmlunit-core-js
+- org.fcrepo:fcrepo-kernel-api
+- io.dropwizard.metrics:metrics-jersey2
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 43 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    @extends('layouts.app')
+
+    @section('content')
+        <div class="row">
+            <div class="col-lg-12 margin-tb">
+                <div class="pull-left">
+                    <h2>Create New Task</h2>
+                </div>
+                <div class="pull-right">
+                    <a class="btn btn-primary" href="{{ route('tasks.index') }}" title="Go back"> <i class="fas fa-backward "></i> </a>
+                </div>
+            </div>
+        </div>
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+        <form action="{{ route('tasks.store') }}" method="POST">
+            @csrf
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Title:</strong>
+                    <input type="text" name="name" class="form-control" placeholder="title" required>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Description:</strong>
+                    <textarea class="form-control" style="height:150px" name="description" placeholder="description" required ></textarea>
+                </div>
+            </div>
+                <button type="submit" class="btn btn-primary"  style="margin-left: 350px">Submit</button>
+        </div>
+
+        </form>
+    @endsection
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 43 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    * @var string
+     */
+    protected $table = 'user_types';
+
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+} <?php
+
+namespace App;
+
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Passport\HasApiTokens;
+
+class UserType extends Model
+{
+     /**
+     * The table associated with the model.
+     *
+ 
+
+Precision: 0
+Recall: 0
+F1 Score: 0

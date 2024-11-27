@@ -1,0 +1,275 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: brix-cms/brix-cms
+    Project Description: \n\nBased on Wicket and JCR, it is the best Wicketbased CMS framework available today. BRIX is simple yet powerful and extensible, allowing designers the highest degree of freedom in developing a rich user experience. \n\nUsing Apache Wicket as the technology to serve the content makes it very easy to embed custom, stateful Wicket components into any CMS page, allowing rich integration with any existing Wicket web application. Using Apache Jackrabbit allows Brix to easily integrate full text search, versioning, and WebDav access.\n\nBrix is businessfriendly, open sourced under the Apache Software License version 2.0.\n\nWhy Brix?\n\n Most CMS are for building web sites. Brix CMS is for building web applications.\n\n Dynamic content is usually an afterthought for most CMS. It is central to Brix CMS. Brix allows for dynamic componentbased tiles.\n\nFeatures\n\n\n Wicketbased CMS framework: With a refreshing lack of XML being just one of its many benefits, Apache Wicket makes developing webapps simple and enjoyable. \n Based on JCR Java Content Repository: Use an enterprisestandard data repository.\n Extensible Plugin Architecture: Create and publicly code extensions without having to roll those changes into the BRIX core providing a hackfree way of extending and customizing Brix to suit an extremely diverse set of needs of its user base.\n Tiles: Easily incorporate configurable, reusable blocks of dynamic content into your CMS ranging from a simple Contact Us form to a complex Forum application.\n Templates: Easily create and reuse website skins and factor out \xe2\x80\x9cchrome\xe2\x80\x9d into a single location.\n Prototypes: Userdefined, cloneable site structures provide additional ease of use.\n Support for WebDAV: Allows for a collaborative approach to document creation, editing, and distribution. Also edit using your favorite desktop HTML editor.\n Site Snapshots: Provide support for version control and backup.\n Raw or Rich Content Editing: Incorporate rich text and the associated formatting. \n Ease of Use: Basic workflow/publishing support and flexible security infrastructure. \n\nAt its deepest abstraction, BRIX is not a standalone CMS, but rather a CMS framework which allows for easy integration of CMS functionality into existing Wicketbased applications. This is its primary benefit and we are confident that it will become the CMS tool of choice for many organizations as a result.\n\nGetting Started\n\n\n How to \n How to \n\nCommunity\n\n Mailing List/Google Group: IRC: \n Repository Google Code Project A place for developers to contribute and share their plugins for Brix.\n Blog Articles: \n'
+    Existing Dependencies:
+    org.brixcms:brix-workspace
+- org.hibernate:hibernate-commons-annotations
+- org.hibernate:hibernate-entitymanager
+- org.brixcms:brix-plugin-prototype
+- org.brixcms:brix-rmiserver
+- xpp3:xpp3_min
+- org.brixcms:brix-wrapper
+- org.htmlparser:htmllexer
+- org.modeshape:modeshape-jcr
+- org.apache.wicket:wicket-extensions
+- junit:junit
+- org.easymock:easymock
+- org.apache.wicket:wicket-spring
+- org.brixcms:brix-plugin-snapshot
+- org.apache.jackrabbit:jackrabbit-jcr-commons
+- org.brixcms:brix-plugin-menu
+- org.brixcms:brix-jackrabbit-testdeps
+- org.brixcms:brix-jackrabbit
+- org.modeshape:modeshape-sequencer-cnd
+- org.apache.wicket:wicket
+- postgresql:postgresql
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 22 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+    
+
+
+    
+
+
+  
+
+    
+
+    
+
+    
+
+      
+
+       
+
+         
+
+    
+
+
+
+
+
+
+    
+
+
+
+
+
+       
+
+
+    
+
+
+
+
+
+
+       
+
+         
+
+         
+
+       
+
+         
+
+
+
+
+    
+
+
+
+
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 22 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import React from'react'
+import styled from'styled-components'
+import { useSelector } from'react-redux'
+import { selectCurrentUser } from './../../redux/slices/auth.slice'
+import { selectUser } from './../../redux/slices/users.slice'
+import { Button } from '@material-ui/core';
+import { Link } from'react-router-dom'
+
+const Home = () => {
+    const user = useSelector(selectCurrentUser)
+    const otherUser = useSelector(selectUser)
+    
+    return (
+        <>
+            <HomeWrapper>
+                <Title>
+                    <h1>Welcome to the Chat Room</h1>
+                    <p><b>{user.displayName}</b> to the chat room!</p>
+                    <Button variant="contained" component={Link} to="/chat">
+                        Start Chatting
+                    </Button>
+                </Tir: #474747;
+`
+
+export default Home
+tle>
+            </HomeWrapper>
+        </>
+    )
+}
+
+const HomeWrapper = styled.section`
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background: #fafafa;
+`
+
+const Title = styled.header`
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color: #474747;
+`
+
+export const Message = styled.div`
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    font-weight: 200;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    padding: 5px 0;
+    gap: 20px;
+    colo
+
+Precision: 0
+Recall: 0
+F1 Score: 0

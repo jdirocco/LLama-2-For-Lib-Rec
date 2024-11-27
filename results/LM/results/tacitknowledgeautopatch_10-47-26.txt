@@ -1,0 +1,182 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: tacitknowledge/autopatch
+    Project Description: AutoPatch\n=========\n\nAutoPatch automates the application of changes to persistent storage.\n\nAutoPatch was born from the needs of using an agile development process\nwhile working on systems that have persistent storage. Without\nAutoPatch, developers usually can't afford the maintenance headache of\ntheir own database, and DBAs are required just to apply changes to all\nof the various environments a serious development effort requires.\n\nThe very application of database changes becomes an inefficient,\nerrorprone, expensive process, all conspiring to discourage any\nrefactoring that touches the model, or being a bottleneck when model\nchanges are made.\n\nAutoPatch solves this problem, completely.\n\nWith AutoPatch, an agile development process that requires a database\nchange looks like this:\n\n Developer alters the model, which requires a change to the database\n Developer possibly consults a DBA, and develops a SQL patch against\n their personal database that implements the alteration\n Developer commits the patch to source control at the same time as they\n commit their dependent code\n Other developers' and environments' databases are automatically updated\n by AutoPatch the next time the new source is run\n\nThis represents streamlined environment maintenance, allowing developers\nto cheaply have their own databases and all databases to stay in synch\nwith massively lower costs and no environment skew.\n\nRequirements\n\n\n Java 6. That's it.\n\n\nWhere do I get AutoPatch?\n\nAutoPatch is open source and is hosted at .\n\nThe documentation for AutoPatch is on the \n\nYou can include AutoPatch in your Maven project via:\n\n \n com.tacitknowledge\n autopatch\n 1.4.2\n \n\nHelp\n====\n\nIf you have a question about AutoPatch feel free to post it up to our\nnew .\n"
+    Existing Dependencies:
+    org.picocontainer:picocontainer
+- commons-logging:commons-logging
+- commons-beanutils:commons-beanutils
+- javax.transaction:jta
+- commons-lang:commons-lang
+- geronimo-spec:geronimo-spec-jms
+- junit-addons:junit-addons
+- geronimo-spec:geronimo-spec-ejb
+- struts:struts
+- org.easymock:easymockclassextension
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- ##### Regular Page Area Start ##### -->
+    <div class="regular-page-area section-padding-100">        
+        <div class="container">
+           
+            <div class="row">
+                
+                
+                <div class="col-12 col-lg-12">
+                    <div class="card">
+                        <div class="card-body p-0">                            
+                            <div class="single-contact-info address mt-30 mb-30">
+                                <div class="row">
+                                   
+
+                                    <div class="col-12 col-sm-6 col-md-6 ">
+                                        <div class="single-address d-flex">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <h6>Ouagadougou BP 7785</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-6 ">
+                                        <div class="single-address d-flex">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <h6><?= get_settings()['email']?></h6>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            
+                            <div class="single-contact-info phone mt-4 mb-30">
+                                <div class="row">
+
+                                    <div class="col-12 col-sm-6 col-md-6 ">
+                                        <div class="single-address d-flex">
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            <h6><?= get_tel()?></h6>
+                                        </div>
+                                    </div>
+                                </div>
+ 
+                            </div>
+                            <div class="single-contact-info email mt-4 mb-30">
+                                <div class="row">
+                                    <div class="col-12 col-sm-3 col-md-3 ">
+                                        <div class="single-address d-flex">
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            <h6><?= get_settings()['email']?> <br>
+                                                <br></h6>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                
+                
+
+                
+
+                
+                
+                
+            </div>
+
+            
+
+            
+
+
+            <div class="row ">
+                <div class="col-12">
+                    <div class="contact-form">
+                        <h5>Pour nous contacter</h5>
+                        
+                        <form action="<?= site_url('contact/sendEmail')?>" method="post">
+                            <div class="row">
+
+                                <div class="col-12 col-md-6">
+                                    <div class="group">                                        
+                                        <input type="text
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t,
+    @JsonKey(name: 'is-favorite') bool isFavorite,
+    @JsonKey(name: 'favorite-time') DateTime favoriteTime,
+    @JsonKey(name: 'is-deleted') bool isDeleted,
+    @JsonKey(name: 'deleted-time') DateTime deletedTime,
+  }) = _User;
+
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+}
+ import 'package:freezed_annotation/freezed_annotation.dart';
+
+import 'package:hydro_sdk/swid/backend/ts/transforms/transformTypeDeclarationToTs.dart';
+import 'package:hydro_sdk/swid/ir/swidType.dart';
+import 'package:hydro_sdk/swid/swars/iSwarsPipeline.dart';
+import 'package:hydro_sdk/swid/util/hashComparableMixin.dart';
+import 'package:hydro_sdk/swid/util/hashKeyMixin.dart';
+import 'package:hydro_sdk/swid/util/unHashableMixin.dart';
+
+part 'user.freezed.dart';
+part 'user.g.dart';
+
+@freezed
+class User extends HashKeyMixin
+    with
+        HashComparableMixin<User>,
+        UnhashableMixin<User>,
+        SwarsTransformMixin<User, $UserCopyWith<User>, String>,
+        TransformTypeDeclarationToTs<$UserCopyWith<User>, $UserCopyWith<User>,
+            String> {
+  User._();
+
+  factory User({
+    String? id,
+    String? nickname,
+    String? username,
+    String? avatar,
+    DateTime? joinTime,
+    SwidType? swidType,
+    String? email,
+    @JsonKey(name:'register-type') int? registerType,
+    @JsonKey(name: 'is-admin') bool? isAdmin,
+    @JsonKey(name: 'is-blocked') bool? isBlocked,
+    @JsonKey(name: 'is-activated') bool? isActivated,
+    @JsonKey(name: 'is-banned') bool? isBanned,
+    @JsonKey(name: 'is-email-verified') bool? isEmailVerified,
+    @JsonKey(name: 'email-verified-time') DateTime? emailVerifiedTime,
+    @JsonKey(name: 'email-verified-token') String? emailVerifiedToken,
+    @JsonKey(name: 'is-email-verification-token-expired')
+        bool? isEmailVerificationTokenExpired,
+    @JsonKey(name: 'is-forgotten-password-token-expired')
+        bool? isForgottenPasswordTokenExpired,
+    @JsonKey(name: 'forgotten-password-token') String? forgottenPasswordToken,
+    @JsonKey(name: 'login-count') int? loginCoun
+
+Precision: 0
+Recall: 0
+F1 Score: 0

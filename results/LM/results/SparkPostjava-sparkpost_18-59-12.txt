@@ -1,0 +1,119 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: SparkPost/java-sparkpost
+    Project Description: \n\n for a SparkPost account and visit our for even more content.\n\n SparkPost Java Library\n\n \n\nUse this library in Java applications to easily access the SparkPost Email API in your application.\n\n Version Compatibility Note\n\n Version 0.6.2 0.6.3\n\nDue to and to maintain compatibility with old and new version of Apache HTTP Client must not end with a slash.\n\n Version 0.12 0.13\n\nAlthough we try to maintain library backward compatibility this migration may require some minor changes to your code. Substitution data was changed from to . Most client code will just need to change their map to this new signature.\n\n Getting Started\n\nThe SparkPost Java Library is available in this or in GitHub .\n\n\n\n\n Building SparkPost4J\n\n Basic Send Email Example\n\n\n\n Basic Send Email through SparkPost EU \n\n\n\n\n\n Advanced Send Email Example\n\nWith SparkPost you have complete control over all aspects of an email and a powerful templating solution.\n\n\n\n Running The Sample Apps\n\nThe sample apps are held in with each sample\'s source code in .\n\nTo build the samples:\n\n\n\nOne the samples are built, create by copying and filling in your SparkPost API key and other test parameters.\n\nYou can now run your chosen sample through maven:\n\n\n\n'
+    Existing Dependencies:
+    commons-io:commons-io
+- com.sparkpost:libs
+- org.slf4j:slf4j-api
+- org.hamcrest:hamcrest-integration
+- org.hamcrest:hamcrest-core
+- commons-codec:commons-codec
+- org.reflections:reflections
+- javax.mail:javax.mail-api
+- com.google.code.findbugs:annotations
+- org.projectlombok:lombok
+- com.googlecode.jmockit:jmockit
+- com.sparkpost:sparkpost
+- com.yepher.jsondoc:documentor
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 13 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!--------------  Footer Start  ---------------->
+
+     <footer class="bg-light">
+         <div class="container">
+
+             <section class="footer_top_area p_20">
+
+                 <div class="footer_widget_inner">
+                     <div class="row">
+                         <div class="col-lg-4 col-md-6">
+                             <aside class="f_widget f_about_widget">
+                                 <img src="img/logo-2.png" alt="">
+                                 <p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+                                 <ul>
+                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                     <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                     <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                 </ul>
+                             </aside>
+                         </div>
+                         <div class="col-lg-4 col-md-6">
+                             <aside class="f_widget f_insta_widget">
+                                 <div class="f_title">
+                                     <h3>Instagram</h3>
+                                 </div>
+                                 <ul>
+                                     <li><a href="https://www.instagram.com/snapwagz_official/?utm_source=ig_profile_share&igshid=h041160qwmh"><img src="img/post/ins-1.jpg" alt=""></a></li>
+                                     <li><a href="https://www.instagram.com/snapwagz_official/?utm_source=ig_profile_share&igshid=h041160qwmh"><img src="img/post/ins-2.jpg" alt=""></a></li>
+                                     <li><a href="https://www.instagram.com/snapwagz_official/?utm_source=ig_profile_share&igshid=h041160qwmh"><img src="img/post/ins-3.jpg" alt=""></a></li>
+                                     <li><a href="https://www.instagram.com/snapwagz_official/?utm_source=ig_profile_share&igshid=h041160qwmh"><img src="img/post/ins-4.jpg" alt=""></a></li>
+                                     <li><a href="https://www.instagram.com/snapwagz_official/?utm_source=ig_profile_share&igshid=h041160qwmh"><img src="img/post/ins-5.jpg" alt=""></a></li>
+                                     <li><a href="https://www.instagram.com/snapwagz_official/?utm_source=ig_profile_share&ig
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 13 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+			$table->boolean('status')->default(0);
+			$table->timestamps();
+			$table->softDeletes();
+		});
+	}
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::drop('categories');
+	}
+
+}
+ <?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateCategoriesTable extends Migration {
+
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('categories', function(Blueprint $table)
+		{
+			$table->increments('id');
+			$table->string('title_en');
+			$table->string('title_ar');
+			$table->string('icon');
+			$table->string('slug')->index();
+
+Precision: 0
+Recall: 0
+F1 Score: 0

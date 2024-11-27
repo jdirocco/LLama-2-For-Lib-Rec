@@ -1,0 +1,106 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: inmite/android-validation-komensky
+    Project Description: ValidationKomensky for Android\nA simple library for validating user input in forms using annotations.\n\n\n\nFeatures:\n\n Validate all views at once and show feedback to user. With one line of code.\n Live validation check user input as he moves between views with immediate feedback.\n Extensible library you can add your own validations or adapters for custom views.\n\n How to include it in your project:\n\nWith Gradle:\n\n\nManually:\n\n clone the project\n add it as library project in your IDE\n\n How to validate\n\nFirst, annotate your views like this:\n\n\nNow you are ready to:\n\n\nYou will receive collection of all failed validations in a callback and you can present them to the user as you want.\nOr simply use prepared callbacks like .\n\n Live validation\n\nTo start and stop live validation, simply call:\n\n\n List of all supported validation annotations\n\nValidations supported out of the box:\n \n\n\n \n \n\n\n \n \n\n\n \n \n\n\n \n\n\n \n\n\n \n\n\n \n\n\n\n Proguard\n\nShould you need to use the proguard, copy these rules:\n\n\n\n Why \'Komensky\'?\n\n\n\n was a famous Czech educator, father of modern education methods.&nbsp;\nTeachers tend to correct you, just like this library. You won\'t miss any errors in the user input.\n\nSee who help with .\n'
+    Existing Dependencies:
+    eu.inmite.android.lib:android-validation-komensky
+- org.robolectric:robolectric
+- com.google.android:android
+- com.squareup:fest-android
+- com.android.support:appcompat-v7
+- eu.inmite.android.lib:android-styled-dialogs
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+@extends('master')
+
+@section('content')
+
+    
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<title>Login 02 | Pixelo - Creative Agency HTML5 Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/login/css') }}/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/login/css') }}/custom.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/login/vendor/animate/animate.css ')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/login/vendor/icon-awesome/css/font-awesome.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/login/vendor/fancybox/jquery.fancybox.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/login/vendor/slick/slick.min.css')}}">
+<link rel="stylesheet" type="text/css" href=" {{ asset('frontend/login/vendor/icon-line/css/simple-line-icons.css')}}">
+<link rel="stylesheet" type="text/css" href=" {{ asset('frontend/login/vendor/icon-hawk/style.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/login/vendor/icon-line-pro/style.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/login/vendor/icon-hs/style.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/login/vendor/hs-megamenu/src/hs.megamenu.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('frontend/login/vendor/hamburgers/hamburgers.min.css ')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/login/vendor/icon-awesome/css/font-awesome.min.css ')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/login/vendor/select2/select2.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('frontend/login/vendor/icon-line/css/simple-line-icons.css ')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset ('frontend/login/vendor/revolution/css/settings.min.css ') }}">
+
+<link rel="stylesheet" type="text/css" href="{{ asset('frontend/login/vendor/icon-hawk/style.css ')}}">
+<link rel="stylesheet"
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+
+namespace App\Http\Controllers\AdminPanel;
+
+use App\Models\Admin\AdminModel;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\   {
+        return view('admin.auth.login');
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function logout()
+    {
+        Auth::guard('admin')->logout();
+        session()->flash("success", "Вы вышли из системы");
+        return redirect('/login');
+//        return view('admin.auth.login');
+    }
+}
+Facades\Auth;
+
+class LoginController extends Controller
+{
+    /*
+     * Login page
+     * */
+    public function getLogin()
+ 
+
+Precision: 0
+Recall: 0
+F1 Score: 0

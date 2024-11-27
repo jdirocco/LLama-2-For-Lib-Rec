@@ -1,0 +1,144 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: radargun/radargun
+    Project Description: RadarGun\nRadarGun is a data grid and distributed cache benchmarking framework built to test and other distributed data grid platforms.\n\n Documentation\nRefer to for documentation.\n\n Quickstart:\nThe best way to get started with RadarGun is the \n\n Report a bug\n... or request a feature using our \n\n Java 11\nRadarGun requires Java11 to build/test\n"
+    Existing Dependencies:
+    org.radargun:radargun-mapreduce
+- org.infinispan:infinispan-remote-query-client
+- org.slf4j:slf4j-jdk14
+- org.radargun:plugin-infinispan52
+- org.radargun:plugin-infinispan51
+- org.radargun:plugin-infinispan50
+- javax.cache:cache-api
+- org.jgroups:jgroups
+- org.radargun:plugin-jbosscache2
+- org.jboss.jbossts.jta:narayana-jta
+- org.radargun:plugin-jcache
+- org.radargun:plugin-infinispan60
+- org.jboss.javaee:jboss-transaction-api
+- com.hazelcast:hazelcast
+- org.radargun:plugin-coherence3
+- org.infinispan:infinispan-cachestore-jdbc
+- net.sf.ehcache:ehcache-core
+- org.radargun:plugin-ehcache25
+- org.radargun:radargun-cache
+- io.github.lukehutch:fast-classpath-scanner
+- org.infinispan:infinispan-core
+- org.radargun:plugin-infinispan71
+- org.radargun:plugin-infinispan70
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 24 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- Main content --> 
+    <section class="content"> 
+    <div class="container-fluid"> 
+        <div class="row"> 
+
+        <div class=" col-md-2"></div>
+        <!-- left column --> 
+        <div class="col-md-8">
+            <!-- general form elements -->
+            <div class="card" style="background-color:white;color:black;"> 
+
+                <div class="card-header" style="background-color:white;color:black;"> 
+                <h3 class="card-title">Add New</h3> 
+                </div> 
+
+                <form role="form" class="row"> 
+                <div class="card-body"> 
+                    
+                <div class="form-group row"> 
+                <label class="col-sm-2 col-form-label">Name</label> 
+                <div class="col-sm-10"> 
+                <input type="password" class="form-control" placeholder="Name"> 
+                </div> 
+                </div>   
+
+                <div class="form-group row"> 
+                <label class="col-sm-2 col-form-label">Email</label> 
+                <div class="col-sm-10"> 
+                <input type="email" class="form-control" placeholder="Email"> 
+                </div> 
+                </div>                
+
+                <div class="form-group row"> 
+                <label class="col-sm-2 col-form-label">Password</label> 
+                <div class="col-sm-10"> 
+                <input type="password" class="form-control" placeholder="Password"> 
+                </div> 
+                </div>  
+                <div class="form-group row"> 
+                <label class="col-sm-2 col-form-label">Confirm Password</label> 
+                <div class="col-sm-10"> 
+                <input type="password" class="form-control" placeholder="Confirm Password"> 
+                </div> 
+                </div> 
+                    
+                </div> 
+                <!-- /.card-body -->
+
+                <div class="card-footer"> 
+                <button type="submit" class="btn btn-primary float-right ">Submit</button> 
+                </div> 
+                </form> 
+
+            </div>
+            <!-- /.card -->
+        </div>
+        <!--/.col (right) --> 
+
+        <div class=" col-md-2"></div>
+        </div>
+
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+</section>
+</div>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 24 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s/js/bootstrap-datepicker.js')}}"></script>
+    <script>
+        $('#date').datepicker({
+            autoclose: true,
+            todayHighlight: true,
+            format: 'yyyy-mm-dd'
+        })
+    </script>
+@endpush
+ <div class="form-group">
+    {{ Form::label('date', 'Date', ['class' => 'col-2 form-control-label']) }}
+    <div class="col-10">
+        <div class="input-group date">
+            {{ Form::text('date', null, ['class' => 'form-control', 'autocomplete' => 'off', 'placeholder' => 'Y-M-D']) }}
+            <div class="input-group-addon"><span class="glyphicon glyphicon-th"></span></div>
+        </div>
+    </div>
+</div>
+
+@push('js')
+    <script src="{{asset('asset
+
+Precision: 0
+Recall: 0
+F1 Score: 0

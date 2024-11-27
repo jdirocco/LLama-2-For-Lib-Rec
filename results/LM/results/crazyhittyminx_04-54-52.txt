@@ -1,0 +1,141 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: crazyhitty/minx
+    Project Description: Minx\nA minimalistic, text based web browser for android.\n\n\n \n\n\n\n\nWho is Minx for ?\nIt is intended for those users who don\xe2\x80\x99t like adverts on webpages or enjoy reading content from websites but unfortunately these websites don\xe2\x80\x99t scale well on smartphone screens. Minx grabs textual data from websites and represents it to the user in a readable format. This app also removes any possibility of websites tracking user data as no cookies or user details are shared with the website. It uses jsoup to parse html data into string values which can further be displayed to the user.\n\nFeatures\n Ad free and no user information tracking.\n Load any url into the app and it will load it as long as the url is valid.\n Change font size according to your liking.\n Save webpages offline.\n Secure your archive with a PIN.\n\nScreenshots\n\n\n\n\n\n\n'
+    Existing Dependencies:
+    org.jsoup:jsoup
+- com.afollestad:material-dialogs
+- cat.ereza:customactivityoncrash
+- com.pnikosis:materialish-progress
+- com.weiwangcn.betterspinner:library-material
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+
+    <div class="row">
+        <div class="col s12 m12 l3" style="padding-bottom:0;">
+            <ul class="menu_nav">
+                <li id="menu_dashboard" class="active"><a href="index-2.html"><i class="material-icons">dashboard</i> Dashboard</a></li>
+                <li id="menu_app_inbox">
+                    <a href="#"><i class="material-icons">move_to_inbox</i> Mailbox</a>
+                    <ul class="menu_sub">
+                        <li><a href="mail_inbox_1.html">Inbox 1</a></li>
+                        <li><a href="mail_inbox_2.html">Inbox 2</a></li>
+                        <li><a href="mail_compose.html">Compose</a></li>
+                        <li><a href="mail_view.html">View</a></li>
+                    </ul>
+                </li>
+                <li id="menu_app_task">
+                    <a href="#"><i class="material-icons ">check_box</i> Taskboard</a>
+                    <ul class="menu_sub">
+                        <li><a href="taskboard_1.html">Taskboard 1</a></li>
+                        <li><a href="taskboard_2.html">Taskboard 2</a></li>
+                        <li><a href="task_list.html">Tasklist</a></li>
+                        <li><a href="task_list_alt.html">Tasklist Alt</a></li>
+                    </ul>
+                </li>
+                <li id="menu_app_crm"><a href="#"><i class="material-icons ">contacts</i> CRM</a>
+                    <ul class="menu_sub">
+                        <li><a href="crm_list.html">CRM List</a></li>
+                        <li><a href="crm_contacts.html">Contacts</a></li>
+                        <li><a href="crm_contact_details.html">Contact Profile</a></li>
+                    </ul>
+                </li>
+                <li id="menu_app_calendar"><a href="#"><i class="material-icons ">event_note</i> Calendar</a>
+                    <ul class="menu_sub">
+                        <li><a href="calendar_basic.html">Simple Calendar</a></li>
+                        <li><a href="calendar_list.html">Calendar List</a></li>
+                        <li><a href="calendar_month.html">Calendar Month</a></li>
+                        <li><a href="calendar_agenda.html">Calendar Agenda</a></li>
+                        <li><a href="calendar_alt.html">Calendar Alt</a></li>
+                        <li><a href="calendar_box.html">Calendar Box</a></li>
+                    </ul>
+                </li>
+                <li id="menu_app_contact"><a href="#"><i class="material-icons ">contacts</i> Contacts</a>
+                    <ul class="menu_sub">
+                        <li><a href="contact_list.html">All Contacts</a></li>
+                        <
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    public string Get(int id)
+        {
+            return "value";
+        }
+
+        // POST api/<controller>
+        public void Post([FromBody]string value)
+        {
+        }
+
+        // PUT api/<controller>/5
+        public void Put(int id, [FromBody]string value)
+        {
+        }
+
+        // DELETE api/<controller>/5
+        public void Delete(int id)
+        {
+        }
+    }
+} ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using WebApi.OutputCache.V2;
+using WebApi.OutputCache.Core;
+
+namespace WebApi.OutputCache.V2.Demo.Controllers
+{
+    public class SampleController : ApiController
+    {
+
+        //[ResponseCache(CacheProfile = "CacheProfile", Location = OutputCacheLocation.ServerAndClient, Duration = 10)]
+        public IEnumerable<string> GetSample()
+        {
+            return new string[] { "value1", "value2" };
+        }
+
+        [OutputCache(Duration = 10, VaryByParam = "id", VaryByCustom = "user")]
+        public IHttpActionResult GetSample2(string id)
+        {
+            return Ok("teste");
+        }
+
+
+        // GET api/<controller>
+        //[OutputCache(Duration = 10)]
+        public IEnumerable<string> Get()
+        {
+            return new string[] { "value1", "value2" };
+        }
+
+        // GET api/<controller>/5
+    
+
+Precision: 0
+Recall: 0
+F1 Score: 0

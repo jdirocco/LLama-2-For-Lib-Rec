@@ -1,0 +1,194 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: tomahawk-player/tomahawk-android
+    Project Description: tomahawkandroid\n\nMusic is everywhere, now you don\xe2\x80\x99t have to be!\n\nTomahawk, the critically acclaimed multisource music player, is now available on Android. Given the name of an artist, album or song Tomahawk will find the best available source and play it whether that be from Spotify, Deezer, GMusic, Soundcloud, Tidal, Official.fm, Jamendo, Beets, Ampache, Subsonic or your phone\xe2\x80\x99s local storage.\nTomahawk for Android also syncs your history, your loved tracks, artists, albums and your playlists to/from the desktop version of Tomahawk via our new music community, Hatchet. On Hatchet you can hear your friends\' favorite tracks and see what they\'re currently listening to.\n\n | | \n | | \n\n Beta and Nightly\n\nGet the Beta version on Google Play:\n builds are available here:\n Development Setup\n\nFirst of all you have to properly setup your Android SDK/NDK:\n\n Download and install the Android SDK Make sure you have updated and installed the following in your Android SDK Manager:\n "/Tools"\n the latest Android SDK Platform folder e.g. "/Android 6.0 API 23"\n "/Extras/Android Support Repository" and "/Extras/Android Support Library" \n "/Extras/Google Play Services" and "/Extras/Google Repository"\n\nBuild it on the commandline with gradle:\n\n Simply run "./gradlew assembleDebug" for the debug build or "./gradlew assembleRelease" for\n the release build in your tomahawkandroid checkout directory. The built apk will be put into\n "tomahawkandroid/build/outputs/apk"\n\nSetup using Android Studio and gradle highly recommended:\n\n Open Android Studio and go to "File""Import Project"\n Browse to your tomahawkandroid checkout and click "OK".\n Make sure that the radiobutton "Use default gradle wrapper recommended" is selected.\n Click "next" and that\'s it : tomahawkandroid should compile right away\n\nSetup using other IDEs without gradle:\n\n Import tomahawkandroid into the IDE of your choice\n tomahawkandroid depends on several 3rd party libraries. You can look up a list of all dependencies in ./app/build.gradle under dependencies{...}\n Make sure you setup the support libraries correctly Add all dependencies to your tomahawkandroid project\n tomahawkandroid should now compile successfully.\n\nIf you have any further problems, feel free to join the tomahawk.mobile irc channel on irc.freenode.org\n\n Ready to contribute?\n\nDrop us an email at welisten@tomahawkplayer.org or join our IRC Channel tomahawk.mobile on irc.freenode.org\n\n Code Style Guidelines for Contributors\n\nIn order to keep everything clean and cozy, please use the official Android code style format preset:\n use the IntelliJ preset, if you\'re using Android Studio\n\nFor a larger overview you should read the official Android "Code Style Guidelines for Contributors":\n Plugin Apps Source Code\n\n \n'
+    Existing Dependencies:
+    org.apache.lucene:lucene-analyzers-common
+- com.github.castorflex.smoothprogressbar:library
+- org.apache.lucene:lucene-core
+- commons-io:commons-io
+- org.apache.lucene:lucene-queryparser
+- com.sothree.slidinguppanel:library
+- com.squareup.okhttp:okhttp
+- de.mrmaffen:vlc-android-sdk
+- com.daimajia.swipelayout:library
+- com.android.support:appcompat-v7
+- com.google.code.gson:gson
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Edit Product</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-8">
+                <form role="form" method="POST" action="admin.php?controller=product&amp;action=edit&amp;id=475">  
+                    <div class="form-group">
+                        <label>Category</label> 
+                        <select id="select" name="category_id" class="form-control">
+                            <option value="">Select</option>
+                            <?php  foreach ($result_cate as $key => $cate) {}?>
+                            <option value="471">Bàn Gỗ</option>
+                            <option value="472">Gò Quay</option>
+                            <option value="473">Bàn Họa Tiết</option>
+                            <option value="474">Bàn Ốp</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Product Code</label> 
+                        <input class="form-control" name="product_code" placeholder="Product Code" value="476" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Product Name</label> 
+                        <input class="form-control" name="product_name" placeholder="Product Name" value="Hòa Hải" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Product Price</label> 
+                        <input class="form-control" name="product_price" placeholder="Product Price" value="2000000" required="">
+                    </div>
+					<div class="form-group">
+                        <label>Product Images</label>
+						 <input type="file" name="product_images">
+                    </div>
+					<div class="form-group">
+                        <label>Product Content</label>
+                        <textarea id="editor1" name="product_content" class="form-control" rows="3" required=""> 
+						</textarea>
+						<script>
+						CKEDITOR.replace('editor1',{
+							filebrowserBrowseUrl : '../editor/ckfinder/ckfinder.html',
+						   filebrowserImageBrowseUrl : '../editor/ckfinder/ckfinder.html?type=Images',
+						   filebrowserFlashBrowseUrl : '../ckfinder/ckfinder.html?type=Flash',
+						   filebrowserUploadUrl : '../editor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+						   filebrowserImageUploadUrl : '../editor/ckfinder/core/conne
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+
+/**
+ * Created by PhpStorm.
+ * User: zhangzhaoying
+ * Date: 21/09/2016
+ * Time: 3:50 PM
+ */
+class User_model extends CI_Model
+{
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->database();
+        $this->load->library('session');
+    }
+
+    public function login($data)
+    {
+        $this->db->where('email', $data['email']);
+        $this->db->where('password', $data['password']);
+        $query = $this->db->get('user');
+        if ($query->num_rows() == 1)
+        {
+            $row = $query->row();
+            $this->session->set_userdata('user_id', $row->id);
+            $this->session->set_userdata('user_email', $row->email);
+            $this->session->set_userdata('role', $row->role);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function register($data)
+    {
+        $this->db->where('email', $data['email']);
+        $query = $this->db->get("user");
+        if ($query->num_rows() == 1) {
+            return false;  //用户名已存在
+        } else {
+            $this->db->insert("user", $data);
+            return true;  //用户名不存在
+        }
+    }
+
+    public function check_login()
+    {
+        if (isset($this->session->userdata['user_id'])) {
+            if ($this->session->userdata('user_id')!= '') {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    public function login_session_destroy()
+    {
+        if ($this->session->userdata('user_id')!= '') {
+            $this->session->sess_destroy();
+        }
+s->db->from('user');
+            // $this->db->where('user_name', $data['username']);
+            $this->db->where('email', $data['email']);
+            $this->db->where('password', $this->encrypt->sha1($data['password']));
+            return $this->db->get();
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * 验证码验证
+     * @param $data
+     * @return bool
+     */
+    public function check_captcha($data) {
+        $captcha = $this->session->userdata('captcha');
+        if ($data['captcha']!= $captcha['word']) {
+            return FALSE;
+        }
+        return TRUE;
+    }
+
+    /**
+     * 验证码验证
+     * @param $data
+     * @return bool
+     */
+    public function check_captcha2($data)
+    {
+        $captcha = $this->session->userdata('captcha');
+        if ($data['captcha']!= $captcha['word']) {
+            return FALSE;
+        }
+        return
+
+Precision: 0.0
+Recall: 0.0
+F1 Score: 0

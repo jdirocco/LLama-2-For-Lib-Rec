@@ -1,0 +1,101 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: spring-projects/spring-hateoas
+    Project Description: image: Spring HATEOAS\n\nThis project provides some APIs to ease creating REST representations that follow the principle when working with Spring and especially Spring MVC. The core problem it tries to address is link creation and representation assembly.\n\n== Working with Spring HATEOAS\n\nSince all commits are headlined with its github issue, git will treat it as a comment. To get around this, apply the following configuration to your clone:\n\nsource\n\ngit config core.commentchar "/"\n\n\n== Making a release\n\n1. Create a new release on the main branch.\n\n\n% ci/createrelease.sh \n\n\n2. With the release tagged, push the tagged version to the release branch.\n\n\n% git checkout b release\n% git reset hard \n% git push f origin release\n\n\nNOTE: You can chain the previous set of commands together using .\n\nThe pipeline will build and release the "release" branch. It will also build a new snapshot and stage it on artifactory.\nAnd if it\'s a , the pipeline will push it out to Maven Central. To complete a release on Maven Central, you must login\nto the server shown in , close, and release. This is a stop gap to guard against bad releases accidentally getting pushed\nout to Maven Central.\n\n=== Running CI tasks locally\n\nSince the pipeline uses Docker, it\'s easy to:\n\n Debug what went wrong on your local machine.\n Test out a a tweak to your script before sending it out.\n Experiment against a new image before submitting your pull request.\n\nAll of these use cases are great reasons to essentially run what Jenkins does on your local machine.\n\nIMPORTANT: To do this you must have Docker installed on your machine.\n\n1. \n\nThis will launch the Docker image and mount your source code at .\n\n2. \n\nNext, run the script from inside the container:\n\n2. \n\nSince the container is binding to your source, you can make edits from your IDE and continue to run build jobs.\n\nIf you need to test the script, then do this:\n\n1. \n\nThis will launch the Docker image and mount your source code at and the temporary\nartifactory output directory at .\n\nNext, run the script from inside the container:\n\n2. \n\nIMPORTANT: will attempt to push to Artifactory. If you don\'t supply credentials, it will fail.\n\nNOTE: Docker containers can eat up disk space fast! From time to time, run to clean out old images.\n\n== Resources\n\n documentation\n started guide\n'
+    Existing Dependencies:
+    org.assertj:assertj-core
+- org.springframework:spring-aop
+- xmlunit:xmlunit
+- javax.ws.rs:javax.ws.rs-api
+- org.slf4j:slf4j-api
+- org.springframework:spring-test
+- org.springframework:spring-webmvc
+- com.jayway.jsonpath:json-path
+- org.projectlombok:lombok
+- net.jadler:jadler-all
+- org.springframework:spring-context
+- org.springframework.plugin:spring-plugin-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+ 
+      <div class="row" style="margin-left: 10px;">
+          <h4>List of Users</h4>
+          @if(count($users) > 0)
+          <div class="list-group">
+              @foreach($users as $user)
+                <a href="" class="list-group-item"><span class="list-item">{{$user->id}} </span><span class="list-item">Name:{{$user->name}} </span><span class="list-item">Email : {{$user->email}}</span><span class="list-item">Role : {{$user->role}}</span></a>
+              @endforeach
+          </div>
+          @else
+          <p>No Users Found</p>
+            @endif    
+      </div>
+      <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</div>
+<!-- /#page-wrapper -->
+<style>
+.list-item{
+  font-size: 10px;
+}
+
+</style>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    if(empty(trim($this->attributes['title'])))
+        {
+            return 'Untitled';
+
+        }else{
+            return  $this->attributes['title'];
+
+        }
+    }
+}
+ <?php
+
+namespace App\Model;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+// 	protected $fillable=['title','content'];
+    protected $guarded=[];
+    public function getRouteKeyName(){
+        return'slug';
+
+    }
+   
+    public function getTitleAttribute($value){
+    
+
+Precision: 0
+Recall: 0
+F1 Score: 0

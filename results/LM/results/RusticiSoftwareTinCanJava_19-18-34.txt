@@ -1,0 +1,160 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: RusticiSoftware/TinCanJava
+    Project Description: A Java library for implementing the xAPI.\n\nFor hosted API documentation, basic usage instructions, supported version listing, etc. visit the main project website at:\n\n more information about the Experience API xAPI visit:\n\n library uses Maven 3 for project management, building, etc. It outputs Maven artifacts.\n\nBuilding\n\n\nCheck out the source:\n\n git clone cd TinCanJava\n\nWith the repo cloned copy the file\nto and adjust the values to point to a valid LRS. Then\nbuild the project using:\n\n mvn install\n\nThis will download dependencies that are not already locally available and build and test the\nartifact. The result will be in . To build a specific version\nof the library you will need to checkout to the tag for that version first, such as:\n\n git checkout tincan0.2.4\n\nAnd then do , which will provide .\n\nReleasing\n\n\nSee mvn release:prepare DdryRun=true\n mvn release:clean\n mvn release:prepare\n mvn release:perform\n\nAt some point in the future we plan to make the maven artifacts available via some publicly\navailable repository.\n'
+    Existing Dependencies:
+    com.fasterxml.jackson.core:jackson-core
+- commons-codec:commons-codec
+- org.projectlombok:lombok
+- com.fasterxml.jackson.core:jackson-databind
+- com.fasterxml.jackson.datatype:jackson-datatype-joda
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+  <?php  
+
+
+//session_destroy();
+  if(isset($_SESSION['user_id'])){
+
+     if($_SESSION['type']!== 'admin'){
+       include 'includes/user-header.php';
+
+     }else{
+      include 'includes/header.php';
+     }
+
+ }else{
+
+  include 'includes/header.php';
+
+  }
+  
+  // include '../dbconnect.php' ;
+ ?>
+
+ 
+<div class="content-wrapper" style="overflow-y: auto;">
+
+<section class="content-header">
+
+  <div class="container-fluid">
+    
+    <div class="row mb-2">
+      
+      <div class="col-sm-8">
+        
+        <h3 class="text-info" style="font-weight:bold">List of Student</h3>
+    
+      </div>
+   
+    </div>
+  
+  </div><!-- /.container-fluid -->
+
+</section>
+
+<div class="container-fluid">
+  
+  <section class="content">
+  <div class="row">
+        <div class="col-md-12">
+          <div class="card card-secondary card-outline">
+            <div class="card-header">
+              <h2 class="card-title">
+            
+            <button class="btn btn-outline-success btn-block btn-lg " data-toggle="modal" data-target="#Addstudent">
+            <b><i class="fa fa-plus"></i> Add New Student</b>
+            </button>
+            </h2>
+            </div>
+
+                <div class="card-body">
+              <h5 class="card-title"><i class="icofont-info-circle"></i><b> Note:</b> This is a list of all the student in the system</h5>
+              <div class="table-responsive">
+              <table  id = "datatable" class = "table table-bordered table-striped table-hover table-responsive-sm">
+
+                  <thead style="background-color: #5BFFA9;">
+                      <th>Student ID Number</th>
+                      <th>Name</th>
+                      <th>Course</th>
+                      <th>Section</th>
+                      <th>Semester</th>
+                      <th>School Year</th>
+                      <th>Actions</th>
+                  </thead>
+
+                  <tbody>
+                    
+                 <?php    
+                 
+                    // get all student in the database
+                
+                  $sql = "SELECT students.student_id, firstname, lastname, course, yearlevel, section, semester, schoolyear 
+                  from students
+                  inner join tbl_students_info on students.student_id = tbl_students_info.student_id 
+                  inner join yearlevel on yearlevel.year_id = tbl_students_info.year_level
+                  inner join semester on semester.sem_id = tbl_students_info.semester
+                  inner join courses on courses.course_id = tbl_students_info.course
+                 ";
+
+                  $result = mysqli_query($mysqli,$sql);
+                
+                  if(mysqli_num_rows($result) > 0 ){
+                    
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import {
+  ICreateOrder,
+  CreateOrder,
+} from "@/interfaces/Order/ICreateOrder";
+import { OrdersRepository } from "@/repositories/implementations/OrdersRepository";
+import { OrdersService } from "@/services/OrdersService";
+
+describe("Create Order Service", () => {
+  let ordersRepository: OrdersRepository;
+  let ordersService: OrdersService;
+
+  beforeEach(() => {
+    ordersRepository = new OrdersRepository();
+    ordersService = new OrdersService(ordersRepository);
+  });
+
+  it("should be able to create and return and order", async () => {
+    const order: ICreateOrder = {
+      userId: "1",
+      courseId: "1",
+      courseTitle: "test",
+      totalPrice: 12.3,
+    };
+    jest.spyOn(ordersRepository, "create");
+    await ordersService.create(order);
+    expect(ordersRepository.create).toBeCalledWith(order);
+  });
+});
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

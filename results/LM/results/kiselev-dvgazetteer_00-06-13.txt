@@ -1,0 +1,222 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: kiselev-dv/gazetteer
+    Project Description: OpenStreetMap OSM geocoder\n======================\n\nMain purpose of this project is easy to use geocoder/geoindexer.\n\nProject consists of two parts: Gazetteer and GazetteerWeb\n\nGazetteer\n=========\n\nGazetteer used to parse osm data and do all dirty work with geometry.\n\nYou can use Gazetteer as standalone osm processor, to dump addresses from osm.\n\nYou can ignore GazetteerWeb and use data in your own geocoding/geosearching applications.\nTake an osm.bz2 dump and generate with\n\n full geocoded buildings\n full geocoded POIs\n streets\n cities\n administrative boundaries\n\nDetails are here could find data extracts here: is a second part of the project. \nYou may take it as example implementation of search engine for Gazetteer generated data or use it for your own purposes.\n\nDetails are here
+    Existing Dependencies:
+    org.apache.lucene:lucene-analyzers-common
+- commons-io:commons-io
+- com.vividsolutions:jts
+- net.sf.supercsv:super-csv-dozer
+- org.slf4j:slf4j-simple
+- org.slf4j:slf4j-api
+- org.codehaus.groovy:groovy-all
+- org.elasticsearch:elasticsearch
+- commons-codec:commons-codec
+- org.apache.commons:commons-collections4
+- org.apache.lucene:lucene-expressions
+- com.spatial4j:spatial4j
+- commons-httpclient:commons-httpclient
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    @yield('title')
+    <!-- Favicon icon -->
+    <link rel="icon" href="{{asset('images/favicon.ico')}}" type="image/x-icon">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="{{asset('fonts/fontawesome/css/fontawesome-all.min.css')}}">
+    <!-- animation css -->
+    <link rel="stylesheet" href="{{asset('plugins/animation/css/animate.min.css')}}">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="{{asset('assets/plugins/bootstrap/4.1.3/css/bootstrap.min.css')}}" rel="stylesheet" id="bootstrap-css">
+    <script src="{{asset('assets/plugins/jquery/3.2.1/jquery.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/bootstrap/4.1.3/js/bootstrap.min.js')}}"></script>
+    
+
+    
+
+    @yield('css')
+    
+    @yield('css2')
+    
+    
+    @yield('css3')
+    
+    
+    
+
+</head>
+
+
+<body class="">
+    <div class="">
+       
+        
+
+    
+    
+     
+        @yield('content')
+        
+        @yield('content1')
+        
+     
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2020</p>
+            </div>
+        </div>
+    </div>
+    <!--**********************************
+        Footer end
+    ***********************************-->
+
+    <!--**********************************
+       Support ticket button start
+    ***********************************-->
+
+    <!--**********************************
+       Support ticket button end
+    ***********************************-->
+
+
+    <!--**********************************
+       Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <!-- <script src="assets/js/vendor.bundle.base.js"></script> -->
+    <!-- Theme Script -->
+    <!-- inject:js -->
+    <script src="assets/js/dashboard.js"></script>
+    <!-- endinject -->
+
+    <!-- Theme Customizer -->
+    <!-- <script src="assets/js/customizer.js"></script> -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> #ifndef __GUI_FONTWEIGHT_H__
+#define __GUI_FONTWEIGHT_H__
+
+
+#include <NsCore/Noesis.h>
+#include <NsCore/StaticArray.h>
+#include <NsCore/TypeTag.h>
+#include <NsCore/NSTLForwards.h>
+
+
+namespace Noesis
+{
+
+class TypeConverter;
+struct HashString;
+template<class T, class Enable> struct Hash;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Represents the weight of a font.
+////////////////////////////////////////////////////////////////////////////////////////////////////
+struct NS_GUI_CORE_APIight(uint32_t weight);
+
+    /// Gets a FontWeight from a string representation
+    /// Examples: "100", "200", "Thin", "ExtraBold"
+    static FontWeight Parse(const char* str);
+
+    /// Gets a FontWeight from a string representation
+    /// Examples: "100", "200", "Thin", "ExtraBold"
+    static FontWeight Parse(const char* str, const char*& end);
+
+    /// Checks if a FontWeight is defined
+    static bool IsDefined(uint32_t weight);
+
+    /// Compares if two FontWeight are equal
+    NS_CORE_KERNEL_API friend bool operator==(FontWeight lhs, FontWeight rhs);
+
+    /// Compares if two FontWeight are different
+    NS_CORE_KERNEL_API friend bool operator!=(FontWeight lhs, FontWeight rhs);
+
+    /// Compares if two FontWeight are equal
+    NS_CORE_KERNEL_API friend bool operator==(FontWeight lhs, uint32_t rhs);
+
+    /// Compares if two FontWeight are different
+    NS_CORE_KERNEL_API friend bool operator!=(FontWeight lhs, uint32_t rhs);
+
+    /// Returns the string representation of a FontWeight
+    NS_CORE_KERNEL_API friend const char* ToString(const FontWeight& weight);
+
+    friend struct Hash;
+
+private:
+    static TypeConverter* InitTypeConverter();
+
+    uint32_t mWeight;
+
+    struct Names
+    {
+        const char* name;
+        const char* name2;
+        const char* name3;
+    };
+
+    static const Names& FindNames(uint32_t weight);
+    static const Names& FindNames(uint32_t weight, const char*& name2);
+    static const Names& FindNames(uint32_t weight, const char*& name2, const char*& name3);
+
+    static StaticArray<Names, FontWeight_Normal> gNames;
+
+    struct Hash
+    {
+        size_t operator()(const FontWeight& weight) const;
+    };
+    
+    static const TypeConverter* gTypeConverter;
+
+    NS_CORE_KERNEL_API friend uint32_t FontWeightToUInt32(FontWeight weight);
+};
+
+}
+
+#endif FontWeight
+{
+    static const uint32_t FontWeight_Thin = 100;
+    static const uint32_t FontWeight_ExtraLight = 200;
+    static const uint32_t FontWeight_Light = 3
+
+Precision: 0
+Recall: 0
+F1 Score: 0

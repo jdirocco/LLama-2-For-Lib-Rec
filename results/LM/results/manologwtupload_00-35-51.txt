@@ -1,0 +1,135 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: manolo/gwtupload
+    Project Description: GWTUpload & JSUpload\n\nGWTUpload is a library for uploading files to web servers, showing a progress bar with real information about the process file size, bytes transferred, etc. It uses ajax requests to ask the web server for the upload progress. It has two components written in java, the server side with servlet and utility classes, and the client side that is compiled into javascript using gwt.\n\nJSUpload is the same client library but compiled and exported into javascript, so non java developers can use it directly in web pages. I've written an article describing the technique used to do this. JSUpload provides a server program coded in perl that can be installed in any web server as a cgibin script.\n\nGWTUploadGAE is a library including a special servlet to handle uploads in Google Application Engine servers GAE.\n\n\nBUILDING:\n\n Checkout the code from either github or googlecode:\n git clone git clone Assuming you have already installed maven in your system just run:\n mvn package\n\nRUNNING EXAMPLES\n To compile the examples and run them with maven jetty plugin\n mvn jetty:runexploded\n\n To run examples in GWT dev mode run:\n mvn gwt:run\n\n You can deploy the generated gwtuploadversion.war in a servlet container or run it with:\n java jar gwtuploadversion.war\n\n\nECLIPSE:\n\n You can use m2eclipse sonatype to import the project\n Or you can generate an eclipse project running:\n mvn eclipse:eclipse\n\nHELP:\n\n 1. Read the documentation: 2. Check if your issue is listed in: 3. Read the mailing list: 4. Ask to the list: gwtupload@googlegroups.com\n 5. Open an issue\n\n\n Manuel Carrasco Mo\xc3\xb1ino\n"
+    Existing Dependencies:
+    ${groupId}:gwtupload-samples
+- commons-io:commons-io
+- ${groupId}:gwtupload
+- org.datanucleus:datanucleus-core
+- com.google.gwt:gwt-codeserver
+- org.apache.geronimo.specs:geronimo-jta_1.1_spec
+- com.google.appengine:appengine-tools-sdk
+- org.timepedia.exporter:gwtexporter
+- commons-codec:commons-codec
+- com.google.appengine:appengine-api-1.0-sdk
+- com.google.appengine.tools:appengine-gcs-client
+- gwtchismes:gwtchismes
+- com.google.gwt:gwt-incubator
+- org.eclipse.jetty:jetty-server
+- com.google.guava:guava
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 16 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+<template>
+  <div class="container-fluid">
+         <div class="header-body ">
+        <!-- Card stats -->
+        <div class="row">
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Total Users</h5>
+                     <div class="count">{{ totalUsers }}</div>
+                    
+                
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                      <i class="fas fa-chart-bar"></i>
+                    </div>
+                  </div>
+                </div>
+               <hr>
+              <a class="btn btn-info" data-toggle="modal" data-target="#createUserModal" style="padding: 6px 30px; color: #fff;"> Add New User</a>
+              </div>
+            </div>
+          </div>
+           <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Total Posts</h5>
+                     <div class="count">{{ totalPosts }}</div>
+                    
+                
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                      <i class="fas fa-users"></i>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                    <a class="btn btn-info" data-toggle="modal" data-target="#createPostModal" style="padding: 6px 30px; color: #fff;"> Add New Post</a>                
+               </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-muted mb-0">Total Comments</h5>
+                     <div class="count">{{ totalComments }}</div>
+                    
+
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                      <i class="fas fa-comments"></i>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                     <a class="btn btn-info" data-toggle="modal" data-target="#createCommentModal" style="padding: 6px 30px; color: #fff;"> Add New Comment</a>
+              </
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 16 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+
+#define _PID_CONTROLLER_H
+
+/**
+ * @brief 
+ * 
+ * @param kp 
+ * @param ki 
+ * @param kd 
+ * @param setpoint 
+ * @param measurement 
+ * @return int32_t 
+ */
+int32_t calculate_pid(double kp, double ki, double kd, double setpoint, double measurement, double *integral, double dt);
+
+#endif //_PID_CONTROLLER_H
+ #include <stdint.h>
+
+Precision: 0
+Recall: 0
+F1 Score: 0

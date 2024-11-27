@@ -1,0 +1,179 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: xwiki/xwiki-commons
+    Project Description: XWiki Commons\n\n are technical libraries common to several other top level XWiki projects. \n\nThese libraries can be used by projects outside of the XWiki ecosystem, are generic and not related to the wiki domain.\n\nXWiki Platform, XWiki Commons and XWiki Rendering are part of the software forge. They are released together and share the same version.\n\n Documentation\n \n \n \n\n Download\nThe XWiki Commons JARs are available in the .\n\n Release Notes\nRead our .\n\n Tools\n setup launches a build for each commit\n if you want to report an issue\n to see the full list of tools we use to build XWiki\n \n\n Community\nWe're always looking for contributors! \nYou should read our or get in touch:\n \n \n \n"
+    Existing Dependencies:
+    com.googlecode.java-diff-utils:diffutils
+- org.xwiki.commons:xwiki-commons-environment-api
+- commons-io:commons-io
+- org.junit.vintage:junit-vintage-engine
+- org.xwiki.commons:xwiki-commons-blame-api
+- org.xwiki.commons:xwiki-commons-component-api
+- org.xwiki.commons:xwiki-commons-diff-display
+- com.puppycrawl.tools:checkstyle
+- com.google.guava:guava
+- org.xwiki.commons:xwiki-commons-tool-test-component
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+@extends('layouts.user')
+   
+
+@section('content')
+
+
+
+
+<div class="container">
+<div class="row" style="background-color: #333 ; padding: 20px; ">
+<div class="col md-6 text-white" > <h4 >DASHBOARD</h4> </div>
+</div>
+
+
+
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <p>{{ $message }}</p>
+        </div>
+    @endif
+
+<div class="row">
+  <div class="col-3 " style="background-color: #333; padding:20px"   > <p > <i class="fa fa-user" style="color:white"> </i> User Name </p></div>
+  <div class="col-3" style="background-color: #333; padding:20px"> <p> <i class="fa fa-user" style="color:white"> </i> Email</p> </div>
+  <div class="col-3" style="background-color: #333; padding:20px"> <p> <i class="fa fa-user" style="color:white"> </i> Contact</p> </div>
+  <div class="col-3" style="background-color: #333; padding:20px"> <p> <i class="fa fa-user" style="color:white"> </i> Password</p> </div>
+
+</div>
+<div class="row">
+  <div class="col-3 " style="background-color: #333; padding:20px"   > <p > <i class="fa fa-user" style="color:white"> </i> {{$LoggedUserInfo->name}} </p></div>
+  <div class="col-3" style="background-color: #333; padding:20px"> <p> <i class="fa fa-user" style="color:white"> </i> {{$LoggedUserInfo->email}} </p> </div>
+  <div class="col-3" style="background-color: #333; padding:20px"> <p> <i class="fa fa-user" style="color:white"> </i> {{$LoggedUserInfo->phone}} </p> </div>
+  <div class="" style="background-color: #333; padding:20px"> 
+        <button ><a style="color:white" href="{{route('edit',$user->id)}}">Change</a></button>
+    </div>
+
+</div>
+
+
+
+
+
+
+</div>
+@endsection
+
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>  if (value == null) {
+            return null;
+        }
+        if (!(value instanceof byte[])) {
+            throw new IllegalArgumentException(String.format(
+                    "expected byte[], but got %s, %s", value.getClass().toString(), value));
+        }
+        return (byte[]) value;
+    }
+
+    @Override
+    public <K> K readKey(ByteData data, ByteDataKeyFormat format) {
+        Object key = this.read(data);
+        if (key == null) {
+            return null;
+        }
+        if (!(key instanceof byte[])) {
+            throw new IllegalArgumentException(String.format(
+                    "expected byte[] key, but got %s, %s", key.getClass().toString(), key));
+        }
+        if (format!= ByteDataKeyFormat.RAW) {
+            try {
+                byte[] bytes = (byte[]) key;
+                key = new String(bytes);
+                if (format == ByteDataKeyFormat.BASE64) {
+                    key = Base64.getEncoder().encodeToString((byte[]) key);
+                }
+            } catch (UnsupportedEncodingException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        @SuppressWarnings("unchecked")
+        K k = (K) key;
+        return k;
+    }
+
+    @Override
+    public <T> T deserObject(ByteData data) {
+        Object o = this.read(data);
+        ObjectMapper om = new ObjectMapper();
+        @SuppressWarnings("unchecked")
+        T t = (T) om.convertValue(o, this.getDataClass());
+        return t;
+    }
+
+}
+ package io.github.ddebree.game.ai.core.board.bytearray;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.github.ddebree.game.ai.core.move.encoding.ByteDataKeyFormat;
+import io.github.ddebree.game.ai.core.move.encoding.IMoveDecoder;
+import io.github.ddebree.game.ai.core.player.IPlayer;
+import org.apache.commons.lang3.NotImplementedException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.UnsupportedEncodingException;
+import java.util.Base64;
+
+public class ByteDataConverterDefault implements IByteDataConverter {
+
+    protected static final Logger log = LoggerFactory.getLogger(ByteDataConverterDefault.class);
+
+    public Class getDataClass() {
+        return Object.class;
+    }
+
+    Object read(ByteData data) {
+        ObjectMapper om = new ObjectMapper();
+        try {
+            return om.readValue(data.getBytes(), this.getDataClass());
+        } catch (Exception e) {
+            log.error("Failed reading value of class {} with data {}",
+                    new Object[]{this.getDataClass().toString(), data}, e);
+            return null;
+        }
+    }
+
+    @Override
+    public void encode(Object o, ByteData data) {
+        throw new NotImplementedException("Not implemented");
+    }
+
+    @Override
+    public Object readValue(ByteData data, Class<?> dataClass) {
+       
+
+Precision: 0
+Recall: 0
+F1 Score: 0

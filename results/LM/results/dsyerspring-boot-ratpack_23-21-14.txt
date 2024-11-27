@@ -1,0 +1,154 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: dsyer/spring-boot-ratpack
+    Project Description: This project provudes autoconfiguration and a CLI extension for Spring \nBoot with Ratpack. Most of the features enabled here are actually\nalready in Ratpack, e.g. see . Using this project as well\nas means lets you write an application using Ratpack\nand Spring with slightly less overhead, just by adding dependencies.\n\n Quick Java Example\n\n\n\nIf a single of type is present it is installed and\nserves the default route. For more routes you have to add of\ntype and add handlers as needed to the chain inside\nits execute method.\n\n Quick Groovy DSL Example\n\nRatpack has a Groovy DSL for building routes. Spring Boot CLI\napplications can take advantage of the nice syntax as follows.\n\nThis should run as it is, with no imports:\n\n\n\nPut it in a file called and run it like this:\n\n\n\nThen get the result in a browser at can also use or \nfeatures of Ratpack with no additional effort. Spring will pick up\nGroovy templates by default from .\n\nTo use Spring effectively you will want to take advantage of the\ndependency injection and autoconfiguration features of Spring Boot as\nwell. Here\'s a simple example with dependency injection and json:\n\n\n\nThe DSL keyword only supports inside its\ntoplevel closure in nonSpring apps you might see as\nwell.\n\n Installing the Spring Boot CLI\n\nTo run an application written in the Ratpack DSL you need the ratpack\nextensions to the\n.\n\nSince the Ratpack extensions are not part of the main Spring Boot\nfeature set you will need to clone from\n and build it\nlocally, e.g.\n\n\n\nOnce it is built, you can install the ratpack plugin. You either need\nto build Spring Boot or download a snapshot build of the CLI first,\ne.g.\n\n\n\nThe CLI is now installed at , so if you are a gvm user you can do this:\n\n\n\nand then you can install the jar:\n\n\n\n'
+    Existing Dependencies:
+    io.ratpack:ratpack-core
+- io.ratpack:ratpack-dropwizard-metrics
+- io.ratpack:ratpack-groovy
+- org.springframework.boot:spring-boot-cli
+- org.hibernate:hibernate-validator
+- io.ratpack:ratpack-session
+- commons-logging:commons-logging
+- com.fasterxml.jackson.core:jackson-databind
+- org.springframework.boot:spring-boot-configuration-processor
+- io.ratpack:ratpack-handlebars
+- org.springframework:spring-web
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<h1 align= "center">
+<a href="#"><img src="https://cdn.discordapp.com/attachments/801731240202068037/845697188012432916/logo_transparent.png" alt="logo" width="500" height="800" align= "center"></a>
+<br>
+<a href="https://discord.gg/xXqR5EKf2f"><img src="https://img.shields.io/discord/801242398565137458?color=5865f2&label=Discord&logo=Discord&logoColor=white"></a>
+</h1>
+
+
+<h2 align="center">
+<a href="#about-the-project">About the project<a> •
+<a href="#tech">Tech<a> •
+<a href="#features">Features<a> •
+<a href="#getting-started">Getting Started<a> •
+<a href="#contribute">Contribute<a> •
+<a href="#license">License<a>
+</h2>
+
+<h4 align="center" id="about-the-project">About the project</h4>
+
+<p align="center">
+  <img alt="Screenshot of the bot" src="https://cdn.discordapp.com/attachments/793539720916260944/807975084191271424/unknown.png">
+</p>
+
+<p align="center">
+  <sub>Screenshot of the bot</sub>
+</p>
+
+
+<h4 align="center" id="tech">Tech</h4>
+
+This bot was made using: 
+- [discord.js](https://discord.js.org/)
+- [quick.db](https://npmjs.com/package/quick.db)
+<h4 align="center" id="features">Features</h4>
+
+- `🚀` Moderation
+- `🔒` Auto-role (on join and leave)
+- `💬` Welcome and leave messages
+- `🎁` Gift and leveling system
+
+<h3 align="center" id="getting-started">Getting Started</h3>
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+
+<h4 align="center" id="prerequisites">Prerequisites</h4>
+
+- [node.js 16.X](https://nodejs.org/en/download/)
+- [npm v.7.X](https://www.npmjs.com/)
+- [discord.js v.13+](https://discord.js.org/#/) 
+- [quick.db](https://npmjs.com/package/quick.db)
+
+
+<h4 align="center" id="install">Installation</h4>
+
+1. Install the dependencies.
+
+   Clone the Repository
+   ```sh
+   git clone https://github.com/Feli-Bot/Feli-Bot.git
+   ```
+   Install the
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+        this.value1 = value1;
+    }
+
+    public String getValue2() {
+        return value2;
+    }
+
+    public void setValue2(String value2) {
+        this.value2 = value2;
+    }
+}
+ package com.alan3446.lesson23_mockito_verify;
+
+/**
+ * @author AlanSun
+ * @date 2019/8/5 14:32
+ */
+public class UserServiceImpl implements UserService {
+    private String value1;
+    private String value2;
+
+    static {
+        System.out.println("UserServiceImpl static code block");
+    }
+
+    @Override
+    public String getName() {
+        System.out.println("get name");
+        return "user_name";
+    }
+
+    @Override
+    public String getAge() {
+        return "user_age";
+    }
+
+    public UserServiceImpl(String value1, String value2) {
+        this.value1 = value1;
+        this.value2 = value2;
+    }
+
+    public String getValue1() {
+        return value1;
+    }
+
+    public void setValue1(String value1) {
+
+Precision: 0
+Recall: 0
+F1 Score: 0

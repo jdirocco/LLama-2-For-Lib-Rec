@@ -1,0 +1,129 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: spring-projects/spring-data-mongodb
+    Project Description: image: Data MongoDB,link= image: Data MongoDB,link= Spring Data MongoDB image: image:"Revved up by Gradle Enterprise", link=" Data MongoDB"\n\nThe primary goal of the Data project is to make it easier to build Springpowered applications that use new data access technologies such as nonrelational databases, mapreduce frameworks, and cloud based data services.\n\nThe Spring Data MongoDB project aims to provide a familiar and consistent Springbased programming model for new datastores while retaining storespecific features and capabilities.\nThe Spring Data MongoDB project provides integration with the MongoDB document database.\nKey functional areas of Spring Data MongoDB are a POJO centric model for interacting with a MongoDB and easily writing a repository style data access layer.\n\ncodeofconduct\n== Code of Conduct\n\nThis project is governed by the Code of Conduct. By participating, you are expected to uphold this code of conduct. Please report unacceptable behavior to springcodeofconduct@pivotal.io.\n\ngettingstarted\n== Getting Started\n\nHere is a quick teaser of an application using Spring Data Repositories in Java:\n\nsource,java\n\npublic interface PersonRepository extends CrudRepository {\n\n List findByLastnameString lastname;\n\n List findByFirstnameLikeString firstname;\n}\n\n@Service\npublic class MyService {\n\n private final PersonRepository repository;\n\n public MyServicePersonRepository repository {\n this.repository = repository;\n }\n\n public void doWork {\n\n repository.deleteAll;\n\n Person person = new Person;\n person.setFirstname"Oliver";\n person.setLastname"Gierke";\n repository.saveperson;\n\n List lastNameResults = repository.findByLastname"Gierke";\n List firstNameResults = repository.findByFirstnameLike"Oli";\n }\n}\n\n@Configuration\n@EnableMongoRepositories\nclass ApplicationConfig extends AbstractMongoClientConfiguration {\n\n @Override\n protected String getDatabaseName {\n return "springdata";\n }\n}\n\n\nmavenconfiguration\n=== Maven configuration\n\nAdd the Maven dependency:\n\nsource,xml\n\n\n org.springframework.data\n springdatamongodb\n ${version}\n\n\n\nIf you\'d rather like the latest snapshots of the upcoming major version, use our Maven snapshot repository\nand declare the appropriate dependency version.\n\nsource,xml\n\n\n org.springframework.data\n springdatamongodb\n ${version}SNAPSHOT\n\n\n\n springsnapshot\n Spring Snapshot Repository\n Upgrading\n\nInstructions for how to upgrade from earlier versions of Spring Data are provided on the project the links in the notes section to find the version that you want to upgrade to.\n\ngettinghelp\n== Getting Help\n\nHaving trouble with Spring Data? We\xe2\x80\x99d love to help!\n\n Check the\n documentation, and Learn the Spring basics \xe2\x80\x93 Spring Data builds on Spring Framework, check the website for a wealth of reference documentation.\nIf you are just starting out with Spring, try one of the If you are upgrading, check out the for "" features.\n Ask a question we monitor for questions tagged with can also chat with the community on Report bugs with Spring Data MongoDB at Reporting Issues\n\nSpring Data uses Github as issue tracking system to record bugs and feature requests.\nIf you want to raise an issue, please follow the recommendations below:\n\n Before you log a bug, please search the tracker to see if someone has already reported the problem.\n If the issue does not already exist, a new issue.\n Please provide as much information as possible with the issue report, we like to know the version of Spring Data that you are using, the JVM version, Stacktrace, etc.\n If you need to paste code, or include a stack trace use code fences MONGODBHOMEmsgdbpathmongodruntime/data/$MONGODBHOMEulimitulimitulimit aulimitmvnwmvntarget/antora/site/index.html.\n\nlicense\n== License\n\nSpring Data MongoDB is Open Source software released under the 2.0 license.\n'
+    Existing Dependencies:
+    io.projectreactor:reactor-core
+- org.hibernate:hibernate-entitymanager
+- org.threeten:threetenbp
+- org.springframework:spring-aspects
+- com.querydsl:querydsl-mongodb
+- org.objenesis:objenesis
+- com.nhaarman:mockito-kotlin
+- io.projectreactor:reactor-test
+- org.apache.openwebbeans:openwebbeans-se
+- ${project.groupId}:spring-data-commons
+- org.slf4j:jul-to-slf4j
+- org.jetbrains.kotlin:kotlin-stdlib
+- javax.annotation:jsr250-api
+- io.reactivex.rxjava2:rxjava
+- de.schauderhaft.degraph:degraph-check
+- hsqldb:hsqldb
+- javax.annotation:javax.annotation-api
+- org.apache.geronimo.specs:geronimo-jcdi_2.0_spec
+- joda-time:joda-time
+- org.springframework:spring-core
+- org.eclipse.persistence:javax.persistence
+- nl.jqno.equalsverifier:equalsverifier
+- junit:junit
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 24 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+        <table class="table table-hover" id="tabla_articulos">
+            <thead>
+                <tr>
+                    <th scope="col">Código</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col" style="width: 1%;">Acciones</th>
+                    <th scope="col" style="display:none;">id</th>
+                </tr>
+            </thead>
+            <tbody>
+                  @foreach ($productos as $item)
+              
+               <tr>
+                    <td>{{ $item->cod_articulo }}</td>
+                    <td>{{ $item->producto }}</td>
+                    <td class="text-right">@if ($item->precio == 0){{'S/ '.'0.00'}}@else{{ 'S/ '.number_format($item->precio, 2, '.', ',')  }}@endif</td>
+
+                    <td style="width: 1%;">
+                      <a href="javascript:void(0)" onclick="seleccionarART({{ $item->idarticulo }})">
+                        <i class="fas fa-check" style="color: darkgreen" title="Seleccionar"></i>
+                      </a>
+                    </td>
+                    <th scope="col" style="display:none;">{{ $item->idarticulo }}</th>
+                </tr>
+                  @endforeach
+    
+            </tbody>
+          </table>
+    
+    
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 24 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> ﻿namespace _06.StrategyPattern
+{
+    using System;
+    public class Program
+    {
+        public static void Main()
+        {
+            SortedSet<Person> people = new SortedSet<Person>(new Compa  }
+}
+ratorByName());
+
+            people.Add(new Person("A", 12));
+            people.Add(new Person("C", 20));
+            people.Add(new Person("B", 19));
+
+            foreach (var person in people)
+            {
+                Console.WriteLine(person);
+            }
+        }
+  
+
+Precision: 0
+Recall: 0
+F1 Score: 0

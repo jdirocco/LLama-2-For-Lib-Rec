@@ -1,0 +1,265 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: jclouds/jclouds-karaf
+    Project Description: Repo moved to
+    Existing Dependencies:
+    org.apache.servicemix.specs:org.apache.servicemix.specs.jsr250-1.0
+- org.apache.jclouds.driver:jclouds-log4j
+- org.slf4j:slf4j-api
+- org.apache.servicemix.bundles:org.apache.servicemix.bundles.java-xmlbuilder
+- org.apache.jclouds.karaf.chef:services
+- org.ops4j.pax.url:pax-url-mvn
+- org.apache.karaf.tooling.exam:org.apache.karaf.tooling.exam.container
+- org.apache.geronimo.specs:geronimo-atinject_1.0_spec
+- org.apache.jclouds.karaf:jclouds-karaf
+- com.google.guava:guava
+- org.ops4j.pax.url:pax-url-aether
+- org.apache.servicemix.bundles:org.apache.servicemix.bundles.javax.inject
+- org.osgi:org.osgi.core
+- org.apache.httpcomponents:httpcore-osgi
+- org.apache.jclouds.karaf:services
+- com.jcraft:jsch
+- org.apache.jclouds.karaf:commands
+- joda-time:joda-time
+- com.jcraft:jsch.agentproxy.connector-factory
+- org.apache.jclouds.driver:jclouds-slf4j
+- org.apache.jclouds.karaf:core
+- com.google.inject:guice
+- com.google.inject.extensions:guice-assistedinject
+- org.apache.jclouds.common:googlecloud
+- org.apache.servicemix.bundles:org.apache.servicemix.bundles.jsch
+- org.codehaus.groovy:groovy
+- junit:junit
+- org.apache.jclouds.karaf:utils
+- org.apache.jclouds:jclouds-scriptbuilder
+- org.apache.jclouds:jclouds-compute
+- org.codehaus.groovy:groovy-jsr223
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 31 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color:#f2f2f2;">
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-md-6">
+      <h4 style="margin-top:50px;">Your Shopping Cart</h4>
+    </div>
+    <div class="col-md-6">
+      <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-success "  data-toggle="modal" data-target="#addProduct"><i class='glyphicon glyphicon-plus-sign'></i> Add Product</button>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Order
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a id="order_by_product_name">Order by Product Name</a></li>
+            <li><a id="order_by_category">Order by Category</a></li>
+            <li><a id="order_by_price">Order by Price</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+   <div class="col-md-12"> <hr><br>
+     
+    </div>
+
+    <div class="col-md-12">
+      
+      <div id="productList"></div>
+    </div>
+  </div>
+</div>
+
+ <!-- Modal -->
+  <div class="modal fade" id="addProduct" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add Product</h4>
+        </div>
+        <div class="modal-body">
+          
+          <input type="text" id="searchProduct" placeholder ="Seach Product.." class="form-control">
+          
+            <hr>
+            <div id="showProducts">
+            </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    </div>
+
+
+ 
+
+    
+ <script type="text/javascript">
+
+    $(document).ready(function(){
+    	loadCategory();
+    	loadProduct();
+    	count();
+    });
+
+    function loadCategory(){
+    	$.ajax({
+    	
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 31 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+	}
+
+	return &httpResponse, nil
+}
+
+func checkResponse(r *http.Response) error {
+	if c := r.StatusCode; 200 <= c && c <= 299 {
+		return nil
+	}
+
+	errorResponse := &ErrorResponse{Response: r}
+
+	data, err := ioutil.ReadAll(r.Body)
+	if err == nil && data!= nil {
+		json.Unmarshal(data, errorResponse)
+	}
+
+	return errorResponse
+} package kubermatic
+
+import (
+	"bytes"
+	"encoding/json"
+	"fmt"
+	"io"
+	"io/ioutil"
+	"net/http"
+	"net/http/httputil"
+	"net/url"
+	"os"
+	"strconv"
+	"time"
+)
+
+const (
+	DefaultBaseURL   = "https://api.kubermatic.com"
+	DefaultAPIPrefix = "/api/v1"
+	UserAgent        = "go-kubermatic"
+)
+
+type Config struct {
+	BaseURL   *url.URL
+	Username  string
+	Password  string
+	Token     string
+	APIPrefix string
+
+	UserAgent string
+	HTTPClient *http.Client
+}
+
+type Client struct {
+	client *http.Client
+	BaseURL *url.URL
+	config *Config
+	UserAgent string
+}
+
+func NewClient(config *Config) (*Client, error) {
+	baseURL, err := url.Parse(DefaultBaseURL)
+	if err!= nil {
+		return nil, err
+	}
+
+	if config.BaseURL!= nil {
+		baseURL = config.BaseURL
+	}
+
+	config.BaseURL = baseURL
+
+	if config.HTTPClient == nil {
+		config.HTTPClient = http.DefaultClient
+	}
+
+	if config.APIPrefix == "" {
+		config.APIPrefix = DefaultAPIPrefix
+	}
+
+	if config.UserAgent == "" {
+		config.UserAgent = UserAgent
+	}
+
+	client := &Client{client: config.HTTPClient, BaseURL: baseURL, config: config, UserAgent: config.UserAgent}
+	return client, nil
+}
+
+func debug(format string, a...interface{}) {
+	if os.Getenv("DEBUG")!= "" {
+		fmt.Fprintln(os.Stderr, fmt.Sprintf(format, a...))
+	}
+}
+
+func (c *Client) NewRequest(method, path string, body interface{}) (*http.Request, error) {
+	rel, err := url.Parse(c.BaseURL.Path)
+	if err!= nil {
+		return nil, err
+	}
+
+	rel = c.BaseURL.ResolveReference(rel)
+
+	u := c.BaseURL.ResolveReference(rel)
+
+	if path!= "" {
+		path = c.config.APIPrefix + "/" + path
+	}
+
+	u, err = url.Parse(path)
+	if err!= nil {
+		return nil, err
+	}
+
+	if len(c.BaseURL.RawQuery) > 0 {
+		params := url.Values{}
+
+		for k, v := range c.BaseURL.Query() {
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

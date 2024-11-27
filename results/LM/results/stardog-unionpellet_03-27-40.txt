@@ -1,0 +1,162 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: stardog-union/pellet
+    Project Description: Pellet: An Open Source OWL DL reasoner for Java\r\n\r\n\r\n\r\n\r\nPellet is the OWL 2 DL reasoner: \r\n \r\n AGPL or commercial license\r\n pure Java\r\n developed and by Complexible Inc. \r\n\r\nPellet can be used with Jena or OWLAPI libraries. Pellet provides functionality to check consistency of ontologies, compute the classification hierarchy, \r\nexplain inferences, and answer SPARQL queries.\r\n\r\nPellet 3.0, a closed source, nextgen version of Pellet, is embedded and available in , the RDF database.\r\n\r\nFeel free to fork this repository and submit pull requests if you want to\r\nsee changes, new features, etc. in Pellet.\r\n\r\nDocumentation about how to use Pellet is in the doc/ directory and there are some \r\ncode samples in the examples/ directory. \r\n\r\nCommercial support for Pellet is . The answers some frequently asked questions.\r\n\r\nThere is a for questions and feedback. You can search . \r\nBug reports and enhancement requests should be sent to the mailing list. Issues are on .\r\n\r\nThanks for using Pellet.\r\n'
+    Existing Dependencies:
+    org.jfree:jfreechart
+- ${project.groupId}:pellet-explanation
+- com.github.ansell.aterms:aterm-java
+- commons-io:commons-io
+- org.apache.jena:jena-arq
+- ${project.groupId}:pellet-jena
+- org.slf4j:slf4j-simple
+- org.slf4j:slf4j-api
+- ${project.groupId}:pellet-cli
+- ${project.groupId}:pellet-query
+- gnu.getopt:java-getopt
+- ${project.groupId}:pellet-modularity
+- org.antlr:antlr-runtime
+- ${project.groupId}:pellet-examples
+- net.sourceforge.owlapi:owlapi-distribution
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    var data = {};
+    let url = new URL(window.location.toString());
+    let id = url.searchParams.get('id');
+    let is_admin = url.searchParams.get('admin');
+    let is_manager = url.searchParams.get('manager');
+    let name = "";
+    let user_id = "";
+    let username = "";
+    let role = "";
+
+    let user_name = $("#user_name");
+    let first_name = $("#first_name");
+    let last_name = $("#last_name");
+    let password = $("#password");
+    let phone = $("#phone");
+    let role_name = $("#role_name");
+    let role_id = $("#role_id");
+    let is_active = $("#is_active");
+
+    var table = null;
+    $(function() {
+        if (is_admin == "True" || is_manager == "True") {
+            var html = `
+                <div class="col-md-4">
+                    <label for="role_id">Role: </label>
+                    <select class="form-control" id="role_id">
+                        <option value="0">User</option>
+                        <option value="1">Manager</option>
+                        <option value="2">Admin</option>
+                    </select>
+                </div>`;
+            $("#role").html(html);
+            role_id.val(id);
+        }
+
+        $("#save_btn").hide();
+        $("#edit_btn").show();
+
+        if (id == "0") {
+            $("#save_btn").show();
+            $("#edit_btn").hide(); 
+        }
+
+        $.ajax({
+            type: "get",
+            url: "/api/account/info/?id=" + id,
+            data: data,
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                let data = result.data;
+                user_name.val(data.user_name);
+                first_name.val(data.first_name);
+                last_name.val(data.last_name);
+                phone.val(data.phone);
+                role.val(data.role);
+                role_id.val(data.role_id);
+
+                role_name.html(role.val());
+
+                if (data.is_active == 1) {
+                    is_active.attr('checked', true);
+                } else {
+                    is_active.attr('checked', false);
+                }
+            }
+        });
+
+        $("#edit_btn").on('click', function () {
+            if (id == "0" || (id == 1 && is_admin == 'True')){
+                $("#edit_btn").hide();
+                $("#save_btn").hide();
+                user_name.readonly = false;
+                first_name.readonly = false;
+                last_name.readonly = false;
+                password.readonly = false;
+                role_id.readonly = false;
+                phone.readonly = false;
+                role.readonly = false;
+                $("#save_btn").show();
+                $("#cancel_btn").show();
+            }
+        })
+
+        $("#save_btn").on('click', function () {
+            $.ajax({
+                type: "post",
+                url: "/api/account/
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>.0.0.0")] [assembly: AssemblyCopyright("Copyright �  2015")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+
+// 将 ComVisible 设置为 false 使此程序集中的类型
+// 对 COM 组件不可见。  如果需要从 COM 访问此程序集中的类型，
+// 则将该类型上的 ComVisible 特性设置为 true。
+[assembly: ComVisible(false)]
+
+// 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
+[assembly: Guid("60162764-9528-422b-9907-611582285723")]
+
+// 程序集的版本信息由下面四个值组成: 
+//
+//      主版本
+//      次版本 
+//      生成号
+//      修订号
+//
+// 可以指定所有这些值，也可以使用“生成号”和“修订号”的默认值，
+// 方法是按如下所示使用“*”: 
+// [assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1
+
+Precision: 0
+Recall: 0
+F1 Score: 0

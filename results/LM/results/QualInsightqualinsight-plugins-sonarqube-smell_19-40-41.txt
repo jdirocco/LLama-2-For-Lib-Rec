@@ -1,0 +1,131 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: QualInsight/qualinsight-plugins-sonarqube-smell
+    Project Description: Code Smells plugin for SonarQube\nThe Code Smells plugin for allows developers to manually i.e. during code reviews report issues not seen by SonarQube but which should be taken into consideration when evaluating a project's technical debt. \n\nIf you want more information, read the and have a look at the list of the plugin allows you to report.\n\n \n\nInstallation and usage Documentation is available on .\n\nNew feature ideas and are more than welcome. A named has been created in order to facilitate discussions about this plugin.\n\nI hope you'll enjoy this small plugin as much as I enjoyed writing it ! Do not hesitate to request new Code Smells types and send comments as well as requests for improvement. \n"
+    Existing Dependencies:
+    org.assertj:assertj-core
+- org.sonarsource.java:java-checks-testkit
+- commons-io:commons-io
+- com.qualinsight.mavencentral:qualinsight-mavencentral-parent
+- org.slf4j:slf4j-api
+- org.mockito:mockito-all
+- com.qualinsight.plugins.sonarqube:qualinsight-plugins-sonarqube-smell
+- com.google.code.gson:gson
+- com.qualinsight.plugins.sonarqube:qualinsight-plugins-sonarqube-smell-api
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+@extends('adminlte::page')
+
+@section('title', 'Dashboard')
+
+@section('content_header')
+    <h1>Crear Categorias</h1>
+@stop
+
+@section('content')
+    <form action="{{route('administracion.categorias.store')}}" method="post">
+         @csrf
+        <label>
+            <span>Nombre:</span>
+            <input type="text" name="name" class="" placeholder="Nombre del producto" required>
+        </label>
+        <button type="submit" class="btn-success">Enviar Formulario</button>
+    </form>
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>   }
+      });
+  }
+}
+ package com.google.android.gms.internal;
+
+import android.*;
+import android.graphics.Canvas;
+import android.graphics.Path;
+import com.google.android.gms.ads.internal.util.client.zzb;
+import com.google.android.gms.ads.internal.zzp;
+import com.google.android.gms.dynamic.zzc;
+import com.google.android.gms.dynamic.zzd;
+import com.google.android.gms.internal.zzjz;
+import com.google.android.gms.internal.zzkc;
+import java.util.HashMap;
+
+// Referenced classes of package com.google.android.gms.internal:
+//			zzkb, zzke, zziu, zzkf
+
+public class zzkg extends zzjz
+{
+	final class zza extends zzke
+	{
+
+		protected final boolean draw(Canvas canvas)
+		{
+			canvas.clipPath(a, android.graphics.Region.Op.REPLACE);
+		//    0    0:aload_1         
+		//    1    1:aload_0         
+		//    2    2:getfield        #19  <Field Path a>
+		//    3    5:getstatic       #32  <Field android.graphics.Region$Op android.graphics.Region$Op.REPLACE>
+		//    4    8:invokevirtual   #38  <Method boolean Canvas.clipPath(Path, android.graphics.Region$Op)>
+		//    5   11:pop             
+			super.draw(canvas);
+		//    6   12:aload_0         
+		//    7   13:aload_1         
+		//    8   14:invokespecial   #40  <Method boolean zzke.draw(Canvas)>
+		//    9   17:pop             
+			canvas.restore();
+		//   10   18:aload_1         
+		//   11   19:invokevirtual   #43  <Method void Canvas.restore()>
+			return true;
+		//   12   22:iconst_1        
+		//   13   23:ireturn         
+		}
+
+		protected final void onBoundsChange(Rect rect)
+		{
+			a.moveTo(rect.left, rect.top);
+		//    0    0:aload_0         
+		//    1    1:getfield        #19  <Field Path a>
+		//    2    4:aload_1         
+		//    3    5:getfield        #53  <Field int Rect.left>
+		//    4    8:i2f             
+		//    5    9:aload_1         
+		//    6   10:getfield        #56  <Field int Rect.top>
+		//    7   13:i2f             
+		//    8   14:invokevirtual   #62  <Method void Path.moveTo(float, float)>
+			a.lineTo(rect.left, rect.bottom);
+		//    9   1
+
+Precision: 0
+Recall: 0
+F1 Score: 0

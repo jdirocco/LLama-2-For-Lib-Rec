@@ -1,0 +1,236 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: alexnederlof/Jasper-report-maven-plugin
+    Project Description: JasperReportsplugin\n=============\n\nThis maven compiles Jasper files to the target directory. \n\n\xe2\x9a\xa0\xef\xb8\x8f This plugin is no longer maintained by me, but @Postremus is continuing the project\nover at If you're an active\nuser, please switch over to that version for continued updates. \xe2\x9a\xa0\xef\xb8\x8f \n\nMotivation\n\nThe original jasperreportsmavenplugin from org.codehaus.mojo was a bit slow. This plugin is 10x faster. I tested it with 52 reports which took 48 seconds with the original plugin and only 4.7 seconds with this plugin.\n\nUsage\n\nYou can use the plugin by adding it to the plugin section in your pom;\n\n\n\nIf you want to pass any Jasper options to the compiler you can do so by adding them to the configuration like so:\n\n\n\nYou can also add extra elements to the classpath using\n\n\n\nYou can also use this alternative approach for JARs:\n\n\n\n"
+    Existing Dependencies:
+    net.sf.jasperreports:jasperreports-fonts
+- org.codehaus.plexus:plexus-utils
+- javax.servlet:javax.servlet-api
+- org.slf4j:slf4j-simple
+- org.codehaus.plexus:plexus-compiler-api
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+    $(document).ready(function(){
+
+         var data=  $('#mydata').DataTable({
+              "scrollX": true,
+              "ajax": {
+                "url": "<?php echo base_url();?>index.php/Mahasiswa/mahasiswadata",
+                "type": "POST"
+              },
+                select: true,
+                 "order": [[ 1, "asc" ]]
+            });
+
+         data.on('select', function ( e, dt, type, indexes ) {
+            var rowData = dt.rows( indexes ).data().toArray();
+            console.log( rowData );
+            var id=rowData[0][3];
+
+            // alert ( "Select event activated" );
+
+            // window.location.href = "<?php //echo base_url();?>index.php/Penjualan/detail_produk/"+id;
+            $('#modal-data').modal('show');
+
+
+         });
+
+         data.on( 'deselect', function ( e, dt, type, indexes ) {
+            var rowData = dt.rows( indexes ).data().toArray();
+            console.log( rowData );
+            var id=rowData[0][3];
+            // alert ( "Deselect event activated" );
+        });
+
+
+
+
+    });
+
+    
+    function tambah_form(){
+
+
+      $.ajax({
+
+        url : '<?php echo base_url();?>index.php/Penjualan/tambah_detail',
+        type: "post",
+          // dataType: 'json',
+            success: function(html){
+
+                $('#modal-data').modal('hide');
+               $('#modal-tambah').modal('show');
+
+
+            },
+
+        })
+    }
+
+
+
+
+    function hapus_mahasiswa(id){
+
+        $.ajax({
+          url : "<?php echo base_url();?>index.php/Mahasiswa/hapus_data/"+id,
+          type : "post",
+          success: function(data){
+            swal({
+              title: "success!",
+              text:  "berhasil Dihapus!",
+              timer: 1000,
+              type:'success',
+              showCancelButton: false,
+              showConfirmButton: false,
+              type:'success'
+            });
+            setTimeout(function(){
+              location.reload();
+            },1100);
+
+
+          }
+
+
+
+
+        });
+    }
+
+    function detail_mahasiswa(id){
+
+     // var id=$('#id').val();
+      $('#id').val(id);
+
+
+      $.ajax({
+
+         url : "<?php echo base_url();?>index.php/Mahasiswa/detail_data/"+id,
+         type : "post",
+         dataType : 'json',
+          success: function(data){
+           $('#modal-data').modal('hide');
+            $('#modal-detail').modal('show');
+            var id=data[0].id;
+            $('#id_data').val(id);
+            var nohp=data[0].nohp;
+            var nim=data[0].nim;
+            var nama=data[0].nama;
+            var alamat=data[0].alamat;
+            var jeniskelamin=data[0].
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> # -*- coding: utf-8 -*-
+"""
+Created on Wed Jul 22 19:40:24 2020
+
+@author: 49753069
+"""
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.optim as optim
+import numpy as np
+import os
+import sys
+
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath("__file__")),'pytorch/models'))
+import model as model 
+import dataset 
+from PIL import Image
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
+
+
+
+def predict_img(model, img):
+    """
+    Predicts bounding-boxes for each object in the image and draws it on the
+    image using `patches`.
+    
+    Arguments:
+        model (torch.nn.Module): The model we use for detection.
+        img (PIL.Image): Image to predict on.
+        
+    Returns:
+        image (np.array): Image with bounding-boxes drawn.
+    """
+    image = np.array(img)
+    
+    if len(image.shape) == 2:
+        image = image[:, :, np.newaxis]
+        image = np.concatenate((image, image, image), axis=2)
+
+    # preprocessing
+    image
+    # prediction
+    predictions = model(img_tensor)
+    detections = non_max_suppression(predictions, 0.8, 0.4)
+    
+    if detections is None:
+        print('no predictions')
+        return None
+    
+    # plot
+    fig, ax = plt.subplots(1, figsize=(10, 15))
+    
+    ax.imshow(img_plot)
+    
+    for det in detections:
+        # get bbox coordinates
+        x, y, w, h = [int(dim) for dim in det[:4]]
+        
+        # create bbox
+        rect = patches.Rectangle((x, y), w, h, linewidth=2, edgecolor='b', facecolor='none')
+        ax.add_patch(rect)
+        
+        # plot confidence
+        txt = 'Object: {:.2f}, {:.0f}%'.format(det[5], det[4]*100)
+        ax.text(x, y, txt, color='b', size=20, style="italic", backgroundcolor='white')
+    
+    return np.array(fig)
+
+if __name__ == "__main__":
+    
+    device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+    
+    model = model.model(device)
+    weights = torch.load("../pytorch/weights/model.pth", map_location=device)
+    model.load_state_dict(weights)
+        
+    img_name = "../data/sample.jpg"
+    img = Image.open(img_name)
+    
+    img_plot = predict_img(model, img)        
+ = image / 255
+    image = image.transpose(3, 1, 0)
+
+
+Precision: 0.0
+Recall: 0.0
+F1 Score: 0

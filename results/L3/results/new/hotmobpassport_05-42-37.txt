@@ -1,0 +1,237 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications. provide recommendations exclusively in the Maven format: groupId:artifactId:version.
+    Given the project details below:
+    Project Name: patloew/RxLocation
+Project Description: The Reactive Location API Library for Android is now deprecated and not maintained anymore. Please switch to the CoLocation library by Micha\xc5\x82 Charmas. This library wraps the Location APIs in RxJava 2.x.
+Existing Dependencies Include: org.powermock:powermock-module-junit4
+- io.reactivex.rxjava2:rxandroid
+- com.squareup.leakcanary:leakcanary-android
+- io.reactivex.rxjava2:rxjava
+- com.google.android.gms:play-services-location
+- com.squareup.leakcanary:leakcanary-android-no-op
+
+Project Name: frankred/jSona
+Project Description: JSona is a configuration file(JSON), vcj and JavaFx based music and media player. The aim is to always keep your playlists in synch with your music folders. For fast fulltext search jSona uses Apache Lucene (http://lucene.apache.org/core/).
+Existing Dependencies Include: uk.co.caprica:vlcj
+- org.apache.lucene:lucene-analyzers-common
+- org.apache.lucene:lucene-core
+- commons-io:commons-io
+- com.mpatric:mp3agic
+- org.apache.lucene:lucene-queryparser
+- com.github.tulskiy:jkeymaster
+- org.apache.commons:commons-lang3
+
+Project Name: querydsl/querydsl
+Project Description: Querydsl is a framework which enables the construction of type-safe SQL-like queries for multiple backends including JPA, MongoDB and SQL in Java. Querying JPA and MongoDB using a fluent API.
+Existing Dependencies Include: org.springframework:spring-aop
+- com.mysema.codegen:codegen
+- org.xerial:sqlite-jdbc
+- org.springframework:spring-test
+- com.google.guava:guava
+- com.jolbox:bonecp
+- org.hamcrest:hamcrest-library
+- com.oracle:ojdbc6
+- com.querydsl:querydsl-sql-spatial
+- com.google.inject.extensions:guice-persist
+- com.querydsl:querydsl-apt
+- org.postgresql:postgresql
+- org.easymock:easymock
+- com.querydsl:querydsl-spatial
+- org.hibernate:hibernate-ehcache
+- javax.inject:javax.inject
+- org.springframework:spring-context
+- org.eclipse.persistence:eclipselink
+- org.firebirdsql.jdbc:jaybird-jdk16
+- log4j:log4j
+- org.mongodb.morphia:morphia
+- org.hsqldb:hsqldb
+- cglib:cglib
+- org.apache.lucene:lucene-queryparser
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.apache.maven:maven-project
+- org.hibernate:hibernate-envers
+- com.querydsl:querydsl-codegen
+- net.sourceforge.jtds:jtds
+- org.springframework.roo:org.springframework.roo.annotations
+- org.apache.ant:ant
+- com.querydsl:querydsl-lucene3
+- com.thoughtworks.proxytoys:proxytoys
+- org.scala-lang:scala-library
+- org.geolatte:geolatte-geom
+- com.h2database:h2
+- com.querydsl:querydsl-sql-codegen
+- org.hibernate:hibernate-annotations
+- org.scala-lang:scala-compiler
+- org.reflections:reflections
+- org.datanucleus:datanucleus-api-jdo
+- org.mongodb:mongo-java-driver
+- org.hibernate:hibernate-validator
+- com.infradna.tool:bridge-method-annotation
+- com.querydsl:querydsl-sql-spring
+- javax.transaction:jta
+- org.slf4j:slf4j-log4j12
+
+Project Name: GoogleCloudPlatform/google-cloud-datastore
+Project Description: This repository contains low-level Java and Python client libraries for Google Cloud Datastore. For more idiomatic and usable client libraries in these languages, please visit the [Google Cloud Dataastore Client for Java][java-datastore] and Google Cloud Database Client for Python
+Existing Dependencies Include: com.google.http-client:com.google.http-client
+- com.google.truth:com.google.truth
+- com.google.cloud.datastore:datastore-v1-proto-client
+- com.google.guava:com.google.guava
+- com.google.api-client:com.google.api-client
+- com.google.oauth-client:google-oauth-client
+- com.google.truth:truth
+- com.google.oauth-client:com.google.oauth-client
+
+Project Name: eclipse/tycho
+Project Description: Eclipse Tycho is a manifest-first way to build and build Eclipse plug-ins/OSGi bundles/RCP applications\n，nwith Maven. This repository contains all the features and documentation that will help you migrate to the official Eclipse site.
+Existing Dependencies Include: org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.codehaus.plexus:plexus-component-annotations
+- org.codehaus.plexus:plexus-container-default
+- org.eclipse.tycho:tycho-testing-harness
+- org.apache.maven:maven-core
+- org.eclipse.tycho:org.eclipse.jdt.compiler.apt
+- org.codehaus.plexus:plexus-utils
+- org.eclipse.tycho:org.eclipse.osgi
+- org.eclipse.tycho:tycho-core
+- org.apache.commons:commons-exec
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Reccomend me some of these libraries that can be added to the project to enhance its capabilities.
+    Project Name: hotmob/passport
+    Project Description: AppFuse Modular Spring MVC Archetype\r\n，R\nappfuse-basic-spring ，B'appFuse' - a modular archetype for the web application.
+    Existing Dependencies:
+    org.springframework:spring-aop
+- org.springframework.social:spring-social-google
+- org.hibernate:hibernate-entitymanager
+- org.apache.cxf:cxf-rt-frontend-jaxws
+- org.slf4j:slf4j-api
+- org.springframework.security:spring-security-core
+- org.springframework:spring-jdbc
+- org.apache.cxf:cxf-rt-transports-http
+- org.springframework.social:spring-social-facebook
+- org.springframework.social:spring-social-core
+- org.opensaml:opensaml
+- org.springframework:spring-aspects
+- cglib:cglib-nodep
+- com.octo.captcha:jcaptcha
+- org.hibernate.java-persistence:jpa-api
+- org.springframework:spring-test
+- ognl:ognl
+- org.jmock:jmock
+- org.springframework.security:spring-security-config
+- org.jasig.cas:cas-server-support-ldap
+- commons-httpclient:commons-httpclient
+- net.sf.ehcache:ehcache-web
+- org.tuckey:urlrewritefilter
+- javax.xml.bind:jaxb-api
+- org.springframework.security:spring-security-cas
+- commons-beanutils:commons-beanutils
+- taglibs:standard
+- org.apache.cxf:cxf-rt-frontend-jaxrs
+- org.apache.cxf:cxf-rt-transports-http-jetty
+- org.slf4j:jcl-over-slf4j
+- displaytag:displaytag
+- org.jasig.cas:cas-server-core
+- commons-collections:commons-collections
+- junit:junit
+- org.aspectj:aspectjrt
+- org.springframework.security:spring-security-ldap
+- org.springframework.social:spring-social-twitter
+- org.springmodules:spring-modules-validation
+- net.sf.spring-json:spring-json
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     Based on the project's context and existing dependencies, here are five library recommendations that can enhance the project's capabilities:
+
+   1. org.springframework.data:spring-data - This library provides a consistent and simple data access API for a variety of data stores, including relational databases, NoSQL databases, and cloud storage services. By using Spring Data, the project can simplify its data access code and improve performance.
+
+   2. org.springframework.boot:spring-boot-starter-web - This library provides a set of components for building web applications with Spring Boot. It includes support for RESTful APIs, WebSockets, and other web-related features. By using Spring Boot, the project can simplify its web infrastructure and improve performance.
+
+   3. com.google.code.findbugs:findbugs - This library provides a tool for detecting and diagnosing bugs in Java code. By using FindBugs, the project can identify and fix potential issues before they become problems.
+
+   4. org.ow2.asm:asm - This library provides a tool for manipulating Java bytecode. By using ASM, the project can modify and optimize its own code, as well as third-party libraries.
+
+   5. org.mongodb:mongo-java-driver - This library provides a Java driver for MongoDB, a popular NoSQL database. By using the MongoDB driver, the project can easily interact with MongoDB and take advantage of its scalability and flexibility.
+
+    These libraries can help the project in various ways, such as simplifying data access, improving web functionality, detecting bugs, and optimizing code. Additionally, they are all well-established and widely-used libraries that are suitable for the project's context and existing dependencies.
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> # Maven Dependencies
+
+Here is a list of Maven dependencies for the project, each on a new line:
+
+* org.springframework:spring-context:5.3.10
+* org.springframework.boot:spring-boot-starter-web:2.6.4
+* org.springframework.boot:spring-boot-starter-data-jpa:2.6.4
+* org.springframework.boot:spring-boot-starter-security:2.6.4
+* org.springframework.boot:spring-boot-starter-test:2.6.4
+* org.springframework:spring-tx:5.3.10
+* org.springframework:spring-orm:5.3.10
+* org.springframework:spring-data-jpa:2.6.4
+* org.springframework:spring-data-rest:2.6.4
+* org.springframework:spring-web:5.3.10
+* org.springframework:spring-web-reactive:5.3.10
+* org.springframework:spring-webflux:5.3.10
+* org.projectlombok:lombok:1.18.20
+* org.mongodb:mongodb-driver-sync:4.2.0
+* org.mongodb:mongodb-driver-async:4.2.0
+* com.fasterxml.jackson.module:jackson-module-parameter-names:2.12.3
+* com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.12.3
+* com.fasterxml.jackson.dataformat:jackson-dataformat-jsonschema:2.12.3
+* org.springframework.boot:spring-boot-starter-docs:2.6.4
+
+Please note that this is just an example list of dependencies, and the actual dependencies required for your project may vary depending on your specific requirements and configuration.
+
+Precision: 0.6
+Recall: 0.075
+F1 Score: 0.13333333333333333
+
+Formatted Dependencies:
+org.springframework:spring-aop
+- org.springframework.social:spring-social-google
+- org.hibernate:hibernate-entitymanager
+- org.apache.cxf:cxf-rt-frontend-jaxws
+- org.slf4j:slf4j-api
+- org.springframework.security:spring-security-core
+- org.springframework:spring-jdbc
+- org.apache.cxf:cxf-rt-transports-http
+- org.springframework.social:spring-social-facebook
+- org.springframework.social:spring-social-core
+- org.opensaml:opensaml
+- org.springframework:spring-aspects
+- cglib:cglib-nodep
+- com.octo.captcha:jcaptcha
+- org.hibernate.java-persistence:jpa-api
+- org.springframework:spring-test
+- ognl:ognl
+- org.jmock:jmock
+- org.springframework.security:spring-security-config
+- org.jasig.cas:cas-server-support-ldap
+- commons-httpclient:commons-httpclient
+- net.sf.ehcache:ehcache-web
+- org.tuckey:urlrewritefilter
+- javax.xml.bind:jaxb-api
+- org.springframework.security:spring-security-cas
+- commons-beanutils:commons-beanutils
+- taglibs:standard
+- org.apache.cxf:cxf-rt-frontend-jaxrs
+- org.apache.cxf:cxf-rt-transports-http-jetty
+- org.slf4j:jcl-over-slf4j
+- displaytag:displaytag
+- org.jasig.cas:cas-server-core
+- commons-collections:commons-collections
+- junit:junit
+- org.aspectj:aspectjrt
+- org.springframework.security:spring-security-ldap
+- org.springframework.social:spring-social-twitter
+- org.springmodules:spring-modules-validation
+- net.sf.spring-json:spring-json
+ Test Dependencies:
+['commons-io:commons-io', 'org.jasig.cas:cas-server-support-oauth', 'org.codehaus.jackson:jackson-jaxrs', 'commons-dbcp:commons-dbcp', 'org.springframework:spring-tx', 'commons-lang:commons-lang', 'org.aspectj:aspectjweaver', 'org.directwebremoting:dwr', 'org.hibernate:hibernate-core', 'javax.servlet.jsp:jsp-api', 'org.springframework.social:spring-social-linkedin', 'javax.mail:mail', 'junit:junit-dep', 'struts-menu:struts-menu', 'org.springframework:spring-webmvc', 'org.hibernate:hibernate-ehcache', '${jdbc.groupId}:${jdbc.artifactId}', 'org.subethamail:subethasmtp-wiser', 'org.compass-project:compass', 'net.sf.sojo:sojo', 'org.springframework.social:spring-social-web', 'net.sf.ehcache:ehcache-core', 'org.hibernate:hibernate-validator', 'org.springframework.security:spring-security-taglibs', 'org.jmock:jmock-junit4', 'org.springframework:spring-orm', 'org.opensymphony.quartz:quartz', '${project.parent.groupId}:passport-core', 'opensymphony:sitemesh', 'org.slf4j:slf4j-log4j12', 'org.springframework:spring-web', 'org.jasig.cas.client:cas-client-core', 'velocity:velocity', 'commons-pool:commons-pool', 'org.springframework:spring-context-support', 'log4j:log4j', 'xerces:xercesImpl', 'javax.servlet:servlet-api', 'commons-fileupload:commons-fileupload', 'javax.servlet:jstl']

@@ -1,0 +1,289 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications. provide recommendations exclusively in the Maven format: groupId:artifactId:version.
+    Given the project details below:
+    Project Name: patloew/RxLocation
+Project Description: The Reactive Location API Library for Android is now deprecated and not maintained anymore. Please switch to the CoLocation library by Micha\xc5\x82 Charmas. This library wraps the Location APIs in RxJava 2.x.
+Existing Dependencies Include: org.powermock:powermock-module-junit4
+- io.reactivex.rxjava2:rxandroid
+- com.squareup.leakcanary:leakcanary-android
+- io.reactivex.rxjava2:rxjava
+- com.google.android.gms:play-services-location
+- com.squareup.leakcanary:leakcanary-android-no-op
+
+Project Name: frankred/jSona
+Project Description: JSona is a configuration file(JSON), vcj and JavaFx based music and media player. The aim is to always keep your playlists in synch with your music folders. For fast fulltext search jSona uses Apache Lucene (http://lucene.apache.org/core/).
+Existing Dependencies Include: uk.co.caprica:vlcj
+- org.apache.lucene:lucene-analyzers-common
+- org.apache.lucene:lucene-core
+- commons-io:commons-io
+- com.mpatric:mp3agic
+- org.apache.lucene:lucene-queryparser
+- com.github.tulskiy:jkeymaster
+- org.apache.commons:commons-lang3
+
+Project Name: querydsl/querydsl
+Project Description: Querydsl is a framework which enables the construction of type-safe SQL-like queries for multiple backends including JPA, MongoDB and SQL in Java. Querying JPA and MongoDB using a fluent API.
+Existing Dependencies Include: org.springframework:spring-aop
+- com.mysema.codegen:codegen
+- org.xerial:sqlite-jdbc
+- org.springframework:spring-test
+- com.google.guava:guava
+- com.jolbox:bonecp
+- org.hamcrest:hamcrest-library
+- com.oracle:ojdbc6
+- com.querydsl:querydsl-sql-spatial
+- com.google.inject.extensions:guice-persist
+- com.querydsl:querydsl-apt
+- org.postgresql:postgresql
+- org.easymock:easymock
+- com.querydsl:querydsl-spatial
+- org.hibernate:hibernate-ehcache
+- javax.inject:javax.inject
+- org.springframework:spring-context
+- org.eclipse.persistence:eclipselink
+- org.firebirdsql.jdbc:jaybird-jdk16
+- log4j:log4j
+- org.mongodb.morphia:morphia
+- org.hsqldb:hsqldb
+- cglib:cglib
+- org.apache.lucene:lucene-queryparser
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.apache.maven:maven-project
+- org.hibernate:hibernate-envers
+- com.querydsl:querydsl-codegen
+- net.sourceforge.jtds:jtds
+- org.springframework.roo:org.springframework.roo.annotations
+- org.apache.ant:ant
+- com.querydsl:querydsl-lucene3
+- com.thoughtworks.proxytoys:proxytoys
+- org.scala-lang:scala-library
+- org.geolatte:geolatte-geom
+- com.h2database:h2
+- com.querydsl:querydsl-sql-codegen
+- org.hibernate:hibernate-annotations
+- org.scala-lang:scala-compiler
+- org.reflections:reflections
+- org.datanucleus:datanucleus-api-jdo
+- org.mongodb:mongo-java-driver
+- org.hibernate:hibernate-validator
+- com.infradna.tool:bridge-method-annotation
+- com.querydsl:querydsl-sql-spring
+- javax.transaction:jta
+- org.slf4j:slf4j-log4j12
+
+Project Name: GoogleCloudPlatform/google-cloud-datastore
+Project Description: This repository contains low-level Java and Python client libraries for Google Cloud Datastore. For more idiomatic and usable client libraries in these languages, please visit the [Google Cloud Dataastore Client for Java][java-datastore] and Google Cloud Database Client for Python
+Existing Dependencies Include: com.google.http-client:com.google.http-client
+- com.google.truth:com.google.truth
+- com.google.cloud.datastore:datastore-v1-proto-client
+- com.google.guava:com.google.guava
+- com.google.api-client:com.google.api-client
+- com.google.oauth-client:google-oauth-client
+- com.google.truth:truth
+- com.google.oauth-client:com.google.oauth-client
+
+Project Name: eclipse/tycho
+Project Description: Eclipse Tycho is a manifest-first way to build and build Eclipse plug-ins/OSGi bundles/RCP applications\n，nwith Maven. This repository contains all the features and documentation that will help you migrate to the official Eclipse site.
+Existing Dependencies Include: org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.codehaus.plexus:plexus-component-annotations
+- org.codehaus.plexus:plexus-container-default
+- org.eclipse.tycho:tycho-testing-harness
+- org.apache.maven:maven-core
+- org.eclipse.tycho:org.eclipse.jdt.compiler.apt
+- org.codehaus.plexus:plexus-utils
+- org.eclipse.tycho:org.eclipse.osgi
+- org.eclipse.tycho:tycho-core
+- org.apache.commons:commons-exec
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Reccomend me some of these libraries that can be added to the project to enhance its capabilities.
+    Project Name: Teradata/kylo
+    Project Description: An enterprise-ready modern data lake management software platform for big data engines such as Teradata, Apache Spark, or Hadoop. Kylo enforces best practices around metadata management, governance, and security gathered from experience in over 150+ successful big data projects.
+    Existing Dependencies:
+    org.assertj:assertj-core
+- org.springframework.boot:spring-boot-starter-data-jpa
+- io.projectreactor:reactor-core
+- org.hibernate:hibernate-entitymanager
+- com.google.code.findbugs:jsr305
+- org.springframework.security:spring-security-core
+- org.mockito:mockito-all
+- org.hamcrest:hamcrest-core
+- org.springframework.security:spring-security-test
+- com.thinkbiganalytics.kylo:kylo-metadata-core
+- org.springframework:spring-test
+- org.quartz-scheduler:quartz
+- com.google.guava:guava
+- org.springframework.cloud:spring-cloud-starter-config
+- com.thinkbiganalytics.kylo:kylo-commons-spark-shell-api
+- org.glassfish.jersey.core:jersey-client
+- org.springframework.data:spring-data-commons
+- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider
+- org.apache.spark:spark-hive_${scala.binary.version}
+- org.apache.spark:spark-core_${scala.binary.version}
+- org.springframework.boot:spring-boot
+- com.fasterxml.jackson.datatype:jackson-datatype-joda
+- org.springframework:spring-core
+- org.jgroups:jgroups
+- com.fasterxml.jackson.core:jackson-annotations
+- com.thinkbiganalytics.kylo:kylo-commons-spark-api
+- junit:junit
+- com.querydsl:querydsl-core
+- com.h2database:h2
+- org.apache.spark:spark-repl_${scala.binary.version}
+- com.querydsl:querydsl-apt
+- commons-io:commons-io
+- org.apache.spark:spark-sql_${scala.binary.version}
+- com.thinkbiganalytics.kylo:kylo-commons-scala-api
+- com.thinkbiganalytics.kylo:kylo-spark-shell-rest-model
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     Based on the provided project description and existing dependencies, I recommend the following five libraries to enhance the capabilities of the Teradata/Kylo project:
+
+1. com.querydsl:querydsl-apt: This library can help automate the creation of SQL queries based on domain models, which can improve the project's query performance and reduce the amount of boilerplate code.
+2. org.springframework.cloud:spring-cloud-starter-config: This library provides a simple and consistent way to manage configuration and properties, which can help simplify the project's configuration and improve its overall maintainability.
+3. com.thinkbiganalytics.kylo:kylo-spark-shell-rest-model: This library provides a RESTful API for interacting with the Kylo Spark shell, which can improve the project's usability and make it easier to integrate with other systems.
+4. org.jgroups:jgroups: This library provides a reliable and efficient messaging system for distributed systems, which can help improve the project's scalability and fault tolerance.
+5. commons-io:commons-io: This library provides a set of utilities for working with files and directories, which can help simplify the project's file I/O operations and improve its overall performance.
+
+Here's a brief explanation for each recommended library:
+
+1. com.querydsl:querydsl-apt: QueryDSL is a query language for Java that allows developers to write SQL queries in a more object-oriented way. By using QueryDSL-apt, the project can automate the creation of SQL queries based on domain models, which can improve query performance and reduce the amount of boilerplate code.
+2. org.springframework.cloud:spring-cloud-starter-config: Spring Cloud Config provides a simple and consistent way to manage configuration and properties. By using this library, the project can simplify its configuration and improve its overall maintainability.
+3. com.thinkbiganalytics.kylo:kylo-spark-shell-rest-model: The Kylo Spark shell is a powerful tool for working with big data, but it can be difficult to use and integrate with other systems. By using this library, the project can provide a RESTful API for interacting with the Kylo Spark shell, which can improve usability and make it easier to integrate with other systems.
+4. org.jgroups:jgroups: JGroups is a messaging system for distributed systems that provides reliable and efficient communication. By using this library, the project can improve its scalability and fault tolerance.
+5. commons-io:commons-io: Commons-IO provides a set of utilities for working with files and directories. By using this library, the project can simplify its file I/O operations and improve its overall performance.
+
+Overall, these libraries can help enhance the capabilities of the Teradata/Kylo project by improving query performance, simplifying configuration, improving usability, and increasing scalability and fault tolerance.
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> # Maven Dependencies for Java Web Development
+
+Here are some essential Maven dependencies for Java web development:
+
+1. Spring Framework:
+	* Group ID: org.springframework
+	* Artifact ID: spring-web
+	* Version: 5.3.10
+2. Hibernate:
+	* Group ID: org.hibernate
+	* Artifact ID: hibernate-core
+	* Version: 5.4.32
+3. MySQL Connector:
+	* Group ID: com.mysql
+	* Artifact ID: mysql-connector-java
+	* Version: 8.0.19
+4. Apache Commons Lang:
+	* Group ID: org.apache.commons
+	* Artifact ID: commons-lang
+	* Version: 3.10.1
+5. Apache Commons FileUpload:
+	* Group ID: org.apache.commons
+	* Artifact ID: commons-fileupload
+	* Version: 1.3.3
+6. Jackson:
+	* Group ID: com.fasterxml
+	* Artifact ID: jackson-databind
+	* Version: 2.13.0
+7. Apache CXF:
+	* Group ID: org.apache.cxf
+	* Artifact ID: cxf-rt-frontend-jaxrs
+	* Version: 3.2.12
+8. Jersey:
+	* Group ID: org.glassfish
+	* Artifact ID: jersey-client
+	* Version: 2.33.1
+9. Log4j:
+	* Group ID: org.apache.logging
+	* Artifact ID: log4j-core
+	* Version: 2.17.1
+10. Apache Commons DBCP:
+	* Group ID: org.apache.commons
+	* Artifact ID: commons-dbcp
+	* Version: 1.4
+
+These dependencies can be added to the Maven pom.xml file as follows:
+
+<dependencies>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>5.3.10</version>
+	</dependency>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>5.4.32</version>
+	</dependency>
+	<dependency>
+		<groupId>com.mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>8.0.19</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-lang</artifactId>
+		<version>3.10.1</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-fileupload</artifactId>
+		<version>1.3.3</version>
+	</dependency>
+	<dependency>
+		<groupId>com.fasterxml</groupId>
+		<artifactId>jackson-databind</artifactId>
+		<version>2.13.0</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.cxf</groupId>
+		<artifactId>cxf-rt-frontend-jaxrs</artifactId>
+
+Precision: 0.2
+Recall: 0.02857142857142857
+F1 Score: 0.049999999999999996
+
+Formatted Dependencies:
+org.assertj:assertj-core
+- org.springframework.boot:spring-boot-starter-data-jpa
+- io.projectreactor:reactor-core
+- org.hibernate:hibernate-entitymanager
+- com.google.code.findbugs:jsr305
+- org.springframework.security:spring-security-core
+- org.mockito:mockito-all
+- org.hamcrest:hamcrest-core
+- org.springframework.security:spring-security-test
+- com.thinkbiganalytics.kylo:kylo-metadata-core
+- org.springframework:spring-test
+- org.quartz-scheduler:quartz
+- com.google.guava:guava
+- org.springframework.cloud:spring-cloud-starter-config
+- com.thinkbiganalytics.kylo:kylo-commons-spark-shell-api
+- org.glassfish.jersey.core:jersey-client
+- org.springframework.data:spring-data-commons
+- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider
+- org.apache.spark:spark-hive_${scala.binary.version}
+- org.apache.spark:spark-core_${scala.binary.version}
+- org.springframework.boot:spring-boot
+- com.fasterxml.jackson.datatype:jackson-datatype-joda
+- org.springframework:spring-core
+- org.jgroups:jgroups
+- com.fasterxml.jackson.core:jackson-annotations
+- com.thinkbiganalytics.kylo:kylo-commons-spark-api
+- junit:junit
+- com.querydsl:querydsl-core
+- com.h2database:h2
+- org.apache.spark:spark-repl_${scala.binary.version}
+- com.querydsl:querydsl-apt
+- commons-io:commons-io
+- org.apache.spark:spark-sql_${scala.binary.version}
+- com.thinkbiganalytics.kylo:kylo-commons-scala-api
+- com.thinkbiganalytics.kylo:kylo-spark-shell-rest-model
+ Test Dependencies:
+['com.thinkbiganalytics.kylo.integrations:kylo-nifi-rest-client-v1.1', 'org.scala-lang:scala-compiler', 'org.springframework.data:spring-data-jpa', 'org.reflections:reflections', 'com.thinkbiganalytics.kylo:kylo-security-api', 'com.thinkbiganalytics.kylo:kylo-cluster-manager-api', 'com.thinkbiganalytics.kylo:kylo-commons-security', 'org.glassfish.jersey.media:jersey-media-json-jackson', 'io.projectreactor:reactor-bus', 'org.glassfish.jersey.core:jersey-common', 'org.springframework:spring-context', 'org.apache.httpcomponents:httpclient', 'org.apache.commons:commons-lang3', 'org.springframework:spring-beans', 'org.springframework.cloud:spring-cloud-context', 'com.fasterxml.jackson.core:jackson-databind', 'org.scala-lang:scala-reflect', 'org.springframework.boot:spring-boot-configuration-processor', 'org.glassfish.jersey.connectors:jersey-apache-connector', 'org.springframework:spring-web', 'com.fasterxml.jackson.core:jackson-core', 'org.jadira.usertype:usertype.core', 'com.fasterxml.jackson.datatype:jackson-datatype-hibernate5', 'org.mockito:mockito-core', 'org.springframework:spring-context-support', 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api', 'com.thinkbiganalytics.kylo:kylo-ui-annotation-core', 'org.springframework.boot:spring-boot-autoconfigure', 'com.thinkbiganalytics.kylo.integrations:kylo-nifi-rest-client-v1', 'org.springframework.cloud:spring-cloud-config-server', 'org.glassfish.jersey.media:jersey-media-multipart', 'org.glassfish.jersey.ext:jersey-bean-validation', 'com.thinkbiganalytics.kylo:kylo-alerts-api', 'com.thinkbiganalytics.kylo:kylo-classname-change-api', 'com.querydsl:querydsl-jpa']

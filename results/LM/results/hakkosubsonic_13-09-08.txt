@@ -1,0 +1,193 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: hakko/subsonic
+    Project Description: Subsonic\n========\n\nSubsonic is a webbased music streaming service, created by Sindre Mehus and released under the GPL.\n\nThis project is forked from Subsonic version 4.6, adding extensive last.fm integration through the MusicCabinet library. See for details.\n\nThere\'s an introduction to the project at use this addon, you need a PostgreSQL database running on the same host as your Subsonic server.\nThere are prebuilt binary packages available for most platforms at install:\n you\'ll be asked to create a database user. Stick to the default name, "postgres".\n you\'ll be asked to choose a port number. Stick to the default value, "5432".\n\nYou also need Java 7. Uninstalling Java 6 is a good idea, unless you don\'t explicitly need it.\n\nBuilding\n\n\nThe build process assumes that you have Java 7 or later and Maven 3 installed, and that PostgreSQL is running.\n\n Clone git@github.com:hakko/musiccabinet.git to $workspace/musiccabinet\n Update your PostgreSQL password in $workspace/musiccabinet/musiccabinetserver/src/main/resources/local.jdbc.properties\n cd $workspace/musiccabinet/musiccabinetserver\n mvn compile\n mvn exec:java Dexec.mainClass=com.github.hakko.musiccabinet.service.DatabaseAdministrationService\n mvn install\n\n Clone git@github.com:hakko/subsonic.git to $workspace/subsonic.\n cd $workspace/subsonic\n mvn install\n cd $workspace/subsonic/subsonicbooter\n mvn install\n\n cd $workspace/subsonic/subsonicinstallerstandalone\n mvn package\n\nTo also build a .war file that runs on a Tomcat server, execute:\n\n cd $workspace/subsonic/subsonicmain\n mvn P tomcat package\n\nIf a test case fails during build, please report and rerun with mvn fn as a workaround.\n\nInstallation\n\n\n1. If you\'re already running Subsonic: stop your service, and backup your settings. Just in case.\n2. Go to $workspace/subsonic/subsonicinstallerstandalone/target.\n3. Unzip subsonicinstallerstandalone.zip to preferred install directory.\n4. In the install directory, tweak and run the subsonic.sh script to start your new server.\n\nLog in to Subsonic as usual localhost:4040, as admin/admin and click the "Configure MusicCabinet" link the header. It should be pretty selfexplanatory from there.\n\nPlease note that the initial import of data from last.fm will take a while, roughly 30 minutes per 10.000 tracks. You can follow the progress meanwhile but MusicCabinet features won\'t work until it\'s finished.\n'
+    Existing Dependencies:
+    xmlunit:xmlunit
+- org.springframework.security:spring-security-core
+- commons-codec:commons-codec
+- org.jdom:jdom
+- org.springframework:spring-test
+- jfree:jfreechart
+- net.sourceforge.subsonic:subsonic-booter
+- org.springframework.security:spring-security-config
+- net.sourceforge.subsonic:subsonic-main
+- com.yahoo.platform.yui:yuicompressor
+- ant:ant
+- org.eclipse.jetty:jetty-security
+- commons-logging:commons-logging
+- org.springframework.security:spring-security-web
+- com.jgoodies:jgoodies-forms
+- hsqldb:hsqldb
+- commons-jxpath:commons-jxpath
+- org.springframework:spring-core
+- taglibs:string
+- org.json:json
+- junit:junit
+- org.springframework.security:spring-security-ldap
+- org.eclipse.jetty:jetty-jsp
+- commons-io:commons-io
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 24 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<div class="modal-box modal-box-info animated fadeInDown" style="width: 500px;">
+    <div class="modal-title">
+        <h4> <i class="fa fa-user-secret"></i>&nbsp; 用户登录</h4>
+    </div>
+    <div class="modal-body">
+        <form class="form form-horizontal" action="/admin/index/login" method="post">
+            <div class="row">
+                <label class="col-xs-3 control-label"> 用户名:</label>
+                <div class="col-xs-8">
+                    <input class="input-text" type="text" name="username">
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-xs-3 control-label"> 密码:</label>
+                <div class="col-xs-8">
+                    <input class="input-text" type="password" name="password">
+                </div>
+            </div>
+            <div class="row">
+                <label class="col-xs-3 control-label"> 验证码:</label>
+                <div class="col-xs-8">
+                    <img id="captcha" src="<?= \yii\helpers\Url::to(['login/captcha'])?>" onclick="this.src='/admin/login/captcha?'+Math.random()">
+                    <input class="input-text" type="text" name="captcha">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+      <input type="submit" class="btn btn-primary" form="form" value="登录">
+    </div>
+</div>
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 24 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>n(
+        "Please enter a positive integer or press 'q' to quit."
+      )
+  except ValueError as _:
+    print(
+      "Please enter a positive integer or press 'q' to quit."
+    )
+
+#  Print the Fibonacci series
+print("Here is the Fibonacci series to the first {} terms:".format(
+    num_terms
+  ))
+for n in fib(num_terms):
+  print(n, end=" ")
+print() from sys import exit
+from fibonacci import fib
+
+#  Get user input for the number of terms of the Fibonacci series.
+while True:
+  num_terms = input(
+    "How many terms of the Fibonacci series should we calculate? "
+  )
+  try:
+    num_terms = int(num_terms)
+    if num_terms < 1:
+      print(
+        "Please enter a positive integer or press 'q' to quit."
+      )
+    elif num_terms == "q":
+      exit()
+    else:
+      break
+  except KeyboardInterrupt:
+    exit()
+  except EOFError:
+    print(
+      "\nPlease enter a positive integer or press 'q' to quit."
+    )
+  except SyntaxError as _:
+      print(
+        "Please enter a positive integer or press 'q' to quit."
+      )
+  except NameError as _:
+      print(
+        "Please enter a positive integer or press 'q' to quit."
+      )
+  except FileNotFoundError as _:
+    print(
+      "Please enter a positive integer or press 'q' to quit."
+    )
+  except NotADirectoryError as _:
+    print(
+      "Please enter a positive integer or press 'q' to quit."
+    )
+  except FileExistsError as _:
+    print(
+      "Please enter a positive integer or press 'q' to quit."
+    )
+  except PermissionError as _:
+    print(
+      "Please enter a positive integer or press 'q' to quit."
+    )
+  except OSError as _:
+    print(
+      "Please enter a positive integer or press 'q' to quit."
+    )
+  except RecursionError as _:
+    print(
+      "Please enter a positive integer or press 'q' to quit."
+    )
+  except ImportError as _:
+    print(
+      "Please enter a positive integer or press 'q' to quit."
+    )
+  except IndexError as _:
+    print(
+      "Please enter a positive integer or press 'q' to quit."
+    )
+  except StopIteration as _:
+    print(
+      "Please enter a positive integer or press 'q' to quit."
+    )
+  except Exception as _:
+      print(
+        "Please enter a positive integer or press 'q' to quit."
+      )
+  except RuntimeError as _:
+      print(
+        "Please enter a positive integer or press 'q' to quit."
+      )
+  except IndentationError as _:
+      print(
+        "Please enter a positive integer or press 'q' to quit."
+      )
+  except TypeError as _:
+      print(
+        "Please enter a positive integer or press 'q' to quit."
+      )
+  except ZeroDivisionError as _:
+      print(
+        "Please enter a positive integer or press 'q'
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,200 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: MichaelEvans/Aftermath
+    Project Description: Aftermath\n=========\n\n\n\n\nAftermath handles the consequences of your calls.\n\n\n\nSetup\n\n\n\nLicense\n\n\n Copyright 2015 Michael Evans\n\n Licensed under the Apache License, Version 2.0 the "License";\n you may not use this file except in compliance with the License.\n You may obtain a copy of the License at\n\n Unless required by applicable law or agreed to in writing, software\n distributed under the License is distributed on an "AS IS" BASIS,\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n See the License for the specific language governing permissions and\n limitations under the License.\n\n\n'
+    Existing Dependencies:
+    org.assertj:assertj-core
+- com.android.support:support-annotations
+- com.google.android:android
+- com.squareup:javapoet
+- com.android.support:appcompat-v7
+- com.android.support:design
+- org.mockito:mockito-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+<div class="panel panel-flat">
+    <div  class="panel-heading mt-20">
+        <h5 class="panel-title">Edit Employee Information</h5>
+    <div class="heading-elements">
+        <div style="display: inline-block; margin: 0;" class="form-group has-feedback has-feedback-left">
+                <input class="form-control input-sm cus_search" placeholder="Search by staff id" type="text">
+                <div class="form-control-feedback">
+                    <i class="icon-search4"></i>
+                </div>
+        </div>&nbsp;               
+    </div>
+    </div>
+	<div class="panel-body"> 	
+    
+        <div class="table-responsive">
+            <table class="table datatable-basic table-striped">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>StaffId</th>
+                        <th>Name</th>
+                        <th>Mobile</th>
+                        <th>Department</th>
+                        <th>Designation</th>
+                        <th>Action</th>	
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
+                    $i =0;								
+                    foreach ($records as $row) {
+                        $i++;
+                        echo "<tr>
+                        <td>$i</td>
+                        <td>$row->EMP_ID</td>
+                        <td style='text-transform: capitalize;'>$row->EMP_NAME</td>
+                        <td>$row->EMP_MOBILE</td>
+                        <td style='text-transform: capitalize;'>$row->EMP_DEPT</td>
+                        <td style='text-transform: capitalize;'>$row->EMP_DESG</td>
+                        <td class='text-center'>
+                        <a href='".base_url()."index.php/employees/show/". $row->EMP_ID."' class='btn border-teal text-teal btn-flat btn-rounded btn-icon btn-sm legitRipple'><i class='icon-search4'></i></a>
+                       <a href='".base_url()."index.php/employees/edit/". $row->EMP_ID."' class='btn border-success text-success btn-flat btn-rounded btn-icon btn-sm legitRipple'><i class='icon-pencil5'></i></a>
+                        </td>
+                    </tr>
+                   
+                    
+                    ";
+                        
+                    }
+                   ?>
+                </tbody>
+            </table>
+     </div>
+    
+	</div>
+
+
+	
+
+    
+   
+</div>
+
+
+
+
+
+
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+	{
+		$data = $request->all();
+		$validator = $this->validator($data);
+
+		if ($validator->passes())
+		{
+			$data = $this->sanitize($data);
+
+			$user = $this->create($data);
+
+			$user->profile()
+				->create($data);
+			$user->assignRole(Role::whereName('user')->first());
+
+			$this->guard()->login($user);
+
+			Flash::message('Your account has been created.');
+
+			return redirect()->intended($this->redirectPath());
+		}
+
+		return view('auth.register')
+				->withErrors($validator)
+				->withInput($request->all());
+	}
+
+
+	/**
+	 * Get a validator for an incoming registration request.
+	 *
+	 * @param  array  $data
+	 * @return \Illuminate\Contracts\Validation\Validator
+	 */
+	protected function validator(array $data)
+	{
+		return Validator::make($data, [
+				'name' =>'required|max:255',
+				'email' =>'required|email|max:255|unique:users',
+				'password' =>'required|confirmed|min:6',
+
+				'gender' =>'required|in:m,f',
+				'age' =>'required|integer|min:18|max:68',
+				'country_id' =>'required',
+				'state' =>'required|max:30',
+				'city' =>'required|max:30',
+				'zip' =>'required|max:30',
+
+				'height' =>'required|max:8',
+				'body_type' =>'required',
+				'eye_color' =>'required',
+				'hair_type' =>'required',
+				'smoking' =>'required|max:25',
+				'drinking' =>'required|max:25',
+				'about_you' =>'max:255',
+				'about_partner' =>'max:255',
+			]);
+	}
+
+	/**
+	 * Create a new user instance after a valid registration.
+	 *
+	 * @param  array  $data
+	 * @return User
+	 */
+	protected function create(array $data)
+	{
+		$user = User::create([
+				'name' => $data['name'],
+				'email' => $data['email'],
+				'password' => bcrypt($data['password']),
+			]);
+
+		return $user;
+	}
+
+	public function register() {
+		return view('user.register');
+	}
+
+	public function postregister(Request $request) {
+		$this->user = Sentinel::register($request->all());
+
+		return $this->user;
+	}
+}
+ <?php namespace App\Http\Controllers\Auth;
+
+Precision: 0
+Recall: 0
+F1 Score: 0

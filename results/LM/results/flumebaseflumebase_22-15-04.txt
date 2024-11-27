@@ -1,0 +1,146 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: flumebase/flumebase
+    Project Description: \n Welcome to FlumeBase!\n\n\n \n WARNING \n \n This software is no longer maintained. The code is \n left available in the hopes that someone finds this \n useful, but no support or future maintenance is planned \n by the original author. You are free to take this code \n and use it as you wish, but no updates will be provided. \n \n \n\nThis system allows continuous and adhoc analysis of streaming event\ndata delivered by Flume.\n\nFlumeBase will easily connect to existing Flume sources and allows\nusers to write SQLbased queries over these streaming data sets.\n\n\n \n DISCLAIMER \n \n FlumeBase is an EXPERIMENTAL system! This is in no way ok \n for production use. Use this AT YOUR OWN RISK. Connecting \n this system to production Flume nodes may result in data \n loss, misconfiguration, or other serious problems. \n \n \n\n\nMore documentation in particular, a user guide explaining how to\nconfigure FlumeBase, and the rtsql language is available in the docs/\ndirectory.\n\nSee the COMPILING.txt file for information on how to compile FlumeBase\nfrom source. FlumeBase is licensed to you under the terms of the\nApache Software License version 2.0. See the LICENSE.txt and\nNOTICE.txt files for more specific information about this license.\n\nThe development home is at this site for the most recent source code, wiki, and other\nresources.\n\n'
+    Existing Dependencies:
+    com.cloudera.flume:flume
+- jline:jline
+- log4j:log4j
+- org.testng:testng
+- org.slf4j:slf4j-api
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <style>
+    #customers {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    #customers td, #customers th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+    #customers tr:hover {background-color: #ddd;}
+    #customers th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+    </style>
+
+    <table id="customers">
+            <thead class="table-dark">
+                <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Subject</th>
+                <th>Message</th>
+                </tr>
+              </thead>
+
+                @foreach ($data as $item)
+              
+             
+             
+             
+            <tbody>
+                  
+               
+                <tr class="table-light">
+                        <td>{{ $item->name }}</td>
+                        <td>{{ $item->email }}</td>
+                        <td>{{ $item->phone }}</td>
+                        <td>{{ $item->subject }}</td>
+                        <td>{{ $item->message }}</td>
+                  </tr>
+
+            </tbody>
+            @endforeach
+        </table>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> #ifndef __DRIVERLIB_ROM_H__
+#define __DRIVERLIB_ROM_H__
+
+//*****************************************************************************
+//
+// Pointers to the main API tables.
+//
+//*****************************************************************************
+#define ROM_APITABLE            ((uint32_t *)0x01000010)
+#define ROM_VERSION             (ROM_APITABLE[0])
+#define ROM_VERSION2            (ROM_APITABLE[1])
+
+//*****************************************************************************
+//
+// Macros for calling ROM functions in the DRIVERLIB API
+//
+//*****************************************************************************
+#define ROM_uDMAErrorStatusGet                                                \
+        ((uint32_t (*)(uint32_t ui32ChannelStructIndex))                      \
+         ROM_APITABLE[1])
+#define ROM_uDMAChannelAssign                                                 \
+        ((void (*)(uint32_t ui32Mapping))                                     \
+         ROM_APITABLE[2])
+#define ROM_uDMAChannelAttributeEnable                                        \
+        ((void (*)(uint32_t ui32ChannelStructIndex,                           \
+                   uint32_t ui32Attributes))                                  \
+         ROM_APITABLE[3])
+#define ROM_uDMAChannelAttributeDisable                                       \
+        ((void (*)(uint32_t ui32ChannelStructIndex,                           \
+                   uint32_t ui32Attributes))                                  \
+         ROM_APITABLE[4])
+#define ROM_uDMAChannelAttributeGet                                           \
+        ((uint32_t (*)(uint32_t ui32ChannelStructIndex))                      \
+         ROM_APITABLE[5])
+#define ROM_uDMAChannelControlSet                                             \
+        ((void (*)(uint32_t ui32ChannelStructIndex,                           \
+                   uint32_t ui32Control))                                     \
+         ROM_APITABLE[6])
+#define ROM_uDMAChannelTransferSet                                            \
+        ((void (*)(uint32_t ui32ChannelStructIndex,                           \
+                   uint32_t ui32Mode,                                         \
+                   void *pvSrcAddr,                                           \
+                   void *pvDstAddr,                                           \
+                   uint32_t ui32TransferSize))                                \
+         ROM_APITABLE[7])
+#define ROM_uDMAChannelScatterGatherSet                                       \
+        ((void (*)(uint32_t ui32ChannelStructIndex,                           \
+                   uint32_t ui32TaskCount,                                    \
+                   void *pvTaskList,                                          \
+                   uint32_t ui32IsPeriphSG))                                  \
+         ROM_APITABLE[8])
+#define ROM_uDMAChannelSizeGet                                                \
+        ((uint32_t (*)(uint32_t ui32ChannelStructIndex))                      \
+         ROM_APITABLE[9])
+#define ROM_uDMAChannelModeGet                
+
+Precision: 0
+Recall: 0
+F1 Score: 0

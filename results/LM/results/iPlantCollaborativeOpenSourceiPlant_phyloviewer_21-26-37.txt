@@ -1,0 +1,112 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: iPlantCollaborativeOpenSource/iPlant_phyloviewer
+    Project Description: phyloviewer\n===========\n\n==INTRODUCTION\nThis is a technical solution to the scientific problem of visualizing phylogenetic relationships. It provides the visualization aspects needed.\n\nThis is alpha code. It worked when we ran it, but no guarantees of any kind are made that it will work for anyone else anywhere.\n\nMore information about iPlant's Open Source policies and current status is available at update to this README is in progress.\n\n\n==LICENSE\nSee the LICENSE file included with this code.\n\n\n==SOURCE\nSource code is available at: clone git://github.com/iPlantCollaborativeOpenSource/iPlantphyloviewer.git\n\nTo install all libraries and build standalone application:\n$ cd iPlantphyloviewer\n$ mvn compile install\n\nTo install libraries that the TR application depends on:\n\n$ cd iPlantphyloviewer/libraries/phyloviewercommon\n$ mvn compile install\n$ cd ../phyloviewergwtclient\n$ mvn compile install\n\n\n==BUILD INFORMATION\nBuild info for Apache Maven is in pom.xml.\n code requires:\n\n Google Web Toolkit GWT 2.1.1\n iPlant phyloparser\n iPlant ViewerEditor Framework\n org.json\n postgres jdbc\n postgis jdbc\n Java 1.6.0\n\n\n==USAGE\nComing...\n\n\n==ISSUES/BUGS/QUESTIONS\nUse the issue tracker available from the GitHub repository at the link listed under SOURCE above. Click Issues to submit a question or report a problem.\n\n\n==CONTRIBUTING\niPlant requires all outside collaborators those not employed by iPlant to sign and submit a Contributor License Agreement. Details as well as answers to Frequently Asked Questions about this agreement are available at steps in the process are still being created. While this message remains, email opensource@iplantcollaborative.org"
+    Existing Dependencies:
+    org.postgis:postgis-jdbc
+- org.iplantc.phyloviewer:phyloviewer-gwt-client
+- org.iplantc.phyloviewer:phyloviewer-common
+- com.google.gwt:gwt-dev
+- com.extjs.gxt:ext-gwt
+- org.iplantc.core:phyloparser
+- org.iplantc.phyloviewer:phyloviewer-server
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     $(function(){
+				var $sublist=$("#nav-sub");
+				$(".nav li").on("click",function(){
+					 var $this = $(this);
+					  if($this.hasClass("on")){
+						 $this.removeClass("on").children("ul").hide();
+					 }else{
+						$this.addClass("on").children("ul").show();
+						
+						$sublist.find(".on").not($this).removeClass("on");
+						
+						$sublist.children("ul").not($this.children("ul").show()).hide();
+						
+					 }
+					 
+					 
+				})
+				$sublist.on("click",".list-group ul li a",function(){
+					var $sublist=$(this).parent().parent().parent().prev();
+					var $this = $(this).parent().parent();
+					
+					if($sublist.hasClass('open')){
+						$sublist.addClass("open").parent().find(".list-group-title").addClass("selected");
+					}else{
+						$sublist.removeClass("open").parent().find(".list-group-title").removeClass("selected");
+					}
+					
+				});
+			})
+
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import { createReducer, createActions } from'reduxsauce';
+import Immutable from'seamless-immutable';
+
+/* ------------- T
+const { Types, Creators } = createActions({
+  setSearch: ['search'],
+  searchRequest: ['search'],
+  searchSuccess: ['search'],
+  searchFailure: [],
+});
+
+const INITIAL_STATE = Immutable({
+  search: '',
+  page: 1,
+  perPage: 20,
+  totalPage: 0,
+  data: [],
+});
+
+/* ------------- Reducers ------------- */
+export const setSearch = (state, { search }) => state.merge({ search });
+export const searchRequest = (state) => state.merge({ loading: true, error: null });
+export const searchSuccess = (state, { data }) =>
+  state.merge({ loading: false, search: '', data, error: null });
+export const searchFailure = (state) =>
+  state.merge({ loading: false, error: `Can't search the product.` });
+
+export const HANDLERS = {
+  [Types.SET_SEARCH]: setSearch,
+  [Types.SEARCH_REQUEST]: searchRequest,
+  [Types.SEARCH_SUCCESS]: searchSuccess,
+  [Types.SEARCH_FAILURE]: searchFailure,
+};
+
+export const reducer = createReducer(INITIAL_STATE, HANDLERS);
+ypes and Action Creators ------------- */
+
+const { SEARCH_PRODUCT } = require('@constants/services').default;
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

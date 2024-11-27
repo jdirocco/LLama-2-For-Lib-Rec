@@ -1,0 +1,185 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: bitcoinj/bitcoinj
+    Project Description: image: Build Status,link= Build Status,link= Status,link= the bitcoinjusers Matrix room, link= Welcome to bitcoinj\n\nThe bitcoinj library is a Java implementation of the Bitcoin protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of Bitcoin Core. It comes with full documentation and some example apps showing how to use it.\n\n Technologies\n\n Java 8 needs Java 8 API or Android 8.0 API, compiles to Java 8 bytecode and Gradle 4.4 for the module\n Java 11 and Gradle 4.4 for , and \n Java 17 and Gradle 7.3 for the JavaFXbased \n for building the project\n Protocol Buffers for use with serialization and hardware communications\n\n Getting started\n\nTo get started, it is best to have the latest JDK and Gradle installed. The HEAD of the branch contains the latest development code and various production releases are provided on feature branches.\n\n Building from the command line\n\nOfficial builds are currently using JDK 17. Our GitHub Actions build and test with JDK 11, 17 and 21.\n\nTo perform a full build including JavaDocs, unit/integration tests, and use JDK 17.\n\n\nIf you are using JDK 17 and Gradle 7.3, the build will automatically include the JavaFXbased module. The outputs are under the directory.\n\nTo perform a full build without unit/integration tests use:\n\n\n Building from an IDE\n\nAlternatively, just import the project using your IDE. has Gradle integration builtin and has a free Community Edition. Simply use and locate the in the root of the cloned project source tree.\n\n Building and Using the Wallet Tool\n\nThe bitcoinj subproject includes a commandline Wallet Tool that can be used to create and manage bitcoinjbased wallets both the HD keychain and SPV blockchain state. Using on Bitcoin's test net is a great way to learn about Bitcoin and bitcoinj.\n\nTo build an executable shell script that runs the commandline Wallet Tool, use:\n\n\nYou can now run the without parameters to get help on its operation:\n\n\nTo create a test net wallet file in , you would use:\n\n\n\nTo sync the newly created wallet in with the test net, you would use:\n\n\nTo dump the state of the wallet in with the test net, you would use:\n\n\nNOTE: These instructions are for macOS/Linux, for Windows use the batch file with the equivalent Windows commandline commands and options.\n\n Building the reference build\n\nOur reference build which is also used for our releases is running within a container to provide good reproducibility.\nBuildah 1.26, Podman 4.1 and Docker with BuildKit are supported. We tested various combinations of host OSes\nDebian, Ubuntu, macOS, WindowsWSL and architectures amd64, arm64. For usage instructions see .\n\n Example applications\n\nThese are found in the module.\n\n Where next?\n\nNow you are ready to the tutorial.\n\n Testing a SNAPSHOT build\n\nBuilding apps with official releases of bitcoinj is covered in the you want to develop or test your app with a build of the latest or branch of bitcoinj follow the dynamicallygenerated instructions for that branch by following the correct link.\n\n branch\n branch\n"
+    Existing Dependencies:
+    net.glxn:qrgen
+- mysql:mysql-connector-java
+- de.jensd:fontawesomefx
+- com.squareup.okhttp3:okhttp
+- com.madgag.spongycastle:core
+- org.easymock:easymock
+- org.slf4j:slf4j-api
+- com.google.code.findbugs:jsr305
+- net.sf.jopt-simple:jopt-simple
+- com.fasterxml.jackson.core:jackson-databind
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <link rel="stylesheet" type="text/css" href="<? echo base_url();?>css/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <link rel="stylesheet" type="text/css" href="<? echo base_url();?>css/base/jquery-ui.css" />
+     <script type="text/javascript" src="<? echo base_url();?>js/jquery.fancybox.js?v=2.1.5"></script>
+    <script type="text/javascript" src="<? echo base_url();?>js/jquery-ui.min.js"></script>
+    <style>
+
+	.btn-group.special {
+    position:fixed;
+    z-index:25;
+    top:0px;
+    right:10px;
+	}
+	
+	.btn-group.special.btn {
+    border-radius: 0;
+}
+
+#my_camera{
+    width:320px;
+    height:240px;
+    border: 1px solid black;
+	}
+   
+    </style>
+    
+    <script>
+    var is_logged_in = "<? echo $this->session->userdata('is_logged_in')?>";
+    var username = '<? echo $this->session->userdata('username'); ?>';
+
+    $(function() {
+        $( "button.fancybox_buttons" ).fancybox();   
+      
+        
+    });
+    
+    function save_snap(){
+    	 var base_url = '<? echo base_url();?>';
+
+    	 var form_data = $('#myForm').serialize();
+
+         $.ajax({
+            type:     "POST",
+            url:      base_url+"index.php?/camera/save_photo",
+            data:     form_data,
+            success:  function(msg){ 	
+                $.fancybox( "Your Photo has been saved!" );
+
+				$.ajax({
+        		    type:     "GET",
+        		    url:      base_url+"index.php?/camera/getphotos",
+        		});
+            }
+        });
+    	
+    }
+
+    function getphotos(){
+        var base_url = '<? echo base_url();?>';
+        var username = '<? echo $this->session->userdata('username')?>';
+        
+        $.ajax({
+            type:     "GET",
+            url:      base_url+"index.php?/camera/getphotos",
+            success:  function(msg){ 	
+
+                $.fancybox(msg);               
+            }
+        });
+        
+    }
+   
+    </script>
+
+
+    <div class="btn-group special">
+    <button class="fancybox_buttons" type="button" onClick="$.fancybox('<img id="photo" src="<? echo base_url();?>assets/imgs/photo.jpg" />'); getphotos();">View Photos</button>
+     <button class="fancybox_buttons" type="button" onClick="$.fancybox('<div style="height:250px;"><button id="save" class="fancybox_buttons" type="button" onClick="save_snap()">Capture Snap</button><div class="photo" id="photodiv"><div id
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s = [
+                ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+                ('name', self.gf('django.db.models.fields.CharField')(unique=True, max_length=255)),
+            ],
+            options={
+            },
+            bases=(models.Model,),
+        ),
+    ]
+ # -*- coding: utf-8 -*-
+from south.utils import datetime_utils as datetime
+from south.db import db
+from south.v2 import SchemaMigration
+from django.db import models
+
+
+class Migration(SchemaMigration):
+
+    def forwards(self, orm):
+        # Deleting model 'TestRun'
+        db.delete_table(u'main_testrun')
+
+        # Deleting model 'TestRunStep'
+        db.delete_table(u'main_testrunstep')
+
+        # Deleting model 'TestRunStepResult'
+        db.delete_table(u'main_testrunstepresult')
+
+        # Deleting model 'TestStepResult'
+        db.delete_table(u'main_teststepresult')
+
+        # Deleting model 'TestSuite'
+        db.delete_table(u'main_testsuite')
+
+        # Deleting model 'TestCase'
+        db.delete_table(u'main_testcase')
+
+        # Deleting model 'TestCaseStatus'
+        db.delete_table(u'main_testcasestatus')
+
+
+    def backwards(self, orm):
+        # Adding model 'TestRun'
+        db.create_table(u'main_testrun', (
+            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('name', self.gf('django.db.models.fields.CharField')(unique=True, max_length=255)),
+            ('result', self.gf('django.db.models.fields.CharField')(unique=True, max_length=255, blank=True)),
+            ('created_date', self.gf('django.db.models.fields.DateField')()),
+        ))
+        db.send_create_signal(u'main', ['TestRun'])
+
+        # Adding model 'TestRunStep'
+        db.create_table(u'main_testrunstep', (
+            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('test_run', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['main.TestRun'])),
+            ('test_suite', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['main.TestSuite'])),
+        ))
+        db.send_create_signal(u'main', ['TestRunStep'])
+
+        # Adding model 'TestRunStepResult'
+        db.create_table(u'main_testrunstepresult', (
+            ('id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('test_run_step', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['main.TestRunStep'])),
+            ('status
+
+Precision: 0
+Recall: 0
+F1 Score: 0

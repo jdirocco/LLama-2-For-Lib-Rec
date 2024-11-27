@@ -1,0 +1,122 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: jCoderZ/fawkez
+    Project Description: jCoderZ.org\r\n \r\n / | | | | /\r\n | | / A classic is something that everybody\r\n wants to have read and nobody has read.''\r\n Mark Twain\r\n\r\nR E A D M E\r\n===========\r\n\r\n\r\nThis file gives a quick introduction into the fawkeZ project setup.\r\n\r\nSetup Eclipse Configuration\r\n\r\n$ mvn eclipse:clean eclipse:eclipse DdownloadSources=true\r\n\r\nChange to the fawkezparent directory and run the following Maven command\r\n\r\n$ mvn install\r\n\r\n\r\n"
+    Existing Dependencies:
+    xalan:xalan
+- commons-cli:commons-cli
+- xml-resolver:xml-resolver
+- org.apache.ant:ant
+- xalan:serializer
+- org.jcoderz.fawkez:fawkez-bootstrap
+- org.apache.maven:maven-plugin-api
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            Dashboard
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li class="active">Edit</li>
+        </ol>
+    </section>
+    <section class="content">
+    <?php if($this->session->flashdata('msg')):?>
+        <div class="alert alert-success">
+            <strong><?php echo $this->session->flashdata('msg');?></strong>
+        </div>
+        <?php endif;?>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-success">
+                    <div class="box-header with-border"><?php echo $page_title;?></div>
+                    <div class="box-body">
+                        <?php validation_errors();?>
+                        <?php // echo $mapjs;?>
+                        <!-- form -->
+                        <?php echo form_open('dashboardcontroller/update/'.$id, array('class' =>'form-horizontal'));?>
+                            <input type="hidden" name="id" value="<?php echo $id;?>"  class="form-control">
+                            <?php echo $form;?>
+                        <?php echo form_close();?>
+                        <!--./form -->
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>.
+
+```bash
+$ git commit <file_name>
+```
+
+## 6. 변경사항을 생성 한 후 `github` 에 업데이트 올리기
+
+이 명령어는 올려진 것을 받은 파트너들이 반영할 수 있게 업로드 해 줍니다.
+
+### 업로드 예시
+
+```bash
+$ git push origin master
+```
+
+이렇게 하고 `commit` 했던 내용을 `master` 와 `main`에 업로드 해줍니다
+
+이 때 주의 해야할 부분은 이름입니다. `master` 이곳에 관련된 내용을 추가하거나 수정할 것이다 라고 명시해 주고, `main`이라는 것에게는 `main` 이라는 이름으로 업로드하고, `branch` 이름으로 `branch1` 을 입력했다면 이 `branch1`을 이곳에 업로드 해줍니다.
+
+### 업로드 예시2 (branch 브랜치 커밋)
+
+```bash
+$ git push origin <branch_name>
+```
+
+위에서는 올린 내용은 `master`, `main` 으로 올리겠다 라고 명시 한 것이지만, 아래의 형식을 보게되면
+
+```bash
+$ git push origin <branch_name>
+```
+
+와 같은 경우는 그 branch 이름을 이곳에 올리겠다는 뜻이 됩니다. 이렇게 하면 막상 확인해보게되면 또다시 브랜치 옆에 작업한 사람의 이모지가 표시 되어 브랜치가 만들어 졌음을 확인 할 수 있습니다.
+
+> - 이 때 만약에 브랜치와 메인이 불일치가 있는 경우가 있다면 `master` 와 `main` 은 반드시 서로 업
+
+Precision: 0
+Recall: 0
+F1 Score: 0

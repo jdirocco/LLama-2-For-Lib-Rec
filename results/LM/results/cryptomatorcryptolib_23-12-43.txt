@@ -1,0 +1,164 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: cryptomator/cryptolib
+    Project Description: \n\n\n\n\n\n\n Cryptomator Crypto Library\n\nThis library contains all cryptographic functions that are used by Cryptomator. The purpose of this project is to provide a separate lightweight library with its own release cycle that can be used in other projects, too.\n\n Audits\n\n \n\n| Finding | Comment |\n|||\n| 1u122001 | The now revoked GPG key has been used exclusively for the Maven repositories, was designed for signing only and was protected by a 30character generated password alphabet size: 96 chars. It was iterated and salted SHA1 with 20971520 iterations, making even offline attacks very unattractive. Apart from that, this finding has no influence on the Tresor apps. This was not known to Cure53 at the time of reporting. |\n| 1u122002 | This issue is related to . |\n\n License\n\nThis project is duallicensed under the AGPLv3 for FOSS projects as well as a commercial license derived from the LGPL for independent software vendors and resellers. If you want to use this library in applications that are not licensed under the AGPL, feel free to contact our .\n\n\n\n1 The Cure53 pentesting was performed during the development of the apps for 1&1 Mail & Media GmbH.\n'
+    Existing Dependencies:
+    de.bechte.junit:junit-hierarchicalcontextrunner
+- org.cryptomator:siv-mode
+- org.slf4j:slf4j-simple
+- org.slf4j:slf4j-api
+- com.google.code.gson:gson
+- org.hamcrest:hamcrest-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+
+    @if($data == '')
+    <input type="hidden" name="_method" value="post" />
+    
+    <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+
+    <div class="col-md-12">
+        {!! Form::label('name', 'Enter Name')!!}
+        {!! Form::text('name', null,['class' => 'form-control'])!!}
+    </div>
+    <div class="col-md-12">
+        {!! Form::label('email', 'E-mail')!!}
+        {!! Form::text('email', null,['class' => 'form-control'])!!}
+    </div>
+    <div class="col-md-12">
+        {!! Form::label('contact', 'Contact No')!!}
+        {!! Form::text('contact', null,['class' => 'form-control'])!!}
+    </div>
+    <div class="col-md-12">
+        {!! Form::label('gender', 'Gender')!!}
+        <select name='gender' id="" class="form-control">
+            <option value="">--select--</option>
+            <option value="male">male</option>
+            <option value="female">female</option>
+            <option value="other">other</option>
+            
+        </select>
+    </div>
+    <div class="col-md-12">
+        {!! Form::label('role', 'Select role')!!}
+        <select name='role' id="" class="form-control">
+            <option value="">--select--</option>
+            <option value="admin">admin</option>
+            <option value="user">user</option>
+            <option value="manager">manager</option>
+            
+        </select>
+    </div>
+    <div class="col-md-12">
+        {!! Form::label('password', 'Password')!!}
+        {!! Form::text('password', null,['class' => 'form-control'])!!}
+    </div>
+    <div class="col-md-12">
+        {!! Form::label('status', 'Status')!!}
+        <select name='status' id="" class="form-control">
+            <option value="">--select--</option>
+            <option value="0">Active</option>
+            <option value="1">Inactive</option>
+            
+        </select>
+    </div>
+    <div class="col-md-12">
+        {!! Form::label('profile', 'Profile Image')!!}
+        {!! Form::file('profile', ['class' => 'form-control'])!!}
+    </div>
+    <div>
+        {!! Form::submit('Save', ['class' => 'btn btn-primary form-control closebtn'])!!}
+    </div>
+    @else
+    
+    <div>
+        <input type="text" style="display:none">
+        <input type="password" style="display:none">
+        <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+    </div>
+
+    <div class="col-md-12">
+        {!! Form::label('name', 'Enter Name')!!}
+        {!! Form::text('name', $data->
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e(
+        '[name].min.js',
+        (env.NODE_ENV === 'production'? '.min' : '') + '.js'
+    );
+    config.output.libraryTarget('umd');
+    config.optimization.minimizer([
+        new TerserPlugin({
+            cache: true,
+            parallel: true
+        })
+    ]);
+    webpackConfig = config;
+}
+
+module.exports = webpackConfig;
+ /**
+ * @file 基础配置
+ * @author mengke01(kekee000@gmail.com)
+ */
+
+'use strict';
+
+const path = require('path');
+const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
+const {argv} = require('yargs');
+
+const env = {
+    NODE_ENV: process.env.NODE_ENV || 'production'
+};
+
+let webpackConfig = {};
+
+if (env.NODE_ENV === 'production') {
+    // 生产模式
+    webpackConfig = require(path.resolve('./config/build.config'));
+}
+else {
+    // 开发模式
+    const {resolve, alias, entry} = require(path.resolve(argv.env));
+    let config = {};
+    config.entry = entry;
+    config.resolve = resolve;
+    config.resolveLoader = resolve;
+    config.module = alias || {};
+    config.mode = 'production';
+    config.context = __dirname;
+    config.target = 'node';
+    config.output = {};
+    // config.output.devtoolModuleFilenameTemplate
+    config.output.path = path.resolve('./dist');
+    config.output.publicPath = argv.publicPath || '';
+    config.output.filename = path.resolv
+
+Precision: 0
+Recall: 0
+F1 Score: 0

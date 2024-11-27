@@ -1,0 +1,134 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: alexholmes/hadoop-book
+    Project Description: Source code for book "Hadoop in Practice", Manning Publishing\n=============================================================\n\n Overview\n\nThis repo contains the code, scripts and data files that are referenced\nfrom the book , published by Manning.\n\n Issues\n\nIf you hit any compilation or execution problems please create an issue\nand I\'ll look into it as soon as I can.\n\n Hadoop Version\n\nAll the code has been exercised against CDH3u2, which for the purposes\nof the code is the same has Hadoop 0.20.x. There are a couple of places\nwhere I utilize some features in Pig 0.9.1, which won\'t work with CDH3u1\nwhich uses 0.8.1.\n\nI\'ve recently run some basic MapReduce jobs against CDH4, and I also updated\nthe examples so that they would run against Hadoop 2. Please let me know\n or\nin a if you encounter any issues.\n\n\n Building and running\n\n Download from github\n\ngit clone git://github.com/alexholmes/hadoopbook.git\n\n\n Build\n\ncd hadoopbook\nmvn package\n\n\n Runtime Dependencies\n\nMany of the examples use Snappy and LZOP compression. Therefore\nyou may get runtime errors if you don\'t have them installed and configured\nin your cluster.\n\nSnappy can be installed on CDH by following the instructions at\n install LZOP follow the instructions at Run an example\n\n copy the input files into HDFS\nhadoop fs mkdir /tmp\nhadoop fs put testdata/ch1/ /tmp/\n\n replace the path below with the location of your Hadoop installation\n this isn\'t required if you are running CDH3\nexport HADOOPHOME=/usr/local/hadoop\n\n run the mapreduce job\nbin/run.sh com.manning.hip.ch1.InvertedIndexMapReduce /tmp/file1.txt /tmp/file2.txt output\n\n'
+    Existing Dependencies:
+    cascading:cascading-core
+- commons-io:commons-io
+- com.google.code.findbugs:jsr305
+- org.apache.mrunit:mrunit
+- org.apache.hadoop:hadoop-test
+- com.google.protobuf:protobuf-java
+- org.apache.pig:pig
+- edu.uci.ics.crawler4j:crawler4j
+- com.twitter.elephantbird:elephant-bird
+- org.apache.hadoop.hive:hive-metastore
+- com.google.guava:guava
+- org.apache.avro:avro-mapred
+- org.apache.crunch:crunch-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 13 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- Page Header -->
+     <section class="page-header">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-12">
+                     <ul class="breadcrumb">
+                         <li><a href="./">Home</a></li>
+                         <li>About Us</li>
+                     </ul>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-12">
+                     <h1>Aboout Us</h1>
+                 </div>
+             </div>
+         </div>
+     </section>
+     <section class="about">
+
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-6">
+                     <h2>We Are <strong>Fitness</strong><strong>Zone</strong></h2>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque quam, maximus ut
+                         tincidunt
+                         vitae, sagittis id libero. Vivamus ultrices pulvinar libero. Nulla ullamcorper ipsum vel
+                         nibh condimentum
+                         lacinia. Ut sollicitudin luctus orci, sed laoreet neque imperdiet et. Morbi a semper metus.
+                     </p>
+                 </div>
+                 <div class="col-md-6">
+                     <div class="video">
+                         <iframe src="https://player.vimeo.com/video/84302890?color=ffffff&title=0&byline=0&portrait=0"
+                             allowfullscreen=""></iframe>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+
+
+     <section class="about_section">
+         <div class="container">
+             <div class="row">
+                 <div class="col-sm-8 offset-sm-2 text-center">
+                     <h2 class="h2">We Are <strong>Fitness</strong><strong>Zone</strong>
+                     </h2>
+                     <p>We are a team of fitness experts who are looking forward to work with you.
+                     </p>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-lg-6 wow fadeInLeft">
+                     <div class="about_content">
+                         <div class="img_section">
+                             <img src="assets/img/about/about-us.jpg" alt="" class="img-fluid">
+                         </div>
+                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo
+                             incididunt labore et dolore. Lorem
+                             ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo
+                             incididunt labore et dolore. Lorem ipsum dolor sit amet.</p>
+                         <div class="readmore_button">
+                             <a href="about.html" class="readmore">Read More</a>
+                         </div>
+                     </div>
+                 </div
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 13 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e, String message) {
+        super(message);
+        this.code = code;
+    }
+
+    public ErrorCode getCode() {
+        return code;
+    }
+}
+ package com.github.vitrocket.mybatis;
+
+/**
+ * @author Vit Rocket on 22.11.2017.
+ * @version 1.0
+ * @since on 22.11.2017
+ */
+public class ApplicationException extends Exception {
+    private final ErrorCode code;
+
+    public ApplicationException(ErrorCode cod
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,147 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: eccentricdevotion/TARDIS
+    Project Description: TARDIS\n\nTARDIS is a Spigot / Paper plugin that allows you to create a TARDIS that lets you time travel teleport to random\nlocations. It adds a Whovian twist to the typical /sethome and /home commands.\n\nAs a player, you can:\n\n Create a TARDIS that is bigger on the inside &mdash; choose from 30 different consoles!\n Time travel to random locations, saved destinations, structures, caves, biomes and players.\n Use the Chameleon Circuit to change the TARDIS exterior &mdash; over 90 presets, plus you can make your own.\n Grow rooms in your TARDIS &mdash; there are 40 to choose from and you can create your own.\n Take companions with you when you time travel.\n Collect Artron Energy to power your TARDIS.\n Use a sonic screwdriver, vortex manipulator, and many other Doctor Who related items.\n Interact with 20 custom monsters such as Weeping Angels, Cybermen, Sontarans and Sea Devils.\n Visit the planets Gallifrey, Skaro and Siluria and find custom structures to raid.\n And so much more...\n\nPlugin documentation can be found here:\n\n\n\n\nJenkins CI builds can be found here:\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n'
+    Existing Dependencies:
+    net.citizensnpcs:citizensapi
+- me.eccentric_nz.tardisweepingangels:TARDISWeepingAngels
+- org.spigotmc:spigot-api
+- com.palmergames.bukkit:Towny
+- TerrainControl:TerrainControl
+- com.wimbli.WorldBorder:WorldBorder
+- com.onarandombox.multiverseinventories:Multiverse-Inventories
+- com.comphenix.protocol:ProtocolLib-API
+- org.yi.acru.bukkit:lockette
+- me.crafter.mc:lockettepro
+- me.eccentric_nz.tardischunkgenerator:TARDISChunkGenerator
+- multiworld:MultiWorld
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb_area bg-img bg-overlay" style="background-image: url(../assets/user/img/bg-img/breadcumb-1.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="page-title text-center">
+                        <h2>Kontak Kami</h2>
+                        <h4>Masukan dan Saran</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+   
+
+    <!-- ##### Google Maps ##### -->
+    <div class="google-maps">
+        <?php 
+            foreach ($pengaturan->result() as $a) {
+       ?>
+            <iframe src="<?php echo $a->maps;?>" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        
+        <?php }?>
+    </div>
+  
+    <!-- ##### Contact Area Start ##### -->
+    <section class="contact-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="contact-form">
+                        <?php echo $this->session->flashdata('sukses')?>
+                        <h5>Massage Us...</h5>
+                        <form action="<?php echo base_url('user/user_pesan')?>" method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="nama" class="form-control" id="name" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="pesan" id="message" placeholder="Mesaj..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                        <button type="submit" class="btn btn-primary">Gönder</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="contact-info">
+                        <h5>Kontak Kami...</h5>
+                        <ul>
+                            <li>
+                                <span>Alamat</span>
+                                <?php 
+                                    foreach ($pengaturan->result() as $a) {
+                               ?>
+                                <p><?php echo $a->al
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+  const { title, subtitle} = props;
+
+  return (
+    <Styles>
+      <h2>{title}</h2>
+      <h4>{subtitle}</h4>
+    </Styles>
+  )
+}
+
+const Styles = styled.div`
+  width: 100%;
+  text-align: center;
+  h2 {
+    font-size: ${styles.fontSize.headingLarge};
+    color: ${styles.colors.mainGrey};
+  }
+  h4 {
+    font-size: 0.8rem;
+    font-weight: normal;
+    letter-spacing: 1.63px;
+    color: ${styles.colors.mainGrey};
+    font-style: italic;
+  }
+`;
+
+export default Title; import React from'react';
+import styled from'styled-components';
+import * as styles from '../styles';
+
+const Title = (props) => {
+
+Precision: 0
+Recall: 0
+F1 Score: 0

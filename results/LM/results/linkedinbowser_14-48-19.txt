@@ -1,0 +1,114 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: linkedin/bowser
+    Project Description: \xf0\x9f\x9a\xa8 UNMAINTAINED \xf0\x9f\x9a\xa8 \n\nThis project is no longer used by LinkedIn and is currently unmaintained.\n\nIf you would like to maintain this project, please send an email to\noss@linkedin.com.\n'
+    Existing Dependencies:
+    commons-cli:commons-cli
+- commons-logging:commons-logging
+- org.slf4j:slf4j-api
+- com.google.collections:google-collections
+- org.codehaus.jsr166-mirror:extra166y
+- commons-lang:commons-lang
+- org.slf4j:slf4j-log4j13
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div  class="main-content">
+        <div class="page-content">
+            <div class="container-fluid">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box  d-flex align-items-center justify-content-between">
+                            <h4 class="mb-0 font-size-18">Pricing Table </h4>
+
+							<div class="page-title-right form-row">                         
+                                <div class="col-md-4 form-group ">
+                                    <div class="dropdown">
+                                        <a  href="<?php echo base_url('Pricing/add');?>" class="btn btn-outline-primary  btn-block">Create New</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <div class="dropdown">
+                                        <a href="javascript;"  data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false" class="btn btn-success  btn-block">Export <i class="fas fa-file-import"></i></a>
+ 							        	<div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                                         <a  class="dropdown-item" onclick="ExportCsv()">Excel</a>
+                                        <a  class="dropdown-item" onclick="ExportPdf()">Pdf</a>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 form-group">
+                                	<button type="submit" class="btn btn-danger btn-xs btn btn-block" data-toggle="modal" data-target="#myModal" onclick="RemovePricing()"><i class="fa fa-times "></i> Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">     
+                                <div   class="table-responsive">
+                                    <table  class="table  mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                	<div class="custom-control custom-checkbox">
+                                                         <input type="checkbox" id="pricing" name="pricing[]" value="" class="custom-control-input" onchange='Checkall(this)'> 
+                                                         <label class="custom-control-label" for="pricing">&nbsp;</label>
+                                                   </div>
+                                                 </th>
+                                                <?php  $count=1;foreach($pricing_data as $prcng_data ){  ?>											
+                                                <th class="text-center"><?php echo $count;?></th>
+                                                <th class="text-center"><?php echo $prcng_data
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> # -*- coding: utf-8 -*-
+# Generated by Django 1.10.8 on 2020-09-29 03:07
+from __future__ import unic   ('wildlifecompliance', '0472_sanctionoutcomedetail_licence_document'),
+    ]
+
+    operations = [
+        migrations.AlterUniqueTogether(
+            name='applicationstandardcondition',
+            unique_together=set([('application_type','standard_condition')]),
+        ),
+    ]
+ode_literals
+
+from django.db import migrations, models
+import django.db.models.deletion
+
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+     
+
+Precision: 0
+Recall: 0
+F1 Score: 0

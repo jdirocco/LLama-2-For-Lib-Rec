@@ -1,0 +1,171 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: xtructure/xnet-public
+    Project Description: XNet is a suite of Java software tools developed for creating discrete event simulations and running evolutionary algorithms. While these tools are designed to work well together, they are split into distinct packages so that they may also be used independently. The two main packages are:\n\n xsim\nA discrete event simulation library. Simulations are modeled as a set of Components that pass state to one another and update themselves on command according to the phases of a defined Clock.\n\n xevolution\nAn evolutionary algorithm library. Evolution is modeled as a set of Populations made up of individual Genomes that are transformed, evaluated, and culled from one generation to the next.\n\nOther xnet packages either provide supporting functionality or specialized extensions which are useful in particular fields. For instance, there is an xart package that provides an implementation of an ART3 network for use with xsim, and an xneat package that provides an implementation of the NEAT evolutionary algorithm for use with xevolution. The xbatch package permits xsim simulations to be run in batches, useful for evaluating the simulation performance of phenotypes for fitness purposes during evolution.\n'
+    Existing Dependencies:
+    com.xtructure.xnet.xevolution:xevolution
+- org.slf4j:slf4j-nop
+- jgraph:jgraph
+- org.testng:testng
+- commons-lang:commons-lang
+- javolution:javolution
+- org.mongodb:mongo-java-driver
+- commons-cli:commons-cli
+- com.googlecode.json-simple:json-simple
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<div id = "content2" class="col-md-10 offset-md-2"> 
+    <div class="text-center">
+        <h1>Welcome to the Admin page!</h1>
+    </div>
+
+    <div class="container text-center">
+
+    <h3>Users:</h3>
+    <div class="container">
+        <?php 
+                if(empty($users[0]->user_id)){
+                    echo '<p>There are currently no users</p>';
+                }
+                else {
+                foreach ($users as $user) :?>
+                
+                <div class="row border rounded" style="min-width:300px;max-width:300px;min-height: 25px;max-height: 25px;margin-top:1rem;margin-bottom:1rem"> 
+                    <h4 style="display: inline-block;padding: 0.75rem"><?php echo 'User ID: '.$user->user_id;?></h4>
+                    <p style="padding: 0.75rem">Username: <?php echo $user->username;?></p>
+                    <p style="padding: 0.75rem"><b>User Type: </b> <?php echo $user->user_type;?></p>
+                    <p style="padding: 0.75rem"><b>Name: </b><?php echo $user->firstname.' '.$user->lastname;?></p>
+                    <p style="padding: 0.75rem"><b>Email: </b><?php echo $user->email;?></p>
+                    <?php if(empty($user->phone)) {
+                        echo '<p>No phone number registered</p>';
+                    }
+                    else {
+                        echo '<p>User number: '.$user->phone;
+                    }?>
+                    <br>
+                    <?php if(!empty($user->description)) {
+                        echo '<p>Description: '.$user->description. '</p>';
+                    }
+                    else {
+                        echo 'No description registered.';
+                    }?>
+                    <h6 style="margin-bottom: 25px;display: inline-block;"> <b>Address:</b> </h6> 
+                    <p style="padding: 0.75rem;display: inline-block;"> <?php echo $user->address;?></p> 
+                    <p style="padding: 0.75rem;display: inline-block;"> <?php echo $user->province;?></p> 
+                    <p style="padding: 0.75rem;display: inline-block;"> <?php echo $user->postal;?></p> 
+                    <p style="padding: 0.75rem;display: inline-block;"> <?php echo $user->country;?></p>
+                    <a class="btn btn-danger" href="<?php echo site_url('AdminController/delete_user/'.$user->user_id);?>" onclick="return confirm('Are you sure you want to delete this user?')">Delete User</a>
+                    <a class="btn btn-warning" href="<?php echo site_url('AdminController/edit_user/'.$user->user_id);?>">Edit User</a>
+                    
+                </div
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.google.common.io;
+
+import com.google.common.base.Preconditions;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.Iterator;
+
+public class ByteStreams extends CountingOutputStream {
+    ByteStreams() {
+    }
+
+    private static final byte[] toByteArray(ByteSource byteSource) throws IOException {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        copy(byteSource.openBufferedStream(), byteArrayOutputStream);
+        return byteArrayOutputStream.toByteArray();
+    }
+
+    private static final long copy(ByteSource source, OutputStream output) throws IOException {
+        Preconditions.checkNotNull(source, "source");
+        Preconditions.checkNotNull(output, "output");
+        return source.openBufferedStream().copyTo(output);
+    }
+
+    private static final long copy(ByteSource sour   copy(sourceArray[i], sink);
+        }
+        return sum;
+    }
+}
+ce, ByteSink sink) throws IOException {
+        Preconditions.checkNotNull(source, "source");
+        Preconditions.checkNotNull(sink, "sink");
+        boolean isOpen = false;
+        try {
+            long count = 0;
+            isOpen = true;
+            InputSupplier<? extends InputStream> byteInputSupplier = ((ByteSource) Preconditions.checkNotNull(ByteSource.concat(source, (ByteSource[]) null), "source")).openStreamSupplier();
+            OutputStream byteOutput;
+            Iterator it = byteInputSupplier;
+            if (sink instanceof ByteSink) {
+                byteOutput = ((ByteSink) sink).openStream();
+            } else if (sink instanceof OutputSupplier) {
+                byteOutput = ((OutputSupplier) sink).getOutput();
+            } else if (sink instanceof ByteSink.AsCharSink) {
+                byteOutput = new OutputSupplier() {
+                    public OutputStream getOutput() {
+                        return ((ByteSink.AsCharSink) ByteStreams.this.this$0).openStream();
+                    }
+                }.getOutput();
+            } else {
+                throw new ClassCastException(sink.getClass().getName() + " must implement one of " + "ByteSink, OutputSupplier, ByteSink.AsCharSink");
+            }
+            InputStream input = (InputStream) it.next();
+            try {
+                count = ByteStreams.copy(input, byteOutput);
+            } finally {
+                input.close();
+            }
+            return count;
+        } catch (Throwable th) {
+            if (isOpen) {
+                sink.close();
+            }
+        }
+    }
+
+    public static byte[] toByteArray(InputStream input) throws IOException {
+        return copy(new SourceSupplier() {
+            public InputStream openStream() throws IOException {
+                return Preconditions.checkNotNull(input, "input");
+            }
+        });
+    }
+
+    public static long copy(InputStream from, OutputStream to) throws IOException {
+        if (from == null || to == null) {
+            return 0;
+        }
+        return new byte[]{toCopy(from, to)}[0];
+    }
+
+    public static long copy(InputStream from, ByteProcessor processor) throws IOException {
+       
+
+Precision: 0
+Recall: 0
+F1 Score: 0

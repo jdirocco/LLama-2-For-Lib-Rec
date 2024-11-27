@@ -1,0 +1,178 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: eclipse/tycho
+    Project Description: \n=============\n\n \n\nTycho is a manifestfirst way to build\n\n Eclipse plugins/OSGi bundles\n Features\n Update sites/p2 repositories\n RCP applications\n \nwith Maven.\n\n\n \xf0\x9f\x91\x94 Eclipse project entry: \xf0\x9f\x97\x92\xef\xb8\x8f Documentation:\n previously outdatedcontent please help to migrate!\n \xf0\x9f\x93\xa2 Release notes: \n \xf0\x9f\xaa\xb2 Bug Tracker\n New Legacy \xe2\x8c\xa8\xef\xb8\x8f How to Contribute and latest snapshots: \n \xf0\x9f\x92\xac Discussion channels\n Usage assistance Development Getting support\n\nJust get in contact with us through the and share your or report .\n\nPlease bear in mind that this is a community project, and not a product you contracted support for and as a result, some contributors may or may not look at your support requests on demand and if you do not provide the fix/implementation yourself the issue might even never get fixed.\n\nIf you require dedicated help with Tycho, want to make sure a bugfix or feature is handled with priority, the following companies offers commercial support for Tycho \n \n\n\n Support Tycho \n\nIn general, if Tycho is key technology for your Organization, you can help with the following things:\n\n Help testing\nTest snapshots of Tycho early and often so that regressions are found early before we start the release process, this gives faster release and maybe even more often releases if we are certain that snapshots are productionready.\n\n Donate some time\nConsider donate some developer time to improve code e.g. fixing bugs, enhancing documentation, help with review of open PRs, , or to cover your important features.\n\n Sponsor individual contributors\nIf you want to help with development of Tycho itself but can\'t afford to do it by yourself, you can sponsor some of the contributors of Tycho directly:\n\n A sample of his recent work can be seen .\n\n Support us with processing power\nTycho has a very large userbase and thus we use exhaustive testsuites to ensure everything works well. This comes at a cost of also using a lot of processing power.\n\nThe following Organizations support Tycho getting processing power for their builds:\n host our CI Infrastructure, become a friend of Eclipse and support the Eclipse Foundation in general\n sponsors a resource pack with 2 CPU / 8 GB RAM\n sponsors two resource packs with 2 CPU / 8 GB RAM each\n sponsors a resource pack with 2 CPU / 8 GB RAM\n sponsors a resource pack with 2 CPU / 8 GB RAM\n\n\nIf your Organizations is an you can help us by to speed up builds. Organizations can check how many Resource Packs they have left for project sponsoring on the .\n'
+    Existing Dependencies:
+    org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.codehaus.plexus:plexus-component-annotations
+- org.codehaus.plexus:plexus-container-default
+- org.eclipse.tycho:tycho-testing-harness
+- org.apache.maven:maven-core
+- org.eclipse.tycho:org.eclipse.jdt.compiler.apt
+- org.codehaus.plexus:plexus-utils
+- org.eclipse.tycho:org.eclipse.osgi
+- org.eclipse.tycho:tycho-core
+- org.apache.commons:commons-exec
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link href="<?php echo base_url().ASSETS;?>css/jquery-ui.css" rel="stylesheet">
+    <link href="<?php echo base_url().ASSETS;?>css/jquery.dataTables.min.css" rel="stylesheet">
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <style scope="scope">
+       .red {
+             background-color: red!important;
+             color: #ffffff!important;
+         }
+        .green {
+             background-color: green!important;
+             color: #ffffff!important;
+         }
+        .orange {
+             background-color: orange!important;
+             color: #ffffff!important;
+         }
+        .grey {
+             background-color: grey!important;
+         }
+         
+        .table > tbody > tr > td,.table > tbody > tr > th,.table > tfoot > tr > td,.table > tfoot > tr > th,.table > thead > tr > td,.table > thead > tr > th {
+            padding:8px 3px!important;
+         }
+
+        .table {
+            border-collapse: collapse;
+            border-radius: 6px;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            -moz-box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+            -webkit-box-shadow: 0px 0px 1px rgba(255,255,255,1);
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+         }
+
+        .table > thead > tr > th {
+            border-bottom: 2px solid rgba(0, 0, 0, 0.075);
+         }
+
+        .table > thead > tr > th,
+        .table > tfoot > tr > th {
+            border-top: 2px solid rgba(0, 0, 0, 0.075);
+         }
+
+        .table > tbody > tr > td,
+        .table > tbody > tr > th,
+        .table > tfoot > tr > td,
+        .table > tfoot > tr > th,
+        .table > thead > tr > td,
+        .table > thead > tr > th {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+         }
+
+
+
+        .table > tbody > tr > td {
+            border-top: 1px solid rgba(150, 150, 150, 0.15);
+            line-height: 1.42857143;
+            padding: 8px 3px!important;
+            vertical-align: top;
+         }
+       .table-striped tbody > tr > td,.table-striped tbody > tr > th {
+         border-color: #e6e6e6;
+    }
+    th{
+        text-align: center;
+    }
+    
+</style>
+<?php
+
+$today = date('Y-m-d');  
+$first_
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}
+ package com.jailmango.exercise.utils.string;
+
+/**
+ * Student
+ *
+ * @author jailmango
+ * @CreateDate 2019-08-27
+ * @see com.jailmango.exercise.utils.string
+ * @since R9.0
+ */
+public class Student {
+
+    /**
+     * name
+     */
+    private String name;
+
+    /**
+     * age
+     */
+    private Integer age;
+
+    public Student(String name, Integer age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public Student() {
+        super();
+    }
+
+    public String getName(String name) {
+        return nam
+
+Precision: 0
+Recall: 0
+F1 Score: 0

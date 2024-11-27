@@ -1,0 +1,160 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: vert-x3/vertx-mysql-postgresql-client
+    Project Description: = Vert.x MySQL PostgreSQL client\n\n== Deprecated\n\nWARNING: This client is deprecated, use the SQL Client instead.\n\nThere are two types of MySQL/PostgreSQLclients:\n\n Soon to be legacy Scala based version\n Soon to be may mainline Kotlin based version\n\nScala based version lives in link:/vertxmysqlpostgresqlclientscala/README.adocvertxmysqlpostgresqlclientscala.\n\nNew Kotlin based version lives in link:/vertxmysqlpostgresqlclientjasync/README.adocvertxmysqlpostgresqlclientjasync.\n'
+    Existing Dependencies:
+    io.vertx:vertx-rx-java
+- io.vertx:vertx-docgen
+- io.vertx:vertx-lang-kotlin
+- io.vertx:vertx-dependencies
+- io.vertx:vertx-codetrans
+- org.slf4j:slf4j-api
+- io.vertx:vertx-rx-java2
+- com.github.mauricio:mysql-async_2.12
+- io.vertx:vertx-lang-ruby
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     @extends('frontend.layouts.app')
+
+    @section('title','Login')
+
+    @push('css')
+
+    @endpush
+
+    @section('content')
+    <!-- breadcrumb start -->
+    <div class="breadcrumb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="breadcrumb-part breadcrumb-link" href="index.html">
+                        <i class="fa fa-home"></i>
+                    </a>
+                    <span class="breadcrumb-part font-5">Sign Up</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb end -->
+
+    <div class="container">
+        <div class="row">
+            <div id="column-left" class="col-sm-4 col-lg-3 hidden-xs">
+
+                @include('frontend.partials.sidbar')
+            </div>
+
+
+            <div class="col-sm-8 col-lg-9">
+                <h1 class="heading3" style="padding: 20px;" > Sign Up <span style="font-size: 15px!important;">(Already Have An Account? <a href="{{route('login')}}"><b> Sign In </b></a> )</span></h1>
+
+                @if(session()->has('success'))
+                <span>{{session()->get('success')}}</span>
+
+                @endif
+                <div class="row">
+                    <div class="col-xs-12">
+
+
+                        <form action="{{ route('sign-up') }}" enctype="multipart/form-data" method="post" class="form-horizontal account-register clearfix">
+                            @csrf
+
+                            <fieldset id="account">
+
+                                <!-- Your Personal Details -->
+                                <h2 class="secondary-title"><i class="fa fa-user-circle"></i>Your Personal Details</h2>
+
+                                <div class="form-group required">
+                                    <label class="control-label col-sm-4" for="input-payment-firstname"> First Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="first_name" id="input-payment-firstname" placeholder="Enter Here">
+                                    </div>
+                                </div>
+
+                                <div class="form-group required">
+                                    <label class="control-label col-sm-4" for="input-payment-lastname"> Last Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="last_name" id="input-payment-lastname" placeholder="Enter Here">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group required">
+                                    <label class="control-label col-sm-4" for="input-payment-email">Email Address</label>
+                                    <div class="col-sm-8">
+                                        <input type="email" class="form-control" name="email" id="input-payment-email" placeholder
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Candidato;
+use App\Models\Candidatura;
+use App\Models\Vaga;
+use Illuminate\Support\Facades\Auth;
+
+class HomeController extends Controller
+{
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function index()
+    {
+        $usuario = Auth::user();
+        $candidato = Candidato::where('user_id', $usuario->id)->first();
+        if ($candidato){
+            $candidaturas = Candidatura::where('candidato_id',$candidato->id)->get();
+        }else{
+            $candidaturas = [];
+       }
+
+    public function logar()
+    {
+
+        $usuario  = Auth::user();
+        $candidato = Candidato::where('user_id', $usuario->id)->first();
+        if(!$candidato){
+            return redirect()->route('cadastrarCandidato.form');
+        }
+
+        return view('logar');
+    }
+
+    public function logout(){
+        Auth::logout();
+        return view('welcome');
+    }
+}
+    }
+
+        return view('dashboard', compact('candidaturas'));
+ 
+
+Precision: 0
+Recall: 0
+F1 Score: 0

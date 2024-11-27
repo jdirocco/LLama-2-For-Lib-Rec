@@ -1,0 +1,147 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: berinle/jawr-core
+    Project Description: For the time being, smartsprites is not deployed in maven.\r\nAs Jawr use maven, you will need to download it manually and install it locally.\r\nAs I'm writing the latest version is : 0.3.0dev\r\n\r\nPlease download this version from : \r\n \r\n\r\nExtract the jar file /smartsprites/lib/smartsprites0.3.0dev.jar under /{jawr}/smartsprites/mvn\r\n\r\nThen go /{jawr}/smartsprites/mvn and launch the command :\r\n\r\nmvn install:installfile Dfile=smartsprites0.3.0dev.jar DpomFile=spmartspritespom.xml\r\n\r\nIt's done. Smartsprites is now installed on you local repository.\r\nYou can now use maven to build Jawr."
+    Existing Dependencies:
+    javax.faces:jsf-api
+- com.yahoo.platform.yui:yuicompressor
+- org.springframework:spring
+- net.sf.ehcache:ehcache-core
+- org.mockito:mockito-all
+- taglibs:standard
+- org.apache.wicket:wicket
+- com.google.javascript:closure-compiler
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<div class="card col-md-6 offset-3 offset-md-3 " style="padding: 20px; box-sizing: border-box;">
+
+            <div class="card-header">
+
+            <h3 class="mt-3 ml-2">Editar Producto</h3>
+            <a href="<?php echo base_url();?>producto/listarproducto" class=" btn btn-sm btn-success ml-2 mb-3" style="width:110px;">
+                <i class="far fa-list-alt"></i>
+                Listar
+            </a>
+
+        </div>
+
+        <form method="post" action="<?php echo base_url().'producto/actualizar';?>">
+            
+
+            <!-- input para guardar la id de la tabla -->
+            <input type="hidden" name="idProducto" value="<?php echo $producto->id;?>">
+
+            <div class="card-body">
+
+                <div class="form-group ">
+                    <label >Producto</label>
+                    <input type="text" name="producto"  style="width:100%;"
+                      onkeyup="javascript:this.value=this.value.toUpperCase();"
+                       onpaste="return false"
+                    value="<?php echo $producto->producto?>" class="form-control" id="producto" aria-describedby="emailHelp" placeholder="">
+                    
+                </div>
+                
+
+                <div class="row form-group ">
+                    <div class="col-md-6 mb-4">
+                         <label >Precio</label>
+                    <input type="number"  onpaste="return false;" ondrop="return false;"  min="0" step="0.12" name="precio"  style="width:100%;"  placeholder=""
+                     value="<?php echo $producto->precio?>"  class="form-control " id="precio" aria-describedby="emailHelp" placeholder="">
+                    </div>
+
+                    <div  class="col-md-6 mb-4">
+                       <label >Stock</label>
+                    <input type="number" min="0" name="stock"  style="width:100%;"  placeholder="" value="<?php echo $producto->stock?>" class="form-control " id="stock" aria-describedby="emailHelp" placeholder="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion">Descripción</label>
+                    <textarea class="form-control" name="descripcion" id="descripcion" rows="3" maxlength="256" placeholder="Ingresa una breve descripción del producto">
+                        <?php  echo $producto->descripcion?>
+                    </textarea>
+                </div> 
+                                       
+                    
+    
+                
+                <div class="form-group">
+                    <label for="imagen">Seleccionar imágen</label><br>
+                    <input type="file" name="imagen" id="imagen" accept="image/*"><br><br>
+                    <div class="card" style="width: 18rem;">
+                        <img
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.example.android.miwok;
+
+import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protectedr, tabLayout);
+
+        // Find the view pager that will allow the user to swipe between fragments
+        ViewPager viewPager = findViewById(R.id.viewpager);
+
+        // Create an adapter that knows which fragment should be shown on each page
+        SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(this, getSupportFragmentManager());
+
+        // Set the adapter onto the view pager
+        viewPager.setAdapter(adapter);
+
+        // Give the TabLayout the ViewPager
+        tabLayout.setupWithViewPager(viewPager);
+
+    }
+
+} void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // Set the content of the activity to use the activity_main.xml layout file
+        setContentView(R.layout.activity_main);
+
+        // Find the view pager that will allow the user to swipe between fragments
+        ViewPager viewPager = null;
+        ViewPager viewpager=findViewById(R.id.viewpager);
+        viewpager.setAdapter(new SimpleFragmentPagerAdapter(this,getSupportFragmentManager()));
+
+        // Find the view pager that will allow the user to swipe between fragments
+        TabLayout tabLayout = findViewById(R.id.tablayout);
+        tabLayout.setBackgroundColor(R.color.colorPrimary);
+        //viewPager.setupWithViewPager(viewpager,tabLayout);
+        //viewPager.setupWithViewPager();
+        TabLayout tabLayout = findViewById(R.id.tablayout);
+        tabLayout.setBackgroundColor(R.color.colorPrimary);
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        tabLayout.setupWithViewPager(viewPage
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,124 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: Diolor/ADP
+    Project Description: Android Distribution Platform\n\nAndroid Distribution Platform ADP is a fullstack framework for storing, distributing and installing versionized apk files based mostly for internal team or rollback purposes on each CI git commit.\n\n\n\nThe developer can access easily from all devices a full precompiled list of the application\'s versions per git commit. This saves valuable compilation and installation time both in examining old application behaviour or distributing directly a version via a git commit.\n\n\n Technology behind\n\nThe logic is straightforward:\n A CI tool Travis / Jenkins compiles the desired versions and uploads the files with a PUT command such as:\n\n The server saves the file in Amazon S3 also for manual access\n The app client lists the availiable apks or installs the desired apk using a token handshake\n\nThe backend is a microframework able to run on a WSGI which supports e.g. Openshift. Heroku is not supporting it.\nAn is needed to store the apks.\n\n\n\n Instalation\n\nEstimated installation time is \n\n\n\n Licence\n\n\n\n\n'
+    Existing Dependencies:
+    com.github.frankiesardo:auto-parcel
+- org.glassfish:javax.annotation
+- com.android.support:recyclerview-v7
+- io.reactivex:rxandroid-framework
+- com.squareup.okhttp:okhttp
+- com.android.support:appcompat-v7
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<div class="content-wrapper">
+
+<div class="container">
+<div class="row">
+<div class="col-12">
+    <div class="card">
+        <div class="card-body">
+            <div class="box">
+            
+                <div class="box-body">
+
+                <?php if($this->session->flashdata('msg') ):?>
+                    <div class="alert alert-success alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true" >&times;</button>
+                    <h4>  <i class="icon fa fa-check"></i> Sucesso!</h4>
+                    <?php echo $this->session->flashdata('msg');?>
+                    </div>
+                <?php endif;?>
+
+                <?php if($this->session->flashdata('error') ):?>
+                    <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true" >&times;</button>
+                    <h4>  <i class="icon fa fa-close"></i> erro!</h4>
+                    <?php echo $this->session->flashdata('msg');?>
+                    </div>
+                <?php endif;?>
+
+                
+                <div class="box-body">
+                <?php if(validation_errors()):?>
+				<div class="alert alert-danger alert-dismissible">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<h4><i class="icon fa fa-close"></i> Alert!</h4>
+					<?php echo validation_errors('<p>','</p>');?>
+				</div>
+				<?php endif;?>
+            </div>
+            </div>
+
+            <a href="<?=base_url('index.php/produtos')?>" class="btn btn-default margin  float-right"> Voltar  </a>    
+
+
+            
+
+
+           <form method="post" action="<?= base_url('index.php/produtos/inserir')?>" enctype="multipart/form-data">
+            	<div class="row">
+	                <div class="col-4 float-left">
+	                    <div class="form-group">
+                        <label for="">Tipo do Produto</label>
+                        <select class="form-control" name="tipo"  required id="tipo">
+                            <option value="">Selecione</option>
+                            <?php if(!empty($tipo)):?>
+                                <?php foreach ($tipo as $tipos):?>
+                                    <option value="<?php echo $tipos['id'];?>"><?php echo $tipos['tipo'];?></option>
+                                <?php endforeach;?>
+                            <?php endif;?>
+                        </select>
+                        </div>	
+	                    
+	                </div>
+	                <div class="col-4 float-left">
+	                    <div class="form-group">
+	                        <label for="">Nome</label>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+  return 0;
+}
+
+
+ #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+#define MAX_STEPS 1e6
+
+
+int main(){
+  int i;
+
+  for(i=1;i<MAX_STEPS;i++){
+  }
+  printf("Hello!\n");
+
+Precision: 0
+Recall: 0
+F1 Score: 0

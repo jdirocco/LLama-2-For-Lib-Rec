@@ -1,0 +1,207 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: kiegroup/droolsjbpm-tools
+    Project Description: Developing Drools and jBPM\n==========================\n\nIf you want to build or contribute to a kiegroup project, .\n\nIt will save you and us a lot of time by setting up your development environment correctly.\nIt solves all known pitfalls that can disrupt your development.\nIt also describes all guidelines, tips and tricks.\nIf you want your pull requests or patches to be merged into master, please respect those guidelines.\n'
+    Existing Dependencies:
+    com.thoughtworks.xstream:xstream
+- org.kie.soup:kie-soup-project-datamodel-api
+- org.kie:kie-api
+- org.mvel:mvel2
+- com.google.protobuf:protobuf-java
+- org.jbpm:jbpm-bpmn2
+- org.drools:drools-compiler
+- org.jbpm:jbpm-flow
+- org.kie.soup:kie-soup-project-datamodel-commons
+- org.jbpm:jbpm-bom
+- org.drools:drools-decisiontables
+- org.kie:kie-bom
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<div class="col-12">
+    <div class="card">
+        <div class="card-body"> 
+            <div class="row">
+              <div class="col-md-6">
+                <a href="{{url('add-category?type=product')}}">
+                  <button type="button" class="btn btn-primary btn-sm">
+                    <i class="fa fa-plus"></i>  Add New
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="table-responsive">
+                <table id="file_export" class="table table-striped table-bordered display">
+                    <thead>
+                      <tr>
+                        <th>SL</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                        <th>Status</th>
+                        <th>Action</th>  
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                      @foreach($categories as $category)
+                      @php
+                        $count_subcategory = DB::table('subcategories')->where('category_id',$category->id)->count();
+                      @endphp
+                      <tr>
+                        <td>{{ $loop->iteration}}</td>
+                        <td>{{$category->name}}</td>
+                        <td>{{$category->description}}</td>
+                        <td>
+                            @if($category->image)
+                              <img src="{{URL::to($category->image)}}" alt="category image" style="height: 60px;width: 50px;">
+                            @else
+                              <img src="{{asset('public/Backend/images/no-img.png')}}" alt="category image" style="height: 60px;width: 50px;">
+                            @endif
+                        </td>
+                      
+                        <td>
+                          <input type="checkbox" class="btn_switch" data-id="{{ $category->id }}" id="toggle-event{{ $loop->index + 1 }}" {{ $category->status == 'active'? 'checked' : '' }} data-toggle="toggle" data-onstyle="success" data-offstyle="danger" data-size="mini">
+                        </td>
+                        <td>
+                            <div class="btn-group mr-2">
+                                <button type="button" class="btn btn-round btn-dark btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Action
+                                </button>
+                                <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(98px, 31px, 0px);">
+                                    @if($count_subcategory > 0)
+                                        <a target="_blank" class="dropdown-item" href="{{ route('show-subcategory',$category->id) }}">
+                                            <i class="mdi mdi-pencil text-dark font-18"></i>View
+                                        </a>
+                                
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>r.on('error', error => {
+        this.emit('error', error)
+      })
+    },
+    /**
+     * Close the WebSocket connection
+     *
+     * @private
+     */
+    close: function() {
+      return this._webSocket.close()
+    },
+    /**
+     * @private
+     */
+    _onSocketOpen: function() {
+      var messageHandlerId
+
+      // Send the first message to the server
+      messageHandlerId = this.send(MESSAGES.CONNECT, {})
+
+      // When the first message is sent (the CONNECT message) resolve the promise
+      var promise = this._promise
+      if (promise!= null) {
+        this._promise = null
+        promise.resolve(this)
+      }
+
+      // Remove the error listener (if we've had an error)
+      this._webSocket.removeListener('error', this._onSocketError)
+    },
+    /**
+     * @private
+     */
+    _onSocketError: function(/* error */) {
+      this.close()
+    },
+    /**
+     * @private
+     */
+    _onSocketClose: function() {
+      this.close()
+    },
+    /**
+     * @private
+     */
+    _onSocketMessage: function(event) {
+      var message, payload, messageHandler
+
+      // Try to parse the JSON payload
+      try {
+        payload = JSON.parse(event.data)
+      } catch (error) {
+        this.emit('error', error)
+        payload = {}
+        payload.message = MESSAGES.ERROR
+        payload.payload = {
+          code: 400,
+          message: 'Unable to parse message payload'
+        }
+      }
+
+      // Try to get the handler for a particular message
+      messageHandler = this._messageHandlerById[payload.messageId]
+
+      // If there is a specific handler for this message
+      if (messageHandler!= null) {
+        // Invoke the message handler, which should send a response to the server
+        messageHandler(payload.message, payload.payload)
+
+      // If there was no specific handler for that message...
+      } else {
+        // Try to get the handler for a particular message
+        messageHandler = this._messageHandlerById[payload.message]
+
+        // If there is a specific handler for this message
+        if (messageHandler == null) {
+          // Log the error
+          this.emit('error', new Error('Invalid message: \'' + payload.message + '\''))
+
+          // Close the socket
+          this.close()
+        } else {
+          // Get the message
+          message = messageHandler.getMessage
+
+          // Invoke the message handler, which should send a response to the server
+          messageHandler(message, payload)
+        }
+      }
+    }
+  })
+
+  // Expose the Message class as well
+  WebSocketConnection.Message = Message
+  WebSocketConnection.MESSAGES = MESSAGES
+
+  // Export the module
+  module.exports = WebSocketConnection
+})()
+
+},{"./message":22,"./util":23,"emitter":6,"extend":9,"promise":10}],16:[function(require,module,exports){
+(function() {
+  var Client, Message, MESSAGES, Promise, Server, Socket, WebSocketConnection, WebSocketServer, createServer
+
+Precision: 0
+Recall: 0
+F1 Score: 0

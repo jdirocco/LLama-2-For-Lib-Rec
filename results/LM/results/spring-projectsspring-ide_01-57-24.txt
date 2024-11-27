@@ -1,0 +1,194 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: spring-projects/spring-ide
+    Project Description: This project has reached its EOL and is not maintained anymore. See the announcement on the blog for details: \n Important note\n\n Spring IDE is a collection is various features to enhance the regular Eclipse IDE with tooling for\n building Springbased applications. While some features of Spring IDE are still under active\n development and are shipped as part of the allnew Spring Tools 4 for Eclipse distribution like the\n Spring Boot Dashboard, the projectspecific XML namespace resolution, and the Spring Boot launch support,\n most of the remaining features are not under active development anymore like the XMLspecific support\n for Core Spring and various additional Spring projects. Some of those features have been\n reimplemented as part of the Spring Tools 4 using the architecture of language servers.\n \n We strongly recommend to migrate to the allnew Spring Tools 4 for Eclipse, if Eclipse is your preferred\n development environment. In case you are missing specific features from the Spring IDE that are\n not yet part of Spring Tools 4, please file an enhancement request against Spring Tools 4 here:\n More details about the previous Spring Tool Suite and installing previous versions\n\n Please find more information about the previous versions of the Spring Tool Suite 3, which\n contained all the various Spring IDE components, here:\n
+    Existing Dependencies:
+    com.fasterxml.jackson.dataformat:com.fasterxml.jackson.dataformat
+- ${spring.groupId}:org.springframework.context.support
+- org.slf4j:com.springsource.slf4j.api
+- org.glassfish.jersey.media:org.glassfish.jersey.media
+- org.apache.log4j:com.springsource.org.apache.log4j
+- org.springframework.plugin:org.springframework.plugin
+- wsdl4j:wsdl4j
+- com.fasterxml.jackson.core:com.fasterxml.jackson.core
+- org.apache.felix:org.apache.felix.scr.annotations
+- javax.mail:javax.mail
+- ${spring.groupId}:org.springframework.aop
+- commons-pool:commons-pool
+- org.apache.activemq:org.apache.activemq
+- nz.net.ultraq.thymeleaf:nz.net.ultraq.thymeleaf
+- org.springframework.mobile:org.springframework.mobile
+- com.h2database:com.h2database
+- de.flapdoodle.embed:de.flapdoodle.embed
+- com.fasterxml.jackson.datatype:com.fasterxml.jackson.datatype
+- org.json:org.json
+- org.springframework.ws:org.springframework.ws
+- org.spockframework:org.spockframework
+- commons-collections:commons-collections
+- org.eclipse.jetty.websocket:org.eclipse.jetty.websocket
+- org.springframework.roo:org.springframework.roo.addon.roobot.eclipse.api
+- org.hibernate:org.hibernate
+- org.slf4j:com.springsource.slf4j.org.apache.commons.logging
+- org.springframework.security.oauth:org.springframework.security.oauth
+- org.eclipse.jetty.orbit:org.eclipse.jetty.orbit
+- org.springframework.integration:spring-integration-file
+- commons-dbcp:commons-dbcp
+- org.springframework.amqp:org.springframework.amqp
+- com.github.mxab.thymeleaf.extras:com.github.mxab.thymeleaf.extras
+- org.springframework.boot:spring-boot-starter-test
+- org.eclipse.jetty:org.eclipse.jetty
+- javax.cache:javax.cache
+- org.springframework.batch:org.springframework.batch
+- ${spring.osgi.groupId}:org.springframework.osgi.extensions.annotation
+- com.jayway.jsonpath:com.jayway.jsonpath
+- org.hornetq:org.hornetq
+- org.apache.velocity:org.apache.velocity
+- org.springframework.integration:spring-integration-core
+- org.freemarker:org.freemarker
+- io.projectreactor.spring:io.projectreactor.spring
+- org.springframework.boot:spring-boot-starter-web
+- org.thymeleaf.extras:org.thymeleaf.extras
+- antlr:antlr
+- javax.servlet:javax.servlet
+- net.sourceforge.nekohtml:net.sourceforge.nekohtml
+- org.apache.logging.log4j:org.apache.logging.log4j
+- log4j:log4j
+- org.projectreactor:org.projectreactor
+- org.flywaydb:org.flywaydb
+- junit:junit
+- org.springframework.restdocs:org.springframework.restdocs
+- org.hsqldb:org.hsqldb
+- org.mariadb.jdbc:org.mariadb.jdbc
+- org.crashub:org.crashub
+- org.apache.tomcat:org.apache.tomcat
+- commons-beanutils:commons-beanutils
+- com.atomikos:com.atomikos
+- ch.qos.logback:ch.qos.logback
+- commons-digester:commons-digester
+- org.springframework.security:org.springframework.security
+- org.glassfish.jersey.core:org.glassfish.jersey.core
+- org.apache.tomcat.embed:org.apache.tomcat.embed
+- org.aspectj:org.aspectj
+- ${spring.osgi.groupId}:org.springframework.osgi.core
+- org.springframework.boot:spring-boot-starter-data-mongodb
+- org.hamcrest:org.hamcrest
+- org.aopalliance:com.springsource.org.aopalliance
+- org.glassfish.jersey.containers:org.glassfish.jersey.containers
+- javax.jms:javax.jms
+- org.codehaus.btm:org.codehaus.btm
+- org.jboss.logging:org.jboss.logging
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 74 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <?php $this->load->view('backend/top')?>
+     <div class="main-content">
+        <?php $this->load->view('backend/left')?>
+        <div class="right-panel">
+            <div class="container-fluid">
+                <div class="row clearfix">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="header">
+                                  <a href="<?php echo base_url()?>aspanel/testimoni" class="btn btn-info">Kembali</a>                                    
+                            </div>
+                            <?php 
+                                $attributes = array('class'=>'form-horizontal','role'=>'form');
+                                echo form_open_multipart('aspanel/testimoni_tambahkan',$attributes); 
+                           ?>
+                            <div class="row clearfix">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Gambar</label>
+                                        <input type="file" name="img" required/>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-10">
+                                    <div class="form-group">                                        
+                                        <input type="text" class="form-control" name="name" placeholder="Judul testimoni" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group"> 
+                                        <input type="text" parsley-type="text" class="form-control" name="link" placeholder="Link testimoni" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Deskripsi Testimoni</label>
+                                        <textarea id="textEditor" name="testimoni_detail" class="form-control" placeholder="Isi testimoni" style="height:200px" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <input type="hidden" name="testimoni_author" class="form-control" value="<?php echo $this->session->username;?>" required>
+                                    </div>
+                                </div>
+                            </div><br><br>
+                                <button type="submit" name='submit' class="btn btn-primary">Tambahkan</button>
+                                <button type="reset" name='reset' class="btn btn-primary">Reset</button>                                                       
+                              <?php echo form_close();?>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 74 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>sion_id
+    }
+  }
+  
+  return response
+}
+ import { getSession } from "@lib/auth/session";
+import cookie from "cookie";
+
+export async function middleware(request, response) {
+  const headers = {...request.headers }
+  headers.cookie = headers.cookie? cookie.parse(headers.cookie) : {}
+  headers.authorization = headers.authorization || headers.cookie.authorization
+
+  if (headers.authorization) {
+    headers.authorization = headers.authorization.replace("Basic ", "")
+  
+    const user = await getSession(headers.authorization)
+    
+    if (user) {
+      return response.redirect("/")
+    }
+  } else {
+    const cookies = cookie.parse(request.headers.cookie || "")
+    const session_id = cookies['authorization']
+
+    if (session_id) {
+      headers["authorization"] = "Bearer " + ses
+
+Precision: 0
+Recall: 0
+F1 Score: 0

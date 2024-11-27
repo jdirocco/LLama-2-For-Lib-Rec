@@ -1,0 +1,119 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: Stratio/ingestion
+    Project Description: \n\nStratio Ingestion\n=================\n\nContents\n\n\n Introduction\n Stratio Ingestion components\n Details about Stratio Ingestion\n Compile & Package\n FAQ\n\n\nIntroduction\n\n\nStratio Ingestion started as a fork of Apache Flume 1.6, where you can find:\n\nCustom sources and sinks, developed by Stratio\n\n SNMP v1, v2c and 3\n redis, Kafka 0.8.1.1\n MongoDB, JDBC, Cassandra and Druid\n Stratio Decision Complex Event Processing engine\n REST client, Flume agents stats\n \nSeveral bug fixes\n\n Some of them really important, such as unicode support\n\nSeveral enhancements of Flume\'s sources & sinks\n\n ElasticSearch mapper, for example\n\nYou can find more documentation about us \n\n\nStratio Ingestion components\n\n\n Data transporter and collector: \n Data extractor and transformer: \n Custom sources types to read data from:\n REST com.stratio.ingestion.source.rest.RestSource\n Redis FlumeStats com.stratio.ingestion.source.redis.RedisSource\n SNMPTraps com.stratio.ingestion.source.snmptraps.SNMPSource\n IRC com.stratio.ingestion.source.irc.IRCSource\n Custom sinks types to write the data to:\n Cassandra com.stratio.ingestion.sink.cassandra.CassandraSink\n MongoDB com.stratio.ingestion.sink.mongodb.MongoSink\n \n JDBC com.stratio.ingestion.sink.jdbc.JDBCsink\n Kafka com.stratio.ingestion.sink.kafka.KafkaSink\n Druid com.stratio.ingestion.sink.druid.DruidSink\n\nDetails about Stratio Ingestion\n\n\nStratio Ingestion is based on Apache Flume so the first question is:\n\nWhat is Apache Flume?\n\nApache Flume is a distributed, reliable, and available system for efficiently collecting, aggregating and moving large amounts of log data from many different sources to a centralized data store.\n\nIts use is not only designed for logs, in fact you can find a myriad of sources, sinks and transformations.\n\nIn addition, a sink could be a big data storage but also another realtime system Apache Kafka, Spark Streaming.\n\n\nInteresting facts about Stratio Ingestion\n\n Flume Ingestion is Apache Flume "on steroids" :\n \n We are extensively using Kite SDK morphlines in order to do a better T from ETL, and so we have also developed a bunch of custom transformations.\n \n Stratio ingestion is fully open source and we work very close to the Flume community.\n\n\nCompile & Package\n\n\n\n\nDistribution will be available at stratioingestiondist/target/ folder. You will find .deb, .rpm and .tar.gz packages ready to use depending your environment.\nIf you take a look at you will find more details about how to install the product, and some useful examples to get a better understanding about Stratio Ingestion. \n\n\nFAQ\n\n\n\nCan I use Stratio Ingestion for aggregating data timebased rollups, for example?\n\nThis is not a good idea from our experience, but you can use for realtime aggregation.\n\nIs Flume Ingestion multipersistence?\n\nYes, you can write data to JDBC sources, mongoDB, Apache Cassandra, ElasticSearch, Apache Kafka, among others.\n\n\nCan I send data to decisioncepengine?\n\nOf course, we have developed a sink in order to send events from Flume to an existing stream in our CEP engine. The sink will create the stream if it does not exist in the engine. \n\nWhere can I find more details about Stratio Ingestion?\n\nYou can take a look at our Documentation on \n\n\nChangelog\n\n\nSee the for changes. \n\n\n'
+    Existing Dependencies:
+    com.stratio.ingestion:stratio-snmptraps-source
+- com.stratio.ingestion:stratio-mongodb-sink
+- com.typesafe:config
+- com.maxmind.db:maxmind-db
+- io.netty:netty
+- redis.clients:jedis
+- org.slf4j:slf4j-api
+- org.mockito:mockito-all
+- org.snmp4j:snmp4j
+- com.stratio.ingestion:stratio-kafka-sink
+- com.stratio.ingestion:stratio-cassandra-sink
+- commons-configuration:commons-configuration
+- org.apache.flume:flume-ng-dist
+- org.quartz-scheduler:quartz
+- com.google.guava:guava
+- org.apache.logging.log4j:log4j-slf4j-impl
+- org.apache.hadoop:hadoop-hdfs
+- org.apache.flume:flume-ng-core
+- org.apache.flume:flume-ng-sdk
+- com.codahale.metrics:metrics-healthchecks
+- com.stratio.ingestion:stratio-jdbc-sink
+- org.fusesource:sigar
+- org.codehaus.jackson:jackson-mapper-asl
+- joda-time:joda-time
+- com.stratio.ingestion:stratio-druid-sink
+- org.apache.kafka:kafka_2.10
+- org.jooq:jooq
+- com.codahale.metrics:metrics-core
+- org.scala-lang:scala-library
+- org.apache.hadoop:hadoop-common
+- org.apache.derby:derby
+- junit:junit
+- org.apache.hadoop:hadoop-auth
+- com.stratio.decision:api
+- com.h2database:h2
+- org.postgresql:postgresql
+- com.github.fakemongo:fongo
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 37 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+        <h2>
+        <?php 
+        if($page->id == '1') {
+            echo 'About Us';
+        } else if($page->id == '2') {
+            echo 'Services'; 
+        } else if($page->id == '3') {
+            echo 'Contact Us'; 
+        }
+        
+       ?>
+        
+        </h2>
+        <?php echo $page->body;?>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 37 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> #import <UIKit/UIView.h>
+
+@troller, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate, UIAlertViewDelegate>
+@property(nonatomic) UIViewController *viewController; // @synthesize viewController;
+- (void).cxx_destruct;
+- (void)alertView:(id)arg1 clickedButtonAtIndex:(long long)arg2;
+- (void)actionSheet:(id)arg1 clickedButtonAtIndex:(long long)arg2;
+- (void)imagePickerController:(id)arg1 didFinishPickingMediaWithInfo:(id)arg2;
+- (void)imagePickerControllerDidCancel:(id)arg1;
+- (void)onSelectPhoto:(id)arg1;
+- (void)onTakePhoto:(id)arg1;
+- (void)OnPhoto:(id)arg1;
+- (void)OnCamera:(id)arg1;
+- (void)OnAlbum:(id)arg1;
+- (void)onAddSubviews;
+- (id)initWithViewController:(id)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
+
+@endclass UIViewController, UIView;
+
+@interface TakePhotoView : UIView <UIImagePickerCon
+
+Precision: 0
+Recall: 0
+F1 Score: 0

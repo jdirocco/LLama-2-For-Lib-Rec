@@ -1,0 +1,172 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: TIBCOSoftware/jasperreports
+    Project Description: .\n The changes help improving the dependency management by splitting the library into multiple optional artifacts files depending on\n the functionality they provide. Deprecated code has been removed and the backward compatibility of serialized/compiled report template\n files has been deliberately broken.\n\n JasperReports\xc2\xae Library Free Java Reporting Library\n\nThe is the world's most popular open source reporting engine. \nIt is entirely written in Java and it is able to use data coming from any kind of data source and \nproduce pixelperfect documents that can be viewed, printed or exported in a variety of document \nformats including HTML, PDF, Excel, OpenOffice, MS Word and other.\n\nDocumentation:\n \n \n \n \n \n \n \n \n\n\n\nJaspersoft\xc2\xae Studio open source report designer for the JasperReports Library\n\nThe report templates for the JasperReports Library are XML files which can be edited using a powerful,\nopen source, Eclipsebased report designer called .\nUsing Jaspersoft Studio, reports can be built out of any data source and can have their look and feel \nformatted for printing or onscreen reading, or can be deployed to a JasperReports Server instance, \nJasperReports IO repository or to a custom application using the JasperReports Library implementation\nand exported to a wide range of output document formats.\n\n\n\nJasperReports Server\n\n is a standalone and embeddable \nreporting server. It provides reporting and analytics that can be embedded into a web or mobile application as well as \noperate as a central information hub for the enterprise by delivering mission critical information on a realtime or \nscheduled basis to the browser, mobile device, or email inbox in a variety of file formats. JasperReports Server is \noptimized to share, secure, and centrally manage your Jaspersoft reports and analytic views.\n\n\n\nJasperReports Web Studio webbased version of the desktop Jaspersoft\xc2\xae Studio\n\n is a new web visual designer that \ncreates and edits report templates for the JasperReports\xc2\xae Library reporting engine and the whole Jaspersoft\xc2\xae family of \nproducts that use the opensource library to produce dynamic content and rich data visualizations.\n\n\n\nJasperReports IO reporting and data visualization in a world of cloud, microservices, and DevOps\n\n is a RESTful reporting and data \nvisualization service built on JasperReports Library, designed for generating reports and data visualizations in \nmodern software architectures. Just as the JasperReports Library offers a to leverage a powerful and high \nquality reporting engine inside Java applications, JasperReports IO offers a to leverage the same reporting \nengine from any other software development platform.\n"
+    Existing Dependencies:
+    org.jfree:jfreechart
+- org.apache.lucene:lucene-core
+- org.apache.lucene:lucene-queryparser
+- org.jfree:jcommon
+- net.sf.jasperreports:jasperreports
+- org.apache-extras.beanshell:bsh
+- net.sf.barcode4j:barcode4j
+- org.xhtmlrenderer:core-renderer
+- org.apache.poi:poi-ooxml
+- net.sf.jasperreports:jasperreports-metadata
+- com.google.zxing:core
+- com.ibm.icu:icu4j
+- javax.xml.soap:saaj-api
+- org.apache.ant:ant
+- net.sourceforge.barbecue:barbecue
+- commons-logging:commons-logging
+- commons-beanutils:commons-beanutils
+- joda-time:joda-time
+- org.springframework:spring-core
+- org.apache.commons:commons-javaflow
+- com.fasterxml.jackson.core:jackson-annotations
+- mondrian:mondrian
+- org.apache.poi:poi
+- commons-collections:commons-collections
+- jtidy:jtidy
+- org.json:json
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 27 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <section class="section mt-3">
+      
+      <div class="card ml-3">
+        <div class="card-header">
+          <a href="<?= base_url()?>user/form" class="btn btn-primary"><i class="fa fa-plus-circle"></i> Tambah</a>
+        </div>
+        <div class="card-body">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Email</th>
+                <th scope="col">Username</th>
+                <th scope="col">Password</th>
+                <th scope="col">Level</th>
+                <th scope="col">Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php $i=1;?>
+              <?php foreach($user as $row)?>
+              <tr>
+                <td><?= $i++?></td>
+                <td><?= $row['nama_lengkap']?></td>
+                <td><?= $row['email']?></td>
+                <td><?= $row['username']?></td>
+                <td><?= $row['password']?></td>
+                <td><?= $row['level']?></td>
+                <td>
+                  <a href="" class="btn btn-success"><i class="fa fa-edit"></i> Edit</a>
+                  <a href="" class="btn btn-danger"><i class="fa fa-trash"></i> Delete</a>
+                </td>
+              </tr>
+            <?php endforeach?>  
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 27 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package org.apache.shardingsphere.scaling.core.job.check.source;
+
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.apache.shardingsphere.scaling.core.common.datasource.DataSourceFactory;
+import org.apache.shardingsphere.scaling.core.common.datasource.DataSourceManager;
+import org.apache.shardingsphere.scaling.core.common.exception.SourceNotEmitEventException;
+import org.apache.shardingsphere.scaling.core.config.datasource.StandardJDBCDataSourceConfiguration;
+import org.apache.shardingsphere.scaling.core.job.check.AbstractSourceCountChecker;
+import org.apache.shardingsphere.scaling.core.job.environment.ScalingEnvironment;
+
+import javax.sql.DataSource;
+import java.util.List;
+
+/**
+ * Abstract binlog data consistency checker.
+ */
+@Getter
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public final class BinlogDataConsistencyChecker extends AbstractSourceCountChecker {
+    
+    public static final String TYPE = "binlog";
+    
+    private BinlogPosition binlogPosition;
+    
+    private DataSourceManager dataSourceManager;
+    
+    private DataSourceFactory dataSour    }
+    
+    @Override
+    public void close() {
+        dataSourceManager.close();
+    }
+    
+    @Getter
+    @AllArgsConstructor
+    public static final class BinlogPosition {
+        
+        /**
+         * File name of binlog.
+         */
+        private String filename;
+        
+        /**
+         * Position of binlog.
+         */
+        private long position;
+    }
+}ceFactory;
+    
+    public BinlogDataConsistencyChecker(final StandardJDBCDataSourceConfiguration dumperSourceConfig, final List<String> tableName, final BinlogPosition binlogPosition) {
+        super(dumperSourceConfig, tableName);
+        this.binlogPosition = binlogPosition;
+        dataSourceManager = DataSourceManager.getInstance();
+        dataSourceFactory = DataSourceFactory.getInstance();
+    }
+    
+    @Override
+    protected DataSource getDataSource() {
+        return dataSourceFactory.build(dumperSourceConfig, ScalingEnvironment.getInstance().getDumperConfig().getDataSourceOptions());
+    }
+    
+    @Override
+    protected int getSourceDataAmount() throws SourceNotEmitEventException {
+        try {
+            return super.getSourceDataAmount();
+        } catch (final SourceNotEmitEventException ignored) {
+            return super.getTargetDataAmount(dataSourceManager);
+        }
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

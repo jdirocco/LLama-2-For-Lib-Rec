@@ -1,0 +1,172 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: killbilling/recurly-java-library
+    Project Description: recurlyjavalibrary\n====================\n\nJava library for Recurly, originally developed for , an opensource subscription management and billing system.\n\nGetting started\n\n\nThe library is distributed via :\n\n\n\nThe easiest way to get started is by looking at the code examples in .\n\n The underlying HTTP client has changed between 0.34.0 and 0.100.0, see .\n\nDevelopment\n\n\n1. Make sure you can build the project by running the smoke tests: \n2. Go to and create an account. This account will be used as a sandbox environment for testing.\n3. In your Recurly account, click on API Credentials bottom of the left menu, click the Enable API Access button and write down your API Key.\n4. Verify the setup by running the recurlyjavalibrary integration tests make sure to update your API Key and Subdomain: \n5. Go to your Recurly account, you should see some data e.g. account created.\n6. Congrats! You're all set!\n\nJava properties\n\n\n Set to output debug information in the info log file\n Set to configure the page size for Recurly API calls\n To run the tests, one can use to override the default USD currency used\n You may optionally pass the TLS protocol used with the setting . Keep in mind that Recurly only supports and above. This setting defaults to .\n\nPush notifications\n\n\nSee for an example on how to set it up.\n\nBuild\n\n\nTo build the project, use maven:\n\n mvn clean install\n"
+    Existing Dependencies:
+    org.sonatype.oss:oss-parent
+- org.slf4j:slf4j-simple
+- org.testng:testng
+- com.google.code.findbugs:jsr305
+- org.slf4j:slf4j-api
+- com.fasterxml.jackson.core:jackson-databind
+- com.fasterxml.jackson.datatype:jackson-datatype-joda
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- Content Wrapper. Contains page content -->
+     <div class="content-wrapper">
+         <!-- Content Header (Page header) -->
+         <section class="content-header">
+             <h1>
+                 Manajemen Data Pembelian
+                 <small>Tambah Pembelian</small>
+             </h1>
+             <ol class="breadcrumb">
+                 <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                 <li><a href="#">Manajemen Pembelian</a></li>
+                 <li class="active">Tambah Pembelian</li>
+             </ol>
+         </section>
+
+         <!-- Main content -->
+         <section class="content">
+
+             <!-- Default box -->
+             <div class="box">
+                 <div class="box-body">
+                     <!-- Menampilkan Error jika validasi tidak valid -->
+                     <div style="color: red;"><?php echo validation_errors();?></div>
+
+                     <?php echo form_open('pembelian/tambah');?>
+                     <table cellpadding="8">
+                         <tr>
+                             <td>Tanggal</td>
+                             <td><input type="text" id="tanggal" name="tanggal" class="form-control">
+                                 <label class="text-danger">*Tanggal harus format yyyy-mm-dd contoh 2020-10-22</label></td>
+                         </tr>
+                         <tr>
+                             <td>Jenis Pembelian</td>
+                             <td>
+                                 <input type="radio" id="jenis_pembelian" name="jenis_pembelian" value="1" checked/>Barang Baru
+                                 <input type="radio" id="jenis_pembelian" name="jenis_pembelian" value="2" />Penambahan Stok
+                                 <input type="radio" id="jenis_pembelian" name="jenis_pembelian" value="3" />Keluar Stok
+                             </td>
+                         </tr>
+                         <tr>
+                             <td>Supplier</td>
+                             <td><select name="id_supplier" class="form-control">
+                                     <option value="">-- Pilih Supplier --</option>
+                                     <?php foreach ($supplier as $s) {?>
+                                         <option value="<?php echo $s->id_supplier?>"><?php echo $s->nama_supplier?></option>
+                                     <?php 	}?>
+                                 </select></td>
+                         </tr>
+                         <tr>
+                             <td>Barang</td>
+                             <td><select name="id_barang" class="form-control">
+                                     <option value="">-- Pilih Barang --</option>
+                                     <?php foreach ($barang as $br) {?>
+                                         <option value="<?php echo $br->id_barang?>"><?php echo $br->nama_barang?></option>
+                                     <?php 	}?>
+                                 </select></td>
+                         </tr>
+                         <tr>
+                             <td>Jumlah</td>
+                            
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 8 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+  }
+ .item-img img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+ .item-text {
+    margin-left: 20px;
+    font-size: 16px;
+    color: black;
+  }
+</style> <template>
+  <div>
+    <header>
+      <h2>
+       {{title}}
+      </h2>  
+      <!-- <div>
+        <button type="button" name="button" @click="handleClick">点击我</button>
+      </div> -->
+      <!-- 封装组件 -->
+      <button type="button name="button" @click="handleClick">{{isShow? "点击" : "不点击"}}</button>
+    </header>
+  </div>
+</template>
+<script type="text/javascript">
+  export default {
+    name: "AppHeader",
+    data() {
+      return {
+        title: '购物街',
+        isShow: true,
+      };
+    },
+    mounted() {
+
+    },
+    methods: {
+      handleClick() {
+        this.isShow =!this.isShow
+      }
+    }
+  }
+</script>
+<style type="text/css">
+  header {
+    height: 30px;
+    padding: 5px 10px;
+    /* 背景色 */
+    background: url(./../../assets/imgs/header-background.png) no-repeat;
+    /* 背景色 */
+    background-position-y: 11px;
+    /* 背景颜色 */
+    background-color: #eeeeee;   
+    display: flex;
+  }
+  h2 {
+    margin-right: 20px;
+    margin-left: 20px;
+    /* font-size: 20px; */
+    line-height: 30px;
+  }
+  button {
+    margin-left: 200px; 
+  }
+ .item-img {
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+
+Precision: 0
+Recall: 0
+F1 Score: 0

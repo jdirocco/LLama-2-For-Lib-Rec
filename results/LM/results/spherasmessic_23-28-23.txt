@@ -1,0 +1,238 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: spheras/messic
+    Project Description: \n\n Messic \n Copyright C 2013\n\n This program is free software: you can redistribute it and/or modify\n it under the terms of the GNU General Public License as published by\n the Free Software Foundation, either version 3 of the License, or\n at your option any later version.\n\n This program is distributed in the hope that it will be useful,\n but WITHOUT ANY WARRANTY; without even the implied warranty of\n MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\n GNU General Public License for more details.\n\n You should have received a copy of the GNU General Public License\n along with this program. If not, see .\n\nMESSIC\n======\n\nMessic comes from the union of two words:\n Mess: A dirty or untidy state of things or of a place\n Music: Vocal or instrumental sounds or both combined in such a way as to produce beauty of form, harmony, and expression of emotion\n\nThe aim of this project is to convert this mess of music into an ordered catalog of music and play it in a confortable way. The main characteristics will be:\n\n It sorts your library of music as automatically as possible.\n It gives you absolute control of your music. You can always go to the file system and do whatever you want with your music.\n It plays your music in a very very confortable and beautiful interface.\n It is executed via web, so you could run this service at home for every device.\n It is multiuser.\n It is focused on managing your home catalog of music. We want to manage and listen to our own catalog of music.\n\nPlease, visit us at our web page to get more information:\n you can visit our wiki also:\n you!\n'
+    Existing Dependencies:
+    org.springframework:spring-aop
+- org.hibernate:hibernate-entitymanager
+- org.messic:messic-starter
+- com.google.apis:google-api-services-youtube
+- org.springframework.security:spring-security-core
+- org.mockito:mockito-all
+- org.springframework:spring-jdbc
+- net.jthink:jaudiotagger
+- commons-codec:commons-codec
+- org.springframework:spring-aspects
+- org.springframework:spring-test
+- org.fourthline.cling:cling-support
+- org.springframework.security:spring-security-config
+- org.osgi:org.osgi.core
+- net.coobird:thumbnailator
+- commons-cli:commons-cli
+- org.springframework:spring-oxm
+- org.springframework.security:spring-security-web
+- commons-logging:commons-logging
+- taglibs:standard
+- org.springframework:spring-core
+- org.messic:messic-server-common
+- org.messic:messic-server-datamodel
+- commons-collections:commons-collections
+- org.springframework:spring-webmvc-portlet
+- junit:junit
+- com.h2database:h2
+- org.messic:messic-server-webapp
+- commons-io:commons-io
+- commons-dbcp:commons-dbcp
+- org.springframework:spring-tx
+- commons-lang:commons-lang
+- org.aspectj:aspectjweaver
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 33 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<div class="col-md-12">
+
+
+
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="box box-success">
+      <div class="panel panel-info">
+            <div class="panel-heading"><strong><?php echo $employee->last_name." ".$employee->last_name." (".$employee->position_name.")";?></strong>
+
+            </div>
+            <div class="panel-body">
+                <h5 style="color: gray; font-size:10px">EMPLOYEE LEAVE BALANCES</h5>
+                
+              <div class="col-md-3">
+              <h5>
+                  
+                  <?php 
+                  $total_leave_credits = 0;
+                  foreach($leave_info as $leave){
+                        $available_leave_balance = ($leave->total_number_of_days - $leave->number_of_days_used);                 
+                        $leave_credits = $available_leave_balance / $leave->number_of_days;
+                        $total_leave_credits += $leave_credits;
+                  }
+                  echo $total_leave_credits;
+                 ?>
+
+                  
+              </h5>
+              <h5 style="color: gray; font-size:10px">Total Leave Credits</h5>
+            </div>
+
+            <div class="col-md-3">
+                <h5 style="color: gray; font-size:10px">Leave Balances (<?php echo $date_to;?>)</h5>
+              <h5>
+                  <?php 
+                  $total_available_leave_balance = 0;
+                  foreach($leave_info as $leave){
+                        $available_leave_balance = ($leave->total_number_of_days - $leave->number_of_days_used);                 
+                        $total_available_leave_balance += $available_leave_balance;
+                  }
+                  if($total_available_leave_balance==0){?>
+                     0.00 
+                 <?php }else{ $decimal = explode('.',$total_available_leave_balance);
+                      echo $decimal[0];}?>
+
+                  
+
+              </h5>
+            </div>
+
+             <div class="col-md-3">
+                <h5 style="color: gray; font-size:10px">Approved Leave Requests</h5>
+              <h5>
+               
+               <?php $total_approved_leave = 0; foreach($leave_request_approved as $approve){ $total_approved_leave += $approve->no_of_days; } echo $total_approved_leave;?>
+                  
+              </h5>
+                  
+
+            </div>
+
+            <div class="col-md-3">
+                <h5 style="color: gray; font-size:10px">Pending Leave Requests</h5>
+              <h5>
+                <?php  $total_pending_leave = 0; foreach($leave
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 33 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <script>
+import BaseInputField from './BaseInputField.vue'
+import { mapValues, merge, cloneDeep } from 'lodash-es'
+
+export default {
+  extends: BaseInputField,
+  computed: {
+   ...mapValues({
+      value: 'get',
+      label: 'getLabel',
+      placeholder: 'getPlaceholder',
+      description: 'getDescription',
+      hint: 'getHint',
+      type: 'getType',
+      rules: 'getRulesForField',
+      validation: 'getValidation',
+      errorMessages: 'getErrorMessagesForField'
+    }),
+
+    fieldComponent () {
+      const fieldComponentMap = {
+        text: 'TextField',
+        textarea: 'TextAreaField',
+        select: 'SelectField',
+        checkbox: 'CheckboxField',
+        radio: 'RadioField'
+      }
+
+      let componentName = this.validation.component
+
+      if (!componentName ||!fieldComponentMap[componentName]) {
+        componentName = fieldComponentMap[this.type]
+      }
+
+      return componentName
+    },
+
+    fieldComponentProps () {
+      const fieldComponentMap = {
+        checkbox: 'CheckboxFieldProps',
+        radio: 'RadioFieldProps'
+      }
+
+      let componentProps = this.validation.componentProps
+
+      if (!componentProps ||!fieldComponentMap[this.type]) {
+        componentProps = fieldComponentMap[this.type]
+      }
+
+      if (!componentProps) {
+        return componentProps
+      }
+
+      return cloneDeep(this.validation.componentProps)
+    },
+
+    inputComponentProps () {
+      const inputComponentPropsMap = {
+        input: 'InputFieldProps',
+        textarea: 'TextAreaFieldProps'
+      }
+
+      let componentProps = this.validation.componentProps
+
+      // use text field if not explicitly declared
+      if (!componentProps ||!inputComponentPropsMap[this.type]) {
+        componentProps = inputComponentPropsMap[this.type]
+      }
+
+      if (!componentProps) {
+        return componentProps
+      }
+
+      let newComponentProps = cloneDeep(this.validation.componentProps)
+
+      if (this.value === undefined || this.value === null || this.value.length === 0 || this.validation.alwaysReset) {
+        if (this.type === 'text' &&!newComponentProps.value) {
+          if (this.validation.reset) {
+            newComponentProps.value = this.validation.reset.value || ''
+          } else {
+            newComponentProps.value = ''
+          }
+        }
+      } else {
+        if (this.type === 'text') {
+          newComponentProps.value = this.value
+        } else if (newComponentProps.selectedOption) {
+          newComponentProps.selectedOption = this.value
+        } else if (newComponentProps.checkedValue) {
+          newComponentProps.checkedValue = this.value
+        }
+      }
+
+      return merge({}, componentProps, newComponentProps)
+    },
+
+    componentProps () {
+      if (this.fieldComponent === 'TextField' || this.fieldComponent === 'TextAreaField') {
+        return this.inputComponentProps
+      } else if (this.fieldComponent === 'SelectField') {
+        if (this.inputComponentProps) {
+          return merge({}, this.fieldComponentProps, this.inputComponent
+
+Precision: 0
+Recall: 0
+F1 Score: 0

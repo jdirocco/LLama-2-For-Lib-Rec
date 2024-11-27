@@ -1,0 +1,168 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: yeokm1/docs-to-pdf-converter
+    Project Description: Docs to PDF Converter\n=====================\n\nI\'m not maintaining this code as I neither have personal resources nor am I still using this project. I\'ll be happy to oblige if you have any pull requests or even if you wish to be a comaintainer.\n\nA standalone Java library/command line tool that converts DOC, DOCX, PPT, PPTX and ODT documents to pdf files. Requires JRE 7\n\nThe v1.7 release has not been updated for about 2 years although it seems quite reliable for me. In response to an to update the libraries, I have done so with the new v1.8. I now use Maven to managed the libraries in the pom.xml file.\n\nI have not tested v1.8 much so if you face any issues, you can still use v1.7 in the Releases section.\n\n Table of content\n\n \n \n \n \n \n \n \n \n \n \n \n\n Why? \nI wanted a simple program that can convert Microsoft Office documents to PDF but without dependencies like LibreOffice or expensive proprietary solutions. Seeing as how code and libraries to convert each individual format is scattered around the web, I decided to combine all those solutions into one single program. Along the way, I decided to add ODT support as well since I encountered the code too.\n\n Command Line Usage: \n\n\n\n Parameters: \n\n\n Library Usage: \n\n1. Drop the jar into your lib folder and add to build path. \n2. Choose the converter of your choice, they are named DocToPDFConverter, DocxToPDFConverter, PptToPDFConverter, PptxToPDFConverter and OdtToPDFConverter. \n3. Instantiate with 4 parameters \n InputStream : Document source stream to be converted \n OutputStream : Document output stream \n boolean : Whether to show intermediate processing messages to Standard Out stdout \n boolean : Whether to close input and output streams when complete \n4. Call the "convert" method and wait. \n\n\n Caveats and technical details: \nThis tool relies on Apache POI, xdocreport, docx4j and odfdom libraries. They are not 100% reliable and the output format may not always be what you desire.\n\n\n DOC:\nGenerally ok but takes some time to convert.. I notice that after conversion, the paragraph spacing tends to increase affecting your page layout. Conversion is done using docx4j to convert DOC to DOCX then to PDF.Cannot use xdocreport once the DOCX data is obtained as the intermediate data structure is docx4j specific.\n\n DOCX:\nVery good results. Fast conversion too. Conversion is done using xdocreport library as it seems faster and more accurate than docx4j.\n\n PPT and PPTX:\nResulting file is a PDF comprising of a PNG embedded in each page. Should be good enough for printing. This is the limitation of the Apache POI and docx4j libraries.\n\n ODT:\nQuality and speed as good as DOCX. Conversion is done using odfdom of the Apache ODF Toolkit.\n\n Main Libraries \nApache POI: \nxdocreport: \ndocx4j: \nodfdom: \nand others... \n\n Compiling the code\n\n I just want the jar\n\n\n\nThe output jar file can be found in the folder.\n\n Development\nI\'m using Eclipse Mars IDE Java EE with the M2Eclipse plugin. Simply create a workspace and import my project into it. Let Maven do its work in downloading all the necessary dependencies. Once everything is downloaded, you should be able to run the MainClass.\n\nMore details can be found in the .\n\nThe MIT License MIT\nCopyright c 20132014 Yeo Kheng Meng\n'
+    Existing Dependencies:
+    fr.opensagres.xdocreport:org.odftoolkit.odfdom.converter.pdf
+- fr.opensagres.xdocreport:fr.opensagres.xdocreport.itext.extension
+- org.apache.poi:poi-scratchpad
+- fr.opensagres.xdocreport:org.apache.poi.xwpf.converter.pdf
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">           
+    <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Data User</div>
+                    <div class="panel-body">
+                    <p><a href="<?php echo site_url('admin/C_admin/formUser');?>" <button class="btn btn-success">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Tambah</button></a></p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped" id="example">
+                                <thead>
+                                    <tr>
+                                        <th width="30px">No</th>
+                                        <th>Nama</th>
+                                        <th>Username</th>
+                                        <th width="150px" >Hak akses</th>
+                                        <th width="100px" colspan="2" >AKSI
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                    $no=1;
+                                    foreach ($data as $a) {
+                               ?>
+                                    <tr>
+                                        <td><?php print $no;?></td>
+                                        <td><?php print $a['nama'];?></td>
+                                        <td><?php print $a['username'];?></td>
+                                        <td><?php print $a['hak_akses'];?></td>
+                                        <td>
+                                            <a href="<?php echo site_url('admin/C_admin/formUser/').$a['id'];?>" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span> Ubah</a>
+                                            <a href="<?php echo site_url('admin/C_admin/hapusUser/').$a['id'];?>" onClick="return confirm('Yakin Akan Menghapus Data')" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Hapus</a>
+                                        </td>
+                                    </tr>
+                                <?php
+                                $no++;
+                                    }
+                               ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.row-->  
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import UIKit
+import CoreData
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
+import GoogleMaps
+
+class ProfileTableViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UINavigationControllerDelegate, UITextFieldDelegate {
+
+    @IBOutlet weak var userNameText: UITextField!
+    @IBOutlet weak var firstNameText: UITextField!
+    @IBOutlet weak var lastNameText: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var collectionView: UICollectionView!
+
+    var ref: FIRDatabaseReference!
+    var user: [User] = []
+    var userImage: UIImage!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.emailTextField.delegate = self
+        self.firstNameText.delegate = self
+        self.lastNameText.delegate = self
+        self.userNameText.delegate = self
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        ref = appDelegate.ref
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedViewForDismiss(_:)))
+        view.addGestureRecognizer(tap)
+        
+        userNameText.text = (FIRAuth.auth()?.currentUser?.displayName)!
+        firstNameText.text = (FIRAuth.auth()?.currentUser?.email)!
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tappedViewForDismiss(_:)))
+        view.addGestureRecognizer(tap)
+        
+        // Do any additional setup after loading the view.
+        
+    }
+    
+    @objc func tappedViewForDismiss(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return user.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "userCell", for: indexPath) as! UserCollectionViewCell
+        let userItem = user[indexPath.row]
+        
+        cell.userImage.image = userItem.userImage
+        
+        return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if indexPath.row == 0 {
+            let image = user[indexPath.row].userImage
+            let newView = self.storyboard?.instantiateViewController(withIdentifier: "editPhoto")
+            (newView as! EditProfileController).profileImage = image
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

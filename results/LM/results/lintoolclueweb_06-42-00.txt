@@ -1,0 +1,178 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: lintool/clueweb
+    Project Description: ClueWeb Tools\n=============\n\nHadoop tools for manipulating ClueWeb collections, the most recent of which is .\n\nSign up to the mailing list at .\n\nGetting Stated\n\n\nYou can clone the repo with the following command:\n\n \n\nOnce you\'ve cloned the repository, build the package with Maven:\n\n\n\nTwo notes:\n\n automatically generates a few launch scripts for you.\n in addition to the normal jar , this package uses the to create a "fat jar" that includes all dependencies except for Hadoop, so that the jar can be directly submitted via .\n\nTo automatically generate project files for Eclipse:\n\n\n\nYou can then use Eclipse\'s Import "Existing Projects into Workspace" functionality to import the project.\n\nCounting Records\n\n\nFor sanity checking and as a "template" for other Hadoop jobs, the package provides a simple program to count WARC records in ClueWeb12:\n\n\n\nExamples of are:\n\n : for a single ClueWeb12 segment\n : for an entire ClueWeb12 disk\n : for all of ClueWeb12\n\nBuilding a Dictionary\n\n\nThe next step is to build a dictionary that provides three capabilities:\n\n a bidirectional mapping from terms strings to termids integers\n lookup of document frequency df by term or termid\n lookup of collection frequency cf by term or termid\n\nTo build the dictionary, we must first compute the term statistics:\n\n\n\nBy default, the program throws away all terms with df less than 100, but this parameter can be set on the command line. The above command compute term statistics for a segment of ClueWeb12. It\'s easier to compute term statistics segment by segment to generate smaller and more manageable Hadoop jobs.\n\nCompute term statistics for all the other segments in the same manner.\n\nNext, merge all the segment statistics together:\n\n\n\nFinally, build the dictionary:\n\n\n\nYou need to provide the number of terms in the dictionary via the option. That value is simply the number of output reducers from .\n\nTo explore the contents of the dictionary, use this little interactive program:\n\n\n\nOn ClueWeb12, following the above instructions will create a dictionary with 7,160,086 terms.\n\n\nImplementation details: Tokenization is performed by first using Jsoup throw away all markup information and then passing the resulting text through Lucene\'s .\n\nThe dictionary has two components: the terms are stored as a frontcoded list which necessarily means that the terms must be sorted; a monotone minimal perfect hash function is used to hash terms strings into the lexicographic position. Term to termid lookup is accomplished by the hashing function to avoid binary searching through the frontcoded data structure, which is expensive. Termid to term lookup is accomplished by direct accesses into the frontcoded list. An additional mapping table is used to convert the lexicographic position into the dfsorted termid. \n\nBuilding Document Vectors\n\n\nWith the dictionary, we can now convert the entire collection into a sequence of document vectors, where each document vector is represented by a sequence of termids; the termids map to the sequence of terms that comprise the document. These document vectors are much more compact and much faster to scan for processing purposes.\n\nThe document vector is represented by the interface . Currently, there are two concrete implementations:\n\n , which uses Hadoop\'s builtin utilities for writing variablelength integers what Hadoop calls VInt.\n , which uses PFor compression from Daniel Lemire\'s package.\n\nTo build document vectors, use either or :\n\n\n\nOnce again, it\'s advisable to run on a segment at a time in order to keep the Hadoop job sizes manageable. Note that the program run identity reducers to repartition the document vectors into 100 parts to avoid the small files problem.\n\nThe output directory will contain s, with a containing the WARCTRECID as the key. For VByte, the value will be a object; for PFor, the value will be an object.\n\nTo process these document vectors, either use or in the package, which provides sample code for consuming these document vectors and converting the termids back into terms.\n\nSize comparisons, on the entire ClueWeb12 collection:\n\n 5.54 TB: original compressed WARC files\n 1.08 TB: repackaged as s\n 0.86 TB: repackaged as s\n 1.6 TB: uncompressed termids collection size is 400 billion terms\n\nLicense\n\n\nLicensed under the Apache License, Version 2.0:
+    Existing Dependencies:
+    org.apache.lucene:lucene-analyzers-common
+- commons-cli:commons-cli
+- org.apache.ant:ant
+- commons-io:commons-io
+- org.apache.lucene:lucene-core
+- org.apache.lucene:lucene-queryparser
+- org.apache.hadoop:hadoop-core
+- me.lemire.integercompression:JavaFastPFOR
+- it.unimi.dsi:sux4j
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12"> 
+               <div class="text-center"><h3>Daftar Pengguna </h3></div>
+            </div> 
+        </div>  
+        <h1>Tambah Baru </h1>
+        <table class="table">
+        <tr style="background-color:'blue'" ; ><td style="background-color:'yellow'">Username</td><td>Nama</td><td>Email</td><td>Password</td><td>Role</td><td>Status</td><td>Action</td></tr>
+            <?php 
+            foreach($user as $user){
+                echo "<tr>
+                <td style='background-color:'yellow';'>".$user->name."</td>
+                <td>".anchor('user/edit/'.$user->id,'Edit')."
+                | ".anchor('user/delete/'.$user->id,'Delete')."</td>
+                </tr>";
+            }
+           ?>
+        </table>
+    </div>
+
+    <div class="container">
+        <div class="row"> 
+            <?php echo anchor('user/create','create user ');?>
+            <div class="col-lg-12"> 
+                <div class="text-center"><h3>Daftar Postingan </h3></div>
+            </div> 
+        </div>  
+        <h1>Tambah Baru </h1>
+        <table class="table">
+            <tr style="background-color:#0000FF;" ; >
+            <td style="background-color:yellow;">Username</td><td>Nama</td><td>Email</td><td>Password</td><td>Role</td><td>Status</td><td>Action</td></tr>
+            <?php
+            foreach($post as $post)
+            {
+                    echo "<tr>
+                    <td style='background-color:yellow';>".$post->username."</td>
+                    <td>".anchor('post/edit/'.$post->id,'Edit')."
+                    | ".anchor('post/delete/'.$post->id,'Delete')."</td>
+                    </tr>";
+            }
+           ?>
+        </table>
+</div>  
+        
+        
+    
+</div> 
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> // Generated by the protocol buffer compiler.  DO NOT EDIT!
+// source: google/cloud/compute/v1/compute.proto
+
+package com.google.cloud.compute.v1;
+
+/**
+ *
+ *
+ * <pre>
+ * </pre>
+ *
+ * Protobuf type {@code google.cloud.compute.v1.NodeTypesScopedList}
+ */
+public final class NodeTypesScopedList extends com.google.protobuf.GeneratedMessageV3
+    implements
+    // @@protoc_insertion_point(message_implements:google.cloud.compute.v1.NodeTypesScopedList)
+    NodeTypesScopedListOrBuilder {
+  private static final long serialVersionUID = 0L;
+  // Use NodeTypesScopedList.newBuilder() to construct.
+  private NodeTypesScopedList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    super(builder);
+  }
+
+  private NodeTypesScopedList() {}
+
+  @java.lang.Override
+  @SuppressWarnings({"unused"})
+  protected e>
+   *
+   * @return A list of node types contained in this scope.
+   */
+  @java.lang.Override
+  public java.util.List<com.google.cloud.compute.v1.NodeType> getNodeTypesList() {
+    return nodeTypes_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * [Output Only] A list of node types contained in this scope.
+   * </pre>
+   *
+   * <code>repeated.google.cloud.compute.v1.NodeType node_types = 171816511;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.cloud.compute.v1.NodeTypeOrBuilder>
+      getNodeTypesOrBuilderList() {
+    return nodeTypes_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * [Output Only] A list of node types contained in this scope.
+   * </pre>
+   *
+   * <code>repeated.google.cloud.compute.v1.NodeType node_types = 171816511;</code>
+   */
+  @java.lang.Override
+  public int getNodeTypesCount() {
+    return nodeTypes_.size();
+  }
+  /**
+   *
+   *
+   * <pre>
+   * [Output Only] A list of node types contained in this scope.
+   * </pre>
+   *
+   * <code>repeated.google.cloud.compute.v1.NodeType node_types = 171816511;</code>
+   */
+  @java.lang.Override
+  public com.google.cloud.compute.v1.NodeType getNodeTypes(int index) {
+    return nodeTypes_.get(index);
+  }
+  /**
+   *
+   *
+   * <pre>
+   * [Output Only] A list of node types contained in this scope.
+   * </pre>
+   *
+   * <code>repeated.google.cloud.compute.v1.NodeType node_types = 171816511;</code>
+   */
+  @java.lang.Override
+  public com.google
+
+Precision: 0
+Recall: 0
+F1 Score: 0

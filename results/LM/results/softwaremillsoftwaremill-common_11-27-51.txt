@@ -1,0 +1,164 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: softwaremill/softwaremill-common
+    Project Description: SoftwareMill Common project\n\nMost of the modules are usable standalone and do not require other modules. Simply include the jar in your\nproject and you\'re ready to use it. See the individual module READMEs for more information.\n\nJars and sources are available in our Maven repositories:\n\n \n softwaremillsnapshots\n SoftwareMill Snapshots\n \n \n softwaremillreleases\n SoftwareMill Releases\n \n\nTo use SoftwareMill Common in a project define a parent section in the main pom of the project:\n\n \n com.softwaremill.common\n softwaremillparent\n \n\n Transaction interceptors\n Stackable security interceptors\n Implementation of assisted inject in Weld autofactories\n Objectservices polymorphic extension methods\n Static bean injection\n\n \n\n Transaction phase listeners "open session in view"\n Security phase listeners\n Navigation handlers\n i18n, messaging, validation utilities\n\n \n\nReads keyvalue configuration files either from JBoss\'s conf directory which have priority or from the classpath. \n\n \n\n \n\nOur BOM.\n\n Testing utilities\n\n \n\nLets you run tests that use a database.\n\n \n\n \n\n \n\nFor testing of requests sent to server\n\n \n\n \n\nScripts and java classes to backup SimpleDB domains and upload them to S3.\n\n \n\nA timing interceptor web filter portable extension for profiling CDI beans.\n\n \n\nPaypal utilities for handling paypal requests IPN and generating paypal pay buttons custom cart.\n\n\n\nLicensed under the Apache2 license. .\n'
+    Existing Dependencies:
+    org.assertj:assertj-core
+- org.hibernate:hibernate-entitymanager
+- com.google.code.findbugs:jsr305
+- org.jboss.arquillian.container:arquillian-weld-ee-embedded-1.1
+- org.hamcrest:hamcrest-core
+- com.softwaremill.common:softwaremill-backup
+- org.jboss.seam.remoting:seam-remoting
+- com.softwaremill.common:softwaremill-cdi
+- com.google.guava:guava
+- com.jayway.awaitility:awaitility
+- org.slf4j:slf4j-jdk14
+- com.softwaremill.common:softwaremill-test-db
+- org.hamcrest:hamcrest-library
+- com.softwaremill.common:softwaremill-conf
+- org.jboss.mx:jboss-jmx
+- org.richfaces:richfaces-bom
+- com.googlecode.catch-exception:catch-exception
+- org.jboss.seam.faces:seam-faces
+- com.softwaremill.common:softwaremill-util
+- eviware:soap-xmlbeans
+- commons-lang:commons-lang
+- dumbster:dumbster
+- org.apache.httpcomponents:httpcore
+- javax.faces:jsf-api
+- com.softwaremill.common:softwaremill-test-util
+- org.apache.httpcomponents:httpclient
+- com.softwaremill.common:softwaremill-sqs
+- com.softwaremill.common:softwaremill-test-server
+- eviware:soapui-xmlbeans
+- org.elasticmq:elasticmq-rest-sqs_2.9.1
+- com.google.code.gson:gson
+- javax.enterprise:cdi-api
+- org.apache.xmlbeans:xmlbeans
+- org.seleniumhq.selenium:selenium-server
+- ch.qos.logback:logback-classic
+- org.jboss.weld.servlet:weld-servlet-core
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.jboss.spec:jboss-javaee-6.0
+- org.slf4j:slf4j-api
+- javax.el:el-ri
+- commons-codec:commons-codec
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 41 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <header class="top-nav">
+    	<div>
+    		<ul>
+    			<li><a href="index.php">Home</a></li>
+    			<li><a href="index.php">About</a></li>
+    			<li><a href="index.php">Services</a></li>
+    			<li><a href="index.php">Products</a></li>
+    			<li><a href="contact.php">Contact</a></li>
+    		</ul>
+    	</div>
+    </header>
+
+    <section class="top-bar">
+    	<div class="container">
+    		<h1>We are <span>Better</span> than others</h1>
+    		<p>We help you to improve your business by our experience</p>
+    		<a href="#" class="btn">Get in touch</a>
+    	</div>
+    </section>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 41 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>.get(0).getCover().toString());
+    Assert.assertEquals("https://www.youtube.com/watch?v=5y6Z7o2l01Q",
+        result.get(0).getEmbedUrl().toString());
+  }
+
+  @Test
+  public void itReturnsAListOfResultsWithoutCover() throws Exception {
+    List<String> response = new ArrayList<>();
+    response.add(
+        "https://www.youtube.com\n" +
+            "# 1. The title\n" +
+            "\n" +
+            "https://www.youtube.com/watch?v=5y6Z7o2l01Q\n"
+    );
+    when(mockHttpService.request(anyString(), anyString())).thenReturn(response);
+
+    List<SearchResult> result = searchService.search("The title");
+    Assert.assertEquals(1, result.size());
+    Assert.assertEquals("https://www.youtube.com", result.get(0).getCover().toString());
+  }
+
+  @Test
+  public void itReturnsAListOfResultsWithoutEmbedUrl() throws Exception {
+    List<String> response = new ArrayList<>();
+    response.add(
+        "https://www.youtube.com\n" +
+            "# 1. The title\n" +
+            "\n" +
+            "# Cover\n"
+    );
+    when(mockHttpService.request(anyString(), anyString())).thenReturn(response);
+
+    List<SearchResult> result = searchService.search("The title");
+    Assert.assertEquals(1, result.size());
+    Assert.assertEquals("# Cover\n", result.get(0).getDescription().toString());
+  }
+
+  @Test
+  public void itReturnsNothingWhenNoResult() throws Exception {
+    List<String> response = new ArrayList<>();
+    when(mockHttpService.request(anyString(), anyString())).thenReturn(response);
+
+    List<SearchResult> result = searchService.search("The title");
+    Assert.assertEquals(0, result.size());
+  }
+} package com.alorma.github.sdk.services.youtube;
+
+import com.alorma.github.sdk.services.client.GithubListClient;
+import com.alorma.github.sdk.services.client.BaseRxTest;
+import com.alorma.github.sdk.bean.info.IssueInfo;
+import com.alorma.github.sdk.bean.info.RepoInfo;
+import com.alorma.github.sdk.bean.info.MilestoneInfo;
+import com.alorma.github.sdk.bean.info.IssueInfo;
+import com.alorma.github.sdk.bean.info.RepoInfo;
+import com.alorma.github.sdk.bean.info.MilestoneInfo;
+import core.datasource.CloudDataSource;
+import core.repository.GenericRepository;
+import core.datasource.RestWrapper;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import okhttp3.HttpUrl;
+import okhttp3.ResponseBody;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,154 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: devnied/EMV-NFC-Paycard-Enrollment
+    Project Description: EMV NFC Paycard Enrollment \n Description\nJava library used to read and extract public data from NFC EMV credit cards.\n\nAndroid sample app available on Play store.\n\n\n\n Getting started\n\nFirst you need to create a custom Provider to exchange APDU with an NFC EMV credit card .\n\n\nAfter that, create an instance of a parser and read the card.\n\ncard object contains all data read Aid, card number, expiration date, card type, transactions history\n\n Android usage\nFor android, you can create a provider with class:\n\n\n Screens\n\n\n\n Download\n\n Maven\n\n\n Gradle\n\n\n JAR\nYou can download this library on or in Github \n\n Dependencies\n\nIf you are not using Maven or some other dependency management tool that can understand Maven repositories, the list below is what you need to run EMVNFCPaycardEnrollment.\n\n Build\nTo build the project launch:\n\n Bugs\n\nPlease report bugs and feature requests to the GitHub issue tracker.\nForks and Pull Requests are also welcome.\n\n Author\n\nMillau Julien\n\n \n \n\n\n Copyright and license\n\nCopyright 2020 Millau Julien.\n\nLicensed under the Apache License, Version 2.0 the "License";\nyou may not use this work except in compliance with the License.\nYou may obtain a copy of the License in the LICENSE file, or at:\n\n \n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n'
+    Existing Dependencies:
+    org.powermock:powermock-module-junit4
+- commons-io:commons-io
+- com.github.devnied.emvnfccard:library
+- com.android.support:v4
+- com.google.android:android
+- org.apache.commons:commons-lang3
+- com.readystatesoftware.systembartint:systembartint
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    </header>
+    
+    <!-- Header -->
+    <div class="header bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-6 mt-3">
+              <img src="https://www.mccann-erickson.com.mx/wp-content/uploads/2014/05/logo.jpg" width="150px" height="150px;"></a>
+          </div>
+          <div class="col-md-2 col-md-8 mt-3">
+            <h1>CENTRO MÉDICO UNIVERSAL</h1>
+          </div>
+          <div class="col-md-2 col-md-8 mt-3">
+            <h1>C.U.C.A</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { BehaviorSubject } from "rxjs/BehaviorSubject";
+import { environment } from "./../../environments/environment";
+import { User } from "./../_models/user";
+import { UserService } from "./user.service";
+import { map } from 'rxjs/operators'
+import { Observable } from 'rxjs';
+import { Role } from './models/role';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UserRoleService  {
+  public apiUrl: string =environment.ApiUrl+"/api/v1/Rol";
+  public apiUrl2: string =environment.ApiUrl+"/a  .pipe(
+        map(result =>
+            // login successful if there's a jwt token in the response
+            //console.log(result);
+            result.data));
+         
+  }
+
+  deleteUser(data){       
+    return this.http.post(`${this.apiUrl3}/${data.id}`,data).toPromise()
+   .then(response => response)
+   .catch(this.handleError);
+  }
+  deleteUserRole(data){       
+    return this.http.delete(`${this.apiUrl2}/${data.id}`,).toPromise()
+   .then(response => response)
+   .catch(this.handleError);
+  }
+
+  private handleError(error: any): Promise<any> {
+    console.error('An error occurred', error); // for demo purposes only
+    return Promise.reject(error.message || error);
+  }
+
+}
+
+
+
+
+
+
+
+
+pi/v1/RoleUsuarios";
+  public apiUrl3: string =environment.ApiUrl+"/api/v1/Usuario";
+  private currentUserSubject: BehaviorSubject<User>;
+  public currentUser: Observable<User>;
+
+
+  constructor(
+    private http:HttpClient,
+    private userService:UserService,
+  ) {
+      this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
+      this.currentUser = this.currentUserSubject.asObservable();
+  }
+
+  getRoles(){
+    return this.http.post(this.apiUrl,null)
+   .pipe(
+    )
+  }
+  
+  getUsers(){
+    return this.http.get(this.apiUrl3)
+   .pipe(
+      map(users =>{
+        // console.log(users);
+        return users;
+        })
+
+    )
+  }
+  saveUserData(data){    //console.log(data);    
+    return this.http.post(this.apiUrl3,data).toPromise()
+   .then(response => response)
+   .catch(this.handleError);
+  }
+  saveUserRole(data){    //console.log(data);    
+    return this.http.post(this.apiUrl2,data).toPromise()
+   .then(response => response)
+   .catch(this.handleError);
+  }
+
+  getUsersRoles(){
+    return this.http.post(this.apiUrl+"/list",null)
+  
+
+Precision: 0
+Recall: 0
+F1 Score: 0

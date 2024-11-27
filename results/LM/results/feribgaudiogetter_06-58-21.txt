@@ -1,0 +1,147 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: feribg/audiogetter
+    Project Description: audiogetter\n\nThis is a work in progress, currently it doesn't compile or run\n\nThe purpose of this application is to allow the search and download of various audio sources such as youtube, vimeo etc. Furthermore \nit's mobile optimized, which means it will only download the audio bytes from a youtube video, resulting in faster downloads and lower mobile data consumption.\n\n\n"
+    Existing Dependencies:
+    com.googlecode.mp4parser:isoparser
+- org.jsoup:jsoup
+- org.roboguice:roboguice
+- commons-io:commons-io
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-text">
+                            <h4 class="card-title">
+                                Login
+                            </h4>
+                            <hr/>
+
+                            <div class="row justify-content-center">
+                                <div class="alert alert-warning" role="alert">
+                                    Please use the following demo credentials for logging in.
+                                </div>
+
+                                <table class="table">
+                                    <tr>
+                                        <th>Admin</th>
+                                        <td>admin@admin.com</td>
+                                        <td>password</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Staff</th>
+                                        <td>sales@sales.com</td>
+                                        <td>password</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <form method="POST" action="{{ route('login') }}">
+                                @csrf
+
+                                <div class="form-group row">
+                                    <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+                                        @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                        @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-6 offset-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember')? 'checked' : '' }}>
+
+                                            <label class="form-check-label" for="remember">
+                                                {{ __('Remember Me') }}
+                                            </label>
+                                        </div>
+                                    </div>
+                
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package ru.job4j.loop;
+
+import org.junit.Test;
+
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
+
+public class FactorialTest {
+    @Test
+    public void whenCalculateFactorialForFiveThenOneHundreedTwenty() {
+        Factorial fact = new Factorial();
+        int result = fact.calc(5);
+        assertThat(result, is(120));
+    }
+
+    @Test
+    public void whenCalculateFactorialForZeroThenOne() {
+        Factorial fact = new Factorial();
+        int result = fact.calc   int result = fact.calc(1);
+        assertThat(result, is(1));
+    }
+
+    @Test
+    public void whenCalculateFactorialForNegativeThenMinusOne() {
+        Factorial fact = new Factorial();
+        int result = fact.calc(-1);
+        assertThat(result, is(-1));
+    }
+}
+(0);
+        assertThat(result, is(1));
+    }
+
+    @Test
+    public void whenCalculateFactorialForOneThenOne() {
+        Factorial fact = new Factorial();
+     
+
+Precision: 0
+Recall: 0
+F1 Score: 0

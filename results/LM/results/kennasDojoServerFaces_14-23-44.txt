@@ -1,0 +1,204 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: kennas/DojoServerFaces
+    Project Description: '
+    Existing Dependencies:
+    org.openqa.selenium.server:selenium-server
+- org.bsc.maven:maven-processor-plugin
+- ${project.groupId}:dojoserverfaces-constants
+- ${project.groupId}:dojoserverfaces-library-mobile
+- org.apache.maven:maven-project
+- ${project.groupId}:dojoserverfaces-test-support
+- org.codehaus.groovy:groovy-all
+- org.seleniumhq.selenium:selenium-java
+- ${project.groupId}:dojoserverfaces-test-app
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- Main content -->
+    <section class='content'>
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-8">
+        <!-- general form elements -->
+        <div class="box box-primary">
+            <div class="box-header with-border">
+            <div class="alert alert-warning alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <h4><i class="icon fa fa-warning"></i> Perhatian!</h4>
+                Silahkan lakukan pembayaran sesuai harga paket yang anda pilih.
+            </div>
+            </div>
+            <div class="box-body">
+            <table class="table">
+            <tr><td>ID Pesan</td><td><?php echo $ID_Pesan;?></td></tr>
+            <tr><td>Nama Pemesan</td><td><?php echo $NamaPemesan;?></td></tr>
+            <tr><td>Nama Paket</td><td><?php echo $NamaPaket;?></td></tr>
+            <tr><td>Harga Paket</td><td><?php echo $HargaPaket;?></td></tr>
+            <tr><td>Tanggal Selesai</td><td><?php echo $TanggalSelesai;?></td></tr>
+            </table>
+            <form action="<?php echo $action;?>" method="post">
+            <input type="hidden" name="ID_Pesan"  value="<?php echo $ID_Pesan;?>"/> 
+            <div class="row mb20">
+                <div class="col-sm-12">
+                    <label>Pilih metode pembayaran</label><br/>
+                    <div class="radio">
+                    <label>
+                        <input type="radio" name="jenis_pembayaran" value="Cash"> <img src="<?php echo base_url('assets/images/cash.png');?>">
+                    </label>
+                    </div>
+                    <div class="radio">
+                    <label>
+                        <input type="radio" name="jenis_pembayaran" value="Debit"> <img src="<?php echo base_url('assets/images/debit.png');?>">
+                    </label>
+                    </div>
+                    <div class="radio">
+                    <label>
+                        <input type="radio" name="jenis_pembayaran" value="Kredit"> <img src="<?php echo base_url('assets/images/kredit.png');?>">
+                    </label>
+                    </div>
+                </div>
+            </div>
+
+            <?php if(isset($error)) {?>
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h6><strong>Error!!</strong> <?php echo $error;?> 
+            </div>
+            <?php }?>
+
+           
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.example.myapplication1.Adapter;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.myapplication1.R;
+import com.nostra13.universalimageloader.core.ImageLoader;
+
+public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
+    public TextView textView;
+
+    public ImageView delete;
+    public ImageView add;
+    public ImageView minus;
+    public ImageView imageView;
+    public LinearLayout ll_content;
+    private OnItemClickLitener mOnItemClickLitener;
+    private OnItemLongClickLitener mOnItemLongClickLitener;
+    private Activity context;
+
+    /**
+     * 构造
+     *
+     * @param view
+     */
+    public ViewHolder(Activity activity,View view) {
+
+        this(view);
+        context = activity;
+    }
+
+    public ViewHolder(View view) {
+        super(v  }
+    }
+
+    public void setText(String name) {
+        imageView.setImageResource(R.mipmap.cartempty);
+        textView.setText(name);
+    }
+    public void setImage(String img) {
+        ImageLoader.getInstance().displayImage(img,imageView);
+    }
+    public void setOnClickListener(int position) {
+
+    }
+
+    public void setOnClickListener(View.OnClickListener onClickListener) {
+        ll_content.setOnClickListener(onClickListener);
+    }
+
+    private void initView(View view) {
+
+        imageView = view.findViewById(R.id.iv_image);
+        textView = view.findViewById(R.id.tv_text);
+        delete = view.findViewById(R.id.delete);
+        add = view.findViewById(R.id.add);
+        minus = view.findViewById(R.id.minus);
+        ll_content = view.findViewById(R.id.ll_content);
+    }
+
+    public OnItemClickLitener getOnItemClickLitener() {
+        return mOnItemClickLitener;
+    }
+
+    public void setOnItemClickLitener(OnItemClickLitener mOnItemClickLitener) {
+        this.mOnItemClickLitener = mOnItemClickLitener;
+    }
+
+    public interface OnItemClickLitener {
+        /**
+         * 条目的点击事件
+         *
+         * @param view      view
+         * @param position  位置
+         */
+        public void onItemClick(View view, int position);
+
+        /**
+         * 条目的长按事件
+         * @param view
+         * @param position
+         * @return
+         */
+        public boolean onItemLongClick(View view, int position);
+    }
+
+}iew);
+        initView(view);
+
+
+    }
+
+    /*
+     * 条目的单机事件
+     * @param view     view
+     */
+    @Override
+    public void onClick(View view) {
+
+        int position = getAdapterPosition();
+        // 如果不为-1
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,174 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: Raxa/raxacore
+    Project Description: raxacore\n========\n\nThe raxacore is an OpenMRS module that hosts all the services that are required by the RaxaEMR ontop of the OpenMRS installation. \nThe module provides core REST services required for core RaxaEMR management\nRaxaEMR modules may have their own backend services provided by other OpenMRS modules\nThis module should only depend on the OpenMRS core and webservices.rest module\n\nThe raxacore module provides the following services\n PatientListService'
+    Existing Dependencies:
+    org.raxa.module:raxacore-api
+- org.openmrs.api:openmrs-api
+- org.openmrs.test:openmrs-test
+- org.openmrs.module:webservices.rest-omod
+- com.google.guava:guava
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">Tambah Data</li>
+        </ol>
+
+         <div class="card mb-3">
+          <div class="card-header">
+            <i class="fas fa-table"></i>
+            Tambah Data</div>
+          <div class="card-body">
+            <form class="form-horizontal" method="post" action="<?php echo base_url('admin/pegawai/insert')?>">
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="namapeg">Nama Pegawai</label>
+                  <div class="col-md-4">
+                  <input id="namapeg" name="namapeg" value="<?php echo set_value('namapeg');?>" type="text" placeholder="Nama Pegawai" class="form-control input-md" required>
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="alamatpeg">Alamat Pegawai</label>  
+                  <div class="col-md-4">
+                  <input id="alamatpeg" name="alamatpeg" value="<?php echo set_value('alamatpeg');?>" type="text" placeholder="alamatpeg" class="form-control input-md" required>
+                    
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="notelp">No Telp</label>  
+                  <div class="col-md-4">
+                  <input id="notelp" name="notelp" value="<?php echo set_value('notelp');?>" type="text" placeholder="No Telp" class="form-control input-md" required>
+                    
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="jeniskelamin">Jenis Kelamin</label>  
+                  <div class="col-md-4">
+                  <select name="jeniskelamin" id="jeniskelamin" class="form-control" required>
+                    <option value="Laki-Laki">Laki-Laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                  </select>
+                  </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="pendidikan">Pendidikan Terakhir</label>  
+                  <div class="col-md-4">
+                  <input id="pendidikan" name="pendidikan" value="<?php echo set_value('pendidikan');?>" type="text" placeholder="Pend
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t_t;
+
+
+/*
+ *	This structure defines the set of callbacks that are
+ *	implemented by a driver's device. Each entry in the
+ *	callback vector is a pointer to the device-specific
+ *	callback function.
+ */
+
+typedef struct _device_interface {
+	int (*device_initialize)(void *, int);
+	int (*device_terminate)(void *);
+	int (*device_ioctl)(void *, uint32_t, void *, uint32_t);
+} DEV_OPS_t;
+
+
+/*
+ *	This structure defines the set of functions that are
+ *	implemented by a driver's device object. Each entry in
+ *	the function vector is a pointer to a device-specific
+ *	device function.
+ */
+
+typedef struct _device_object {
+	int (*device_attach)(DEVICE_t *);
+	void (*device_detach)(DEVICE_t *);
+	void (*device_suspend)(DEVICE_t *);
+	void (*device_resume)(DEVICE_t *);
+	int (*device_open)(DEVICE_t *);
+	int (*device_close)(DEVICE_t *);
+	int (*device_read)(DEVICE_t *, char *, uint32_t, uint32_t *);
+	int (*device_write)(DEVICE_t *, char *, uint32_t, uint32_t *);
+	void *device_data;	/* pointer to device private data */
+} DEV_OBJECT_t;
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif #ifndef __DEVICES_H__
+#define __DEVICES_H__
+
+/****************************************************************************
+ *
+ *	device.h interface
+ *
+ ****************************************************************************/
+
+/*
+ *	Define a unique identifier type and a constant value for
+ *	invalid identifier.
+ */
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
+/*
+ *	This structure defines the device object type. Each device
+ *	object maintains a set of device attributes and an identifier
+ *	value. Each attribute has an integer value.
+ */
+
+typedef struct _device_object DEVICE_OBJECT_t;
+
+#define DEVICE_INVALID_ID			0xffffffff
+
+#define DEVICE_ATTR_MASK_TYPE		0x000000ff
+#define  DEVICE_MASK_CHAR_TYPE		0x00000001	/* device is a character device */
+#define  DEVICE_MASK_BLOCK_TYPE		0x00000002	/* device is a block device */
+#define  DEVICE_TYPE_IS_CHARACTER(dev)		(((DEVICE_OBJECT_t *)dev)->attrs & DEVICE_MASK_CHAR_TYPE)
+#define  DEVICE_TYPE_IS_BLOCK(dev)		(((DEVICE_OBJECT_t *)dev)->attrs & DEVICE_MASK_BLOCK_TYPE)
+
+#define DEVICE_ATTR_MASK_OPEN_MODE	0x0000ff00
+#define  DEVICE_MASK_OPEN_RDONLY	0x0
+
+Precision: 0
+Recall: 0
+F1 Score: 0

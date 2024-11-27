@@ -1,0 +1,127 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: idega/com.idega.core
+    Project Description: '
+    Existing Dependencies:
+    jaxen:jaxen
+- commons-io:commons-io
+- org.hibernate:hibernate-commons-annotations
+- org.owasp:csrfguard
+- org.apache.myfaces.core:myfaces-api
+- commons-codec:commons-codec
+- org.reflections:reflections
+- javax.mail:mail
+- icu4j:icu4j
+- informix_jdbc:informix_jdbc
+- org.springframework:spring-test
+- javax.activation:activation
+- servlets.com:cos
+- org.apache.myfaces.tomahawk:tomahawk12
+- saxpath:saxpath
+- org.apache.poi:poi-ooxml
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <!-- Main Header Start -->
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+				  <!-- Classy Menu -->
+				  <nav class="classy-navbar justify-content-between" id="alimeNav">
+
+					<!-- Logo -->
+					<a class="nav-brand" href="{{ route('home') }}"><img src="{{ URL::asset('img/core-img/logo.png') }}" alt="logo"></a>
+
+					<!-- Navbar Toggler -->
+					<div class="classy-navbar-toggler">
+					  <span class="navbarToggler"><span></span><span></span><span></span></span>
+					</div>
+
+					<!-- Menu -->
+					<div class="classy-menu">
+
+					  <!-- close btn -->
+					  <div class="classycloseIcon">
+						<div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+					  </div>
+
+					  <!-- Nav Start -->
+					  <div class="classynav">
+						<ul>
+                        @guest 
+                            <li><a href="{{ route('login') }}">Login</a></li>
+                            <li><a href="#">{{ __('Register') }}</a></li>
+                        @else
+                            <li><a href="{{ route('home') }}">Home</a></li>
+                            <li class="dropdown"><a href="/profile-user/{{Auth::user()->id}}" target="_blank">{{Auth::user()->name }} <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu" >
+                                    <li><a href="/profile-user/{{Auth::user()->id}}" target="_blank">{{Auth::user()->name }}</a></li>
+                                    <li><a href="{{ url('/user/setting') }}" onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                                        {{ __('Logout') }}
+                                                </a>
+
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                                @csrf
+                                                </form>
+                                        </li>
+                                </ul>
+                            </li>
+                            <li><a href="{{ route('home') }}" onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                                        {{ __('Logout') }}
+                                                </a>
+
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                                @csrf
+                                                </form>
+                                        </li>
+
+                        @endguest
+
+                        </ul>
+
+					
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 17 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>  public static void main(String[] args) {
+        SpringApplication.run(EvaApplication.class, args);
+    }
+
+}
+ package com.xkcoding.easyrpc.eva;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class EvaApplication {
+
+  
+
+Precision: 0
+Recall: 0
+F1 Score: 0

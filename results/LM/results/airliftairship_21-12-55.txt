@@ -1,0 +1,248 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: airlift/airship
+    Project Description: airship\n'
+    Existing Dependencies:
+    org.apache.maven:maven-aether-provider
+- io.airlift:discovery
+- io.airlift:io.airlift
+- org.mockito:org.mockito
+- io.airlift.airship:airship-coordinator
+- com.google.inject:com.google.inject
+- io.airlift:command
+- org.apache.maven:maven-settings
+- commons-codec:commons-codec
+- javax.servlet:javax.servlet
+- com.google.guava:guava
+- org.weakref:org.weakref
+- io.airlift:node
+- io.airlift:bootstrap
+- com.google.code.findbugs:com.google.code.findbugs
+- org.sonatype.aether:aether-api
+- io.airlift:units
+- com.sun.jersey:com.sun.jersey
+- com.github.jnr:jnr-posix
+- org.sonatype.aether:aether-connector-file
+- com.google.guava:com.google.guava
+- io.airlift.airship:airship-cli
+- joda-time:joda-time
+- com.fasterxml.jackson.core:jackson-annotations
+- org.sonatype.aether:aether-spi
+- org.apache.bval:bval-jsr303
+- com.google.inject:guice
+- org.apache.bval:org.apache.bval
+- org.slf4j:org.slf4j
+- com.google.inject.extensions:com.google.inject.extensions
+- io.airlift:log
+- com.fasterxml.jackson.dataformat:com.fasterxml.jackson.dataformat
+- io.airlift:log-manager
+- io.airlift.airship:airship-agent
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 35 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+    <head>
+
+
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<link rel="icon" href="{{{ asset('appresources/img/favicon.png') }}}" >
+
+	<title>@yield('title') | {{getcong('site_name')}}</title>
+
+	<!-- Bootstrap Core CSS -->
+	{{ HTML::style('resources/assets/css/bootstrap.css') }}<!-- 
+
+	{{ HTML::style('resources/assets/plugins/sweetalert-master/dist/sweetalert.css') }} -->
+	{{ HTML::style('resources/assets/css/font-awesome.min.css') }}
+
+
+    {{{ HTML::style('resources/assets/css/ionicons.min.css') }}}
+    {{{ HTML::style('resources/assets/css/style.css') }}}
+    {{ HTML::style('resources/assets/css/custom.css') }}
+   
+    {{{ HTML::style('resources/assets/css/jquery.mmenu.all.css') }}} 
+    {{{ HTML::style('resources/assets/css/bootstrap-select.min.css') }}} 
+    {{{ HTML::style('resources/assets/css/jquery.scrollbar.css') }}}
+    {{{ HTML::style('resources/assets/css/lightbox.css') }}}
+    {{ HTML::style('resources/assets/css/custom.css') }}
+
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+
+    @yield('header_scripts')
+
+
+	<!--[if lte IE 8]><script src="other/js/respond.min.js"></script><![endif]-->
+	<!--[if lte IE 8]><script src="other/js/jquery.placeholder.min.js"></script><![endif]-->
+
+
+<!-- 
+=======================================================================
+========================= 
+============================ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="{{{ asset('appresources/css/jquery.mmenu.all.css') }}}" />
+<link rel="stylesheet" type="text/css" href="{{{ asset('appresources/css/bootstrap-select.min.css') }}}" />
+<link rel="stylesheet" type="text/css" href="{{{ asset('appresources/css/jquery.scrollbar.css') }}}" />
+<link rel="stylesheet" type="text/css" href="{{{ asset('appresources/css/lightbox.css') }}}" /> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 35 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+
+namespace App\Http\Controllers\Api;
+
+use App\Http\Controllers\Controller;
+use App\Models\Banner;
+use Illuminate\Http\Request;
+
+class Bn response()->json($banner,200);
+    }
+}
+annerController extends Controller
+{
+    public function banner(){
+        $banner = Banner::getBanner();
+        retur
+
+Precision: 0
+Recall: 0
+F1 Score: 0

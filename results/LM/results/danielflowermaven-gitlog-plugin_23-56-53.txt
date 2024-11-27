@@ -1,0 +1,139 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: danielflower/maven-gitlog-plugin
+    Project Description: \r\n\r\nOverview\r\n========\r\n\r\nThis plugin allows the creation of text and HTML changelogs based on the git log. During the Maven packaging\r\nphase this plugin can generate plaintext and HTML reports showing all the commits with tags from the local git\r\nrepository. These text files can then be sent to a web server or included during packaging.\r\n\r\nUsing as a reporting plugin with maven 3.1, the site generation will include the generated gitlog.\r\nIn this case, the outputDirectory parameter can not be set.\r\n\r\nNote: when using together with the reporting plugin named changelog, it is advised to change\r\nthe simpleHTMLChangeLogFilename parameter to gitlog.html.\r\n\r\nUsage instructions and Documentation\r\n====================================\r\n\r\nSee the for usage and more information.\r\n\r\n\r\nMerge Log Only\r\n===============\r\n\r\nFor release notes with only merged branches.\r\n\r\n\r\n\r\n\r\nAsciiDoc Table View and special title hierarchy \r\n===============================================\r\n\r\nFor release notes with only merged branches.\r\n\r\n\r\n'
+    Existing Dependencies:
+    xml-apis:xml-apis
+- org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.apache.maven.reporting:maven-reporting-api
+- org.apache.commons:commons-lang3
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" />
+   
+    <script >
+    $(document).on('click','.btn-danger',function(){
+                var cat_id=$(this).attr("cat_id");
+                //console.log(cat_id);
+                var url="{{url('category/delete')}}";
+                $.ajax({
+                    type: "get",
+                    url,
+                    data:{cat_id,cat_id},
+                    success: function(){
+                        toastr.success('Data was deleted successfully!');
+                        $("#tr"+cat_id).show();  
+                    }
+                  });
+            });
+</script>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php namespace App\Modules\Frontend\Controllers;
+
+use App\Libraries\Breadcrumb;
+use App\Libraries\DateTime;
+use App\Libraries\ErrorMessages;
+use App\Libraries\CommonTask;
+
+use App\Libraries\CommonSeeder;
+use App\Libraries\CommonFunctions;
+use App\Libraries\CommonImage;
+use App\Models\Image;
+use App\Modules\Frontend\Models\User;
+use App\Modules\Frontend\Models\UserInfo;
+
+class MyAccount extends BaseController
+{
+    private $data;
+
+    public function __construct()
+    {
+        $this->data = [];
+        parent::__construct();
+
+        $this->data['template'] = 'templates/frontend/index';
+    }
+    
+    public function index()
+    {
+        $breadcrumb = new Breadcrumb();
+        $breadcrumb->setBreadcrumb('Trang chủ', site_url('home'));
+        $breadcrumb->setBreadcrumb('Thanh toán', 'javascript:void(0)');
+        $this->data['breadcrumb'] = $breadcrumb->build();
+
+        return view($this->data['template'], $this->data);
+    }
+    
+    public function myAccount()
+    {
+        $breadcrumb = new Breadcrumb();
+        $breadcrumb->setBreadcrumb('Trang chủ', site_url('home'));
+        $breadcrumb->setBreadcrumb('Thanh toán', 'javascript:void(0)');
+        $this->data['breadcrumb'] = $breadcrumb->build();
+
+        $user = CommonFunctions::getCurrentUserObject();
+        if(!empty($user->user_id) || CommonFunctions::isAdmin()){
+            $this->data['user'] = $user;
+        }else{
+            return redirect()->to(site_url('user-login'));
+        }
+
+        return view($this->data['template'], $this->data);
+    }
+    
+    public function myAddress()
+    {
+        $breadcrumb = new Breadcrumb();
+        $breadcrumb->setBreadcrumb('Trang chủ', site_url('home'));
+        $breadcrumb->setBreadcrumb('Thanh toán', 'javascript:void(0)');
+        $this->data['breadcrumb'] = $breadcrumb->build();
+
+        $user = CommonFunctions::getCurrentUserObject();
+        if(!empty($user->user_id) || CommonFunctions::isAdmin()){
+            $this->data['user'] = $user;
+        }else{
+            return redirect()->to(site_url('user-login'));
+        }
+
+        return view($this->data['template'], $this->data);
+    }
+    
+    public function myOrder()
+    {
+        $breadcrumb = new Breadcrumb();
+        $breadcrumb->setBreadcrumb('Trang chủ', site_url('home'));
+        $breadcrumb->setBreadcrumb('Thanh toán', 'javascript:void(0)');
+        $this->data['breadcrumb'] = $breadcrumb->build();
+
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,151 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: dschanoeh/Kayak
+    Project Description: Kayak\n=====\n\n is an application for CAN bus diagnosis and monitoring. Its main goals are a simple interface and platform independence.\nKayak is implemented in pure Java and has no platform specific dependencies. It includes a complete CAN bus abstraction model that can be included in other applications that need do handle CAN frames.\nThis is possible because and TCP/IP are used as an abstraction layer above the CAN controller hardware.\nThe provides the bridge between the Socket CAN device on a linux machine and the TCP/IP socket of Kayak.\nExisting .dbc files with CAN message specifications can be converted into the Kayak .kcd format using . Afterwards Kayak is able to decode CAN frames and to display and interpret the messages and signals.\nTo build Kayak follow the instructions in BUILD.md\n\n Documentation\nYou can find some basic documentation .\n\n What is implemented yet:\n abstract bus, receiver, sender model\n .kcd bus description format, see \n project and log file management\n simple raw view of CAN frames\n sending of single and repetitive CAN frames\n creation and replay of log files\n\n Why the name Kayak?\nBecause a kayak is a small, lightweight and versatile boat compared to a canoe.\n'
+    Existing Dependencies:
+    org.netbeans.api:org-openide-nodes
+- org.netbeans.api:org-openide-windows
+- ${project.groupId}:Kayak-logging
+- ${project.groupId}:Kayak-core
+- org.netbeans.api:org-netbeans-api-progress
+- org.tango-project:tango-icon-theme
+- javax.xml.bind:jaxb-api
+- ${project.groupId}:Kayak-mapview
+- org.netbeans.api:org-openide-awt
+- org.netbeans.api:org-openide-text
+- ${project.groupId}:Kayak-kcd
+- org.netbeans.api:org-openide-loaders
+- org.netbeans.cluster:platform
+- org.netbeans.api:org-netbeans-api-annotations-common
+- com.github.kayak:branding
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     @include('adminpanel.admin-header')
+        @include('adminpanel.admin-header-link')
+         @include('adminpanel.admin-nav')
+        
+          <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                @include('adminpanel.admin-left-menu')
+            </div> 
+            <div id="layoutSidenav_content">
+
+        <main>
+            <div class="container-fluid">
+                <h1 class="mt-4">Tables</h1>
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item"><a href="{{ url('admin-dashboard') }}">Dashboard</a></li>
+                    <li class="breadcrumb-item active">Category </li>
+                </ol>
+                <div class="card mb-4">
+                    <div class="card-body">
+ 
+    {!! Form::open(['action' => 'adminController@update_category','method' => 'POST','name'=>'update_category', 'role'=>'form'])!!}
+        <!-- <form class="form-inline" id="update_category" name="update_category" method="POST"  action = {{url("update_category")}}  enctype="multipart/form-data">  -->
+            
+                    <div class="form-group" >
+                        <label for="exampleInputName2"> Category Name </label>
+                        <input type="text" class="form-control" placeholder="" name="categoryname" id="categoryname">
+                    </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail2">Select Category Level </label>
+                            <select class="form-control" name="parent_id[]" id="parent_id" multiple="multiple">
+                                <?php
+                        foreach ($catlevel as $key => $value) {   
+                            echo "<option value='".$value['category_id']."'>".$value['categoryname']."</option>";
+                        }
+                   ?>
+                               
+                            </select>
+                    </div>
+                    
+                    <div class="form-group" >
+                        <label for="exampleInputEmail2">Status</label>
+                        <select class="form-control" name="cat_status" id="cat_status">
+                            <option value="0">Disable</option>
+                           <option value="1">Active</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Update Category </button>
+    {!! Form::close()!!}
+                </div>
+            </div>
+        </main>
+        <footer class="py-4 bg-light mt-auto">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">Copyright &copy; Your Website 2019</div>
+                    <div>
+                        <a href="#">Privacy Policy</a>
+                        &middot;
+                        <a href="#">Terms &amp; Conditions</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>e,
+            }
+            for _ in range(2)
+        ]
+        self.assertListEqual(self.test_data, sorted(
+            self.test_data, key=lambda item: item.get('date')
+        ))
+        self.assertListEqual(self.test_data, sorted(
+            self.test_data, key=lambda item: item.get('date'),
+        ))
+
+        testdata = [
+            {
+                'name': 'A', 'date': date(2010, 3, 1)
+            },
+            {
+                'name': 'B', 'date': date(2020, 2, 2)
+            }
+        ]
+        self.assertListEqual(
+            [{
+                'name': 'B', 'date': date(2020, 2, 2)
+            }, {
+                'name': 'A', 'date': date(2010, 3, 1)
+            }], sorted(testdata, key=lambda item: item.get('date'))
+        )
+ import os
+from datetime import date, datetime
+import unittest
+import pandas as pd
+from..src.utils import *
+
+
+class TestUtils(unittest.TestCase):
+    def setUp(self):
+        self.test_data = [
+            {
+                'name': 'C', 'date': datetim
+
+Precision: 0
+Recall: 0
+F1 Score: 0

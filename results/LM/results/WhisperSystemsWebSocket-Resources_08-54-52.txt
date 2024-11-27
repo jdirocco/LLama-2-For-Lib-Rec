@@ -1,0 +1,138 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: WhisperSystems/WebSocket-Resources
+    Project Description: WebSocketResources\n\nA Dropwizard library that lets you use Jerseystyle Resources over WebSockets.\n\nInstall from maven central:\n\n\n\n The problem\n\nIn the standard HTTP world, we might use Jersey to define a set of REST APIs:\n\n\n\nUsing JAXRS annotations and some Dropwizard glue, we can easily define a set of resource methods\nthat allow an authenticated sender to POST a JSON Message object. All of the routing, parsing,\nvalidation, and authentication are taken care of, and the resource method can focus on the business\nlogic.\n\nWhat if we want to expose a similar API over a WebSocket? It\'s not pretty. We have to define our\nown subprotocol, do all of the parsing and validation ourselves, keep track of the connection state,\nand do our own routing. It\'s basically the equivalent of writing a raw servlet, but worse.\n\n The WebSocketResources model\n\nWebSocketResources is designed to make exposing an API over a WebSocket as simple as writing a\nJersey resource. The library is based on the premise that the WebSocket client and the\nWebSocket server should each be modeled as both a HTTP client and server simultaneously.\n\nThat is, the WebSocket server receives HTTPstyle requests and issues HTTPstyle responses, but it\ncan also issue HTTPstyle requests to the client, and expects HTTPstyle responses from the client.\nThis allows us to write Jerseystyle resources, while also initiating bidirectional communication\nfrom the server.\n\nWhat if we wanted to make the exact same resource above available over a WebSocket using\nWebSocketResources? In your standard Dropwizard service run method, just initialize\nWebSocketResources and register a standard Jersey resource:\n\n\n\nIt\'s as simple as creating a from the Dropwizard and registering\nJersey resources.\n\n Making requests\n\nIn order to call the Jersey resource we just registered from a client, we need to know how to format\nclient requests. It\'s possible to either define our own subprotocol, or to use the default subprotocol\npackaged with WebSocketResources, which is based in protobuf.\n\nA subprotocol is composed of s and s. A has four parts:\n\n1. An .\n1. A .\n1. A .\n1. An optional .\n\nA has four parts:\n\n1. The request it is in response to.\n1. A .\n1. A .\n1. An optional .\n\nThis should seem strongly reminiscent of HTTP. By default, WebSocketResources will use a protobuf\nformatted subprotocol:\n\n\n\nTo use a custom wire format, it\'s as simple as implementing a custom and\nregistering it at initialization time:\n\n\n\n Making requests from the server\n\nTo issue requests from the server, use . There are two ways to get a \ninstance: a resource annotation or a connection listener.\n\nResource annotation:\n\n\n\nOr a connect listener:\n\n\n\nA WebSocketClient can then be issued to transmit requests:\n\n\n\nLicense\n\n\nCopyright 2014 Open Whisper Systems\n\nLicensed under the AGPLv3:
+    Existing Dependencies:
+    io.dropwizard:dropwizard-auth
+- io.dropwizard:dropwizard-servlets
+- org.mockito:mockito-core
+- org.eclipse.jetty.websocket:websocket-client
+- io.dropwizard:dropwizard-testing
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    @extends('layout.app')
+    @section('title','| Home')
+
+    @section('content')
+        <main>
+            <h1>Home</h1>
+        </main>    
+    @endsection
+    
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package org.apache.sling.distribution.packaging.impl.importer;
+
+import java.io.IOException;
+import java.util.Map;
+import javax.annotation.Nonnull;
+
+import aQute.bnd.annotation.ConsumerType;
+import org.apache.sling.distribution.packaging.DistributionPackage;
+import org.apache.sling.distribution.serialization.DistributionPackageImporter;
+
+/**
+ * {@link DistributionPackageImporter} that can be configured with a {@link DistributionPackageImporterProvider}
+ * to be used for the import operation when importing {@link DistributionPackage}.
+ */
+@ConsumerType
+public interface ConfiguredDistributionPackageImporter extends DistributionPackageImporter {
+
+    /**
+     * Set the underlying {@link DistributionPackageImporterProvider} to use for the import
+     * @param importerProvider the importer provider
+     */
+    void setPackageImporterProvider(@Nonnull DistributionPackageImporterProvider importerProvider);
+
+
+    /**
+     * Get the underlying {@link DistributionPackageImporterProvider} to use for the import
+     * @return the underlying importer provider
+     */
+    DistributionPackageImporterProvider getPackageImporterProvider();
+
+    /**
+     * Set configuration parameters for the underlying {@link DistributionPackageImporterProvider} to use when
+     * importing {@link DistributionPackage}
+     * @param parameters the configuration parameters
+     */
+    void setParameters(@Nonnull Map<String, Object> parameters);
+
+    /**
+     * Get the configuration parameters for the underlying  {@link DistributionPackageImporterProvider} to use
+     * when importing {@link DistributionPackage}
+     * @return the configuration param  @Override
+        public void importStream(@Nonnull DistributableImportStream importStream) throws IOException {
+            // no op
+        }
+
+        @Override
+        public DistributionPackageImporterProvider getPackageImporterProvider() {
+            return null;
+        }
+
+        @Override
+        public void setParameters(Map<String, Object> parameters) {
+            // no op
+        }
+
+        @Override
+        public Map<String, Object> getParameters() {
+            return null;
+        }
+    }
+}eters
+     */
+    Map<String, Object> getParameters();
+
+
+
+    class Factory {
+        @Nonnull
+        public static ConfiguredDistributionPackageImporter create() {
+            return new ConfiguredDistributionPackageImporterImpl();
+        }
+
+        private Factory() {
+        }
+    }
+
+    class ConfiguredDistributionPackageImporterImpl implements ConfiguredDistributionPackageImporter {
+
+        @Override
+        public void setPackageImporterProvider(@Nonnull DistributionPackageImporterProvider importerProvider) {
+            // no op
+        }
+
+        @Override
+        public void installPackage(@Nonnull DistributionPackage distributionPackage) {
+            // no op
+        }
+
+      
+
+Precision: 0
+Recall: 0
+F1 Score: 0

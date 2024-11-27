@@ -1,0 +1,129 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: eldur/jwbf
+    Project Description: JWBF JavaWikiBotFramework.\n\n\n\n\nThe Java Wiki Bot Framework is a library to retrieve data from and maintain\n such as Wikipedia. It has\npackages that handle basic tasks login, cookies, encoding, token management\nso that you can write your wiki bot without being a MediaWiki API expert. JWBF\nrequires JRE 1.7.\n\n\n Code sample\n\n Table of contents\n |\n |\n |\n |\n |\n\n\n\n Developer resources\n Repositories\n RELEASES: \n SNAPSHOTS: \n JavaDocs: \nVersion specific docs are located \n Home Page: \n\n\n Getting started\nJWBF uses Maven to automatically resolve dependencies. To use Maven to start\na new project, follow the\n\ntutorial. For a more detailed introduction, see Maven\'s\n\nguide.\n\nThe Java Wiki Bot Framework is available from two repositories. For a more\nstable version of JWBF, use the most recent version in the\n\nat Maven Central. For the development version, which will be most uptodate,\nuse the most recent version in the\n\nat oss.sonatype.org.\n\n\n Dependencies\nOnce you have started your project in Maven and have a file for your\nbot\'s project, add the appropriate JWBF dependency to the \nsection. When you build your project, JWBF and its own dependencies will be\ndownloaded automatically.\n\nBeginning with jwbf 4.x.x Java 8 is required\n\n From :\n\n\n\nIf you want to use a different release of JWBF, find your desired version in\n\nand change to its listed title.\n\n\n From :\n\nAdd this to your section:\n\n\n\nAdd this to your section:\n\n\n\nIf you want to use a different snapshot of JWBF, find your desired version in\n\nand change to its listed title.\n\n\n Examples\n\nHere is of using JWBF to write a bot that can\nretrieve and edit an article on a desired wiki.\n\nMore Java examples e.g. for queries can be found at\n and\n .\n\n\n Working with Wikimedia\nIf you are working with Wikimedia sites, set an informative UserAgent header,\n because .\n\n\n\n\n See also\n \n \n \n \n \n Wikidata Integration\n \n \n'
+    Existing Dependencies:
+    com.typesafe:config
+- org.sonatype.oss:oss-parent
+- org.slf4j:slf4j-api
+- com.google.code.findbugs:jsr305
+- org.eclipse.jetty:jetty-server
+- com.google.guava:guava
+- org.apache.httpcomponents:fluent-hc
+- org.eclipse.jetty:jetty-servlet
+- javax.inject:javax.inject
+- com.github.dreamhead:moco-core
+- org.jdom:jdom2
+- com.google.jimfs:jimfs
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <link rel="shortcut icon" href="{{asset('admin_assets/img/favicon.png')}}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{asset('admin_assets/img/macicons/macicons.png')}}">
+    <link rel="stylesheet" href="{{asset('admin_assets/css/vendor.css')}}">
+    <link rel="stylesheet" href="{{asset('admin_assets/css/style.css')}}">
+	
+	
+
+<div class="container-fluid">
+            <div class="row">
+
+                 
+
+
+
+
+<!-- start page title -->
+				<div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Adminox</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
+                                    <li class="breadcrumb-item active">Basic Elements</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Basic Elements</h4>
+                        </div>
+                    </div>
+                </div>     
+                <!-- end page title --> 
+@if ($message = Session::get('success'))
+<div class="alert alert-success alert-block">
+	<button type="button" class="close" data-dismiss="alert">×</button>	
+        <strong>{{ $message }}</strong>
+</div>
+@endif
+
+
+
+<form method="post" action="{{ route('product.update', $products->id) }}" enctype="multipart/form-data">
+@method('PATCH')
+			@csrf
+			
+
+				<div class="form-group">
+					<label>Product Title</label>
+					<input id="title" name="title" type="text" class="form-control"   value="{{$products->title}}" placeholder="Product Title">
+				</div>
+
+				<div class="form-group">
+					<label>Product Description</label>
+					<input id="description" name="description" type="text" class="form-control"   value="{{$products->description}}" placeholder="Product Description">
+				</div>
+
+				<div class="form-group">
+					<label>Price</label>
+					<input id="price" name="price" type="text" class="form-control"   value="{{$products->price}}" placeholder="Price">
+				</div>
+
+                    <div class="form-group">
+                        <label for="input-select2">Category</label>
+                        <select class="select2-multiple form-control" multiple="multiple"  name="category_id"  id="category_id" >
+                            @foreach ($categories as $category)
+                                <option value="{{$category->
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 12 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Siswa extends Model
+{
+    protected $fillable = [
+        'nama', 'jenis_kelamin', 'agama', 'alamat', 'ruta_foto',
+    ];
+
+    public function mapel() {
+        return $th
+}
+is->belongsToMany(Mapel::class)->withPivot(['nilai']);
+    }
+
+Precision: 0
+Recall: 0
+F1 Score: 0

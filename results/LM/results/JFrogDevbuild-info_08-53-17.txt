@@ -1,0 +1,223 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: JFrogDev/build-info
+    Project Description: BuildInfo\n\n \n\n \n\n Overview\n\nBuild Info is Artifactory\'s open integration layer for the CI servers and build tools. The build information is sent to Artifactory in json format.\n\n Building and testing the sources\n\n The code is built using Gradle and includes integration tests.\n It must run using JDK 8 and Gradle 5.6.2. If you are using different gradle version you can use the provided gradle wrapper.\n In order to run tests the following environment variables must be set:\n\nSee how to generate an admin token for the above environment variable.\n\n Building\nWhen running the following commands to build the code, the entire testing suite is also executed. See the Testing section for configuration instructions prior to running the tests.\n\nTo build the code using the gradle wrapper in Unix run:\n\nTo build the code using the gradle wrapper in Windows run:\n\nTo build the code using the environment gradle run:\n\nTo build the code without running the tests, add to the "clean build" command the "x test" option, for example:\n\n\n Testing\nTo run all tests:\n\n\n Extractor tests\n\n\n Maven tests\n\n\n Gradle tests\n\n\n npm tests\n Add npm executable to the system search path PATH environment variable.\n npm 7.7 or above is required.\n\n\n Go tests\n Add Go executable to the system search path PATH environment variable.\n Go v1.14 or above is required.\n\n\n Pip tests\n Add Python and pip executables to the system search path PATH environment variable.\n Pip tests must run inside a clean pipenvironment. Create a virtual environment and provide its path using the \'BITESTSARTIFACTORYPIPENV\' variable.\nWhen running on a Windows machine, provide the path to the \'Scripts\' directory.\nWhen running on a unix machine, provide the path to the \'bin\' directory.\n\n\n NuGet tests\n Add Nuget & Dotnet executable to the system search path PATH environment variable.\n\n\n Docker tests\n Docker tests run only on Linux/mac.\n In addition to the general environment variables required for running the tests, you must set the following environment variables, required for the docker tests:\n \n For OSX agents, run a Socat container:\n \n Run tests:\n \n\n More about buildinfo\nRead more about buildinfo in the .\n\n Release notes\nThe release notes are available .\n'
+    Existing Dependencies:
+    oracle.jdeveloper.library:Resource-Bundle-Support
+- org.springframework:spring-aop
+- commons-io:commons-io
+- oracle.jdeveloper.library:ADF-DVT-Faces-Runtime
+- org.jfrog.test.nested:nested2
+- org.testng:testng
+- com.google.code.findbugs:jsr305
+- org.jfrog.test.nested:nested1
+- oracle.jdeveloper.library:Commons-Beanutils
+- commons-lang:commons-lang
+- javax.servlet.jsp:jsp-api
+- org.codehaus.plexus:plexus-utils
+- oracle.jdeveloper.library:BC4J-Oracle-Domains
+- com.google.guava:guava
+- oracle.jdeveloper.library:BC4J-Security
+- ${project.groupId}:multi1
+- oracle.jdeveloper.library:MDS-Runtime
+- oracle.jdeveloper.library:Commons-Collections
+- oracle.jdeveloper.library:BC4J-Runtime
+- hsqldb:hsqldb
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+@extends('backend.layouts.master')
+@section('content')
+<div class="main-panel">
+  <div class="content-wrapper">
+
+    <!-- Page Title Header Starts-->
+    <div class="row page-title-header">
+      <div class="col-12">
+        <div class="page-header">
+          <h4 class="page-title">Dashboard</h4>
+          <!--   <button type="button" class=" btn btn-primary " data-toggle="modal" data-target="#exampleModal">Add New Product</button> -->
+         
+        </div>
+      </div>
+      
+    </div>
+    <!-- Page Title Header Ends-->
+   <style type="text/css">
+    .pagination{
+      justify-content: center;
+     }
+    .page-item.active.page-link
+     {
+      background-color: green;
+      color: #E6E6FA;
+     }
+    .form-group
+     {
+      margin-left: 20px;
+     }
+    .btn-success
+     {
+      margin-top: 10px;
+     }
+   </style>
+    <div class="row">
+        @if( session()->has('success'))
+
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>{{ session()->get('success') }}</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+        @endif
+      <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Product List </h4>
+            <!-- <a class="btn btn-primary btn-fw" href="#" data-toggle="modal" data-target="#exampleModal">Add New Product</a> -->
+          
+            <!--  <button type="button" class="btn btn-primary btn-fw" data-toggle="modal" data-target="#exampleModal">Add New Product</button>
+ -->
+              <form method="get" action="{{route('admin.product.search')}}">
+              
+              <div class="form-group row">
+                <!-- <label for="inputTitle" class="col-sm-2 col-form-label">Title</label> -->
+                <div class="col-sm-4">
+                  <input type="text" name="title"  class="form-control" id="inputTitle" placeholder="Enter Title" value="">
+                </div>
+              
+                <!-- <label for="inputPrice" class="col-sm-2 col-form-label">Price</label> -->
+                <div class="col-sm-4">
+                  <input type="Number" name="price"  class="form-control" id="inputPrice" placeholder="Enter Price" value="">
+                </div>
+             
+
+            <div class="col-sm-4">
+              <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+
+
+              </form>
+            <table class="table table-bordered">
+              <thead>
+
+                <tr>
+                  <th> # </th>
+                  <
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s.add(new BasicNameValuePair("password", user.getPassword()));
+            httpPost.setEntity(new UrlEncodedFormEntity(params));
+            response = httpClient.execute(httpPost);
+            HttpEntity entity = response.getEntity();
+            return EntityUtils.toString(response.getEntity());
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+            return null;
+        }
+    }
+}
+ package com.example.user.eventest;
+
+import android.os.AsyncTask;
+import android.os.Handler;
+import android.util.Base64;
+import android.util.Log;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.protocol.HttpClientContext;
+import org.apache.http.impl.client.BasicCookieStore;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.cookie.BasicClientCookie;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
+
+import java.io.IOException;
+import java.security.MessageDigest;
+import java.util.ArrayList;
+import java.util.List;
+
+public class LoginTask extends AsyncTask<String, Integer, String> {
+    private static String URL = "http://eventest.xiaohuochai.site/";
+    private LoginCallback callback;
+
+    public LoginTask(LoginCallback callback) {
+        this.callback = callback;
+    }
+
+    @Override
+    protected String doInBackground(String... params) {
+        String cookie = login(params[0], params[1]);
+        Log.i("cookie", cookie);
+        return cookie;
+    }
+
+    @Override
+    protected void onPostExecute(String cookie) {
+        if (cookie!= null) {
+            callback.setCookie(cookie);
+        }
+    }
+
+    public interface LoginCallback {
+        public void setCookie(String cookie);
+    }
+
+    // md5加密，不可逆
+    private String md5(String src) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            byte[] bytes = md.digest(src.getBytes("UTF-8"));
+            StringBuilder sb = new StringBuilder(bytes.length << 1);
+
+            for (int i = 0; i < bytes.length; i++) {
+                String hex = Integer.toHexString(bytes[i]);
+                if (hex.length() < 2) {
+                    sb.append(0);
+                }
+                sb.append(hex);
+            }
+            return sb.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public String login(String username, String password) {
+        try {
+            HttpClient httpClient = HttpClientBuilder.create().setDefaultCookieStore(new BasicCookieStore()).build();
+            HttpPost httpPost = new HttpPost(URL);
+
+            httpPost.setHeader("cookie", "PHPSESSID=07573950820905867
+
+Precision: 0
+Recall: 0
+F1 Score: 0

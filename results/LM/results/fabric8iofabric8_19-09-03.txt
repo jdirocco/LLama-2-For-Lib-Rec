@@ -1,0 +1,207 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: fabric8io/fabric8
+    Project Description: \nThis repository has been archived and resetted, you can still look at the git history for the old reference.\n\n'
+    Existing Dependencies:
+    io.fabric8.archetypes:karaf-camel-log-wiki-archetype
+- org.apache.cxf:cxf-rt-frontend-jaxws
+- io.fabric8.archetypes:springboot-webmvc-archetype
+- org.jboss.arquillian.container:arquillian-weld-ee-embedded-1.1
+- io.fabric8:jolokia-assertions
+- org.springframework:spring-test
+- io.fabric8:fabric8-karaf-core
+- org.jboss.arquillian.container:arquillian-container-spi
+- io.fabric8:kubernetes-client
+- org.ops4j.pax.url:pax-url-aether
+- org.osgi:org.osgi.core
+- org.ow2.asm:asm-all
+- io.fabric8:gitrepo-api
+- org.apache.felix:org.apache.felix.scr.annotations
+- org.apache.felix:org.apache.felix.scr
+- org.ops4j.pax.web:pax-web-spi
+- org.slf4j:slf4j-simple
+- javax.ws.rs:javax.ws.rs-api
+- io.fabric8.archetypes:karaf-camel-log-archetype
+- io.fabric8.archetypes:karaf-camel-errorhandler-archetype
+- org.springframework.boot:spring-boot-starter-test
+- io.fabric8:kubernetes-assertions
+- javax.inject:javax.inject
+- io.dropwizard.metrics:metrics-core
+- xml-apis:xml-apis
+- org.springframework:spring-context
+- org.jboss.arquillian.test:arquillian-test-impl-base
+- org.apache.karaf.itests:itests
+- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml
+- io.fabric8:jaxrs-utils
+- org.apache.commons:commons-lang3
+- org.fusesource.jansi:jansi
+- org.springframework.boot:spring-boot-starter-web
+- io.fabric8:fabric8-cxf
+- com.fasterxml.jackson.core:jackson-core
+- io.fabric8:fabric8-annotations
+- org.ops4j.pax.exam:pax-exam-junit4
+- io.fabric8.insight:insight-maven
+- io.fabric8.archetypes:karaf-camel-cxf-code-first-archetype
+- io.fabric8.archetypes:karaf-camel-cxf-contract-first-archetype
+- org.apache.cxf:cxf-rt-rs-service-description-swagger
+- org.apache.maven:maven-artifact
+- io.fabric8.archetypes:springboot-camel-archetype
+- org.jboss.weld.se:weld-se
+- org.apache.maven:maven-project
+- io.fabric8:letschat-api
+- io.fabric8.archetypes:java-cxf-cdi-archetype
+- commons-codec:commons-codec
+- io.fabric8.archetypes:karaf-camel-amq-archetype
+- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-impl-maven
+- io.fabric8.archetypes:java-camel-cdi-archetype
+- org.seleniumhq.selenium:selenium-firefox-driver
+- org.apache.maven:maven-embedder
+- io.fabric8.archetypes:karaf-secure-soap-archetype
+- org.apache.maven.shared:maven-dependency-analyzer
+- io.fabric8:kubernetes-jolokia
+- org.jboss.resteasy:resteasy-jackson2-provider
+- org.apache.cxf:cxf-rt-frontend-jaxrs
+- org.jboss.resteasy:resteasy-client
+- io.fabric8.archetypes:karaf-secure-rest-archetype
+- com.offbytwo.jenkins:jenkins-client
+- io.fabric8:mockwebserver
+- org.reflections:reflections
+- net.oauth.core:oauth
+- org.seleniumhq.selenium:selenium-java
+- org.jboss.arquillian.container:arquillian-container-test-spi
+- org.apache.cxf:cxf-rt-rs-service-description
+- org.jboss.shrinkwrap.resolver:shrinkwrap-resolver-depchain
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 69 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+  <!-- Content Wrapper. Contains page content -->
+  
+     <!-- Content Header (Page header) -->
+    <section class="content-header ">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3 class="ml-2">Data Siswa Pondok Pesantren</h3>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-md-right ml-2">
+              <li class="breadcrumb-item"><a href="<?php echo base_url('administrator')?>">Home</a></li>
+              <li class="breadcrumb-item"><a href="<?php echo base_url('administrator/data_santri')?>">Santri</a></li>
+              <li class="breadcrumb-item active">Tambah Data Santri</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <div class="alert alert-secondary" role="alert">
+    </div>
+       
+       
+<!-- Content Wrapper. Contains page content -->
+  <span><form action="<?php echo base_url().'administrator/proses_tambah_data_santri'?>" method="post" enctype='multipart/form-data'>
+  <table cellpadding="8" class="ml-2">
+    <tr class="text-dark">
+      <td>Nama Santri </td>
+      <td><input type="text" class="form-control" name="nama"></td>
+    </tr>
+    <tr>
+      <td>Jenis Kelamin </td>
+      <td><input type="text" name="jk" class="form-control" ></td>
+    </tr>
+    <tr>
+      <td>Tempat Lahir </td>
+      <td><input type="text" name="tpt_lahir" placeholder="Tempat Lahir" class="form-control"></td>
+    </tr>
+    <tr>
+      <td>Tanggal Lahir </td>
+      <td><input type="date" name="tgl_lahir" class="form-control"></td>
+    </tr>
+    <tr>
+      <td>Agama </td>
+      <td>
+      <select class="form-control form-control-user" name="agama">
+          <option value="">---Pilih Agama---</option>
+            <option value="islam">Islam</option>
+            <option value="kristen">Kristen</option>
+            <option value="hindu">Hindu</option>
+            <option value="budha">Budha</option>
+      </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Nama Ayah</td>
+      <td><input type="text" name="nama_ayah" placeholder="Nama Orang Tua Ayah" class="form-control"></td>
+    </tr>
+    <tr>
+      <td>Nama Ibu</td>
+      <td><input type="text" name="nama_ibu" placeholder="Nama Orang Tua I
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 69 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;   * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('products');
+    }
+}
+
+use Illuminate\Support\Facades\Schema;
+
+class CreateProductsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('products', function (Blueprint $table) {
+            $table->id();
+            // $table->integer('user_id');
+            $table->foreignId('user_id')->default(0)->constrained('users')
+            ->onDelete('cascade')->onUpdate('cascade');
+            $table->string('title');
+            $table->string('slug');
+            $table->text('description');
+            //image
+            $table->string('images'); 
+            $table->string('price');
+            $table->string('stock');
+            $table->integer('status')->default(1); 
+            $table->timestamps();
+        });
+    }
+
+    /**
+  
+
+Precision: 0
+Recall: 0
+F1 Score: 0

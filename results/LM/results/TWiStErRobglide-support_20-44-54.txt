@@ -1,0 +1,123 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: TWiStErRob/glide-support
+    Project Description: Glide Support Application\n\nAndroid application to test out ideas from the issues related to .\n\nI use it to try the feasibility of my ideas which then make it to the issue description usually.\nThis is a fully functioning app that you can build and deploy to your phone and use as a source of Glide tricks.\n\n\n\n This repository is not meant to replace the Glide issue tracker, Glide library group or StackOverflow, it is meant to augment them and provide more publicly available Glide code examples.\n\n Please refrain from opening issues here that are Glide related, use the other channels to get answers.\n\n\n\nAny pull requests are welcome if you can improve the quality or reproducibility of the ideas or just have some Glide related code you want to share. Feel free to create a new package under and create an Activity or Fragment to demonstrate something.\n\n\n Structure\n\nThe application has two flavors and for and versions respectively. At the time of me writing this most of the issues and hence solutions are for Glide v3, because v4 is in alpha stage and it is not released yet.\n\n\n Issue Trackers\nWhile I said it is for issue tracker ideas I also used it to try out ideas for other sources, here are the meanings of the packages:\n where is a short integer: \n \n where is an 11 digits long alphanumeric including and ID \n \n where is a long integer: \n \n are the ones I couldn\'t find the reference for or doing it out of curiosity\n\nAll packages start with because Java identifiers cannot start with numbers.\n\n\n Development\n\nI\'m using IntelliJ IDEA Ultimate 16 EAP to maintain this so it\'ll likely "just work" with that, with anything else you\'re mostly on your own, but feel free to open an issue though if you need help.\n\nIt\'s using Google\'s official Gradle plugin to build, you can find the setup in app/build.gradle\n\nTo consume a Gradle SNAPSHOT create a file:\n\n\n Prerequisites\n Android SDK see for exact versions\n Gradle using is recommended, but not necessary\n\n\n Steps\n Clone GitHub repository\n Import from Welcome screen or File New Project from existing sources\n Select from External model: Gradle\n Finish wizard and wait for progress to finish\n Choose or in Build Variants\n Gradle Sync may need an explicit sync on View Tool Windows Gradle\n Happy coding!\n\n\n Running a sample\n\nThere\'s a list of the issue demonstrations so most likely a tap is enough to try out a sample. \n\nThe default and are there to quickly test if something would compile with potential of running it too, there\'s a separate launcher for this.\n\nIt\'s possible to bring an item to the top of the list by adding it to the as , the default is the . It\'s useful for testing with a clean slate because on each selection of a list item an attempt is made to tear down Glide and resetup with the correct s.\n\nThis should cover most of the issue type, if anything special is needed some code probably need to be modified.\n\n License and stuff\n\nThis repository is unlicensed, meaning you can do anything with it, but there are no guarantees.\n\nThis is not officially related to Glide and there\'s no guarantee that all issues will have some code here as there\'s no point in reproducing everyone\'s issues individually.\n'
+    Existing Dependencies:
+    com.github.bumptech.glide:okhttp3-integration
+- jp.wasabeef:glide-transformations
+- com.firebase:firebase-client-android
+- com.github.bumptech.glide:recyclerview-integration
+- com.squareup.okhttp3:okhttp
+- com.facebook.stetho:stetho-okhttp3
+- jp.co.cyberagent.android.gpuimage:gpuimage-library
+- com.squareup.okhttp:okhttp
+- com.github.bumptech.glide:volley-integration
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <section class="content">
+      <div class="row">
+      <div class="col-md-1">
+        </div>
+        <!-- left column -->
+        <div class="col-md-10">
+      <!-- general form elements -->
+          <div class="box box-primary">
+            <!-- /.box-header -->
+            <!-- form start -->
+            <div class="form-group">
+            <div class="col-md-10">
+              <label class="control-label col-md-4">Cari : Kode / No. Faktur</label>
+              <div class="col-md-5">
+                <div class="input-group">
+                <input type="text" class="form-control" value="" id="carifaktur" style="background-color: #F0FFFF;"/>
+                <span class="input-group-addon"><a href="<?php echo base_url('penjualan/penjualan/faktur')?>"> <i class="fa fa-search"></i></a></span>
+              </div>
+              </div>
+            </div>
+            </div>    
+              <div class="box-body">
+                <div class="form-group">
+                <div class="col-md-12">
+                  <table class="table table-bordered table-hover">
+                <tr>
+                  <th style="width:20px;">No</th>
+                  <th style="width:300px;">Kode Pesanan</th>
+                  <th style="width:20px;">Pelanggan</th>
+                  <th style="width:20px;">Total</th>
+                  <th style="width:20px;">Pembayaran</th>
+                  <th style="width:20px;">Kembalian</th>
+                  <th style="width:20px;">Tanggal</th>
+                  <th style="width:100px;">Aksi</th>
+                </tr>
+                <?php if($penjualan->num_rows() == 0) :?>
+                <tr>
+                  <td colspan="7"><center> Tidak Ada Data </center></td>
+                </tr>
+              <?php else :?>
+                <?php $no=1;?>
+                <?php foreach ($penjualan->result() as $key) :?>
+                <tr>
+                  <td> 
+                  <?php echo $no;?></td>
+                  <td><?php echo $key->nota;?></td>
+                  <td><?php echo $key->nama;?></td>
+                  <td><?php echo $key->total_harga;?></td>
+                  <td><?php echo $key->jumlah_uang;?></td>
+                  <td><?php echo $key->kembalian;?></td>
+                  <td><?php echo $key->tgl_penjualan;?></td>
+                  <td><a href=""> <i class="fa fa-info"> Detail</i></a></td>
+                </tr>
+              <?php $no++;?>
+              <?php endforeach;?>
+              <?php endif;?>
+              </table>
+                </div>
+                </div>
+                </div>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> 
+import { createSelector } from "reselect";
+import { initialState } from "./reducer";
+
+const selectSnackBar = state => state.snackBar || initialState;
+
+const makeSelectOpenSnackBar = () =>
+  createSelector(
+    selectSnackBar,
+   state => state.openSnackBar
+  );
+const makeSelectCloseSnackBar = () =>
+  crBar
+ );
+
+export { makeSelectOpenSnackBar, makeSelectCloseSnackBar };
+eateSelector(
+    selectSnackBar,
+   state => state.closeSnack
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,163 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: apache/chukwa
+    Project Description: Apache Chukwa Project\n\n\n\nChukwa is an open source data collection system for monitoring large distributed systems. \nChukwa is built on top of the Hadoop Distributed File System HDFS and Map/Reduce \nframework and inherits Hadoop\xe2\x80\x99s scalability and robustness. Chukwa also includes a \n\xef\xac\x82exible and powerful toolkit for displaying, monitoring and analyzing results to \nmake the best use of the collected data. \n\n Overview\n\nLog processing was one of the original purposes of MapReduce. Unfortunately, using \nHadoop MapReduce to monitor Hadoop can be inefficient. Batch processing nature of \nHadoop MapReduce prevents the system to provide real time status of the cluster.\n\nWe started this journey at beginning of 2008, and a lot of Hadoop components have \nbeen built to improve overall reliability of the system and improve realtimeness of \nmonitoring. We have adopted HBase to facilitate lower latency of random reads and \nusing in memory updates and write ahead logs to improve the reliability for root \ncause analysis.\n\nLogs are generated incrementally across many machines, but Hadoop MapReduce works \nbest on a small number of large files. Merging the reduced output of multiple runs \nmay require additional mapreduce jobs. This creates some overhead for data management \non Hadoop.\n\nChukwa is a Hadoop subproject devoted to bridging that gap between logs processing \nand Hadoop ecosystem. Chukwa is a scalable distributed monitoring and analysis system, \nparticularly logs from Hadoop and other distributed systems.\n\nThe Chukwa Documentation provides the information you need to get started using \nChukwa. Architecture and \nDesign document provides high level view of Chukwa design.\n\nIf you\'re trying to set up a Chukwa cluster from scratch, \nUser Guide describes the \nsetup and deploy procedure.\n\nIf you want to configure the Chukwa agent process, to control what\'s collected, you \nshould read the Agent Guide. \nThere is also a Pipeline Guide \ndescribing configuration parameters for ETL processes for the data pipeline.\n\nAnd if you want to develop Chukwa to monitor other data sources, \nProgramming Guide \nmaybe handy to learn about Chukwa programming API.\n\nIf you have more questions, you can ask on the \nChukwa mailing lists\n\n Bulding Chukwa\n\nTo build Chukwa from source you require Apache Maven:\n\nTo check that things are ok, run \n\ntests should take and run successfully after roughly fifteen minutes.\n\n Running Cukwa\n\nUsers should definitely begin with the \n\nChukwa Quick Start Guide\n\nIf you\'re impatient, the following is the 30second explanation:\n\nThe minimum you need to run Chukwa are agents on each machine you\'re \nmonitoring, and a collector to write the collected data to HDFS. The\nbasic command to start an agent is bin/chukwa agent. \n\nIf you want to start a bunch of agents, you can use the\nbin/startagents.sh script. This just uses ssh to start agents on a\nlist of machines, given in conf/agents. It\'s exactly parallel to\nHadoop\'s starthdfs and startmapred scripts. \n\nThere are stop scripts that do the exact opposite of the start commands. \n\n'
+    Existing Dependencies:
+    jdiff:jdiff
+- com.github.jsendnsca:jsendnsca
+- org.mortbay.jetty:jetty-util
+- asm:asm-commons
+- org.apache.zookeeper:zookeeper
+- org.slf4j:slf4j-api
+- org.apache.solr:solr-test-framework
+- org.owasp.esapi:esapi
+- commons-configuration:commons-configuration
+- commons-codec:commons-codec
+- org.springframework:spring-mock
+- com.sun.jersey:jersey-bundle
+- org.apache.velocity:velocity
+- org.apache.velocity:velocity-tools
+- com.google.guava:guava
+- org.apache.gora:gora-hbase
+- commons-httpclient:commons-httpclient
+- org.apache.shiro:shiro-web
+- org.apache.solr:solr-solrj
+- com.rubiconproject.oss:jchronic
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <div class="container">
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-md-4">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            
+
+                            <div class="col-md">
+					<div class="text-center">
+						<img src="<?= base_url('assets/');?>img/logo.png" alt="" class="img-fluid my-4">
+						<h1><b><?= $title;?></b></h1>
+						<h6>Silakan isi Username dan password Anda untuk mengakses Aplikasi</h6>
+					</div>
+                                <form class="user">   
+									<div class="form-group">
+										<input type="text" class="form-control form-control-user"
+											placeholder="Username">
+									</div>
+									<div class="form-group">
+										<input type="password" class="form-control form-control-user"
+											id="exampleInputPassword" placeholder="Masukan password">
+									</div>
+									<button type="submit" class="btn btn-primary btn-user btn-block">
+										LOGIN</a>
+									</button>
+								
+								</form>
+								<hr>  
+						<div class="text-center">
+							<a class="small" href="<?php echo site_url('login/forgot');?>">Lupa Password?</a>
+						</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="assets/js/sb-admin-2.min.js"></script>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 20 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.alibaba.csp.sentinel.slots.statistic.metric;
+
+import com.alibaba.csp.sentinel.slots.statistic.base.WindowWrap;
+
+/**
+ * @author Eric Zhao
+ */
+public class WindowBucket {
+
+    // the number of passing qps.
+    private long pass = 0;
+    // the number of blocked qps.
+    private long block = 0;
+    // the number of total qps.
+    private long sum = 0;
+
+    public void resetTo(WindowWrap<WindowBucket> window) {
+        pass = 0;
+    
+        sum = bucket.sum;
+    }
+
+    public void addPass() {
+        pass++;
+        sum++;
+    }
+
+    public void addBlock() {
+        block++;
+        sum++;
+    }
+
+    void setSum(long sum) {
+        this.sum = sum;
+    }
+
+    long getPass() {
+        return pass;
+    }
+
+    long getBlock() {
+        return block;
+    }
+
+    long getSum() {
+        return sum;
+    }
+}    block = 0;
+        sum = 0;
+        WindowBucket bucket = window.getBucket();
+        pass = bucket.pass;
+        block = bucket.block;
+
+Precision: 0
+Recall: 0
+F1 Score: 0

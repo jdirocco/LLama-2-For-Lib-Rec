@@ -1,0 +1,116 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: forcedotcom/dataloader
+    Project Description: Prerequisites\n\nJava Runtime Environment JRE is required to install and run Data Loader. Review the installation instructions of the latest release for the required JRE version.\n\n Installing Data Loader\nSalesforce officially supports Data Loader for Windows and macOS. All other operating systems are unsupported. The list of supported macOS and Windows versions and CPU architecture for a released version of Data Loader is provided in the for that release.\n\nFollow the installation instructions for and .\n\nInstalling on Linux: Extract contents of Data Loader zip file, rename as , and run the following command:\n\n ./install.sh\n\n Running Data Loader in GUI mode\n\nFor running Data Loader on macOS or Windows, follow the .\n\nFor running Data Loader on Linux, type the following command in a command shell:\n\n ./dataloader.sh\n \n OR\n \n java jar dataloaderx.y.z.jar\n\nConsult the for the details of how to configure and use Data Loader.\n\n Running Data Loader in Batch mode\nBatch mode is officially supported only on Windows. To run Data Loader in Batch mode on Windows, see . \n\nExecute the following command on Mac Replace with on Linux:\n\n ./dataloaderconsole run.mode=batch\n \nAlternately execute one of the following commands:\n \n java jar dataloaderx.y.z.jar run.mode=batch\n \n OR\n \n java jar dataloaderx.y.z.jar salesforce.config.dir= process.name= run.mode=batch \n \n\n Commands to create an encryption key file, encrypt a password, or decrypt a password\nSee for the detailed steps to create an encryption key file, encrypt a password, or decrypt a password on Windows.\n\nBatch mode requires specifying an encrypted password in processconf.xml, config.properties, or as a command line argument. The first step in encrypting a password is to create an encryption key file on Mac or Linux.\n\nExecute the following command to generate an encryption key file on Mac Replace with on Linux:\n \n ./dataloaderconsole k .\n\nNOTE:\nRemove all personal, businessspecific, and all other sensitive information from the files you share e.g. config files, log files, screenshots, csv files, and others before reporting an issue, especially on a public forum such as github.\n\n Building Data Loader\nSee the property setting for "" property in pom.xml to find out the JDK version to compile with.\n\n git clone git@github.com:forcedotcom/dataloader.git\n cd dataloader\n git submodule init\n git submodule update\n mvn clean package DskipTests \n or\n ./dlbuilder.sh\n\n will be created in the root directory of the local git clone.\n\n Debugging Data Loader\nTo run data loader for debugging with an IDE\n\n java jar Xdebug Xrunjdwp:transport=dtsocket,server=y,suspend=n,address=5005 dataloaderx.y.z.jar\n\n Testing Data Loader\n\nSee the \n\n Resources\n\nFor more information, see the . \n\nQuestions can be directed to the .\n\n Dependencies and plugins\n\nUpdate SWT by running . Requires python 3.9 or later.\n\nAll other dependencies and plugins are downloaded by maven from the central maven repo. Run to see which dependencies need an update. It will list all dependencies whose specified version in pom.xml needs an update. Run to update these dependencies. Run again to check which plugins still need an update and update their versions manually.\n'
+    Existing Dependencies:
+    org.springframework:spring-context
+- com.force.api:force-partner-api
+- commons-io:commons-io
+- org.eclipse:jface
+- org.apache.httpcomponents:httpclient
+- org.eclipse:core.commands
+- org.eclipse:equinox.common
+- org.testng:testng
+- commons-dbcp:commons-dbcp
+- commons-beanutils:commons-beanutils
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+     $(document).ready(function() {
+
+      var url = window.location;
+      var element = $('ul.nav a').filter(function() {
+        return this.href == url;
+      }).addClass('active').parent().parent().addClass('active');
+
+      var element = $('ul.nav a').filter(function() {
+        return this.href == url;
+      }).parent().parent().parent();
+
+      if ($('li', element).length == 0){
+        $('li:last()', element).closest('ul').addClass('in');
+      }
+
+      if($('.dropdown-toggle').length > 0){
+        var dd = $('.dropdown-menu').parent().parent();
+        $('.dropdown-toggle', dd).addClass('.drop');
+      }
+      $('ul.nav a').not('.dropdown-toggle').click(function() {
+        var dd = $(this).parent().parent();
+
+        $(dd).find('.dropdown-menu').parent().removeClass('open');
+        $(dd).find('.dropdown-toggle').removeClass('active');
+      });
+      $('ul.sub_menu a').click(function() {
+        var dd = $(this).parent().parent();
+        dd.parent().find('.open').removeClass('active');
+      });
+      $('[data-toggle="offcanvas"], #nav-btn').click(function() {
+        $('.sidebar').toggleClass('hidden-xs');
+        $('.content').toggleClass('hidden-xs');
+        $(this).toggleClass('active');
+        var active = $(this).hasClass('active');
+        if (!active && $('.sidebar >.nav').length == 0) {
+          $('body').append(' <div class="sidebar"> <nav class="nav"> <ul class="nav nav-list"> <li><a href="#">Navigation</a></li> </ul> </nav> </div>');
+        }
+      });
+
+      $('.dropdown-toggle').click(function() {
+        var dd = this;
+        var open_dd = $('.dropdown-toggle.active');
+        if (!$(this).hasClass('active') && open_dd.hasClass('active')) {
+          var close = $(open_dd).closest('.panel');
+          close.removeClass('open');
+          open_dd.removeClass('active');
+        }
+        setTimeout(function() {
+          $('body').toggleClass('open-sidebar');
+          $(dd).closest('.panel').toggleClass('open');
+        },100);
+      });
+    });
+
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package net.dankrushen.aitagsearch.drch.dataprovider
+
+import net.minecraftforge.fml.common.registry.ForgeRegistries.BLOCKS
+import net.dankrushen.aitagsearch.block.TaggableBlock
+
+object TaggableBlockDataprovider : ITaggableDataprovider<TaggableBlock> {
+    override fun getAllItems(): Set<TaggableBlock> {
+        return BLOCKS.values().filterIsInstance(TaggableBlock::class.java).toSet()
+    }
+
+    override fun isEmpty(item: TaggableBlock): Boolean {
+        return!item.hasTags
+    }
+}ataprovider.block
+
+import net.dankrushen.aitagsea
+
+Precision: 0
+Recall: 0
+F1 Score: 0

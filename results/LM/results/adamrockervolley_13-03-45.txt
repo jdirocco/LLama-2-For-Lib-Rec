@@ -1,0 +1,191 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: adamrocker/volley
+    Project Description: Volley Test Project\n=========================\nThis is a sample android application using Volley library1.\n\nHow to install\n\n1. git clone this project\n2. Import actionbarsherlock into your eclipse as an existing Android project \n3. Clean build the actionbarsherlock project on eclipse\n4. Import VolleySample into your eclipse as an existing Android project\n5. Clean build the VolleySample project on eclipse\n6. Make sure the actionbarsherlock libray project is refered from VolleySample project\n\nWhat's Volley\n\nVolley is a framework project of Android.\nFicus Kirkpatrick, Googler, made a presentation at Google IO 2013.\nSee it on YouTube2\n\n 1: 2: "
+    Existing Dependencies:
+    org.easytesting:fest-assert-core
+- com.google.android:support-v4
+- org.robolectric:org.robolectric
+- org.robolectric:robolectric
+- com.google.android:android
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+<section class="content container-fluid">
+     <div class="row">
+        <div class="col-md-12">
+             <div class="card card-default">
+             	<form action="<?php echo base_url('/admin/user/add')?>" method="post"  enctype="multipart/form-data">
+             		<div class="card-body">
+             			<div class="form-group">
+					  <label for="exampleInputEmail1">Name</label>
+					  <input  name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder= ""  value="<?php echo $user->name;?>">
+					</div>
+					<div class="form-group">
+					  <label for="exampleInputPassword1">Email</label>
+					   <input name="email" type="email" class="form-control" id="exampleInputPassword1" placeholder=""  value="<?php echo $user->email;?>">
+					</div>
+					<div class="form-group">
+					  <label for="exampleInputPassword1">Role</label>
+					 <select name="role" class="form-control">
+					 	<option value="1" <?php if($user->role==1){?> selected="" <?php }?> > Admin</option>
+					 	<option value="2" <?php if($user->role==2){?> selected="" <?php }?> > User</option>
+					 </select>
+					</div>
+					<div class="form-group">
+					  <label for="exampleInputPassword1">Password</label>
+					   <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="" >
+					</div>
+					<div class="form-group">
+					  <label for="exampleInputPassword1">Phone</label>
+					 <input name="phone" type="text" class="form-control" id="exampleInputPassword1" placeholder=""  value="<?php echo $user->phone;?>">
+					</div>
+					<?php if($user->image){?>
+					<img class="img img-responsive pad" src="<?php echo base_url()?>/uploads/users/<?php echo $user->image;?>" width="150px">
+					<?php }?>
+					<div class="form-group">
+					  <label for="exampleInputPassword1">Image</label>
+					  <input type="file" class="form-control" id="exampleInputPassword1" name="image">
+					</div>
+					<div class="form-group">
+					  <label for="exampleInputPassword1">Country</label>
+					 <input name="country" type="text" class="form-control" id="exampleInputPassword1" placeholder=""  value="<?php echo $user->country;?>">
+				
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 6 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>    }
+
+    protected void setClip(Rectangle2D clip) {
+        this.clip = clip;
+    }
+
+    public void addChild(AbstractGraphicsRenderer child) {
+        children.add(child);
+    }
+
+    public void paint(Graphics graphics) {
+        paint(graphics, clip);
+    }
+
+} package org.jfree.chart.fx;
+
+import java.awt.Graphics;
+import java.awt.geom.Rectangle2D;
+import java.util.ArrayList;
+
+import javafx.scene.Group;
+import javafx.scene.Node;
+import javafx.scene.transform.Affine;
+import javafx.scene.transform.Transform;
+
+/**
+ * An abstract base class for the graphics renderers.
+ *
+ */
+@SuppressWarnings("checkstyle:interfaceisimplements")
+public abstract class AbstractGraphicsRenderer {
+
+    /** The parent renderer. */
+    protected AbstractGraphicsRenderer parent;
+
+    /** The children renderers. */
+    protected ArrayList<AbstractGraphicsRenderer> children = new ArrayList<>();
+
+    /** The clip. */
+    protected Rectangle2D clip;
+
+    /**
+     * Creates a new instance.
+     *
+     * @param parent  the parent renderer ({@code null} permissible).
+     */
+    protected AbstractGraphicsRenderer(AbstractGraphicsRenderer parent) {
+        this.parent = parent;
+    }
+
+    /**
+     * Recursively collects nodes under the specified parent.
+     *
+     * @param node  the node.
+     * @param nodes  the list of nodes.
+     */
+    protected static void collectNodes(Node node, ArrayList nodes) {
+        nodes.add(node);
+        if (node instanceof Group) {
+            Group group = (Group) node;
+            collectNodes(group.getChildren(), nodes);
+        }
+    }
+
+    /**
+     * Returns {@code true} if the specified node is a JavaFX {@code Group} 
+     * node, {@code false} otherwise.
+     *
+     * @param node  the node.
+     *
+     * @return A boolean.
+     */
+    protected static boolean isJavaFXGroup(Node node) {
+        return node instanceof Group;
+    }
+
+    /**
+     * Recursively collects all nodes from the parent.
+     *
+     * @param nodes  the list of nodes.
+     */
+    protected void collectNodes(ArrayList nodes) {
+        collectNodes(createNode(), nodes);
+    }
+
+    /**
+     * Creates new JavaFX node(s) for this renderer.  The implementation in
+     * this class does nothing.
+     *
+     * @return A node.
+     */
+    protected Node createNode() {
+        return null;
+    }
+
+    /**
+     * Returns the JavaFX {@code Affine} transform.  Note that the
+     * transform returned is relative to the transform of the node
+     * returned by {@link #createNode()}.
+     *
+     * @return The transform.
+     */
+    protected Affine getTransform() {
+        Affine t = new Affine();
+        AbstractGraphicsRenderer renderer = this;
+        while (renderer!= null) {
+            if (renderer instanceof JavaFXDrawableGraphics2D) {
+                Affine at = ((JavaFXDrawableGraphics2D) renderer).getTransform();
+                t.append(at);
+            }
+            renderer = renderer.getParent();
+
+Precision: 0
+Recall: 0
+F1 Score: 0

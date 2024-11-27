@@ -1,0 +1,122 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: mttkay/signpost
+    Project Description: Signpost\n=====================================\n\nWhat is Signpost?\n\n\nSignpost is the easy and intuitive solution for signing HTTP messages on the Java platform in conformance with the standard. Signpost follows a modular and flexible design, allowing you to combine it with different HTTP messaging layers. Click here for a .\n\nGoals of Signpost\n\n\nSignpost has been designed with several principal goals in mind:\n\n Simplicity\nUsing Signpost is as simple as it could possibly get all actions are executed with only a few lines of code. For example, this is how you would sign a classic Java HTTP message using Signpost:\n\n\n\nSignpost exposes a minimalistic API designed for two purposes: Signing HTTP messages and requesting tokens from an OAuth service provider. Everything else is beyond the scope of the OAuth specification, and is thus left to the HTTP messaging layer, where it belongs.\n\nFor more exhaustive examples, please refer to .\n\n Unobtrusiveness\nSignpost tries to be as unobtrusive as possible. Unlike other implementations, Signpost does not wrap the entire HTTP layer and hides its features from the client. Instead, you simply pass an HttpRequest object to it, and Signpost will sign the message using the credentials it was configured with.\n\nThis means that all the power and flexibility of the underlying HTTP engine is still at your fingertips!\n\n Modularity\nSince version 1.1, Signpost comes in modules. Apart from the core module, which you always need, you can download additional modules to support other HTTP messaging libraries than the one coming with the standard Java platform which would be .\n\nApart from HttpURLConnection, Signpost currently has modules for version 4, and version 6.\n\nLimitations\n\nSignpost strives to be a simple library. In order to reduce API and implementation complexity, Signpost does currently not support the following things:\n\n Message signing using public key encryption as per is currently unsupported. Message signing using the PLAINTEXT and HMACSHA1 methods is supported, however.\n Writing OAuth protocol params to the header field\n\nI believe that even with those restrictions in place, Signpost will work for the majority of its users. Trading in rarely used features for more simplicity and ease of use was a design decision. If that doesn\'t work for your setup, Signpost is probably not the best choice for you.\n\nThread Safety\n\nSignpost is not thread safe and probably will never be. Signpost objects are very lightweight, so you are adviced to create an OAuthConsumer and OAuthProvider for every thread in your application that must send signed HTTP requests. Both objects are also serializable, so you can persist and restore them later.\n\nGoogle Android\n\nIMPORTANT: Do NOT use the DefaultOAuth implementations on Android, since there\'s a bug in Android\'s java.net.HttpURLConnection that keeps it from working with some service providers. Instead, use the CommonsHttpOAuth classes, since they are meant to be used with Apache Commons HTTP that\'s what Android uses for HTTP anyway.\n\nSignpost is already used in several applications running on Android, Google\'s software stack for mobile devices. In fact, Signpost has already signed thousands of HTTP requests at this very moment, as it is an integral part of , our geosensitive mobile application for Android that finds the best places near you.\n\nOAuth Service Providers\n\nIf neither Signpost nor the OAuth service providers out there would be buggy, then Signpost would work with all of them. That\'s quite an optimistic expectation though, so on a slightly more conservative note, here\'s a list of service providers that have been tested to work with Signpost:\n\n , \n \n \n\n\nSupport and discussions\n\n API docs: Example code: Please use the for questions, feedback and discussion.\n\nLicense\n\n\n Licensed under the Apache License, Version 2.0 the "License";\n you may not use this file except in compliance with the License.\n You may obtain a copy of the License at\n\n Unless required by applicable law or agreed to in writing, software\n distributed under the License is distributed on an "AS IS" BASIS,\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n See the License for the specific language governing permissions and\n limitations under the License.\n'
+    Existing Dependencies:
+    commons-codec:commons-codec
+- org.apache.httpcomponents:httpclient
+- org.mockito:mockito-core
+- oauth.signpost:oauth-signpost
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-4 text-gray-800"><?= $title;?></h1>
+
+    
+        <div class="row">
+            <div class="col-lg-6">
+            <?= form_error('menu', '<div class="alert alert-danger" role="alert">', '</div>');?>
+
+            <?= $this->session->flashdata('message');?>
+
+                <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newRoleModal">Add New Role</a>
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">No</th>
+                      <th scope="col">Role</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php $i = 1;?>
+                    <?php foreach ($role as $r) :?>
+                    <tr>
+                      <th scope="row"><?= $i;?></th>
+                      <td><?= $r['role'];?></td>
+                      <td>
+                           <a href="<?= base_url('admin/roleaccess/'). $r['id'];?>" class="badge badge-warning">access</a> |
+                           <a href="<?= base_url('admin/ubah/'). $r['id'];?>" class="badge badge-success">edit</a> |
+                           <a href="<?= base_url('admin/hapus/'). $r['id'];?>" onclick="return confirm('yakin hapus?')" class="badge badge-danger">delete</a>
+                      </td>
+                    </tr>
+                    <?php $i++;?>
+                    <?php endforeach;?>
+                  </tbody>
+                </table>
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+
+<!-- Modal -->
+<div class="modal fade" id="newRoleModal" tabindex="-1" role="dialog" aria-labelledby="newRoleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newRoleModalLabel">Add New Role</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="<?= base_url('admin/role');?>" method="post">
+        <div class="modal-body">
+          <div class="form-group">
+            <input type="text" class="form-control" id="role" name="role" placeholder="Role name">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t(new Date(value));
+  }
+
+}
+ import { Pipe, PipeTransform } from '@angular/core';
+import { date } from 'd3-format';
+
+@Pipe({
+  name: 'dateFormat'
+})
+export class DateFormatPipe implements PipeTransform {
+
+  transform(value: any, args?: any): any {
+    return date('%m-%d-%Y')(+value);
+    // return this.datePipe.forma
+
+Precision: 0
+Recall: 0
+F1 Score: 0

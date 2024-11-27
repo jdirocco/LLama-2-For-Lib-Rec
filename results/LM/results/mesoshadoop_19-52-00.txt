@@ -1,0 +1,183 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: mesos/hadoop
+    Project Description: Hadoop on Mesos\n\n\n\n\n Overview \n\nTo run Hadoop on Mesos you need to add the \nlibrary to your Hadoop distribution any distribution that uses protobuf 2.5.0\nand set some new configuration properties. Read on for details.\n\nThe included is configured and tested against CDH5 and MRv1. Hadoop on\nMesos does not currently support YARN and MRv2.\n\n Prerequisites \n\nTo use the metrics feature which uses the :\n\n\n\n\n\n Start \n\nNow you can start the but you'll need to include the path\nto the Mesos native library.\n\nOn Linux:\n\n\n\nAnd on OS X:\n\n\n\n NOTE: You do not need to worry about distributing your Hadoop\n configuration! All of the configuration properties read by the\n along with any necessary specific\n overrides will get serialized and passed to each \n on startup.\n\n Containers \n\nAs of Mesos 0.19.0 you can now specify a container to be used when isolating a task on a Mesos Slave. If you're making use of this new container mechanism, you can configure the hadoop jobtracker to send a custom container image and set of options using two new JobConf options.\n\nThis is purely optin, so omitting these jobconf options will cause no to be sent to Mesos. Also, if you don't use these options there's no requirement to use version 0.19.0 of the mesos native library.\n\nThis feature can be especially useful if your hadoop jobs have software dependencies on the slaves themselves, as using a container can isolate these dependencies between other users of a Mesos cluster.\n\nIt's important to note that the container/image you use does need to have the mesos native library installed already.\n\n\n\nPlease email user@mesos.apache.org with questions!\n\n\n"
+    Existing Dependencies:
+    org.xerial.snappy:snappy-java
+- org.apache.hadoop:hadoop-client
+- commons-logging:commons-logging
+- io.dropwizard.metrics:metrics-jvm
+- org.clojars.brenden:metrics-cassandra
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- Footer Start -->
+     <div class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+
+            <div class="widget">
+              <img loading="lazy" class="mb-2" src="{{asset('frontend/assets/images/logo_dark.png')}}" alt="Image" />
+              <p>
+                PT. Mitra Sehat Tunas Mandiri<br>
+                Jl. Raya Kartasura RT 02/01, Kartasura, Jatiwangi, Kota Bekasi <br>Kode Pos: 17143, No.Telp 021-22300001 <br>Fax: 021-2231967
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0 pt-2 pt-lg-0">
+            <h2 class="footer-heading">Produk</h2>
+            <div class="row">
+              <div class="col-lg-6 col-sm-6 col-xs-6">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#">Tentang Kami</a>
+                  </li>
+                  <li>
+                    <a href="#">Produk</a>
+                  </li>
+                  <li>
+                    <a href="#">Pelanggan</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6 col-sm-6 col-xs-6">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#">Hubungi Kami</a>
+                  </li>
+                  <li>
+                    <a href="#">Cara Pembayaran</a>
+                  </li>
+                  <li>
+                    <a href="#">Cara Order</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0 pt-2 pt-lg-0">
+            <h2 class="footer-heading">Layanan Pelanggan</h2>
+            <div class="row">
+              <div class="col-lg-6 col-sm-6 col-xs-6">
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#">Hubungi Kami</a>
+                  </li>
+                  <li>
+                    <a href="#">Cara Pembayaran</a>
+                  </li>
+                  <li>
+                    <a href="#">Cara Order</a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mt-4 mt-lg-0 pt-2 pt-lg-0">
+            <h2 class="footer-heading">Tautan</h
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> package com.saucedemo.selenium.pages;
+
+import com.saucedemo.selenium.utils.SauceLogger;
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+
+import java.lang.refl
+    protected WebElement getWebElement(Field field) throws NoSuchFieldException, IllegalAccessException {
+        return PageFactory.getTypicalWebDriver().findElement(getField(field));
+    }
+
+    protected By getField(Field field) throws NoSuchFieldException, IllegalAccessException {
+        Class<?> fieldOwner = field.getDeclaringClass();
+        field.setAccessible(true);
+        if (field.isAnnotationPresent(FindBy.class)) {
+            return field.getAnnotation(FindBy.class).how();
+        } else if (field.isAnnotationPresent(AndroidFindBy.class)) {
+            return field.getAnnotation(AndroidFindBy.class).how();
+        } else if (field.isAnnotationPresent(iOSFindBy.class)) {
+            return field.getAnnotation(iOSFindBy.class).how();
+        } else {
+            // Try to look up the field from the parent, if present
+            Field parentField = fieldOwner.getSuperclass().getDeclaredField(field.getName());
+            if (parentField!= null) {
+                return getField(parentField);
+            }
+        }
+
+        throw new NoSuchFieldException("No locating annotation was found on " + field.getName()
+                + " in " + fieldOwner.getSimpleName());
+    }
+
+    public abstract String getPagePart();
+
+    public String verifyCurrentScreenTitle() {
+        SauceLogger.getLogger().info("Page title for [" + getClass().getSimpleName() + "]: " + getTitle());
+        String currentPageName = getTitle();
+        String expectedPageName = SauceHelper.getTestName(getPagePart(), this.expectedPageTitle);
+        SauceLogger.getLogger().info("Expected page title for [" + getClass().getSimpleName() + "]: " + expectedPageName);
+        Assert.assertEquals(expectedPageName, currentPageName, "Page title doesn't match. " + expectedPageName + " found");
+        return currentPageName;
+    }
+
+    public String getTitle() {
+        return this.pageTitle;
+    }
+}
+ect.Field;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
+
+/**
+ * Base class for every page of the app.
+ */
+public class BasePage {
+
+    private String pageTitle;
+    private String expectedPageTitle;
+
+    protected BasePage() {
+        this(null);
+    }
+
+    protected BasePage(String pageTitle) {
+        this(pageTitle, pageTitle);
+    }
+
+    protected BasePage(String pageTitle, String expectedPageTitle) {
+        this.pageTitle = pageTitle;
+        this.expectedPageTitle = expectedPageTitle;
+    }
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0

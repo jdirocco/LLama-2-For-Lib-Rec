@@ -1,0 +1,107 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: pkliang/gankmaku
+    Project Description: Gankmaku\n=========\n \n Project created for learning how to apply the AndroidCleanArchitecture with and Android good practices to develop a MVP Model View Presenter application using as the domain of the application.\n \nMotivation\n\nAfter studied these two projects:\n\n \n \n\nI decided to make my own implenentation using these two projects as reference.\n \nSome Libraries used in this project\n\n\n \n \n \n \n \n \n \n\nScreenshot\n\n\n\n\n\nDeveloped by\n\nLiang Song \n\nLicense\n\n\n'
+    Existing Dependencies:
+    javax.inject:javax.inject
+- jp.wasabeef:glide-transformations
+- com.android.support:percent
+- com.squareup.retrofit:adapter-rxjava
+- org.glassfish:javax.annotation
+- com.github.florent37:glidepalette
+- com.github.ctiao:dfm
+- com.lsjwzh:recyclerviewpager
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <footer>
+        <section>
+        <h2>About Us</h2>
+        <article>
+            <img src="<?php echo base_url();?>assets/images/about-us-img.png" alt="About Us">
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore,
+            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+            vitae dicta sunt, explicabo.</p>
+            </article>
+        </section>
+    
+        <section>
+        <h2>Quick Links</h2>
+        <ul>
+            <a href="<?php echo base_url();?>home"><li>Home</li></a>
+            <a href="<?php echo base_url();?>home/about"><li>About Us</li></a>
+            <a href="<?php echo base_url();?>home/services"><li>Our Services</li></a>
+            <a href="<?php echo base_url();?>home/contact"><li>Contact Us</li></a>
+        </ul>
+        </section>
+    
+        <section>
+        <h2>Our Address</h2>
+        <article>
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <address>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore.</address>
+        </article>
+        </section>
+    
+        <section>
+        <h2>Contact Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <ul>
+            <a href="www.google.com"><li><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</li></a>
+            <a href="www.google.com"><li><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp  Twitter</li></a>
+            <a href="www.google.com"><li><i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</li></a>
+        </ul>
+        </section>
+        <div class="copyrights">
+        <p>Copyrights&nbsp 2020.&nbsp&nbsp All rights reserved.&nbsp&nbsp Developed by <a href="#"><i>Md Shadab Ahmed</i></a>.</p>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    </body>
+</html>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>   return $this->hasOne(User::class, 'id', 'user_id');
+    }
+}
+ <?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Message extends Model
+{
+    //
+    protected $table ='messages';
+    protected $fillable = ['user_id','message'];
+
+    public function users()
+    {
+     
+
+Precision: 0
+Recall: 0
+F1 Score: 0

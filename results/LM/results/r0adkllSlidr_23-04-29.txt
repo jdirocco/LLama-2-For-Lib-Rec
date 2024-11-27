@@ -1,0 +1,194 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: r0adkll/Slidr
+    Project Description: Deprecated\nThis library is no longer supported as the modern convention of building Android apps switches from multiActivity to singleActivity. If you are looking for similar behavior look into supporting Android\'s new \n\nSlidr\n================\n \n\n\nEasily add slidetodismiss functionality to your Activity by calling in your method.\n\n\n\n Usage\n\nAn example usage:\n\n\n\nor\n\n\n\n Fragments\nThe activity must extend FragmentActivity.\nSet the background to the main container of the activity in the xml .\nAdd the following code to the Fragment:\n\n\nIn the xml of the fragment\'s view, the root view must be a FrameLayout with the same background set to the activity before. Add a child viewgroup to it with the id contentcontainer. E.g.:\n\n\nRemember: you have to add new Fragments with: \n\n\n\nwhere fragmentcontainer is the id of a FrameLayout inside the activity\'s xml.\n\n\n Configuring\n\n\n\n\n\n will return a which gives you access to two methods:\n\n\n\nThese methods lock or unlock the slidable touch interface.\n\nThe theme that you use for your sliding activity must have these attributes set:\n\n\n\nThen in the layout of your activity you must give it a background like this;\n\n\n\n Including in your project\n\nInclude this line in your gradle build file:\n\n\n\n\n\n\n Author\n\n\tDrew Heavner, \n\n License\n\n\tCopyright c 2014 Drew Heavner\n\n\tLicensed under the Apache License, Version 2.0 the "License";\n\tyou may not use this file except in compliance with the License.\n\tYou may obtain a copy of the License at\n\n\t required by applicable law or agreed to in writing,\n\tsoftware distributed under the License is distributed on an\n\t"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,\n\teither express or implied. See the License for the specific\n\tlanguage governing permissions and limitations under the License.\n'
+    Existing Dependencies:
+    org.powermock:powermock-module-junit4
+- com.github.bumptech.glide:glide
+- org.hamcrest:hamcrest-library
+- org.mockito:mockito-core
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+
+
+<!--  -->
+<!-- -------------------------------------------
+					Content Start
+-------------------------------------------- -->					
+
+
+
+<div class="col-sm-8 col-md-8 col-xs-12">
+    
+    <h3><span class="label label-default">
+        <?php 
+                $this->db->where('cat_id',$this->uri->segment(3,0));
+                $query=$this->db->get('categories');
+                if($query->num_rows>0){
+                    foreach($query->result_object() as $cat){
+                        echo $cat->cat_name.'  '.$this->lang->line("posts");  
+                    }
+                }
+                /*$this->uri->segment(3,0), 'cat_name'=>$this->lang->line("posts")*/
+                
+       ?>
+    
+    
+        </span>
+     &nbsp; <a href="<?php echo base_url()?>post/addpost"><button class="btn btn-default" type="button"><?php echo $this->lang->line("add_posts")?></button></a><br>  </h3>
+        
+    
+    <div class="panel panel-success">                
+        <div class="table-responsive"> 
+            <table class="table">
+                <tr>
+                    <div class="form-group">
+                        <label class="control-label col-sm-5" for="email"><?php echo $this->lang->line("post_title")?>:</label>
+                        <input type="text" class="form-control" id="posttitle" name="post_title">
+                    </div>
+                   
+                    <div class="form-group">
+                        <label class="control-label col-sm-5" for="email"><?php echo $this->lang->line("post_content")?>:</label>
+                        
+                        <textarea name="post_content" class="post_content" id="post_content" cols="50" ></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="control-label col-sm-5" for="email"><?php echo $this->lang->line("post_excerpt")?>:</label>
+                        
+                        <textarea name="post_excerpt" class="post_excerpt" id="post_excerpt" cols="50" ></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="control-label col-sm-5" for="email"><?php echo $this->lang->line("meta_description")?>:</label>
+                        
+                        <textarea name="meta_description" class="meta_description" id="meta_description" cols="50" ></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="control-label col-sm-5" for="email"><?php echo $this->lang->line("meta_keywords")?>:</label>
+                        <input type="text" class="form-control" id="meta_keywords" name="meta_keywords">
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <label class="control
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    }
+
+    /**
+     * 修改
+     */
+    @RequestMapping("/update")
+    //@RequiresPermissions("ware:purchasedetail:update")
+    public R update(@RequestBody PurchaseDetailEntity purchaseDetail){
+		purchaseDetailService.updateById(purchaseDetail);
+
+        return R.ok();
+    }
+
+    /**
+     * 删除
+     */
+    @RequestMapping("/delete")
+    //@RequiresPermissions("ware:purchasedetail:delete")
+    public R delete(@RequestBody Long[] ids){
+		purchaseDetailService.removeByIds(Arrays.asList(ids));
+
+        return R.ok();
+    }
+
+}
+ package com.atguigu.gulimall.ware.controller;
+
+import java.util.Arrays;
+import java.util.Map;
+
+//import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.atguigu.gulimall.ware.entity.PurchaseDetailEntity;
+import com.atguigu.gulimall.ware.service.PurchaseDetailService;
+import com.atguigu.common.utils.PageUtils;
+import com.atguigu.common.utils.R;
+
+
+
+/**
+ * 
+ *
+ * @author wanzenghui
+ * @email lemon_wan@aliyun.com
+ * @date 2020-08-02 15:37:46
+ */
+@RestController
+@RequestMapping("ware/purchasedetail")
+public class PurchaseDetailController {
+    @Autowired
+    private PurchaseDetailService purchaseDetailService;
+
+    /**
+     * 列表
+     */
+    @RequestMapping("/list")
+    //@RequiresPermissions("ware:purchasedetail:list")
+    public R list(@RequestParam Map<String, Object> params){
+        PageUtils page = purchaseDetailService.queryPage(params);
+
+        return R.ok().put("page", page);
+    }
+
+
+    /**
+     * 信息
+     */
+    @RequestMapping("/info/{id}")
+    //@RequiresPermissions("ware:purchasedetail:info")
+    public R info(@PathVariable("id") Long id){
+		PurchaseDetailEntity purchaseDetail = purchaseDetailService.getById(id);
+
+        return R.ok().put("purchaseDetail", purchaseDetail);
+    }
+
+    /**
+     * 保存
+     */
+    @RequestMapping("/save")
+    //@RequiresPermissions("ware:purchasedetail:save")
+    public R save(@RequestBody PurchaseDetailEntity purchaseDetail){
+		purchaseDetailService.save(purchaseDetail);
+
+        return R.ok();
+
+Precision: 0.0
+Recall: 0.0
+F1 Score: 0

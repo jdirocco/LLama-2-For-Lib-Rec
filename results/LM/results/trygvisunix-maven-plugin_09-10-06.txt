@@ -1,0 +1,159 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: trygvis/unix-maven-plugin
+    Project Description: unixmavenplugin\n=================\n\nMy local copy of the unixmavenplugin from the Codehaus Mojo project\n\n\n\n\n'
+    Existing Dependencies:
+    ${project.groupId}:unix-core
+- ${project.groupId}:unix-deb
+- org.codehaus.plexus:plexus-container-default
+- org.codehaus.plexus:plexus-archiver
+- org.codehaus.plexus:plexus-utils
+- org.codehaus.mojo:appassembler-maven-plugin
+- joda-time:joda-time
+- org.apache.commons:commons-compress
+- org.jvnet.hudson.main:hudson-war
+- org.codehaus.groovy:groovy
+- junit:junit
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <!-- <span class="subheading">Our Blog</span> -->
+            <h2 class="mb-4"><span>Recent</span> Blog</h2>
+            <!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p> -->
+          </div>
+        </div>
+        </div>
+        <div class="container-fluid pb-5">
+          <div class="row">
+            <div class="col-md-6 col-lg-4 ftco-animate">
+              <div class="blog-entry">
+                
+                <div class="text py-4">
+                  <h3 class="heading mt-2"><a href="#">Masalah yang harus dipenuhi ketika belajar</a></h3>
+                  <!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
+                  <div class="d-flex align-items-center mt-4">
+                    <!-- <div class="meta-person p-2"><i class="fas fa-user"></i> <a href="#">John Doe</a></div> -->
+                    <div>
+                      <!-- <a href="#" class="meta-chat"><i class="fa fa-comments"></i> 3</a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 ftco-animate">
+              <div class="blog-entry">
+                <a href="blog-single.html" class="block-20 img" style="background-image: url('images/bg_1.jpg');">
+                </a>
+                <div class="text  py-4">
+                  <h3 class="heading mt-2"><a href="#">Sudah tidak asing dengan pemograman?</a></h3>
+                  <!-- <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p> -->
+                  <div class="d-flex align-items-center mt-4">
+                    <!-- <div class="meta-person p-2"><i class="fas fa-user"></i> <a href="#">John Doe</a></div> -->
+                    <div>
+                      <!-- <a href="#" class="meta-chat"><i class="fa fa-comments"></i> 3</a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 ftco-animate">
+              <div class="blog-entry">
+                <a href="<?= base_url('assets\img\blog\blog-2.jpg')?>" class="block-20 img" style="background-image: url('<?= base_url('assets\img\blog\blog-2.jpg')?>');">
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 11 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s(new String[] { "a", "b", "c" }), 
+                "a b c", true);
+        
+        TestSuite testSuite = new TestSuite();
+        testSuite.addTest(suite);
+        
+        return testSuite;
+    }
+    
+    public static Test suite() {
+        return new TestSuite(JUnit3TestCaseTest.class);
+    }
+    
+    public void testConstructor() {
+        assertNotNull(new JUnit3TestCaseTest("testConstructor"));
+    }
+    
+    private static class MyJUnit3TestCase extends JUnit3TestCase {
+        public void testNothing() { }
+    }
+} package org.apache.commons.attributes.test;
+
+import java.util.Collections;
+
+import junit.framework.Test;
+import junit.framework.TestSuite;
+
+import org.apache.commons.attributes.Attributes;
+import org.apache.commons.attributes.JUnit3TestCase;
+
+import org.apache.commons.attributes.test.junit3.JUnit3AttributeTestFramework;
+import org.apache.commons.attributes.test.junit3.MyAttributeTestFramework;
+
+/**
+ * @version $Id$
+ */
+public class JUnit3TestCaseTest extends TestSuite {
+    
+    public static Test createSuite() {
+        TestSuite suite = new TestSuite(MyJUnit3TestCase.class);
+        
+        suite.setName("MyJUnit3TestCase");
+        suite.setTestName("testNothing");
+        // This will cause a JUnit failure
+        // suite.addTest(new TestSuite(JUnit3TestCaseTest.class));
+        suite.addTestSuite(JUnit3TestCaseTest.class);
+        suite.setAttribute(Attributes.testListeners, new String[] { "a", "b" });
+        suite.addTestSuite(MyAttributeTestFramework.class);
+        suite.addTest(MyJUnit3TestCase.class, "testNothing", Collections.EMPTY_MAP);
+        TestSuite suiteOfSuites = new TestSuite();
+        suiteOfSuites.addTestSuite(MyJUnit3TestCase.class);
+        suite.addTest(suiteOfSuites);
+        suite.addTest(JUnit3AttributeTestFramework.class);
+        // TODO: This should be a separate test case
+        suite.addTest(JUnit3TestCase.class);
+        
+        TestSuite suite2 = new TestSuite();
+        suite2.addTest(suite);
+        suite2.addTest(MyTestSuite.suite());
+        suite2.addTest(MyTestCase.class, "testMethod", Collections.EMPTY_MAP);
+        TestSuite suiteOfSuites2 = new TestSuite();
+        suiteOfSuites2.addTestSuite(JUnit3TestCaseTest.class);
+        suiteOfSuites2.addTest(MyTestCase.class, "testMethod", Collections.EMPTY_MAP);
+        suiteOfSuites2.addTest(suite2);
+        suite2.addTest(MyTestSuite.suite());
+        suite2.addTest(MyTestCase.class, "testMethod", Collections.EMPTY_MAP);
+        suite2.addTest(MyJUnit3TestCase.class, "testNothing", Collections.EMPTY_MAP
+
+Precision: 0
+Recall: 0
+F1 Score: 0

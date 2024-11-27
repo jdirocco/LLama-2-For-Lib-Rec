@@ -1,0 +1,197 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications. provide recommendations exclusively in the Maven format: groupId:artifactId:version.
+    Given the project details below:
+    Project Name: patloew/RxLocation
+Project Description: The Reactive Location API Library for Android is now deprecated and not maintained anymore. Please switch to the CoLocation library by Micha\xc5\x82 Charmas. This library wraps the Location APIs in RxJava 2.x.
+Existing Dependencies Include: org.powermock:powermock-module-junit4
+- io.reactivex.rxjava2:rxandroid
+- com.squareup.leakcanary:leakcanary-android
+- io.reactivex.rxjava2:rxjava
+- com.google.android.gms:play-services-location
+- com.squareup.leakcanary:leakcanary-android-no-op
+
+Project Name: frankred/jSona
+Project Description: JSona is a configuration file(JSON), vcj and JavaFx based music and media player. The aim is to always keep your playlists in synch with your music folders. For fast fulltext search jSona uses Apache Lucene (http://lucene.apache.org/core/).
+Existing Dependencies Include: uk.co.caprica:vlcj
+- org.apache.lucene:lucene-analyzers-common
+- org.apache.lucene:lucene-core
+- commons-io:commons-io
+- com.mpatric:mp3agic
+- org.apache.lucene:lucene-queryparser
+- com.github.tulskiy:jkeymaster
+- org.apache.commons:commons-lang3
+
+Project Name: querydsl/querydsl
+Project Description: Querydsl is a framework which enables the construction of type-safe SQL-like queries for multiple backends including JPA, MongoDB and SQL in Java. Querying JPA and MongoDB using a fluent API.
+Existing Dependencies Include: org.springframework:spring-aop
+- com.mysema.codegen:codegen
+- org.xerial:sqlite-jdbc
+- org.springframework:spring-test
+- com.google.guava:guava
+- com.jolbox:bonecp
+- org.hamcrest:hamcrest-library
+- com.oracle:ojdbc6
+- com.querydsl:querydsl-sql-spatial
+- com.google.inject.extensions:guice-persist
+- com.querydsl:querydsl-apt
+- org.postgresql:postgresql
+- org.easymock:easymock
+- com.querydsl:querydsl-spatial
+- org.hibernate:hibernate-ehcache
+- javax.inject:javax.inject
+- org.springframework:spring-context
+- org.eclipse.persistence:eclipselink
+- org.firebirdsql.jdbc:jaybird-jdk16
+- log4j:log4j
+- org.mongodb.morphia:morphia
+- org.hsqldb:hsqldb
+- cglib:cglib
+- org.apache.lucene:lucene-queryparser
+- org.hibernate.javax.persistence:hibernate-jpa-2.0-api
+- org.apache.maven:maven-project
+- org.hibernate:hibernate-envers
+- com.querydsl:querydsl-codegen
+- net.sourceforge.jtds:jtds
+- org.springframework.roo:org.springframework.roo.annotations
+- org.apache.ant:ant
+- com.querydsl:querydsl-lucene3
+- com.thoughtworks.proxytoys:proxytoys
+- org.scala-lang:scala-library
+- org.geolatte:geolatte-geom
+- com.h2database:h2
+- com.querydsl:querydsl-sql-codegen
+- org.hibernate:hibernate-annotations
+- org.scala-lang:scala-compiler
+- org.reflections:reflections
+- org.datanucleus:datanucleus-api-jdo
+- org.mongodb:mongo-java-driver
+- org.hibernate:hibernate-validator
+- com.infradna.tool:bridge-method-annotation
+- com.querydsl:querydsl-sql-spring
+- javax.transaction:jta
+- org.slf4j:slf4j-log4j12
+
+Project Name: GoogleCloudPlatform/google-cloud-datastore
+Project Description: This repository contains low-level Java and Python client libraries for Google Cloud Datastore. For more idiomatic and usable client libraries in these languages, please visit the [Google Cloud Dataastore Client for Java][java-datastore] and Google Cloud Database Client for Python
+Existing Dependencies Include: com.google.http-client:com.google.http-client
+- com.google.truth:com.google.truth
+- com.google.cloud.datastore:datastore-v1-proto-client
+- com.google.guava:com.google.guava
+- com.google.api-client:com.google.api-client
+- com.google.oauth-client:google-oauth-client
+- com.google.truth:truth
+- com.google.oauth-client:com.google.oauth-client
+
+Project Name: eclipse/tycho
+Project Description: Eclipse Tycho is a manifest-first way to build and build Eclipse plug-ins/OSGi bundles/RCP applications\n，nwith Maven. This repository contains all the features and documentation that will help you migrate to the official Eclipse site.
+Existing Dependencies Include: org.apache.maven.plugin-tools:maven-plugin-annotations
+- org.codehaus.plexus:plexus-component-annotations
+- org.codehaus.plexus:plexus-container-default
+- org.eclipse.tycho:tycho-testing-harness
+- org.apache.maven:maven-core
+- org.eclipse.tycho:org.eclipse.jdt.compiler.apt
+- org.codehaus.plexus:plexus-utils
+- org.eclipse.tycho:org.eclipse.osgi
+- org.eclipse.tycho:tycho-core
+- org.apache.commons:commons-exec
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Reccomend me some of these libraries that can be added to the project to enhance its capabilities.
+    Project Name: rohanoid5/Muzesto
+    Project Description: Muzesto is an open source android music player. Muzesto emphasizes on the visualization factor to make the whole audio listening experience immersive and unique. The Floating Play/Pause widget works as a companion to the app.
+    Existing Dependencies:
+    com.anthonycr.grant:permissions
+- com.android.support:percent
+- com.android.support:palette-v7
+- de.hdodenhof:circleimageview
+- com.squareup.okhttp:okhttp
+- com.vistrav:pop
+- com.yalantis:eqwaves
+- com.squareup.retrofit:retrofit
+- com.thebluealliance:spectrum
+- net.steamcrafted:materialiconlib
+- com.squareup.okhttp:okhttp-urlconnection
+- com.jaeger.statusbaruitl:library
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     As an AI specializing in software library recommendations for Java applications, I analyzed the provided project details and found the following five libraries that can enhance the capabilities of the "rohanoid5/Muzesto" project:
+
+1. com.google.code.gson:gson - This library can help you easily convert Java objects to and from JSON format, which can be useful for exchanging data between your app and the server. With Gson, you can easily parse JSON data and convert it to Java objects, which can simplify your data handling and reduce the risk of errors.
+2. com.squareup.okhttp:okhttp - This library provides a powerful and efficient HTTP client for Android, which can help you handle network requests and responses in a more convenient and reliable way. OkHttp can help you handle HTTP/2, connection pooling, and caching, which can improve your app's performance and reduce the load on your server.
+3. de.hdodenhof:circleimageview - This library provides a circular image view that can help you display images in a more visually appealing way. With CircleImageView, you can easily display images with a circular shape, which can enhance the user experience and improve the overall look and feel of your app.
+4. com.vistrav:pop - This library provides a simple and efficient way to display pop-up windows in your app. With Pop, you can easily display pop-up windows with customizable content and styling, which can help you provide more information to your users and improve the overall user experience.
+5. com.yalantis:eqwaves - This library provides a set of Material Design waves that can help you add a more visually appealing and engaging user interface to your app. With Equations Waves, you can easily display Material Design waves in your app, which can enhance the overall look and feel of your app and provide a more engaging user experience.
+
+These libraries can help you enhance the capabilities of your app, improve performance, and provide a more visually appealing and engaging user interface. By adding these libraries to your project, you can simplify your data handling, handle network requests more efficiently, display images in a more visually appealing way, and add more engaging user interface elements.
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> # Maven Dependencies
+
+Here are the Maven dependencies for the five libraries I recommended:
+
+1. com.google.code.gson:gson:2.8.5
+2. com.squareup.okhttp:okhttp:2.7.5
+3. de.hdodenhof:circleimageview:1.3.1
+4. com.vistrav:pop:1.0.5
+5. com.yalantis:eqwaves:1.1.1
+
+You can add these dependencies to your Maven project's `pom.xml` file using the following format:
+```
+<dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.8.5</version>
+</dependency>
+
+<dependency>
+    <groupId>com.squareup.okhttp</groupId>
+    <artifactId>okhttp</artifactId>
+    <version>2.7.5</version>
+</dependency>
+
+<dependency>
+    <groupId>de.hdodenhof</groupId>
+    <artifactId>circleimageview</artifactId>
+    <version>1.3.1</version>
+</dependency>
+
+<dependency>
+    <groupId>com.vistrav</groupId>
+    <artifactId>pop</artifactId>
+    <version>1.0.5</version>
+</dependency>
+
+<dependency>
+    <groupId>com.yalantis</groupId>
+    <artifactId>eqwaves</artifactId>
+    <version>1.1.1</version>
+</dependency>
+```
+Make sure to replace the version numbers with the latest versions available at the time of your project's development.
+
+Precision: 0.2
+Recall: 0.08333333333333333
+F1 Score: 0.11764705882352941
+
+Formatted Dependencies:
+com.anthonycr.grant:permissions
+- com.android.support:percent
+- com.android.support:palette-v7
+- de.hdodenhof:circleimageview
+- com.squareup.okhttp:okhttp
+- com.vistrav:pop
+- com.yalantis:eqwaves
+- com.squareup.retrofit:retrofit
+- com.thebluealliance:spectrum
+- net.steamcrafted:materialiconlib
+- com.squareup.okhttp:okhttp-urlconnection
+- com.jaeger.statusbaruitl:library
+ Test Dependencies:
+['com.cleveroad:audiovisualization', 'com.android.support:recyclerview-v7', 'de.Maxr1998:track-selector-lib', 'jp.wasabeef:blurry', 'com.android.support:appcompat-v7', 'com.google.code.gson:gson', 'com.android.support:design', 'com.nostra13.universalimageloader:universal-image-loader', 'com.melnykov:floatingactionbutton', 'com.android.support:cardview-v7', 'com.android.support:support-v4', 'com.cleveroad:audiowidget']

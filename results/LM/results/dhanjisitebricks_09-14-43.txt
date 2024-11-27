@@ -1,0 +1,169 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: dhanji/sitebricks
+    Project Description: Sitebricks\n\n\nSitebricks is a simple set of libraries for web applications. Sitebricks focuses on early error\n detection, lowfootprint code, and fast development. Powered by\n , it also balances idiomatic\n Java with an emphasis on concise code.\n\n Early error detection \n\nThis following misspelling results in a template compile error:\n\n \n ${person.naem}\n All such errors are picked up early and reported at once in a format similar to javac.\n\n 1 unknown or unresolvable property: naem\n\n 15: \n 16: ${person.naem}\n ^\n\n Total errors: 1\n\n\n\n \n\nWe would love your contributions and help in developing Sitebricks at this early stage. If you'd\nlike to contribute or have any questions, please join the .\n\nOr send us a note on twitter ="
+    Existing Dependencies:
+    org.apache.lucene:lucene-core
+- com.google.sitebricks:sitebricks-converter
+- redis.clients:jedis
+- com.intellij:annotations
+- com.google.guava:guava
+- com.jolbox:bonecp
+- org.jboss.netty:netty
+- org.seleniumhq.webdriver:webdriver-htmlunit
+- taglibs:standard
+- org.eclipse.jetty:jetty-continuation
+- com.google.sitebricks:sitebricks-channel
+- org.eclipse.jetty.websocket:websocket-servlet
+- junit:junit
+- com.google.sitebricks:sitebricks-test-support
+- org.easymock:easymock
+- com.google.sitebricks:sitebricks
+- com.ning:async-http-client
+- com.google.sitebricks:sitebricks-options
+- com.google.inject.extensions:guice-servlet
+- javax.validation:validation-api
+- com.google.sitebricks:sitebricks-persist
+- org.mortbay.jetty:jsp-2.1-glassfish
+- javax.persistence:persistence-api
+- com.google.code.gson:gson
+- org.apache.bval:bval-guice
+- org.jsoup:jsoup
+- ch.qos.logback:logback-core
+- ch.qos.logback:logback-classic
+- org.apache.james:apache-mime4j-core
+- org.eclipse.jetty.websocket:websocket-api
+- org.hsqldb:hsqldb
+- com.thoughtworks.xstream:xstream
+- org.apache.lucene:lucene-queryparser
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 33 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- Main Footer -->
+     <footer class="main-footer" id="main-footer">
+        <!-- To the right -->
+        <div class="pull-right hidden-xs">
+         Version 1.0
+        </div>
+        <!-- Default to the left -->
+        <div class="pull-left hidden-xs">
+            <strong>Copyright &copy; 2019 <a href="#">Pak Ehsan Siddiq</a>.</strong> All rights reserved.
+        </div>
+    </footer>
+</div>
+<!--./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- JQuery and bootstrap are required by Laravel 5.3 in resources/assets/js/bootstrap.js-->
+<!-- Laravel App -->
+<script src="{{ asset ('../bower_components/AdminLTE/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset ('../bower_components/AdminLTE/dist/js/app.min.js') }}"></script>
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+      Both of these plugins are recommended to enhance the
+      user experience. Slimscroll is required when using the
+      fixed layout. -->
+</body>
+</html>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 33 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t_id =?1")
+               .setParameter(1, request.getId())
+               .getSingleResult();
+    }
+
+    @Override
+    public List<RequestStatus> getStatusesByRequestId(int requestId) {
+        return entityManager.createQuery("SELECT s FROM RequestStatus s WHERE s.request.id =?1")
+               .setParameter(1, requestId)
+               .getResultList();
+    }
+
+    @Override
+    public void deleteStatusByRequestId(int requestId) {
+        entityManager.createQuery("DELETE FROM RequestStatus WHERE request.id =?1")
+               .setParameter(1, requestId)
+               .executeUpdate();
+    }
+}
+ package by.sir.max.library.dao.impl;
+
+import by.sir.max.library.dao.RequestStatusDAO;
+import by.sir.max.library.entity.book.Book;
+import by.sir.max.library.entity.book.copy.BookCopy;
+import by.sir.max.library.entity.person.LibraryUser;
+import by.sir.max.library.entity.request.Request;
+import by.sir.max.library.entity.request.RequestStatus;
+import by.sir.max.library.exception.RepositoryException;
+
+import java.util.List;
+
+public class RequestStatusDAOImpl extends GeneralDAOImpl<RequestStatus> implements RequestStatusDAO {
+
+    @SuppressWarnings("JpaQlInspection")
+    private RequestStatus addRequestStatus(RequestStatus requestStatus) {
+        entityManager.persist(requestStatus);
+        entityManager.flush();
+        entityManager.clear();
+        return requestStatus;
+    }
+
+    @Override
+    public RequestStatus addStatusForRequest(Request request) {
+        RequestStatus requestStatus = new RequestStatus();
+        requestStatus.setRequest(request);
+        requestStatus.setCreatedDate();
+        return addRequestStatus(requestStatus);
+    }
+
+    @Override
+    public RequestStatus changeStatusForRequest(Request request) {
+        RequestStatus requestStatus = getLastByRequestId(request);
+        requestStatus.setStatusDate();
+        addRequestStatus(requestStatus);
+        return getLastByRequestId(request);
+    }
+
+    @Override
+    public RequestStatus changeStatusByStatusId(int id) {
+        RequestStatus requestStatus = getById(id);
+        requestStatus.setStatusDate();
+        addRequestStatus(requestStatus);
+        return requestStatus;
+    }
+
+    @SuppressWarnings("JpaQlInspection")
+    private RequestStatus getById(int id) {
+        return entityManager.createQuery("SELECT s FROM RequestStatus s WHERE s.id =?1", RequestStatus.class)
+               .setParameter(1, id)
+               .getSingleResult();
+    }
+
+    private RequestStatus getLastByRequestId(Request request) {
+        return entityManager.createQuery("SELECT s FROM RequestStatus s WHERE s.reques
+
+Precision: 0
+Recall: 0
+F1 Score: 0

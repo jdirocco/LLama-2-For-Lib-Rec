@@ -1,0 +1,199 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: JavaMoney/javamoney-lib
+    Project Description: Java Money and Currency Libraries extending JSR 354\n==============================================================\n \nJavaMoneylib provides extensions and libraries built upon JSR 354 compatible implementations.\nWhereas the JSR 354 API and reference implementation provides the fundamentals like monetary amounts,\ncustomizable currencies and interfaces for interoperation this library adds additional powerful\nAPIs and SPIs that were implemented during JSR development as a proof of concept artifactIds in brackets:\n\n Calculation javamoneycalc provides a set of monetary calculations and formulas. The idea here is to provide a comprehensive set of algorithms and tools to perform complex financial mathematics.\n Exchange javamoneyexchange provides further conversion exchange resources such as FRD and Yahoo.\n FRB javamoneyexchangefrb provides conversion exchange for US Federal Reserve Department FRD.\n Yahoo javamoneyexchangeyahoo provides conversion exchange using Yahoo financial APIs.\n javamoneycdi javamoneycdi Integrates JavaMoney with Jakarta CDI Java SE mode.\n\nTo use the library you simply have to add the Maven dependency to your project:\n\n\n\nAuthors and Contributors\n\nDifferent people have contributed to this project. During the development of JSR 354, @atsticks and @keilw\nfounded this project and were also the main contributors. Nevertheless everybody is really welcome to help\nus, to make this library more feasible and add features.\n\nSpecial thanks go to @manuelagrindei for her awsome help implementing financial formulas.\n\nRelease Notes\n\n\n 1.0 First release of the libraries.\n\n\njavamoneyshelter\n\nThe javamoney is for testing out new features or\nmodules before they may enter the official javamoney library.\n\nSupport or Contact\n\nHaving trouble with Pages? Check out or contact support@javamoney.org.\n\nEverything is licenced under .\n\n\n \n\n\n'
+    Existing Dependencies:
+    org.javamoney.lib:javamoney-exchange
+- javax.inject:javax.inject
+- org.slf4j:jul-to-slf4j
+- org.jboss.weld.se:weld-se
+- org.javamoney.lib:javamoney-calc
+- ${project.groupId}:javamoney-calc
+- org.javamoney:moneta
+- org.testng:testng
+- org.javamoney.lib:javamoney-lib
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    @extends("layouts.app")
+    @section("content")
+    
+    <div class="content">
+        <div class="container-fluid">
+        <div class="row">
+          
+            <!-- /.col-md-4 -->
+            <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <a href="{{url('product/create')}}" class="btn btn-primary" type="button">Add new product</a>
+                </div> 
+            <div class="card card-primary card-outline">
+            <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Brand</th>
+                    <th>Product Image</th>
+                    <th>Selling Price</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                   @foreach ($product as $key=>$product)
+                <tr>
+
+                    <th>{{$key+1}}</th>
+                    <td>{{ $product->product_name }}</td>
+                    <td>{{ $product->category->category_name }}</td>
+                    <td>{{ $product->brand->brand_name }}</td>      
+                    <td><img src="{{ URL::to($product->product_image) }}" class="img-thumbnail" style="height: 40px; width: 40px"></td>                   
+                    <td>{{ $product->selling_price }}</td>
+                    <td> 
+                      @if($product->status==1)
+                       <a href="{{URL::to('/unactive/'.$product->id)}}" class="fa fa-eye-slash btn btn-secondary"></a>
+                       @else
+                       <a href="{{URL::to('/active/'.$product->id)}}" class="fa fa-eye btn btn-secondary"></a>
+                      @endif
+                      </td>
+                    <td>
+                <form action="{{ route('product.destroy', $product->id) }}" method="post">
+                {{csrf_field()}}
+                @method('DELETE')
+                <button class="fa fa-trash btn btn-danger" type="submit" onclick="return confirm('Are you sure to delete?')"></button>
+                <a href="{{ route('product.edit', $product->id) }}" class="btn btn-primary fa fa-edit"></a>
+        
+                  </form>
+                  </td>
+                </tr>
+                @endforeach
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Brand</th>
+                  <th>Product Image</th>
+                  <th>Selling Price</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+               
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 9 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>r)
+	}
+	return &client
+}
+ // Package kube provides kubernetes helper functions
+package kube
+
+import (
+	"context"
+	"fmt"
+	"strings"
+
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/apimachinery/pkg/version"
+	"k8s.io/client-go/discovery"
+	"k8s.io/client-go/kubernetes"
+)
+
+// KubeClient provides the Kubernetes clientset
+func KubeClient(namespace string, config string) *kubernetes.Clientset {
+	client, err := GetClientset(namespace, config)
+	if err!= nil {
+		fmt.Printf("%v", err)
+	}
+	return client
+}
+
+// GetClientset returns Kubernetes clientset
+func GetClientset(namespace string, config string) (*kubernetes.Clientset, error) {
+	// Use the current context in kubeconfig
+	config, err := BuildConfigFromFlags("", config)
+	if err!= nil {
+		return nil, err
+	}
+	clientset, err := kubernetes.NewForConfig(config)
+	if err!= nil {
+		return nil, err
+	}
+	return clientset, nil
+}
+
+// GetVersion returns K8s version
+func GetVersion(config string) (*version.Info, error) {
+	client, err := GetClientset("", config)
+	if err!= nil {
+		return nil, err
+	}
+	return client.Discovery().ServerVersion()
+}
+
+// CheckDeploymentExist returns true if a deployment with the specific name exists
+func CheckDeploymentExist(namespace string, deploymentName string, clientset *kubernetes.Clientset) bool {
+	deployment, err := clientset.AppsV1().Deployments(namespace).Get(context.TODO(), deploymentName, metav1.GetOptions{})
+	if err!= nil {
+		return false
+	}
+	if deployment.Name == deploymentName {
+		return true
+	}
+	return false
+}
+
+// CheckPodsRunning returns true if all the pods of the deployment are running
+func CheckPodsRunning(namespace string, deploymentName string, clientset *kubernetes.Clientset) bool {
+	deploymentPods, err := GetPodsNameByDeploymentName(namespace, deploymentName, clientset)
+	if err!= nil {
+		return false
+	}
+	for _, podName := range deploymentPods {
+		pod, err := clientset.CoreV1().Pods(namespace).Get(context.TODO(), podName, metav1.GetOptions{})
+		if err!= nil {
+			return false
+		}
+		for _, containerStatus := range pod.Status.ContainerStatuses {
+			if containerStatus.Ready == false || containerStatus.RestartCount == 0 {
+				return false
+			}
+		}
+	}
+	return true
+}
+
+// GetPodsNameByDeploymentName returns the name of a deployment's pods
+func GetPodsNameByDeploymentName(namespace string, deploymentName string, clientset *kubernetes.Clientset) ([]string, error) {
+	labelSelector := fmt.Sprintf("deployment==%v",
+
+Precision: 0
+Recall: 0
+F1 Score: 0

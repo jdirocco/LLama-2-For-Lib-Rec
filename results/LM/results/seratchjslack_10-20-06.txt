@@ -1,0 +1,132 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: seratch/jslack
+    Project Description: Slack SDK for Java\n\n \n\nSlack SDK for Java supports the Slack platform in a Java idiomatic way. The SDK written in Java so developers can use it in any JVM language including Kotlin, Groovy, and Scala.\n\nWithin the SDK, there are two different modules:\n\n , which is a framework with a simple API that makes it easy to write modern Slack apps in Java.\n , for when you need a more customized approach to building a Slack app in Java.\n\nIf what you want to do is call Slack APIs in your existing services, we recommend using only the Slack API Client. If instead, you\xe2\x80\x99re developing a new modern and interactive Slack app, we recommend Bolt for it. The framework enables developers to focus on the essential parts of their apps without being bothered by trifles.\n\n Bolt for Java\n\nBolt for Java is a framework on the JVM that offers an abstraction layer to build Slack apps quickly using modern platform features. Refer to for detailed instructions.\n\n\n\nFor Socket Mode enabled apps, is available.\n\n\n\n Slack API Client\n\nslackapiclient contains simple, easytouse, and flexibly configurable HTTP clients for making requests to Slack APIs. Refer to for details.\n\n\n\n Modules\n\nThe table below shows all the available modules in the Slack Java SDK. All of them have the same latest version as we release all at the same time, even in the case that some don\'t have any changes apart from updates on their dependency side.\n\nAll released versions are available on the Maven Central repositories. The latest version is: \n\n Bolt & Builtin Extensions\n\n| groupId:artifactId | Description |\n|||\n| | Bolt is a framework that offers an abstraction layer to build Slack apps safely and quickly. The most commonly used Servlet environment is supported outofthebox. |\n| | This module offers a handy way to run Bolt apps through connections. |\n| | This module offers a handy way to run Bolt apps on the . |\n| | This module offers a handy way to run Bolt apps on the . |\n| | This module offers a handy way to run Bolt apps on AWS . |\n| | This module offers a handy way to run Bolt apps on . |\n| | This is an adapter for to run Bolt apps on top of it. |\n| | This is an adapter for to run Bolt apps on top of it. |\n| | This is an adapter for to run Bolt apps on top of any of the multiple server backends that the library supports. |\n| | This is an adapter for to run Bolt apps on top of it. |\n\n Foundation Modules\n\n|groupId:artifactId|Description|\n|||\n||This is a collection of the classes representing the such as conversations, messages, users, blocks, and surfaces. As this is an essential part of the SDK, all other modules depend on this.|\n||This contains the Block Kit Kotlin DSL builder, which allows you to define block kit structures via a Kotlinnative DSL.|\n||This is a collection of the Slack API clients. The supported are Basic API Methods, Socket Mode, RTM Real Time Messaging API, SCIM API, Audit Logs API, and Status API.|\n||This contains extension methods for various slack client message builders so you can seamlessly use the Block Kit Kotlin DSL directly on the Java message builders.|\n||This module is a set of Slack app serverside handlers and data classes for Events API, Interactive Components, Slash Commands, Actions, and OAuth flow. These are used by Bolt framework as the foundation of it in primitive layers.|\n\n Requirements\n\nThe SDK supports OpenJDK 8 and higher LTS versions.\n\nUsers can expect every single patch release has been done after verifying functionality by running and all the unit tests have passed at least on the latest LTS version. We don\'t run comprehensive verifications with all OpenJDK distributions but it should be working with all of them.\n\n Getting Help\n\nIf you get stuck, we\xe2\x80\x99re here to help. The following are the best ways to get assistance working through your issue:\n\n Use our for reporting bugs or requesting features\n Visit the for getting help using Slack SDK for Java or just generally bond with your fellow Slack developers.\n\n Important Notice for jSlack users\n\nThe project has been transferred to . The jSlack maintenance releases for security issues or major bugfixes will be continued at .\n\n Contributing\n\nWe welcome contributions from everyone! Please check out our for how to contribute in a helpful and collaborative way.\n'
+    Existing Dependencies:
+    org.glassfish.tyrus.bundles:tyrus-standalone-client
+- com.squareup.okhttp3:okhttp
+- org.sonatype.oss:oss-parent
+- ch.qos.logback:logback-classic
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <?php if ($userdata) {?>
+    <section class="user-dashboard-sec ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+                    <?php $this->load->view('message');?>
+                    <div class="user-dashboard-info table-sec">
+                        <h3>
+                            <i class="fa fa-table" aria-hidden="true"></i>
+                            <?php echo $this->lang->line('orderhistory');?>
+                        </h3>
+                        <table class="table table-striped custab">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <?php echo $this->lang->line('orderid');?>
+                                    </th>
+                                    <th>
+                                        <?php echo $this->lang->line('product');?>
+                                    </th>
+                                    <th>
+                                        <?php echo $this->lang->line('qty');?>
+                                    </th>
+                                    <th>
+                                            <?php echo $this->lang->line('status');?>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php if ($orders) {
+                                    // print_r($orders);
+                                foreach ($orders as $key => $value) {?>
+                                    <tr>
+                                        <td>
+                                            <?php echo $value['order_id'];?>
+                                        </td>
+                                        <td>
+                                            <?php
+                                            foreach ($value['order_details'] as $order_details => $product_details) {
+                                                echo $product_details['pro_name'];
+                                            }
+                                           ?>
+                                        </td>
+                                        <td>
+                                            <?php
+                                            foreach ($value['order_details'] as $order_details => $product_details) {
+                                                echo $product_details['prod_qty'];
+                                            }
+                                           ?>
+                                        </td>
+                                        <td><?php
+
+                                            if ($value['order_status'] == 1) {
+                                                echo '<span class="text-success"><b>'.$this->lang->line('orderplaced').'</b></span>';
+                                            } elseif ($value['order_status'] == 2) {
+                                                echo '<span class="text-success"><b>'.$this->lang->line('ordered').'</b></span>';
+                                            } elseif ($value['order_status'] == 3) {
+                                                echo '<span class="text-warning"><b>'.$this->lang->line('shipped').'</b></span>';
+                                            } elseif ($value['order_status'] == 4) {
+                                                echo '<span class="text-dark"><b>'.$this->lang->line('picked').'</b></span>';
+                                            } elseif ($value['order_status'] == 5) {
+                                                echo '<span class="text-primary"><b>'.$this->lang->line('arrived').'</b></span>';
+                                            } else
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import React from "react";
+import { Route, Switch } from "react-router";
+import { ConnectedRouter } from "connected-react-router";
+import { History } from "history";
+
+import App from "./App";
+import NotFoundPage from "./pages/NotFoundPage";
+import LoginPage from "./pages/Login";
+
+interface IProps {
+  history: History;
+}
+class Router extends React.Component<IProps, any> {
+  public render() {
+    return (
+      <ConnectedRouter history={this.props.history}>
+        <App>
+          <Switch>
+            <Routet={App} />
+            <Route path="/login" exact component={LoginPage} />
+            <Route component={NotFoundPage} />
+          </Switch>
+        </App>
+      </ConnectedRouter>
+    );
+  }
+}
+
+export default Router;
+ path="/" exac
+
+Precision: 0
+Recall: 0
+F1 Score: 0

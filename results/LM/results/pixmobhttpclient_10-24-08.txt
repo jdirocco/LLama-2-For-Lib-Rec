@@ -1,0 +1,206 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: pixmob/httpclient
+    Project Description: A basic Http client for Android 2.1 devices using HttpURLConnection \n====================================================================\nCopyright C 2012 provides two methods for making Https requests:\n and .\n\nThe Android development team the use of HttpURLConnection for new applications, as this interface is getting better over Android releases.\n\nHowever, using HttpURLConnection on earlier Android devices before ICS is troublesome because of the underlying implementation bugs:\n\n 1. \n 2. \n 3. \n 4. \n 5. \n 6. \n 7. \n\nThe framework Pixmob HttpClient PHC provides a clean interface to HttpURLConnection, with\nworkarounds for known bugs, from Android 2.1 to Android 4.0.\n\nUsing PHC will make your code easier to understand, while leveraging the Android native network layer.\n\nUsage\n\n\nMaking Http requests is easy:\n\n HttpClient hc = new HttpClient;\n hc.get"".execute;\n\nDownloading a file is obvious:\n\n File logoFile = new Filecontext.getCacheDir, "logo.png";\n hc.get"".tologoFile.execute;\n\nYou may want to send POST requests:\n\n // the response buffer is reusable across requests GC friendly\n final StringBuilder buf = new StringBuilder64;\n hc.post"".param"q", "hello".to\n new HttpResponseHandler {\n public void onResponseHttpResponse response throws Exception {\n response.readbuf;\n System.out.printlnbuf;\n }\n }\n .execute;\n\nThe same request with fewer lines:\n\n final HttpResponse response = hc.post"".param"q", "hello".execute;\n final StringBuilder buf = new StringBuilder64;\n response.readbuf;\n System.out.printlnbuf;\n\nSend an authenticated request using Http Basic Authentication this way:\n\n // reuse the same authenticator instance across requests\n final HttpBasicAuthenticator auth = new HttpBasicAuthenticator"admin", "secret";\n hc.delete"".withauth.execute;\n\nGoogle App Engine authentication is supported as well:\n\n final String gaeHost = "myapp.appspot.com";\n final GoogleAppEngineAuthenticator auth = new GoogleAppEngineAuthenticatorcontext, account, gaeHost;\n try {\n hc.get"http://" gaeHost.withauth.execute;\n } catchUserInteractionRequiredException e {\n // user authorization is required:\n // open system activity for granting access to user credentials\n // user password is never stored nor known by this library\n context.startActivityForResulte.getUserIntent, USERAUTH;\n }\n\nUse the class to create new authenticators using the AccountManager API from Android, without asking for the user password.\n\nPixmob HttpClient is not thread safe: create a HttpClient instance when you need to make network requests. Network resources are automatically freed by the framework.\n\nPlease read JavaDoc and for advanced use.\n\nA sample application with is available in this repository. on Google Play!\n\nLicense\n\n\nAll of the source code in this project is licensed under the Apache 2.0 license except as noted.\n\nHow to use this library in my project?\n\n\nThis project is actually a .\n'
+    Existing Dependencies:
+    com.google.android:support-v4
+- org.sonatype.oss:oss-parent
+- com.google.android:android
+- com.pivotallabs:robolectric
+- com.actionbarsherlock:parent
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+    <div class="container">
+
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+        </ul>
+    </div>
+    @endif
+
+    <div class="form-row align-items-center">
+        <div class="col-md-4 my-1">
+            <label for="validationDefault01">Nombre</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre"
+                    value="{{ isset($proveedor->nombre)?$proveedor->nombre:old('nombre') }}" disabled>
+        </div>
+
+        <div class="col-md-4 my-1">
+            <label for="validationDefault02">Correo</label>
+            <input type="text" class="form-control" id="correo" placeholder="Correo" name="correo"
+                    value="{{ isset($proveedor->correo)?$proveedor->correo:old('correo') }}" disabled>
+        </div>
+
+        <div class="col-md-4 my-1">
+            <label for="validationDefault02">Telefono</label>
+            <input type="text" class="form-control" id="telefono" placeholder="Correo" name="telefono"
+                    value="{{ isset($proveedor->telefono)?$proveedor->telefono:old('telefono') }}" disabled>
+        </div>
+
+        <div class="col-md-4 my-1">
+            <label for="validationDefault05">Ciudad</label>
+        </div>
+
+        <div class="col-md-4 my-1">
+            <label for="validationDefault04">Direccion</label>
+            <input type="text" class="form-control" id="calle" placeholder="Direccion" name="calle"
+                    value="{{ isset($proveedor->calle)?$proveedor->calle:old('calle') }}" disabled>
+        </div>
+
+        <div class="col-md-4 my-1">
+            <label for="validationDefault04">Nº</label>
+            <input type="text" class="form-control" id="numero" placeholder="Numero" name="numero"
+                    value="{{ isset($proveedor->numero)? $proveedor->numero:old('numero') }}" disabled>
+        </div>
+
+        <div class="col-md-4 my-1">
+            <label for="validationDefault06">Colonia</label>
+            <input type="text" class="form-control" id="colonia" placeholder="Colonia" name="colonia"
+                    value="{{ isset($proveedor->colonia)? $proveedor->colonia:old('colonia') }}" disabled>
+        </div>
+
+        <div class="col-md-4 my-1">
+            <label for="validationDefault04">Codigo Postal</label>
+            <input type="text" class="form-control" id="codigo
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import { createAction, props } from '@ngrx/store';
+import {
+    IUserData,
+    ILoginUserPayload,
+    IRegisterUserPayload,
+    IGetUserPayload
+} from './auth.interfaces';
+
+export const loginUser = createAction(
+    '[Aayload)
+);
+
+export const registerUser = createAction(
+    '[Auth/API] Register user',
+    props<{ userData: IRegisterUserPayload }>()
+);
+
+export const getUser = createAction(
+    '[Auth/API] Get user',
+    props<{ userId: string }>()
+);
+
+export const registerUserSuccess = createAction(
+    '[Auth/API] Register user success',
+    props<{ user: IUserData }>()
+);
+
+export const registerUserFail = createAction(
+    '[Auth/API] Register user fail',
+    props<{ errors: object }>()
+);
+
+export const getUserSuccess = createAction(
+    '[Auth/API] Get user success',
+    props<{ userData: IUserData }>()
+);
+
+export const getUserFail = createAction(
+    '[Auth/API] Get user fail',
+    props<{ errors: object }>()
+);
+
+export const logoutUser = createAction(
+    '[Auth/API] Logout user'
+);
+
+export const logoutUserSuccess = createAction(
+    '[Auth/API] Logout user success'
+);
+
+export const logoutUserFail = createAction(
+    '[Auth/API] Logout user fail',
+    props<{ errors: object }>()
+);
+
+export const authUser = createAction(
+    '[Auth/API] Auth user',
+    props<{ userData: ILoginUserPayload }>()
+);
+
+export const authUserSuccess = createAction(
+    '[Auth/API] Auth user success',
+    props<{ user: IUserData }>()
+);
+
+export const authUserFail = createAction(
+    '[Auth/API] Auth user fail',
+    props<{ errors: object }>()
+);
+uth/API] Login user',
+    props<{ userData: ILoginUserPayload }>()
+);
+
+export const loginUserSuccess = createAction(
+    '[Auth/API] Login user success',
+    props<{ user: IUserData }>()
+);
+
+export const loginUserFail = createAction(
+    '[Auth/API] Login user fail',
+    props<{ errors: object }>()
+);
+
+export const loginUserPayload = createAction(
+    '[Shared] Login user payload',
+    props<{ user: ILoginUserPayload }>()
+);
+
+export const setRegisterUserPayload = createAction(
+    '[Shared] Set register user payload',
+    props<{ user: IRegisterUserPayload }>()
+);
+
+export const clearRegisterUserPayload = createAction(
+    '[Shared] Clear register user payload',
+);
+
+export const loginUserPayloadSuccess = createAction(
+    '[Shared] Login user payload success',
+    (payload: ILoginUserPayload) => ({ payload })
+);
+
+export const loginUserPayloadFail = createAction(
+    '[Shared] Login user payload fail',
+    (payload: ILoginUserPayload) => ({ payload })
+);
+
+export const logoutUserPayload = createAction(
+    '[Shared] Logout
+
+Precision: 0
+Recall: 0
+F1 Score: 0

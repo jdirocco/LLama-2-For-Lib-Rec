@@ -1,0 +1,138 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: hitherejoe/MVVM_Hacker_News
+    Project Description: MVVM using Data Binding \n=======================\n\nI wanted to experiment creating an MVVM structured project using the official Data Binding library,\nso I stripped back an of mine and replaced relevant codebase with an MVVM approach. This is still experimental,\nso I\'d love to hear any suggestion / improvements to the approach!\n\n\n \n\n\nCurrently writing a Medium article which should explain more... but for now:\n\nPosts\n\n\nPost cards displayed on the Post Screen left, above are built using the following classes:\n\n The post object\n\n The RecyclerView adapter used to set the view model\n\n The view model used to manage the display of the posts\n\n The XML layout file which displays the post card\n\nComments\n\n\nComments displayed on the Comment Screen right, above are built using the following classes:\n\n The comment object\n\n The RecyclerView adapter used to set the corresponding view model. Comments work a bit differently\nfrom posts as this adapter uses logic to choose to use one of two view models based on the comment type\n\n The view model used for standard comments on a post\n\n The view model used as a header for the post text with an ASK post\n\n The XML layout file which displays a standard comment\n\n The XML layout file used to display the header for an ASK post\n\nRequirements\n\n\n .\n Android .\n Android SDK Tools\n Android SDK Build tools 23.0.0.0\n Android Support Repository\n Android Support library\n\nBuilding\n\n\nTo build, install and run a debug version, run this from the root of the project:\n\n ./gradlew installRunDebug\n \nTesting\n\n\nTo run unit tests on your machine using Robolectric ./gradlew testDebugUnitTest\n \nTo run automated tests on connected devices:\n\n ./gradlew connectedAndroidTest\n'
+    Existing Dependencies:
+    com.squareup.sqlbrite:sqlbrite
+- com.jakewharton.timber:timber
+- org.glassfish:javax.annotation
+- com.squareup.okhttp:okhttp
+- com.jakewharton:butterknife
+- com.google.dagger:dagger-compiler
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-center mb-4">
+                      <h1 class="h3 mb-0 text-gray-800">Daftar Kelas</h1>
+                    </div>
+                    <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-body">
+            <a href="<?php echo site_url('admin/create')?>" class="btn btn-primary"><span class="fa fa-user-plus"></span> Tambah</a>
+              <div class="table-responsive">
+                 <?php
+                    if ($this->session->flashdata('message')!= null) {
+                        echo '<div class="alert alert-primary"> '.$this->session->flashdata('message').'
+                    </div>';
+                    }
+               ?>
+                <?php
+                if ($this->session->userdata('admin')!= "admin") {
+                    redirect(site_url(""));
+                }
+               ?>
+                <br>
+                <div class="btn-group">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-print text-white"></i> Export
+                </button>
+                <div class="dropdown-menu">
+                <form method="get" action="admin/export_excel">
+                        <input class="btn btn-primary" type="submit" value="CSV">
+                        <input class="btn btn-primary" type="submit" name="export" value="PDF">
+                </form>
+                </div>
+                </div>
+                
+               
+                <table class="table table-bordered" >
+                  <thead>
+                    <tr>
+                      
+                        <th>ID Kelas</th>
+                        <th>Nama Kelas</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    if ($data!= null) {
+                        # code..
+                        foreach ($data as $key=>$value) {
+                            # code...
+                            echo "<tr>";
+                            echo "<td>".$value->ID_KELAS."</td>";
+                            echo "<td>".$value->NAMA_KELAS."</td>";
+                            echo '<td>
+                            <a href="'. site_url('admin/ubah?id='. $value->ID_KELAS). '">
+                                      <button class="btn btn-warning">
+                                      <span class="fa fa-edit text-white"></span>
+                                      </button>
+                          </a>
+                          <a href="'. site_url('admin/hapus?id='. $value->ID_KELAS). '">
+                                  <button class="btn btn-danger">
+                                  <span class="fa fa-trash text-white"></span>
+                                  </button>
+                          </a>
+                        
+                        </td>';
+                            echo "</tr>";
+                        }
+                    }
+                        else{
+                            echo "<tr><td colspan=\"5\">Data tidak
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 7 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+	public List<String> getNames() {
+		return names;
+	}
+	
+	public void setNames(List<String> names) {
+		this.names = names;
+	}
+}
+ package org.openforis.rmb.spring;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
+import java.util.List;
+
+@ConfigurationProperties(prefix = "rmb.message-queue.topic")
+public class TopicProperties {
+	private String name;
+	private List<String> names;
+
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+
+Precision: 0
+Recall: 0
+F1 Score: 0

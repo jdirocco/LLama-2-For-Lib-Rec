@@ -1,0 +1,146 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: hector-client/hector
+    Project Description: \n\nTHIS PROJECT IS NO LONGER ACTIVE\n\nPlease use the official javadriver at for all Javabased Apache Cassandra projects. \n\nMy most sincere thanks to the other project collaborators and the many people that contributed features, bugs and patches over the years. \n\n@zznate\nnate@thelastpickle.com\n\n\n\n\n\n\n\n\n\nOriginal README for posterity\n\n\nThe currently active branch is 1.0. The master tracks Apache Cassandra active development which is 1.1.x presently. Current releases on the downloads section should be cosidered production ready. You should always choose the most recent release for your version of Apache Cassandra.\n\nFor the impatient: \n Hector artifacts are deployed to Maven Central. If you use maven for your build system, you need only include the hectorcore dependency and all related dependencies will be managed automatically. \n\n\nHector is a high level Java client for Apache Cassandra.\nApache Cassandra is a highly available column oriented database: is the greatest warrior in the greek mythology, Troy's builder and brother of Cassandra\n is currently in use on a number of production systems some of which have node counts into the hundreds. Issues generally are fixed as quickly as possible and releases done frequently.\n\nSome features provided by this client:\n\n o high level, simple object oriented interface to cassandra\n o failover behavior on the client side\n o connection pooling for improved performance and scalability\n o JMX counters for monitoring and management\n o configurable and extensible load balancing with three algorithms to choose from: round robin the default, least active, and a phiaccrural style response time detector\n o complete encapsulation of the underlying Thrift API and structs\n o automatic retry of downed hosts\n o automatic discovery of additional hosts in the cluster\n o suspension of hosts for a short period of time after several timeouts\n o simple ORM layer that works\n o a typesafe approach to dealing with Apache Cassandra's data model\n\nDetailed documentation of Hector features and usage can be found on Hector web site:\n hosted in github pages\n \n\nSome additional pages from the wiki that may be of interest:\n\n o Mailing Lists: hectorusers@googlegroups.com , hectordev@googlegroups.com\n o Maven Central location includes javadoc: projects using Hector:\n\n o o o Hector from sources\n\nHector uses maven to build the sources. If you are new to Maven, take a look at this tutorial first:\n o \n\nIn order to to build Hector this is not Hector specific you run: \n\n mvn clean package \nor \n mvn clean package DskipTests to run faster and skip the tests \n\nHector jar will be under /target \n"
+    Existing Dependencies:
+    org.slf4j:slf4j-api
+- org.mockito:mockito-all
+- com.github.stephenc.eaio-uuid:uuid
+- org.springframework:spring-test
+- com.github.stephenc:jamm
+- com.google.guava:guava
+- org.slf4j:jul-to-slf4j
+- joda-time:joda-time
+- org.hectorclient:hector-core
+- org.slf4j:jcl-over-slf4j
+- org.apache.cassandra:cassandra-all
+- com.ecyrd.speed4j:speed4j
+- com.sun.xml.fastinfoset:FastInfoset
+- commons-collections:commons-collections
+- org.apache.xbean:xbean-finder-shaded
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 16 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     @extends('layouts.header')
+@section('content')
+
+ <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    
+    <section class="content-header">
+      <h1>
+       Manage Category
+        <small>Preview</small>
+        <a href="{{route('add-category-form')}}" data-toggle="modal"><i class="fa  fa-plus-circle" style="background: #00a65a;color:#fff;padding-left:10px" > </i> Add New Category</a>
+
+      </h1>
+     
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+        @if(Session::has('success_message'))
+               <div class="alert alert-success">{{ Session::get('success_message') }}</div>
+           @endif
+         @if(Session::has('error_message'))
+               <div class="alert alert-success">{{ Session::get('error_message') }}</div>
+           @endif
+          <div class="box box-primary" style="box-shadow:0px 0px 25px gray">
+            <!-- /.box-header -->
+            <!-- form start -->
+            <div class="box-body">
+              <!-- <form role="form"> -->
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                <tr>
+                  <th>Sr No.</th>
+                  <th>Category Name</th>
+                  <th>Category Status</th>
+                  <th>Date</th>
+                  <th>Edit/Delete </th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($cat as $c)
+                <tr>
+                  <td>{{ $c->id }}</td>
+                  <td>{{ $c->category_name }}</td>
+                 <td>
+                      @if($c->category_status==1)
+          <span style="color:green"><b>active</b></span>
+          @elseif($c->category_status==0)
+          <span style="color:red"><b>Inactive</b></span>
+          @endif
+                  </td>
+                  <td>{{ $c->created_at }}</td>
+                 <td class="center">
+           <a href="{{url('/edit-category/'.$c->id)}}" class="btn btn-warning" style="padding:10px 15px;border-radius:5px;margin:10px;" data-toggle="tooltip" title="Edit Category">
+            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+             </a>
+             <a href="{{url('/delete-category/'.$c->id)}}" class="btn btn-danger" style="padding:10px 15px;border-radius:5px;margin:10px;" data-toggle="tooltip" title="Delete Category">
+            <i class="fa fa-trash" aria-hidden="true"></i>
+             </a>
+                  </td>
+                </tr>
+                @endforeach
+                </tbody>
+              </table>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 16 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>t = (props) => {
+    return (
+        <>
+            <div className="row">
+                <div className="col-md-6">
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input type="text" class="form-control form-control-sm" placeholder="Name" onChange={props.onChange} value={props.name || ""} />
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-6">
+                    <div className="form-group">
+                        <input type="text" className="form-control form-control-sm" placeholder="Email" onChange={props.onChange} value={props.email || ""} />
+                    </div>
+                </div>
+            </div>
+        </>
+
+    )
+}
+
+export default FormComponent; import React from'react';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "jquery/dist/jquery.min.js";
+import "popper.js";
+import "bootstrap/dist/js/bootstrap.min.js";
+
+const FormComponen
+
+Precision: 0
+Recall: 0
+F1 Score: 0

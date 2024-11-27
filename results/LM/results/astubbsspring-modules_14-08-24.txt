@@ -1,0 +1,195 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: astubbs/spring-modules
+    Project Description: Welcome to SpringModules Fork!\n\nThis is a resurrection of the extremely valuable and abandoned SpringModules project.\n\nThe plan is to fully embrace Maven as the build tool and eventually throw out all the old build code.\n\nAt this point, all the old jar libraries and generated documentation have been pruned from the repository history.\nThis pruning has reduced the size of the repository from 95m to 7m. Nice.\n\nThe idea will be to slowly add one by one, as the are compile ready, to the parent module section, so they can be included.\n\nRemember, you can add issues to github, and you can link them to the Jira issues. Ideally we need admin access to the SpringModules Jira, but that's a long shot. So, if there's a patch in Jira you want us to apply, create a github issue for it.\n\nMsg/email me on antony.stubbs@gmail.com to discuss!\n\n Mailing List\n\nHere are the essentials:\n\n Group name: springmodulesfork\n Group home page: Group email address springmodulesfork@googlegroups.com\n\n Questions\n\n Shall we change the name, or at least the Maven groupId?\n\n Release\n\nFinally! After over a year of waiting, we are starting to release SNAPSHOT versions of 0.10. ATM, only the cache module has a 0.10SNAPSHOT version. However, as we receive patches for other modules, those will get releases too.\n\n Repository\n\nThe releases are being hosted on my own server so please, be nice and use a proxy like Nexus!\n\nAdd this to your pom.xml:\n\n \n \t\n \t\tsharca.com.repo\n \t\tSharcaConsulting Repository\n \t\t \t\n \n\nAnd use this as a dependency:\n\n \n \torg.springmodules\n \tspringmodulescache\n \t0.10SNAPSHOT\n \n\n Goals\n\n Any module in this release will be built completely in with Maven\n Apply the most annoying patches from Jira\n\n So Far\n\n anounced: uploaded\n cache module migrated to Maven\n all pom's applied from the patch under MOD463 with some fixes\n jar's and generated documentation removed\n upgraded to Spring 2.5\n\n Submitting Patches\n\nYou have several options. \n\nThe best option is to use git like it's intended, and commit to your local repo, push up to yoru github account and send a pull request, or talk about your feature branch on the mailing list.\n\nOtherwise, you can still generate patches using:\n\n git formatpatch origin\n\nAnd again, email the files to the mailing list or an issue on github.\n\nBut, if you don't want to get too involved with git pushing etc, then:\n\n install git If you're on windows, I suggest using git through cygwin. Mac I suggest installing git with MacPorts\n run git clone git://github.com/astubbs/springmodules.git\n\nMake your changes i.e. edit the code, apply a patch off of jira site etc...\n\n git diff my.patch\n email the patch to the mailing list, or attach to an issue on github\n"
+    Existing Dependencies:
+    org.springframework:spring-aop
+- concurrent:concurrent
+- tangosol:tangosol-coherence
+- jini:jini-ext
+- commons-configuration:commons-configuration
+- com.gigaspaces:gs-runtime
+- org.springframework:spring-test
+- javax.jdo:jdo2-api-legacy
+- org.beanshell:bsh
+- prevayler:prevayler
+- tapestry:tapestry
+- commons-collections:commons-collections
+- flux:flux-for-spring
+- opensymphony:osworkflow
+- org.slf4j:slf4j-simple
+- org.easymock:easymock
+- commons-lang:commons-lang
+- jsr94:jsr94
+- org.springframework:spring-context
+- jboss:jboss-cache
+- org.apache.hivemind:hivemind-framework
+- log4j:log4j
+- blitz:blitz
+- jboss:jboss-common
+- cglib:cglib
+- net.jini:jini-core
+- com.thoughtworks.xstream:xstream
+- org.freemarker:freemarker
+- commons-attributes:commons-attributes-api
+- javax.activation:activation
+- javax.jcr:jcr
+- org.apache.ant:ant
+- commons-logging:commons-logging
+- org.acegisecurity:acegi-security
+- com.gigaspaces:gs-openspaces
+- org.easymock:easymockclassextension
+- org.apache.poi:poi
+- rome:rome
+- pdfbox:pdfbox
+- jug:jug
+- xalan:xalan
+- org.apache.hivemind:hivemind-lib
+- commons-id:commons-id
+- javax.mail:mail
+- jini:jini-core
+- javax.servlet:jsp-api
+- net.sourceforge.orbroker:orbroker
+- antlr:antlr
+- org.springframework:spring
+- org.hibernate:hibernate-validator
+- easymock:easymock
+- javax.transaction:jta
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 53 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+@extends('layout')
+
+@section('content')
+    
+    <div class="row">
+        <div class="col-lg-12 margin-tb">
+            <div class="pull-left">
+                <h2>Create New Employee</h2>
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-primary" href="{{ route('employees.index') }}"> Back</a>
+            </div>
+        </div>
+    </div>
+   
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+  
+    <form action="{{ route('employees.store') }}" method="POST">
+        @csrf
+  
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+              <strong>Name:</strong>
+              <input type="text" name="name" id="name" class="form-control" placeholder="Name">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+              <strong>Email:</strong>
+              <textarea class="form-control" style="height:150px" name="email" id="email" placeholder="Email"></textarea>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+              <strong>Phone no:</strong>
+              <input type="text" name="phone_no" class="form-control" placeholder="Phone no">
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+              <strong>Address:</strong>
+              <input type="text" name="address" class="form-control" placeholder="Address">
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+              <strong>Departemens:</strong>
+              <input type="text" name="departemens" class="form-control" placeholder="Departemens">
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+              <strong>Date:</strong>
+              <input type="date" name="date" class="form-control" placeholder="Date">
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+              <strong>Salary:</strong>
+              <input type
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 53 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>   }
+
+    public static class TestClass2 {
+    }
+
+    public static class TestClass3 {
+
+        public static void method(TestClass5 test) {
+        }
+    }
+} package org.apache.tuscany.sca.itest.conversationalstate.impl;
+
+import org.apache.tuscany.sca.itest.conversationalstate.ConversationalTest;
+
+import org.oasisopen.sca.annotation.Service;
+import org.oasisopen.sca.annotation.Property;
+/**
+ * Impl for ConversationalTestService
+ */
+@Service(ConversationalTest.class)
+public class ConversationalTestServiceImpl implements ConversationalTest{
+
+    public ConversationalTestServiceImpl() {
+    }
+
+    public String getState() {
+        return "Hello world";
+    }
+
+    public static class TestClass1 {
+
+        public void setAString(String value) {
+        }
+ 
+
+Precision: 0
+Recall: 0
+F1 Score: 0

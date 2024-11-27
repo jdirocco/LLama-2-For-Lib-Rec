@@ -1,0 +1,157 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: ncolomer/elasticsearch-osmosis-plugin
+    Project Description: | Take a look at the brand new discovery siteplugin to visualize and explore your freshly indexed OpenStreetMap data! |\n| :: |\n\n elasticsearchosmosisplugin\n\nelasticsearchosmosisplugin is an plugin that index\n data into an cluster. \nIt aims to help indexing the world, no more, no less :\n\n Documentation\n\nFollowing documentation is available in the project\'s :\n\n \n \n \n \n \n \n \n\n Download\n\n| elasticsearch version | plugin branch | build status | release |\n|::|::|::|::|\n| 2.1.x | 2.1.x | | |\n| 1.4.x | 1.4.xtmp | | |\n| 0.90.x | 0.90.x | | |\n\n License\n\nThis plugin is licensed under the \nOpenStreetMap data is licensed under the ODbL\n\n Powered by\n\n\n\n\n\n'
+    Existing Dependencies:
+    org.openstreetmap.osmosis:osmosis-core
+- org.openstreetmap.osmosis:osmosis-xml
+- org.openstreetmap.osmosis:osmosis-tagfilter
+- commons-io:commons-io
+- com.vividsolutions:jts
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    //var myApp = {};
+     //myApp.
+    
+    var appName ='my-app';
+    var app = angular.module(appName, [
+        'ngRoute',
+        //'ngSanitize',
+        'angular-carousel',
+        'angular-carousel.tpls'
+    ]);
+    
+    //  app.run(['$q', function ($q) {
+    //    var $rootScope = angular.injector(['ng']).get('$rootScope'),
+    //        $timeout = angular.injector(['ng']).get('$timeout');
+    //    $rootScope.$apply = function () {
+    //        var a = arguments;
+    //        if ($rootScope.$$phase ||!$rootScope.$parent) {
+    //            return $rootScope.$evalAsync($timeout, a);
+    //        } else {
+    //            return $rootScope.$parent.$apply(a);
+    //        }
+    //    };
+    //}]);
+
+   function init() {
+        var defer = $q.defer();
+        setTimeout(function () {
+            //defer.resolve('hello');
+            //console.log(1111);
+        }, 30000);
+        return defer.promise;
+    }
+
+    app.controller('mainCtrl',function($scope,$http,$compile,$location,myService,$log,$sce){
+        var url = window.location.pathname;
+        var split = url.split("/").length; 
+        $scope.current = "/"+window.location.pathname.split("/")[split-1]; 
+
+        $scope.getData = function(){
+
+                $http.get('/myData.json')
+               .success(function(data, status, headers, config) {
+                    $scope.names= data.names;
+                }).error(function(err) {
+                    alert('error');
+                });
+        }
+        
+        $scope.getData();
+        $scope.getData_2 = function(){
+
+                $http.get('/myData.json')
+               .success(function(data, status, headers, config) {
+                    $scope.names_2 = data.names;
+                }).error(function(err) {
+                    alert('error');
+                });
+        }
+         $scope.init = function() {
+            if($('#carousel-example-generic').length){
+                $('#carousel-example-generic.item').each(function(){
+                    var next = $(this).next();
+                    if (!next.length) {
+                        next = $(this).siblings(':first');
+                    }
+                    next.children(':first-child').clone().appendTo($(this));
+                    
+                    if (next.next().length>0) {
+                        next.next().children(':first-child').clone().appendTo($(this)).addClass('rightest');
+                    }
+                    else {
+                        $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+                    }
+
+                });
+            }
+           var owl = $('.owl-carousel');
+            var $owl_2 = $('.owl-carousel');
+            var slidesPerPage = 4;
+            var syncedSecondary = true;
+            var $owl = $('.owl-carousel').owlCar
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>   *
+     * @return array
+     */
+    public function rules(): array
+    {
+        $rules = [
+            'username' =>'required',
+            'password' => ['required','min:5','max:30']
+        ];
+
+        return $rules;
+    }
+}
+ <?php
+
+declare(strict_types=1);
+
+namespace App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class LoginUserRequest extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize(): bool
+    {
+        return false;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+  
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,154 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: TannerPerrien/picasso-transformations
+    Project Description: Picasso Transformations\n=======================\n\nA transformation library providing a variety of image transformations for .\n\n\n\nWhat\'s Included\n\n\nA variety of filters\n\n Color Adjustments\n Blurring / Sharpening\n Distortion / Warping\n Effects\n Edge Detection\n\nTransformation Categories\n\n \n RenderScript Transformations\n\nBuilding\n\n\nThis jar is not yet available on Maven Central. You must clone the repository and build the project.\n\n Requirements to Build\n\n1. A defined ANDROIDHOME environment variable\n2. Android API 19 SDK Manager\n3. Android Support Repository SDK Manager\n4. \n5. Maven 3.1.1\n\n Maven Android SDK Deployer\n\nDocumenation: \n\n git clone git://github.com/mosabua/mavenandroidsdkdeployer.git\n cd mavenandroidsdkdeployer/platforms\n mvn install P 4.4\n\n Build\n\nYou can build as follows:\n\n git clone cd picassotransformations\n mvn package\n\nCopy from the target directory of the module into your project.\n\nSample App\n\n\nInstall the Sample app to see the filters in action. Long press an image to see a Toast describing the filter.\n\n Install Sample App\n\nYou can install the sample app after you build the project.\n\n adb install picassotransformationssample/target/picassotransformationssample1.0.0.apk\n\nLicense\n\n\n Copyright C 2014 Tanner Perrien\n\n Licensed under the Apache License, Version 2.0 the "License";\n you may not use this file except in compliance with the License.\n You may obtain a copy of the License at\n\n Unless required by applicable law or agreed to in writing, software\n distributed under the License is distributed on an "AS IS" BASIS,\n WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n See the License for the specific language governing permissions and\n limitations under the License.\n'
+    Existing Dependencies:
+    org.easytesting:fest-assert-core
+- com.squareup.picasso:picasso
+- org.robolectric:robolectric
+- com.google.testing.compile:compile-testing
+- com.android.support:support-v4
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    
+    
+
+    <div class="container">
+     <h1>Edit User</h1>
+     <hr>
+     <form class="form-horizontal well" action="<?php echo base_url()?>admin/updateuserinfo" name="myform" method="post">
+        <div class="row">
+          <fieldset>
+            <div class="form-group"> 
+              <div class="col-md-12 inputGroupContainer">
+                <div class="input-group">
+                  <label>Email Address</label>
+                  <div class="uneditable-input input-fixed input-medium" style="">
+                    <input type="text" class = "form-control" placeholder="<?php echo $users[0]->email?>" name="email" value="<?php echo $users[0]->email?>">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group"> 
+              <div class="col-md-12 inputGroupContainer">
+                <div class="input-group">
+                  <label>First Name</label>
+                  <div class="uneditable-input input-fixed input-medium" style="">
+                    <input type="text" class = "form-control" placeholder="<?php echo $users[0]->firstname?>" name="firstname" value="<?php echo $users[0]->firstname?>">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group"> 
+              <div class="col-md-12 inputGroupContainer">
+                <div class="input-group"> 
+                  <label>Last Name</label>
+                  <div class="uneditable-input input-fixed input-medium" style="">
+                    <input type="text" class = "form-control" placeholder="<?php echo $users[0]->lastname?>" name="lastname" value="<?php echo $users[0]->lastname?>">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group"> 
+              <div class="col-md-12 inputGroupContainer">
+                <div class="input-group"> 
+                  <div class="col-md-6">
+                    <label>Mobile Number</label>
+                    <div class="uneditable-input input-fixed input-medium" style="">
+                      <input type="number" class = "form-control" placeholder="<?php echo $users[0]->number?>" name="number" value="<?php echo $users[0]->number?>">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Landline Number</label>
+                    <div class="uneditable-input input-fixed input-medium" style="">
+                      <input type="number" class = "form-control" placeholder="<?php echo $users[0]->landline?>" name="landline" value="<?php echo $users[0]->landline?>">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group"> 
+              <div class="col-md-12 inputGroupContainer">
+                <div class="input-group">
+                  <label>Address</label>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> import styled, { createGlobalStyle } from'styled-components'
+
+export const GlobalStyle = createGloban-bottom: 0;
+  `
+lStyle`
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    height: 50rem;
+    overflow-x: hidden;
+  }
+  h4 {
+    margin: 0;
+    line-height: 1;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  a {
+    text-decoration: none;
+    color: #125c99;
+  }
+`
+
+export const Section = styled.section`
+  margin-bottom: 5rem;
+  h4,
+  p {
+    text-align: center;
+  }
+`
+
+export const SectionText = styled.div`
+  padding-top: 8rem;
+  h4,
+  p {
+    margin-bottom: 2rem;
+  }
+`
+
+export const Container = styled.div`
+  max-width: 1200px;
+  width: 90%;
+  margin: ${props => props.margin};
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5rem;
+`
+
+export const SectionTitle = styled.h4`
+  margi
+
+Precision: 0
+Recall: 0
+F1 Score: 0

@@ -1,0 +1,119 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: krka/Ardor3D
+    Project Description: Add this to .git/config\n\nsvnremote "svn"\n url = fetch = trunk:refs/remotes/trunk\n\n\nTo sync with ardor:\n\ngit checkout master\ngit svn fetch\ngit svn rebase\ngit pull\ngit push\ngit checkout fearless\ngit pull\ngit merge master resolve any conflicts\ngit push\n\n'
+    Existing Dependencies:
+    com.ardor3d:ardor3d-jogl
+- ${project.groupId}:ardor3d-collada
+- org.lwjgl:lwjgl_natives
+- ${project.groupId}:ardor3d-animation
+- ${project.groupId}:ardor3d-lwjgl
+- ${project.groupId}:ardor3d-terrain
+- org.jdom:jdom
+- org.jdom:saxpath
+- com.ardor3d:ardor3d-examples
+- com.ardor3d:ardor3d-lwjgl
+- com.google.guava:guava
+- org.lwjgl:lwjgl_util
+- org.lwjgl:lwjgl
+- org.eclipse.swt:swt
+- org.jdom:jaxen
+- org.easymock:easymockclassextension
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 16 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- Footer -->
+     <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; 2021 - Design By Rifqi Herdiansyah</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+      <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="<?= base_url('logout')?>">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="<?= base_url()?>/vendor/jquery/jquery.min.js"></script>
+    <script src="<?= base_url()?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="<?= base_url()?>/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="<?= base_url()?>/js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 16 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    {
+        return $this->hasMany(User::class, 'group_id');
+    }
+}
+ <?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Group extends Model
+{
+    protected $fillable = ['title'];
+
+    public function users()
+
+Precision: 0
+Recall: 0
+F1 Score: 0

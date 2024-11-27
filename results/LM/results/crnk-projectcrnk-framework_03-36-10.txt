@@ -1,0 +1,210 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: crnk-project/crnk-framework
+    Project Description: crnk.io Crank up the development of RESTful applications!\n\n\n\n\n\n\n\n What is Crnk?\n\nCrnk is an implementation of the specification and recommendations in Java to\nfacilitate building RESTful applications. It provides many conventions and building blocks that application can benefit from.\nThis includes features such as sorting, filtering, pagination, requesting complex object graphs, sparse\nfield sets, attaching links to data or atomically execute multiple operations. Further integration\nwith frameworks and libraries such as Spring, CDI, JPA, Bean Validation, Dropwizard, Servlet API, Zipkin and\nand more ensure that JSON API plays well together with the Java ecosystem. Have a look at\n and the for more detailed\ninformation.\n\nRelease notes can be found in Repository\n\nCrnk Maven artifacts are available from jcenter/bintray: that due to reliability issues of MavenCentral we only rarely publish there.\n\n\n Requirements\n\nCrnk requires Java 1.8 or later and an SLF4J setup for logging.\n\n Example\n\nSee can look like:\n\n\n\nand the :\n\n\n\nand a basic Java example:\n\n\n\nor with JPA:\n\n\n\nCrnk integrates well with many frameworks. Have a look\nat the \nand carefully choose what you need. Don\'t hesitate to ask for help and suggest\nimprovements!\n\n Licensing\n\nCrnk is licensed under the Apache License, Version 2.0.\nYou can grab a copy of the license at Building from Source\n\nCrnk make use of Gradle for its build. To build the complete project run\n\n gradlew clean build\n\nNote as part of the build a local Node installation is downloaded to build the frontend parts crnkui of the project.\n\n\n Links\n\n \n \n \n \n \n \n\n\n Endorsements\n\n\n\nWe thank YourKit for supporting open source projects with profiler and monitoring tooling.\n'
+    Existing Dependencies:
+    org.springframework.boot:spring-boot-starter-data-jpa
+- com.fasterxml.jackson.datatype:jackson-datatype-jsr310
+- org.activiti:activiti-engine
+- com.squareup.okhttp3:okhttp
+- commons-io:commons-io
+- org.hibernate:hibernate-entitymanager
+- org.jboss.weld.se:weld-se-core
+- javax.ws.rs:javax.ws.rs-api
+- org.slf4j:slf4j-api
+- org.apache.deltaspike.modules:deltaspike-test-control-module-impl
+- org.hibernate:hibernate-core
+- org.springframework.boot:spring-boot-starter-test
+- org.springframework:spring-test
+- com.google.guava:guava
+- org.springframework:spring-context
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <!-- Begin Page Content -->
+     <div class="container-fluid">
+
+        <link href="<?=base_url('assets/')?>css/bootstrap-responsive-tabs.css" rel="stylesheet">
+        <link rel="stylesheet" href="<?=base_url('assets/')?>css/dt_bootstrap.css">
+        <!-- Page Heading -->
+        <div class="row justify-content-around">
+          <div class="col-md-12">
+            
+            <div class="card  shadow mb-4 text-left">
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Penjualan</h6>
+                </div>
+                <div class="card-body">
+                  
+                  <div id="tabs">
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="#tab-1" >Pembelian</a></li>
+                        <li><a href="#tab-3" >Pembayaran Hutang Penjualan</a></li>
+                        <li><a href="#tab-2" >Pembayaran Utang Pembelian</a></li>
+                        <li><a href="#tab-4" >Penagihan UTang Pembelian Barang</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab-1">
+                           <a class="btn btn-sm btn-primary text-white" href="#"><i class="fa fa-print"></i> Print</a>
+                           <br><br>
+                            <div class="table-responsive">
+                             <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+                                <thead>
+                                    <tr>
+                                        <th width="30px">No</th>
+                                        <th>Nama Customer</th>
+                                        <th>Tanggal Transaksi</th>
+                                        <th>Nomor Invoice</th>
+                                        <th>Jumlah Tagihan</th>
+                                        <th>Terbayar</th>
+                                        <th>Sisa Hutang</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    <?php
+                                        $no=1;
+                                        foreach ($hutang->result() as $key) {
+                                   ?>
+
+                                    <tr class="odd gradeX">
+                                        <td><?=$no++?></td>
+                                        <td><?=$key->nama?></td>
+                                        <td><?=$key->tanggal?></td>
+                                        <td><?=$key->nomor_transaksi?></td>
+                                        <td class="text-right"><?php echo number_format($key->jumlah_tagihan,2,",",".")?></td>
+                                        <td class="text-right"><?php echo number_format($key->jumlah_terbayar,2,",",".")?
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 15 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>s: ['/login'],
+    logout_redirect_url: '/login', // where to go after logging out
+    unauthenticated_url: '/', // where to go if login is required and not provided
+    unauthorized_url: '/unauthorized', // where to go if login provides no permissions to view requested page
+    login_template: 'loginTemplate'
+}).register();
+ 
+
+Router.configure({
+    // layoutTemplate: 'layout',
+    loadingTemplate: 'loading',
+    notFoundTemplate: 'notFound'
+});
+
+
+AccountsTemplates.configure({
+    defaultLayout: 'emptyLayout',
+    defaultLayoutRegions: {},
+    defaultContentRegion:'main',
+    enablePasswordChange: true,
+    forbidClientAccountCreation: false,
+    //overrideLoginErrors: true,
+    //sendVerificationEmail: true,
+    showForgotPasswordLink: true,
+    // showLabels: true,
+    // showPlaceholders: true,
+    negativeValidation: true,
+    negativeFeedback: true,
+    positiveValidation: true,
+    positiveFeedback: false,
+    // privacyUrl: 'privacy',
+    signInAfterRegistration: true,
+    homeRoute: '/',
+    redirectTimeout: 4000
+});
+
+
+var requireLogin = function() {
+    if(!Meteor.user() ||!Roles.userIsInRole(Meteor.user(), ['admin','user'])) {
+        if (Meteor.loggingIn()) {
+            this.render(this.loadingTemplate);
+        }
+        else {
+            this.render('accessDenied');
+        }
+    }
+    else {
+        this.next();
+    }
+};
+
+Router.onBeforeAction(requireLogin);
+
+
+AccountsTemplates.configureRoute('signIn', {
+    redirect: '/'
+});
+
+
+Router.route('/', {
+    name: 'home',
+    title: 'My title',
+    template: 'homePage',
+});
+
+// Router.route('/', {
+//     name: 'homePage',
+//     title: 'Home | ',
+//     title2:'- My title',
+//     action: function() {
+        
+
+//     }
+// });
+
+
+
+AccountsTemplates.configure({
+    //defaultLayout: 'layout',
+    defaultLayoutRegions: {
+        header: 'header',
+        footer: 'footer',
+    },
+    showAddRemoveServices: false,
+    defaultContentRegion:'main',
+    defaultLayout: 'emptyLayout',
+    //showForgotPasswordLink: true,
+    //overrideLoginErrors: true,
+    //enforceEmailVerification: false,
+    //sendVerificationEmail: true,
+    //confirmPassword: true,
+    //continuousValidation: false,
+    //displayFormLabels: true,
+    //forbidClientAccountCreation: false,
+    //formValidationFeedback: true,
+    //homeRoute: '/',
+    onLoggedInHook () {
+        FlowRouter.go('/');
+        toastr.success('Login Successful'); // eslint-disable-line no-undef
+    },
+    showForgotPasswordLink: true,
+    showLabels: true,
+    showPlaceholders: true,
+    negativeFeedback: true,
+    negativeValidation: true,
+    positiveValidation: true,
+    positiveFeedback: false,
+
+Precision: 0
+Recall: 0
+F1 Score: 0

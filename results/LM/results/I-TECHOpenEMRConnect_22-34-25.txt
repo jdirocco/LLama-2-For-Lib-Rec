@@ -1,0 +1,185 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: I-TECH/OpenEMRConnect
+    Project Description: OpenEMRConnect\nInterconnect Electronic Medical Records systems to each other and to other systems\n\nThis Repository is now defunct as of June 15, 2015. Each of the modules it contains\nhave been moved to their own individual repositories under their respective names.\n'
+    Existing Dependencies:
+    net.sf.opencsv:opencsv
+- mysql:mysql-connector-java
+- org.postgresql:postgresql
+- ${project.groupId}:fingerprintmanager
+- commons-codec:commons-codec
+- javax.ws.rs:jsr311-api
+- net.java.dev.swing-layout:swing-layout
+- org.jdesktop:appframework
+- org.springframework:spring-webmvc
+- gria:griaule
+- org.apache.geronimo.bundles:commons-httpclient
+- net.sourceforge.jtds:jtds
+- ${project.groupId}:oeclib
+- org.springframework:spring-context
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+  </body>
+  <footer style="background-color: #e0e0e0; color:#000;">
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center"><small >Copyright 2020 - <a href="http://www.meghna.com/" target="_blank">Meghna Ahmed</a></small>. Designed by: <a href="">Rafiuddin Ahmed</a></div>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+  </html>
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 14 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>   {
+          path: '/',
+          component: '../layouts/BasicLayout',
+          routes: [
+            {
+              path: '/',
+              redirect: '/welcome',
+            },
+            {
+              path: '/welcome',
+              name: 'welcome',
+              icon:'smile',
+              component: './Welcome',
+            },
+            {
+              path: '/admin',
+              name: 'admin',
+              icon: 'crown',
+              component: './Admin',
+              authority: ['admin'],
+              routes: [
+                {
+                  path: '/admin/sub-page',
+                  name:'sub-page',
+                  icon:'smile',
+                  component: './Welcome',
+                  authority: ['admin'],
+                },
+              ],
+            },
+            {
+              name: 'list.table-list',
+              icon: 'table',
+              path: '/list',
+              component: './ListTableList',
+            },
+            {
+              name: 'list.basic-list',
+              icon: 'table',
+              path: '/list/basic-list',
+              component: './ListBasicList',
+            },
+            {
+              name: 'list.card-list',
+              icon: 'table',
+              path: '/list/card-list',
+              component: './ListCardList',
+            },
+            {
+              name: 'list.search',
+              icon: 'table',
+              path: '/list/search',
+              component: './ListSearch',
+            },
+            {
+              name: 'list.search-list',
+              icon:'search',
+              path: '/list/search/projects',
+              component: './ListSearch/Projects',
+            },
+            {
+              name: 'list.search-list.applications',
+              icon: 'table',
+              path: '/list/search/applications',
+              component: './ListSearch/Applications',
+            },
+            {
+              name: 'list.search-list.articles',
+              icon: 'table',
+              path: '/list/search/articles',
+              component: './ListSearch/Articles',
+            },
+            {
+              name: 'profile',
+              icon: 'profile',
+              path: '/profile',
+              routes: [
+                {
+                  name: 'basic',
+                  component: './ProfileBasic',
+                },
+                {
+                  name: 'advanced',
+                  component: './ProfileAdvanced',
+                },
+              ],
+            },
+            {
+              name:'result',
+              icon: 'check-circle-o',
+              path: '/result',
+              routes: [
+                {
+                  name:'success',
+                  component: './ResultSuccess',
+                },
+                {
+                  name: 'fail',
+                  component: './ResultFail',
+                },
+              ],
+            },
+            {
+              name: 'exception',
+              icon: 'warning',
+              path: '/exception',
+              routes: [
+                {
+                  name: '403',
+                  component: './Exception403',
+                },
+                {
+                  name: '404',
+                  component: './Exception404',
+                },
+                {
+                  name: '500',
+                  component: './Exception500',
+                },
+              ],
+            },
+            {
+              name: 'account',
+              icon: 'user
+
+Precision: 0
+Recall: 0
+F1 Score: 0

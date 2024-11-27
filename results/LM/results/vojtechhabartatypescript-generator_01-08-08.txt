@@ -1,0 +1,112 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: vojtechhabarta/typescript-generator
+    Project Description: \n\n\n\nQuick links:\n\n|\n\n|\n\n|\n\n\ntypescriptgenerator\n====================\ntypescriptgenerator is a tool for generating TypeScript definition files .d.ts from Java JSON classes.\nIf you have REST service written in Java or another JVM language using object to JSON mapping you can use typescriptgenerator to generate TypeScript interfaces from Java classes.\n\nFor example for this Java class:\n\n\n\ntypescriptgenerator outputs this TypeScript interface:\n\n\nSupported types include:\n all Java primitive types with their corresponding wrappers for example and , and , etc.\n \n \n enum\n array\n and including derived interfaces and implementation classes\n customized type mapping\n\nFor more details see .\n\n Note: typescriptgenerator works with compiled classes using Java reflection. It doesn\'t use source files except for Javadoc feature.\nIn Maven plugin this means either classes compiled from source files in the same module or classes added using element.\n\nMaven\n\n\nIn Maven build you can use like this:\n\n\nMore complete sample can be found .\nDetailed description how to configure typescriptgeneratormavenplugin is on generated .\n\n\nGradle\n\n\nIn Gradle build you can use plugin like this:\n\n\nFor the Kotlin Gradle DSL you can alternatively use the plugin like this:\n\n build.gradle.kts\n\n\nYou can run typescriptgenerator on demand using command\nor you can invoke it as part of another task by adding dependency from that task to task in Gradle build file.\n\nMore complete sample can be found .\nGradle plugin has the same features as Maven plugin, for detailed description see Maven generated . \n\n\nDirect invocation\n\nIf you do not use Maven or Gradle you can invoke typescriptgenerator directly using method.\n\n\nInput classes\n\nInput classes can be specified using several parameters:\n list of fully qualified class names, includes all listed classes and their dependencies, character is used for nested classes like \n list of glob patterns like , includes all classes matched by the pattern, supported are and wildcards\n fully qualified name of JAXRS application class, all classes used by application resources will be included, recommended if you have JAXRS application class\n value will include classes from automatically discovered REST resources, recommended if you have JAXRS application without subclass\n list of fully qualified class names, excluded classes will be mapped to TypeScript type, if excluded class is a resource then this resource will not be scanned for used classes\n\n Note: it is possible to use multiple parameters at the same time.\n\nFor more details see and Wiki pages.\n\n\nOutput parameters\n\nOutput is configured using several parameters:\n required parameter determines if and how module will be generated\n values are: , , \n specifies TypeScript file type\n values are: .d.ts or .ts\n specifies path and name of output file\n\nFor more details see page.\n\n\nREST frameworks\n\nTypescriptgenerator can generate not only TypeScript declarations for JSON Java classes but it can also generate client classes for REST services. Supported REST frameworks are JAXRS and Spring. Client for JAXRS service can be generated using parameter, client for Spring service can be generated using . Since Spring support is in separate module it is needed to add this module to typescriptgenerator dependencies. Here is example for Maven:\n\n\n\nDownload\n\nReleases are available from Maven Central Repository.\n for dependency information for your build tool\nor download directly.\n\n\nWiki\n\nFor more detailed description of some topics see .\n\n\nArchitecture\n\n\n has 3 main parts , and which work together to produce TypeScript declarations for specified Java classes.\n\n\n\n reads Java JSON classes and their properties using Java reflections and creates .\n It uses s for finding used classes.\n For example if property type is it discovers that class should be also parsed.\n s are specific for each JSON library for example .\n transforms Java model to TypeScript model class to class.\n It uses s for mapping Java types to TypeScript types for example for returns .\n takes and produces TypeScript declaration file.\n\n\nLinks\n\n\n blog post about using typescriptgenerator not only with Spring MVC\n blog post about JSweet transpiler mentions typescriptgenerator\n tool similar to typescriptgenerator\n\n\nContributing\n\n\n current major version supports Java 8 and later version 1 supported Java 7 and 8\n keep pull requests small and focused \n do not add dependencies unless previously discussed in issue\n\n Code formatting\n\n use 4 spaces for indentation in Java files\n sort java imports alphabetically including static imports, do not use wildcard star imports\n please do not reformat whole files in IDE prevent accidental changes to unrelated lines\n'
+    Existing Dependencies:
+    org.apache.maven.plugin-tools:maven-plugin-annotations
+- javax.ws.rs:javax.ws.rs-api
+- io.github.lukehutch:fast-classpath-scanner
+- org.glassfish.jersey.containers:jersey-container-jdk-http
+- org.codehaus.groovy:groovy-all
+- org.codehaus.jackson:jackson-mapper-asl
+- joda-time:joda-time
+- org.apache.maven:maven-core
+- org.hibernate:hibernate-core
+- org.immutables:value
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+    
+    <?php echo $this->session->userdata('msg');?>
+    
+
+    <div class="row">
+        <!-- ===== right-sidebar ===== -->
+        <div class="col-lg-10 col-md-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-0">
+            <!-- ===== table ===== -->
+            
+            <!-- ===== end - table===== -->
+            <div class="row">
+                <!-- ===== right-sidebar ===== -->
+                <div class="col-lg-12 col-md-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0">
+                    <div class="panel">
+                        <div class="panel-heading mb25"><?=$pageName?></div>
+                        <!-- Start.panel -->
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-3"><h4>Categories</h4></div>
+                                <div class="col-lg-2 col-md-2 col-sm-3"><h4>Products</h4></div>
+                                <div class="col-lg-2 col-md-2 col-sm-3"><h4>Total</h4></div>
+                                <div class="col-lg-2 col-md-2 col-sm-3"><h4>Total Sales</h4></div>
+                                <div class="col-lg-2 col-md-2 col-sm-3"><h4>Total Profits</h4></div>
+                                <div class="col-lg-2 col-md-2 col-sm-3"><h4>Total Losses</h4></div>
+                            </div>
+                        </div>
+                        <?php if (!empty($salesList)) {?>
+                            <!-- table -->
+                            <?php foreach ($salesList as $key => $sales):?>
+                                <?php 
+                                    $catTotal = $this->model->getSalesCatTotal($sales->sales_id);
+                               ?>
+                                <!-- ===== table ===== -->
+                                <div class="table-responsive">
+                                    <?php echo form_open_multipart(base_url('admin/sales/sales_detail/'. $sales->sales_id), 'id=""');?>
+                                    <div class="card mb40">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2 col-sm-3">
+                                                    <p><?= $key + 1?> <?=$sales->sales_name?></p>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-3">
+                                                    <p><?= $sales->cat_total == ""? "0" : $sales->cat_total?></p>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2 col-sm-3">
+                                                    <p><?= count($this->model->countSalesProducts($
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 10 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> 
+import 'package:equatable/equatable.dart';
+
+abstract class LoginEvent extends Eassword({this.username, this.password});
+}
+
+class GoogleLoginEvent extends LoginEvent {
+}
+
+class AnonymousLoginEvent extends LoginEvent {
+}
+
+quatable {}
+
+class LoginWithEmailAndPassword extends LoginEvent {
+  final String username;
+  final String password;
+
+  @override
+  List<Object> get props => [username, password];
+
+  LoginWithEmailAndP
+
+Precision: 0
+Recall: 0
+F1 Score: 0

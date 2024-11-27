@@ -1,0 +1,113 @@
+<s>[INST] <<SYS>> Given the recommendations for a Java project provided in the text below, please list these recommendations exclusively in the Maven format (groupId:artifactId:version). Ensure that the output consists solely of Maven dependencies, without additional explanations or content.
+    Recommendations Text: <s>[INST] <<SYS>>
+    As an AI specializing in software library recommendations for Java applications, provide recommendations exclusively in the Maven format: groupId:artifactId:version. Here is an example of how recommendations should be formatted:
+    # Example 1
+    Project: 'Project A'
+    Description: 'A web application for managing tasks.'
+    Existing Dependencies:
+    - group:artifact:version
+    Recommended Libraries:
+    - group:artifact:version
+    - group:artifact:version
+
+
+    Your tasks are to:
+    - Provide recommendations exclusively in the Maven format as shown in the example.
+    - Ensure recommendations are suitable for the project context described. Focus solely on suggesting libraries that could enhance the project's capabilities or performance.
+    - Consider the project's context and existing dependencies to suggest libraries that complement or enhance the current setup.
+    - Ignore any code dont write any code.
+    <</SYS>>
+    Here are the top 20 libraries that are used in Java projects:
+    junit:junit, org.slf4j:slf4j-api, log4j:log4j, com.google.guava:guava, commons-io:commons-io, org.slf4j:slf4j-log4j12, commons-lang:commons-lang, commons-codec:commons-codec, org.mockito:mockito-core, javax.servlet:servlet-api, joda-time:joda-time, org.apache.httpcomponents:httpclient, org.mockito:mockito-all, commons-logging:commons-logging, com.google.code.gson:gson, com.fasterxml.jackson.core:jackson-databind, ch.qos.logback:logback-classic, org.apache.commons:commons-lang3, org.springframework:spring-context, org.springframework:spring-test
+    Project Name: wesabe/grendel
+    Project Description: Grendel\n=======\n\nGrendel is a RESTful web service which allows for the secure storage of users\'\ndocuments.\n\nWhen a Grendel user is created, an OpenPGP keyset a master key for\nsigning/verifying and a sub key for encrypting/decrypting is generated. When\nthe user stores a document, the document is signed with the user\'s master key\nand encrypted with their sub key.\n\nOther users can be granted readonly access to these documents. For instance,\nif a web service stores documents securely for users, a user might grant the\nservice administrators temporary shared access to their documents for support \npurposes, or may grant permanent access to another user for sharing purposes.\n\nTo get started using Grendel, read .\n\nTo read about how to use Grendel, read .\n\nFor a longer overview of the ideas behind Grendel, read "."\n\nTo read Grendel\'s distribution license, read .'
+    Existing Dependencies:
+    mysql:mysql-connector-java
+- joda-time:joda-time-hibernate
+- org.codehaus.jackson:jackson-xc
+- org.easytesting:fest-assert
+- com.codahale:shore
+    Focus on suggesting libraries that enhance the project's capabilities, improve performance, or introduce new functionalities relevant to the project's needs. Provide a brief explanation for each recommended library, highlighting how it benefits the project. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s>
+     <footer id="footer"><!--Footer-->
+			 
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="row">
+						<p class="pull-left">Copyright <?php print date('Y');?> © Bazo</p>
+					</div>
+				</div>
+			</div>
+		</footer><!--/Footer-->
+		
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.parallax.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script> -->
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script> -->
+
+        <!-- <script src="js/owl.carousel.min.js"></script> -->
+
+        <!-- <script src="js/jquery.bxslider.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script>
+        <script src="js/main.js"></script>  
+
+        <!--  <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/highcharts-more.js"></script> -->
+
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+		
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>   
+
+    </body>
+</html>
+
+    Please ignore any code snippets or examples and focus solely on extracting the Maven dependencies from the text.
+    Please format the response as a list of Maven dependencies, each on a new line.
+    <</SYS>>
+    Recommendations must be in the Maven format and focus on enhancing the project's capabilities or addressing any identified needs. Provide recommendations exclusively in the Maven format. Reccomend me 5 libraries that can be added to the project to enhance its capabilities.
+    [/INST]</s> <?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CrearTablaUsuario extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('usuario', function (Blueprint $table) {
+            $table->string('usuario')->unique();
+            $table->string('password');
+            $table->string('nombres');
+            $table->string('apellidos');
+            $table->string('tipo_sangre');
+            $table->string('correo', 60)->unique();
+            $table->string('telefono', 15);
+            $table->rememberToken();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('usuario');
+    }
+}
+
+
+Precision: 0
+Recall: 0
+F1 Score: 0
